@@ -16,10 +16,8 @@
 	alt_titles = list("Chief Hospitalier", "Brotherhood Medical Officer", "Head Surgeon", "Attending Physician", "Brotherhood Shepherd")
 
 	access = list(
-		access_moebius, access_medical_equip, access_morgue, access_genetics, access_heads,
-		access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-		access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_maint_tunnels,
-		access_external_airlocks, access_paramedic, access_research_equipment, access_change_medbay
+		access_medical_equip, access_heads, access_RC_announce,
+		access_keycard_auth, access_maint_tunnels, access_change_medbay
 	)
 
 	ideal_character_age = 50
@@ -76,10 +74,7 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/doctor
 
-	access = list(
-		access_moebius, access_medical_equip, access_maint_tunnels, access_morgue, access_surgery, access_chemistry, access_virology,
-		access_genetics
-	)
+	access = list(access_maint_tunnels)
 
 	stat_modifiers = list(
 		STAT_BIO = 40,
@@ -180,10 +175,7 @@
 	alt_titles = list("Brother", "Brotherhood Worker", "Brotherhood Orderly", "Nursing Assistant", "Clinic Volunteer")
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/volunteer
-	access = list(
-		access_moebius, access_medical_equip, access_morgue, access_surgery, access_paramedic,
-		access_eva, access_maint_tunnels, access_external_airlocks
-	)
+	access = list(access_maint_tunnels)
 
 	stat_modifiers = list(
 		STAT_BIO = 15,

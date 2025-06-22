@@ -18,7 +18,7 @@
 	stations_recommended = list("fs_experimental")
 	recommendations_needed = 1
 	inventory = list(
-		".35 Caliber"  = list(
+		"pistol caliber"  = list(
 			/obj/item/ammo_magazine/slpistol,
 			/obj/item/ammo_magazine/slpistol/rubber = custom_good_name("speed loader (.35 Auto rubber)"),
 			/obj/item/ammo_magazine/pistol,
@@ -32,59 +32,56 @@
 			/obj/item/ammo_magazine/ammobox/pistol,
 			/obj/item/ammo_magazine/ammobox/pistol/rubber = custom_good_name("ammunition packet (.35 Auto rubber)")
 		),
-		".40 Caliber" = list(
+		"magnum" = list(
 			/obj/item/ammo_magazine/slmagnum,
-			/obj/item/ammo_magazine/slmagnum/rubber = custom_good_name("speed loader (.40 Magnum rubber)"),
+			/obj/item/ammo_magazine/slmagnum/rubber = custom_good_name("speed loader, traumatic magnum"),
 			/obj/item/ammo_magazine/magnum,
-			/obj/item/ammo_magazine/magnum/rubber = custom_good_name("magazine (.40 Magnum rubber)"),
+			/obj/item/ammo_magazine/magnum/rubber = custom_good_name("magazine, traumatic magnum"),
 
 			/obj/item/ammo_magazine/msmg,
-			/obj/item/ammo_magazine/msmg/rubber = custom_good_name("smg magazine (.40 Magnum rubber)"),
+			/obj/item/ammo_magazine/msmg/rubber = custom_good_name("smg magazine, traumatic magnum"),
 
 			/obj/item/ammo_magazine/ammobox/magnum,
-			/obj/item/ammo_magazine/ammobox/magnum/rubber = custom_good_name("ammunition packet (.40 Magnum rubber)")
+			/obj/item/ammo_magazine/ammobox/magnum/rubber = custom_good_name("ammunition packet, traumatic magnum")
 		),
-		".20 Caliber" = list(
+		"carbine" = list(
 			/obj/item/ammo_magazine/srifle,
-			/obj/item/ammo_magazine/srifle/rubber = custom_good_name("magazine (.20 Rifle rubber)"),
+			/obj/item/ammo_magazine/srifle/rubber = custom_good_name("magazine, traumatic carbine"),
 
 			/obj/item/ammo_magazine/ammobox/srifle_small,
-			/obj/item/ammo_magazine/ammobox/srifle_small/rubber = custom_good_name("smg magazine (.20 Rifle rubber)"),
+			/obj/item/ammo_magazine/ammobox/srifle_small/rubber = custom_good_name("smg magazine, traumatic"),
 			/obj/item/ammo_magazine/ammobox/srifle,
-			/obj/item/ammo_magazine/ammobox/srifle/rubber = custom_good_name("ammunition box (.20 Rifle rubber)")
+			/obj/item/ammo_magazine/ammobox/srifle/rubber = custom_good_name("ammunition box, traumatic carbine")
 		),
-		".25 Caliber" = list(
+		"caseless" = list(
 			/obj/item/ammo_magazine/ihclrifle,
-			/obj/item/ammo_magazine/ihclrifle/rubber = custom_good_name("magazine (.25 Caseless Rifle rubber)"),
-
-			/obj/item/ammo_magazine/cspistol,
-			/obj/item/ammo_magazine/cspistol/rubber = custom_good_name("pistol magazine (.25 Caseless Rifle rubber)"),
+			/obj/item/ammo_magazine/ihclrifle/rubber = custom_good_name("magazine, traumatic caseless"),
 
 			/obj/item/ammo_magazine/ammobox/clrifle,
-			/obj/item/ammo_magazine/ammobox/clrifle/rubber = custom_good_name("ammunition box (.25 Caseless Rifle rubber)"),
+			/obj/item/ammo_magazine/ammobox/clrifle/rubber = custom_good_name("ammunition box, traumatic caseless"),
 			/obj/item/ammo_magazine/ammobox/clrifle_small,
-			/obj/item/ammo_magazine/ammobox/clrifle_small/rubber = custom_good_name("ammunition packet (.25 Caseless Rifle rubber)")
+			/obj/item/ammo_magazine/ammobox/clrifle_small/rubber = custom_good_name("ammunition packet, traumatic caseless")
 		),
-		".30 Caliber" = list(
+		"rifle caliber" = list(
 			/obj/item/ammo_magazine/lrifle,
-			/obj/item/ammo_magazine/lrifle/rubber = custom_good_name("long magazine (.30 Rifle rubber)"),
+			/obj/item/ammo_magazine/lrifle/rubber = custom_good_name("long magazine, traumatic rifle"),
 
 			/obj/item/ammo_magazine/sllrifle,
 
 			/obj/item/ammo_magazine/ammobox/lrifle,
 			/obj/item/ammo_magazine/ammobox/lrifle_small,
-			/obj/item/ammo_magazine/ammobox/lrifle_small/rubber = custom_good_name("ammunition packet (.30 Rifle rubber)")
+			/obj/item/ammo_magazine/ammobox/lrifle_small/rubber = custom_good_name("ammunition packet, traumatic rifle")
 		),
 		"Shotgun shells" = list(
-			/obj/item/ammo_magazine/ammobox/shotgun = custom_good_name("ammunition box (.50 slug)"),
-			/obj/item/ammo_magazine/ammobox/shotgun/buckshot = custom_good_name("ammunition box (.50 pellet)"),
-			/obj/item/ammo_magazine/ammobox/shotgun/beanbag = custom_good_name("ammunition box (.50 beanbag)"),
-			/obj/item/ammo_magazine/ammobox/shotgun/blanks = custom_good_name("ammunition box (.50 blank)"),
+			/obj/item/ammo_magazine/ammobox/shotgun = custom_good_name("ammunition box, slug"),
+			/obj/item/ammo_magazine/ammobox/shotgun/buckshot = custom_good_name("ammunition box, buckshot"),
+			/obj/item/ammo_magazine/ammobox/shotgun/beanbag = custom_good_name("ammunition box, beanbag"),
+			/obj/item/ammo_magazine/ammobox/shotgun/blanks = custom_good_name("ammunition box, blank"),
 			/obj/item/ammo_magazine/ammobox/shotgun/flashshells = custom_good_name("ammunition box (.50 flash)"),
-			/obj/item/ammo_magazine/ammobox/shotgun/incendiaryshells = custom_good_name("ammunition box (.50 incendiary)")
+			/obj/item/ammo_magazine/ammobox/shotgun/incendiaryshells = custom_good_name("ammunition box, incendiary")
 		)
 	)
-	offer_types = list(
+/*	offer_types = list(
 		//obj/item/gun = offer_data_mods("modified gun (3 upgrades)", 3200, 2, OFFER_MODDED_GUN, 3),	// Stops guns from exporting
 		/obj/item/gun/projectile/automatic/modular/ak = offer_data("AK frame", 800, 1),
 		/obj/item/part/gun/frame/boltgun  = offer_data("boltgun frame", 800, 1),
@@ -101,3 +98,4 @@
 		/obj/item/part/gun/frame/deckard = offer_data("Deckard frame", 2000, 1),
 		/obj/item/part/gun/frame/mateba = offer_data("Mateba frame", 2000, 1)
 	)
+*/

@@ -6,7 +6,7 @@
 	spawn_tags = SPAWN_TAG_DESIGN_COMMON
 	license = 20
 	designs = list(
-		/datum/design/autolathe/gun/syringe_gun,
+		//datum/design/autolathe/gun/syringe_gun,
 		/datum/design/autolathe/misc/penflashlight,
 		/datum/design/autolathe/tool/scalpel,
 		/datum/design/autolathe/tool/circularsaw,
@@ -79,7 +79,7 @@
 		/datum/design/autolathe/computer_part/scanner/medical,
 	)
 
-/obj/item/computer_hardware/hard_drive/portable/design/guns/ms_dartgun
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/ms_dartgun
 	disk_name = "Moebius Scientifica - Z-H P Artemis Dartgun"
 	icon_state = "moebius"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
@@ -89,7 +89,7 @@
 		/datum/design/autolathe/gun/dart_gun = 3, // Z-H P Artemis"
 		/datum/design/autolathe/ammo/dart_mag,
 	)
-
+*/
 /obj/item/computer_hardware/hard_drive/portable/design/medical/genetics
 	disk_name = "Moebius Scientifica - Genetics"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED

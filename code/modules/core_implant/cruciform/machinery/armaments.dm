@@ -3,7 +3,7 @@
 	var/desc = "The gods made it quite clear this should not exist, Perhaps inform those above."
 	var/cost = 100
 	var/min_cost = 10 //absolute minimum it should cost
-	var/path = /obj/item/computer_hardware/hard_drive/portable/design/nt_bioprinter_public //path to spawn
+	var/path = /obj/item/computer_hardware/hard_drive/portable/design/ //path to spawn
 	var/purchase_count = 0 //how many times its bought
 	var/discount_increase = 25 //discount increase per purchase
 	var/discount = 0 //total discount to apply to the cost
@@ -128,7 +128,7 @@
 	name = "Utilities disk"
 	cost = 50
 	min_cost = 50
-	path = /obj/item/computer_hardware/hard_drive/portable/design/nt_bioprinter
+	path = /obj/item/computer_hardware/hard_drive/portable/design
 	purchase_count = 1
 
 
@@ -150,15 +150,15 @@
 	name = "Power Cells disk"
 	cost = 75
 	min_cost = 50
-	path = /obj/item/computer_hardware/hard_drive/portable/design/nt/cells
+	path = /obj/item/computer_hardware/hard_drive/portable/design//nt/cells
 
 /datum/armament/item/disk/pouches
 	name = "Pouches disk"
 	cost = 75
 	min_cost = 25
-	path = /obj/item/computer_hardware/hard_drive/portable/design/nt/pouches
+	path = /obj/item/computer_hardware/hard_drive/portable/design//nt/pouches
 
-/datum/armament/item/disk/svalinn
+/*datum/armament/item/disk/svalinn
 	name = "Svalinn disk"
 	cost = 125
 	min_cost = 75
@@ -193,14 +193,14 @@
 	cost = 225
 	min_cost = 125
 	path = /obj/item/computer_hardware/hard_drive/portable/design/nt/nt_dominion
-
+*/
 /datum/armament/item/disk/grenades
 	name = "Grenades disk"
 	cost = 225
 	min_cost = 175
-	path = /obj/item/computer_hardware/hard_drive/portable/design/nt/grenades
+	path = /obj/item/computer_hardware/hard_drive/portable/design//nt/grenades
 
-/datum/armament/item/disk/triarii
+/*datum/armament/item/disk/triarii
 	name = "Triarri disk"
 	cost = 225
 	min_cost = 175
@@ -217,7 +217,7 @@
 	cost = 275
 	min_cost = 200
 	path = /obj/item/computer_hardware/hard_drive/portable/design/nt/excruciator
-
+*/
 
 /datum/armament/item/grenade
 	name = "Grenade"
@@ -231,7 +231,7 @@
 	name = "gun"
 	discount_increase = 100
 
-/datum/armament/item/gun/largecrossobw
+/*datum/armament/item/gun/largecrossobw
 	name = "Large crossbow"
 	path = /obj/item/gun/energy/crossbow/largecrossbow
 	cost = 125
@@ -242,3 +242,4 @@
 	path = /obj/item/gun/energy/plasma/destroyer
 	cost = 325
 	min_cost = 200
+*/

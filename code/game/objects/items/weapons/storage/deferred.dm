@@ -549,3 +549,143 @@
 	initial_contents = list(
 		/obj/item/roach_egg = 12
 	)
+
+
+/obj/item/storage/deferred/crate/peacekeeper
+	name = "Peacekeeper Trooper kit"
+	desc = "The standard loadout for Peackeepers. Comes with a pulse rifle."
+	icon_state = "germancrate_deferred"
+	initial_contents = list(
+	/obj/item/gun/projectile/automatic/pulse = 1,
+	/obj/item/clothing/under/rank/security/bdu = 1,
+	/obj/item/clothing/gloves/thick = 1,
+	/obj/item/storage/pouch/ammo/loaded = 1,
+	/obj/item/clothing/mask/gas/ihs = 1,
+	/obj/item/clothing/suit/armor/bulletproof = 1,
+	/obj/item/clothing/head/armor/bulletproof = 1,
+	/obj/item/clothing/shoes/jackboots = 1,
+	/obj/item/clothing/glasses/hud/security/tacfat = 1,
+	/obj/item/clothing/mask/balaclava = 1,
+	/obj/item/storage/belt/tactical/ironhammer = 1,
+	/obj/item/device/radio/headset/military = 1
+	)
+
+
+/obj/item/storage/deferred/crate/peacekeeper_sarge
+	name = "Peacekeeper Sergeant kit"
+	desc = "The standard loadout for Peackeepers NCOs. Comes with a pulse rifle."
+	icon_state = "germancrate_deferred"
+	initial_contents = list(
+	/obj/item/gun/projectile/automatic/pulse = 1,
+	/obj/item/clothing/under/rank/security/bdu = 1,
+	/obj/item/clothing/gloves/thick = 1,
+	/obj/item/storage/pouch/ammo/loaded = 1,
+	/obj/item/clothing/mask/gas/ihs = 1,
+	/obj/item/clothing/suit/armor/bulletproof = 1,
+	/obj/item/clothing/head/armor/bulletproof = 1,
+	/obj/item/clothing/shoes/jackboots = 1,
+	/obj/item/clothing/glasses/hud/security/tac = 1,
+	/obj/item/clothing/mask/balaclava = 1,
+	/obj/item/storage/belt/tactical/ironhammer = 1,
+	/obj/item/device/radio/headset/military/commander = 1,
+	/obj/item/clothing/head/beret/red = 1,
+	/obj/item/clothing/accessory/armband = 1
+	)
+
+/obj/item/storage/deferred/crate/peacekeeper_medic
+	name = "Peacekeeper Medic kit"
+	desc = "The standard loadout for Peackeepers. Comes with a pulse rifle."
+	icon_state = "germancrate_deferred"
+	initial_contents = list(
+	/obj/item/gun/projectile/automatic/pulse = 1,
+	/obj/item/clothing/under/rank/security/bdu = 1,
+	/obj/item/clothing/gloves/thick = 1,
+	/obj/item/storage/pouch/ammo/loaded = 1,
+	/obj/item/clothing/mask/gas/ihs = 1,
+	/obj/item/clothing/suit/armor/bulletproof = 1,
+	/obj/item/clothing/head/deckcrew/white = 1,
+	/obj/item/clothing/shoes/jackboots = 1,
+	/obj/item/clothing/glasses/hud/health/tacfat = 1,
+	/obj/item/clothing/mask/balaclava = 1,
+	/obj/item/storage/belt/medical/emt/combat = 1,
+	/obj/item/device/radio/headset/military = 1
+	)
+
+/obj/item/storage/deferred/crate/hecu
+	name = "HECU Trooper kit"
+	desc = "The standard loadout for HECU Peackeepers."
+	icon_state = "germancrate_deferred"
+	initial_contents = list(
+	/obj/item/gun/projectile/automatic/smg = 1,
+	/obj/item/clothing/under/rank/security/bdu = 1,
+	/obj/item/clothing/gloves/thick = 1,
+	/obj/item/storage/pouch/ammo/loaded/smg = 1,
+	/obj/item/clothing/mask/gas/ihs = 1,
+	/obj/item/clothing/suit/storage/vest/merc/black = 1,
+	/obj/item/clothing/head/beret = 1,
+	/obj/item/clothing/shoes/jackboots/duty = 1,
+	/obj/item/clothing/glasses/hud/security/tacfat = 1,
+	/obj/item/clothing/mask/balaclava = 1,
+	/obj/item/storage/belt/tactical/ironhammer = 1,
+	/obj/item/device/radio/headset/military = 1
+	)
+
+
+/obj/item/storage/deferred/crate/hecu_sarge
+	name = "HECU Sergeant kit"
+	desc = "The standard loadout for HECU Peackeeper NCOs."
+	icon_state = "germancrate_deferred"
+	initial_contents = list(
+	/obj/item/gun/projectile/automatic/smg/mp5gl = 1,//replace with SPAS when possible
+	/obj/item/clothing/under/rank/security/bdu = 1,
+	/obj/item/clothing/gloves/thick = 1,
+	/obj/item/storage/pouch/ammo/loaded/smg = 1,
+	/obj/item/clothing/mask/gas/ihs = 1,
+	/obj/item/clothing/suit/storage/vest/merc/black = 1,
+	/obj/item/clothing/shoes/jackboots/duty = 1,
+	/obj/item/clothing/glasses/hud/security/tac = 1,
+	/obj/item/clothing/mask/balaclava = 1,
+	/obj/item/storage/belt/tactical/ironhammer = 1,
+	/obj/item/device/radio/headset/military/commander = 1,
+	/obj/item/clothing/head/beret/red = 1,
+	/obj/item/storage/pouch/tubular/loaded/blast = 1,
+	/obj/item/clothing/accessory/armband = 1
+	)
+
+/obj/item/storage/deferred/crate/hecu_medic
+	name = "HECU Medic kit"
+	desc = "The standard loadout for HECU Peackeepers."
+	icon_state = "germancrate_deferred"
+	initial_contents = list(
+	/obj/item/gun/projectile/automatic/smg/mp5sd = 1,
+	/obj/item/clothing/under/rank/security/bdu = 1,
+	/obj/item/clothing/gloves/thick = 1,
+	/obj/item/storage/pouch/ammo/loaded/smg = 1,
+	/obj/item/clothing/mask/gas/ihs = 1,
+	/obj/item/clothing/suit/storage/vest/merc/black = 1,
+	/obj/item/clothing/head/beret/white = 1,
+	/obj/item/clothing/shoes/jackboots/duty = 1,
+	/obj/item/clothing/glasses/hud/health/tacfat = 1,
+	/obj/item/storage/belt/medical/emt/combat = 1,
+	/obj/item/device/radio/headset/military = 1
+	)
+
+
+/obj/item/storage/deferred/crate/peacekeeper/logi
+	name = "HECU Medic kit"
+	desc = "The standard loadout for HECU Peackeepers."
+	icon_state = "germancrate_deferred"
+	initial_contents = list(
+	/obj/item/gun/projectile/automatic/smg/mp5sd = 1,
+	/obj/item/clothing/under/rank/security/bdu = 1,
+	/obj/item/clothing/gloves/thick = 1,
+	/obj/item/storage/pouch/ammo/loaded/smg = 1,
+	/obj/item/clothing/mask/gas/ihs = 1,
+	/obj/item/clothing/suit/storage/vest/merc/black = 1,
+	/obj/item/clothing/head/beret/white = 1,
+	/obj/item/clothing/shoes/jackboots/duty = 1,
+	/obj/item/clothing/glasses/hud/health/tacfat = 1,
+	/obj/item/storage/belt/medical/emt/combat = 1,
+	/obj/item/device/radio/headset/military = 1
+	)
+

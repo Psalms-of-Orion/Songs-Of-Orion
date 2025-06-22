@@ -22,6 +22,7 @@
 	suit = /obj/item/clothing/suit/storage/winter/hivis
 	pda_type = /obj/item/modular_computer/pda/heads/ce
 	backpack_contents = list(/obj/item/gun/projectile/selfload/makarov = 1, /obj/item/ammo_magazine/pistol/rubber = 2) //TE got the excel gun as a war trophy same as the hatton
+	r_pocket = /obj/item/card/keycard/engineering/level_2
 
 /decl/hierarchy/outfit/job/engineering/engineer
 	name = OUTFIT_JOB_NAME("Space Engineer")
@@ -31,6 +32,8 @@
 	l_ear = /obj/item/device/radio/headset/headset_eng
 	pda_type = /obj/item/modular_computer/pda/engineering
 	belt = /obj/item/storage/belt/utility/technomancer
+	r_pocket = /obj/item/card/keycard/engineering/level_3
+
 
 /decl/hierarchy/outfit/job/engineering/engineer/void
 	name = OUTFIT_JOB_NAME("Technomancer - Voidsuit")
@@ -48,6 +51,8 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	backpack_contents = list(/obj/item/tool/crowbar = 1, /obj/item/storage/bag/ore = 1)
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	r_pocket = /obj/item/card/keycard/engineering
+
 
 /decl/hierarchy/outfit/job/cargo/mining/New()
 	..()
@@ -66,5 +71,6 @@
 	pda_type = /obj/item/modular_computer/pda/moebius/science
 	suit = /obj/item/clothing/suit/storage/harness
 	head = /obj/item/clothing/head/patrol
-	backpack_contents = list(/obj/item/tool/crowbar = 1, /obj/item/storage/bag/ore = 1)
+	backpack_contents = list(/obj/item/tool/crowbar = 1)
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	r_pocket = /obj/item/card/keycard/engineering/level_2

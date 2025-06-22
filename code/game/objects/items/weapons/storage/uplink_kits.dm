@@ -166,20 +166,36 @@
 
 
 /obj/item/storage/box/syndie_kit/pistol
-	name = "smooth operator"
-	desc = ".25 Caseless handgun with a single magazine and pocket holster for easy consealment."
+	name = "Mystery pistol"
+	desc = "Cheap, found in an alleyway probably."
 
 /obj/item/storage/box/syndie_kit/pistol/populate_contents()
-	new /obj/item/gun/projectile/mandella(src)
-	new /obj/item/ammo_magazine/cspistol(src)
+	new /obj/item/gun/projectile/internalmag/wauser(src)
+	new /obj/item/ammo_magazine/ammobox/pistol/hv(src)
 	new /obj/item/storage/pouch/holster(src)
 
-/obj/item/storage/box/syndie_kit/c20r
-	name = "C-20r box"
-	desc = "C-20r kit"
+/obj/item/storage/box/syndie_kit/mp5
+	name = "SMG box"
+	desc = "SMG operator kit"
 
-/obj/item/storage/box/syndie_kit/c20r/populate_contents()
-	new /obj/item/gun/projectile/automatic/c20r(src)
+/obj/item/storage/box/syndie_kit/mp5k/populate_contents()
+	new /obj/item/gun/projectile/automatic/smg(src)
+	new /obj/item/ammo_magazine/smg(src)
+
+/obj/item/storage/box/syndie_kit/mp5k
+	name = "Machine pistol box"
+	desc = "Classic."
+
+/obj/item/storage/box/syndie_kit/mp5k/populate_contents()
+	new /obj/item/gun/projectile/automatic/smg/mp5k(src)
+	new /obj/item/ammo_magazine/smg(src)
+
+/obj/item/storage/box/syndie_kit/mp5sd
+	name = "SMG box"
+	desc = "Shhh."
+
+/obj/item/storage/box/syndie_kit/mp5k/populate_contents()
+	new /obj/item/gun/projectile/automatic/smg/mp5sd(src)
 	new /obj/item/ammo_magazine/smg(src)
 
 /obj/item/storage/box/syndie_kit/revolver
@@ -218,14 +234,14 @@
 	new /obj/item/gun/projectile/boltgun/levergun(src)
 	new /obj/item/ammo_magazine/slmagnum(src)
 
-/obj/item/storage/box/syndie_kit/lshotgun
-	name = "lever shotgun box"
-	desc = "lever-action shotgun kit"
+/obj/item/storage/box/syndie_kit/shotgun
+	name = "shotgun box"
+	desc = "Pump-action shotgun kit"
 	icon_state = "box_of_doom_big"
 	w_class = ITEM_SIZE_HUGE
 
-/obj/item/storage/box/syndie_kit/lshotgun/populate_contents()
-	new /obj/item/gun/projectile/boltgun/levergun/shotgun(src)
+/obj/item/storage/box/syndie_kit/shotgun/populate_contents()
+	new /obj/item/gun/projectile/boltgun/pump(src)
 	new /obj/item/ammo_casing/shotgun/prespawned(src)
 
  /obj/item/storage/box/syndie_kit/pug
@@ -358,49 +374,49 @@
 	new /obj/item/reagent_containers/spray/cleaner(src)
 
 /obj/item/storage/box/syndie_kit/slmagnum
-	name = ".40 speedloader box"
-	desc = "Contains 3 .40 speedloaders."
+	name = "magnum speedloader box"
+	desc = "Contains 3 magnum speedloaders."
 	prespawned_content_amount = 3
 	prespawned_content_type = /obj/item/ammo_magazine/slmagnum
 
 /obj/item/storage/box/syndie_kit/slmagnum/highvelocity
-	name = ".40 HV speedloader box"
-	desc = "Contains 3 .40 HV speedloaders."
+	name = "magnum HV speedloader box"
+	desc = "Contains 3 magnum HV speedloaders."
 	prespawned_content_amount = 3
 	prespawned_content_type = /obj/item/ammo_magazine/slmagnum/highvelocity
 
 /obj/item/storage/box/syndie_kit/slpistol
-	name = ".35 speedloaders box"
-	desc = "Contains 3 .35 speedloaders."
+	name = "pistol speedloaders box"
+	desc = "Contains 3 pistol speedloaders."
 	prespawned_content_amount = 3
 	prespawned_content_type = /obj/item/ammo_magazine/slpistol
 
 /obj/item/storage/box/syndie_kit/slpistol/hv
-	name = ".35 HV speedloaders box"
-	desc = "Contains 3 .35 HV speedloaders."
+	name = "pistol HV speedloaders box"
+	desc = "Contains 3 pistol HV speedloaders."
 	prespawned_content_amount = 3
 	prespawned_content_type = /obj/item/ammo_magazine/slpistol/hv
 
 /obj/item/storage/box/syndie_kit/slsrifle
-	name = ".20 strip box"
-	desc = "Contains 2 .20 strips."
+	name = "carbine ammo strip box"
+	desc = "Contains 2 carbine ammo strips."
 	prespawned_content_amount = 2
 	prespawned_content_type = /obj/item/ammo_magazine/slsrifle
 
 /obj/item/storage/box/syndie_kit/slsrifle/hv
-	name = ".20 HV strip box"
-	desc = "Contains 2 .20 HV strips."
+	name = "carbine ammo HV strip box"
+	desc = "Contains 2 carbine HV ammo strips."
 	prespawned_content_amount = 2
 	prespawned_content_type = /obj/item/ammo_magazine/slsrifle/hv
 
 /obj/item/storage/box/syndie_kit/sllrifle
-	name = ".30 strip box"
-	desc = "Contains 2 .30 strips."
+	name = "rifle ammo strip box"
+	desc = "Contains 2 rifle ammo strips."
 	prespawned_content_amount = 2
 	prespawned_content_type = /obj/item/ammo_magazine/sllrifle
 
 /obj/item/storage/box/syndie_kit/sllrifle/hv
-	name = ".30 HV strip box"
-	desc = "Contains 2 .30 HV strips."
+	name = "rifle HV ammo strip box"
+	desc = "Contains 2 HV rifle ammo strips."
 	prespawned_content_amount = 2
 	prespawned_content_type = /obj/item/ammo_magazine/sllrifle/hv

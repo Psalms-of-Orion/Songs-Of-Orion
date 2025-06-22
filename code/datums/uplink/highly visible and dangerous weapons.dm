@@ -3,7 +3,7 @@
 ***************************************/
 /datum/uplink_item/item/visible_weapons
 	category = /datum/uplink_category/visible_weapons
-
+/*
 /datum/uplink_item/item/visible_weapons/dartgun
 	name = "Z-H P \"Artemis\" Dart Gun"
 	item_cost = 4
@@ -28,32 +28,47 @@
 	name = "Exosuit 'Immolator' Energy Weapon"
 	item_cost = 4
 	path = /obj/item/mech_equipment/mounted_system/taser/laser
-
+*/
 
 /datum/uplink_item/item/visible_weapons/revolver
-	name = "FS REV .40 Magnum \"Miller\" Revolver"
+	name = "Magnum Revolver"
 	item_cost = 7
 	antag_roles = list(ROLE_CONTRACTOR,ROLE_INQUISITOR,ROLE_MERCENARY,ROLE_CARRION)
 	path = /obj/item/storage/box/syndie_kit/revolver
 
-/datum/uplink_item/item/visible_weapons/hornet
+/*datum/uplink_item/item/visible_weapons/hornet
 	name = "OR REV .20 \"LBR-8 Hornet\" Revolver"
 	item_cost = 7
 	antag_roles = list(ROLE_MARSHAL)
 	path = /obj/item/storage/box/syndie_kit/hornet
+*/
+
+/datum/uplink_item/item/visible_weapons/pistol
+	name = "Mystery Pistol"
+	item_cost = 5
+	path = /obj/item/storage/box/syndie_kit/pistol
+
+/datum/uplink_item/item/visible_weapons/machinepistol
+	name = "Machine Pistol"
+	item_cost = 10
+	path = /obj/item/storage/box/syndie_kit/mp5k
 
 /datum/uplink_item/item/visible_weapons/submachinegun
-	name = "S SMG .35 \"C-20r\" Submachinegun"
-	item_cost = 8
-	path = /obj/item/storage/box/syndie_kit/c20r
-
-/datum/uplink_item/item/visible_weapons/assaultrifle
-	name = "OR BR \"STS-35\" Battle Rifle"
+	name = "Submachine Gun"
 	item_cost = 10
-	antag_roles = list(ROLE_CONTRACTOR,ROLE_INQUISITOR,ROLE_MERCENARY,ROLE_CARRION)
-	path = /obj/item/storage/box/syndie_kit/sts35
+	path = /obj/item/storage/box/syndie_kit/mp5
 
-/datum/uplink_item/item/visible_weapons/winchesterrifle
+/datum/uplink_item/item/visible_weapons/suppressed
+	name = "Suppressed SMG"
+	item_cost = 12
+	path = /obj/item/storage/box/syndie_kit/mp5sd
+
+/datum/uplink_item/item/visible_weapons/shotgun
+	name = "Pump Action Shotgun"
+	item_cost = 8
+	path = /obj/item/storage/box/syndie_kit/shotgun
+
+/*datum/uplink_item/item/visible_weapons/winchesterrifle
 	name = "FS BR .40 \"Svengali\""
 	item_cost = 10
 	antag_roles = list(ROLE_MARSHAL)
@@ -75,7 +90,7 @@
 	name = "SA AMR .60 \"Hristov\" Anti-material Rifle"
 	item_cost = 20
 	path = /obj/item/storage/briefcase/antimaterial_rifle
-
+*/
 /datum/uplink_item/item/visible_weapons/rigged
 	name = "Weapon reverse loader"
 	item_cost = 5

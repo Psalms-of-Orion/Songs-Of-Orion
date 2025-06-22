@@ -300,8 +300,9 @@
 		/obj/item/tool_upgrade //Now holds tool upgrades!
 		)
 
-/obj/item/storage/pouch/ammo/cl
+/obj/item/storage/pouch/ammo/loaded
 	name = "ammo pouch"
+	desc = "Pre-loaded ammo pouch. This one has caseless magazines."
 	spawn_blacklisted = TRUE
 	prespawned_content_amount = 6
 	prespawned_content_type = /obj/item/ammo_magazine/ihclrifle/hv
@@ -310,9 +311,44 @@
 	for(var/i in 1 to prespawned_content_amount)
 		new prespawned_content_type(src)
 
-/obj/item/storage/pouch/ammo/lrifle
+/obj/item/storage/pouch/ammo/loaded/lrifle
+	desc = "Pre-loaded ammo pouch. This one has carbine magazines."
 	prespawned_content_type = /obj/item/ammo_magazine/lrifle/highvelocity
 
-/obj/item/storage/pouch/ammo/srifle
+/obj/item/storage/pouch/ammo/loaded/srifle
+	desc = "Pre-loaded ammo pouch. This one has rifle magazines."
 	prespawned_content_type = /obj/item/ammo_magazine/srifle/long/hv
+
+/obj/item/storage/pouch/ammo/loaded/smg
+	desc = "Pre-loaded ammo pouch. This one has smg magazines."
+	prespawned_content_type = /obj/item/ammo_magazine/smg/hv
+
+/obj/item/storage/pouch/ammo/loaded/srifle
+	desc = "Pre-loaded ammo pouch. This one has rifle magazines."
+	prespawned_content_type = /obj/item/ammo_magazine/srifle/long/hv
+
+
+/obj/item/storage/pouch/tubular/loaded
+	name = "tubular pouch"
+	desc = "Pre-loaded packet of grenade launcher shells. This one has stinger shells."
+	spawn_blacklisted = TRUE
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/ammo_casing/grenade
+
+/obj/item/storage/pouch/tubular/loaded/blast
+	desc = "Pre-loaded packet of grenade launcher shells. This one has blast shells."
+	prespawned_content_type = /obj/item/ammo_casing/grenade/blast
+
+/obj/item/storage/pouch/tubular/loaded/frag
+	desc = "Pre-loaded packet of grenade launcher shells. This one has frag shells."
+	prespawned_content_type = /obj/item/ammo_casing/grenade/frag
+
+/obj/item/storage/pouch/tubular/loaded/smoke
+	desc = "Pre-loaded packet of grenade launcher shells. This one has smoke shells."
+	prespawned_content_type = /obj/item/ammo_casing/grenade/smoke
+
+/obj/item/storage/pouch/tubular/loaded/low_yield
+	desc = "Pre-loaded packet of grenade launcher shells. This one has EMP shells."
+	prespawned_content_type = /obj/item/ammo_casing/grenade/emp/low_yield
+
 

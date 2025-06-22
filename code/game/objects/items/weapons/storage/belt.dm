@@ -233,6 +233,7 @@
 	new /obj/item/tool/crowbar/pneumatic(src)
 	new /obj/item/device/lighting/toggleable/flashlight/seclite(src)
 	new /obj/item/handcuffs(src)
+	new /obj/item/melee/baton(src)
 
 
 /obj/item/storage/belt/tactical/neotheology

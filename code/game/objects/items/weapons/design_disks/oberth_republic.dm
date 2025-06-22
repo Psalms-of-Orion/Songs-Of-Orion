@@ -1,5 +1,5 @@
 
-/obj/item/computer_hardware/hard_drive/portable/design/guns/or_silenced
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/or_silenced
 	disk_name = "Oberth Republic - .25 Mandella"
 	icon_state = "black"
 	rarity_value = 13
@@ -10,9 +10,9 @@
 		/datum/design/autolathe/ammo/cspistol/practice = 0,
 		/datum/design/autolathe/ammo/cspistol/rubber,
 	)
-
+*/
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_bulldog
-	disk_name = "Oberth Republic - .20 Bulldog Carabine"
+	disk_name = "Assault SMG"
 	icon_state = "black"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
 	license = 12

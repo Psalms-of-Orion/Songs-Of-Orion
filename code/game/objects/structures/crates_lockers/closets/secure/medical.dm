@@ -32,7 +32,7 @@
 	new /obj/item/tool/wrench(src)
 
 /obj/structure/closet/secure_closet/personal/doctor
-	name = "moebius doctor's locker"
+	name = "doctor's locker"
 	req_access = list(access_cmo)
 	access_occupy = list(access_medical_equip)
 	icon_state = "med"
@@ -42,21 +42,13 @@
 		new /obj/item/storage/backpack/medical(src)
 	else
 		new /obj/item/storage/backpack/satchel/medical(src)
-	new /obj/item/clothing/under/rank/medical/green(src)
-	new /obj/item/clothing/head/surgery/green(src)
 	new /obj/item/clothing/under/rank/medical(src)
-	new /obj/item/clothing/suit/storage/toggle/labcoat(src)
+	new /obj/item/clothing/suit/storage/toggle/labcoat/old(src)
 	new /obj/item/clothing/gloves/latex/nitrile(src)
 	new /obj/item/clothing/shoes/color/white(src)
-	new /obj/item/device/radio/headset/headset_med(src)
 	new /obj/item/taperoll/medical(src)
-	new /obj/item/clothing/shoes/reinforced/medical(src)
-	new /obj/item/clothing/head/soft/medical(src)
-	new /obj/item/storage/belt/medical/emt(src)
 	new /obj/item/storage/belt/medical/emt(src)
 	new /obj/item/storage/belt/medical/(src)
-	new /obj/item/storage/belt/medical/(src)
-	new /obj/item/clothing/suit/storage/surgical_apron(src)
 
 /obj/structure/closet/secure_closet/personal/paramedic
 	name = "moebius paramedic's locker"
@@ -88,7 +80,7 @@
 	new /obj/item/storage/pouch/medical_supply(src)
 
 /obj/structure/closet/secure_closet/reinforced/CMO
-	name = "moebius biolab officer's locker"
+	name = "Brotherhood Coordinator's locker"
 	req_access = list(access_cmo)
 	icon_state = "cmo"
 
@@ -97,15 +89,10 @@
 		new /obj/item/storage/backpack/medical(src)
 	else
 		new /obj/item/storage/backpack/satchel(src)
-	new /obj/item/clothing/suit/bio_suit(src)
-	new /obj/item/clothing/head/bio_hood(src)
 	new /obj/item/clothing/shoes/color/white(src)
-	new /obj/item/clothing/shoes/reinforced/medical(src)
 	new /obj/item/clothing/gloves/latex/nitrile(src)
-	new /obj/item/clothing/under/rank/medical/green(src)
-	new /obj/item/clothing/head/surgery/green(src)
 	new /obj/item/clothing/under/rank/moebius_biolab_officer(src)
-	new /obj/item/clothing/suit/storage/toggle/labcoat/cmo(src)
+	new /obj/item/clothing/suit/storage/toggle/labcoat/old(src)
 	new /obj/item/clothing/gloves/latex(src)
 	new /obj/item/clothing/shoes/color/brown	(src)
 	new /obj/item/device/radio/headset/heads/cmo(src)

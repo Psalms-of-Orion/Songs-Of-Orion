@@ -1571,7 +1571,7 @@
 					/obj/item/computer_hardware/hard_drive/portable/design/security = 5,
 					/obj/item/computer_hardware/hard_drive/portable/design/armor/asters = 5,
 					/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_cheap_guns = 5,
-					/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_slaught_o_matic = 5,
+//					/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_slaught_o_matic = 5,
 					/obj/item/computer_hardware/hard_drive/portable/design/nonlethal_ammo = 10,
 					/obj/item/electronics/circuitboard/autolathe = 3,
 					/obj/item/electronics/circuitboard/vending = 10,
@@ -1594,7 +1594,7 @@
 					/obj/item/computer_hardware/hard_drive/portable/design/security = 600,
 					/obj/item/computer_hardware/hard_drive/portable/design/armor/asters = 900,
 					/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_cheap_guns = 3000,
-					/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_slaught_o_matic = 600,
+//					/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_slaught_o_matic = 600,
 					/obj/item/computer_hardware/hard_drive/portable/design/nonlethal_ammo = 700,
 					/obj/item/electronics/circuitboard/autolathe = 700,
 					/obj/item/electronics/circuitboard/autolathe_disk_cloner = 1000,
@@ -1675,10 +1675,10 @@
 					/obj/item/storage/deferred/crate/clown_crime/hoxton = 2,
 					/obj/item/storage/deferred/crate/clown_crime/chains = 2
 					)
-	contraband = list(
-					/obj/item/gun/projectile/mandella = 4,
-					/obj/item/ammo_magazine/cspistol = 12,
-					/obj/item/computer_hardware/hard_drive/portable/design/guns/scaramanga = 1)
+//	contraband = list(
+//					/obj/item/gun/projectile/mandella = 4,
+//					/obj/item/ammo_magazine/cspistol = 12,
+//					/obj/item/computer_hardware/hard_drive/portable/design/guns/scaramanga = 1)
 	prices = list(
 					/obj/item/ammo_magazine/lrifle = 400,
 					/obj/item/ammo_magazine/hpistol = 300,
@@ -1702,8 +1702,8 @@
 					/obj/item/storage/deferred/crate/clown_crime = 1800,
 					/obj/item/storage/deferred/crate/clown_crime/wolf = 1800,
 					/obj/item/storage/deferred/crate/clown_crime/hoxton = 1800,
-					/obj/item/storage/deferred/crate/clown_crime/chains = 1800,
-					/obj/item/computer_hardware/hard_drive/portable/design/guns/scaramanga = 7000
+					/obj/item/storage/deferred/crate/clown_crime/chains = 1800
+//					/obj/item/computer_hardware/hard_drive/portable/design/guns/scaramanga = 7000
 					)
 	idle_power_usage = 211
 	vendor_department = DEPARTMENT_OFFSHIP
@@ -2024,5 +2024,33 @@
 	var/choice = sanitize(input("What do you want to name your Vendomat? You can rename it again later.", "Vendomat Renaming", name) as text|null, MAX_NAME_LEN)
 	if(choice)
 		SetName(choice)
+
+
+/obj/machinery/vending/military
+	name = "Equipment vendor"
+	desc = "A military equipment vendor."
+	product_ads = "Crack some skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here."
+	req_access = list(access_security)
+	products = list(/obj/item/storage/deferred/crate/peacekeeper = 10,
+					/obj/item/storage/deferred/crate/peacekeeper_medic = 2,
+					/obj/item/storage/deferred/crate/peacekeeper_sarge = 2,
+					/obj/item/storage/deferred/crate/hecu = 4,
+					/obj/item/storage/deferred/crate/hecu_medic = 1,
+					/obj/item/storage/deferred/crate/hecu_sarge = 1,
+					/obj/item/handcuffs/zipties = 8,
+					/obj/item/grenade/flashbang = 8,
+					/obj/item/grenade/chem_grenade/teargas = 8,
+					/obj/item/grenade/smokebomb = 12,
+					/obj/item/grenade/frag = 12,
+					/obj/item/device/flash = 8,
+					/obj/item/storage/pouch/ammo/loaded = 10,
+					/obj/item/ammo_magazine/ihclrifle/rubber = 10,
+					/obj/item/ammo_magazine/ammobox/clrifle_small/rubber = 4,
+					/obj/item/taperoll/police = 3,
+					/obj/item/device/holowarrant = 8,
+					/obj/item/storage/box/evidence = 2,
+					/obj/item/storage/ration_pack/ihr = 10)
+	auto_price = FALSE
+	vendor_department = DEPARTMENT_OFFSHIP
 
 #undef CUSTOM_VENDOMAT_MODELS

@@ -52,8 +52,14 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 			if(istype(U)) U.accessories += new /obj/item/clothing/accessory/medal/gold/captain(U)
 		return 1
 
-	get_access()
-		return get_all_station_access()
+
+	access = list(
+	access_maint_tunnels, access_external_airlocks, access_eva, access_sec_doors, access_brig,
+	access_mining_station, access_cargo, access_all_personal_lockers, access_rd, access_merchant,
+	access_heads_vault, access_captain, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_change_engineering,
+	access_change_research, access_change_cargo, access_change_sec, access_armory,  access_tcomsat, access_ai_upload
+	)
+
 
 /obj/landmark/join/start/captain
 	name = "Captain"
@@ -107,8 +113,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 							 /datum/computer_file/program/reports)
 
 
-	get_access()
-		return get_all_station_access()
+
+	access = list(
+	access_maint_tunnels, access_external_airlocks, access_eva, access_sec_doors, access_brig,
+	access_mining_station, access_cargo, access_all_personal_lockers, access_rd, access_merchant,
+	access_heads_vault, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_change_engineering,
+	access_change_research, access_change_cargo, access_change_sec, access_armory,  access_tcomsat, access_ai_upload
+	)
 
 	stat_modifiers = list(
 		STAT_ROB = 15,

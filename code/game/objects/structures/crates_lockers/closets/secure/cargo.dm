@@ -1,36 +1,31 @@
 /obj/structure/closet/secure_closet/personal/cargotech
-	name = "guild technician's locker"
+	name = "cargo technician's locker"
 	req_access = list(access_merchant)
 	access_occupy = list(access_cargo)
 	icon_state = "cargo"
 
 /obj/structure/closet/secure_closet/personal/cargotech/populate_contents()
 	new /obj/item/clothing/under/rank/cargotech(src)
-	new /obj/item/clothing/suit/storage/cargo_jacket/black/old(src)
-	new /obj/item/clothing/suit/storage/cargo_jacket/black(src)
-	new /obj/item/clothing/suit/storage/cargo_jacket(src)
 	new /obj/item/clothing/shoes/color/black(src)
-	new /obj/item/device/radio/headset/headset_cargo(src)
 	new /obj/item/clothing/gloves/thick(src)
 	new /obj/item/clothing/head/soft(src)
 	new /obj/item/device/scanner/price(src)
 
 /obj/structure/closet/secure_closet/reinforced/quartermaster
-	name = "guild merchant's locker"
+	name = "Syndicate Officer's locker"
 	req_access = list(access_merchant)
 	icon_state = "qm"
 
 /obj/structure/closet/secure_closet/reinforced/quartermaster/populate_contents()
-	new /obj/item/clothing/under/rank/cargotech(src)
-	new /obj/item/clothing/shoes/color/brown(src)
+	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/shoes/color/black(src)
 	new /obj/item/device/radio/headset/headset_cargo(src)
 	new /obj/item/clothing/gloves/thick(src)
 	new /obj/item/clothing/suit/fire(src)
 	new /obj/item/tank/emergency_oxygen(src)
 	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/clothing/glasses/powered/meson(src)
 	new /obj/item/clothing/head/soft(src)
-	new /obj/item/gun/projectile/shotgun/pump(src)
+	new /obj/item/gun/projectile/boltgun/pump(src)
 	new /obj/item/ammo_casing/shotgun/beanbag(src)
 	new /obj/item/ammo_casing/shotgun/beanbag(src)
 	new /obj/item/ammo_casing/shotgun/beanbag(src)

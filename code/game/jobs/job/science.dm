@@ -15,13 +15,11 @@
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
 
 	access = list(
-		access_rd, access_heads, access_tox, access_genetics, access_morgue,
-		access_tox_storage, access_teleporter, access_sec_doors,
-		access_moebius, access_medical_equip, access_chemistry, access_virology, access_cmo, access_surgery, access_psychiatrist,
-		access_robotics, access_xenobiology, access_ai_upload, access_tech_storage, access_eva, access_external_airlocks,
-		access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels, access_research_equipment,
+		access_rd, access_heads,
+		access_RC_announce, access_keycard_auth, access_maint_tunnels,
 		access_change_research
 	)
+
 	ideal_character_age = 50
 
 	stat_modifiers = list(
@@ -76,9 +74,7 @@ access_kitchen
 
 	software_on_spawn = list(/datum/computer_file/program/signaller, /datum/computer_file/program/chem_catalog)
 
-	access = list(
-		access_tox, access_tox_storage, access_moebius, access_maint_tunnels, access_xenobiology, access_xenoarch, access_research_equipment
-	)
+	access = list(access_maint_tunnels)
 
 	stat_modifiers = list(
 		STAT_MEC = 20,
@@ -122,7 +118,7 @@ access_kitchen
 	alt_titles = list("HR Assistant","HR custodian","HR biolab assistant", "HR laborer", "HR debt slave", "Human Resource", "HR nutrition technician")
 	also_known_languages = list(LANGUAGE_CYRILLIC = 15, LANGUAGE_SERBIAN = 5)
 
-	access = list(access_maint_tunnels, access_moebius)
+	access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/science/wagie
 
 	stat_modifiers = list(

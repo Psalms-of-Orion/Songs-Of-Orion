@@ -180,10 +180,11 @@
 
 //Faction-specific backpacks
 /obj/item/storage/backpack/ironhammer
-	name = "operator's backpack"
-	desc = "Done in a complementing shade for IronHammer Security forces, a staple for military contractors everywhere."
+	name = "peacekeeper backpack"
+	desc = "A backpack in the dull grey of SOLCOM military forces."
 	icon_state = "backpack_ironhammer"
-	rarity_value = 25
+	max_storage_space = DEFAULT_HUGE_STORAGE * 1.3
+	rarity_value = 8.33
 
 /obj/item/storage/backpack/neotheology
 	name = "cruciformed backpack"

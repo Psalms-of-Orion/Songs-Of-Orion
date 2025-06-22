@@ -501,3 +501,6 @@
 	overlay_color = "#D04044"
 	SUIT_TYPE = /obj/item/clothing/suit/space/void/merc
 	MASK_TYPE = /obj/item/clothing/mask/gas/syndicate
+
+/obj/machinery/suit_storage_unit/marine
+	SUIT_TYPE = /obj/item/clothing/suit/space/void/SCAF/VBSS

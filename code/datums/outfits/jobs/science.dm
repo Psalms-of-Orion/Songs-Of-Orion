@@ -19,16 +19,19 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/hro
 	pda_type = /obj/item/modular_computer/pda/heads/rd
 	backpack_contents = list(/obj/item/oddity/secdocs = 1, /obj/item/gun/projectile/selfload/moebius = 1, /obj/item/ammo_magazine/pistol/rubber = 2)
+	l_pocket = /obj/item/card/keycard/hr/level_2
 
 /decl/hierarchy/outfit/job/science/scientist
 	name = OUTFIT_JOB_NAME("HR Biotechnician")
 	uniform = /obj/item/clothing/under/rank/scientist
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	l_pocket = /obj/item/card/keycard/hr/level_3
 
 /decl/hierarchy/outfit/job/science/wagie
 	name = OUTFIT_JOB_NAME("HR WAGIE")
 	uniform = /obj/item/clothing/under/rank/wagie
 	shoes = /obj/item/clothing/shoes/color/black
+	l_pocket = /obj/item/card/keycard/hr
 
 /decl/hierarchy/outfit/job/science/xenobiologist
 	name = OUTFIT_JOB_NAME("Moebius Xenobiologist")

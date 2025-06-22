@@ -179,10 +179,7 @@
 	selection_color = "#dddddd"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 15, LANGUAGE_JIVE = 80)
-	access = list(
-		access_moebius, access_medical_equip, access_maint_tunnels, access_morgue, access_surgery, access_chemistry, access_virology,
-		access_genetics
-	)
+	access = list(access_maint_tunnels)
 	stat_modifiers = list(
 		STAT_BIO = 40,
 		STAT_COG = 10
@@ -219,10 +216,7 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/nt/security
 
-	access = list(
-		access_security, access_moebius, access_engine, access_mailsorting,access_eva,
-		access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks
-	)
+	access = list(access_maint_tunnels)
 
 	stat_modifiers = list(
 		STAT_ROB = 25,
@@ -257,11 +251,7 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/nt/detective
 
-	access = list(
-		access_security, access_moebius, access_medspec, access_engine, access_mailsorting,
-		access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels,
-		access_external_airlocks, access_brig
-	)
+	access = list(access_maint_tunnels)
 
 	stat_modifiers = list(
 		STAT_BIO = 15,
@@ -301,11 +291,7 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/nt/engineer
 
-	access = list(
-		access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
-		access_external_airlocks, access_construction, access_atmospherics, access_mining,
-		access_mining_station
-	)
+	access = list(access_maint_tunnels)
 
 	stat_modifiers = list(
 		STAT_MEC = 30,
@@ -347,9 +333,7 @@
 
 	software_on_spawn = list(/datum/computer_file/program/signaller, /datum/computer_file/program/chem_catalog)
 
-	access = list(
-		access_robotics, access_tox, access_tox_storage, access_moebius, access_maint_tunnels, access_xenobiology, access_xenoarch, access_research_equipment
-	)
+	access = list(access_maint_tunnels)
 
 	stat_modifiers = list(
 		STAT_MEC = 20,
@@ -384,7 +368,7 @@
 	stat_modifiers = list(
 		STAT_TGH = 30,
 	)
-
+	access = list(access_maint_tunnels)
 	perks = list(PERK_ARTIST)
 
 	description = "Honk."
@@ -441,8 +425,12 @@
 			if(istype(U)) U.accessories += new /obj/item/clothing/accessory/medal/gold/captain(U)
 		return 1
 
-	get_access()
-		return get_all_station_access()
+	access = list(
+	access_maint_tunnels, access_external_airlocks, access_eva, access_sec_doors, access_brig,
+	access_mining_station, access_cargo, access_all_personal_lockers, access_rd, access_merchant,
+	access_heads_vault, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_change_engineering,
+	access_change_research, access_change_cargo, access_change_sec, access_armory, access_tcomsat, access_ai_upload
+	)
 
 /obj/landmark/join/start/captain_nt
 	name = "Captain"
@@ -467,6 +455,13 @@
 	perks = list(/datum/perk/sommelier)
 	ideal_character_age = 50
 
+	access = list(
+	access_maint_tunnels, access_external_airlocks, access_eva, access_sec_doors, access_brig,
+	access_mining_station, access_cargo, access_captain, access_all_personal_lockers, access_rd, access_merchant,
+	access_heads_vault, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_change_engineering,
+	access_change_research, access_change_cargo, access_change_sec, access_armory,  access_tcomsat, access_ai_upload
+	)
+
 	description = "You are the captain's right hand. His second in command. Where he goes, you follow. Where he leads, you drag everyone else along. You make sure his will is done, his orders obeyed, and his laws enforced."
 	outfit_type = /decl/hierarchy/outfit/job/nt/hop
 
@@ -475,10 +470,6 @@
 							 /datum/computer_file/program/card_mod,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
-
-
-	get_access()
-		return get_all_station_access()
 
 	stat_modifiers = list(
 		STAT_ROB = 15,

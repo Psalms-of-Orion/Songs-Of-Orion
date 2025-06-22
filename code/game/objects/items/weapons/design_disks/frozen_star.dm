@@ -1,6 +1,6 @@
 
 /obj/item/computer_hardware/hard_drive/portable/design/nonlethal_ammo
-	disk_name = "Frozen Star Nonlethal Magazines Pack"
+	disk_name = "Nonlethal Magazines Pack"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED_COMMON
 	rarity_value = 20
@@ -31,7 +31,7 @@
 	)
 
 /obj/item/computer_hardware/hard_drive/portable/design/lethal_ammo
-	disk_name = "Frozen Star Lethal Magazines Pack"
+	disk_name = "Lethal Magazines Pack"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED_COMMON
 	license = 20
@@ -60,7 +60,7 @@
 	)
 
 /obj/item/computer_hardware/hard_drive/portable/design/ammo_boxes_smallarms
-	disk_name = "Frozen Star .35 and .40 Ammunition"
+	disk_name = "Pistol and magnum Ammunition"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED_COMMON
 	license = 20
@@ -74,7 +74,7 @@
 	)
 
 /obj/item/computer_hardware/hard_drive/portable/design/ammo_boxes_rifle
-	disk_name = "Frozen Star Rifle Ammunition"
+	disk_name = "Rifle and carbine Ammunition"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED_COMMON
 	license = 20
@@ -101,19 +101,16 @@
 	rarity_value = 7
 	license = 12
 	designs = list(
-		/datum/design/autolathe/gun/giskard = 3,
-		/datum/design/autolathe/gun/olivaw = 3,
+		//datum/design/autolathe/gun/giskard = 3,
+		//datum/design/autolathe/gun/olivaw = 3,
 		/datum/design/autolathe/gun/clarissa = 3,
-		/datum/design/autolathe/gun/havelock = 3,
+		//datum/design/autolathe/gun/havelock = 3,
 		/datum/design/autolathe/ammo/magazine_pistol,
 		/datum/design/autolathe/ammo/magazine_pistol/practice = 0,
 		/datum/design/autolathe/ammo/magazine_pistol/rubber,
-		/datum/design/autolathe/ammo/sl_pistol,
-		/datum/design/autolathe/ammo/sl_pistol/practice = 0,
-		/datum/design/autolathe/ammo/sl_pistol/rubber,
 		)
 
-/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_colt
+/*/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_colt
 	disk_name = "Frozen Star - .35 Colt 1911"
 	icon_state = "frozenstar"
 	rarity_value = 9
@@ -124,7 +121,7 @@
 		/datum/design/autolathe/ammo/magazine_pistol/practice = 0,
 		/datum/design/autolathe/ammo/magazine_pistol/rubber,
 	)
-
+*/
 // .40 REVOLVERS
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_revolver_miller
@@ -139,7 +136,7 @@
 		/datum/design/autolathe/ammo/sl_magnum/rubber,
 		)
 
-/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_revolver_consul
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/fs_revolver_consul
 	disk_name = "Frozen Star - .40 Consul Revolver"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
@@ -219,14 +216,14 @@
 		/datum/design/autolathe/ammo/shotgun_blanks,
 		/datum/design/autolathe/ammo/shotgun_flash,
 		)
-
+*/
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_kammerer
-	disk_name = "Frozen Star - .50 Kammerer Shotgun"
+	disk_name = "Shotgun"
 	icon_state = "frozenstar"
 	rarity_value = 9
 	license = 12
 	designs = list(
-		/datum/design/autolathe/gun/pump_shotgun = 3, // "FS SG \"Kammerer\""
+		/obj/item/gun/projectile/boltgun/pump = 3, // shomtgung
 		/datum/design/autolathe/ammo/shotgun_pellet,
 		/datum/design/autolathe/ammo/shotgun,
 		/datum/design/autolathe/ammo/shotgun_beanbag,
@@ -235,7 +232,7 @@
 		)
 
 
-/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_gladstone
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/fs_gladstone
 	disk_name = "Frozen Star - .50 Gladstone Shotgun"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
@@ -263,26 +260,26 @@
 		/datum/design/autolathe/ammo/magazine_pistol/practice = 0,
 		/datum/design/autolathe/ammo/magazine_pistol/rubber,
 	)
-
+*/
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_straylight
-	disk_name = "Frozen Star - .35 Straylight SMG"
+	disk_name = "Machine Pistol"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
 	license = 12
 	designs = list(
-		/datum/design/autolathe/gun/straylight = 3, // "FS SMG .35 \"Straylight\""
+		/obj/item/gun/projectile/automatic/smg/mp5k = 3,
 		/datum/design/autolathe/ammo/smg,
 		/datum/design/autolathe/ammo/smg/practice = 0,
 		/datum/design/autolathe/ammo/smg/rubber,
 	)
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_molly
-	disk_name = "Frozen Star - .35 Molly SMG"
+	disk_name = "Submachine Gun"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
 	license = 12
 	designs = list(
-		/datum/design/autolathe/gun/molly = 3, // "FS MP .35 \"Molly\""
+		/obj/item/gun/projectile/automatic/smg = 3, // "FS MP .35 \"Molly\""
 		/datum/design/autolathe/ammo/smg,
 		/datum/design/autolathe/ammo/smg/practice = 0,
 		/datum/design/autolathe/ammo/smg/rubber,
@@ -290,18 +287,18 @@
 
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_atreides
-	disk_name = "Frozen Star - .35 Atreides SMG"
+	disk_name = "Suppressed SMG"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
 	license = 12
 	designs = list(
-		/datum/design/autolathe/gun/atreides = 3, // "FS SMG .35 \"Atreides\""
+		/obj/item/gun/projectile/automatic/smg/mp5sd = 3, // "FS SMG .35 \"Atreides\""
 		/datum/design/autolathe/ammo/smg,
 		/datum/design/autolathe/ammo/smg/practice = 0,
 		/datum/design/autolathe/ammo/smg/rubber,
 	)
 
-/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_slaught_o_matic
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/fs_slaught_o_matic
 	disk_name = "Frozen Star - .35 Slaught-o-Matic HG"
 	icon_state = "frozenstar"
 	rarity_value = 7
@@ -322,11 +319,11 @@
 		/datum/design/autolathe/ammo/srifle/practice = 0,
 		/datum/design/autolathe/ammo/srifle/rubber,
 	)
-
+*/
 // .25 Caseless
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_sol
-	disk_name = "Frozen Star - .25 Sol Caseless SMG Pack"
+	disk_name = "Pulse Rifle Pack"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
 	license = 12
@@ -338,7 +335,7 @@
 	)
 
 
-/obj/item/computer_hardware/hard_drive/portable/design/guns/fs_kalashnikov
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/fs_kalashnikov
 	disk_name = "Frozen Star - .30 Hunting Rifle Pack"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
@@ -415,3 +412,4 @@
 		/datum/design/autolathe/gun/lmg_tk = 3, // "FS LMG .25 \"Takeshi\""
 		/datum/design/autolathe/ammo/ihclmg
 	)
+*/

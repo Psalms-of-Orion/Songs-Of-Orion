@@ -1,5 +1,5 @@
 /obj/structure/closet/secure_closet/reinforced/engineering_chief
-	name = "technomancer exultant's locker"
+	name = "Chief Engineer's locker"
 	req_access = list(access_ce)
 	icon_state = "ce"
 
@@ -16,14 +16,12 @@
 	new /obj/item/clothing/shoes/color/brown(src)
 	new /obj/item/device/radio/headset/heads/ce(src)
 	new /obj/item/storage/toolbox/mechanical(src)
-	new /obj/item/clothing/suit/storage/te_coat(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/tool/multitool(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/taperoll/engineering(src)
 	new /obj/item/storage/pouch/engineering_supply(src)
 	new /obj/item/storage/pouch/engineering_material(src)
-	new /obj/item/clothing/head/armor/helmet/technomancer_old(src)
 
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies"
@@ -65,7 +63,7 @@
 	new /obj/item/tool_upgrade/augment/fuel_tank(src)
 
 /obj/structure/closet/secure_closet/personal/engineering_personal
-	name = "technomancer's locker"
+	name = "Engineer's locker"
 	req_access = list(access_ce)
 	access_occupy = list(access_engine_equip)
 	icon_state = "eng"
@@ -85,9 +83,4 @@
 	new /obj/item/device/radio/headset/headset_eng(src)
 	new /obj/item/clothing/suit/storage/hazardvest/orange(src)
 	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/clothing/glasses/powered/meson(src)
-	new /obj/item/clothing/head/armor/helmet/technomancer(src)
-	new /obj/item/clothing/suit/storage/vest/insulated(src)
-	new /obj/item/clothing/head/armor/helmet/technomancer_old(src)
-	new /obj/item/clothing/suit/storage/vest/technomancer_old(src)
 	new /obj/item/storage/pouch/engineering_tools (src)

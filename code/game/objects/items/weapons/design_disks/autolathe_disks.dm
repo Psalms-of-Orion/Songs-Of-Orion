@@ -1,6 +1,6 @@
 
 //The Dallas
-/obj/item/computer_hardware/hard_drive/portable/design/guns/dallas
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/dallas
 	disk_name = "PAR - .25 Dallas"
 	icon_state = "black"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
@@ -10,8 +10,8 @@
 		/datum/design/autolathe/gun/dallas = 3, // "PAR .25 CS \"Dallas\""
 		/datum/design/autolathe/ammo/c10x24,
 	)
-
-/obj/item/computer_hardware/hard_drive/portable/design/guns/scaramanga
+*/
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/scaramanga
 	disk_name = "\"Scaramanga\" gold set"
 	icon_state = "onestar"
 	rarity_value = 40
@@ -23,7 +23,7 @@
 		/datum/design/autolathe/gun/avasarala = 6,
 		/datum/design/autolathe/gun/ak47_fs = 6
 	)
-
+*/
 // ARMOR
 /obj/item/computer_hardware/hard_drive/portable/design/armor
 	bad_type = /obj/item/computer_hardware/hard_drive/portable/design/armor

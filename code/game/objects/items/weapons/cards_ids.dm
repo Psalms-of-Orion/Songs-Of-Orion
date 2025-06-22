@@ -56,21 +56,23 @@
  */
 
 /obj/item/card/emag_broken
-	desc = "A card with a magnetic strip attached to some circuitry. It looks too busted to be used for anything but salvage."
-	name = "broken cryptographic sequencer"
-	icon_state = "emag"
+	desc = "A small device with a melted edge connector. It looks too busted to be used for anything but salvage."
+	name = "broken device"
+	icon_state = "crypto_broken"
 	item_state = "card-id"
 	origin_tech = list(TECH_MAGNET = 2, TECH_COVERT = 2)
 	matter = list(MATERIAL_SILVER = 1, MATERIAL_PLASTIC = 1)
+	w_class = ITEM_SIZE_SMALL
 
 /obj/item/card/emag
-	desc = "A card with a magnetic strip attached to some circuitry."
+	desc = "A modified Security Access Tuner system intended to 'war dial' analogue RF datasystems through vulnerabilities in internal wiring and sequence digitical crypograpic secondaries. These modifications drastically reduce the lifespan of the unit."
 	name = "cryptographic sequencer"
 	description_antag = "This item has 10 by default. Emagging turrets turns them lethal to everyone. Emagging a door opens it and bolts it. Emagging a non-sentient robot turns them hostile. Emagging a cyborg forces them to obey you. Emagging an APC lets only you acces it."
-	icon_state = "emag"
+	icon_state = "crypto"
 	item_state = "card-id"
 	origin_tech = list(TECH_MAGNET = 2, TECH_COVERT = 2)
 	var/uses = 10
+	w_class = ITEM_SIZE_SMALL
 
 var/const/NO_EMAG_ACT = -50
 /obj/item/card/emag/resolve_attackby(atom/A, mob/user)
@@ -354,43 +356,204 @@ var/const/NO_EMAG_ACT = -50
 	assignment = "Colonel"
 
 /obj/item/card/id/solcom/New()
-	access = get_all_station_access() + access_synth + get_all_centcom_access()
+	access = get_all_centcom_access()
 	..()
 
 /obj/item/card/id/solcom/marine
 	name = "\improper Solar Marine ID"
 	desc = "Things are probably bad if the Marines are here."
-	icon_state = "centcom"
 	registered_name = "Solar Marine"
 	assignment = "Corporal"
 
-/obj/item/card/id/solcom/marine/sarge
+/obj/item/card/id/solcom/marine_sarge
 	name = "\improper Solar Marine Command ID"
 	registered_name = "Solar Marine Sergeant"
 	assignment = "Gunnery Sergeant"
 
-/obj/item/card/id/solcom/marine/corpsman
+/obj/item/card/id/solcom/marine_corpsman
 	name = "\improper Solar Marine Corpsman ID"
 	registered_name = "Solar Marine Corpsman"
-	assignment = "Hospital Corpsman 2nd Class"
+	assignment = "Hospital Corpsman"
 
 /obj/item/card/id/solcom/peace
 	name = "\improper SOLCOM Peacekeeper ID"
 	desc = "Things are probably bad if the Peacekeepers are here."
 	registered_name = "Peacekeeper"
-	assignment = "Trooper 2nd Class"
+	assignment = "Trooper"
 
-/obj/item/card/id/solcom/peace/sarge
+/obj/item/card/id/solcom/peace_sarge
 	name = "\improper SOLCOM Peacekeeper ID"
 	registered_name = "Peacekeeper Sergeant"
 	assignment = "Sergeant"
 
-/obj/item/card/id/solcom/peace/medic
+/obj/item/card/id/solcom/peace_medic
 	name = "\improper SOLCOM Peacekeeper ID"
 	registered_name = "Peacekeeper Medic"
-	assignment = "Medic 3rd Class"
+	assignment = "Medic"
 
 /obj/item/card/id/solcom/marshal
 	name = "\improper SOLCOM Solar Marshal ID"
 	registered_name = "Sky Marshal"
 	assignment = "Sky Marshal"
+
+
+/obj/item/card/keycard
+	name = "keycard"
+	desc = "A card used to provide access to systems and doors across the station."
+	icon_state = "key"
+	item_state = "card-id"
+	slot_flags = SLOT_ID
+	var/assignment
+	var/access = list()
+	spawn_blacklisted = TRUE
+
+/obj/item/card/keycard/examine(mob/user, extra_description = "")
+	set src in oview(1) // TODO: See if this could be safely removed --KIROV
+	if(get_dist(user, src) < 2)
+		extra_description += desc
+		extra_description += text("\n\icon[src] [name]: The current assignment on the card is [assignment].")
+	else
+		extra_description += SPAN_WARNING("It is too far away.")
+
+/obj/item/card/keycard/proc/prevent_tracking()
+	return 0
+
+/obj/item/card/keycard/proc/dat()
+	var/dat = ("<table><tr><td>")
+	dat += text("Aceess Type: []</A><BR>\n", assignment)
+	return dat
+
+/obj/item/card/keycard/GetAccess()
+	return access
+
+/obj/item/card/keycard/captains_spare
+	name = "Level-1 keycard"
+	desc = "The key of the High Lord himself."
+	icon_state = "key_gold"
+	item_state = "gold_id"
+	assignment = "Captain"
+	spawn_blacklisted = TRUE
+
+/obj/item/card/keycard/captains_spare/New()
+	access = get_all_station_access()
+	..()
+
+/obj/item/card/keycard/fo
+	name = "Level-1 keycard"
+	desc = "A high level administrative keycard."
+	icon_state = "key_hop"
+	item_state = "gold_id"
+	assignment = "Captain"
+	spawn_blacklisted = TRUE
+	access = list(
+	access_maint_tunnels, access_external_airlocks, access_eva, access_sec_doors, access_brig,
+	access_mining_station, access_cargo, access_all_personal_lockers, access_rd, access_merchant,
+	access_heads_vault, access_ce, access_hop, access_hos, access_armory,  access_tcomsat, access_ai_upload,
+	access_moebius, access_tox, access_research_equipment, access_engine, access_atmospherics, access_engine_equip,
+	access_construction, access_robotics
+	)
+
+/obj/item/card/keycard/hr
+	name = "level-4 keycard"
+	desc = "A card used to provide access to systems and doors across the station. Stamped with the Human Resources logo."
+	icon_state = "key_wagie"
+	assignment = "Human Resources"
+	access = list(access_maint_tunnels, access_moebius)
+
+/obj/item/card/keycard/hr/level_3
+	name = "level-3 keycard"
+	icon_state = "key_hr"
+	assignment = "Human Resources"
+	access = list(access_maint_tunnels, access_moebius, access_tox, access_research_equipment)
+
+/obj/item/card/keycard/hr/level_2
+	name = "level-2 keycard"
+	icon_state = "key_com"
+	assignment = "Human Resources"
+	access = list(access_maint_tunnels, access_moebius, access_tox, access_research_equipment, access_sec_doors, access_heads)
+
+/obj/item/card/keycard/engineering
+	name = "level-4 keycard"
+	desc = "A card used to provide access to systems and doors across the station. Labeled for Expedition use."
+	icon_state = "key_diver"
+	assignment = "Astra Starworks"
+	access = list(access_maint_tunnels, access_mining_station, access_engine, access_external_airlocks, access_eva, access_mining)
+
+/obj/item/card/keycard/engineering/level_3
+	name = "level-3 keycard"
+	desc = "A card used to provide access to systems and doors across the station. Labeled for Engineering use."
+	icon_state = "key_eng"
+	assignment = "Astra Starworks"
+	access = list(access_maint_tunnels, access_engine, access_atmospherics, access_engine_equip, access_construction, access_external_airlocks, access_eva, access_mining_station, access_mining, access_mining_office)
+
+/obj/item/card/keycard/engineering/level_2
+	name = "level-2 keycard"
+	icon_state = "key_com"
+	assignment = "Astra Starworks"
+	access = list(access_maint_tunnels, access_engine, access_engine_equip, access_atmospherics, access_construction, access_external_airlocks, access_eva, access_sec_doors, access_heads, access_mining_station)
+
+/obj/item/card/keycard/med
+	name = "level-4 keycard"
+	desc = "A card used to provide access to systems and doors across the station. Labeled with old station access data, still used by the Brotherhood."
+	icon_state = "key_med"
+	assignment = "Working Brotherhood"
+	access = list(access_maint_tunnels, access_medical_equip)
+
+/obj/item/card/keycard/med/level_2
+	name = "level-2 keycard"
+	icon_state = "key_cmo"
+	assignment = "Working Brotherhood"
+	access = list(access_maint_tunnels, access_medical_equip, access_external_airlocks, access_eva, access_sec_doors, access_heads, access_mining_station)
+
+/obj/item/card/keycard/syndicate
+	name = "level-4 keycard"
+	desc = "A card used to provide access to systems and doors across the station. Unlabled, but used by the Syndicate."
+	icon_state = "key_cargo"
+	assignment = "Freight Syndicate"
+	access = list(access_maint_tunnels, access_cargo, access_eva, access_mining_station)
+
+/obj/item/card/keycard/syndicate/level_3
+	name = "level-3 keycard"
+	icon_state = "key_synd"
+	assignment = "Freight Syndicate"
+	access = list(access_maint_tunnels, access_cargo, access_eva, access_mining_station, access_robotics)
+
+/obj/item/card/keycard/syndicate/level_2
+	name = "level-2 keycard"
+	icon_state = "key_synd"
+	assignment = "Freight Syndicate"
+	access = list(access_maint_tunnels, access_cargo, access_eva, access_mining_station, access_robotics, access_sec_doors, access_heads)
+
+/obj/item/card/keycard/security
+	name = "level-3 keycard"
+	desc = "A card used to provide access to systems and doors across the station. This one is a special security-access type, with all Level-4 acess on the Station."
+	icon_state = "key_sec"
+	assignment = "PCRC"
+	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_engine, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_cargo)
+
+/obj/item/card/keycard/security/level_2
+	name = "level-2 keycard"
+	desc = "A card used to provide access to systems and doors across the station. This one is a special security-access type, with all Level-3 acess on the Station."
+	icon_state = "key_hos"
+	assignment = "PCRC"
+	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_atmospherics, access_construction, access_engine, access_tox, access_engine_equip, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_heads, access_cargo, access_armory)
+
+
+/obj/item/card/keycard/military
+	name = "level-3 keycard"
+	desc = "A card used to provide access to systems and doors across the station. This one is a special security-access type, with all Level-4 acess on the Station."
+	icon_state = "key_hop"
+	assignment = "SOLCOM"
+	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_engine, access_atmospherics, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_cargo)
+
+/obj/item/card/keycard/military/level_0
+	name = "level-0 keycard"
+	desc = "A card used to provide access to systems and doors across the station. This one is a special security-access type, with all Level-3 acess on the Station."
+	icon_state = "key_hop"
+	assignment = "SOLCOM"
+	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_construction, access_atmospherics, access_engine, access_tox, access_engine_equip, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_heads, access_cargo, access_armory)
+
+
+
+
+

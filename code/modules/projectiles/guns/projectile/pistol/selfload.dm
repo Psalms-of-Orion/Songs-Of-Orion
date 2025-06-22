@@ -2,13 +2,12 @@
 	name = "S HG .35 Auto \"Clarissa\""
 	desc = "A small, easily concealable, but somewhat underpowered gun. Uses both standard and highcap .35 Auto mags."
 
-	icon = 'icons/obj/guns/projectile/clarissa.dmi'
+	icon = 'modular/guns/icons/pistol.dmi'
 	icon_state = "clarissa"
 	item_state = "clarissa"
 
 	w_class = ITEM_SIZE_SMALL
 	can_dual = TRUE
-	silenced = FALSE
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	matter = list(MATERIAL_PLASTEEL = 12, MATERIAL_PLASTIC = 6)
 	price_tag = 1000
@@ -22,7 +21,7 @@
 	penetration_multiplier = 0
 	init_recoil = HANDGUN_RECOIL(0.75)
 
-	gun_tags = list(GUN_SILENCABLE)
+
 	init_firemodes = list(
 		SEMI_AUTO_300,
 		FULL_AUTO_800

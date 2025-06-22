@@ -3,7 +3,11 @@
 	var/is_hacking = 0
 	var/max_known_targets
 
-	description_antag = "Use a screwdriver to activate. Its hacking time is 30 seconds, but gets sped the more skilled you are with computers"
+	name = "security access tuner"
+	desc = "Advanced hybrid digital-analogue interface for diagnostics and programing."
+	description_info = "Can be switched between hacking and multi-tool by using in-hand."
+	description_antag = "Can be used to brute-force any locker and most doors. It however takes time"
+	icon_state = "sac"
 
 	var/in_hack_mode = 0
 	var/list/known_targets
@@ -26,13 +30,11 @@
 	hack_state = null
 	return ..()
 
-/obj/item/tool/multitool/hacktool/attackby(obj/item/I, mob/user)
-	if(QUALITY_SCREW_DRIVING in I.tool_qualities)
-		if(I.use_tool(user, src, WORKTIME_FAST, QUALITY_SCREW_DRIVING, FAILCHANCE_EASY, required_stat = STAT_COG))
-			in_hack_mode = !in_hack_mode
-			to_chat(user, SPAN_NOTICE("You [in_hack_mode? "enable" : "disable"] the hack mode."))
-	else
-		..()
+/obj/item/tool/multitool/hacktool/attack_self(mob/user as mob)
+	add_fingerprint(user)
+	in_hack_mode = !in_hack_mode
+	to_chat(user, SPAN_NOTICE("You [in_hack_mode? "enable" : "disable"] the analogue tuner mode."))
+	..()
 
 /obj/item/tool/multitool/hacktool/resolve_attackby(atom/A, mob/user)
 	sanity_check()

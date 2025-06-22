@@ -7,6 +7,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/sechud
 	shoes = /obj/item/clothing/shoes/jackboots
 	id_type = /obj/item/card/id/gold
+	r_pocket = /obj/item/card/keycard/captains_spare
 	pda_type = /obj/item/modular_computer/pda/captain
 	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/tool/knife/dagger/ceremonial = 1, /obj/item/clothing/accessory/cross = 1, /obj/item/gun/projectile/avasarala = 1, /obj/item/ammo_magazine/magnum/rubber = 1)
 
@@ -34,6 +35,7 @@
 	uniform = /obj/item/clothing/under/rank/first_officer
 	l_ear = /obj/item/device/radio/headset/heads/hop
 	shoes = /obj/item/clothing/shoes/reinforced
+	r_pocket = /obj/item/card/keycard/fo
 	gloves = /obj/item/clothing/gloves/thick
 	id_type = /obj/item/card/id/hop
 	pda_type = /obj/item/modular_computer/pda/heads/hop

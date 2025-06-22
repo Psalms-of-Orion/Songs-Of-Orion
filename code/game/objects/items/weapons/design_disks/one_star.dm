@@ -14,7 +14,7 @@
 		/datum/design/autolathe/tool/weldertool_onestar
 	)
 
-/obj/item/computer_hardware/hard_drive/portable/design/guns/retro
+/*obj/item/computer_hardware/hard_drive/portable/design/guns/retro
 	disk_name = "OS LG \"Cog\""
 	icon_state = "onestar"
 	rarity_value = 5.5
@@ -23,3 +23,4 @@
 		/datum/design/autolathe/gun/retro = 3, //"OS LG \"Cog\""
 		/datum/design/autolathe/cell/medium/high,
 	)
+*/

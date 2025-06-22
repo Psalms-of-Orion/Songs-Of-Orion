@@ -13,6 +13,7 @@
 	pda_type = /obj/item/modular_computer/pda/cargo
 	l_ear = /obj/item/device/radio/headset/heads/merchant
 	backpack_contents = list(/obj/item/gun/projectile/olivaw = 1, /obj/item/ammo_magazine/pistol/rubber = 2)
+	l_pocket = /obj/item/card/keycard/syndicate/level_2
 
 /decl/hierarchy/outfit/job/cargo/cargo_tech
 	name = OUTFIT_JOB_NAME("Syndicate Technician")
@@ -22,6 +23,7 @@
 	head = /obj/item/clothing/head/soft/synd
 	pda_type = /obj/item/modular_computer/pda/cargo
 	gloves = /obj/item/clothing/gloves/fingerless
+	l_pocket = /obj/item/card/keycard/syndicate
 
 /decl/hierarchy/outfit/job/cargo/artist/clown
 	name = OUTFIT_JOB_NAME("Clown")
@@ -48,3 +50,4 @@
 	shoes = /obj/item/clothing/shoes/color/black
 	head = /obj/item/clothing/head/soft/synd
 	pda_type = /obj/item/modular_computer/pda/cargo
+	l_pocket = /obj/item/card/keycard/syndicate/level_3

@@ -17,9 +17,9 @@
 	outfit_type = /decl/hierarchy/outfit/job/engineering/exultant
 
 	access = list(
-		access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
-		access_teleporter, access_network, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
-		access_heads, access_construction, access_sec_doors,, access_mining, access_mining_station,
+		access_engine, access_maint_tunnels,
+		access_network, access_external_airlocks, access_emergency_storage, access_eva,
+		access_heads, access_mining, access_mining_station,
 		access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload, access_change_engineering
 	)
 
@@ -71,8 +71,8 @@ You are to keep the station running and constantly improve it as much as you are
 	outfit_type = /decl/hierarchy/outfit/job/engineering/engineer
 
 	access = list(
-		access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
-		access_external_airlocks, access_construction, access_atmospherics, access_mining,
+		access_eva, access_engine, access_maint_tunnels,
+		access_external_airlocks, access_atmospherics, access_mining,
 		access_mining_station
 	)
 
@@ -140,9 +140,9 @@ You are to keep the station running and constantly improve it as much as you are
 	Your third loyalty are to all the poor spacer fools who came up from ground-pounding to drink vacuum and drift in micro-G, you should make some attempt to train or save them when some idiot cracks a seal."
 
 	access = list(
-		access_maint_tunnels, access_mailsorting, access_mining,
-		access_mining_station, access_eva, access_external_airlocks, access_construction, access_atmospherics, access_emergency_storage,
-		access_heads, access_construction
+		access_maint_tunnels, access_mining,
+		access_mining_station, access_eva, access_external_airlocks, access_emergency_storage,
+		access_heads
 	)
 
 	stat_modifiers = list(
@@ -198,10 +198,7 @@ You are to keep the station running and constantly improve it as much as you are
 	loyalties = "	Your first loyalty is to yourself and survival. This station is mostly just a paycheck to you<br>\
 	Your second loyalty is to the Dive Boss, the EVA Foreman. You owe them something, at least."
 
-	access = list(
-		access_maint_tunnels, access_mining,
-		access_mining_station, access_eva, access_construction
-	)
+	access = list(access_maint_tunnels, access_mining)
 
 
 	stat_modifiers = list(

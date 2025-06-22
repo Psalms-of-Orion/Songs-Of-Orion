@@ -1,7 +1,7 @@
 /obj/item/gun/projectile/revolver
-	name = "FS REV .40 Magnum \"Miller\""
-	desc = "The \"Frozen Star\" \"Miller\" is a revolver of choice when you absolutely, positively need to make a hole in someone. Uses .40 Magnum ammo."
-	icon = 'icons/obj/guns/projectile/revolver.dmi'
+	name = "revolver"
+	desc = "My heart and hands collide. The gun lays at my side. Too late to turn back, only fate's left to decide. Magnum bullets, settling the score."
+	icon = 'modular/guns/icons/revolver.dmi'
 	icon_state = "revolver"
 	item_state = "revolver"
 	caliber = CAL_MAGNUM
@@ -9,7 +9,7 @@
 	can_dual = TRUE
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	handle_casings = CYCLE_CASINGS
-	max_shells = 7
+	max_shells = 6
 	ammo_type = /obj/item/ammo_casing/magnum
 	magazine_type = /obj/item/ammo_magazine/slmagnum
 	unload_sound = 'sound/weapons/guns/interact/rev_magout.ogg'

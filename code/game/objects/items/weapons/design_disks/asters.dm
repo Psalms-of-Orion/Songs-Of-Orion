@@ -27,7 +27,7 @@
 		/datum/design/autolathe/tool/weldertool,
 		/datum/design/autolathe/tool/weldinggoggles,
 		/datum/design/autolathe/tool/weldermask,
-		/datum/design/autolathe/gun/flare_gun,
+//		/datum/design/autolathe/gun/flare_gun,
 		/datum/design/autolathe/ammo/flare_shell,
 		/datum/design/autolathe/device/flamethrower,
 		/datum/design/autolathe/container/hcase_engi

@@ -15,9 +15,9 @@
 	also_known_languages = list(LANGUAGE_JIVE = 100)
 	alt_titles = list("Syndicate Quartermaster")
 	access = list(
-		access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_merchant, access_mining,
-		access_heads, access_mining_station, access_RC_announce, access_keycard_auth, access_sec_doors,
-		access_eva, access_external_airlocks, access_change_cargo
+		access_maint_tunnels, access_merchant,
+		access_heads, access_RC_announce, access_keycard_auth,
+		access_external_airlocks, access_change_cargo, access_tcomsat, access_network
 	)
 	ideal_character_age = 40
 	stat_modifiers = list(
@@ -79,9 +79,8 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/cargo/hacker
 
-	access = list(
-		access_robotics, access_tox, access_maint_tunnels, access_tox_storage, access_morgue, , access_research_equipment, access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot
-	)
+	access = list(access_maint_tunnels, access_cargo)
+
 	software_on_spawn = list(/datum/computer_file/program/chem_catalog)
 
 	stat_modifiers = list(
@@ -122,8 +121,7 @@
 	alt_titles = list("Cargo Technician", "Syndicate Supply Specialist")
 
 	access = list(
-		access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining,
-		access_mining_station
+		access_maint_tunnels, access_mailsorting, access_cargo
 	)
 
 	stat_modifiers = list(

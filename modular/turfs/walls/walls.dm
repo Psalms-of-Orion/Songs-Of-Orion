@@ -126,7 +126,3 @@
 	icon_state = "padded_low_glass"
 	wall_type = "padded_low"
 
-/turf/wall/low/orion/with_glass
-	icon_state = "padded_low_glass"
-	wall_type = "padded_low"
-	window_prespawned_material = MATERIAL_GLASS

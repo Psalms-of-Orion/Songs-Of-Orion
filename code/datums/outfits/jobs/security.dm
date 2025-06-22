@@ -22,6 +22,8 @@
 	head = /obj/item/clothing/head/patrol/sec/hos
 	pda_type = /obj/item/modular_computer/pda/heads/hos
 	backpack_contents = list(/obj/item/handcuffs = 1,/obj/item/ammo_magazine/magnum/rubber = 1,/obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/cell/small/high = 2, /obj/item/gun/energy/gun/martin = 1, /obj/item/flame/lighter/zippo/syndicate = 1, /obj/item/storage/fancy/cigarettes/lucky = 1, /obj/item/clothing/accessory/cross = 1)
+	l_pocket = /obj/item/card/keycard/security/level_2
+
 
 /*decl/hierarchy/outfit/job/security/gunserg
 	name = OUTFIT_JOB_NAME("Defunct")
@@ -46,6 +48,7 @@
 	id_type = /obj/item/card/id/det
 	pda_type = /obj/item/modular_computer/pda/forensics
 	backpack_contents = list(/obj/item/handcuffs = 1, /obj/item/ammo_magazine/slmagnum/rubber = 2, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/cell/small/high = 2)
+	l_pocket = /obj/item/card/keycard/security
 
 /decl/hierarchy/outfit/job/security/detective/New()
 	..()
@@ -62,6 +65,7 @@
 	head = /obj/item/clothing/head/soft/sar
 	gloves = /obj/item/clothing/gloves/thick
 	backpack_contents = list(/obj/item/gun/energy/gun/martin = 1, /obj/item/cell/small/high = 1)
+	l_pocket = /obj/item/card/keycard/security
 
 /decl/hierarchy/outfit/job/security/ihoper
 	name = OUTFIT_JOB_NAME("Security Officer")
@@ -69,3 +73,4 @@
 	uniform = /obj/item/clothing/under/rank/security
 	head = /obj/item/clothing/head/soft/sec
 	backpack_contents = list(/obj/item/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/cell/small/high = 2, /obj/item/gun/energy/gun/martin = 1)
+	l_pocket = /obj/item/card/keycard/security
