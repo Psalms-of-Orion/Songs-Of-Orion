@@ -45,11 +45,16 @@
 			wall.any_wall_connections[turn(direction, 180)] = TRUE
 			wall.full_wall_connections[turn(direction, 180)] = is_low_wall ? FALSE : TRUE
 			wall.update_icon()
+		else if(locate(/obj/machinery/door) in wall)
+			any_wall_connections[turn(direction, 0)] = TRUE
+			full_wall_connections[turn(direction, 0)] = TRUE
+ 			wall.update_icon()
 		else
 			any_wall_connections[direction] = FALSE
 			full_wall_connections[direction] = FALSE
 
-
+//			any_wall_connections[turn(direction, 180)] = TRUE
+//			full_wall_connections[turn(direction, 180)] = TRUE
 // Reverse of the above. Called when the wall is being deleted, only updates neighbours
 // Wall's own connections are irrelevant at this point
 /turf/wall/proc/remove_neighbour_connections()

@@ -36,7 +36,7 @@
 	//Multi-tile doors
 	dir = EAST
 	var/width = 1
-
+	var/automatic_door = FALSE
 	var/damage_smoke = FALSE
 	var/tryingToLock = FALSE // for autoclosing
 
@@ -110,6 +110,8 @@
 
 /obj/machinery/door/Bumped(atom/AM)
 	if(operating) return
+	if(automatic_door == FALSE)
+		return
 	if(ismob(AM))
 		var/mob/M = AM
 		if(world.time - M.last_bumped <= 10) return	//Can bump-open one airlock per second. This is to prevent shock spam.

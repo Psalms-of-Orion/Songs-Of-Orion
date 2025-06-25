@@ -27,14 +27,14 @@
 
 
 /datum/craft_recipe/airlock/assembly/mining
-	name = "mining airlock assembly"
+	name = "expedition airlock assembly"
 	result = /obj/structure/door_assembly/door_assembly_min
 
-
+/*
 /datum/craft_recipe/airlock/assembly/atmospherics
 	name = "atmospherics airlock assembly"
 	result = /obj/structure/door_assembly/door_assembly_atmo
-
+*/
 
 /datum/craft_recipe/airlock/assembly/research
 	name = "research airlock assembly"
@@ -50,7 +50,7 @@
 	name = "maintenance airlock assembly"
 	result = /obj/structure/door_assembly/door_assembly_mai
 
-
+/*
 /datum/craft_recipe/airlock/assembly/external
 	name = "external airlock assembly"
 	result = /obj/structure/door_assembly/door_assembly_ext
@@ -75,7 +75,7 @@
 	steps = list(
 		list(CRAFT_MATERIAL, 10, MATERIAL_PLASTEEL)
 	)
-
+*/
 /datum/craft_recipe/airlock/assembly/blast_door
 	name = "blast door assembly"
 	result = /obj/machinery/door/blast/regular
