@@ -125,7 +125,7 @@
 // .40 REVOLVERS
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_revolver_miller
-	disk_name = "Frozen Star - .40 Miller Revolver"
+	disk_name = "Magnum revolver"
 	icon_state = "frozenstar"
 	rarity_value = 13
 	license = 12
@@ -223,7 +223,7 @@
 	rarity_value = 9
 	license = 12
 	designs = list(
-		/obj/item/gun/projectile/boltgun/pump = 3, // shomtgung
+		/datum/design/autolathe/gun/pump_shotgun = 3, // shomtgung
 		/datum/design/autolathe/ammo/shotgun_pellet,
 		/datum/design/autolathe/ammo/shotgun,
 		/datum/design/autolathe/ammo/shotgun_beanbag,
@@ -267,7 +267,7 @@
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
 	license = 12
 	designs = list(
-		/obj/item/gun/projectile/automatic/smg/mp5k = 3,
+		/datum/design/autolathe/gun/mp5k = 3,
 		/datum/design/autolathe/ammo/smg,
 		/datum/design/autolathe/ammo/smg/practice = 0,
 		/datum/design/autolathe/ammo/smg/rubber,
@@ -279,7 +279,7 @@
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
 	license = 12
 	designs = list(
-		/obj/item/gun/projectile/automatic/smg = 3, // "FS MP .35 \"Molly\""
+		/datum/design/autolathe/gun/mp5 = 3, // "FS MP .35 \"Molly\""
 		/datum/design/autolathe/ammo/smg,
 		/datum/design/autolathe/ammo/smg/practice = 0,
 		/datum/design/autolathe/ammo/smg/rubber,
@@ -292,7 +292,7 @@
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED
 	license = 12
 	designs = list(
-		/obj/item/gun/projectile/automatic/smg/mp5sd = 3, // "FS SMG .35 \"Atreides\""
+		/datum/design/autolathe/gun/mp5sd = 3, // "FS SMG .35 \"Atreides\""
 		/datum/design/autolathe/ammo/smg,
 		/datum/design/autolathe/ammo/smg/practice = 0,
 		/datum/design/autolathe/ammo/smg/rubber,
