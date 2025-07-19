@@ -9,9 +9,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	department_flag = COMMAND
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
-	supervisors = "your heart and wisdom... and the company."
-	selection_color = "#0c9d98"
+	supervisors = "your heart and wisdom"
+	selection_color = "#ccccff"
 	req_admin_notify = 1
 	wage = WAGE_NONE //The captain doesn't get paid, he's the one who does the paying
 	//The ship account is his, and he's free to draw as much salary as he likes
@@ -69,9 +68,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	department_flag = COMMAND
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Captain, and the Company"
-	selection_color = "#5c0e34"
+	supervisors = "the captain"
+	selection_color = "#ddddff"
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 	also_known_languages = list(LANGUAGE_CYRILLIC = 20, LANGUAGE_SERBIAN = 15)

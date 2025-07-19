@@ -8,9 +8,8 @@
 	department_flag = GUILD | COMMAND
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Syndicate"
-	selection_color = "#b74938"
+	supervisors = "your greed"
+	selection_color = "#b3a68c"
 	wage = WAGE_NONE	//Guild merchant draws a salary from the guild account
 	also_known_languages = list(LANGUAGE_JIVE = 100)
 	alt_titles = list("Syndicate Quartermaster")
@@ -111,10 +110,9 @@
 	department = DEPARTMENT_GUILD
 	department_flag = GUILD
 	faction = "CEV Eris"
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "the Logistics Officer"
-	selection_color = "#60616a"
+	total_positions = 2
+	supervisors = "the Guild Merchant"
+	selection_color = "#c3b9a6"
 	also_known_languages = list(LANGUAGE_JIVE = 100)
 	wage = WAGE_LABOUR_DUMB
 	department_account_access = TRUE
@@ -159,3 +157,63 @@ Your main duties are to keep the local Syndicate branch operational and profitab
 	name = "Syndicate Agent"
 	icon_state = "player-beige"
 	join_tag = /datum/job/cargo_tech
+
+/datum/job/mining
+	title = "Guild Miner"
+	flag = MINER
+	department = DEPARTMENT_GUILD
+	department_flag = GUILD
+	faction = "CEV Eris"
+	total_positions = 2
+	supervisors = "the Guild Merchant"
+	selection_color = "#c3b9a6"
+	wage = WAGE_LABOUR_HAZARD //The miners union is stubborn
+	also_known_languages = list(LANGUAGE_JIVE = 100)
+
+	outfit_type = /decl/hierarchy/outfit/job/cargo/mining
+
+	description = "You are an asteroid miner, working in resource Procurement for the local branch of Asters' Merchant Guild.<br>\
+Your primary responsibility is to head out on the Mining Barge, and dig up as much ore as you can on an asteroid. The barge contains all the facilities to process that ore too, and allows you to deliver refined materials ready for use.<br>\
+<br>\
+All the stuff you dig up goes to the guild, and from then on it's the merchant's responsibility to sell it to other departments. <br>\
+<br>\
+Your second responsibility is to help out aboard ship, while waiting to reach an asteroid. Quite notably, the roaches infesting the ship make heavy use of burrows to get around. You have the tools and expertise to effectively deal with these burrows, and you should try to destroy them wherever you find them<br>\
+<br>\
+Your third responsibility is as an unofficial security guard. The guild is a popular target for thieves, and one of the unspoken reasons for keeping rough, sturdy people like you on the payroll is to deter those thieves, and punish them with a swift beating for attempting to steal from the merchant. Try to keep the beatings nonlethal though, murder generates too much bad publicity<br>\
+<br>\
+Character Expectations:<br>\
+	Miners should be tough and physically strong. Unafraid to get their hands dirty.<br>\
+	You should be competent in an EVA suit and in operating heavy machinery"
+
+
+	duties = "Dig up ores and minerals, process them into useable material.<br>\
+	Collapse burrows around the ship to help fight off the roach infestation<br>\
+	Protect the Guild wing and the merchant, from thieves and intruders."
+
+	loyalties = "	Your first loyalty is to yourself and survival. This ship is mostly just a paycheck to you<br>\
+	Your second loyalty is to the merchant, he ensures you're well paid and respected, in a universe where workers are often treated as interchangeable parts.	"
+
+	access = list(
+		access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining,
+		access_mining_station
+	)
+
+
+	stat_modifiers = list(
+		STAT_ROB = 15,
+		STAT_TGH = 15,
+		STAT_VIG = 15,
+		STAT_MEC = 15
+	)
+
+	perks = list(/datum/perk/deep_connection)
+
+	software_on_spawn = list(///datum/computer_file/program/supply,
+							 ///datum/computer_file/program/deck_management,
+							 /datum/computer_file/program/wordprocessor,
+							 /datum/computer_file/program/reports)
+
+/obj/landmark/join/start/mining
+	name = "Guild Miner"
+	icon_state = "player-beige"
+	join_tag = /datum/job/mining

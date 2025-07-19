@@ -6,7 +6,6 @@
 	department_flag = ENGINEERING | COMMAND
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
 	supervisors = "the Captain"
 	selection_color = "#d0b04e"
 	req_admin_notify = 1
@@ -61,10 +60,9 @@ You are to keep the station running and constantly improve it as much as you are
 	department_flag = ENGINEERING
 	faction = "CEV Eris"
 	total_positions = 3
-	spawn_positions = 3
-	supervisors = "the Chief Engineer"
-	selection_color = "#b18643"
-	also_known_languages = list(LANGUAGE_CYRILLIC = 50)
+	supervisors = "the Technomancer Exultant"
+	selection_color = "#d5c88f"
+	also_known_languages = list(LANGUAGE_CYRILLIC = 100)
 	wage = WAGE_PROFESSIONAL
 	alt_titles = list("Mechanical Engineer","Nuclear Engineer","Field Engineer","Damage Control Specialist", "Engineer")
 

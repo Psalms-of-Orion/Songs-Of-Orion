@@ -6,9 +6,8 @@
 	department_flag = MEDICAL | COMMAND
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
-	supervisors = "The Brotherhood and God"
-	selection_color = "#424b4d"
+	supervisors = "the Moebius Expedition Overseer"
+	selection_color = "#94a87f"
 	req_admin_notify = 1
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10, LANGUAGE_SERBIAN = 5)
 	wage = WAGE_COMMAND
@@ -67,10 +66,9 @@
 	department_flag = MEDICAL
 	faction = "CEV Eris"
 	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Brotherhood Coordinator"
-	selection_color = "#6a817a"
-	wage = WAGE_LABOUR_DUMB //RIP
+	supervisors = "the Moebius Biolab Officer"
+	selection_color = "#a8b69a"
+	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
 	alt_titles = list("Hospitalier", "Nurse", "Hospitalier Surgeon", "Brotherhood Clinician")
 
@@ -120,7 +118,6 @@
 	department_flag = MEDICAL
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
 	supervisors = "the Moebius Biolab Officer"
 	selection_color = "#a8b69a"
 	wage = WAGE_PROFESSIONAL
@@ -171,11 +168,10 @@
 	department = DEPARTMENT_MEDICAL
 	department_flag = MEDICAL
 	faction = "CEV Eris"
-	total_positions = -1
-	spawn_positions = -1
-	supervisors = "the Coordinator and Brotherhood doctors"
-	selection_color = "#6a817a"
-	wage = WAGE_LABOUR_DUMB //RIP
+	total_positions = 1
+	supervisors = "the Moebius Biolab Officer"
+	selection_color = "#a8b69a"
+	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 20, LANGUAGE_SERBIAN = 15)
 	alt_titles = list("Brother", "Brotherhood Worker", "Brotherhood Orderly", "Nursing Assistant", "Clinic Volunteer")
 
@@ -223,7 +219,6 @@
 	department_flag = MEDICAL
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
 	supervisors = "the Moebius Biolab Officer"
 	selection_color = "#a8b69a"
 	wage = WAGE_PROFESSIONAL

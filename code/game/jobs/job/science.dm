@@ -6,9 +6,8 @@
 	department_flag = SCIENCE | COMMAND
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
-	supervisors = "Human Resources, Inc"
-	selection_color = "#27cab3"
+	supervisors = "Moebius Corporation"
+	selection_color = "#b39aaf"
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 
@@ -65,10 +64,9 @@ access_kitchen
 	department = DEPARTMENT_SCIENCE
 	department_flag = SCIENCE
 	faction = "CEV Eris"
-	total_positions = 3
-	spawn_positions = 3
-	supervisors = "the Human Resources Officer"
-	selection_color = "#0c9d98"
+	total_positions = 2
+	supervisors = "the Moebius Expedition Overseer"
+	selection_color = "#bdb1bb"
 	wage = WAGE_PROFESSIONAL
 
 	//alt_titles = list("Moebius Xenobiologist")
@@ -113,14 +111,11 @@ access_kitchen
 	department = DEPARTMENT_SCIENCE
 	department_flag = SCIENCE
 	faction = "CEV Eris"
-	total_positions = -1
-	spawn_positions = -1
-	supervisors = "Human Resources personnel, the First Officer, and anyone you're put under by them"
-	selection_color = "#246775"
-	initial_balance	= 0 // This is now defined in code\modules\economy\cash.dm under spacecash/bundle/Vagabond as they carry cash on them.
-	wage = WAGE_LABOUR_DUMB
-	alt_titles = list("HR Assistant","HR custodian","HR biolab assistant", "HR laborer", "HR debt slave", "Human Resource", "HR nutrition technician")
-	also_known_languages = list(LANGUAGE_CYRILLIC = 15, LANGUAGE_SERBIAN = 5)
+	total_positions = 1
+	supervisors = "the Moebius Expedition Overseer"
+	selection_color = "#bdb1bb"
+	wage = WAGE_PROFESSIONAL
+	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
 
 	access = list(access_maint_tunnels, access_moebius)
 	outfit_type = /decl/hierarchy/outfit/job/science/wagie
@@ -160,8 +155,7 @@ access_kitchen
 	department = DEPARTMENT_SCIENCE
 	department_flag = SCIENCE
 	faction = "CEV Eris"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
 	wage = WAGE_PROFESSIONAL
 	supervisors = "the Moebius Expedition Overseer"
 	selection_color = "#bdb1bb"

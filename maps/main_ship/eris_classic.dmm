@@ -16539,10 +16539,6 @@
 	},
 /turf/floor/hull,
 /area/space)
-"aQH" = (
-/obj/map_data/eris,
-/turf/space,
-/area/space)
 "aQI" = (
 /obj/effect/overmap/ship/eris,
 /turf/space,
@@ -78229,7 +78225,7 @@
 /turf/floor/tiled/steel/techfloor_grid,
 /area/eris/engineering/propulsion/left)
 "dKi" = (
-/obj/structure/jtb_pillar,
+/obj/machinery/constructable_frame/machine_frame/vertical,
 /turf/floor/reinforced,
 /area/eris/engineering/engine_room)
 "dKj" = (
@@ -82475,10 +82471,6 @@
 	},
 /turf/floor/tiled/dark,
 /area/eris/command/meeting_room)
-"dWU" = (
-/obj/effect/shuttle_landmark/skipjack/northwest,
-/turf/space,
-/area/space)
 "dWV" = (
 /obj/machinery/shower{
 	dir = 4
@@ -93220,10 +93212,6 @@
 	},
 /turf/floor/tiled/steel/gray_perforated,
 /area/eris/storage/primary)
-"exR" = (
-/obj/effect/shuttle_landmark/skipjack/southeast,
-/turf/space,
-/area/space)
 "exS" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/lights/bulbs,
@@ -105884,7 +105872,7 @@
 /turf/floor/tiled/dark/golden,
 /area/eris/neotheology/altar)
 "vBC" = (
-/obj/structure/jtb_pillar,
+/obj/machinery/constructable_frame/machine_frame/vertical,
 /turf/floor/tiled/dark/danger,
 /area/eris/maintenance/junk)
 "vGh" = (
@@ -106748,7 +106736,7 @@
 /turf/floor/tiled/techmaint,
 /area/eris/maintenance/section2deck2starboard)
 "xoj" = (
-/obj/machinery/computer/jtb_console,
+/obj/structure/computerframe,
 /turf/floor/tiled/dark/gray_perforated,
 /area/eris/maintenance/junk)
 "xoq" = (
@@ -107580,7 +107568,7 @@ aaa
 aaa
 aaa
 aaa
-aQH
+aaa
 "}
 (2,1,1) = {"
 aaa
@@ -276707,7 +276695,7 @@ aaa
 aaa
 aaa
 aaa
-dWU
+aaa
 aaa
 aaa
 aaa
@@ -303243,7 +303231,7 @@ aaa
 aaa
 aaa
 aaa
-exR
+aaa
 aaa
 aaa
 aaa
