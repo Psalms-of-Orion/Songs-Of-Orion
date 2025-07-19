@@ -15,15 +15,6 @@
 	},
 /turf/wall/dummy,
 /area/space)
-"ae" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/effect/shuttle_landmark/merc/start,
-/turf/shuttle/floor{
-	icon_state = "floor6"
-	},
-/area/shuttle/mercenary)
 "ag" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 4
@@ -3085,7 +3076,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes=10, /obj/item/storage/box/matches=10, /obj/item/flame/lighter/zippo=4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
+	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/floor/dummy{
 	icon_state = "cult";
@@ -3450,6 +3441,10 @@
 /obj/structure/table/bar_special,
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
+"vF" = (
+/obj/effect/shuttle_landmark/merc/start,
+/turf/wall/low/with_glass/reinforced,
+/area/shuttle/mercenary)
 "vG" = (
 /obj/structure/closet/crate/pirate,
 /turf/shuttle/floor{
@@ -3815,7 +3810,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes=10, /obj/item/storage/box/matches=10, /obj/item/flame/lighter/zippo=4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
+	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
@@ -4427,7 +4422,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes=10, /obj/item/storage/box/matches=10, /obj/item/flame/lighter/zippo=4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
+	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -5053,7 +5048,7 @@
 /obj/machinery/vending/assist{
 	contraband = null;
 	name = "AntagCorpVend";
-	products = list(/obj/item/device/assembly/prox_sensor=5, /obj/item/device/assembly/signaler=4, /obj/item/device/assembly/infra=4, /obj/item/device/assembly/prox_sensor=4, /obj/item/handcuffs=8, /obj/item/device/flash=4, /obj/item/clothing/glasses/sunglasses=4)
+	products = list(/obj/item/device/assembly/prox_sensor=5,/obj/item/device/assembly/signaler=4,/obj/item/device/assembly/infra=4,/obj/item/device/assembly/prox_sensor=4,/obj/item/handcuffs=8,/obj/item/device/flash=4,/obj/item/clothing/glasses/sunglasses=4)
 	},
 /obj/machinery/light{
 	dir = 4
@@ -28996,9 +28991,9 @@ aa
 aa
 aa
 aa
-ll
+vF
 iv
-ae
+iL
 iJ
 jk
 iq
