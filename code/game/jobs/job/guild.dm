@@ -69,7 +69,7 @@
 	department_flag = GUILD
 	faction = "CEV Eris"
 	total_positions = 2
-	spawn_positions = 2
+
 	supervisors = "the Logistics Officer"
 	selection_color = "#60616a"
 	wage = WAGE_PROFESSIONAL

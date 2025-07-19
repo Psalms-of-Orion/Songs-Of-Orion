@@ -3,13 +3,11 @@
 	var/datum/category_group/setup_option_category/option_category
 	var/topic_onset = TOPIC_REFRESH
 	var/allowed_jobs = list(/datum/job/captain, /datum/job/rd, /datum/job/hop, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/ihc,
-					/datum/job/gunserg, /datum/job/inspector, /datum/job/medspec, /datum/job/ihoper,
-					/datum/job/doctor, /datum/job/chemist, /datum/job/paramedic, /datum/job/bioengineer,
+					/datum/job/inspector, /datum/job/medspec, /datum/job/ihoper,
+					/datum/job/doctor, /datum/job/paramedic,
 					/datum/job/technomancer,
 					/datum/job/cargo_tech, /datum/job/mining, /datum/job/merchant,
-					/datum/job/clubworker, /datum/job/clubmanager, /datum/job/artist,
-					/datum/job/chaplain, /datum/job/acolyte, /datum/job/janitor, /datum/job/hydro,
-					/datum/job/scientist, /datum/job/roboticist, /datum/job/psychiatrist,
+					/datum/job/scientist, /datum/job/roboticist,
 					/datum/job/ai, /datum/job/cyborg,
 					/datum/job/assistant)
 

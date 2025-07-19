@@ -113,7 +113,7 @@ You are to keep the station running and constantly improve it as much as you are
 	department_flag = ENGINEERING
 	faction = "CEV Eris"
 	total_positions = 1
-	spawn_positions = 1
+
 	supervisors = "the Chief Engineer"
 	selection_color = "#829d72"
 	wage = WAGE_PROFESSIONAL
@@ -172,7 +172,7 @@ You are to keep the station running and constantly improve it as much as you are
 	department_flag = ENGINEERING
 	faction = "CEV Eris"
 	total_positions = 6
-	spawn_positions = 6
+
 	supervisors = "the Dive Boss, the Engies, and the Chief"
 	selection_color = "#617953"
 	wage = WAGE_LABOUR_DUMB //RIP
