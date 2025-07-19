@@ -901,7 +901,7 @@ var/global/list/default_medbay_channels = list(
 
 /obj/item/device/radio/alt1
 	name = "walkie talkie"
-	icon_state = "walkietalkie2"
+	icon_state = "walkietalkie1"
 	item_state = "walkietalkie"
 
 /obj/item/device/radio/alt2

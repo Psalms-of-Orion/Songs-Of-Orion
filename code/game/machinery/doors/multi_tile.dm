@@ -25,13 +25,6 @@
 	glass = TRUE
 	assembly_type = /obj/structure/door_assembly/multi_tile
 
-/obj/machinery/door/airlock/multi_tile/orion
-	name = "Large Airlock"
-	icon = 'icons/obj/doors/Door2x1_orion.dmi'
-	opacity = FALSE
-	glass = TRUE
-	assembly_type = /obj/structure/door_assembly/multi_tile
-	resistance = RESISTANCE_ARMOURED
 
 /obj/machinery/door/airlock/multi_tile/metal
 	name = "Airlock"

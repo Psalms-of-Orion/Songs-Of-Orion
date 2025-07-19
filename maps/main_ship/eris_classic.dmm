@@ -106662,6 +106662,11 @@
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/floor/tiled/white/brown_perforated,
 /area/eris/crew_quarters/kitchen_freezer)
+"xfg" = (
+/obj/machinery/door/firedoor,
+/obj/item/reagent_containers/food/drinks/mug,
+/turf/wall/low/with_glass/smart,
+/area/eris/engineering/engine_room)
 "xgP" = (
 /obj/machinery/alarm{
 	pixel_y = 26
@@ -241629,7 +241634,7 @@ abF
 abF
 bNn
 fKB
-bNn
+xfg
 abF
 abF
 bIP

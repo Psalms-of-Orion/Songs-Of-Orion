@@ -282,7 +282,7 @@
 	style = STYLE_HIGH
 
 /obj/item/clothing/suit/storage/detective/brown
-	name = "Deputy's"
+	name = "Deputy's coat"
 	desc = "Brown armored trenchcoat, worn by Solar Marshal Deputies for sulking around between Voight-Kampff tests."
 	icon_state = "deckard"
 	item_state = "deckard"

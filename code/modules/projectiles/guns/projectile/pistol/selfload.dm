@@ -1,10 +1,9 @@
 /obj/item/gun/projectile/selfload
-	name = "S HG .35 Auto \"Clarissa\""
-	desc = "A small, easily concealable, but somewhat underpowered gun. Uses both standard and highcap .35 Auto mags."
-
+	name = "pistol"
+	desc = "A semi-automatic handgun. A trimmed down form of competition pistols, but not by much. Takes detatchable pistol magainzes."
 	icon = 'modular/guns/icons/pistol.dmi'
-	icon_state = "clarissa"
-	item_state = "clarissa"
+	icon_state = "pistol"
+	item_state = "pistol"
 
 	w_class = ITEM_SIZE_SMALL
 	can_dual = TRUE
@@ -23,8 +22,7 @@
 
 
 	init_firemodes = list(
-		SEMI_AUTO_300,
-		FULL_AUTO_800
+		SEMI_AUTO_300
 		)
 
 

@@ -34,9 +34,9 @@
 	var/obj/machinery/filler_object/f6
 	var/welded //Placed here for simplicity, only airlocks can be welded tho
 	//Multi-tile doors
-	dir = EAST
+//	dir = SOUTH
 	var/width = 1
-	var/automatic_door = FALSE
+//	var/automatic_door = FALSE//Somehow 800kb of memory loss???
 	var/damage_smoke = FALSE
 	var/tryingToLock = FALSE // for autoclosing
 
@@ -107,11 +107,11 @@
 	if(density || operating)
 		return FALSE
 	return TRUE
-
+/*
 /obj/machinery/door/Bumped(atom/AM)
 	if(operating) return
-	if(automatic_door == FALSE)
-		return
+//	if(automatic_door == FALSE)
+//		return
 	if(ismob(AM))
 		var/mob/M = AM
 		if(world.time - M.last_bumped <= 10) return	//Can bump-open one airlock per second. This is to prevent shock spam.
@@ -151,7 +151,7 @@
 				do_animate("deny")
 		return
 	return
-
+*/
 
 /obj/machinery/door/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(air_group) return !block_air_zones

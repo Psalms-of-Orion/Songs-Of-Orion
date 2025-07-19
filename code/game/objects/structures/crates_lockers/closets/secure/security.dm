@@ -136,7 +136,6 @@
 	new /obj/item/clothing/under/rank/inspector(src)
 	new /obj/item/clothing/suit/storage/detective(src)
 	new /obj/item/clothing/suit/storage/detective/brown(src)
-	new /obj/item/clothing/suit/storage/detective/black(src)
 	new /obj/item/clothing/gloves/thick(src)
 	new /obj/item/clothing/shoes/reinforced(src)
 	new /obj/item/storage/box/evidence(src)

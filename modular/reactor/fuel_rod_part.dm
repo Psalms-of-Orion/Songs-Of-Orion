@@ -31,7 +31,7 @@
 		if(STEP_PULLED)
 			if(I.get_tool_type(user, list(QUALITY_SCREW_DRIVING), src) == QUALITY_SCREW_DRIVING)
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_SCREW_DRIVING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-					user.visible_message(SPAN_NOTICE("[user] unsecures the fuel rod."), SPAN_NOTICE("You unsecures the fuel rod."))
+					user.visible_message(SPAN_NOTICE("[user] unsecures the fuel rod."), SPAN_NOTICE("You unsecure the fuel rod."))
 					current_step = STEP_UNSECURED
 					return
 
@@ -50,7 +50,7 @@
 
 			if(tool_type == QUALITY_SCREW_DRIVING)
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_SCREW_DRIVING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-					user.visible_message(SPAN_NOTICE("[user] secures the fuel rod."), SPAN_NOTICE("You secures the fuel rod."))
+					user.visible_message(SPAN_NOTICE("[user] secures the fuel rod."), SPAN_NOTICE("You secure the fuel rod."))
 					current_step = STEP_PULLED
 					return
 
@@ -63,7 +63,7 @@
 
 /obj/machinery/multistructure/nuclear_reactor_part/fuel_rod/attack_hand(mob/user as mob)
 	if(current_step == STEP_UNWRENCHED)
-		user.visible_message(SPAN_NOTICE("[user] pulls the rod container up."), SPAN_NOTICE("You pulls the rod container up."))
+		user.visible_message(SPAN_NOTICE("[user] pulls the rod container up."), SPAN_NOTICE("You pull the rod container up."))
 		current_step = STEP_PULLED
 		update_icon()
 		return
