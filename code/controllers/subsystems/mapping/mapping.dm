@@ -100,7 +100,7 @@ SUBSYSTEM_DEF(mapping)
 		primary_map_to_load = file2text("config/next_map.txt")
 
 	if(!istext(primary_map_to_load) || !LAZYLEN(primary_map_to_load))
-		primary_map_to_load = "eris_classic"
+		primary_map_to_load = "eris_smol"
 
 	queue_map_loading(primary_map_to_load)
 	generate_holomaps()
