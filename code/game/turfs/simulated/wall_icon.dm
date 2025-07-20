@@ -108,7 +108,7 @@
 				add_overlay(appearance_cache[sprite_id])
 			else
 				var/image/image = image(icon, icon_state = sprite_state, dir = overlay_direction, layer = ABOVE_OBJ_LAYER)
-				//image.alpha = 255 //Windows don't need to be literally transparent since you'd just be looking at the low wall under them.
+				image.alpha = window_alpha
 				appearance_cache[sprite_id] = image.appearance
 				add_overlay(appearance_cache[sprite_id])
 
