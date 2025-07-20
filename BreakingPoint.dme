@@ -262,7 +262,6 @@
 #include "code\controllers\subsystems\initialization\character_setup.dm"
 #include "code\controllers\subsystems\mapping\mapping.dm"
 #include "code\controllers\subsystems\mapping\mapping_build_procs.dm"
-#include "code\controllers\subsystems\mapping\mapping.dm"
 #include "code\controllers\subsystems\mapping\mapping_mapload_procs.dm"
 #include "code\controllers\subsystems\processing\humans.dm"
 #include "code\controllers\subsystems\processing\mobs.dm"
