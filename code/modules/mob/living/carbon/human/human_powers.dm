@@ -45,9 +45,7 @@
 	if(failed)
 		src.Weaken(rand(2,4))
 
-	for(var/mob/O in viewers(src, null))
-		if ((O.client && !( O.blinded )))
-			O.show_message(text("\red <B>[] [failed ? "tried to tackle" : "has tackled"] down []!</B>", src, T), 1)
+	visible_message(SPAN_DANGER("[src] [failed ? "tried to tackle" : "has tackled"] down [T]!"))
 
 /mob/living/carbon/human/proc/leap(mob/living/carbon/human/T)
 	if(last_special > world.time)
@@ -447,5 +445,5 @@
 			playsound(loc, 'sound/voice/shriek1.ogg', 100, 1, 8, 8)
 		visible_message(SPAN_DANGER("[src] emits a frightening screech as you feel the ground tramble!"))
 		for(var/obj/structure/burrow/B in find_nearby_burrows(src))
-			B.distress(TRUE)
+			B.distress(TRUE, src)
 

@@ -149,7 +149,7 @@
 	..(user, extra_description)
 
 /obj/item/ammo_casing/get_item_cost(export)
-	. = round(..() * amount)
+	. = round(..() * amount, 0.1)
 	if(BB)
 		. *= 2 // being loaded increases the value by 100%
 
@@ -160,6 +160,9 @@
 	else if(amount > 1) // if there is only one, there is no need to multiply
 		for(var/mattertype in .)
 			.[mattertype] *= amount // multiply matter appropriately
+
+/obj/item/ammo_casing/get_fall_damage()
+	return (amount >= min(maxamount, 10))
 
 //An item that holds casings and can be used to put them inside guns
 /obj/item/ammo_magazine
@@ -366,10 +369,25 @@
 		to_chat(usr, SPAN_NOTICE("[src] is already empty!"))
 		return
 	to_chat(usr, SPAN_NOTICE("You take out ammo from [src]."))
-	for(var/i=1 to stored_ammo.len)
-		var/obj/item/ammo_casing/C = removeCasing()
-		C.forceMove(target)
-		C.set_dir(pick(cardinal))
+
+	while(LAZYLEN(stored_ammo))
+
+		var/obj/item/ammo_casing/stack = removeCasing()
+		stack.forceMove(target)
+		stack.set_dir(pick(cardinal))
+
+		if(LAZYLEN(stored_ammo))
+			// We end on -1 since we already removed one
+			for(var/i = 1, i <= stack.maxamount - 1, i++)
+				if(!LAZYLEN(stored_ammo))
+					stack.update_icon()
+					break
+				var/obj/item/ammo_casing/AC = removeCasing()
+				if(!stack.mergeCasing(AC, null, null, TRUE, TRUE))
+					insertCasing(AC)
+					stack.update_icon()
+					break
+
 	update_icon()
 
 /obj/item/ammo_magazine/proc/get_label(value)

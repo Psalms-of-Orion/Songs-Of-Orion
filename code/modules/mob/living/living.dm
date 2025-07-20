@@ -432,6 +432,7 @@ default behaviour is:
 	setToxLoss(0)
 	setOxyLoss(0)
 	setCloneLoss(0)
+	setHalLoss(0)
 	setBrainLoss(0)
 	SetParalysis(0)
 	SetStunned(0)
@@ -560,9 +561,7 @@ default behaviour is:
 						if (prob(75))
 							var/obj/item/grab/G = pick(M.grabbed_by)
 							if (istype(G, /obj/item/grab))
-								for(var/mob/O in viewers(M, null))
-									O.show_message(text("\red [] has been pulled from []'s grip by []", G.affecting, G.assailant, src), 1)
-								//G = null
+								M.visible_message(SPAN_DANGER("[G.affecting] has been pulled from [G.assailant]'s grip by [src]."))
 								qdel(G)
 						else
 							ok = 0
@@ -635,8 +634,15 @@ default behaviour is:
 
 	if(resting)
 		is_busy = TRUE
+		var/groinmult = 1
+		if(H)
+			var/obj/item/organ/external/groin = H.get_organ(BP_GROIN)
+			if(groin.limb_efficiency <= 0)
+				to_chat(src, SPAN_WARNING("You are too damaged to be able to get up."))
+				return FALSE
+			groinmult =  100 / groin.limb_efficiency // smaller mult the bigger the efficiency
 
-		if(do_after(src, (stats.getPerk(PERK_PARKOUR) ? 0.2 SECONDS : 0.4 SECONDS), null, 0, 1, INCAPACITATION_DEFAULT, immobile = 0))
+		if(do_after(src, min((stats.getPerk(PERK_PARKOUR) ? 0.2 SECONDS : 0.4 SECONDS) * groinmult, 2 SECONDS), null, 0, 1, INCAPACITATION_DEFAULT, immobile = 0))
 			resting = FALSE
 			to_chat(src, SPAN_NOTICE("You are now getting up."))
 			update_lying_buckled_and_verb_status()

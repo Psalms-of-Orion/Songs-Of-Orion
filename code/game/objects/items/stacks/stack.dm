@@ -26,29 +26,30 @@
 	var/consumable = TRUE	// Will the stack disappear entirely once the amount is used up?
 	var/splittable = TRUE	// Is the stack capable of being splitted?
 	var/novariants = TRUE //Determines whether the item should update it's sprites based on amount.
+	var/automerge = FALSE // Automatically merge with stacks on the same tile?
 
 	//If either of these two are set to nonzero values, the stack will have randomised quantity on spawn
 	//Used for the /random subtypes of material stacks. any stack works
 	var/rand_min = 0
 	var/rand_max = 0
-
-
-
+	//Damage dealt to something when falling on it, per amount in the stack.
+	//IE, if this is 0.2 a stack of 120 will deal 24 base damage when falling on a mob
+	var/fall_damage_per_amount = 0.2
 
 /obj/item/stack/New(var/loc, var/amount=null)
 	.=..()
 	if (amount)
 		src.amount = amount
+	update_icon()
 
 /obj/item/stack/Initialize()
-	.=..()
+	. = ..()
 	if (!stacktype)
 		stacktype = type
 
 	if (rand_min || rand_max)
 		amount = rand(rand_min, rand_max)
 		amount = round(amount, 1) //Just in case
-	update_icon()
 
 /obj/item/stack/update_icon()
 	if(novariants)
@@ -269,8 +270,10 @@
 /obj/item/stack/proc/transfer_to(obj/item/stack/S, var/tamount=null, var/type_verified)
 	if (!get_amount())
 		return 0
+
 	if ((stacktype != S.stacktype) && !type_verified)
 		return 0
+
 	if (isnull(tamount))
 		tamount = src.get_amount()
 
@@ -299,16 +302,18 @@
 
 	var/transfer = max(min(tamount, src.amount, initial(max_amount)), 0)
 
-	var/orig_amount = src.amount
-	if (transfer && src.use(transfer))
+	var/orig_amount = amount
+	if(transfer && use(transfer))
 		var/obj/item/stack/S = new src.type(loc, transfer)
 		S.color = color
-		if (prob(transfer/orig_amount * 100))
+
+		if(prob(transfer/orig_amount * 100))
 			transfer_fingerprints_to(S)
 			if(blood_DNA)
 				if(!S.blood_DNA || !istype(S.blood_DNA, /list))	//if our list of DNA doesn't exist yet (or isn't a list) initialise it.
 					S.blood_DNA = list()
 				S.blood_DNA |= blood_DNA
+
 		return S
 	return null
 
@@ -355,28 +360,32 @@
 			user.put_in_hands(F)
 			src.add_fingerprint(user)
 			F.add_fingerprint(user)
+
 			spawn(0)
-				if (src && usr.machine==src)
-					src.interact(usr)
+			if (src && user.machine == src)
+				interact(user)
 	else
 		..()
-	return
 
 /obj/item/stack/attackby(obj/item/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/stack))
 		var/obj/item/stack/S = W
+
 		if (user.get_inactive_hand()==src)
 			src.transfer_to(S, 1)
 		else
 			src.transfer_to(S)
 
 		spawn(0) //give the stacks a chance to delete themselves if necessary
-			if (S && usr.machine==S)
-				S.interact(usr)
-			if (src && usr.machine==src)
-				src.interact(usr)
+		if(S && user.machine == S)
+			S.interact(user)
+		if(src && user.machine == src)
+			interact(user)
 	else
 		return ..()
+
+/obj/item/stack/get_fall_damage()
+	return amount * fall_damage_per_amount
 
 //Verb to split stacks
 /obj/item/stack/verb/split_verb()
@@ -386,8 +395,6 @@
 
 	if (!usr.IsAdvancedToolUser())
 		return
-
-
 
 	var/quantity = input(usr,
 	"This stack contains [amount]/[max_amount]. How many would you like to split off into a new stack?\n\
@@ -412,6 +419,16 @@
 
 /obj/item/stack/get_item_cost(export)
 	return amount * ..()
+
+/obj/item/stack/Crossed(O)
+	. = ..()
+	if(automerge && (O != src) && istype(O, /obj/item/stack))
+		transfer_to(O)
+
+/obj/item/stack/proc/merge_loc_stacks()
+	for(var/obj/item/stack/material/loc_stack in loc)
+		if(loc_stack != src)
+			transfer_to(loc_stack)
 
 /*
  * Recipe datum
@@ -447,6 +464,3 @@
 	New(title, recipes)
 		src.title = title
 		src.recipes = recipes
-
-
-

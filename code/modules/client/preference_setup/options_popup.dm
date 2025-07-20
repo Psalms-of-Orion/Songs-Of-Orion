@@ -2,6 +2,13 @@
 	var/datum/category_item/setup_option/selected_option
 	var/datum/category_group/setup_option_category/option_category
 	var/topic_onset = TOPIC_REFRESH
+	var/allowed_jobs = list(/datum/job/captain, /datum/job/rd, /datum/job/hop, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/ihc,
+					/datum/job/inspector,
+					/datum/job/doctor, /datum/job/paramedic,
+					/datum/job/cargo_tech, /datum/job/mining, /datum/job/merchant,
+					/datum/job/scientist, /datum/job/roboticist,
+					/datum/job/ai, /datum/job/cyborg,
+					/datum/job/assistant)
 
 /datum/category_item/player_setup_item/proc/get_options()
 	return option_category.items

@@ -28,8 +28,6 @@
 	var/needs_air_update = FALSE
 	var/datum/gas_mixture/air
 
-	var/has_resources
-	var/list/resources // Mining resources (for the large drills)
 	var/list/initial_gas
 	var/list/decals
 	var/list/affecting_lights // List of light sources affecting this turf
@@ -60,7 +58,7 @@
 	// TODO: Check which areas are on the ship, but marked improperly, and remove this code
 	var/area/A = loc
 	if(!A.ship_area)
-		if(z in GLOB.maps_data.station_levels)
+		if(IS_SHIP_LEVEL(z))
 			A.set_ship_area()
 	. = ..() // Calls /atom/proc/Initialize()
 

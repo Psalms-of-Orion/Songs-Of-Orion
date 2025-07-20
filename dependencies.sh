@@ -11,8 +11,9 @@ export BYOND_MINOR=1647
 export RUST_G_VERSION=3.5.1
 
 #node version
-export NODE_VERSION=20
-export NODE_VERSION_PRECISE=20.15.1
+export NODE_VERSION=14
+export NODE_VERSION_LTS=20.15.1
+export NODE_VERSION_COMPAT=14.16.1
 
 # SpacemanDMM git tag
 export SPACEMAN_DMM_VERSION=suite-1.10

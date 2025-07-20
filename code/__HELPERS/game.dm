@@ -13,12 +13,6 @@
 	var/turf/loc = get_turf(O)
 	return loc ? loc.z : 0
 
-/proc/get_area_name(N) //get area by its name
-	for(var/area/A in GLOB.map_areas)
-		if(A.name == N)
-			return A
-	return 0
-
 // get the area's name
 /proc/get_area_name_litteral(atom/X, format_text = FALSE)
 	var/area/A = isarea(X) ? X : get_area(X)
@@ -160,20 +154,13 @@
 			hearturfs[AM.locs[1]] = TRUE
 
 
-	for(var/m in GLOB.player_list)
-		var/mob/M = m
-		if(checkghosts == GHOSTS_ALL_HEAR && M.stat == DEAD && !isnewplayer(M) && (M.client && M.get_preference_value(/datum/client_preference/ghost_ears) == GLOB.PREF_ALL_SPEECH))
-			if (!mobs[M])
-				mobs[M] = TRUE
-			continue
-		if(M.loc && hearturfs[M.locs[1]])
-			if (!mobs[M])
-				mobs[M] = TRUE
+	for(var/mob/M as anything in getMobsInRangeChunked(T, range, FALSE, TRUE))
+		mobs[M] = TRUE
+	for(var/mob/M as anything in GLOB.player_ghost_list)
+		if(checkghosts == GHOSTS_ALL_HEAR && M.stat == DEAD && M.get_preference_value(/datum/client_preference/ghost_ears) == GLOB.PREF_ALL_SPEECH)
+			mobs[M] = TRUE
 
-
-	for(var/obj in GLOB.hearing_objects)
-		if(get_turf(obj) in hearturfs)
-			objs |= obj
+	objs |= getHearersInRangeChunked(T, range)
 
 
 
@@ -219,7 +206,7 @@
 		if(Y1==Y2)
 			return 1 //Light cannot be blocked on same tile
 		else
-			var/s = sign(Y2-Y1)
+			var/s = sign_r(Y2-Y1)
 			Y1+=s
 			while(Y1!=Y2)
 				T=locate(X1, Y1, Z)
@@ -229,8 +216,8 @@
 	else
 		var/m=(32*(Y2-Y1)+(PY2-PY1))/(32*(X2-X1)+(PX2-PX1))
 		var/b=(Y1+PY1/32-0.015625)-m*(X1+PX1/32-0.015625) //In tiles
-		var/signX = sign(X2-X1)
-		var/signY = sign(Y2-Y1)
+		var/signX = sign_r(X2-X1)
+		var/signY = sign_r(Y2-Y1)
 		if(X1<X2)
 			b+=m
 		while(X1!=X2 || Y1!=Y2)
@@ -504,7 +491,7 @@
 /proc/get_vents()
 	var/list/vents = list()
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in GLOB.machines)
-		if(!temp_vent.welded && temp_vent.network && isOnStationLevel(temp_vent))
+		if(!temp_vent.welded && temp_vent.network && IS_SHIP_LEVEL(temp_vent.z))
 			if(temp_vent.network.normal_members.len > 15)
 				vents += temp_vent
 	return vents

@@ -236,6 +236,25 @@
 		MATERIAL_PLASTIC = 3
 	)
 
+/obj/item/clothing/suit/armor/gzhel
+	name = "Excelsior gzhel-m vest"
+	desc = "Standard-issue Excelsior bullet-resistant vest with great balance of cost, weight, and protection."
+	icon_state = "ghezel_m"
+	item_state = "ghezel_m"
+	armor = list(
+		melee = 8,
+		bullet = 13,
+		energy = 8,
+		bomb = 30,
+		bio = 0,
+		rad = 0
+	)
+	matter = list(
+		MATERIAL_STEEL = 8,
+		MATERIAL_PLASTEEL = 1,
+		MATERIAL_PLASTIC = 3
+	)
+
 /obj/item/clothing/suit/armor/flak/full
 	name = "full flakvest vest"
 	desc = "An armored vest built for protection against high-velocity solid projectiles. This set has had kneepads and shoulderpads attached for more protection."

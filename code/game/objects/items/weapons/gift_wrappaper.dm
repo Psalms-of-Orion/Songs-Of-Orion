@@ -44,7 +44,6 @@
 		/obj/item/beach_ball/holoball,
 		/obj/item/toy/balloon,
 		/obj/item/toy/blink,
-		/obj/item/toy/crossbow,
 		/obj/item/gun/projectile/revolver/capgun,
 		/obj/item/toy/katana,
 		/obj/item/toy/prize/deathripley,

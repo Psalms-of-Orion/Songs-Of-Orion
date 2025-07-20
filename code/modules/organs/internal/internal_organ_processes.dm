@@ -60,7 +60,7 @@
 	var/toxin_strength = chem_effects[CE_TOXIN] * IORGAN_KIDNEY_TOX_RATIO + chem_toxicity
 
 	// Existing damage is subtracted to prevent weaker toxins from maxing out tox wounds on the organ
-	var/toxin_damage = kidney ? (toxin_strength / (stats.getPerk(PERK_BLOOD_OF_LEAD) ? 2 : 1)) - (kidneys_efficiency / 100) - kidney.damage * 2 : 0
+	var/toxin_damage = kidney ? (toxin_strength / (stats.getPerk(PERK_BLOOD_OF_LEAD) ? 2 : 1)) - (kidneys_efficiency / 32) - kidney.damage : 0
 
 	// Organ functions
 	// Blood regeneration if there is some space
@@ -81,7 +81,7 @@
 	var/toxin_strength = chem_effects[CE_TOXIN] * IORGAN_LIVER_TOX_RATIO + chem_effects[CE_ALCOHOL_TOXIC]
 
 	// Existing damage is subtracted to prevent weaker toxins from maxing out tox wounds on the organ
-	var/toxin_damage = liver ? (toxin_strength / (stats.getPerk(PERK_BLOOD_OF_LEAD) ? 2 : 1)) - (liver_efficiency / 100) - liver.damage * 2 : 0
+	var/toxin_damage = liver ? (toxin_strength / (stats.getPerk(PERK_BLOOD_OF_LEAD) ? 2 : 1)) - (liver_efficiency / 32) - liver.damage : 0
 
 	// Bad stuff
 	// If you're not filtering well, you're in trouble. Ammonia buildup to toxic levels and damage from alcohol
@@ -93,6 +93,17 @@
 
 	if(toxin_damage > 0 && liver)
 		liver.take_damage(toxin_damage, TOX)
+	else if(liver)
+		for(var/tocheck in liver.wounddatums)
+			if(ispath(tocheck, /datum/internal_wound/organic/hepatitis)) // low level inflammation
+				var/datum/internal_wound/treathis = liver.wounddatums[tocheck]
+				treathis.treatment()
+			else if(ispath(tocheck, /datum/internal_wound/organic/fibrosis))
+				var/datum/internal_wound/treathis = liver.wounddatums[tocheck]
+				treathis.treatment_slow(max(1, round(liver_efficiency/32))) // fibrosis cures better the healthier the liver is, but isn't incurable before it reaches a worse state
+			else if (ispath(tocheck, /datum/internal_wound/organic/edge) || ispath(tocheck, /datum/internal_wound/organic/sharp) || ispath(tocheck, /datum/internal_wound/organic/blunt))
+				var/datum/internal_wound/treathis = liver.wounddatums[tocheck]
+				treathis.treatment_slow(max(1, round(liver_efficiency/16))) // liver regenerates good
 
 	// Blood loss or liver damage make you lose nutriments
 	var/blood_volume = get_blood_volume()
