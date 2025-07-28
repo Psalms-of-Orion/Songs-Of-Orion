@@ -1,7 +1,7 @@
 
-//// .35 ////
+//// pistol ////
 /obj/item/ammo_casing/pistol
-	desc = "A .35 Auto bullet casing."
+	desc = "A pistol bullet casing."
 	icon_state = "pistol_c_l"
 	spent_icon = "pistol_c_l-spent"
 	shell_color = "l"
@@ -15,7 +15,7 @@
 	matter = list(MATERIAL_STEEL = 0.05)
 
 /obj/item/ammo_casing/pistol/hv
-	desc = "A .35 Auto high-velocity bullet casing."
+	desc = "A pistol high-velocity bullet casing."
 	icon_state = "pistol_c_hv"
 	spent_icon = "pistol_c_hv-spent"
 	shell_color = "hv"
@@ -23,7 +23,7 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/hv
 
 /obj/item/ammo_casing/pistol/practice
-	desc = "A .35 Auto practice bullet casing."
+	desc = "A pistol practice bullet casing."
 	icon_state = "pistol_c_p"
 	spent_icon = "pistol_c_p-spent"
 	shell_color = "p"
@@ -31,7 +31,7 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/practice
 
 /obj/item/ammo_casing/pistol/rubber
-	desc = "A .35 Auto rubber bullet casing."
+	desc = "A pistol rubber bullet casing."
 	icon_state = "pistol_c_r"
 	spent_icon = "pistol_c_r-spent"
 	shell_color = "r"
@@ -39,7 +39,7 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber
 
 /obj/item/ammo_casing/pistol/scrap
-	desc = "An old .35 Auto bullet casing."
+	desc = "An old pistol bullet casing."
 	icon_state = "pistol_c_s"
 	spent_icon = "pistol_c_s-spent"
 	shell_color = "s"
@@ -49,10 +49,10 @@
 /obj/item/ammo_casing/pistol/scrap/prespawned
 	amount = 15
 
-//// .40 ////
+//// MAGNUM ////
 
 /obj/item/ammo_casing/magnum
-	desc = "A .40 Magnum hollow point bullet casing."
+	desc = "A magnum hollow point bullet casing."
 	caliber = CAL_MAGNUM
 	icon_state = "magnum_c_l"
 	spent_icon = "magnum_c_l-spent"
@@ -66,7 +66,7 @@
 	matter = list(MATERIAL_STEEL = 0.15)
 
 /obj/item/ammo_casing/magnum/practice
-	desc = "A .40 Magnum practice bullet casing."
+	desc = "A magnum practice bullet casing."
 	icon_state = "magnum_c_p"
 	spent_icon = "magnum_c_p-spent"
 	shell_color = "p"
@@ -74,7 +74,7 @@
 	projectile_type = /obj/item/projectile/bullet/magnum/practice
 
 /obj/item/ammo_casing/magnum/hv
-	desc = "A .40 Magnum high-velocity bullet casing."
+	desc = "A magnum high-velocity bullet casing."
 	icon_state = "magnum_c_hv"
 	spent_icon = "magnum_c_hv-spent"
 	shell_color = "hv"
@@ -82,7 +82,7 @@
 	projectile_type = /obj/item/projectile/bullet/magnum/hv
 
 /obj/item/ammo_casing/magnum/rubber
-	desc = "A .40 Magnum rubber bullet casing."
+	desc = "A magnum rubber bullet casing."
 	icon_state = "magnum_c_r"
 	spent_icon = "magnum_c_r-spent"
 	shell_color = "r"
@@ -90,7 +90,7 @@
 	projectile_type = /obj/item/projectile/bullet/magnum/rubber
 
 /obj/item/ammo_casing/magnum/scrap
-	desc = "An old .40 Magnum bullet casing."
+	desc = "An old magnum bullet casing."
 	caliber = CAL_MAGNUM
 	icon_state = "magnum_c_s"
 	spent_icon = "magnum_c_s-spent"
@@ -100,10 +100,10 @@
 /obj/item/ammo_casing/magnum/scrap/prespawned
 	amount = 10
 
-//// .20 ////
+//// CARBINE ////
 
 /obj/item/ammo_casing/srifle
-	desc = "A .20 Rifle bullet casing."
+	desc = "A carbine bullet casing."
 	icon_state = "srifle_c_l"
 	spent_icon = "srifle_c_l-spent"
 	shell_color = "l"
@@ -117,7 +117,7 @@
 	matter = list(MATERIAL_STEEL = 0.1)
 
 /obj/item/ammo_casing/srifle/practice
-	desc = "A .20 Rifle practice bullet casing."
+	desc = "A carbine practice bullet casing."
 	icon_state = "srifle_c_p"
 	spent_icon = "srifle_c_p-spent"
 	shell_color = "p"
@@ -125,7 +125,7 @@
 	projectile_type = /obj/item/projectile/bullet/srifle/practice
 
 /obj/item/ammo_casing/srifle/hv
-	desc = "A .20 Rifle high-velocity bullet casing."
+	desc = "A carbine high-velocity bullet casing."
 	icon_state = "srifle_c_hv"
 	spent_icon = "srifle_c_hv-spent"
 	shell_color = "hv"
@@ -133,7 +133,7 @@
 	projectile_type = /obj/item/projectile/bullet/srifle/hv
 
 /obj/item/ammo_casing/srifle/rubber
-	desc = "A .20 Rifle rubber bullet casing."
+	desc = "A carbine rubber bullet casing."
 	icon_state = "srifle_c_r"
 	spent_icon = "srifle_c_r-spent"
 	shell_color = "r"
@@ -141,7 +141,7 @@
 	projectile_type = /obj/item/projectile/bullet/srifle/rubber
 
 /obj/item/ammo_casing/srifle/scrap
-	desc = "An old .20 Rifle bullet casing."
+	desc = "An old carbine bullet casing."
 	icon_state = "srifle_c_s"
 	spent_icon = "srifle_c_s-spent"
 	shell_color = "s"
@@ -151,10 +151,10 @@
 /obj/item/ammo_casing/srifle/scrap/prespawned
 	amount = 10
 
-//// .25 ////
+//// CASELESS ////
 
 /obj/item/ammo_casing/clrifle
-	desc = "A .25 Caseless Rifle bullet casing."
+	desc = "A caseless Rifle bullet casing."
 	icon_state = "clrifle_c_l"
 	spent_icon = "clrifle_c_l-spent"
 	shell_color = "l"
@@ -168,7 +168,7 @@
 	sprite_scale = 0.5
 
 /obj/item/ammo_casing/clrifle/practice
-	desc = "A .25 Caseless Rifle practice bullet casing."
+	desc = "A caseless Rifle practice bullet casing."
 	icon_state = "clrifle_c_p"
 	spent_icon = "clrifle_c_p-spent"
 	shell_color = "p"
@@ -177,7 +177,7 @@
 	is_caseless = TRUE
 
 /obj/item/ammo_casing/clrifle/hv
-	desc = "A .25 Caseless Rifle high-velocity bullet casing."
+	desc = "A caseless Rifle high-velocity bullet casing."
 	icon_state = "clrifle_c_hv"
 	spent_icon = "clrifle_c_hv-spent"
 	shell_color = "hv"
@@ -186,7 +186,7 @@
 	is_caseless = TRUE
 
 /obj/item/ammo_casing/clrifle/rubber
-	desc = "A .25 Caseless Rifle rubber bullet casing."
+	desc = "A caseless Rifle rubber bullet casing."
 	icon_state = "clrifle_c_r"
 	spent_icon = "clrifle_c_r-spent"
 	shell_color = "r"
@@ -195,7 +195,7 @@
 	is_caseless = TRUE
 
 /obj/item/ammo_casing/clrifle/scrap
-	desc = "An old .25 Caseless Rifle bullet casing."
+	desc = "An old caseless Rifle bullet casing."
 	icon_state = "clrifle_c_s"
 	spent_icon = "clrifle_c_s-spent"
 	shell_color = "s"
@@ -205,10 +205,10 @@
 /obj/item/ammo_casing/clrifle/scrap/prespawned
 	amount = 10
 
-//// .30 ////
+//// RIFLE ////
 
 /obj/item/ammo_casing/lrifle
-	desc = "A .30 rifle bullet casing."
+	desc = "A rifle bullet casing."
 	icon_state = "lrifle_c_l"
 	spent_icon = "lrifle_c_l-spent"
 	shell_color = "l"
@@ -222,7 +222,7 @@
 	matter = list(MATERIAL_STEEL = 0.15)
 
 /obj/item/ammo_casing/lrifle/practice
-	desc = "A .30 rifle practice bullet casing."
+	desc = "A rifle practice bullet casing."
 	icon_state = "lrifle_c_p"
 	spent_icon = "lrifle_c_p-spent"
 	shell_color = "p"
@@ -230,7 +230,7 @@
 	projectile_type = /obj/item/projectile/bullet/lrifle/practice
 
 /obj/item/ammo_casing/lrifle/hv
-	desc = "A .30 Rifle high-velocity bullet casing."
+	desc = "A Rifle high-velocity bullet casing."
 	icon_state = "lrifle_c_hv"
 	spent_icon = "lrifle_c_hv-spent"
 	shell_color = "hv"
@@ -238,7 +238,7 @@
 	projectile_type = /obj/item/projectile/bullet/lrifle/hv
 
 /obj/item/ammo_casing/lrifle/rubber
-	desc = "A .30 Rifle rubber bullet casing."
+	desc = "A Rifle rubber bullet casing."
 	icon_state = "lrifle_c_r"
 	spent_icon = "lrifle_c_r-spent"
 	shell_color = "r"
@@ -246,7 +246,7 @@
 	projectile_type = /obj/item/projectile/bullet/lrifle/rubber
 
 /obj/item/ammo_casing/lrifle/scrap
-	desc = "An old .30 rifle bullet casing."
+	desc = "An old rifle bullet casing."
 	icon_state = "lrifle_c_s"
 	spent_icon = "lrifle_c_s-spent"
 	shell_color = "s"
@@ -256,11 +256,11 @@
 /obj/item/ammo_casing/lrifle/scrap/prespawned
 	amount = 10
 
-//// .60 ////
+//// AMR ////
 
 /obj/item/ammo_casing/antim
 	name = "\"Penetrator\" shell casing"
-	desc = "A .60 Anti-Material \"Penetrator\" shell."
+	desc = "An Anti-Material \"Penetrator\" shell."
 	icon_state = "atmr"
 	spent_icon = "atmr-spent"
 	caliber = CAL_ANTIM
@@ -277,7 +277,7 @@
 
 /obj/item/ammo_casing/antim/emp
 	name = "\"Blackout\" shell casing"
-	desc = "A .60 Anti-Material \"Blackout\" shell."
+	desc = "An Anti-Material \"Blackout\" shell."
 	icon_state = "atmr-emp"
 	spent_icon = "atmr-emp-spent"
 	projectile_type = /obj/item/projectile/bullet/antim/emp
@@ -288,7 +288,7 @@
 
 /obj/item/ammo_casing/antim/uranium
 	name = "\"Meltdown\" shell casing"
-	desc = "A .60 Anti-Material \"Meltdown\" shell."
+	desc = "An Anti-Material \"Meltdown\" shell."
 	icon_state = "atmr-DU"
 	spent_icon = "atmr-DU-spent"
 	projectile_type = /obj/item/projectile/bullet/antim/uranium
@@ -299,7 +299,7 @@
 
 /obj/item/ammo_casing/antim/breach
 	name = "\"Breacher\" shell casing"
-	desc = "A .60 Anti-Material \"Breacher\" shell."
+	desc = "An Anti-Material \"Breacher\" shell."
 	icon_state = "atmr-HE"
 	spent_icon = "atmr-HE-spent"
 	projectile_type = /obj/item/projectile/bullet/antim/breach
@@ -309,7 +309,7 @@
 
 /obj/item/ammo_casing/antim/scrap
 	name = "shell casing"
-	desc = "An old .60 Anti-Material shell."
+	desc = "An old Anti-Material shell."
 	icon_state = "atmr_s"
 	spent_icon = "atmr_s-spent"
 	projectile_type = /obj/item/projectile/bullet/antim/scrap
@@ -319,18 +319,18 @@
 /obj/item/ammo_casing/antim/scrap/prespawned
 	amount = 5
 
-//// .50 Shotgun ////
+//// Shotgun ////
 
 /obj/item/ammo_casing/shotgun
 	name = "shotgun slug"
-	desc = "A .50 slug."
+	desc = "A shotgun shell. What did you expect?"
 	icon_state = "s-shell_hv"
 	spent_icon = "s-shell_hv-spent"
 	shell_color = "hv"
 	caliber = CAL_SHOTGUN
 	projectile_type = /obj/item/projectile/bullet/shotgun
 	matter = list(MATERIAL_STEEL = 0.5)
-	maxamount = 5
+	maxamount = 4
 
 	price_tag = 1
 
@@ -343,7 +343,6 @@
 
 /obj/item/ammo_casing/shotgun/scrap
 	name = "old shotgun slug"
-	desc = "An older .50 slug."
 	icon_state = "s-shell_s"
 	spent_icon = "s-shell_s-spent"
 	shell_color = "scrap"
@@ -352,44 +351,40 @@
 	maxamount = 5
 
 /obj/item/ammo_casing/shotgun/scrap/prespawned
-	amount = 5
+	amount = 4
 
 /obj/item/ammo_casing/shotgun/beanbag
 	name = "beanbag shell"
-	desc = "A .50 beanbag shell."
 	icon_state = "s-shell_r"
 	spent_icon = "s-shell_r-spent"
 	shell_color = "r"
 	projectile_type = /obj/item/projectile/bullet/shotgun/beanbag
 
 /obj/item/ammo_casing/shotgun/beanbag/prespawned
-	amount = 5
+	amount = 4
 
 /obj/item/ammo_casing/shotgun/beanbag/scrap
 	name = "Old beanbag shell"
-	desc = "An older .50 beanbag shell."
 	icon_state = "s-shell_rs"
 	spent_icon = "s-shell_rs-spent"
 	shell_color = "scrap_r"
 	projectile_type = /obj/item/projectile/bullet/shotgun/beanbag/scrap
 
 /obj/item/ammo_casing/shotgun/beanbag/scrap/prespawned
-	amount = 5
+	amount = 4
 
 /obj/item/ammo_casing/shotgun/pellet
 	name = "shotgun shell"
-	desc = "A .50 shell."
 	icon_state = "s-shell_l"
 	spent_icon = "s-shell_l-spent"
 	shell_color = "l"
 	projectile_type = /obj/item/projectile/bullet/pellet/shotgun
 
 /obj/item/ammo_casing/shotgun/pellet/prespawned
-	amount = 5
+	amount = 4
 
 /obj/item/ammo_casing/shotgun/pellet/scrap
 	name = "old shotgun shell"
-	desc = "An older .50 shell."
 	icon_state = "s-shell_ss"
 	spent_icon = "s-shell_ss-spent"
 	shell_color = "scrap_s"
@@ -400,7 +395,6 @@
 
 /obj/item/ammo_casing/shotgun/blank
 	name = "shotgun shell"
-	desc = "A .50 blank shell."
 	icon_state = "s-shell_b"
 	spent_icon = "s-shell_b-spent"
 	shell_color = "b"
@@ -411,7 +405,6 @@
 
 /obj/item/ammo_casing/shotgun/practice
 	name = "shotgun shell"
-	desc = "A .50 practice shell."
 	icon_state = "s-shell_p"
 	spent_icon = "s-shell_p-spent"
 	shell_color = "p"
@@ -423,7 +416,7 @@
 //Does not stun, only blinds, but has area of effect.
 /obj/item/ammo_casing/shotgun/flash
 	name = "flash shell"
-	desc = "A .50 chemical shell used to signal distress or provide illumination."
+	desc = "A chemical shell used to signal distress or provide illumination."
 	icon_state = "s-shell_f"
 	spent_icon = "s-shell_f-spent"
 	shell_color = "f"
@@ -436,7 +429,7 @@
 
 /obj/item/ammo_casing/shotgun/incendiary
 	name = "incendiary shell"
-	desc = "A .50 chemical shell with highly flammable load."
+	desc = "A chemical shell with highly flammable load."
 	icon_state = "s-shell_i"
 	spent_icon = "s-shell_i-spent"
 	shell_color = "i"
@@ -449,8 +442,8 @@
 //// Grenade Shells ////
 
 /obj/item/ammo_casing/grenade
-	name = "FS SR \"Sasumata\""
-	desc = "A high-grade Frozen Star sting round, for use against unruly crowds."
+	name = "stinger shell"
+	desc = "A stinger grenade shell used in launchers, for use against unruly crowds."
 	icon_state = "baton-round"
 	spent_icon = "grenadeshell"
 	projectile_type = /obj/item/projectile/bullet/grenade/frag/sting
@@ -463,8 +456,8 @@
 	rarity_value = 15
 
 /obj/item/ammo_casing/grenade/teargas
-	name = "FS TGR \"Murphy\""
-	desc = "A riot-grade Frozen Star tear gas round, for use against unruly crowds."
+	name = "tear gas shell"
+	desc = "A riot-grade tear gas round, for use against unruly crowds."
 	icon_state = "teargas"
 	projectile_type = /obj/item/projectile/bullet/grenade/handgrenade/teargas
 	w_class = ITEM_SIZE_SMALL
@@ -475,8 +468,8 @@
 	rarity_value = 15
 
 /obj/item/ammo_casing/grenade/flash
-	name = "FS FBR \"Stallone\""
-	desc = "A standard-issue Frozen Star flash round, for clearing out criminal hideouts."
+	name = "stun shell"
+	desc = "A standard-issue stun round, for clearing out criminal hideouts."
 	icon_state = "flash"
 	projectile_type = /obj/item/projectile/bullet/grenade/handgrenade/flash
 	w_class = ITEM_SIZE_SMALL
@@ -488,8 +481,8 @@
 
 
 /obj/item/ammo_casing/grenade/smoke
-	name = "FS SGR \"Dalton\""
-	desc = "A standard-issue Frozen Star smoke round, for hiding troop movements."
+	name = "smoke shell"
+	desc = "A standard-issue smoke round, for hiding troop movements."
 	icon_state = "grenade"
 	projectile_type = /obj/item/projectile/bullet/grenade/smoke
 	w_class = ITEM_SIZE_SMALL
@@ -500,8 +493,8 @@
 	rarity_value = 15
 
 /obj/item/ammo_casing/grenade/white_phosphorous
-	name = "SA WPR \"Gornja\""
-	desc = "An incendiary grenade shell, intended for clearing out tight spaces such as ship interiors and village houses. With love from Serbia."
+	name = "incendiary shell"
+	desc = "An incendiary grenade shell, intended for clearing out tight spaces such as ship interiors and village houses."
 	icon_state = "high_incendiary "
 	projectile_type = /obj/item/projectile/bullet/grenade/handgrenade/white_phosphorous
 	w_class = ITEM_SIZE_SMALL
@@ -512,46 +505,45 @@
 	rarity_value = 25
 
 /obj/item/ammo_casing/grenade/weak
-	name = "NT SR \"Dard\""
-	desc = "A standard-issue sting round for use against unruly crowds. The abbreviation \"NT\" marks its producer, but the lack of details makes it ubiquitous."
+	name = "low yield stinger shell"
+	desc = "A standard-issue sting round for use against unruly crowds."
 	projectile_type = /obj/item/projectile/bullet/grenade/frag/sting/weak
 	matter = list(MATERIAL_STEEL = 5)
 	rarity_value = 10
 
 /obj/item/ammo_casing/grenade/blast
-	name = "OR OBR \"Puff\""
-	desc = "A military-grade explosive shell, designed to be fired from grenade launchers."
+	name = "explosive shell"
+	desc = "A military-grade HEDP shell, designed to be fired from grenade launchers."
 	icon_state = "blast"
 	projectile_type = /obj/item/projectile/bullet/grenade/blast
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_PLASTEEL = 3)
 	rarity_value = 25
 
 /obj/item/ammo_casing/grenade/frag
-	name = "NT DFR \"Pallad\""
-	desc = "A military-grade grenade shell, designed to be fired from grenade launchers. The abbreviation \"NT\" marks its producer, but the lack of detatil makes it ubiquitous."
+	name = "frag grenade"
+	desc = "A military-grade grenade shell, designed to be fired from grenade launchers."
 	icon_state = "frag"
 	projectile_type = /obj/item/projectile/bullet/grenade/frag
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_PLASTEEL = 2)
 	rarity_value = 25
 
 /obj/item/ammo_casing/grenade/emp
-	name = "NT EMPR \"Remote Switch\""
-	desc = "An EMP grenade shell, designed to be fired from grenade launchers. The abbreviation \"NT\" marks its producer, but the lack of detatil makes it ubiquitous."
+	name = "EMP shell"
+	desc = "An EMP grenade shell, designed to be fired from grenade launchers."
 	icon_state = "emp"
 	projectile_type = /obj/item/projectile/bullet/grenade/emp // gonna keep this from being maint-lootable for now
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_IRON = 2, MATERIAL_URANIUM = 2)
 
 /obj/item/ammo_casing/grenade/emp/low_yield
-	name = "FS EMPR \"Short Circuit\""
-	desc = "An EMP grenade shell configured with a lower radius for use on ships and stations, designed to be fired from grenade launchers. The abbreviation \"FS\" marks its producer,"
+	name = "low yield EMP shell"
+	desc = "An EMP grenade shell configured with a lower radius for use on ships and stations, designed to be fired from grenade launchers."
 	icon_state = "emp_low"
 	projectile_type = /obj/item/projectile/bullet/grenade/emp/low_yield // gonna keep this from being maint-lootable for now
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_IRON = 2, MATERIAL_URANIUM = 2)
 
 /obj/item/ammo_casing/grenade/heatwave
-	name = "NT HG \"Purifico\""
-	desc = "A military-grade offensive heatwave grenade shell, designed to be fired from grenade launchers. \
-			There\'s an inscription along the sides. \'For those who disbelieve, for them are cut out garments of fire, boiling water shall be poured over their heads.\'"
+	name = "Heatwave shell"
+	desc = "A military-grade offensive heatwave grenade shell, designed to be fired from grenade launchers."
 	icon_state = "incendiary"
 	projectile_type = /obj/item/projectile/bullet/grenade/heatwave
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_BIOMATTER = 20, MATERIAL_PLASMA = 1)

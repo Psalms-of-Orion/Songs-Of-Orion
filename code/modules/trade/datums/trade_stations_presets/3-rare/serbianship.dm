@@ -29,8 +29,8 @@
 			/obj/item/ammo_magazine/m12/short/empty,
 			/obj/item/ammo_magazine/m12/empty,
 			/obj/item/ammo_magazine/ammobox/shotgun,
-			/obj/item/ammo_magazine/ammobox/shotgun/buckshot = custom_good_name("ammunition box (.50 pellet)"),
-			/obj/item/ammo_magazine/ammobox/shotgun/incendiaryshells = custom_good_name("ammunition box (.50 incendiary)")
+			/obj/item/ammo_magazine/ammobox/shotgun/buckshot = custom_good_name("ammunition box (buckshot)"),
+			/obj/item/ammo_magazine/ammobox/shotgun/incendiaryshells = custom_good_name("ammunition box (incendiary)")
 		),
 		"Serbian Attire" = list(
 			/obj/item/clothing/under/serbiansuit,

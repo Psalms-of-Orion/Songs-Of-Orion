@@ -60,7 +60,7 @@
 	)
 
 /obj/item/computer_hardware/hard_drive/portable/design/ammo_boxes_smallarms
-	disk_name = "Frozen Star .35 and .40 Ammunition"
+	disk_name = "Handgun Ammunition"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED_COMMON
 	license = 20
@@ -74,7 +74,7 @@
 	)
 
 /obj/item/computer_hardware/hard_drive/portable/design/ammo_boxes_rifle
-	disk_name = "Frozen Star Rifle Ammunition"
+	disk_name = "Rifle Ammunition"
 	icon_state = "frozenstar"
 	spawn_tags = SPAWN_TAG_DESIGN_ADVANCED_COMMON
 	license = 20
@@ -96,7 +96,7 @@
 	)
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_cheap_guns
-	disk_name = "Frozen Star Basic - .35 Civilian Pack"
+	disk_name = "Basic Civilian Pack"
 	icon_state = "frozenstar"
 	rarity_value = 7
 	license = 12
@@ -128,7 +128,7 @@
 // .40 REVOLVERS
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_revolver_miller
-	disk_name = "Frozen Star - .40 Miller Revolver"
+	disk_name = "Magnum Revolver"
 	icon_state = "frozenstar"
 	rarity_value = 13
 	license = 12
@@ -204,7 +204,7 @@
 		/datum/design/autolathe/ammo/mg_magnum/rubber,
 		)
 
-// .50 SHOTGUNS
+// SHOTGUNS
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_doublebarrel
 	disk_name = "Frozen Star - .50 Double Barrel Shotgun"
@@ -323,7 +323,7 @@
 		/datum/design/autolathe/ammo/srifle/rubber,
 	)
 
-// .25 Caseless
+// Caseless
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns/fs_sol
 	disk_name = "Frozen Star - .25 Sol Caseless SMG Pack"

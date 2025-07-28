@@ -524,7 +524,7 @@ semi accepts weird caliber - +1 points
 	mag_well = MAG_WELL_RIFLE|MAG_WELL_RIFLE_L
 	recoil_bonus = 1.25 // -1.5 points
 	damage_bonus = 0.2 // +4 points
-	divisor_bonus = -0.25 // -2.5 points, encourages use of .20 to make up for it
+	divisor_bonus = -0.25 // -2.5 points, encourages use of carbine ammo to make up for it
 	bonus_firemodes = list(BURST_2_ROUND) // +4 points
 
 /obj/item/part/gun/modular/mechanism/machinegun
@@ -607,8 +607,8 @@ semi accepts weird caliber - +1 points
 	I.weapon_upgrades[GUN_UPGRADE_DAMAGEMOD_PLUS] = old_quality / 20
 
 /obj/item/part/gun/modular/barrel/pistol
-	name = ".35 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .35 caliber."
+	name = "Pistol caliber barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for pistol cartridges."
 	icon_state = "barrel_35"
 	matter = list(MATERIAL_PLASTEEL = 4)
 	price_tag = 100
@@ -616,8 +616,8 @@ semi accepts weird caliber - +1 points
 	part_overlay = "well_pistol"
 
 /obj/item/part/gun/modular/barrel/magnum
-	name = ".40 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .40 caliber."
+	name = "Magnum barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for magnum cartridges."
 	icon_state = "barrel_40"
 	matter = list(MATERIAL_PLASTEEL = 4)
 	price_tag = 100
@@ -625,51 +625,51 @@ semi accepts weird caliber - +1 points
 	part_overlay = "well_magnum"
 
 /obj/item/part/gun/modular/barrel/srifle
-	name = ".20 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .20 caliber."
+	name = "Carbine barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for carbine cartridges."
 	icon_state = "barrel_20"
 	matter = list(MATERIAL_PLASTEEL = 8)
 	caliber = CAL_SRIFLE
 	part_overlay = "well_srifle"
 
 /obj/item/part/gun/modular/barrel/clrifle
-	name = ".25 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .25 caliber."
+	name = "Caseless barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for caseless cartridges."
 	icon_state = "barrel_25"
 	matter = list(MATERIAL_PLASTEEL = 8)
 	caliber = CAL_CLRIFLE
 	part_overlay = "well_clrifle"
 
 /obj/item/part/gun/modular/barrel/lrifle
-	name = ".30 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .30 caliber."
+	name = "Rifle barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for rifle cartridges."
 	icon_state = "barrel_30"
 	matter = list(MATERIAL_PLASTEEL = 8)
 	caliber = CAL_LRIFLE
 	part_overlay = "well_lrifle"
 
 /obj/item/part/gun/modular/barrel/lrifle/forged
-	name = "forged .30 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .30 caliber.\
+	name = "forged rifle barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for rifle cartridges.\
 			Visibly forged by hand, high quality."
 
 /obj/item/part/gun/modular/barrel/lrifle/cheap
-	name = ".30 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .30 caliber.\
+	name = "Rifle barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for rifle cartridges.\
 			Autolathe marks give away the barrel's low quality at a glance."
 	cheap = TRUE
 
 /obj/item/part/gun/modular/barrel/shotgun
 	name = "shotgun barrel"
-	desc = "A gun barrel, which keeps the bullet (or bullets) going in the right direction. Chambered in .50 caliber."
+	desc = "A gun barrel, which keeps the bullet (or bullets) going in the right direction. Chambered for shotgun shells."
 	icon_state = "barrel_50"
 	matter = list(MATERIAL_PLASTEEL = 8)
 	caliber = CAL_SHOTGUN
 	part_overlay = "well_shotgun"
 
 /obj/item/part/gun/modular/barrel/antim
-	name = ".60 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .60 caliber."
+	name = "Anti-material barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for AMR cartridges."
 	icon_state = "barrel_60"
 	matter = list(MATERIAL_PLASTEEL = 16)
 	caliber = CAL_ANTIM
@@ -677,38 +677,38 @@ semi accepts weird caliber - +1 points
 
 // steel barrels
 /obj/item/part/gun/modular/barrel/pistol/steel
-	name = "cheap .35 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .35 caliber. \
+	name = "cheap pistol barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for pistol cartridges. \
 			This one does not look as high quality."
 	matter = list(MATERIAL_STEEL = 2)
 
 /obj/item/part/gun/modular/barrel/magnum/steel
-	name = "cheap .40 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .40 caliber. \
+	name = "cheap magnum barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for magnum cartridges. \
 			This one does not look as high quality."
 	matter = list(MATERIAL_STEEL = 2)
 
 /obj/item/part/gun/modular/barrel/srifle/steel
-	name = "cheap .20 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .20 caliber. \
+	name = "cheap carbine barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for carbine cartridges. \
 			 This one does not look as high quality."
 	matter = list(MATERIAL_STEEL = 5)
 
 /obj/item/part/gun/modular/barrel/clrifle/steel
-	name = "cheap .25 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .25 caliber. \
+	name = "cheap caseless barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for caseless cartridges. \
 			This one does not look as high quality."
 	matter = list(MATERIAL_STEEL = 5)
 
 /obj/item/part/gun/modular/barrel/lrifle/steel
-	name = "cheap .30 barrel"
-	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered in .30 caliber. \
+	name = "cheap rifle barrel"
+	desc = "A gun barrel, which keeps the bullet going in the right direction. Chambered for rifle cartridges. \
 			This one does not look as high quality."
 	matter = list(MATERIAL_STEEL = 5)
 
 /obj/item/part/gun/modular/barrel/shotgun/steel
 	name = "cheap shotgun barrel"
-	desc = "A gun barrel, which keeps the bullet (or bullets) going in the right direction. Chambered in .50 caliber. \
+	desc = "A gun barrel, which keeps the bullet (or bullets) going in the right direction. Chambered for shotgun shells.\
 			This one does not look as high quality."
 	matter = list(MATERIAL_STEEL = 2)
 

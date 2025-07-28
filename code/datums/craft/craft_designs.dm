@@ -2,7 +2,7 @@
 For use in defining designs for crafting stations.
 Based on /datum/design of \code\datums\autolathe\autolathe_datums.dm
 
-("firearm grips", "firearm barrels", "pistol mechanisms", "revolver mechanisms", "pump-action mechanisms", "self-loading mechanisms", ".35 caliber", ".40 caliber", ".20 caliber", ".25 caliber", ".30 caliber", "shotgun shells", "special munitions")
+("firearm grips", "firearm barrels", "pistol mechanisms", "revolver mechanisms", "pump-action mechanisms", "self-loading mechanisms", ".35 caliber", "magnum ammo", "carbine ammo", "caseless ammo", "magnum ammo", "shotgun shells", "special munitions")
 
 */
 
@@ -37,68 +37,68 @@ Based on /datum/design of \code\datums\autolathe\autolathe_datums.dm
 // barrels
 
 /datum/design/makeshift/barrel
-	name = ".35 barrel"
+	name = "pistol barrel"
 	category = "firearm barrels"
 	build_path = /obj/item/part/gun/modular/barrel/pistol
 
 /datum/design/makeshift/barrel/magnum
-	name = ".40 barrel"
+	name = "magnum barrel"
 	build_path = /obj/item/part/gun/modular/barrel/magnum
 	minimum_quality = 0
 
 /datum/design/makeshift/barrel/srifle
-	name = ".20 barrel"
+	name = "carbine barrel"
 	build_path = /obj/item/part/gun/modular/barrel/srifle
 	minimum_quality = 0
 
 /datum/design/makeshift/barrel/clrifle
-	name = ".25 barrel"
+	name = "caseless barrel"
 	build_path = /obj/item/part/gun/modular/barrel/clrifle
 	minimum_quality = 1
 
 /datum/design/makeshift/barrel/lrifle
-	name = ".30 barrel"
+	name = "rifle barrel"
 	build_path = /obj/item/part/gun/modular/barrel/lrifle
 	minimum_quality = 0
 
 /datum/design/makeshift/barrel/shotgun
-	name = ".50 shotgun barrel"
+	name = "shotgun barrel"
 	build_path = /obj/item/part/gun/modular/barrel/shotgun
 
 /datum/design/makeshift/barrel/antim
-	name = ".60 barrel"
+	name = "AMR barrel"
 	build_path = /obj/item/part/gun/modular/barrel/antim
 	minimum_quality = 2
 
 // cheap barrels (guhh)
 
 /datum/design/makeshift/barrel/steel
-	name = "cheap .35 barrel"
+	name = "cheap pistol barrel"
 	build_path = /obj/item/part/gun/modular/barrel/pistol/steel
 	quality = -1
 
 /datum/design/makeshift/barrel/magnum/steel
-	name = "cheap .40 barrel"
+	name = "cheap magnum barrel"
 	build_path = /obj/item/part/gun/modular/barrel/magnum/steel
 	quality = -1
 
 /datum/design/makeshift/barrel/srifle/steel
-	name = "cheap .20 barrel"
+	name = "cheap carbine barrel"
 	build_path = /obj/item/part/gun/modular/barrel/srifle/steel
 	quality = -1
 
 /datum/design/makeshift/barrel/clrifle/steel
-	name = "cheap .25 barrel"
+	name = "cheap caseless barrel"
 	build_path = /obj/item/part/gun/modular/barrel/clrifle/steel
 	quality = -1
 
 /datum/design/makeshift/barrel/lrifle/steel
-	name = "cheap .30 barrel"
+	name = "cheap rifle barrel"
 	build_path = /obj/item/part/gun/modular/barrel/lrifle/steel
 	quality = -1
 
 /datum/design/makeshift/barrel/shotgun/steel
-	name = "cheap .50 shotgun barrel"
+	name = "cheap shotgun barrel"
 	build_path = /obj/item/part/gun/modular/barrel/shotgun/steel
 	quality = -1
 
@@ -202,137 +202,137 @@ Based on /datum/design of \code\datums\autolathe\autolathe_datums.dm
 // .35
 
 /datum/design/makeshift/mags_pistol
-	name = "empty standard magazine (.35 Auto)"
-	category = ".35 caliber"
+	name = "empty standard magazine (pistol)"
+	category = "pistol ammo"
 	build_path = /obj/item/ammo_magazine/pistol/empty
 
 /datum/design/makeshift/mags_pistol/hpistol
-	name = "empty highcap magazine (.35 Auto)"
+	name = "empty highcap magazine (pistol)"
 	build_path = /obj/item/ammo_magazine/hpistol/empty
 	minimum_quality = 0
 
 /datum/design/makeshift/mags_pistol/smg
-	name = "empty SMG magazine (.35 Auto)"
+	name = "empty SMG magazine (pistol)"
 	build_path = /obj/item/ammo_magazine/smg/empty
 
 /datum/design/makeshift/mags_pistol/sl
-	name = "empty speed loader (.35 Auto)"
+	name = "empty speed loader (pistol)"
 	build_path = /obj/item/ammo_magazine/slpistol/empty
 
 /datum/design/makeshift/mags_pistol/casings
-	name = "scrap ammunition pile (.35 Auto)"
+	name = "scrap ammunition pile (pistol)"
 	build_path = /obj/item/ammo_casing/pistol/scrap/prespawned
 
 // .40
 
 /datum/design/makeshift/mags_magnum
-	name = "empty magazine (.40 Magnum)"
-	category = ".40 caliber"
+	name = "empty magazine (magnum)"
+	category = "magnum ammo"
 	build_path = /obj/item/ammo_magazine/magnum/empty
 
 /datum/design/makeshift/mags_magnum/msmg
-	name = "empty SMG magazine (.40 Magnum)"
+	name = "empty SMG magazine (magnum)"
 	build_path = /obj/item/ammo_magazine/msmg/empty
 	minimum_quality = 0
 
 /datum/design/makeshift/mags_magnum/sl
-	name = "empty speed loader (.40 Magnum)"
+	name = "empty speed loader (magnum)"
 	build_path = /obj/item/ammo_magazine/slmagnum/empty
 
 /datum/design/makeshift/mags_magnum/casings
-	name = "scrap ammunition pile (.40 Magnum)"
+	name = "scrap ammunition pile (magnum)"
 	build_path = /obj/item/ammo_casing/magnum/scrap/prespawned
 
-// .20
+// carbine
 
 /datum/design/makeshift/mags_srifle
-	name = "empty magazine (.20 Rifle)"
-	category = ".20 caliber"
+	name = "empty magazine (carbine)"
+	category = "carbine ammo"
 	build_path = /obj/item/ammo_magazine/srifle/empty
 
 /datum/design/makeshift/mags_srifle/long
-	name = "empty extended magazine (.20 Rifle)"
+	name = "empty extended magazine (carbine)"
 	build_path = /obj/item/ammo_magazine/srifle/long/empty
 	minimum_quality = 1
 
 /datum/design/makeshift/mags_srifle/drum
-	name = "empty drum magazine (.20 Rifle)"
+	name = "empty drum magazine (carbine)"
 	build_path = /obj/item/ammo_magazine/srifle/drum/empty
 	minimum_quality = 2
 
 /datum/design/makeshift/mags_srifle/sl
-	name = "empty ammo strip (.20 Rifle)"
+	name = "empty ammo strip (carbine)"
 	build_path = /obj/item/ammo_magazine/slsrifle/empty
 
 /datum/design/makeshift/mags_srifle/casings
-	name = "scrap ammunition pile (.20 Rifle)"
+	name = "scrap ammunition pile (carbine)"
 	build_path = /obj/item/ammo_casing/srifle/scrap/prespawned
 
-// .30
+// Rifle
 
 /datum/design/makeshift/mags_lrifle
-	name = "empty magazine (.30 Rifle)"
-	category = ".30 caliber"
+	name = "empty magazine (rifle)"
+	category = "rifle ammo"
 	build_path = /obj/item/ammo_magazine/lrifle/empty
 
 /datum/design/makeshift/mags_lrifle/drum
-	name = "empty drum magazine (.30 Rifle)"
+	name = "empty drum magazine (rifle)"
 	build_path = /obj/item/ammo_magazine/lrifle/drum/empty
 	minimum_quality = 1
 
 /datum/design/makeshift/mags_lrifle/casings
-	name = "scrap ammunition pile (.30 Rifle)"
+	name = "scrap ammunition pile (rifle)"
 	build_path = /obj/item/ammo_casing/lrifle/scrap/prespawned
 
-// .25
+// Caseless
 
 /datum/design/makeshift/mags_clrifle
-	name = "empty magazine (.25 Caseless Rifle)"
-	category = ".25 caliber"
+	name = "empty magazine (caseless)"
+	category = "caseless ammo"
 	build_path = /obj/item/ammo_magazine/ihclrifle/empty
 
 /datum/design/makeshift/mags_clrifle/pistol
-	name = "empty pistol magazine (.25 Caseless Rifle)"
+	name = "empty pistol magazine (caseless)"
 	build_path = /obj/item/ammo_magazine/cspistol/empty
 	minimum_quality = 0 // Mandella
 
 /datum/design/makeshift/mags_clrifle/sl
-	name = "empty ammo strip (.25 Caseless Rifle)"
+	name = "empty ammo strip (caseless)"
 	build_path = /obj/item/ammo_magazine/slclrifle/empty
 
 /datum/design/makeshift/mags_clrifle/casings
-	name = "scrap ammunition pile (.25 Caseless Rifle)"
+	name = "scrap ammunition pile (caseless)"
 	build_path = /obj/item/ammo_casing/clrifle/scrap/prespawned
 	minimum_quality = 0
 
 // .50
 
 /datum/design/makeshift/mags_shot
-	name = "empty magazine (.50)"
+	name = "empty magazine (shotgun)"
 	category = "shotgun shells"
 	build_path = /obj/item/ammo_magazine/m12/short/empty
 
 /datum/design/makeshift/mags_shot/drum
-	name = "empty drum magazine (.50)"
+	name = "empty drum magazine (shotgun)"
 	build_path = /obj/item/ammo_magazine/m12/empty
 	minimum_quality = 1
 
 /datum/design/makeshift/mags_shot/casings
-	name = "scrap ammunition pile (.50 Slug)"
+	name = "scrap ammunition pile (shotgun slug)"
 	build_path = /obj/item/ammo_casing/shotgun/scrap/prespawned
 
 /datum/design/makeshift/mags_shot/casings/shot
-	name = "scrap ammunition pile (.50 Buckshot)"
+	name = "scrap ammunition pile (buckshot)"
 	build_path = /obj/item/ammo_casing/shotgun/pellet/prespawned
 
 /datum/design/makeshift/mags_shot/casings/bean
-	name = "scrap ammunition pile (.50 Beanbag)"
+	name = "scrap ammunition pile (beanbag)"
 	build_path = /obj/item/ammo_casing/shotgun/beanbag/scrap/prespawned
 
 // special
 
 /datum/design/makeshift/antim
-	name = "scrap shell pile (.60 Anti-Material)"
+	name = "scrap shell pile (Anti-Material)"
 	category = "special munitions"
 	build_path = /obj/item/ammo_casing/antim/scrap/prespawned
 	minimum_quality = 0

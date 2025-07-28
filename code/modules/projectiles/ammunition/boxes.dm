@@ -39,7 +39,7 @@
 	update_icon()
 
 /obj/item/ammo_magazine/ammobox/pistol
-	name = "ammunition packet (.35 Auto)"
+	name = "ammunition packet, pistol"
 	icon_state = "pistol"
 	matter = list(MATERIAL_CARDBOARD = 1) // the autofill increases the cost depending on the contents
 	caliber = CAL_PISTOL
@@ -63,10 +63,11 @@
 	rarity_value = 5
 	ammo_type = /obj/item/ammo_casing/pistol/scrap
 
-//// . 40 ////
+//// MAGNUM ////
 
 /obj/item/ammo_magazine/ammobox/magnum
-	name = "ammunition packet (.40 Magnum)"
+	name = "ammunition packet, magnum"
+	desc = "Against the rising tide of haunting memories that drown a wasted life. Magnum bullets, closing every door."
 	icon_state = "magnum"
 	matter = list(MATERIAL_CARDBOARD = 1)
 	caliber = CAL_MAGNUM
@@ -88,11 +89,11 @@
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_AMMO_COMMON
 
-//// . 20 ////
+//// CARBINE ////
 
 
 /obj/item/ammo_magazine/ammobox/srifle
-	name = "ammunition box (.20 Rifle)"
+	name = "ammunition box, carbine"
 	icon_state = "box_srifle"
 	matter = list(MATERIAL_STEEL = 5) // the autofill increases the cost further depending on the contents
 	w_class = ITEM_SIZE_BULKY
@@ -105,7 +106,7 @@
 	ammo_type = /obj/item/ammo_casing/srifle/rubber
 
 /obj/item/ammo_magazine/ammobox/srifle_small
-	name = "ammunition packet (.20 Rifle)"
+	name = "ammunition packet, carbine"
 	icon_state = "srifle"
 	matter = list(MATERIAL_CARDBOARD = 1)
 	caliber = CAL_SRIFLE
@@ -127,10 +128,10 @@
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_AMMO_COMMON
 
-//// . 25 CASELESS ////
+//// CASELESS ////
 
 /obj/item/ammo_magazine/ammobox/clrifle
-	name = "ammunition box (.25 Caseless Rifle)"
+	name = "ammunition box, caseless"
 	icon_state = "box_clrifle"
 	matter = list(MATERIAL_STEEL = 5) // the autofill increases the cost further depending on the contents
 	w_class = ITEM_SIZE_BULKY
@@ -146,7 +147,7 @@
 	spawn_tags = SPAWN_TAG_AMMO_IH
 
 /obj/item/ammo_magazine/ammobox/clrifle_small
-	name = "ammunition packet (.25 Caseless Rifle)"
+	name = "ammunition packet, caseless"
 	icon_state = "clrifle"
 	matter = list(MATERIAL_CARDBOARD = 1)
 	caliber = CAL_CLRIFLE
@@ -168,9 +169,9 @@
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_AMMO_COMMON
 
-//// . 30 ////
+//// RIFLE ////
 /obj/item/ammo_magazine/ammobox/lrifle
-	name = "ammunition box (.30 Rifle)"
+	name = "ammunition box, rifle"
 	icon_state = "box_lrifle"
 	matter = list(MATERIAL_STEEL = 5) // the autofill increases the cost further depending on the contents
 	w_class = ITEM_SIZE_BULKY
@@ -184,7 +185,7 @@
 	ammo_type = /obj/item/ammo_casing/lrifle/rubber
 
 /obj/item/ammo_magazine/ammobox/lrifle_small
-	name = "ammunition packet (.30 Rifle)"
+	name = "ammunition packet, rifle"
 	icon_state = "lrifle"
 	matter = list(MATERIAL_CARDBOARD = 1)
 	caliber = CAL_LRIFLE
@@ -206,10 +207,10 @@
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_AMMO_COMMON
 
-//// .60 ////
+//// AMR ////
 
 /obj/item/ammo_magazine/ammobox/antim
-	name = "ammunition box (.60 Anti Material)"
+	name = "ammunition box, Anti Material"
 	icon_state = "antim"
 	matter = list(MATERIAL_STEEL = 5) // the autofill increases the cost further depending on the contents
 	w_class = ITEM_SIZE_BULKY
@@ -226,7 +227,7 @@
 //// SHOTGUN ////
 
 /obj/item/ammo_magazine/ammobox/shotgun
-	name = "ammunition box (.50)"
+	name = "ammunition box, shotshells"
 	icon_state = "box_shot"
 	matter = list(MATERIAL_STEEL = 10)
 	w_class = ITEM_SIZE_BULKY
@@ -288,7 +289,7 @@
 	rarity_value = 100
 
 /obj/item/ammo_magazine/ammobox/shotgun_small
-	name = "ammunition packet (.50)"
+	name = "ammunition packet (shotgun)"
 	icon_state = "shot"
 	matter = list(MATERIAL_STEEL = 5)
 	w_class = ITEM_SIZE_SMALL

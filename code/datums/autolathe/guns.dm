@@ -1,5 +1,5 @@
 
-// .25 handguns
+// Caseless handguns
 
 /datum/design/autolathe/gun/mandella
 	name = "OR HG .25 CS \"Mandella\""
@@ -50,7 +50,7 @@
 	name = "FS REV .35 \"Havelock\""
 	build_path = /obj/item/gun/projectile/revolver/havelock
 
-// .40 handguns
+// .Magnum handguns
 
 /datum/design/autolathe/gun/revolver
 	name = "FS REV .40 \"Miller\""
@@ -136,7 +136,7 @@
 	name = "FS HG .35 \"Slaught-o-Matic\""
 	build_path = /obj/item/gun/projectile/automatic/slaught_o_matic
 
-// .20 Rifles
+// carbines
 
 /datum/design/autolathe/gun/vintorez
 	name = "Excelsior .20 \"Vintorez\""
@@ -161,7 +161,7 @@
 	name = "FS BR .20 \"Kadmin\""
 	build_path = /obj/item/gun/projectile/boltgun/fs
 
-// .25 Rifles
+// Caseless Rifles
 
 /datum/design/autolathe/gun/sol
 	name = "FS CAR .25 CS \"Sol\""
@@ -172,7 +172,7 @@
 	build_path = /obj/item/gun/projectile/automatic/dallas
 	minimum_quality = 2
 
-// .30 Rifles
+// Rifles
 
 /datum/design/autolathe/gun/boltgun
 	name = "Excelsior .30 \"Kardashev-Mosin\""

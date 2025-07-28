@@ -21,8 +21,8 @@
 	stations_recommended = list("fs_ammo", "style")
 	inventory = list(
 		"Design Disks" = list(
-			/obj/item/computer_hardware/hard_drive/portable/design/nonlethal_ammo = good_data("Frozen Star Nonlethal Magazines Pack", list(1, 10), 500),
-			/obj/item/computer_hardware/hard_drive/portable/design/lethal_ammo = good_data("Frozen Star Lethal Magazines Pack", list(1, 10), 1000)
+			/obj/item/computer_hardware/hard_drive/portable/design/nonlethal_ammo = good_data("Nonlethal Magazines Pack", list(1, 10), 500),
+			/obj/item/computer_hardware/hard_drive/portable/design/lethal_ammo = good_data("Lethal Magazines Pack", list(1, 10), 1000)
 		),
 		"Enforce Equipment" = list(
 			/obj/item/handcuffs,
@@ -53,14 +53,14 @@
 			/obj/item/ammo_magazine/lrifle,
 			/obj/item/ammo_magazine/smg,
 			/obj/item/ammo_magazine/slpistol,
-			/obj/item/ammo_magazine/slpistol/rubber = custom_good_name("speed loader (.35 Auto rubber)"),
+			/obj/item/ammo_magazine/slpistol/rubber = custom_good_name("speed loader (traumatic pistol)"),
 			/obj/item/ammo_magazine/pistol,
-			/obj/item/ammo_magazine/pistol/rubber = custom_good_name("standard magazine (.35 Auto rubber)"),
+			/obj/item/ammo_magazine/pistol/rubber = custom_good_name("standard magazine (traumatic pistol)"),
 			/obj/item/ammo_magazine/hpistol,
-			/obj/item/ammo_magazine/hpistol/rubber = custom_good_name("highcap magazine (.35 Auto rubber)"),
-			/obj/item/ammo_magazine/ammobox/shotgun_small = custom_good_name("ammunition packet (.50 slug)"),
-			/obj/item/ammo_magazine/ammobox/shotgun_small/buckshot = custom_good_name("ammunition packet (.50 pellet)"),
-			/obj/item/ammo_magazine/ammobox/shotgun_small/beanbag = custom_good_name("ammunition packet (.50 beanbag)"),
+			/obj/item/ammo_magazine/hpistol/rubber = custom_good_name("highcap magazine (traumatic pistol)"),
+			/obj/item/ammo_magazine/ammobox/shotgun_small = custom_good_name("ammunition packet (shotgun slug)"),
+			/obj/item/ammo_magazine/ammobox/shotgun_small/buckshot = custom_good_name("ammunition packet (shotgun pellet)"),
+			/obj/item/ammo_magazine/ammobox/shotgun_small/beanbag = custom_good_name("ammunition packet (shotgun beanbag)"),
 			/obj/item/clothing/accessory/holster,
 			/obj/item/clothing/accessory/holster/scabbard,
 			/obj/item/clothing/accessory/holster/knife,

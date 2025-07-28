@@ -6,7 +6,7 @@
 	armor_divisor = 2
 	check_armour = ARMOR_ENERGY
 	damage_types = list(BURN = 27)
-	recoil = 4 // .20 level
+	recoil = 4 // carbine level
 
 	muzzle_type = /obj/effect/projectile/plasma/muzzle
 	impact_type = /obj/effect/projectile/plasma/impact

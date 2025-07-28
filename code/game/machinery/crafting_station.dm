@@ -17,7 +17,7 @@ var/global/list/crafting_designs
 	var/warmed_up = FALSE
 	var/mob/living/Crafter
 	var/list/designs = list()
-	categories = list("firearm frames", "firearm grips", "firearm barrels", "pistol mechanisms", "revolver mechanisms", "pump-action mechanisms", "SMG mechanisms", "self-loading mechanisms", ".35 caliber", ".40 caliber", ".20 caliber", ".25 caliber", ".30 caliber", "shotgun shells", "special munitions", "miscellaneous")
+	categories = list("firearm frames", "firearm grips", "firearm barrels", "pistol mechanisms", "revolver mechanisms", "pump-action mechanisms", "SMG mechanisms", "self-loading mechanisms", "pistol ammo", "magnum ammo", "carbine ammo", "caseless ammo", "magnum ammo", "shotgun shells", "special munitions", "miscellaneous")
 
 /obj/machinery/autolathe/crafting_station/Initialize()
 	. = ..()
@@ -78,7 +78,7 @@ var/global/list/crafting_designs
 			switch(current_file.design.category)
 				if("firearm frames", "firearm grips", "miscellaneous")
 					icon_state = "[icon_state]_square"
-				if(".35 caliber", ".40 caliber", ".20 caliber", ".25 caliber", ".30 caliber", "shotgun shells", "special munitions")
+				if("pistol ammo", "magnum ammo", "carbine ammo", "caseless ammo", "magnum ammo", "shotgun shells", "special munitions")
 					icon_state = "[icon_state]_points"
 				if("firearm barrels", "pistol mechanisms", "revolver mechanisms", "pump-action mechanisms", "SMG mechanisms", "self-loading mechanisms")
 					icon_state = "[icon_state]_cut"

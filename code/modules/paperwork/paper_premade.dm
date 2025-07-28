@@ -338,7 +338,7 @@
 	And so does investigating the crimes onboard , true mysteries in this era \n
 
 	Assuming that a murder happens , which it always will , the only constant i know onboard of this vessel \n
-	You will likely be looking at the body of a dead vagabond , the earliest clue would be the splatter of blood and the casings of .30 bullets \n
+	You will likely be looking at the body of a dead vagabond , the earliest clue would be the splatter of blood and carbine casings. \n
 
 	Your first step should be to secure the place , mark it off , keep the fuck-arounds out , don't let them "Loot" any evidence off the place \n
 	The second one ? inspect the environment you are in , the place of the murder always will have clues , doors with fingerprints or sheets of metal sitting near dismantled structures \n

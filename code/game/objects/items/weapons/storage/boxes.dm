@@ -160,7 +160,7 @@
 	spawn_tags = SPAWN_TAG_AMMO_SHOTGUN
 
 /obj/item/storage/box/sniperammo
-	name = "box of .60 \"Penetrator\" Anti Material shells"
+	name = "box of \"Penetrator\" Anti Material shells"
 	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	illustration = "ammo"
 	rarity_value = 80
@@ -169,7 +169,7 @@
 	spawn_tags = SPAWN_TAG_AMMO
 
 /obj/item/storage/box/sniperammo/emp
-	name = "box of .60 \"Blackout\" Anti Material shells"
+	name = "box of \"Blackout\" Anti Material shells"
 	desc = "It has a picture of a gun and several warning symbols on the front, among them is a symbol you're not quite able to make sense of.<br>WARNING: Live EMP ammunition. Misuse may result in serious injury or death."
 	illustration = "ammo"
 	rarity_value = 80
@@ -178,7 +178,7 @@
 	spawn_tags = SPAWN_TAG_AMMO
 
 /obj/item/storage/box/sniperammo/uranium
-	name = "box of .60 \"Meltdown\" Anti Material shells"
+	name = "box of \"Meltdown\" Anti Material shells"
 	desc = "It has a picture of a gun and several warning symbols on the front, including a radiation hazard sign.<br>WARNING: Live depleted uranium ammunition. Misuse may result in serious injury or death."
 	illustration = "ammo"
 	rarity_value = 80
@@ -187,7 +187,7 @@
 	spawn_tags = SPAWN_TAG_AMMO
 
 /obj/item/storage/box/sniperammo/breach
-	name = "box of .60 \"Breacher\" Anti Material shells"
+	name = "box of \"Breacher\" Anti Material shells"
 	desc = "It has a picture of a gun and several warning symbols on the front, including an explosive hazard sign.<br>WARNING: Live breaching ammunition. Misuse may result in serious injury or death."
 	illustration = "ammo"
 	rarity_value = 80

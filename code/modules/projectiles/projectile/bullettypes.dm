@@ -12,10 +12,10 @@ There are important things regarding this file:
  * HV exists as an antag option for better ammo, keeps wounding multiplier and increased armor divisor.
  * Scrap ammunition has less armor divisor and more recoil without impacting raw damage.
 */
-//Low-caliber pistols and SMGs .35
+//Low-caliber pistols and SMGs
 /obj/item/projectile/bullet/pistol
-	name = ".35 caliber bullet"
-	damage_types = list(BRUTE = 26)
+	name = "pistol bullet"
+	damage_types = list(BRUTE = 26, HALLOSS = 12)
 	armor_divisor = 1
 	can_ricochet = TRUE
 	penetrating = 2
@@ -49,11 +49,11 @@ There are important things regarding this file:
 
 //Carbines and rifles
 
-// .20 rifle
+// Carbine. All intermediate cartridges.
 
 /obj/item/projectile/bullet/srifle
-	name = ".20 caliber bullet"
-	damage_types = list(BRUTE = 24)
+	name = "carbine bullet"
+	damage_types = list(BRUTE = 24, HALLOSS = 9)
 	armor_divisor = 1.5
 	penetrating = 2
 	can_ricochet = TRUE
@@ -89,16 +89,16 @@ There are important things regarding this file:
 	armor_divisor = 1.2
 	recoil = 5
 
-// .25 caseless rifle
+// Caseless
 
 /obj/item/projectile/bullet/clrifle
-	name = ".25 caliber bullet"
-	damage_types = list(BRUTE = 21)
+	name = "pulse bullet"
+	damage_types = list(BRUTE = 21, HALLOSS = 10)
 	armor_divisor = 1.5
 	penetrating = 2
 	can_ricochet = FALSE //to reduce collateral damage and FF, since IH use it in their primary firearm
 	recoil = 3.5
-	step_delay = 0.9 //intermediate between .20 and .30, but easy to use
+	step_delay = 0.9 //intermediate between carbine and rifle, but easy to use
 	matter = list(MATERIAL_STEEL = 0.2) // as the casing costs nothing, the bullet costs twice as much.
 
 /obj/item/projectile/bullet/clrifle/practice
@@ -128,11 +128,11 @@ There are important things regarding this file:
 	armor_divisor = 1.2
 	recoil = 4.5
 
-// .30 rifle
+// Full powered rifle. RFN.
 
 /obj/item/projectile/bullet/lrifle
-	name = ".30 caliber bullet"
-	damage_types = list(BRUTE = 18)
+	name = "rifle bullet"
+	damage_types = list(BRUTE = 24, HALLOSS = 12)
 	armor_divisor = 1.5
 	penetrating = 2
 	can_ricochet = TRUE
@@ -155,7 +155,7 @@ There are important things regarding this file:
 /obj/item/projectile/bullet/lrifle/rubber
 	icon_state = "rubber"
 	name = "rubber bullet"
-	damage_types = list(BRUTE = 8, HALLOSS = 8)
+	damage_types = list(BRUTE = 8, HALLOSS = 12)
 	embed = FALSE
 	sharp = FALSE
 	wounding_mult = WOUNDING_NORMAL
@@ -165,10 +165,10 @@ There are important things regarding this file:
 	armor_divisor = 1.2
 	recoil = 5.5
 
-//Revolvers and high-caliber pistols .40
+//Revolvers and high-caliber pistols
 /obj/item/projectile/bullet/magnum
-	name = " .40 caliber bullet"
-	damage_types = list(BRUTE = 21)
+	name = "magnum bullet"
+	damage_types = list(BRUTE = 21, HALLOSS = 15)
 	armor_divisor = 1
 	can_ricochet = TRUE
 	penetrating = 2
@@ -201,10 +201,10 @@ There are important things regarding this file:
 	armor_divisor = 0.8
 	recoil = 7
 
-//Sniper rifles .60
+//Sniper rifles
 /obj/item/projectile/bullet/antim
-	name = ".60 caliber bullet"
-	damage_types = list(BRUTE = 18)
+	name = "antimaterial bullet"
+	damage_types = list(BRUTE = 18, , HALLOSS = 20)
 	armor_divisor = 3
 	penetrating = 2
 	step_delay = 0.8
@@ -259,11 +259,11 @@ There are important things regarding this file:
 	armor_divisor = 2
 	recoil = 20
 
-//Shotguns .50
+//Shotguns
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
 	icon_state = "slug"
-	damage_types = list(BRUTE = 25)
+	damage_types = list(BRUTE = 25, HALLOSS = 12)
 	armor_divisor = 1
 	knockback = 1
 	step_delay = 1
@@ -314,7 +314,7 @@ There are important things regarding this file:
 /obj/item/projectile/bullet/pellet/shotgun
 	name = "shrapnel"
 	icon_state = "birdshot-1"
-	damage_types = list(BRUTE = 21)
+	damage_types = list(BRUTE = 21, HALLOSS = 12)
 	armor_divisor = 1
 	pellets = 6
 	range_step = 1
