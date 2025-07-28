@@ -2,7 +2,7 @@
 For use in defining designs for crafting stations.
 Based on /datum/design of \code\datums\autolathe\autolathe_datums.dm
 
-("firearm grips", "firearm barrels", "pistol mechanisms", "revolver mechanisms", "pump-action mechanisms", "self-loading mechanisms", ".35 caliber", "magnum ammo", "carbine ammo", "caseless ammo", "magnum ammo", "shotgun shells", "special munitions")
+("firearm grips", "firearm barrels", "pistol mechanisms", "revolver mechanisms", "pump-action mechanisms", "self-loading mechanisms", "pistol ammo", "magnum ammo", "carbine ammo", "caseless ammo", "rifle ammo", "shotgun shells", "special munitions")
 
 */
 
