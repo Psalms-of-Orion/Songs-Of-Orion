@@ -56,7 +56,7 @@
 	belt = /obj/item/storage/belt/tactical/ironhammer
 	backpack_contents = list(/obj/item/storage/ration_pack = 1, /obj/item/clothing/mask/gas/ihs = 1, /obj/item/storage/briefcase/inflatable = 1, /obj/item/grenade/smokebomb = 2, /obj/item/grenade/frag = 4)
 	id = /obj/item/card/id/solcom/peace
-	r_pocket = /obj/item/storage/pouch/ammo/cl
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
 	suit = /obj/item/clothing/suit/armor/bulletproof
 	head = /obj/item/clothing/head/armor/bulletproof
 
@@ -70,7 +70,7 @@
 	gloves = /obj/item/clothing/gloves/thick
 	backpack_contents = list(/obj/item/storage/firstaid/adv = 1, /obj/item/storage/firstaid/combat = 1, /obj/item/clothing/accessory/armband/med = 1, /obj/item/grenade/smokebomb = 2, /obj/item/clothing/mask/gas/ihs = 1, /obj/item/storage/ration_pack = 1)
 	id = /obj/item/card/id/solcom/peace/medic
-	r_pocket = /obj/item/storage/pouch/ammo/cl
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
 	suit = /obj/item/clothing/suit/armor/bulletproof
 	head = /obj/item/clothing/head/deckcrew/white
 
@@ -81,9 +81,9 @@
 	l_hand = /obj/item/ammo_magazine/ihclrifle/hv
 	r_hand = /obj/item/gun/projectile/automatic/pulse
 	belt = /obj/item/storage/belt/tactical/ironhammer
-	backpack_contents = list(/obj/item/grenade/smokebomb = 2, /obj/item/device/radio/alt2 = 1, /obj/item/clothing/mask/gas/ihs = 1, /obj/item/storage/ration_pack = 1, /obj/item/storage/pouch/ammo/cl = 1, /obj/item/clothing/accessory/armband = 1)
+	backpack_contents = list(/obj/item/grenade/smokebomb = 2, /obj/item/device/radio/alt2 = 1, /obj/item/clothing/mask/gas/ihs = 1, /obj/item/storage/ration_pack = 1, /obj/item/storage/pouch/ammo/loaded = 1, /obj/item/clothing/accessory/armband = 1)
 	id = /obj/item/card/id/solcom/peace/sarge
-	r_pocket = /obj/item/storage/pouch/ammo/cl
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
 	suit = /obj/item/clothing/suit/armor/bulletproof
 	head = /obj/item/clothing/head/beret
 
@@ -99,7 +99,7 @@
 	suit = /obj/item/clothing/suit/storage/vest/merc/black
 	backpack_contents = list(/obj/item/grenade/frag = 4, /obj/item/grenade/smokebomb = 2, /obj/item/storage/ration_pack = 1, /obj/item/storage/briefcase/inflatable = 1)
 	id = /obj/item/card/id/solcom/peace
-	r_pocket = /obj/item/storage/pouch/ammo/cl
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
 
 /decl/hierarchy/outfit/job/ert/peacemedic/hecu
 	name = "HECU Combat Medic"
@@ -111,7 +111,7 @@
 	l_hand = /obj/item/ammo_magazine/ihclrifle/hv
 	gloves = /obj/item/clothing/gloves/thick
 	r_hand = /obj/item/gun/projectile/automatic/pulse
-	r_pocket = /obj/item/storage/pouch/ammo/cl
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
 	backpack_contents = list(/obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/storage/firstaid/adv = 1, /obj/item/storage/firstaid/combat = 1, /obj/item/clothing/accessory/armband/med = 1, /obj/item/grenade/smokebomb = 2, /obj/item/storage/ration_pack = 1)
 	id = /obj/item/card/id/solcom/peace/medic
 
@@ -124,8 +124,8 @@
 	r_hand = /obj/item/gun/projectile/automatic/pulse
 	suit = /obj/item/clothing/suit/storage/vest/merc/black
 	belt = /obj/item/storage/belt/tactical/ironhammer
-	r_pocket = /obj/item/storage/pouch/ammo/cl
-	backpack_contents = list(/obj/item/grenade/smokebomb = 2, /obj/item/device/radio/alt2 = 1, /obj/item/storage/briefcase/inflatable = 1, /obj/item/storage/ration_pack = 1, /obj/item/clothing/accessory/armband = 1, /obj/item/storage/pouch/ammo/cl = 1)
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
+	backpack_contents = list(/obj/item/grenade/smokebomb = 2, /obj/item/device/radio/alt2 = 1, /obj/item/storage/briefcase/inflatable = 1, /obj/item/storage/ration_pack = 1, /obj/item/clothing/accessory/armband = 1, /obj/item/storage/pouch/ammo/loaded = 1)
 	id = /obj/item/card/id/solcom/peace/sarge
 
 
@@ -179,7 +179,7 @@
 	l_hand = /obj/item/ammo_magazine/ihclrifle/hv
 	r_hand = /obj/item/gun/projectile/automatic/pulse
 	belt = /obj/item/storage/belt/tactical/ironhammer
-	r_pocket = /obj/item/storage/pouch/ammo/cl
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
 	backpack_contents = list(/obj/item/storage/briefcase/inflatable = 1, /obj/item/storage/ration_pack = 1, /obj/item/grenade/frag = 4, /obj/item/grenade/smokebomb = 2)
 	mask = /obj/item/clothing/mask/balaclava
 	id = /obj/item/card/id/solcom/marine
@@ -191,7 +191,7 @@
 	glasses = /obj/item/clothing/glasses/hud/health/tacfat
 	belt = /obj/item/storage/belt/medical/emt/combat
 	mask = /obj/item/clothing/mask/breath
-	r_pocket = /obj/item/storage/pouch/ammo/cl
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
 	l_hand = /obj/item/ammo_magazine/ihclrifle/hv
 	r_hand = /obj/item/gun/projectile/automatic/pulse
 	backpack_contents = list(/obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/storage/firstaid/adv = 1, /obj/item/storage/firstaid/combat = 1, /obj/item/clothing/accessory/armband/med = 1, /obj/item/grenade/smokebomb = 2, /obj/item/storage/ration_pack = 1)
@@ -207,7 +207,7 @@
 	l_hand = /obj/item/ammo_magazine/ihclrifle/hv
 	r_hand = /obj/item/gun/projectile/automatic/pulse
 	belt = /obj/item/storage/belt/tactical/ironhammer
-	r_pocket = /obj/item/storage/pouch/ammo/cl
+	r_pocket = /obj/item/storage/pouch/ammo/loaded
 	backpack_contents = list(/obj/item/grenade/smokebomb = 2, /obj/item/device/radio/alt2 = 1, /obj/item/storage/briefcase/inflatable = 1, /obj/item/storage/ration_pack = 1, /obj/item/clothing/accessory/armband = 1)
 	mask = /obj/item/clothing/mask/balaclava
 	id = /obj/item/card/id/solcom/marine/sarge
