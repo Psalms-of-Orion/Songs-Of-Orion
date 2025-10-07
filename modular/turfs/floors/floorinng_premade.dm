@@ -1,4 +1,4 @@
-/decl/flooring/reinforced/orion/
+/decl/flooring/reinforced/orion
 	name = "biological shield"
 	desc = "Heavy radiation shielding tiles."
 	icon = 'modular/turfs/floors/icons/tiles_reactor.dmi'
@@ -18,9 +18,18 @@
 	desc = "Heavy radiation shielding tiles."
 	icon = 'modular/turfs/floors/icons/tiles_reactor.dmi'
 	icon_state = "reactor"
-	carbon_dioxide = 3000
+	oxygen = 0
+	nitrogen = 0
+	initial_flooring = /decl/flooring/reinforced/orion
+
+
+/turf/floor/reinforced/orion/bioshield
+	name = "biological shield"
+	desc = "Heavy radiation shielding tiles."
+	icon = 'modular/turfs/floors/icons/tiles_reactor.dmi'
+	icon_state = "reactor"
 	temperature = 293
-	initial_flooring = /decl/flooring/reinforced/orion/
+	initial_flooring = /decl/flooring/reinforced/orion
 
 /decl/flooring/orion/venting
 	name = "venting"
