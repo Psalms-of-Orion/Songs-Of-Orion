@@ -4,7 +4,7 @@
 	icon = 'modular/guns/icons/pistol.dmi'
 	icon_state = "pistol"
 	item_state = "pistol"
-
+	description_info = "Pistols put holes in people. Rifles put holes through people."
 	w_class = ITEM_SIZE_SMALL
 	can_dual = TRUE
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
