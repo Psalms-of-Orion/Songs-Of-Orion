@@ -9,6 +9,7 @@
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH
 
+	/var/valve_sound = 'sound/machines/Conveyor_switch.ogg'
 	var/open = 0
 	var/openDuringInit = 0
 
@@ -131,6 +132,7 @@
 /obj/machinery/atmospherics/valve/attack_hand(mob/user as mob)
 	src.add_fingerprint(usr)
 	update_icon(1)
+	playsound(src.loc, valve_sound, 55, 1)
 	sleep(10)
 	if (src.open)
 		src.close()
@@ -227,6 +229,7 @@
 	name = "digital valve"
 	desc = "A digitally controlled valve."
 	icon = 'icons/atmos/digital_valve.dmi'
+	valve_sound = 'sound/machines/chime.ogg'
 
 	var/frequency = 0
 	var/id
