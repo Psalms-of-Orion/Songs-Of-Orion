@@ -463,6 +463,25 @@ var/list/flooring_types
 	icon_base = "techfloor_grid"
 	build_type = /obj/item/stack/tile/floor/white/techfloor_grid
 
+//Can trip players if running.
+/decl/flooring/tiling/white/techfloor_grid/doorway
+	icon_base = "techfloor_grid"
+	build_type = /obj/item/stack/tile/floor/steel/techfloor_grid
+
+/decl/flooring/tiling/white/techfloor_grid/doorway/Entered(mob/living/M)
+	for(var/obj/structure/catwalk/C in get_turf(M))
+		return
+
+	//BSTs need this or they generate tons of soundspam while flying through the ship
+	if(!ishuman(M)|| M.incorporeal_move || !has_gravity(get_turf(M)))
+		return
+	if(MOVING_QUICKLY(M))
+		if(prob(5) && M.slip(null, 6))
+			M.adjustBruteLoss(5)
+			playsound(M, 'sound/effects/bang.ogg', 50, 1)
+			to_chat(M, SPAN_WARNING("You tripped over!"))
+
+
 /decl/flooring/tiling/white/brown_perforated
 	icon_base = "brown_perforated"
 	build_type = /obj/item/stack/tile/floor/white/brown_perforated
