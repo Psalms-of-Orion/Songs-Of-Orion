@@ -9,7 +9,7 @@
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH
 
-	/var/valve_sound = 'sound/machines/Conveyor_switch.ogg'
+	var/valve_sound = 'sound/machines/Conveyor_switch.ogg'
 	var/open = 0
 	var/openDuringInit = 0
 

@@ -8,8 +8,8 @@
 	level = BELOW_PLATING_LEVEL
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH|WEST
+	var/tvalve_sound = 'sound/machines/Conveyor_switch.ogg'
 
-	/var/tvalve_sound = 'sound/machines/Conveyor_switch.ogg'
 
 	var/state = 0 // 0 = go straight, 1 = go to side
 
@@ -422,6 +422,7 @@
 	name = "digital switching valve"
 	desc = "A digitally controlled valve."
 	icon = 'icons/atmos/digital_tvalve.dmi'
+	tvalve_sound = 'sound/machines/chime.ogg'
 
 	var/frequency = 0
 	var/id
