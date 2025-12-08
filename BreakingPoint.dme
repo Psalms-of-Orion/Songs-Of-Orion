@@ -105,6 +105,7 @@
 #include "code\__HELPERS\functional.dm"
 #include "code\__HELPERS\game.dm"
 #include "code\__HELPERS\global_lists.dm"
+#include "code\__HELPERS\html_wrappers.dm"
 #include "code\__HELPERS\icons.dm"
 #include "code\__HELPERS\manifest.dm"
 #include "code\__HELPERS\matrices.dm"
