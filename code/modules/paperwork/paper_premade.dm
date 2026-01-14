@@ -356,3 +356,40 @@
 	<font face=\"Times New Roman\"><i>James N</i></font>.
 	\[br\]"}
 
+/obj/item/paper/preflight
+	name = "Pre-Critical Daily Checklist"
+	info = {"\[center\]ENGINEERING\[/center\]
+	\[br\]
+	Team, please be aware that the reactor was shut down due to maintainance and will require a full restart operation.
+	Several radiator repairs were iniated by 2nd shift due to micrometeor damage. However, these were not completed before shift-change.
+	\[br\]
+	The remaining repairs to the Port Fore Coolant Loop should be relatively simple and materials have been delivered. Complete the loop before attempting to recharge the system.
+	The system has been drained and neutralized for service and will require a full coolant recharge.
+	Additionally, the Digital Switching Valves to the Port and Starboard of the reactor vessel will need to be reset before coolant flow can resume.
+	The primary coolant injection system has been hotpatched and will require a resynch.
+	\[br\]
+	\[field\] - Complete Radiator Repairs
+	\[br\]
+	\[field\] - Recharge Hot and Cold Loops
+	\[br\]
+	\[field\] - Reset Digital Switching Valves
+	\[br\]"}
+
+/obj/item/paper/startup
+	name = "Reactor Startup"
+	info = {"\[center\]ENGINEERING\[/center\]
+	\[br\]
+	Team, please be aware that the reactor was shut down due to maintainance and will require a full restart operation.
+	Several radiator repairs were iniated by 2nd shift due to micrometeor damage. However, these were not completed before shift-change.
+	\[br\]
+	The remaining repairs to the Port Fore Coolant Loop should be relatively simple and materials have been delivered. Complete the loop before attempting to recharge the system.
+	The system has been drained and neutralized for service and will require a full coolant recharge.
+	Additionally, the Digital Switching Valves to the Port and Starboard of the reactor vessel will need to be reset before coolant flow can resume.
+	The primary coolant injection system has been hotpatched and will require a resynch.
+	\[br\]
+	\[field\] - Complete Radiator Repairs
+	\[br\]
+	\[field\] - Recharge Hot and Cold Loops
+	\[br\]
+	\[field\] - Reset Digital Switching Valves
+	\[br\]"}
