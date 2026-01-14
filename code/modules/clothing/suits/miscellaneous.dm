@@ -740,7 +740,31 @@
 		bio = 20,
 		rad = 0
 	)
+/*
+/obj/item/clothing/suit/storage/winter/sar/yuuri
+	name = "surplus parka"
+	desc = "An ancient military surplus parka with an oversized zipper pull and odd markings in an unknown language, issued to full members of the Brotherhood. How can you live if you're afraid of dying?"
+	description_antag = "Ancient, it appears to have markings once used by the medical staff attached to Euruskan motor-rifle scouts before the Flight of the Fireflies."
+	icon_state = "yuuri"
+	item_state = "yuuri"
 
+/obj/item/clothing/suit/storage/chito
+	name = "surplus jacket"
+	desc = "An ancient military field jacket with odd markings in an unknown language, issued to full members of the Brotherhood."
+	description_antag = "Ancient, it appears to have markings once used by the medical staff attached to Euruskan motor-rifle scouts before the Flight of the Fireflies."
+	icon_state = "chito"
+	item_state = "chito"
+	min_cold_protection_temperature = T0C - 20
+	price_tag = 300
+	armor = list(
+		melee = 8,
+		bullet = 5,
+		energy = 10,
+		bomb = 0,
+		bio = 20,
+		rad = 0
+	)
+*/
 /obj/item/clothing/suit/storage/winter/hivis
 	name = "high visibility jacket"
 	desc = "A warm jacket with high visibility tape for construction and utility work."
