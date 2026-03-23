@@ -21,7 +21,7 @@
 			gas_transfer_coefficient = 1
 			body_parts_covered = body_parts_covered & ~FACE
 			item_flags = item_flags & ~AIRTIGHT
-			icon_state = "pilotdowm"
+			icon_state = "pilotdown"
 			to_chat(user, "Your mask is now hanging on your neck.")
 		else
 			gas_transfer_coefficient = initial(gas_transfer_coefficient)

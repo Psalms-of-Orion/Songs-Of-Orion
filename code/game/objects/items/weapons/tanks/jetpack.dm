@@ -47,8 +47,8 @@
 	default_gas = "oxygen"
 
 /obj/item/tank/jetpack/carbondioxide
-	name = "jetpack (carbon dioxide)"
-	desc = "A tank of compressed carbon dioxide for use as propulsion in zero-gravity areas. Painted black to indicate that it should not be used as a source for internals."
+	name = "void pack"
+	desc = "An EVA thrust pack using compressed carbon dioxide for use as propulsion in zero-gravity areas. Does not provide internals."
 	icon_state = "jetpack-black"
 	distribute_pressure = 0
 	default_gas = "carbon_dioxide"

@@ -30,9 +30,25 @@
 	name = "emergency softsuit"
 	icon_state = "emergency"
 	item_state = "emergency"
-	desc = "A thin, ungainly softsuit colored in blaze orange for rescuers to easily locate, looks pretty fragile."
+	desc = "A thin, ungainly softsuit to keep you alive enough for rescue. Looks pretty fragile."
 	accompanying_object = /obj/item/clothing/head/space/emergency
 	slowdown = HEAVY_SLOWDOWN
+
+//Orange emergency space suit
+/obj/item/clothing/head/space/astra
+	name = "void helmet"
+	icon_state = "astra"
+	item_state = "astra"	//currently not working somehow
+	desc = "A simple helmet with a built in light, smells like mothballs."
+	light_overlay = "orion_dual"
+
+/obj/item/clothing/suit/space/astra
+	name = "voidsuit"
+	icon_state = "astra"
+	item_state = "astra"
+	desc = "A once advanced space suit now half forgotten."
+	accompanying_object = /obj/item/clothing/head/space/astra
+	slowdown = HEAVY_SLOWDOWN * 0.5
 
 //Neotheology spacesuits
 /obj/item/clothing/head/space/medicus
