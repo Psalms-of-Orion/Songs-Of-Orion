@@ -10,11 +10,12 @@
 	Bitflag,	1=checkID
 				2=Network Access
 	*/
-
+	var/buttontype = "doorctrl"
 	anchored = TRUE
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 2
 	active_power_usage = 4
+	icon_state = "doorctrl0"
 
 /obj/machinery/button/remote/attack_ai(mob/user as mob)
 	if(wires & 2)
@@ -42,7 +43,7 @@
 		return
 
 	use_power(5)
-	icon_state = "doorctrl1"
+	icon_state = "[buttontype]1"
 	desiredstate = !desiredstate
 	trigger(user)
 	spawn(15)
@@ -57,9 +58,9 @@
 
 /obj/machinery/button/remote/update_icon()
 	if(stat & NOPOWER)
-		icon_state = "doorctrl-p"
+		icon_state = "[buttontype]-p"
 	else
-		icon_state = "doorctrl0"
+		icon_state = "[buttontype]0"
 
 /*
 	Airlock remote control
@@ -181,13 +182,13 @@
 		return
 	switch(door_status)
 		if("OPENED")
-			appear.icon_state = "doorctrl-open"
+			appear.icon_state = "[buttontype]-open"
 		if("MIXED")
-			appear.icon_state = "doorctrl-mixed"
+			appear.icon_state = "[buttontype]-mixed"
 		if("CLOSED")
-			appear.icon_state = "doorctrl-closed"
+			appear.icon_state = "[buttontype]-closed"
 		if("UNKNOWN")
-			appear.icon_state = "doorctrl-unknown"
+			appear.icon_state = "[buttontype]-unknown"
 	overlay_manager.updateOverlay(OVERKEY_DOOR_STATUS, appear)
 
 #undef OVERKEY_DOOR_STATUS
@@ -229,9 +230,17 @@
 	else
 		door_status = "UNKNOWN"
 
+
+/obj/machinery/button/remote/blast_door/console
+	name = "remote blast door-control"
+	desc = "It controls blast doors, remotely."
+	buttontype = "console"
+	icon_state = "console0"
+
 /obj/machinery/button/remote/blast_door/id_card
 	name = "remote blast id card door-control"
 	desc = "It controls blast doors, remotely. But need id_card with access to it."
+	buttontype = "doorid"
 	icon_state = "doorid0"
 
 /obj/machinery/button/remote/blast_door/id_card/attackby(obj/item/W, mob/user as mob)
@@ -239,27 +248,27 @@
 		var/obj/item/card/id/id_card = W
 		if(has_access(req_access, list(), id_card.access))
 			use_power(5)
-			icon_state = "doorid1"
+			icon_state = "[buttontype]1"
 			desiredstate = !desiredstate
 			trigger(user)
 			spawn(15)
 				update_icon()
 		else
 			to_chat(user, SPAN_WARNING("Access Denied"))
-			flick("doorid-denied",src)
+			flick("[buttontype]-denied",src)
 	else
 		to_chat(user, SPAN_WARNING("You need a id card to operate."))
-		flick("doorid-denied",src)
+		flick("[buttontype]-denied",src)
 
 /obj/machinery/button/remote/blast_door/id_card/attack_hand(mob/user as mob)
 	to_chat(user, SPAN_WARNING("You need a id card to operate."))
-	flick("doorid-denied",src)
+	flick("[buttontype]-denied",src)
 
 /obj/machinery/button/remote/blast_door/id_card/update_icon()
 	if(stat & NOPOWER)
-		icon_state = "doorid-p"
+		icon_state = "[buttontype]-p"
 	else
-		icon_state = "doorid0"
+		icon_state = "[buttontype]0"
 
 /*
 	Emitter remote control
