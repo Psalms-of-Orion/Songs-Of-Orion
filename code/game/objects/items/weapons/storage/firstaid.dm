@@ -17,6 +17,7 @@
 	rarity_value = 10
 	spawn_tags = SPAWN_TAG_FIRSTAID
 	bad_type = /obj/item/storage/firstaid
+	spawn_blacklisted = TRUE
 
 /obj/item/storage/firstaid/fire
 	name = "fire first-aid kit"

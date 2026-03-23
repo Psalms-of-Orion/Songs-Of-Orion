@@ -1,7 +1,24 @@
+/* ==================
+For simplicity sake, the filepaths are up here as these are really commonly needed to fill out boxes etc.
+
+/obj/item/stack/medical/bruise - Basic bandaids for bruises
+
+/obj/item/stack/medical/bruise/advanced - Medicated bruise pack
+
+/obj/item/stack/medical/ointment - Ointment, obviously
+
+/obj/item/stack/medical/burn - Advanced burn pack
+
+/obj/item/stack/medical/gauze - Gauze for stopping bleeding
+
+/obj/item/stack/medical/gauze/hemo - Hemostatic, medicated gauze for heavy bleeding
+*/
+
+
 /obj/item/stack/medical
 	name = "medical pack"
 	singular_name = "medical pack"
-	icon = 'icons/obj/stack/items.dmi'
+	icon = 'modular/icons/astra_med.dmi'
 	amount = 5
 	max_amount = 5
 	w_class = ITEM_SIZE_SMALL
@@ -15,7 +32,7 @@
 	var/heal_burn = 0
 	var/automatic_charge_overlays = FALSE	//Do we handle overlays with base update_icon()? | Stolen from TG egun code
 	var/charge_sections = 5		// How many indicator blips are there?
-	var/charge_x_offset = 2		//The spacing between each charge indicator. Should be 2 to leave a 1px gap between each blip.
+	var/charge_x_offset = 1		//The spacing between each charge indicator. Should be 2 to leave a 1px gap between each blip.
 
 /obj/item/stack/medical/attack(mob/living/M, mob/living/user)
 	var/types = M.get_classification()
@@ -122,7 +139,7 @@
 	preloaded_reagents = list("silicon" = 4, "ethanol" = 8)
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
-
+	bad_type = /obj/item/stack/medical/bruise_pack
 /obj/item/stack/medical/bruise_pack/update_icon()
 	icon_state = "[initial(icon_state)][amount]"
 	..()
@@ -196,12 +213,20 @@
 						to_chat(user, SPAN_NOTICE("You have managed to waste less [src]."))
 					else
 						used++
+						playsound(src.loc, 'sound/effects/rip1.ogg', rand(10, 50))
 				affecting.update_damages()
 				if(used == amount)
+					if (consumable == FALSE)
+						max_amount = 0
+						matter = list(MATERIAL_PLASTIC = 0.1)
+						name = "medical trash"
+						singular_name = "strips"
+						desc = "An empty wrapper from medical supplies."
+						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
 					if(affecting.is_bandaged())
-						to_chat(user, SPAN_WARNING("\The [src] is used up."))
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
 					else
-						to_chat(user, SPAN_WARNING("\The [src] is used up, but there are more wounds to treat on \the [affecting.name]."))
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up, but there are more wounds to treat on \the [affecting.name]."))
 				use(used)
 		else
 			if (can_operate(H, user) == CAN_OPERATE_ALL)        //Checks if mob is lying down on table for surgery
@@ -221,15 +246,17 @@
 	name = "ointment"
 	desc = "Used to treat those nasty burns."
 	gender = PLURAL
-	singular_name = "ointment"
-	icon_state = "ointment5"
+	singular_name = "treatment"
+	icon_state = "ointment"
 	heal_burn = 4
 	origin_tech = list(TECH_BIO = 1)
-	preloaded_reagents = list("silicon" = 4, "carbon" = 8)
+	preloaded_reagents = list("silicon" = 1, "carbon" = 1, "angelsbalm" = 2)
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
+	consumable = FALSE
+	amount = 5
 
-/obj/item/stack/medical/bruise_pack/update_icon()
+/obj/item/stack/medical/ointment/update_icon()
 	icon_state = "[initial(icon_state)][amount]"
 	..()
 
@@ -244,12 +271,21 @@
 		if(!affecting)
 			to_chat(user, SPAN_WARNING("What [user.targeted_organ]?"))
 			return TRUE
-
+		if(amount == 0)
+			to_chat(user, SPAN_NOTICE("The [initial(name)] is empty!"))
+			max_amount = 0
+			matter = list(MATERIAL_PLASTIC = 0.1)
+			name = "medical trash"
+			singular_name = "treatment"
+			desc = "An empty wrapper from medical supplies."
+			playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+			return
 		if(affecting.open == 0)
 			if(affecting.is_salved())
 				to_chat(user, SPAN_WARNING("The wounds on [M]'s [affecting.name] have already been salved."))
 				return 1
 			else
+				playsound(src.loc, 'sound/effects/ointment.ogg', rand(10, 50))
 				user.visible_message(
 					SPAN_NOTICE("\The [user] starts salving wounds on [M]'s [affecting.name]."),
 					SPAN_NOTICE("You start salving the wounds on [M]'s [affecting.name].")
@@ -297,9 +333,9 @@
 	automatic_charge_overlays = TRUE
 	consumable = FALSE	// Will the stack disappear entirely once the amount is used up?
 	splittable = FALSE	// Is the stack capable of being splitted?
-	preloaded_reagents = list("silicon" = 4, "ethanol" = 10, "lithium" = 4)
+	preloaded_reagents = list("tricordrazine" = 1, "paracetamol" = 1)
 	rarity_value = 10
-
+	bad_type = /obj/item/stack/medical/advanced/bruise_pack
 /obj/item/stack/medical/advanced/bruise_pack/attack(mob/living/carbon/M, mob/living/user)
 	if(..())
 		return 1
@@ -399,8 +435,9 @@
 	automatic_charge_overlays = TRUE
 	consumable = FALSE	// Will the stack disappear entirely once the amount is used up?
 	splittable = FALSE	// Is the stack capable of being splitted?
-	preloaded_reagents = list("silicon" = 4, "ethanol" = 10, "mercury" = 4)
+	preloaded_reagents = list("dermaline" = 2)
 	rarity_value = 10
+	bad_type = /obj/item/stack/medical/advanced/ointment
 
 /obj/item/stack/medical/advanced/ointment/attack(mob/living/carbon/M, mob/living/user)
 	if(..())
@@ -557,3 +594,384 @@
 /obj/item/stack/medical/advanced/ointment/nt/update_icon()
 	icon_state = "[initial(icon_state)][amount]"
 	..()
+
+/obj/item/stack/medical/gauze
+	name = "roll of gauze"
+	singular_name = "gauze strip"
+	desc = "A roll of gauze, to stop bleeding and cover burns."
+	icon_state = "gauze"
+	origin_tech = list(TECH_BIO = 1)
+	heal_brute = 2
+	preloaded_reagents = list("angelsbalm" = 2)
+	rarity_value = 5
+	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
+	consumable = TRUE
+	automatic_charge_overlays = FALSE
+	amount = 3
+	max_amount = 3
+
+
+/obj/item/stack/medical/gauze/update_icon()
+	icon_state = "[initial(icon_state)][amount]"
+	..()
+
+/obj/item/stack/medical/gauze/attack(mob/living/carbon/M, mob/living/user)
+	if(..())
+		return 1
+
+	if (ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/obj/item/organ/external/affecting = H.get_organ(user.targeted_organ)
+
+		if(!affecting)
+			to_chat(user, SPAN_WARNING("What [user.targeted_organ]?"))
+			return TRUE
+
+		if(affecting.open == 0)
+			if(affecting.is_bandaged())
+				to_chat(user, SPAN_WARNING("The wounds on [M]'s [affecting.name] have already been bandaged."))
+				return 1
+			else
+				user.visible_message(
+					SPAN_NOTICE("\The [user] starts treating [M]'s [affecting.name]."),
+					SPAN_NOTICE("You start treating [M]'s [affecting.name].")
+				)
+				var/used = 0
+				for (var/datum/wound/W in affecting.wounds)
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if(!do_mob(user, M, W.damage/5))
+						to_chat(user, SPAN_NOTICE("You must stand still to bandage wounds."))
+						break
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if (W.current_stage <= W.max_bleeding_stage)
+						user.visible_message(
+							SPAN_NOTICE("\The [user] covers \a [W.desc] on [M]'s [affecting.name] and wraps the wound with a [singular_name]"),
+							SPAN_NOTICE("You cover \a [W.desc] on [M]'s [affecting.name].")
+					)
+						//H.add_side_effect("Itch")
+					if ((W.damage_type == BRUISE) && (W.current_stage <= W.max_bleeding_stage))
+						heal_brute = 1
+						user.visible_message(
+							SPAN_NOTICE("\The [user] covers \a [W.desc] on [M]'s [affecting.name] and wraps the wound with a [singular_name]"),
+							SPAN_NOTICE("You cover \a [W.desc] on [M]'s [affecting.name], but gauze does little for the trauma.")
+					)
+					if ((W.damage_type == BRUISE) && (W.current_stage >= W.max_bleeding_stage))
+						user.visible_message(
+							SPAN_NOTICE("Gauze will not help bruises!")
+						)
+						break
+					else
+						user.visible_message(
+							SPAN_NOTICE("\The [user] wraps a [singular_name] over \a [W.desc] on [M]'s [affecting.name]."),
+							SPAN_NOTICE("You wrap a [singular_name] over \a [W.desc] on [M]'s [affecting.name].")
+						)
+					W.bandage()
+					// user's stat check that causing pain if they are amateurs
+					if(user && user.stats.getStat(STAT_BIO) < STAT_LEVEL_BASIC)
+						if(prob(affecting.get_damage() - user.stats.getStat(STAT_BIO)))
+							var/pain = rand(min(30,affecting.get_damage()), max(affecting.get_damage() + 30,60) - user.stats.getStat(STAT_BIO))
+							H.pain(affecting, pain)
+							if(user != H)
+								to_chat(H, "<span class='[pain > 50 ? "danger" : "warning"]'>\The [user]'s amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+								to_chat(user, SPAN_WARNING("Your amateur actions caused [H] [pain > 50 ? "a lot of " : ""]pain."))
+							else
+								to_chat(user, "<span class='[pain > 50 ? "danger" : "warning"]'>Your amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+					if(prob(10 + user.stats.getStat(STAT_BIO)))
+						to_chat(user, SPAN_NOTICE("You have managed to waste less [name]."))
+						playsound(src.loc, 'sound/effects/tape.ogg', rand(10, 50))
+					else
+						used++
+						playsound(src.loc, 'sound/effects/tape.ogg', rand(10, 50))
+						heal_brute = initial(heal_brute)
+						reagents.trans_to_mob(M, reagents.total_volume, CHEM_BLOOD) //CHEM_TOUCH
+				affecting.update_damages()
+				if(used == amount)
+					if (consumable == FALSE)
+						max_amount = 0
+						matter = list(MATERIAL_PLASTIC = 0.1)
+						name = "medical trash"
+						singular_name = "strip"
+						desc = "An empty wrapper from medical supplies."
+						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+					if(affecting.is_bandaged())
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
+					else
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up, but there are more wounds to treat on \the [affecting.name]."))
+				use(used)
+		else
+			if (can_operate(H, user) == CAN_OPERATE_ALL)        //Checks if mob is lying down on table for surgery
+				if (do_surgery(H,user,src, TRUE))
+					return
+			else
+				to_chat(user, SPAN_NOTICE("The [affecting.name] is cut open, you'll need more than a bandage!"))
+
+/obj/item/stack/medical/gauze/hemo
+	name = "hemostatic gauze"
+	singular_name = "hemostatic strip"
+	desc = "A brick of advanced hemostatic, medically coated gauze. Clots external bleeding and provides an analgesic medicated lattice to promote regrowth and numb injuries."
+	icon_state = "hemo"
+	origin_tech = list(TECH_BIO = 2)
+	heal_brute = 6
+	preloaded_reagents = list("angelsbalm" = 2, "quickclot" = 1, "tricordrazine" = 3)
+	rarity_value = 5
+	amount = 5
+	max_amount = 4
+	consumable = FALSE
+
+
+/obj/item/stack/medical/bruise
+	name = "bandages"
+	singular_name = "bandage"
+	desc = "Advanced flesh-tone adhesive, medicated bandages, used for minor scrapes and bruises."
+	icon_state = "bandage"
+	origin_tech = list(TECH_BIO = 1)
+	heal_brute = 3
+	heal_burn = 1
+	preloaded_reagents = list("angelsbalm" = 2, "tricordrazine" = 1)
+	rarity_value = 5
+	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
+	consumable = FALSE
+	automatic_charge_overlays = FALSE
+	amount = 6
+	max_amount = 5
+	splittable = FALSE
+
+/obj/item/stack/medical/bruise/update_icon()
+	icon_state = "[initial(icon_state)][amount]"
+	..()
+
+/obj/item/stack/medical/bruise/attack(mob/living/carbon/M, mob/living/user)
+	if(..())
+		return 1
+
+	if (ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/obj/item/organ/external/affecting = H.get_organ(user.targeted_organ)
+
+		if(!affecting)
+			to_chat(user, SPAN_WARNING("What [user.targeted_organ]?"))
+			return TRUE
+
+		if(affecting.open == 0)
+			if(affecting.is_bandaged())
+				to_chat(user, SPAN_WARNING("The wounds on [M]'s [affecting.name] have already been bandaged."))
+				return 1
+			else
+				user.visible_message(
+					SPAN_NOTICE("\The [user] starts treating [M]'s [affecting.name]."),
+					SPAN_NOTICE("You start treating [M]'s [affecting.name].")
+				)
+				var/used = 0
+				for (var/datum/wound/W in affecting.wounds)
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if(!do_mob(user, M, W.damage/5))
+						to_chat(user, SPAN_NOTICE("You must stand still to bandage wounds."))
+						break
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if (W.current_stage <= W.max_bleeding_stage)
+						user.visible_message(
+							SPAN_NOTICE("That needs more than a bandaid!")
+						)
+						break
+					else if (W.damage_type == BRUISE)
+						user.visible_message(
+							SPAN_NOTICE("\The [user] places a [initial(singular_name)] over \a [W.desc] on [M]'s [affecting.name]."),
+							SPAN_NOTICE("You place a [initial(singular_name)] over \a [W.desc] on [M]'s [affecting.name].")
+						)
+					else
+						user.visible_message(
+							SPAN_NOTICE("\The [user] places a [initial(singular_name)] over \a [W.desc] on [M]'s [affecting.name]."),
+							SPAN_NOTICE("You place a [initial(singular_name)] over \a [W.desc] on [M]'s [affecting.name].")
+						)
+					W.bandage()
+					// user's stat check that causing pain if they are amateurs
+					if(user && user.stats.getStat(STAT_BIO) < STAT_LEVEL_BASIC)
+						if(prob(affecting.get_damage() - user.stats.getStat(STAT_BIO)))
+							var/pain = rand(min(30,affecting.get_damage()), max(affecting.get_damage() + 30,60) - user.stats.getStat(STAT_BIO))
+							H.pain(affecting, pain)
+							if(user != H)
+								to_chat(H, "<span class='[pain > 50 ? "danger" : "warning"]'>\The [user]'s amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+								to_chat(user, SPAN_WARNING("Your amateur actions caused [H] [pain > 50 ? "a lot of " : ""]pain."))
+							else
+								to_chat(user, "<span class='[pain > 50 ? "danger" : "warning"]'>Your amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+					if(prob(10 + user.stats.getStat(STAT_BIO)))
+						to_chat(user, SPAN_NOTICE("You have managed to waste less [src]."))
+						playsound(src.loc, 'sound/effects/rip1.ogg', rand(10, 50))
+					else
+						used++
+						playsound(src.loc, 'sound/effects/rip1.ogg', rand(10, 50))
+						reagents.trans_to_mob(M, reagents.total_volume, CHEM_BLOOD) //CHEM_TOUCH
+				affecting.update_damages()
+				if(used == amount)
+					if (consumable == FALSE)
+						max_amount = 0
+						matter = list(MATERIAL_PLASTIC = 0.1)
+						name = "medical trash"
+						singular_name = "treatment"
+						desc = "An empty wrapper from medical supplies."
+						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+					if(affecting.is_bandaged())
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
+					else
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up, but there are more wounds to treat on \the [affecting.name]."))
+				use(used)
+		else
+			if (can_operate(H, user) == CAN_OPERATE_ALL)        //Checks if mob is lying down on table for surgery
+				if (do_surgery(H,user,src, TRUE))
+					return
+			else
+				to_chat(user, SPAN_NOTICE("The [affecting.name] is cut open, you'll need more than a bandage!"))
+
+/obj/item/stack/medical/bruise/advanced
+	name = "medicated patches"
+	singular_name = "medicated patch"
+	desc = "Advanced adhesive analgesic patch for treating serious, shallow subcutaneous injuries from hematoma to heat rash."
+	icon_state = "bruise"
+	origin_tech = list(TECH_BIO = 4)
+	heal_brute = 8
+	heal_burn = 4
+	//The slurry. Holy chems are invisible to scanners. Meant to treat very, very minor organ injuries as well.
+	preloaded_reagents = list("peridaxon" = 0.5, "holydexalin" = 0.5, "angelsbalm" = 2, "tricordrazine" = 4)
+	rarity_value = 5
+	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
+	consumable = FALSE
+	automatic_charge_overlays = FALSE
+	amount = 3
+	max_amount = 2
+	splittable = FALSE
+
+
+/obj/item/stack/medical/burn
+	name = "burn patches"
+	singular_name = "medicated patch"
+	desc = "Advanced biofilm lattice suspended in medicated stem-gel regenerative membrane to treat extreme burn injuries."
+	icon_state = "burn"
+	origin_tech = list(TECH_BIO = 4)
+	heal_burn = 8
+	preloaded_reagents = list("dermaline" = 1, "angelsbalm" = 5, "leporazine" = 2)
+	rarity_value = 5
+	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
+	consumable = FALSE
+	automatic_charge_overlays = FALSE
+	amount = 3
+	max_amount = 2
+	splittable = FALSE
+
+/obj/item/stack/medical/burn/update_icon()
+	icon_state = "[initial(icon_state)][amount]"
+	..()
+
+/obj/item/stack/medical/burn/attack(mob/living/carbon/M, mob/living/user)
+	if(..())
+		return 1
+
+	if (ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/obj/item/organ/external/affecting = H.get_organ(user.targeted_organ)
+
+		if(!affecting)
+			to_chat(user, SPAN_WARNING("What [user.targeted_organ]?"))
+			return TRUE
+
+		if(affecting.open == 0)
+			if(affecting.is_bandaged())
+				to_chat(user, SPAN_WARNING("The wounds on [M]'s [affecting.name] have already been bandaged."))
+				return 1
+			else
+				user.visible_message(
+					SPAN_NOTICE("\The [user] starts treating [M]'s [affecting.name]."),
+					SPAN_NOTICE("You start treating [M]'s [affecting.name].")
+				)
+				var/used = 0
+				for (var/datum/wound/W in affecting.wounds)
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if(!do_mob(user, M, W.damage/5))
+						to_chat(user, SPAN_NOTICE("You must stand still to bandage wounds."))
+						break
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if (W.current_stage <= W.max_bleeding_stage)
+						user.visible_message(
+							SPAN_NOTICE("The mesh cannot stick to a bleeding wound.")
+						)
+						break
+					if ((W.damage_type == BRUISE) && (W.damage_type == BURN))
+						user.visible_message(
+							SPAN_NOTICE("[user] covers wounds on [M]'s [affecting.name] with regenerative membrane."),
+							SPAN_NOTICE("You cover wounds on [M]'s [affecting.name] with regenerative membrane.")
+						)
+					else if (W.damage_type == BURN)
+						user.visible_message(
+							SPAN_NOTICE("[user] covers wounds on [M]'s [affecting.name] with regenerative membrane."),
+							SPAN_NOTICE("You cover wounds on [M]'s [affecting.name] with regenerative membrane.")
+						)
+					else
+						user.visible_message(
+							SPAN_NOTICE("The mesh is only useful for burn wounds.")
+						)
+						break
+					W.bandage()
+					// user's stat check that causing pain if they are amateurs
+					if(user && user.stats.getStat(STAT_BIO) < STAT_LEVEL_BASIC)
+						if(prob(affecting.get_damage() - user.stats.getStat(STAT_BIO)))
+							var/pain = rand(min(30,affecting.get_damage()), max(affecting.get_damage() + 30,60) - user.stats.getStat(STAT_BIO))
+							H.pain(affecting, pain)
+							if(user != H)
+								to_chat(H, "<span class='[pain > 50 ? "danger" : "warning"]'>\The [user]'s amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+								to_chat(user, SPAN_WARNING("Your amateur actions caused [H] [pain > 50 ? "a lot of " : ""]pain."))
+							else
+								to_chat(user, "<span class='[pain > 50 ? "danger" : "warning"]'>Your amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+					if(prob(10 + user.stats.getStat(STAT_BIO)))
+						to_chat(user, SPAN_NOTICE("You have managed to waste less [src]."))
+					else
+						used++
+						playsound(src.loc, 'sound/effects/rip1.ogg', rand(10, 50))
+				affecting.update_damages()
+				if(used == amount)
+					if (consumable == FALSE)
+						max_amount = 0
+						matter = list(MATERIAL_PLASTIC = 0.1)
+						name = "medical trash"
+						singular_name = "treatment"
+						desc = "An empty wrapper from medical supplies."
+						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+					if(affecting.is_bandaged())
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
+					else
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up, but there are more wounds to treat on \the [affecting.name]."))
+				use(used)
+		else
+			if (can_operate(H, user) == CAN_OPERATE_ALL)        //Checks if mob is lying down on table for surgery
+				if (do_surgery(H,user,src, TRUE))
+					return
+			else
+				to_chat(user, SPAN_NOTICE("The [affecting.name] is cut open, you'll need more than a bandage!"))
