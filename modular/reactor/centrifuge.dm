@@ -1,12 +1,12 @@
 /obj/machinery/nuclear_centrifuge
 	name = "nuclear centrifuge"
 	desc = "A device designed to refill spent nuclear fuel rods."
-	icon = './astra_centrifuge.dmi'
+	icon = 'modular/reactor/astra_centrifuge.dmi'
 	icon_state = "off"
 	anchored = TRUE
 	density = TRUE
 	bound_width = 64
-	bound_height = 64
+	bound_height = 32
 	var/obj/item/fuel_rod/fuel
 	var/obj/item/reagent_containers/container
 	var/active = FALSE
@@ -76,12 +76,12 @@
 		visible_message("[src] stops due to missing a fuel rod or reagent container.")
 		return
 
-	/*if(fuel.life >= initial(fuel.life))
+	if(fuel.life >= initial(fuel.life))
 		STOP_PROCESSING(SSmachines, src)
 		active = FALSE
 		update_icon()
 		visible_message("[src] stops as the fuel rod is fully refilled.")
-		return*/
+		return
 
 	// Determine the amount of reagent to use this tick with either the refill rate, the amount left to fill on the fuel rod, or the amount of reagent available, depending on which is smallest.
 	var/refill_amount = min(refill_rate, initial(fuel.life) - fuel.life, container.reagents.get_reagent_amount(fuel.refill_reagent))

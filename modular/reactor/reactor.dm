@@ -21,14 +21,14 @@
 	var/datum/gas_mixture/gas_storage
 	var/datum/gas_mixture/gas_output
 
-	var/health = 200
-	var/max_health = 200
-
+	var/health = 10
+	var/max_health = 100
+	var/meltedrods = 0
 	var/announce = 1
 	var/decay_archived = 0
 	var/exploded = 0
-	var/envefficiency = 1 //0.01
-	var/gasefficiency = 1 //0.5
+	var/envefficiency = 0.5
+	var/gasefficiency = 0.75
 	var/warning_delay = 20
 	var/meltwarned = 0
 	var/lastwarning = 0
@@ -38,12 +38,12 @@
 	var/specific_heat = 40	// J/(mol*K)
 	var/molar_mass = 0.196	// kg/mol
 	var/mass = 200			// kg
-	var/max_temp = 0 //3058
+	var/max_temp = 3058
 	var/temperature = T20C
 	var/list/obj/item/fuel_rod/rods
 	var/obj/item/device/radio/radio
 	var/obj/structure/reactor_core/Core
-
+	var/radiological = FALSE
 /datum/multistructure/nuclear_reactor/connect_elements()
 	..()
 	gas_storage = new()
@@ -78,10 +78,13 @@
 	Core = locate()
 	radio = new()
 	START_PROCESSING(SSprocessing, src)
-
 /datum/multistructure/nuclear_reactor/Process()
 	control_average = Get_Average_Control_Height()
 	rods = Get_Fuel_Rods(FALSE)
+
+	if(radiological == TRUE)
+		message_admins("Nuclear reactor PROCESS_KILL fired. All reactor processes shutdown.")
+		return PROCESS_KILL
 
 	if(!Console)
 		Console = locate() in get_area(wall_input)
@@ -99,7 +102,7 @@
 	var/decay_heat = 0
 	var/activerods = 0
 	var/disabledrods = 0
-	var/meltedrods = 0
+
 	var/meltingrods = 0
 
 	for(var/obj/item/fuel_rod/rod in rods)
@@ -124,10 +127,22 @@
 	decay_archived = decay_heat
 	adjust_thermal_energy(decay_heat * activerods * (control_average/100))
 
+	if((meltedrods > 0) && (!exploded))
+		temperature += (meltedrods * rand(100, 800))
+		message_admins("Meltedrods >= 0 called. There are [meltedrods] melted rods.")
+
 	if(Core)
-		if(control_average > 0)
+
+		if(exploded == 1)
+			Core.icon_state = "yeah"
+			Core.corepopped()
+		if(radiological == TRUE)
+			Core.icon_state = "yeah"
+			Core.corepopped_nuke()
+		if((control_average > 0) && (!exploded))
 			Core.icon_state = "active"
-		else
+			produce_radiation(Core.loc, (activerods * 3), (activerods * 4))
+		if((control_average < 1) && (exploded == FALSE))
 			Core.icon_state = "idle"
 
 	for(var/obj/item/fuel_rod/rod in rods)
@@ -138,8 +153,8 @@
 	if(max_temp > 0 && temperature > max_temp && health > 0) // Overheating, reduce structural integrity, emit more rads.
 		health = max(0, health - (temperature / max_temp))
 		health = clamp( health, 0,  max_health)
-		//if(health < 1)
-			//go_nuclear()
+		if(health < 1)
+			go_nuclear()
 
 	var/healthmul = ((health / max_health) - 1) / -1
 	var/power = (decay_heat / REACTOR_RADS_TO_MJ) * max(healthmul, 0.1)
@@ -179,7 +194,7 @@
 		CR.height = 0
 		CR.update_icon()
 	var/location = sanitize((get_area(wall_input))?.name)
-	radio.autosay("WARNING! Reactor at [location] has initiated SCRAM!", "Nuclear Monitor")
+	radio.autosay("WARNING! Reactor at [location] has initiated SCRAM procedure!", "Nuclear Monitor")
 	return
 
 /datum/multistructure/nuclear_reactor/proc/Set_Control_Rod_Height(var/target_height)
@@ -247,7 +262,7 @@
 	. = specific_heat * (mass / molar_mass)
 
 /datum/multistructure/nuclear_reactor/proc/get_integrity()
-	var/integrity = round(health / max_health * 100)
+	var/integrity = round((health / max_health) * 100)
 	integrity = integrity < 0 ? 0 : integrity
 	return integrity
 
@@ -271,20 +286,24 @@
 				else
 					radio.autosay("Warning! [meltingrods] rods are overheating!", "Nuclear Monitor", "Engineering")
 
-/*
+
+/datum/multistructure/nuclear_reactor/proc/cookout()
+	if(health > 1 && !exploded && meltedrods > 0)
+		envefficiency = (initial(envefficiency) + (0.5 * meltedrods))
+	else
+		envefficiency = initial(envefficiency)
+
 /datum/multistructure/nuclear_reactor/proc/go_nuclear()
 	if(health < 1 && !exploded)
-		var/off_station = 0
-		if(!(src.z in (LEGACY_MAP_DATUM).station_levels))
-			off_station = 1
+		//var/off_station = 0
+		//if(!(src.z in (LEGACY_MAP_DATUM).station_levels))
+		//	off_station = 1
 		var/turf/L = get_turf(wall_input)
 		if(!istype(L))
 			return
-		message_admins("[name] exploding in 15 seconds at ([L.x],[L.y],[L.z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[L.x];Y=[L.y];Z=[L.z]'>JMP</a>)",0,1)
-		log_game("[name] exploded at ([L.x],[L.y],[L.z])")
+		message_admins("Reactor exploding in 15 seconds at ([L.x],[L.y],[L.z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[L.x];Y=[L.y];Z=[L.z]'>JMP</a>)",0,1)
+		log_game("Reactor exploded at ([L.x],[L.y],[L.z])")
 		exploded = 1
-		if(!anchored)
-			anchor()
 		var/decaying_rods = 0
 		var/decay_heat = 0
 		for(var/obj/item/fuel_rod/rod in rods)
@@ -292,12 +311,12 @@
 				decay_heat += rod.tick_life()
 				decaying_rods++
 			rod.meltdown()
-		var/rad_power = decay_heat / REACTOR_RADS_TO_MJ
+		//var/rad_power = decay_heat / REACTOR_RADS_TO_MJ
 		if(announce)
-			var/sound = sound('sound/effects/nuclear_meltdown.ogg')
-			if(!off_station)
-				for(var/mob/M in GLOB.player_list)
-					SEND_SOUND(M,sound)
+			//var/sound = sound('sound/effects/nuclear_meltdown.ogg')
+			//if(!off_station)
+				//for(var/mob/M in GLOB.player_list)
+					//SEND_SOUND(M,sound)
 			spawn(1 SECONDS)
 				radio.autosay("DANGER! FISSION CORE HAS BREACHED!", "Nuclear Monitor")
 				radio.autosay("FIND SHELTER IMMEDIATELY!", "Nuclear Monitor")
@@ -307,18 +326,32 @@
 				radio.autosay("CORE BREACH! FIND SHELTER IMMEDIATELY!", "Nuclear Monitor")
 
 		// Give the alarm time to play. Then... FLASH! AH-AH!
-		spawn(15 SECONDS)
-			z_radiation(get_turf(src), null, rad_power * BREACH_RADIATION_MULTIPLIER / RAD_MOB_ACT_COEFFICIENT, RAD_FALLOFF_ZLEVEL_FISSION_MELTDOWN)
+		//spawn(15 SECONDS)
+			//z_radiation(get_turf(src), null, rad_power * BREACH_RADIATION_MULTIPLIER / RAD_MOB_ACT_COEFFICIENT, RAD_FALLOFF_ZLEVEL_FISSION_MELTDOWN)
 
 		// Some engines just want to see the world burn.
 		spawn(17 SECONDS)
-			for(var/obj/item/fuel_rod/rod in rods)
-				rod.forceMove(L)
-			rods.Cut()
-			pipes.Cut()
-			empulse(src, decaying_rods * 10, decaying_rods * 100)
-			var/explosion_power = 4 * decaying_rods
+			//for(var/obj/item/fuel_rod/rod in rods)
+		//		rod.forceMove(L)
+		//	rods.Cut()
+			//pipes.Cut()
+			var/explosion_power = 230 * decaying_rods
+			var/num_fragments = 150  //total number of fragments produced by the grenade
+			var/fragment_damage = 20 * decaying_rods
+			var/damage_step = 16//projectiles lose a fragment each time they travel this distance. Can be a non-integer.
+			var/spread_range = 4 * decaying_rods
+
 			if(explosion_power < 1) // If you remove the rods but it's over heating, it's still gunna go bang, but without going nuclear.
-				explosion_power = 1
-			explosion(L, explosion_power, explosion_power * 2, explosion_power * 3, explosion_power * 4, 1)
-*/
+				explosion_power = 500
+				message_admins("Nuclear meltdown is non-radiological.")
+			if(decaying_rods >= 0)
+				empulse(L, (decaying_rods * 5), (decaying_rods * 10))
+				produce_radiation(L, (decaying_rods * 120), (decaying_rods * 10))
+				message_admins("Nuclear meltdown is radiological.")
+				heatwave(L, (decaying_rods * 2), (decaying_rods * 6), 130, TRUE, 1)
+				spawn(1 SECONDS)
+					radiological = TRUE
+					AddRadSource(L, (decaying_rods * 250), (decaying_rods * 5))
+					fragment_explosion(L, spread_range, (/obj/item/projectile/bullet/pellet/fragment/ember), num_fragments, fragment_damage, damage_step)
+			explosion(L, explosion_power, 10)
+			fragment_explosion(src, 8, (/obj/item/projectile/bullet/grenade/smoke), 20, 1, 3)

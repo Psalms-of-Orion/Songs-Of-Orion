@@ -1,6 +1,6 @@
 /obj/machinery/multistructure/nuclear_reactor_part/control_rod
-	name = "control rod section"
-	desc = "A section designed to hold and use control rods to moderate nuclear reactions."
+	name = "Control Rod Insertion Actuator"
+	desc = "A section designed to hold and use control rods to moderate nuclear reactions. Stamped CRIA."
 	//icon_state = "control_spot"
 	var/height = 0
 	var/max_height = 100
@@ -11,7 +11,7 @@
 /obj/machinery/multistructure/nuclear_reactor_part/control_rod/Initialize(mapload, ...)
 	..()
 	if(mapload)
-		control = new()
+		control = new /obj/item/control_rod/spent()
 	update_icon()
 
 /obj/machinery/multistructure/nuclear_reactor_part/control_rod/attackby(obj/item/I, mob/user)
@@ -21,6 +21,7 @@
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_BOLT_TURNING, FAILCHANCE_EASY, required_stat = STAT_MEC))
 					user.visible_message(SPAN_NOTICE("[user] loosen the bolts."), SPAN_NOTICE("You loosen the bolts."))
 					current_step = STEP_UNWRENCHED
+					playsound(loc, 'sound/machines/Custom_boltsup.ogg', 50, 1)
 					return
 
 		if(STEP_UNWRENCHED)
@@ -28,13 +29,15 @@
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_BOLT_TURNING, FAILCHANCE_EASY, required_stat = STAT_MEC))
 					user.visible_message(SPAN_NOTICE("[user] tighten the bolts."), SPAN_NOTICE("You tighten the bolts."))
 					current_step = STEP_INTACT
+					playsound(loc, 'sound/machines/Custom_bolts.ogg', 50, 1)
 					return
 
 		if(STEP_PULLED)
 			if(I.get_tool_type(user, list(QUALITY_SCREW_DRIVING), src) == QUALITY_SCREW_DRIVING)
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_SCREW_DRIVING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-					user.visible_message(SPAN_NOTICE("[user] unsecures the control rod."), SPAN_NOTICE("You unsecures the control rod."))
+					user.visible_message(SPAN_NOTICE("[user] unsecures the control rod."), SPAN_NOTICE("You unsecure the control rod."))
 					current_step = STEP_UNSECURED
+					playsound(loc, 'sound/machines/Conveyor_switch.ogg', 50, 1)
 					return
 
 		if(STEP_UNSECURED)
@@ -48,32 +51,37 @@
 					control.loc = loc
 					control = null
 					current_step = STEP_NO_ROD
+					playsound(loc, 'sound/machines/Custom_extout.ogg', 50, 1)
 					return
 
 			if(tool_type == QUALITY_SCREW_DRIVING)
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_SCREW_DRIVING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-					user.visible_message(SPAN_NOTICE("[user] secures the control rod."), SPAN_NOTICE("You secures the control rod."))
+					user.visible_message(SPAN_NOTICE("[user] secures the control rod."), SPAN_NOTICE("You secure the control rod."))
 					current_step = STEP_PULLED
+					playsound(loc, 'sound/machines/Conveyor_switch.ogg', 50, 1)
 					return
 
 		if(STEP_NO_ROD)
 			if(istype(I, /obj/item/control_rod) && insert_item(I, user))
 				control = I
 				current_step = STEP_UNSECURED
+				playsound(loc, 'sound/machines/Custom_extin.ogg', 50, 1)
 				return
 	..()
 
 /obj/machinery/multistructure/nuclear_reactor_part/control_rod/attack_hand(mob/user as mob)
 	if(current_step == STEP_UNWRENCHED)
-		user.visible_message(SPAN_NOTICE("[user] pulls the rod container up."), SPAN_NOTICE("You pulls the rod container up."))
+		user.visible_message(SPAN_NOTICE("[user] pulls the rod container up."), SPAN_NOTICE("You pull the rod container up."))
 		current_step = STEP_PULLED
 		update_icon()
+		playsound(loc, 'sound/machines/airlock_open_force.ogg', 50, 1)
 		return
 
 	if(current_step == STEP_PULLED)
-		user.visible_message(SPAN_NOTICE("[user] push the rod container down."), SPAN_NOTICE("You push the rod container down."))
+		user.visible_message(SPAN_NOTICE("[user] pushes the rod container down."), SPAN_NOTICE("You push the rod container down."))
 		current_step = STEP_UNWRENCHED
 		update_icon()
+		playsound(loc, 'sound/machines/airlock_close_force.ogg', 50, 1)
 		return
 
 	..()
@@ -107,14 +115,19 @@
 	switch(Get_Rod_Height())
 		if(0 to 24)
 			add_overlay("C0")
+			density = FALSE
 		if(25 to 49)
 			add_overlay("C25")
+			density = FALSE
 		if(50 to 74)
 			add_overlay("C50")
+			density = FALSE
 		if(75 to 99)
 			add_overlay("C75")
+			density = TRUE
 		if(100)
 			add_overlay("C100")
+			density = TRUE
 
 /obj/machinery/multistructure/nuclear_reactor_part/control_rod/proc/Get_Rod_Height()
 	if(!control) // No control rod? Well it's not there.

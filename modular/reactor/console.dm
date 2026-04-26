@@ -1,4 +1,5 @@
 /obj/machinery/multistructure/nuclear_reactor_part/console
+	name = "reactor control console"
 	icon_state = "console"
 	density = TRUE
 	var/datum/multistructure/nuclear_reactor/Reactor
@@ -6,6 +7,7 @@
 /obj/machinery/multistructure/nuclear_reactor_part/console/New()
 	..()
 	update_icon()
+	set_light(l_range = 1.5, l_power = 0.2, l_color = COLOR_LIGHTING_GREEN_MACHINERY)
 
 /obj/machinery/multistructure/nuclear_reactor_part/console/update_icon()
 	add_overlay("power_key")
@@ -21,6 +23,8 @@
 	if(!ui)
 		ui = new(user, src, "NuclearReactorConsole")
 		ui.open()
+		playsound(loc, 'sound/machines/computer_touch.ogg', 50, 1)
+
 	return
 
 /obj/machinery/multistructure/nuclear_reactor_part/console/ui_data(mob/user)
@@ -77,9 +81,11 @@
 		return
 	if(action == "scram")
 		Reactor.scram()
+		playsound(loc, 'sound/machines/reactor_alert.ogg', 50, 1)
 		return
 	if(action == "set_target_height")
 		Reactor.Set_Control_Rod_Height(params["target_height"])
+		playsound(loc, 'sound/machines/machine_switch.ogg', 50, 1)
 		return
 
 /obj/machinery/multistructure/nuclear_reactor_part/console/Topic(href, href_list)
