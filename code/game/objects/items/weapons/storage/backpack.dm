@@ -158,6 +158,7 @@
 	name = "industrial backpack"
 	desc = "A tough backpack for the daily grind of ship life."
 	icon_state = "backpack_industrial"
+	max_storage_space = DEFAULT_HUGE_STORAGE * 1.3
 	rarity_value = 8.33
 
 /obj/item/storage/backpack/medical
@@ -167,7 +168,7 @@
 	rarity_value = 8.33
 
 /obj/item/storage/backpack/security
-	name = "security backpack"
+	name = "robust backpack"
 	desc = "A very robust backpack."
 	icon_state = "backpack_security"
 	rarity_value = 8.33
@@ -180,8 +181,8 @@
 
 //Faction-specific backpacks
 /obj/item/storage/backpack/ironhammer
-	name = "operator's backpack"
-	desc = "Done in a complementing shade for IronHammer Security forces, a staple for military contractors everywhere."
+	name = "security backpack"
+	desc = "Done in a complementing shade for NanoTrasen Security forces, a staple for security contractors everywhere."
 	icon_state = "backpack_ironhammer"
 	rarity_value = 25
 
@@ -193,9 +194,16 @@
 
 //Used by mercenaries
 /obj/item/storage/backpack/military
-	name = "MOLLE pack"
+	name = "ALICE pack"
 	desc = "Designed for planetary infantry, holds a lot of equipment."
 	icon_state = "backpack_military"
+	max_storage_space = DEFAULT_HUGE_STORAGE * 1.3
+	rarity_value = 8.33
+
+/obj/item/storage/backpack/corpsman
+	name = "ALICE pack"
+	desc = "Designed for planetary infantry, holds a lot of medical equipment."
+	icon_state = "backpack_corpsman"
 	max_storage_space = DEFAULT_HUGE_STORAGE * 1.3
 	rarity_value = 8.33
 
@@ -235,8 +243,8 @@
 
 //Faction-specific backsports
 /obj/item/storage/backpack/sport/ironhammer
-	name = "operator's sport backpack"
-	desc = "Done in a complementing shade for IronHammer Security forces. It looks as if it belongs on a kindergartener rather than a operative, which is why in actuality this style makes perfect sense."
+	name = "security sport backpack"
+	desc = "Done in a complementing shade for NanoTrasen Security forces. It looks as if it belongs on a kindergartener rather than a operative, which is why in actuality this style makes perfect sense."
 	icon_state = "backsport_ironhammer"
 	rarity_value = 25
 
@@ -317,7 +325,7 @@
 	rarity_value = 8.33
 
 /obj/item/storage/backpack/satchel/security
-	name = "security satchel"
+	name = "robust satchel"
 	desc = "A robust satchel for security related needs."
 	icon_state = "satchel_security"
 	rarity_value = 8.33
@@ -335,8 +343,8 @@
 
 //Faction-specific satchels
 /obj/item/storage/backpack/satchel/ironhammer
-	name = "operator's satchel"
-	desc = "Done in a complementing shade for IronHammer Security forces, for the itinerant military contractor."
+	name = "Security satchel"
+	desc = "Done in a complementing shade for NanoTrasen Security forces, for the itinerant security contractor."
 	icon_state = "satchel_ironhammer"
 	rarity_value = 12.5
 
@@ -348,12 +356,45 @@
 
 //Used by mercenaries
 /obj/item/storage/backpack/satchel/military
-	name = "MOLLE patrol pack"
-	desc = "Designed for planetary infantry, this pack allows for quick access to equipment."
+	name = "patrol pack"
+	desc = "A repurposed CBRN carry bag, can still hold a gas mask if you want."
 	icon_state = "satchel_military"
 	max_storage_space = DEFAULT_HUGE_STORAGE * 0.9
 	rarity_value = 8.33
 
+/obj/item/storage/backpack/satchel/corpsman
+	name = "medical pack"
+	desc = "A robust first aid bag for the medic on the go."
+	icon_state = "satchel_corpsman"
+	rarity_value = 8.33
+
+/obj/item/storage/backpack/satchel/haversack
+	name = "haversack"
+	desc = "A lightweight military backpack designed for quick access."
+	icon_state = "haversack"
+	max_storage_space = DEFAULT_HUGE_STORAGE * 0.9
+	rarity_value = 20
+
+/obj/item/storage/backpack/satchel/haversack/industrial
+	name = "industrial haversack"
+	desc = "A rugged backpack designed for quick access."
+	icon_state = "haversack_industrial"
+	max_storage_space = DEFAULT_HUGE_STORAGE * 0.9
+	rarity_value = 20
+
+/obj/item/storage/backpack/satchel/haversack/security
+	name = "robust haversack"
+	desc = "A robust backpack designed for quick access."
+	icon_state = "haversack_security"
+	max_storage_space = DEFAULT_HUGE_STORAGE * 0.9
+	rarity_value = 20
+
+/obj/item/storage/backpack/satchel/haversack/corpsman
+	name = "medical haversack"
+	desc = "A robust backpack optimized for quick access to medical supplies."
+	icon_state = "haversack_corpsman"
+	max_storage_space = DEFAULT_HUGE_STORAGE * 0.9
+	rarity_value = 20
 /*
  * Duffelbag Types
  */

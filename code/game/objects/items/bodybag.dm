@@ -99,28 +99,42 @@
 	item_path = /obj/item/bodybag/expanded
 	storage_capacity = (MOB_LARGE)
 
+
 /obj/item/bodybag/cryobag
-	name = "stasis bag"
-	desc = "A folded, non-reusable bag designed to prevent additional damage to an occupant. Especially useful if short on time or in \
-	a hostile enviroment."
-	description_info = "You can scan the patient inside by clicking the bag with an health analyzer"
-	icon = 'icons/obj/cryobag.dmi'
+	name = "Life-Bag"
+	desc = "A folded single-use bodybag with a life support system and low-friction skid surface. Used for transporting wounded or as single-person lifepod."
+	description_info = "You can scan the patient inside by clicking the bag with an health analyzer."
+	icon = 'modular/icons/cryobag.dmi'
 	icon_state = "bodybag_folded"
 	origin_tech = list(TECH_BIO = 4)
 	matter = list(MATERIAL_STEEL = 10, MATERIAL_PLASTIC = 6, MATERIAL_SILVER = 2)
 	matter_reagents = list("coolant" = 40)
 	price_tag = 250
+	var/packaged = FALSE
+	spawn_blacklisted = TRUE
+
+/obj/item/bodybag/cryobag/sealed
+	icon_state = "bodybag_wrapped"
+	packaged = TRUE
+	spawn_blacklisted = FALSE
 
 /obj/item/bodybag/cryobag/attack_self(mob/user)
-	var/obj/structure/closet/body_bag/cryobag/R = new /obj/structure/closet/body_bag/cryobag(user.loc)
-	R.add_fingerprint(user)
-	qdel(src)
+	if(packaged == TRUE)
+		playsound(src.loc, 'sound/effects/rip1.ogg', rand(10, 50))
+		packaged = FALSE
+		icon_state = "bodybag_folded"
+		to_chat(user, SPAN_NOTICE("You open the stasis bag packaging."))
+	else
+		var/obj/structure/closet/body_bag/cryobag/R = new /obj/structure/closet/body_bag/cryobag(user.loc)
+		R.add_fingerprint(user)
+		playsound(src.loc, 'sound/effects/Paper_Shake.ogg', rand(10, 50))
+		qdel(src)
 
 /obj/structure/closet/body_bag/cryobag
 	name = "stasis bag"
 	desc = "A non-reusable plastic bag designed to prevent additional damage to an occupant. Especially useful if short on time or in \
-	a hostile enviroment. This one features a much more advanced design that preserves its occupant in cryostasis."
-	icon = 'icons/obj/cryobag.dmi'
+	a hostile enviroment. Once sealed, the system will keep the occupant alive almost indefinitely."
+	icon = 'modular/icons/cryobag.dmi'
 	item_path = /obj/item/bodybag/cryobag
 	store_misc = 0
 	store_items = 0
@@ -144,7 +158,7 @@
 		O.name = "used stasis bag"
 		O.icon = src.icon
 		O.icon_state = "bodybag_used"
-		O.desc = "A used bodybag. It's nothing but trash now."
+		O.desc = "A used stasis bag. Some use them as sleeping bags."
 		O.matter = list(MATERIAL_STEEL = 5, MATERIAL_PLASTIC = 3, MATERIAL_SILVER = 1)
 		O.matter_reagents = list("coolant" = 20)
 		qdel(src)
@@ -154,6 +168,7 @@
 		var/mob/living/carbon/human/H = AM
 		H.EnterStasis()
 		src.used = 1
+		dir = 4
 	..()
 
 /obj/structure/closet/body_bag/cryobag/Exited(atom/movable/AM)

@@ -112,5 +112,14 @@
 /obj/item/clothing/head/deckcrew/medical
 	name = "medical deck helmet"
 	desc = "A piece of headgear used in aerospace aviation for medical personnel. Equipped with an integrated HUD system." //TODO: HUD
+	description_info = "Deck crew colors represent different roles. \
+	Striped white indicates medical personnel."
 	icon_state = "deck_med"
 	item_state = "deck_med"
+	item_flags = THICKMATERIAL | COVER_PREVENT_MANIPULATION
+	flags_inv = BLOCKHEADHAIR|HIDEEARS|HIDEEYES
+	flash_protection = FLASH_PROTECTION_MINOR
+	action_button_name = "Toggle Medical Hud"
+	var/obj/item/clothing/glasses/hud/health/hud
+	price_tag = 500
+	style_coverage = COVERS_WHOLE_HEAD

@@ -201,3 +201,4 @@
 	style = STYLE_LOW
 	spawn_blacklisted = TRUE
 	price_tag = 500
+	flags_inv = BLOCKHEADHAIR

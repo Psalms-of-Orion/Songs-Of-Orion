@@ -319,3 +319,151 @@
 	author = "Jordan Damnsey"
 	title = "Bradhaanata cooking guide"
 	page_link = "Guide_to_Food_and_Drinks"
+
+/obj/item/book/manual/reactor
+	name = "NTSS-13 CTCMB-3M/SIGMA-M Manual"
+	desc = "Operations manual for the M-Series CTCMB/SIGMA fission vessel installed on the NTSS-13 facility."
+	icon_state = "book_nuclear"
+	author = "Ad Astra Operational Literature"
+	title = "NTSS-13 CTCMB-3M/SIGMA-M Manual"
+
+	dat = {"<html>
+		<head>
+				<style>
+				h1 {font-size: 21px; margin: 15px 0px 5px;}
+				h2 {font-size: 15px; margin: 15px 0px 5px;}
+				li {margin: 2px 0px 2px 15px;}
+				ul {margin: 5px; padding: 0px;}
+				ol {margin: 5px; padding: 0px 15px;}
+				body {font-size: 13px; font-family: Verdana;}
+				</style>
+				</head>
+				<body>
+				<h1>PREFACE</h1>
+				Operational instructions for the reactor installed on NTSS-13.
+				The following is intended only for use on the specific reactor installation above and should not be used for reference to any other facility.<br><br>
+
+				This manual does not cover all specifics or maintenance of M-Series Reactor or any other and should be used as a reference only.<br>
+
+				<h2>CTCMB-3M/SIGMA-M FISSION VESSEL</h2>
+				<br>
+				The M-Series reactor was a common form of GEN-V Gas-Cooled FAST Reactor built in the early 2nd Century for ISRU applications.
+				The resurgence of the M-Series in low-priority facilities stems from the low operational costs related the ease of manufacture of fuel.
+				As a simple pressure vessel system, the M-Series can be installed in many configurations and applications.
+				Using 4x fuel rod clusters and 4x primary control rods, the 3M can be operated with a variety of fuel rods and loading arrangements. Properly configured, the installed system is capable of safely providing in excess of 4MW of power.
+				<br>
+				Major reactor components are:
+				<ul>
+					<li>Primary Biological Shield</li>
+					<li>Lower Pressure Vessel</li>
+					<li>5x Fuel Rod Carriage Assemblies</li>
+					<li>4x Primary Control Rod Insertion Actuators<br>
+					<li>Reactor Core</li>
+					<li>Lower Actuation and Attenuation Assembly</li>
+					<li>Coolant Injection Pump</li>
+					<li>Coolant Exhaust Recycling Vents</li>
+					<li>2x Engine Cooling Control Panels</li>
+					<li>Main Control Panel</li>
+				</ul><br>
+				<h2>Primary Biological Shield</h2>
+				The "lid" of the reactor that separates the actual reactor and the workspace. This is where the loading and unloading operations occur.
+				Under normal operational circumstances, the shielding allows for safe occupation around the reactor.
+				<br>
+				<h2>Lower Pressure Vessel</h2>
+				The "hull" of the lower portion of the reactor. Reinforced radiation resistant walls contain the high pressure coolant gas surrounding the reactor core.
+				Explosion and impact resistant, these protect the reactor from outside forces, and protect the facility from the extreme environment within the core chamber.
+				<br>
+				<h2>Fuel Rod Carriage Assemblies - FRCA</h2>
+				Heavily shielded fuel rod racks which act as the interface from the reactor core and the outside. These insert the fuel into the core and allow for individual service of fuel segments.
+				<h2>Operating the FRCA</h2>
+				To load the FRCA:
+					<li>Undo the primary locking bolt with an appropriate wrench</li>
+					<li>Lift the hydraulic-assisted Carriage to service level.</li>
+					<li>Insert the fuel rod vertically into the Fuel Rod Cradle.</li>
+					<li>Screw in the Fuel Rod Cradle Clamps to secure the fuel rod.</li>
+					<li>Lower the hydraulic-assisted Carriage to operation level. <b>Note:</b> This will automatically insert the fuel rod into the core.</li>
+					<li>Secure the primary locking bolt with an appropriate wrench.</li>
+				<br>
+				To unload the FRCA:
+				 	<li>Undo the primary locking bolt with an appropriate wrench.</li>
+				 	<li>Lift the hydraulic-assisted Carriage to service level. This will automatically retract the rod into service position.</li>
+				 	<li>Unscrew the Fuel Rod Cradle Clamps.</li>
+				 	<li>Use an appropriately shielded prying apparatus to free the rod from the inner cradle. <b>Note:</b> Thermal expansion will cause rods to "stick."</li>
+				 	<li>Physically remove the fuel rod with appropriate handling apparatus</li>
+				<br>
+				<h2>Control Rod Insertion Actuators - CRIA</h2>
+				The CRIA act as the "throttle" to the reactor. The rods are raised to allow the fission process begin.
+				Designed in a fail-safe orientation, the rods naturally tend towards halting the reaction.
+				These rods are highly heat resistant, However, no materials are immune to the temperatures possible within an improperly configured reactor.
+				As such, care should be taken to inspect Control Rods before use and after any high-heat events. A missing or failed Control Rod can induce a run-away failure.
+				Control rods are replaced in the same way as fuel rods, covered in the above FRCA section.
+				<br>
+				It is imperative to ensure the Control Rods are always in working order and correctly installed. Fission is controlled by the insertion or removal of the Control Rods.
+				If a Control Rod is damaged or missing, it will expose 20% of the core to unmoderated fission, per rod.
+				In the event of a Control Rod failure,the FRCAs must manually be removed from the core to prevent run-away.
+				<br>
+				<h2>Reactor Core</h2>
+				The "heart" of the reactor. Within the center of the Pressure Vessel, the Core is where the FRCA and CRIA meet.
+				Surrounded by high-pressure gas, the Core exchanges heat produced by the fission reaction with the working fluid, which is siphoned off and replaced with a constant flow of coolant.
+				The exhaust gas produced by cooling the Core is used to run the heat-exchange turbine system to generate power.
+				While capable of handling extreme temperatures in excess of 1,000K, the core itself is a fragile system.
+				<br>
+				<h2>Lower Actuation and Attenuation Assembly</h2>
+				Surrounding the Core, is the LACATAS honeycomb. This contains the machinery for the FRCA and CRIA systems, as well as the shielding and moderators.
+				Known as the "Catacomb" for its honeycomb structure and tight spaces, it is the "tomb" that contains the Core.
+				<br>
+				<h2>Coolant Injection Pump</h2>
+				A high-pressure gas injection system that inserts coolant gas into the main body after running it through the coolant vanes within the Core.
+				This is the main "flow" of the reactor coolant system, filling the Pressure Vessel with coolant.
+				<br>
+				<h2>Coolant Exhaust Recycling Vents</h2>
+				These are a series of gas siphons arranged around the Core to remove hot coolant gases from the reactor for use as the working-fluid for power generation.
+				<br>
+				<h2>Engine Cooling Control Panel</h2>
+				These control the pressure and flow rate of the CIP and CERVs above. The flow of coolant regulates the temperatures the reactor can safely operate within.
+				The flow of exhaust determines the electrical power which can be extracted from the reactor. The CIP and CERVs will have to be refreshed after a complete shutdown.
+				<br>
+				<h1>Main Control Panel</h1>
+				The console interfaces with the reactor control and sensor systems to operate the reactor remotely.
+				It comprises several sections for control and monitoring:
+				 	<li>Main/CRIA control board</li>
+				 	<li>Fissile Materials Monitor</li>
+				 	<li>Moderator Status Monitor</li>
+				 	<li>Fluid Dynamics Monitor</li>
+				<br>
+				<h2>Main/CRIA control board</h2>
+				The Main panel is always visible and contains:
+				 	<li>Stack Integrity Monitor</li>
+				 	<li>Reaction Moderation Control Board/CRIA control knobs</li>
+				 	<li>Core Temperature Monitor</li>
+				 	<li>Reactor Trip</li>
+				 <br>
+				 The Stack Integrity Monitor displays the "health" of the overall reactor machinery.
+
+				 The Reaction Moderation Control Board/CRIA control knobs operate the Control Rods.
+				 Each dial represents a decimal place that sets the percentage of Fuel Rod exposure by raising or lowering the Control Rods into the Core.
+				 This is the "throttle" for the reaction, with higher numbers expressing a higher amount of criticality.
+
+				 The Core Temperature Monitor indicates the current "true" temperature experienced within the Core itself, not the gas surrounding it.
+				 The values given in the core are higher than the coolant gases, as they have yet to heat-exchange.
+
+				 The Reactor Trip/SCRAM control is the immediate shutdown measure. Upon being tripped, the SCRAM system will immediately insert the fuel rods and zero-out the CRIA.
+				 This will immediately cease all fission within the Core and stop the core temperature from rising.
+				 However, this system will only function if enough Control Rods are functional to stop the reaction.
+				 SCRAM cannot stop the reaction if the reactor has reached a run-away state.
+				 <br>
+				 <h2>Fissile Materials Monitor</h2>
+				 This displays the amount of fissionable energy left in the Fuel Rods, as well as the individual temperatures for each.
+				 Fuel Rods may be expended and need replacing during operations. If they are exposed to too much heat, they may melt down and cause damage to the reactor.
+				 <br>
+				 <h2>Moderator Status Monitor</h2>
+				 This displays the insertion or retraction of individual Control Rods. Each rod represents 20% of the total reaction moderation and control capacity for the reactor.
+				 Rods can be manually raised, jammed, or removed, which may not be immediately apparent from the control room, but can be seen with the Status Monitor as raised or missing
+				 <br>
+				 <h2>Fluid Dynamics Monitor</h2>
+				 This displays the input and output temperatures to the reactor Core. Internal Storage is the gas contained within the plumbing and cooling vanes of the Core.
+				 If the input temperature becomes too high, the Core may overheat.
+				</body>
+			</html>
+			"}
+

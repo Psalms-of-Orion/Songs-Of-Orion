@@ -45,7 +45,7 @@
 	faction = "CEV Eris"
 	total_positions = 4
 	supervisors = "the chain of command"
-	selection_color = "#c3b9a6"
+	selection_color = "#bb9042"
 	also_known_languages = list(LANGUAGE_JIVE = 100)
 	wage = WAGE_LABOUR_DUMB
 	department_account_access = TRUE
@@ -142,7 +142,7 @@
 	faction = "CEV Eris"
 	total_positions = 1
 	supervisors = "the chain of command, and the Cook"
-	selection_color = "#dddddd"
+	selection_color = "#579342"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 15, LANGUAGE_JIVE = 80)
 	access = list(access_bar, access_kitchen, access_maint_tunnels, access_hydroponics)
 	perks = list(PERK_CLUB)
@@ -170,7 +170,7 @@
 	faction = "CEV Eris"
 	total_positions = 3
 	supervisors = "the chain of command"
-	selection_color = "#dddddd"
+	selection_color = "#5875a1"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 15, LANGUAGE_JIVE = 80)
 	access = list(
@@ -207,7 +207,7 @@
 	total_positions = 2
 	supervisors = "the chain of command"
 	//alt_titles = list("Ironhammer Junior Operative")
-	selection_color = "#a7bbc6"
+	selection_color = "#812a3d"
 	wage = WAGE_LABOUR_HAZARD
 
 	outfit_type = /decl/hierarchy/outfit/job/nt/security
@@ -286,7 +286,7 @@
 	faction = "CEV Eris"
 	total_positions = 3
 	supervisors = "the chain of command"
-	selection_color = "#d5c88f"
+	selection_color = "#b18643"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 50)
 	wage = WAGE_PROFESSIONAL
 
@@ -329,7 +329,7 @@
 	faction = "CEV Eris"
 	total_positions = 3
 	supervisors = "the chain of command"
-	selection_color = "#bdb1bb"
+	selection_color = "#814fb3"
 	wage = WAGE_PROFESSIONAL
 
 	//alt_titles = list("Moebius Xenobiologist")
@@ -364,7 +364,7 @@
 	faction = "CEV Eris"
 	total_positions = 1
 	supervisors = "the funny ones"
-	selection_color = "#dddddd"
+	selection_color = "#b075d6"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10, LANGUAGE_JIVE = 40, LANGUAGE_MONKEY = 20)
 	access = list(access_bar, access_kitchen, access_maint_tunnels, access_artist, access_theatre)
 	initial_balance = 600

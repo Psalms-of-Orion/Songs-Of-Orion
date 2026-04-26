@@ -28,11 +28,18 @@
 	else
 		icon_state = "control"
 
+/obj/item/control_rod/spent
+	name = "degraded control rod"
+	desc = "A rod made of graphite, designed to moderate nuclear reactions by its presence."
+	icon = 'astra_reactor.dmi'
+	icon_state = "control_spent"
+	durability = 25
+
 /obj/item/fuel_rod
 	name = "aetherium fuel rod"
 	desc = "You shouldn't be seeing this."
 	icon = 'astra_reactor.dmi'
-
+	description_info = "DROP AND RUN. IF YOU CAN SEE IT, YOU ARE BEING IRRADIATED."
 	var/gasefficiency = 0.05
 	var/insertion = 0
 	var/integrity = 100
@@ -47,17 +54,19 @@
 	var/melting_point = 3000 // Entering the danger zone.
 	var/decay_heat = 0 // MJ/mol (Yes, using MegaJoules per Mole. Techincally reduces power, but that reflects reduced lifespan.)
 	var/refill_reagent
+	var/melting = FALSE
+	var/datum/multistructure/nuclear_reactor/Reactor
 
 /obj/item/fuel_rod/aetherium
 	name = "aetherium fuel rod"
-	desc = "A rod made of aetherium, acting as a suitable substitute for proper nuclear fuel. It is contained within a lead casing."
+	desc = "A rod made of aetherium, acting as a suitable substitute for proper nuclear fuel."
 	icon_state = "unobtanium"
 	refill_reagent = "aetherium"
 	//heat_production = 50
 
 /obj/item/fuel_rod/plutonium
 	name = "plutonium fuel rod"
-	desc = "A rod made of plutonium, acting as a suitable substitute for proper nuclear fuel. It is contained within a lead casing."
+	desc = "A rod made of plutonium, acting as a suitable substitute for proper nuclear fuel."
 	icon_state = "plasma"
 	specific_heat = 36	// J/(mol*K)
 	molar_mass = 0.244	// kg/mol
@@ -69,7 +78,7 @@
 
 /obj/item/fuel_rod/uranium
 	name = "uranium fuel rod"
-	desc = "A rod made of uranium, acting as a suitable substitute for proper nuclear fuel. It is contained within a lead casing."
+	desc = "A rod made of uranium, acting as a suitable substitute for proper nuclear fuel."
 	icon_state = "uranium"
 	specific_heat = 28	// J/(mol*K)
 	molar_mass = 0.235	// kg/mol
@@ -77,6 +86,10 @@
 	melting_point = 1405
 	decay_heat = 19536350 // MJ/mol
 	refill_reagent = "uranium"
+
+/obj/item/fuel_rod/uranium/spent
+	life = 1
+
 
 /obj/item/fuel_rod/update_icon()
 	if(life <= 0)
@@ -100,13 +113,13 @@
 		var/turf/T = get_turf(src)
 		equalize(T.return_air(), gasefficiency)
 
-		if(decay_heat > 0)
-			var/insertion_multiplier = ROD_EXPOSED_POWER
-			if(integrity == 0)
-				insertion_multiplier = 1
-			var/power = (tick_life(0, insertion_multiplier) / REACTOR_RADS_TO_MJ)
-			adjust_thermal_energy(power)
-			PulseRadiation(src, max(power * ROD_RADIATION_MULTIPLIER, 0), 10)
+	if(decay_heat > 0)
+		var/insertion_multiplier = ROD_EXPOSED_POWER
+		if(integrity == 0)
+			insertion_multiplier = 1
+		var/power = (tick_life(0, insertion_multiplier) / REACTOR_RADS_TO_MJ)
+		adjust_thermal_energy(power)
+		PulseRadiation(src, max(power * ROD_RADIATION_MULTIPLIER, 0), 10)
 
 /obj/item/fuel_rod/proc/equalize(var/E, var/efficiency)
 	var/our_heatcap = heat_capacity()
@@ -124,6 +137,8 @@
 	else if(istype(E, /datum/gas_mixture))
 		var/datum/gas_mixture/env = E
 		var/datum/gas_mixture/sharer = env.remove(efficiency * env.total_moles)
+		if(!sharer)
+			return
 		var/share_heatcap = sharer.heat_capacity()
 
 		if(our_heatcap + share_heatcap)
@@ -134,14 +149,14 @@
 			sharer.temperature = clamp( sharer.temperature, 0,  ROD_TEMPERATURE_CUTOFF)
 		env.merge(sharer)
 
-/*
+
 	var/integrity_lost = integrity
 	if(temperature > melting_point && melting_point > 0)
 		integrity = max(0, integrity - (temperature / melting_point))
 	else if(temperature > (melting_point * 0.9))
 		integrity = max(0, integrity - ((1 / lifespan) * 100))
 	if(integrity == 0 && integrity_lost > 0) // Meltdown time.
-		meltdown()*/
+		meltdown()
 
 /obj/item/fuel_rod/proc/adjust_thermal_energy(var/thermal_energy)
 	if(mass < 1)
@@ -178,20 +193,24 @@
 
 /obj/item/fuel_rod/proc/get_insertion()
 	var/applied_insertion = 1
-	if(istype(loc, /obj/machinery/multistructure/nuclear_reactor_part/fuel_rod) && icon_state != "rod_melt")
+	if(istype(loc, /obj/machinery/multistructure/nuclear_reactor_part/fuel_rod) && icon_state != "control_spent")
 		applied_insertion = insertion
+		loc = list(null)//VERY BAD TODO: NOT THIS
 	return clamp( applied_insertion, 0,  1)
 
 /obj/item/fuel_rod/proc/is_melted()
-	return (icon_state == "rod_melt") ? 1 : 0
+	return (icon_state == "control_spent") ? 1 : 0
 
 /obj/item/fuel_rod/proc/meltdown()
 	if(!is_melted())
 		if(decay_heat > 0)
-			life = life * 10
-			decay_heat = 0 // Original was decay_heat * 10. Setting to 0 to counter memes (Testing phase. Unsure HOW much this is going to destroy everything)
+			life = life * 3
+			decay_heat = decay_heat * 10  // Original was decay_heat * 10. Setting to 0 to counter memes (Testing phase. Unsure HOW much this is going to destroy everything)
+			is_melted()
+			integrity = 15
 		else
 			life = 0
 		name = "melted [name]"
-		//icon_state = "rod_melt" // TODO
+		icon_state = "control_spent" // TODO
 		integrity = 0
+		melting = TRUE

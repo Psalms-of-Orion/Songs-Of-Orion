@@ -1,8 +1,8 @@
 /obj/machinery/multistructure/nuclear_reactor_part/fuel_rod
-	name = "fuel rod section"
-	desc = "A section designed to hold and use fuel rods to enable nuclear reactions."
+	name = "Fuel Rod Carriage Assembly"
+	desc = "A section designed to hold and use fuel rods to enable nuclear reactions. Stamped FRCA."
 	//icon_state = "fuel_spot"
-	var/current_step = STEP_NO_ROD
+	var/current_step = STEP_INTACT
 	var/obj/item/fuel_rod/fuel
 
 /obj/machinery/multistructure/nuclear_reactor_part/fuel_rod/Initialize(mapload, ...)
@@ -17,22 +17,26 @@
 		if(STEP_INTACT)
 			if(I.get_tool_type(user, list(QUALITY_BOLT_TURNING), src) == QUALITY_BOLT_TURNING)
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_BOLT_TURNING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-					user.visible_message(SPAN_NOTICE("[user] loosen the bolts."), SPAN_NOTICE("You loosen the bolts."))
+					user.visible_message(SPAN_NOTICE("[user] loosens the bolts."), SPAN_NOTICE("You loosen the bolts."))
 					current_step = STEP_UNWRENCHED
+					playsound(loc, 'sound/machines/Custom_boltsup.ogg', 50, 1)
+					PulseRadiation(src, rand(1,50), rand(1,8))
 					return
 
 		if(STEP_UNWRENCHED)
 			if(I.get_tool_type(user, list(QUALITY_BOLT_TURNING), src) == QUALITY_BOLT_TURNING)
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_BOLT_TURNING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-					user.visible_message(SPAN_NOTICE("[user] tighten the bolts."), SPAN_NOTICE("You tighten the bolts."))
+					user.visible_message(SPAN_NOTICE("[user] tightens the bolts."), SPAN_NOTICE("You tighten the bolts."))
 					current_step = STEP_INTACT
+					playsound(loc, 'sound/machines/Custom_bolts.ogg', 50, 1)
 					return
 
 		if(STEP_PULLED)
 			if(I.get_tool_type(user, list(QUALITY_SCREW_DRIVING), src) == QUALITY_SCREW_DRIVING)
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_SCREW_DRIVING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-					user.visible_message(SPAN_NOTICE("[user] unsecures the fuel rod."), SPAN_NOTICE("You unsecures the fuel rod."))
+					user.visible_message(SPAN_NOTICE("[user] unsecures the fuel rod."), SPAN_NOTICE("You unsecure the fuel rod."))
 					current_step = STEP_UNSECURED
+					playsound(loc, 'sound/machines/Conveyor_switch.ogg', 50, 1)
 					return
 
 		if(STEP_UNSECURED)
@@ -46,32 +50,39 @@
 					fuel.loc = loc
 					fuel = null
 					current_step = STEP_NO_ROD
+					produce_radiation(src, rand(1,50), rand(1,8))
+					playsound(loc, 'sound/machines/Custom_extout.ogg', 50, 1)
 					return
 
 			if(tool_type == QUALITY_SCREW_DRIVING)
 				if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_SCREW_DRIVING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-					user.visible_message(SPAN_NOTICE("[user] secures the fuel rod."), SPAN_NOTICE("You secures the fuel rod."))
+					user.visible_message(SPAN_NOTICE("[user] secures the fuel rod."), SPAN_NOTICE("You secure the fuel rod."))
 					current_step = STEP_PULLED
+					playsound(loc, 'sound/machines/Conveyor_switch.ogg', 50, 1)
 					return
 
 		if(STEP_NO_ROD)
 			if(istype(I, /obj/item/fuel_rod) && insert_item(I, user))
 				fuel = I
 				current_step = STEP_UNSECURED
+				playsound(loc, 'sound/machines/Custom_extin.ogg', 50, 1)
 				return
 	..()
 
 /obj/machinery/multistructure/nuclear_reactor_part/fuel_rod/attack_hand(mob/user as mob)
 	if(current_step == STEP_UNWRENCHED)
-		user.visible_message(SPAN_NOTICE("[user] pulls the rod container up."), SPAN_NOTICE("You pulls the rod container up."))
+		user.visible_message(SPAN_NOTICE("[user] pulls the rod container up."), SPAN_NOTICE("You pull the rod container up."))
 		current_step = STEP_PULLED
 		update_icon()
+		playsound(loc, 'sound/machines/airlock_open_force.ogg', 50, 1)
 		return
 
 	if(current_step == STEP_PULLED)
 		user.visible_message(SPAN_NOTICE("[user] push the rod container down."), SPAN_NOTICE("You push the rod container down."))
 		current_step = STEP_UNWRENCHED
 		update_icon()
+		playsound(loc, 'sound/machines/pong.ogg', 50, 1)
+		PulseRadiation(src, rand(1,50), rand(1,8))
 		return
 
 
@@ -103,5 +114,9 @@
 	cut_overlays()
 	if(current_step == STEP_PULLED)
 		add_overlay("F100")
+		density = TRUE
+		opacity = 1
 	else
 		add_overlay("F0")
+		density = FALSE
+		opacity = 0

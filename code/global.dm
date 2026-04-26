@@ -28,7 +28,7 @@ var/const/company_name  = "NanoTrasen"
 var/const/company_short = "NT"
 var/game_version        = "Alpha Testing"
 var/changelog_hash      = ""
-var/game_year           = "325"//(text2num(time2text(world.realtime, "YYYY")) - 1700)
+var/game_year           = "326"//(text2num(time2text(world.realtime, "YYYY")) - 1700)
 
 var/round_progressing = 1
 var/master_storyteller       = "shitgenerator"

@@ -1,0 +1,36 @@
+{
+	"map_name": "SS13",
+	"map_desc": "The very first SS13 map, with additions to be playable in the current year.",
+	"map_file": "maps/main_ship/SS13.dmm",
+	"map_size_x": 100,
+	"map_size_y": 100,
+	"map_size_z": 2,
+
+	"is_playable_level": true,
+	"is_main_ship_level": true,
+	"is_sealed_level": false,
+
+	"add_jobs":[
+		{"Captain":1},
+		{"Head of Personnel":1},
+
+		{"Security":5},
+		{"Detective":1},
+
+		{"Cook":1},
+		{"Janitor":2},
+		{"Clown":1},
+		{"Botanist":1},
+
+		{"Engineer":4},
+
+		{"Cargo Technician":4},
+
+		{"Doctor":3},
+
+		{"Scientist":3},
+
+		{"AI":1},
+		{"Robot":1},
+		{"Assistant":-1}]
+}

@@ -73,9 +73,9 @@
 	flags_inv = NONE
 
 /obj/item/clothing/head/armor/helmet/ironhammer
-	name = "operator helmet"
-	desc = "Ironhammer Security gear. Protects the head from impacts, and the lack of a visor ensures an unhindered aim."
-	icon_state = "helmet_ironhammer"
+	name = "combat helm"
+	desc = "A combat helmet, no visor."
+	icon_state = "marine_helm"
 	flags_inv = BLOCKHEADHAIR|HIDEEARS
 
 /obj/item/clothing/head/armor/helmet/technomancer
@@ -161,9 +161,9 @@
 	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/armor/bulletproof
-	name = "Peacekeeper helm"
-	desc = "For Democracy we will die, speading Freedom across the skies."
-	icon_state = "peace"
+	name = "combat helm"
+	desc = "You know the music, time to dance."
+	icon_state = "marine_visor"
 	body_parts_covered = HEAD | EARS | EYES
 	armor = list(
 		melee = 7,
@@ -174,7 +174,7 @@
 		rad = 0
 	)
 	price_tag = 400
-	flags_inv = BLOCKHEADHAIR|HIDEEARS|HIDEEYES|HIDEFACE
+	flags_inv = BLOCKHEADHAIR|HIDEEARS|HIDEEYES
 	flash_protection = FLASH_PROTECTION_MAJOR
 	matter = list(
 		MATERIAL_STEEL = 8,
@@ -182,6 +182,11 @@
 		MATERIAL_GLASS = 3 //For the visor parts
 	)
 	style_coverage = COVERS_WHOLE_HEAD
+
+/obj/item/clothing/head/armor/bulletproof/peace
+	name = "Peacekeeper helm"
+	desc = "For Democracy we will die, speading Freedom across the skies."
+	icon_state = "peace"
 
 /obj/item/clothing/head/armor/bulletproof/ironhammer_nvg //currently junk-only
 	name = "tactical ballistic helmet"

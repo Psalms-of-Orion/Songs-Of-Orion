@@ -4,11 +4,11 @@
 /obj/item/clothing/head/space/bomb
 	name = "bomb helmet"
 	desc = "Use in case of bomb. The shielded visor makes aiming harder."
-	icon_state = "bombsuit"
+	icon_state = "bomb"
 	armor = list(
-		melee = 10,
-		bullet = 10,
-		energy = 10,
+		melee = 15,
+		bullet = 5,//Weak point
+		energy = 15,
 		bomb = 1000,
 		bio = 100,
 		rad = 90
@@ -20,15 +20,15 @@
 /obj/item/clothing/suit/space/bomb
 	name = "bomb suit"
 	desc = "A heavy armored space suit designed for safety when handling explosives."
-	icon_state = "bombsuit"
-	item_state = "bombsuit"
+	icon_state = "bomb"
+	item_state = "bomb"
 	spawn_tags = SPAWN_TAG_HAZMATSUIT
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	armor = list(
-		melee = 10,
-		bullet = 10,
-		energy = 10,
+		melee = 15,
+		bullet = 25,
+		energy = 15,
 		bomb = 1000,
 		bio = 100,
 		rad = 90

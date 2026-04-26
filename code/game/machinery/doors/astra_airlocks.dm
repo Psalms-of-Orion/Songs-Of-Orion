@@ -7,6 +7,7 @@
 	assembly_type = /obj/structure/door_assembly
 	resistance = RESISTANCE_ARMOURED
 	opacity = 0
+	glass = 1
 
 /obj/machinery/door/airlock/orion/sec
 	name = "Security Airlock"

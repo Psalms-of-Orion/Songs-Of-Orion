@@ -8,6 +8,8 @@
 	level = BELOW_PLATING_LEVEL
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH|WEST
+	var/tvalve_sound = 'sound/machines/Conveyor_switch.ogg'
+
 
 	var/state = 0 // 0 = go straight, 1 = go to side
 
@@ -173,6 +175,7 @@
 /obj/machinery/atmospherics/tvalve/attack_hand(mob/user as mob)
 	src.add_fingerprint(usr)
 	update_icon(1)
+	playsound(src.loc, tvalve_sound, 55, 1)
 	sleep(10)
 	if (src.state)
 		src.go_straight()
@@ -279,6 +282,7 @@
 	name = "digital switching valve"
 	desc = "A digitally controlled valve."
 	icon = 'icons/atmos/digital_tvalve.dmi'
+	tvalve_sound = 'sound/machines/chime.ogg'
 
 	var/frequency = 0
 	var/id = null
@@ -418,6 +422,7 @@
 	name = "digital switching valve"
 	desc = "A digitally controlled valve."
 	icon = 'icons/atmos/digital_tvalve.dmi'
+	tvalve_sound = 'sound/machines/chime.ogg'
 
 	var/frequency = 0
 	var/id

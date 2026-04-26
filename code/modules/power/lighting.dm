@@ -169,8 +169,8 @@
 	var/on = FALSE					// 1 if on, 0 if off
 	var/on_gs = 0
 	var/autoattach = 0			//If this attaches to a wall automatically
-	var/brightness_range = 7	// luminosity when on, also used in power calculation
-	var/brightness_power = 2
+	var/brightness_range = 6	// luminosity when on, also used in power calculation
+	var/brightness_power = 1.8
 	var/brightness_color = COLOR_LIGHTING_DEFAULT_BRIGHT
 	var/status = LIGHT_OK		// LIGHT_OK, _EMPTY, _BURNED or _BROKEN
 	var/flick_lighting = 0
@@ -195,7 +195,7 @@
 	icon_state = "bulb1"
 	base_state = "bulb"
 	fitting = "bulb"
-	brightness_range = 3
+	brightness_range = 5
 	brightness_power = 1
 	desc = "A small lighting fixture."
 	light_type = /obj/item/light/bulb
@@ -209,6 +209,16 @@
 	light_type = /obj/item/light/tube/large
 	brightness_range = 12
 	brightness_power = 4
+
+/obj/machinery/light/wall
+	name = "wall light"
+	icon_state = "wall1"
+	base_state = "wall"
+	fitting = "large tube"
+	light_type = /obj/item/light/tube/large
+	brightness_range = 7
+	brightness_power = 2
+	//brightness_color = "d2cfb7"
 
 /obj/machinery/light/built/New()
 	status = LIGHT_EMPTY
