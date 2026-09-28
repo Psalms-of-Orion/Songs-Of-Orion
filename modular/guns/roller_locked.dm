@@ -1,5 +1,5 @@
 //// ========================================================== ////
-///// H & K ROLLER DELAYED WEAPONS //////
+/////H & K ROLLER DELAYED WEAPONS //////
 //// Every flavor of CETME based firearms shall belong here.
 //// Includes the MP5, MP5K, MP5SD, MP5GL, HK31/51/G3, HK53, & HK21
 //// These could be considered placeholders, or SOVL, as they provide the majority of niches for self-loading long guns.
@@ -126,7 +126,8 @@ obj/item/gun/projectile/automatic/hk //MP5A5
 	if(cur_mode.settings["use_launcher"])
 		launcher.Fire(target, user, params, pointblank, reflex)
 		if(!launcher.chambered)
-			switch_firemodes() //switch back automatically
+			return
+//			switch_firemodes() //switch back automatically
 	else
 		..()
 
@@ -191,7 +192,7 @@ obj/item/gun/projectile/automatic/hk //MP5A5
 	magazine_type = /obj/item/ammo_magazine/srifle
 	matter = list(MATERIAL_PLASTEEL = 10, MATERIAL_STEEL = 4, MATERIAL_PLASTIC = 5)
 	price_tag = 2000
-	fire_sound = 'sound/weapons/guns/fire/cal/30.ogg'
+	fire_sound = 'sound/weapons/guns/fire/sfrifle_fire.ogg'
 	damage_multiplier = 1.2
 	penetration_multiplier = 0
 	init_recoil = RIFLE_RECOIL(0.6)
