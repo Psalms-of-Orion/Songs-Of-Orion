@@ -2,15 +2,20 @@
 var/global/list/default_internal_channels = list(
 	num2text(PUB_FREQ) = list(),
 	num2text(AI_FREQ)  = list(access_synth),
+	num2text(AI_I_FREQ)  = list(),
 	num2text(COMM_FREQ)= list(access_heads),
+	num2text(COMM_I_FREQ)=list(),
 	num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
+	num2text(ENG_I_FREQ)=list(),
 	num2text(MED_FREQ) = list(access_medical_equip),
 	num2text(NT_FREQ) = list(access_nt_disciple),
-	num2text(MED_I_FREQ)=list(access_medical_equip),
+	num2text(MED_I_FREQ)=list(),
 	num2text(SEC_FREQ) = list(access_security),
-	num2text(SEC_I_FREQ)=list(access_security),
+	num2text(SEC_I_FREQ)=list(),
+	num2text(SCI_I_FREQ)=list(),
 	num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo),
+	num2text(SUP_I_FREQ)=list(),
 	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics)
 )
 
@@ -21,7 +26,7 @@ var/global/list/unique_internal_channels = list(
 var/global/list/default_medbay_channels = list(
 	num2text(PUB_FREQ) = list(),
 	num2text(MED_FREQ) = list(access_medical_equip),
-	num2text(MED_I_FREQ) = list(access_medical_equip)
+	num2text(MED_I_FREQ) = list()
 )
 
 /obj/item/device/radio
@@ -186,10 +191,10 @@ var/global/list/default_medbay_channels = list(
 
 /obj/item/device/radio/proc/ToggleBroadcast()
 	broadcasting = !broadcasting && !(wires.IsIndexCut(WIRE_TRANSMIT) || wires.IsIndexCut(WIRE_SIGNAL))
-
+	update_icon()
 /obj/item/device/radio/proc/ToggleReception()
 	listening = !listening && !(wires.IsIndexCut(WIRE_RECEIVE) || wires.IsIndexCut(WIRE_SIGNAL))
-
+	update_icon()
 /obj/item/device/radio/CanUseTopic()
 	if(!on)
 		return STATUS_CLOSE
@@ -749,6 +754,12 @@ var/global/list/default_medbay_channels = list(
 	listening = 1
 	name = "phone"
 
+/obj/item/device/radio/intercom/attack_hand(mob/user as mob)
+	src.add_fingerprint(user)
+	spawn (0)
+		attack_self(user)
+
+
 /obj/item/device/radio/phone/medbay
 	frequency = MED_I_FREQ
 
@@ -902,10 +913,20 @@ var/global/list/default_medbay_channels = list(
 
 /obj/item/device/radio/alt1
 	name = "walkie talkie"
-	icon_state = "walkietalkie2"
+	icon_state = "walkietalkie1"
 	item_state = "walkietalkie"
 
 /obj/item/device/radio/alt2
 	name = "station radio"
 	icon_state = "walkietalkie2"
 	item_state = "walkietalkie"
+
+/obj/item/device/radio/eng
+	name = "Engineering radio"
+	icon_state = "walkietalkie2"
+	item_state = "walkietalkie"
+	channels = list("Engineering" = 1, "Mining" = 1, "Medical(Public)" = 1, "Security(Public)" = 1, "Engineering(Public)" = 1, "Supply(Public)" = 1)
+
+
+
+

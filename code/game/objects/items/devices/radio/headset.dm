@@ -133,7 +133,7 @@
 	desc = "When the divers wish to chat like girls."
 	icon_state = "taccom"
 	item_state = "taccom"
-	ks2type = /obj/item/device/encryptionkey/headset_eng
+	ks2type = /obj/item/device/encryptionkey/headset_erp
 
 /obj/item/device/radio/headset/headset_rob
 	name = "robotics radio headset"
