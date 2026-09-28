@@ -258,8 +258,6 @@
 	dock_target = "cargo_bay"
 	is_valid_destination = FALSE
 
-
-
 // Pirate shuttle
 // Docking controller chooses which of our airlocks should open onto the target location.
 // Pirate ship has two airlock but let's not bother having them automatically controlled
@@ -441,5 +439,7 @@
 
 /datum/shuttle/autodock/ferry/cargo/proc/get_mobs()
 	. = list()
-	for(var/mob/mob in get_turfs())
-		. += mob
+	for(var/area/A in shuttle_area)
+		for(var/mob/M in A)
+			if(isliving(M))
+				. += M

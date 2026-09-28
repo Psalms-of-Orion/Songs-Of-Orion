@@ -477,56 +477,93 @@
 
 	// Functions used by the regular trading programs
 	if(program_type != "ordering")
+		if(href_list["PRG_receiving"])
+			var/list/beacons_by_id = list()
+			for(var/obj/machinery/trade_beacon/receiving/beacon in SStrade.beacons_receiving)
+				if(get_area(beacon) == get_area(computer) || program_type == "master")
+					var/beacon_id = beacon.get_id()
+					beacons_by_id.Insert(beacon_id, beacon_id)
+					beacons_by_id[beacon_id] = beacon
+			if(beacons_by_id.len == 1)
+				receiving = beacons_by_id[beacons_by_id[1]]
+			else
+				var/id = input("Select nearby receiving beacon", "Receiving Beacon", null) as null|anything in beacons_by_id
+				receiving = beacons_by_id[id]
+			return TRUE
+
+		if(href_list["PRG_sending"])
+			var/list/beacons_by_id = list()
+			for(var/obj/machinery/trade_beacon/sending/beacon in SStrade.beacons_sending)
+				if(get_area(beacon) == get_area(computer) || program_type == "master")
+					var/beacon_id = beacon.get_id()
+					beacons_by_id.Insert(beacon_id, beacon_id)
+					beacons_by_id[beacon_id] = beacon
+			if(beacons_by_id.len == 1)
+				sending = beacons_by_id[beacons_by_id[1]]
+			else
+				var/id = input("Select nearby sending beacon", "Sending Beacon", null) as null|anything in beacons_by_id
+				sending = beacons_by_id[id]
+			return TRUE
+
 		if(account)
 			if(href_list["PRG_offer_fulfill"])
-				if(IS_SHIP_LEVEL(SStrade.shuttle.current_location.z))
-					to_chat(usr, SPAN_WARNING("ERROR: Recall the supply shuttle first."))
+				if(get_area(sending) != get_area(computer) && program_type != "master")
+					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
 					return
 				var/datum/trade_station/S = LAZYACCESS(SStrade.discovered_stations, text2num(href_list["PRG_offer_fulfill"]))
 				if(!S)
 					return
 				var/atom/movable/path = text2path(href_list["PRG_offer_fulfill_path"])
 				var/is_slaved = (program_type == "slave") ? TRUE : FALSE
-				SStrade.fulfill_offer(account, station, path, is_slaved)
+				SStrade.fulfill_offer(sending, account, station, path, is_slaved)
 				return TRUE
 
 			if(href_list["PRG_offer_fulfill_all"])
-				if(IS_SHIP_LEVEL(SStrade.shuttle.current_location.z))
-					to_chat(usr, SPAN_WARNING("ERROR: Recall the supply shuttle first."))
+				if(get_area(sending) != get_area(computer) && program_type != "master")
+					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
 					return
 				var/is_slaved = (program_type == "slave") ? TRUE : FALSE
-				SStrade.fulfill_all_offers(account, is_slaved)
+				SStrade.fulfill_all_offers(sending, account, is_slaved)
 				return TRUE
 
-		if(SStrade.shuttle)
+		if(receiving)
 			if(href_list["PRG_receive"])
 				if(!account)
 					to_chat(usr, SPAN_WARNING("ERROR: no account linked."))
 					return
-				if(IS_SHIP_LEVEL(SStrade.shuttle.current_location.z))
-					to_chat(usr, SPAN_WARNING("ERROR: Recall the supply shuttle first."))
+				if(get_area(receiving) != get_area(computer) && program_type != "master")
+					to_chat(usr, SPAN_WARNING("ERROR: Receiving beacon is too far from \the [computer]."))
 					return
-				SStrade.buy(account, shoppinglist)
+				SStrade.buy(receiving, account, shoppinglist)
 				reset_shop_list()
 				return TRUE
 
-			if(href_list["PRG_export"])
-				if(IS_SHIP_LEVEL(SStrade.shuttle.current_location.z))
-					to_chat(usr, SPAN_WARNING("ERROR: Recall the supply shuttle first."))
-					return
-				SStrade.export()
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		if(href_list["PRG_toogle_shuttle"])
+			var/list/shuttle_mobs = SStrade.shuttle.get_mobs()
+
+			if(length(shuttle_mobs))
+				to_chat(usr, SPAN_WARNING("For safety reasons the automated supply shuttle cannot transport live organisms."))
 				return TRUE
 
-			if(href_list["PRG_toogle_shuttle"])
-				if(IS_SHIP_LEVEL(SStrade.shuttle.current_location.z))
-					if(length(SStrade.shuttle.get_mobs()))
-						to_chat(usr, "For safety reasons the automated supply shuttle cannot transport live organisms, classified nuclear weaponry or homing beacons.")
-					else
-						SStrade.shuttle.launch(src)
-						to_chat(usr, "Initiating launch sequence.")
-				else
-					SStrade.shuttle.launch(src)
-					to_chat(usr, "The supply shuttle has been called and will arrive shortly.")
+			SStrade.shuttle.launch(src)
+
+			if(IS_SHIP_LEVEL(SStrade.shuttle.current_location.z))
+				to_chat(usr, "Initiating launch sequence.")
+			else
+				to_chat(usr, "The supply shuttle has been called and will arrive shortly.")
+
+			return TRUE
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		if(sending)
+			if(href_list["PRG_export"])
+				if(get_area(sending) != get_area(computer) && program_type != "master")
+					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
+					return
+				SStrade.export(sending)
 				return TRUE
 
 		if(href_list["PRG_approve_order"])
@@ -545,7 +582,7 @@
 				to_chat(usr, SPAN_WARNING("ERROR: Not enough funds in requesting account ([requesting_account.get_name()] #[requesting_account.account_number])."))
 				return
 
-			SStrade.purchase_order(order)
+			SStrade.purchase_order(receiving, order)
 			SStrade.order_queue.Remove(order)
 			if(current_order == order)
 				current_order = null
@@ -582,16 +619,17 @@
 	var/is_all_access = FALSE		// Used for log and order access
 	var/account
 
-	.["shuttle"] = FALSE
-	if(SStrade && SStrade.shuttle && SStrade.shuttle.current_location)
-		.["shuttle"] = initial(SStrade.shuttle.current_location.name)
-		.["shuttle_status"] = SStrade.shuttle.moving_status
-
 	.["prg_type"] = PRG.program_type
 
 	.["prg_screen"] = PRG.prg_screen
 	.["tradescreen"] = PRG.trade_screen
 	.["log_screen"] = PRG.log_screen
+
+	.["receiving_index"] =  SStrade.beacons_receiving.Find(PRG.receiving)
+	.["sending_index"] = SStrade.beacons_sending.Find(PRG.sending)
+
+	.["shuttle"] = SStrade.shuttle.current_location.name
+	.["shuttle_status"] = SStrade.shuttle.moving_status
 
 	if(PRG.station)
 		.["station_name"] = PRG.station.name
@@ -603,6 +641,12 @@
 		.["station_recommendations_needed"] = PRG.station.recommendations_needed
 		.["offer_time"] = time2text((PRG.station.update_time - (world.time - PRG.station.update_timer_start)), "mm:ss")
 
+	if(PRG.sending)
+		.["export_time_max"] = round(PRG.sending.export_cooldown / (1 SECOND))
+		.["export_time_start"] = PRG.sending.export_timer_start
+		.["export_time_elapsed"] = PRG.sending.export_timer_start ? round((world.time - PRG.sending.export_timer_start) / (1 SECOND)) : 0
+		.["export_ready"] = PRG.sending.export_timer_start ? FALSE : TRUE
+
 	if(PRG.account)
 		account = "[PRG.account.get_name()] #[PRG.account.account_number]"
 		.["account"] = account
@@ -612,6 +656,12 @@
 			is_all_access = (dept_id == DEPARTMENT_GUILD) ? TRUE : FALSE
 
 	.["is_all_access"] = is_all_access
+
+	if(!QDELETED(PRG.receiving))
+		.["receiving"] = PRG.receiving.get_id()
+
+	if(!QDELETED(PRG.sending))
+		.["sending"] = PRG.sending.get_id()
 
 	if(PRG.prg_screen == PRG_TREE)
 		var/list/line_list = list()
@@ -731,7 +781,8 @@
 					"index" = SStrade.discovered_stations.Find(PRG.station),
 					"path" = path,
 				)
-				offer["available"] = length(SStrade.assess_offer(offer_path, offer_content["attachments"], offer_content["attach_count"]))
+				if(PRG.sending)
+					offer["available"] = length(SStrade.assess_offer(PRG.sending, offer_path, offer_content["attachments"], offer_content["attach_count"]))
 				.["offers"] += list(offer)
 
 			if(!recursiveLen(.["offers"]))

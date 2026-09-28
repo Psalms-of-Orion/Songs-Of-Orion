@@ -7,6 +7,9 @@ SUBSYSTEM_DEF(trade)
 
 	var/trade_stations_budget = 7 // Currently unused. This is the budget for stations with spawn_always = FALSE
 
+	var/list/obj/machinery/trade_beacon/sending/beacons_sending = list()
+	var/list/obj/machinery/trade_beacon/receiving/beacons_receiving = list()
+
 	var/list/datum/trade_station/all_stations = list()
 	var/list/datum/trade_station/discovered_stations = list()
 
@@ -281,20 +284,26 @@ SUBSYSTEM_DEF(trade)
 		return FALSE	// If we're looking for attachments and the item has no upgrades, fail
 	return TRUE			// If attachments and attach_count are null, we're not looking for an item with attactments
 
-/datum/controller/subsystem/trade/proc/assess_offer(offer_path, list/attachments = null, attach_count = null)
+/datum/controller/subsystem/trade/proc/assess_offer(obj/machinery/trade_beacon/sending/beacon, offer_path, list/attachments = null, attach_count = null)
+	if(QDELETED(beacon))
+		return
+
 	. = list()
 
-	for(var/atom/movable/AM in shuttle.get_objects())
+	for(var/atom/movable/AM in beacon.get_objects())
 		if(AM.anchored || !(istype(AM, offer_path) || ispath(offer_path, /datum/reagent)))
 			continue
 		if(!check_attachments(AM, offer_path, attachments, attach_count) || !check_contents(AM, offer_path))		// Check contents after we know it's the same type
 			continue
 		. += AM
 
-/datum/controller/subsystem/trade/proc/assess_all_offers()
+/datum/controller/subsystem/trade/proc/assess_all_offers(obj/machinery/trade_beacon/sending/beacon)
+	if(QDELETED(beacon))
+		return
+
 	var/list/all_offers = offer_types.Copy()
 
-	for(var/atom/movable/AM in shuttle.get_objects())
+	for(var/atom/movable/AM in beacon.get_objects())
 		for(var/offer_path in offer_types)
 			if(AM.anchored || !(istype(AM, offer_path) || ispath(offer_path, /datum/reagent)))
 				continue
@@ -311,9 +320,9 @@ SUBSYSTEM_DEF(trade)
 
 	return all_offers
 
-/datum/controller/subsystem/trade/proc/fulfill_offer(datum/money_account/account, datum/trade_station/station, offer_path, is_slaved = FALSE)
+/datum/controller/subsystem/trade/proc/fulfill_offer(obj/machinery/trade_beacon/sending/beacon, datum/money_account/account, datum/trade_station/station, offer_path, is_slaved = FALSE)
 	var/list/offer_content = station.special_offers[offer_path]
-	var/list/exported = assess_offer(offer_path, offer_content["attachments"], offer_content["attach_count"])
+	var/list/exported = assess_offer(beacon, offer_path, offer_content["attachments"], offer_content["attach_count"])
 
 	var/offer_amount = text2num(offer_content["amount"])
 	var/offer_price = text2num(offer_content["price"])
@@ -330,7 +339,9 @@ SUBSYSTEM_DEF(trade)
 			invoice_contents_info += "<li>[AM.name]</li>"
 			qdel(AM)
 
-		create_log_entry("Special Offer", account.get_name(), invoice_contents_info, offer_price, FALSE)
+		create_log_entry("Special Offer", account.get_name(), invoice_contents_info, offer_price, FALSE, get_turf(beacon))
+
+		beacon.activate()
 
 		if(is_slaved)
 			var/datum/money_account/master_account = department_accounts[DEPARTMENT_GUILD]
@@ -347,8 +358,8 @@ SUBSYSTEM_DEF(trade)
 		offer_content["price"] = 0
 		station.special_offers[offer_path] = offer_content
 
-/datum/controller/subsystem/trade/proc/fulfill_all_offers(datum/money_account/account, is_slaved = FALSE)
-	var/list/exported = assess_all_offers()
+/datum/controller/subsystem/trade/proc/fulfill_all_offers(obj/machinery/trade_beacon/sending/beacon, datum/money_account/account, is_slaved = FALSE)
+	var/list/exported = assess_all_offers(beacon)
 	var/list/reversed_stations = reverseRange(discovered_stations.Copy())	// Most recently discovered stations are checked first
 
 	for(var/datum/trade_station/TS in reversed_stations)
@@ -383,7 +394,7 @@ SUBSYSTEM_DEF(trade)
 					invoice_contents_info += "<li>[AM.name]</li>"
 					qdel(AM)
 
-				create_log_entry("Special Offer", account.get_name(), invoice_contents_info, offer_price, FALSE)
+				create_log_entry("Special Offer", account.get_name(), invoice_contents_info, offer_price, FALSE, get_turf(beacon))
 
 				if(is_slaved)
 					var/datum/money_account/master_account = department_accounts[DEPARTMENT_GUILD]
@@ -399,6 +410,8 @@ SUBSYSTEM_DEF(trade)
 				offer_content["amount"] = 0
 				offer_content["price"] = 0
 				TS.special_offers[offer_path] = offer_content
+
+	beacon.start_export()
 
 /datum/controller/subsystem/trade/proc/collect_counts_from(list/shopList)
 	. = 0
@@ -428,15 +441,15 @@ SUBSYSTEM_DEF(trade)
 	for(var/path in category)
 		. += get_import_cost(path, station) * category[path]
 
-/datum/controller/subsystem/trade/proc/buy(datum/money_account/account, list/shopList, is_order = FALSE, buyer_name = null)
-	if(!shuttle || !account || !recursiveLen(shopList))
+/datum/controller/subsystem/trade/proc/buy(obj/machinery/trade_beacon/receiving/senderBeacon, datum/money_account/account, list/shopList, is_order = FALSE, buyer_name = null)
+	if(QDELETED(senderBeacon) || !istype(senderBeacon) || !account || !recursiveLen(shopList))
 		return
 
 	var/obj/structure/closet/secure_closet/personal/trade/C
 	var/count_of_all = collect_counts_from(shopList)
 	var/price_for_all = collect_price_for_list(shopList)
 	if((isnum(count_of_all) && count_of_all > 1) || shopList.Find("/obj/machinery/power/supermatter") > 0)
-		C = shuttle.drop(/obj/structure/closet/secure_closet/personal/trade)
+		C = senderBeacon.drop(/obj/structure/closet/secure_closet/personal/trade)
 		if(is_order)
 			C.locked = TRUE
 			C.registered_name = buyer_name
@@ -463,7 +476,7 @@ SUBSYSTEM_DEF(trade)
 						if(istype(C))
 							new good_path(C)
 						else
-							var/atom/movable/new_item = shuttle.drop(good_path)
+							var/atom/movable/new_item = senderBeacon.drop(good_path)
 							invoice_location = new_item.loc
 					if(isnum(index_of_good))
 						station.set_good_amount(category_name, index_of_good, max(0, station.get_good_amount(category_name, index_of_good) - count_of_good))
@@ -483,13 +496,22 @@ SUBSYSTEM_DEF(trade)
 	create_log_entry("Shipping", account.get_name(), order_contents_info, price_for_all, FALSE, invoice_location)
 	charge_to_account(account.account_number, account.get_name(), "Purchase", "Trade Network", price_for_all)
 
-/datum/controller/subsystem/trade/proc/export()
+/datum/controller/subsystem/trade/proc/export(obj/machinery/trade_beacon/sending/senderBeacon)
+	if(QDELETED(senderBeacon))
+		return
+
 	var/invoice_contents_info
 	var/export_count = 0
 	var/cost = 0
 
-	for(var/atom/movable/AM in shuttle.get_objects())
+	for(var/atom/movable/AM in senderBeacon.get_objects())
+		if(ishuman(AM))
+			var/mob/living/carbon/human/H = AM
+			H.apply_damage(15, BURN)
+			continue
+
 		var/list/contents_incl_self = AM.GetAllContents(3, TRUE)
+
 		if(is_path_in_list(/mob/living/carbon/human, contents_incl_self))
 			continue
 
@@ -512,12 +534,13 @@ SUBSYSTEM_DEF(trade)
 		if(export_count > EXPORT_COUNT_MAXIMUM)
 			break
 
+	senderBeacon.start_export()
 	var/datum/money_account/guild_account = department_accounts[DEPARTMENT_GUILD]
 	var/datum/transaction/T = new(cost, guild_account.get_name(), "Export", TRADE_SYSTEM_IC_NAME)
 	T.apply_to(guild_account)
 
 	if(invoice_contents_info)	// If no info, then nothing was exported
-		create_log_entry("Export", guild_account.get_name(), invoice_contents_info, cost, FALSE)
+		create_log_entry("Export", guild_account.get_name(), invoice_contents_info, cost, FALSE, get_turf(senderBeacon))
 
 /datum/controller/subsystem/trade/proc/get_export_price_multiplier(atom/movable/target)
 	if(!target || target.anchored)
@@ -580,8 +603,8 @@ SUBSYSTEM_DEF(trade)
 
 	return order_queue_slot
 
-/datum/controller/subsystem/trade/proc/purchase_order(order_id)
-	if(!shuttle || !order_id)
+/datum/controller/subsystem/trade/proc/purchase_order(obj/machinery/trade_beacon/receiving/beacon, order_id)
+	if(QDELETED(beacon) || !beacon || !order_id)
 		return
 
 	if(order_queue.Find(order_id))
@@ -594,7 +617,7 @@ SUBSYSTEM_DEF(trade)
 		var/total_cost = order["cost"] + order["fee"]
 		var/is_requestor_master = (requesting_account == master_account) ? TRUE : FALSE
 
-		buy(master_account, shopping_list, !is_requestor_master, requesting_account.owner_name)
+		buy(beacon, master_account, shopping_list, !is_requestor_master, requesting_account.owner_name)
 		if(!is_requestor_master)
 			transfer_funds(requesting_account, master_account, "Order Request", null, total_cost)
 		create_log_entry("Order", requesting_account.get_name(), viewable_contents, total_cost)

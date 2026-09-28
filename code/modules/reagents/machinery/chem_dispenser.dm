@@ -30,13 +30,24 @@
 		"radium","water","ethanol",
 		"sugar","sacid","tungsten"
 	)
+
+// For those debugging this esoteric code snippet here. When 516 came along the list failed to work because it was using numbers as a reference. To make the simplest and most intergratic method
+// to update it I removed the '1 = list(), 2 = list()' because the compiler is already numbering the list and it is checking the ref when intialize() is ran. This borders tech heresy with how
+// esoteric it is and probably has a better method but this was the simplest and cleanest, if insane, solution. DO NOT add new lists, as each new list requires going up a tier and 6 is already
+// the highest one can get in theory. -Possum
 	var/list/tiered_reagents = list(
-		1 = list(),
-		2 = list("inaprovaline","anti_toxin","kelotane"), // basic upgrade
-		3 = list("tricordrazine","spaceacillin","dermaline"), // max moebius tech
-		4 = list("blattedin", "polystem"), // excel tech
-		5 = list("carpotoxin", "bicaridine"),// one-star
-		6 = list("meralyne", "nanites") // alien
+		// Dispensable reagents/no upgrades
+		list(),
+		// Basic upgrades
+		list("inaprovaline", "anti_toxin", "kelotane"),
+		// Max moebius upgrades
+		list("tricordrazine", "spaceacillin", "dermaline"),
+		// Excelsior
+		list("blattedin", "polystem"),
+		// One star
+		list("carpotoxin", "bicaridine"),
+		// Alien
+		list("meralyne", "nanites")
 	)
 	var/list/tiered_reagents_cost = list(
 		"inaprovaline" = 8,
