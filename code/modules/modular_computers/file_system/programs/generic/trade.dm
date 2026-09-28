@@ -541,15 +541,19 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		if(href_list["PRG_toogle_shuttle"])
+			var/list/shuttle_mobs = SStrade.shuttle.get_mobs()
+
+			if(length(shuttle_mobs))
+				to_chat(usr, SPAN_WARNING("For safety reasons the automated supply shuttle cannot transport live organisms."))
+				return TRUE
+
+			SStrade.shuttle.launch(src)
+
 			if(IS_SHIP_LEVEL(SStrade.shuttle.current_location.z))
-				if(length(SStrade.shuttle.get_mobs()))
-					to_chat(usr, "For safety reasons the automated supply shuttle cannot transport live organisms, classified nuclear weaponry or homing beacons.")
-				else
-					SStrade.shuttle.launch(src)
-					to_chat(usr, "Initiating launch sequence.")
+				to_chat(usr, "Initiating launch sequence.")
 			else
-				SStrade.shuttle.launch(src)
 				to_chat(usr, "The supply shuttle has been called and will arrive shortly.")
+
 			return TRUE
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -623,6 +627,9 @@
 
 	.["receiving_index"] =  SStrade.beacons_receiving.Find(PRG.receiving)
 	.["sending_index"] = SStrade.beacons_sending.Find(PRG.sending)
+
+	.["shuttle"] = SStrade.shuttle.current_location.name
+	.["shuttle_status"] = SStrade.shuttle.moving_status
 
 	if(PRG.station)
 		.["station_name"] = PRG.station.name

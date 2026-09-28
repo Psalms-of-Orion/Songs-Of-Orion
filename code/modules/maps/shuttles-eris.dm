@@ -439,5 +439,7 @@
 
 /datum/shuttle/autodock/ferry/cargo/proc/get_mobs()
 	. = list()
-	for(var/mob/mob in get_turfs())
-		. += mob
+	for(var/area/A in shuttle_area)
+		for(var/mob/M in A)
+			if(isliving(M))
+				. += M

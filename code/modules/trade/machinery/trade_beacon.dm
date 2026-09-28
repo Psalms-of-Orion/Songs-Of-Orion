@@ -40,7 +40,7 @@
 	return ..()
 
 /obj/machinery/trade_beacon/sending/proc/get_objects()
-	var/list/objects = range(2, src) - src		// So the beacon won't send itself in the list of objects
+	var/list/objects = range(9, src) - src		// So the beacon won't send itself in the list of objects
 	return objects
 
 /obj/machinery/trade_beacon/sending/proc/start_export()
@@ -56,6 +56,9 @@
 /obj/machinery/trade_beacon/receiving
 	name = "receiving trade beacon"
 	circuit = /obj/item/electronics/circuitboard/trade_beacon/receiving
+	var/drop_x = 26
+	var/drop_y = 188
+	var/drop_z = 1
 
 /obj/machinery/trade_beacon/receiving/Initialize()
 	. = ..()
@@ -67,14 +70,19 @@
 
 /obj/machinery/trade_beacon/receiving/proc/drop(drop_type)
 	var/list/floor = list()
-	for(var/turf/floor/F in block(locate(x - 2, y - 2, z), locate(x + 2, y + 2, z)))
+	for(var/turf/floor/F in block(locate(drop_x - 2, drop_y - 8, drop_z), locate(drop_x + 2, drop_y - 2, drop_z)))
 		if(F.contains_dense_objects(TRUE))
 			continue
 		floor += F
+
 	if(!length(floor))
+		//visible_message(SPAN_WARNING("[src] cannot find a suitable location to deliver the shipment."))
 		return FALSE
+
 	activate()
+
 	var/turf/floor/pickfloor = pick(floor)
+
 	if(ispath(drop_type, /obj/structure/closet))
 		var/mob/living/carbon/human/dude = locate(/mob/living/carbon/human) in pickfloor
 		if(dude)

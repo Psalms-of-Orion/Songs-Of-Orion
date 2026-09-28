@@ -2,7 +2,7 @@
 "ab" = (/turf/wall/dummy,/area/space)
 "ac" = (/obj/structure/window/reinforced/crescent,/turf/wall/dummy,/area/space)
 "ad" = (/obj/structure/window/reinforced/crescent{dir = 4},/turf/wall/dummy,/area/space)
-"ae" = (/obj/machinery/trade_beacon/receiving,/obj/machinery/trade_beacon/sending,/turf/space,/area/space)
+"ae" = (/obj/machinery/trade_beacon/receiving,/obj/machinery/trade_beacon/sending,/turf/space,/area/centcom/trade_beacon)
 "ag" = (/obj/structure/window/reinforced/crescent{dir = 4},/obj/structure/window/reinforced/crescent{dir = 8},/turf/wall/dummy,/area/space)
 "ah" = (/obj/structure/railing/holorailing,/turf/open/holonofloor,/area/holodeck/source/industrial_arena)
 "an" = (/obj/structure/railing/holorailing/grey{dir = 4},/turf/open/holonofloor,/area/holodeck/source/wireframe)

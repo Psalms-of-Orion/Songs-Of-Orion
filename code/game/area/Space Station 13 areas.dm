@@ -287,7 +287,7 @@ area/space/atmosalert()
 	name = "\improper Centcom Emergency Shuttle"
 
 /area/centcom/suppy
-	name = "\improper Centcom Supply Shuttle"
+	name = "Trade-Station"
 
 /area/centcom/ferry
 	name = "\improper Centcom Transport Shuttle"
@@ -347,6 +347,13 @@ area/space/atmosalert()
 /area/testing/third
 	name = "testing three"
 
+// This area is a 1x1 tile used exclusively for the trade beacon as a way of integrating it into the shuttle system.
+// The name controls what displays in the trade program, be wary of changing it. -Possum
+/area/centcom/trade_beacon
+	name = "Trade Station"
+	icon_state = "syndie-ship"
+	requires_power = FALSE
+	dynamic_lighting = FALSE
 
 
 //EXTRA

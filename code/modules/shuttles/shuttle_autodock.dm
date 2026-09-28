@@ -161,12 +161,24 @@
 	"Public" procs
 */
 /datum/shuttle/autodock/proc/launch(var/user)
-	if(!can_launch()) return
+	if(!can_launch())
+		return
 
-	in_use = user	//obtain an exclusive lock on the shuttle
+	if(has_occupants())
+		if(user)
+			to_chat(user, SPAN_WARNING("The shuttle cannot launch while occupied."))
+		return
 
+	in_use = user
 	process_state = WAIT_LAUNCH
 	undock()
+
+
+/datum/shuttle/autodock/proc/has_occupants()
+	for(var/area/A in shuttle_area)
+		for(var/mob/living/M in A)
+			return TRUE
+	return FALSE
 
 /datum/shuttle/autodock/proc/force_launch(var/user)
 	if(!can_force()) return
