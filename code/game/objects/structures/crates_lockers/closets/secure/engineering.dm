@@ -32,11 +32,11 @@
 	icon_door = "eng_elec"
 
 /obj/structure/closet/secure_closet/engineering_electrical/populate_contents()
-	new /obj/item/clothing/gloves/insulated(src)
-	new /obj/item/clothing/gloves/insulated(src)
-	new /obj/item/storage/toolbox/electrical(src)
-	new /obj/item/storage/toolbox/electrical(src)
-	new /obj/item/storage/toolbox/electrical(src)
+	new /obj/item/clothing/gloves/insulated/cheap(src)
+	new /obj/item/clothing/gloves/insulated/cheap(src)
+	new /obj/item/storage/hcases/tool/electrical(src)
+	new /obj/item/storage/hcases/tool/electrical(src)
+	new /obj/item/storage/hcases/tool/electrical(src)
 	new /obj/item/electronics/circuitboard/apc(src)
 	new /obj/item/electronics/circuitboard/apc(src)
 	new /obj/item/electronics/circuitboard/apc(src)
@@ -65,7 +65,7 @@
 	new /obj/item/tool_upgrade/augment/fuel_tank(src)
 
 /obj/structure/closet/secure_closet/personal/engineering_personal
-	name = "technomancer's locker"
+	name = "Engineer's locker"
 	req_access = list(access_ce)
 	access_occupy = list(access_engine_equip)
 	icon_state = "eng"
@@ -77,17 +77,12 @@
 	else
 		new /obj/item/storage/backpack/satchel/industrial(src)
 	new /obj/item/taperoll/engineering(src)
-	new /obj/item/storage/toolbox/mechanical(src)
+	new /obj/item/storage/hcases/tool/mechanical(src)
 	new /obj/item/clothing/under/rank/engineer(src)
 	new /obj/item/clothing/head/hardhat(src)
 	new /obj/item/clothing/head/welding(src)
-	new /obj/item/clothing/gloves/insulated(src)
+	new /obj/item/clothing/gloves/insulated/cheap(src)
 	new /obj/item/device/radio/headset/headset_eng(src)
 	new /obj/item/clothing/suit/storage/hazardvest/orange(src)
 	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/clothing/glasses/powered/meson(src)
-	new /obj/item/clothing/head/armor/helmet/technomancer(src)
-	new /obj/item/clothing/suit/storage/vest/insulated(src)
-	new /obj/item/clothing/head/armor/helmet/technomancer_old(src)
-	new /obj/item/clothing/suit/storage/vest/technomancer_old(src)
 	new /obj/item/storage/pouch/engineering_tools (src)
