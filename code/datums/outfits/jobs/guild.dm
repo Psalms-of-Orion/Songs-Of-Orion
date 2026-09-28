@@ -13,7 +13,7 @@
 	pda_type = /obj/item/modular_computer/pda/cargo
 	l_ear = /obj/item/device/radio/headset/heads/merchant
 	backpack_contents = list(/obj/item/gun/projectile/olivaw = 1, /obj/item/ammo_magazine/pistol/rubber = 2)
-	l_pocket = /obj/item/card/keycard/syndicate/level_2
+	l_pocket = /obj/item/card/keycard/level_2/syndicate
 
 /decl/hierarchy/outfit/job/cargo/cargo_tech
 	name = OUTFIT_JOB_NAME("Syndicate Technician")

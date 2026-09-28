@@ -6,7 +6,7 @@
 	sort_category = "Suits and Overwear"
 
 /datum/gear/suit/jacket
-	display_name = "leather coat selection"
+	display_name = "jacket selection"
 	path = /obj/item/clothing/suit/storage/toggle/bomber
 	cost = 1
 
@@ -19,6 +19,8 @@
 		"Duster" 			= 	/obj/item/clothing/suit/storage/duster,
 		"Kaydee trenchcoat" = 	/obj/item/clothing/suit/storage/toggle/kaydee,
 		"Batty trenchcoat" 	= 	/obj/item/clothing/suit/storage/toggle/batty,
+		"Brotherhood" 		= 	/obj/item/clothing/suit/storage/chito,
+		"Gorka" 			= 	/obj/item/clothing/suit/storage/gorka,
 	)
 	gear_tweaks += new /datum/gear_tweak/path(jacket)
 
@@ -86,5 +88,6 @@
 		"Old Sec" 			= 	/obj/item/clothing/suit/storage/winter/sec,
 		"Medical" 			= 	/obj/item/clothing/suit/storage/winter/med,
 		"NanoTrassen" 		= 	/obj/item/clothing/suit/storage/winter/nt,
+		"Brotherhood" 		= 	/obj/item/clothing/suit/storage/winter/sar/yuuri,
 	)
 	gear_tweaks += new /datum/gear_tweak/path(winter)

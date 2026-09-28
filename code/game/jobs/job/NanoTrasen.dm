@@ -74,7 +74,7 @@
 	description = "You are the lowest level of NT logistics. A mover of goods and cargo. Welcome to retail."
 
 /obj/landmark/join/start/cargo_tech_nt
-	name = "Cargo Tech"
+	name = "Cargo Technician"
 	icon_state = "player-beige"
 	join_tag = /datum/job/cargo_tech_nt
 
@@ -86,7 +86,7 @@
 	faction = "CEV Eris"
 	total_positions = 2
 	supervisors = "the chain of command"
-	selection_color = "#dddddd"
+	selection_color = "#814fb3"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10, LANGUAGE_JIVE = 60)
 	access = list(access_bar, access_kitchen, access_maint_tunnels)
 	initial_balance = 750
@@ -161,7 +161,6 @@
 	join_tag = /datum/job/botanist_nt
 
 
-
 /datum/job/doctor_nt
 	title = "Doctor"
 	flag = DOCTOR
@@ -188,7 +187,7 @@
 							/datum/computer_file/program/chem_catalog,
 							/datum/computer_file/program/camera_monitor)
 
-	outfit_type = /decl/hierarchy/outfit/job/nt/medical/doctor
+	outfit_type = /decl/hierarchy/outfit/job/nt/doctor
 	description = "Keep the crew alive. We're almost done here, they can make it another day."
 
 /obj/landmark/join/start/doctor_nt
@@ -199,12 +198,12 @@
 
 
 /datum/job/security_nt
-	title = "Security"
+	title = "Security Officer"
 	flag = IHOPER
 	department = DEPARTMENT_SECURITY
 	department_flag = IRONHAMMER
 	faction = "CEV Eris"
-	total_positions = 2
+	total_positions = 4
 	supervisors = "the chain of command"
 	//alt_titles = list("Ironhammer Junior Operative")
 	selection_color = "#812a3d"
@@ -244,7 +243,7 @@
 	faction = "CEV Eris"
 	total_positions = 1
 	supervisors = "the chain of command"
-	selection_color = "#a7bbc6"
+	selection_color = "#49393e"
 	wage = WAGE_PROFESSIONAL
 
 	outfit_type = /decl/hierarchy/outfit/job/nt/detective
