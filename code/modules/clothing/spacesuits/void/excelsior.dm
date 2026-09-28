@@ -153,8 +153,8 @@
 			var/mob/hud_loc = hud.loc
 			hud_loc.drop_from_inventory(hud, src)
 		hud.forceMove(src)
-/
-obj/item/clothing/suit/space/void/excelsior
+
+/obj/item/clothing/suit/space/void/excelsior
 	name = "Trooper carapace"
 	desc = "Surprisingly space-proof arc-flash suit wrapped in armor and equipment. Comically evil."
 	icon_state = "trooper"
