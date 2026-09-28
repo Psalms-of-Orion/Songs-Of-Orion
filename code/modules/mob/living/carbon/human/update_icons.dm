@@ -840,7 +840,7 @@ var/global/list/damage_icon_parts = list()
 
 		var/beltlayer = BELT_LAYER
 		var/otherlayer = BELT_LAYER_ALT
-		if(istype(belt, /obj/item/storage/belt))
+		if(istype(belt, /obj/item/storage))
 			var/obj/item/storage/belt/ubelt = belt
 			if(ubelt.show_above_suit)
 				beltlayer = BELT_LAYER_ALT
