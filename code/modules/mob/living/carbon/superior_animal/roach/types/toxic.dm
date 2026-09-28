@@ -54,6 +54,7 @@
 
 /obj/item/projectile/roach_spit/on_hit(atom/target)
 	. = ..()
+	PulseRadiation(src, 2, 4)
 	if(isliving(target))
 		var/mob/living/L = target
 		var/damage = rand(3, 7)
@@ -63,3 +64,7 @@
 	if (isroach(target_mob))
 		return FALSE // so these pass through roaches
 	..()
+
+/obj/item/projectile/roach_spit/on_hit(turf/target)
+	. = ..()
+	PulseRadiation(src, 2, 4)
