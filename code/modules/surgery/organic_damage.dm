@@ -3,21 +3,34 @@
 /datum/surgery_step/fix_organ
 	target_organ_type = /obj/item/organ/internal
 	allowed_tools = list(
-		/obj/item/stack/medical/advanced/bruise_pack = 100,
-		/obj/item/stack/medical/bruise_pack = 20,
+		/obj/item/stack/medical/bruise/advanced = 90,
+		/obj/item/stack/medical/suture/standard = 75,
+		/obj/item/stack/medical/stapler = 90,
+		/obj/item/stack/medical/gauze = 25,
+		/obj/item/stack/medical/gauze/hemo = 50,
+		/obj/item/stack/medical/bruise = 10
 	)
 
 	duration = 80
 
 /datum/surgery_step/fix_organ/require_tool_message(mob/living/user)
-	to_chat(user, SPAN_WARNING("You need an advanced trauma kit, or at least some bandages, to complete this step."))
+	to_chat(user, SPAN_WARNING("You need trauma supplies, or at least some bandages, to complete this step."))
 
 /datum/surgery_step/fix_organ/proc/get_tool_name(obj/item/stack/tool)
 	var/tool_name = "\the [tool]"
-	if (istype(tool, /obj/item/stack/medical/advanced/bruise_pack))
+	if (istype(tool, /obj/item/stack/medical/bruise/advanced))
 		tool_name = "regenerative membrane"
-	if (istype(tool, /obj/item/stack/medical/bruise_pack))
+	if (istype(tool, /obj/item/stack/medical/bruise))
 		tool_name = "the bandaid"
+	if (istype(tool, /obj/item/stack/medical/gauze))
+		tool_name = "the gauze"
+	if (istype(tool, /obj/item/stack/medical/gauze/hemo))
+		tool_name = "the gauze"
+	if (istype(tool, /obj/item/stack/medical/suture/standard))
+		tool_name = "the suture"
+	if (istype(tool, /obj/item/stack/medical/stapler))
+		tool_name = "the staple"
+
 	return tool_name
 
 /datum/surgery_step/fix_organ/can_use(mob/living/user, obj/item/organ/internal/organ, obj/item/stack/tool)
@@ -156,20 +169,35 @@
 	organ.take_damage(60, 0, sharp=TRUE, edge=TRUE)
 
 /datum/surgery_step/fix_brute
-		allowed_tools = list(
-			/obj/item/stack/medical/advanced/bruise_pack = 100,
-			/obj/item/stack/medical/advanced/bruise_pack/nt = 100,
-		)
-		difficulty = FAILCHANCE_HARD
-		duration = 100
+	allowed_tools = list(
+		/obj/item/stack/medical/bruise/advanced = 100,
+		/obj/item/stack/medical/suture/standard = 75,
+		/obj/item/stack/medical/stapler = 100,
+		/obj/item/stack/medical/gauze = 25,
+		/obj/item/stack/medical/gauze/hemo = 50,
+		/obj/item/stack/medical/bruise = 10
+	)
+	difficulty = FAILCHANCE_HARD
+	duration = 100
 
 /datum/surgery_step/fix_brute/require_tool_message(mob/living/user)
-	to_chat(user, SPAN_WARNING("You need an advanced trauma kit to complete this step."))
+	to_chat(user, SPAN_WARNING("You need trauma supplies to complete this step."))
 
 /datum/surgery_step/fix_brute/proc/get_tool_name(obj/item/stack/tool)
-	var/tool_name = "\the regenerative membrane"
+	var/tool_name = "\the [tool]"
+	if (istype(tool, /obj/item/stack/medical/bruise/advanced))
+		tool_name = "regenerative membrane"
+	if (istype(tool, /obj/item/stack/medical/bruise))
+		tool_name = "the bandaid"
+	if (istype(tool, /obj/item/stack/medical/gauze))
+		tool_name = "the gauze"
+	if (istype(tool, /obj/item/stack/medical/gauze/hemo))
+		tool_name = "the gauze"
+	if (istype(tool, /obj/item/stack/medical/suture/standard))
+		tool_name = "the suture"
+	if (istype(tool, /obj/item/stack/medical/stapler))
+		tool_name = "the stapler"
 	return tool_name
-
 /datum/surgery_step/fix_brute/can_use(mob/living/user, obj/item/organ/external/organ, obj/item/tool)
 	if(organ.brute_dam <= 0)
 		to_chat(user, SPAN_NOTICE("This limb is undamaged!"))
@@ -181,16 +209,40 @@
 		SPAN_NOTICE("[user] begins to treat damage to [organ.get_surgery_name()]'s subcutaneous tissue with \the [tool]."),
 		SPAN_NOTICE("You begin to treat damage to [organ.get_surgery_name()]'s subcutaneous tissue with \the [tool].")
 	)
+	if(istype(tool, /obj/item/stack/medical/stapler))
+		playsound(user.loc, 'sound/effects/staple.ogg', rand(10, 50))
+	if(istype(tool, /obj/item/stack/medical/bruise/advanced) || istype(tool, /obj/item/stack/medical/gauze/hemo))
+		playsound(user.loc, 'sound/effects/tape.ogg', rand(10, 50))
+	else
+		playsound(user.loc, 'sound/effects/sewflesh.ogg', rand(10, 50))
 
 /datum/surgery_step/fix_brute/end_step(mob/living/user, obj/item/organ/external/organ, obj/item/tool)
-	if(istype(tool, /obj/item/stack/medical/advanced/bruise_pack) || istype(tool, /obj/item/stack/medical/advanced/bruise_pack/nt))
+	if(istype(tool, /obj/item/stack/medical/bruise/advanced) || istype(tool, /obj/item/stack/medical/gauze/hemo))
 		var/obj/item/stack/S = tool
+
 		if(S.use(1))
 			user.visible_message(
 			SPAN_NOTICE("[user] finishes treating damage to [organ.get_surgery_name()] with \the [tool]."),
 			SPAN_NOTICE("You finish treating damage to [organ.get_surgery_name()] with \the [tool].")
 			)
 			organ.heal_damage(25, 0, TRUE)
+			playsound(user.loc, 'sound/effects/tape.ogg', rand(10, 50))
+		else
+			to_chat(user, SPAN_NOTICE("\The [tool] is used up."))
+
+	if(istype(tool, /obj/item/stack/medical/suture/standard) || istype(tool, /obj/item/stack/medical/stapler))
+		var/obj/item/stack/S = tool
+
+		if(S.use(1))
+			user.visible_message(
+			SPAN_NOTICE("[user] finishes treating damage to [organ.get_surgery_name()] with \the [tool]."),
+			SPAN_NOTICE("You finish treating damage to [organ.get_surgery_name()] with \the [tool].")
+			)
+			organ.heal_damage(10, 0, TRUE)
+			if(istype(tool, /obj/item/stack/medical/stapler))
+				playsound(user.loc, 'sound/effects/staple.ogg', rand(10, 50))
+			else
+				playsound(user.loc, 'sound/effects/sewflesh.ogg', rand(10, 50))
 		else
 			to_chat(user, SPAN_NOTICE("\The [tool] is used up."))
 
@@ -203,7 +255,8 @@
 
 /datum/surgery_step/fix_burn
 		allowed_tools = list(
-			/obj/item/stack/medical/advanced/ointment = 100,
+			/obj/item/stack/medical/burn = 100,
+			/obj/item/stack/medical/ointment = 20,
 			/obj/item/stack/medical/advanced/ointment/nt = 100,
 		)
 		difficulty = FAILCHANCE_HARD
@@ -213,8 +266,15 @@
 	to_chat(user, SPAN_WARNING("You need an advanced burn kit to complete this step."))
 
 /datum/surgery_step/fix_burn/proc/get_tool_name(obj/item/stack/tool)
-	var/tool_name = "\the regenerative membrane"
+	var/tool_name = "\the [tool]"
+	if (istype(tool, /obj/item/stack/medical/burn))
+		tool_name = "regenerative membrane"
+	if (istype(tool, /obj/item/stack/medical/ointment))
+		tool_name = "medicated cream"
+	if (istype(tool, /obj/item/stack/medical/advanced/ointment/nt))
+		tool_name = "regenerative membrane"
 	return tool_name
+
 
 /datum/surgery_step/fix_burn/can_use(mob/living/user, obj/item/organ/external/organ, obj/item/tool)
 	if(organ.burn_dam <= 0)
@@ -239,7 +299,7 @@
 			SPAN_NOTICE("You finish treating damage to [organ.get_surgery_name()] with \the [tool].")
 			)
 			organ.heal_damage(0, 25, TRUE)
-		else 
+		else
 			to_chat(user, SPAN_NOTICE("\The [tool] is used up."))
 
 /datum/surgery_step/fix_burn/fail_step(mob/living/user, obj/item/organ/external/organ, obj/item/tool)
