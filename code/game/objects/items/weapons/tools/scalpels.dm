@@ -17,6 +17,8 @@
 	hitsound = 'sound/weapons/melee/lightstab.ogg'
 	tool_qualities = list(QUALITY_CUTTING = 30, QUALITY_WIRE_CUTTING = 10)
 	spawn_tags = SPAWN_TAG_SURGERY_TOOL
+	dropped_sound = 'sound/items/drop_sounds/knife.ogg'
+	pickup_sound = 'sound/items/drop_sounds/swordsmall1.ogg'
 
 /obj/item/tool/scalpel/advanced
 	name = "advanced scalpel"
@@ -42,6 +44,8 @@
 	suitable_cell = /obj/item/cell/small
 	max_upgrades = 4
 	rarity_value = 30
+	dropped_sound = 'sound/items/drop_sounds/scrap.ogg'
+	pickup_sound = 'sound/items/drop_sounds/card.ogg'
 
 // Laser cutting overrides normal cutting
 /obj/item/tool/scalpel/laser/get_tool_type(mob/living/user, list/required_qualities, atom/use_on, datum/callback/CB)

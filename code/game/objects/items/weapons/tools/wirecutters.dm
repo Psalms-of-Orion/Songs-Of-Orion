@@ -13,6 +13,8 @@
 	edge = TRUE
 	tool_qualities = list(QUALITY_WIRE_CUTTING = 25, QUALITY_RETRACTING = 15, QUALITY_BONE_SETTING = 15)
 	rarity_value = 12
+	dropped_sound = 'sound/items/drop_sounds/scrap.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 //Better and more flexible than most improvised tools, but more bulky and annoying to make
 /obj/item/tool/wirecutters/improvised
@@ -39,6 +41,7 @@
 	max_upgrades = 4
 	rarity_value = 24
 	spawn_tags = SPAWN_TAG_TOOL_ADVANCED
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 
 /obj/item/tool/wirecutters/pliers //hybrid of wirecutters, wrench and cautery
 	name = "pliers"

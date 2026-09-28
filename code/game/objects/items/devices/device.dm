@@ -5,6 +5,7 @@
 	var/starting_cell = TRUE
 	var/obj/item/cell/cell
 	var/suitable_cell
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
 
 /obj/item/device/Initialize(mapload)
 	. = ..()

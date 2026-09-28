@@ -17,6 +17,13 @@
 	tool_qualities = list(QUALITY_CUTTING = 10)
 	var/icon/broken_outline = icon('icons/obj/drinks.dmi', "broken")
 	spawn_tags = SPAWN_TAG_JUNKTOOL
+	dropped_sound = 'sound/items/drop_sounds/glass_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/glass.ogg'
+
+/obj/item/tool/broken_bottle/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/sharp/genstab (1).ogg', 'sound/weapons/melee/sharp/genstab (2).ogg', 'sound/weapons/melee/sharp/genstab (3).ogg')
+
 
 /obj/item/tool/nailstick
 	name = "nailed stick"
@@ -36,6 +43,11 @@
 	tool_qualities = list(QUALITY_HAMMERING = 10)
 	spawn_tags = SPAWN_TAG_JUNKTOOL
 
+/obj/item/tool/nailstick/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/blunt/genblunt (1).ogg', 'sound/weapons/melee/blunt/genblunt (2).ogg', 'sound/weapons/melee/blunt/genblunt (3).ogg')
+
+
 /obj/item/tool/hatchet
 	name = "hatchet"
 	desc = "A very sharp axe blade upon a short fibremetal handle. It has a long history of chopping things, but now it is used for chopping wood."
@@ -53,6 +65,11 @@
 	attack_verb = list("chopped", "torn", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	tool_qualities = list(QUALITY_CUTTING = 20)
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+
+/obj/item/tool/hatchet/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/sharp/genchop (1).ogg', 'sound/weapons/melee/sharp/genchop (2).ogg', 'sound/weapons/melee/sharp/genchop (3).ogg')
 
 /obj/item/tool/makeshiftaxe
 	name = "makeshift axe"
@@ -79,6 +96,11 @@
 	max_upgrades = 5 //all makeshift tools get more mods to make them actually viable for mid-late game
 	rarity_value = 60
 	spawn_tags = SPAWN_TAG_JUNKTOOL
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+
+/obj/item/tool/makeshiftaxe/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/sharp/genchop (1).ogg', 'sound/weapons/melee/sharp/genchop (2).ogg', 'sound/weapons/melee/sharp/genchop (3).ogg')
 
 /obj/item/tool/fireaxe
 	name = "fire axe"
@@ -99,6 +121,11 @@
 	structure_damage_factor = STRUCTURE_DAMAGE_BREACHING
 	embed_mult = 1.2 //Axes cut deep, and their hooked shape catches on things
 	rarity_value = 48
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+
+/obj/item/tool/fireaxe/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/sharp/genchop (1).ogg', 'sound/weapons/melee/sharp/genchop (2).ogg', 'sound/weapons/melee/sharp/genchop (3).ogg')
 
 /obj/item/tool/fireaxe/afterattack(atom/A as mob|obj|turf|area, mob/user, proximity)
 	if(!proximity) return
@@ -121,6 +148,11 @@
 	tool_qualities = list(QUALITY_SHOVELING = 10)
 	w_class = ITEM_SIZE_SMALL
 	attack_verb = list("slashed", "sliced", "cut", "clawed")
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+
+/obj/item/tool/minihoe/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/sharp/genstab (1).ogg', 'sound/weapons/melee/sharp/genstab (2).ogg', 'sound/weapons/melee/sharp/genstab (3).ogg')
 
 /obj/item/tool/scythe
 	name = "scythe"
@@ -140,6 +172,11 @@
 	tool_qualities = list(QUALITY_CUTTING = 15)
 	spawn_tags = SPAWN_TAG_KNIFE
 	rarity_value = 30
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/swordsmall1.ogg'
+/obj/item/tool/scythe/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/sharp/genslash (1).ogg', 'sound/weapons/melee/sharp/genslash (2).ogg', 'sound/weapons/melee/sharp/genslash (3).ogg')
 
 //Swords
 /obj/item/tool/sword
@@ -165,6 +202,12 @@
 	spawn_frequency = 8
 	spawn_tags = SPAWN_TAG_SWORD
 	rarity_value = 25
+
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/swordsmall2.ogg'
+/obj/item/tool/sword/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/sharp/genslash (1).ogg', 'sound/weapons/melee/sharp/genslash (2).ogg', 'sound/weapons/melee/sharp/genslash (3).ogg', 'sound/weapons/melee/sharp/genstab (1).ogg', 'sound/weapons/melee/sharp/genstab (2).ogg', 'sound/weapons/melee/sharp/genstab (3).ogg')
 
 /obj/item/tool/sword/saber
 	name = "officer's saber"
@@ -256,3 +299,5 @@
 	max_upgrades = 2
 	tool_qualities = list(QUALITY_HAMMERING = 5)
 	spawn_blacklisted = TRUE
+	dropped_sound = 'sound/items/drop_sounds/chain_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/chain_equip.ogg'

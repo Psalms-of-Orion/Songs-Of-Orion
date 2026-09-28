@@ -19,6 +19,8 @@
 	throw_speed = 3
 	throw_range = 7
 	max_amount = 60
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/stack/tile/New()
 	..()
@@ -35,6 +37,7 @@
 	icon_state = "tile_grass"
 	flags = 0
 	origin_tech = list(TECH_BIO = 1)
+	dropped_sound = 'sound/items/drop_sounds/herb.ogg'
 
 /obj/item/stack/tile/grass/full
 	amount = 60
@@ -53,6 +56,7 @@
 
 /obj/item/stack/tile/wood/full
 	amount = 60
+	dropped_sound = 'sound/items/drop_sounds/woodweapon.ogg'
 
 /obj/item/stack/tile/wood/cyborg
 	name = "wood floor tile synthesizer"
@@ -72,6 +76,7 @@
 	desc = "A piece of carpet. It is the same size as a normal floor tile!"
 	icon_state = "tile_carpet"
 	flags = 0
+	dropped_sound = 'sound/items/drop_sounds/herb.ogg'
 
 /obj/item/stack/tile/carpet/full
 	amount = 60

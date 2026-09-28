@@ -10,6 +10,8 @@
 		STAT_COG = 8,
 		STAT_BIO = 8,
 	)
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 	var/static/inv_spawn_count = 3
 

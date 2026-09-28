@@ -22,6 +22,8 @@
 	siemens_coefficient = 0.9
 	price_tag = 50
 	style = STYLE_NONE
+	dropped_sound = 'sound/items/drop_sounds/hat.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 
 /obj/item/clothing/suit/bio_suit
 	name = "chemical cloak"
@@ -49,7 +51,8 @@
 	siemens_coefficient = 0.9
 	price_tag = 300
 	style = STYLE_NONE
-
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 //Plague Dr mask can be found in clothing/masks/gasmask.dm
 /obj/item/clothing/suit/bio_suit/plaguedoctorsuit
 	name = "Plague doctor suit"

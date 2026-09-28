@@ -33,6 +33,8 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	var/automatic_charge_overlays = FALSE	//Do we handle overlays with base update_icon()? | Stolen from TG egun code
 	var/charge_sections = 5		// How many indicator blips are there?
 	var/charge_x_offset = 1		//The spacing between each charge indicator. Should be 2 to leave a 1px gap between each blip.
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	pickup_sound = 'sound/items/drop_sounds/herb.ogg'
 
 /obj/item/stack/medical/attack(mob/living/M, mob/living/user)
 	var/types = M.get_classification()
@@ -140,6 +142,8 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
 	bad_type = /obj/item/stack/medical/bruise_pack
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+
 /obj/item/stack/medical/bruise_pack/update_icon()
 	icon_state = "[initial(icon_state)][amount]"
 	..()
@@ -223,6 +227,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 						singular_name = "strips"
 						desc = "An empty wrapper from medical supplies."
 						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+						dropped_sound = 'sound/items/drop_sounds/wrapper.ogg'
 					if(affecting.is_bandaged())
 						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
 					else
@@ -566,9 +571,9 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 		return
 
 /obj/item/stack/medical/advanced/bruise_pack/nt
-	name = "NeoTheology bruisepack"
-	singular_name = "NeoTheology bruisepack"
-	desc = "An advanced bruisepack for severe injuries. Created by will of God."
+	name = "liquid bruisepack"
+	singular_name = "use"
+	desc = "An advanced bruisepack for severe injuries."
 	icon_state = "nt_traumakit"
 	heal_brute = 10
 	automatic_charge_overlays = FALSE
@@ -581,9 +586,9 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	..()
 
 /obj/item/stack/medical/advanced/ointment/nt
-	name = "NeoTheology burnpack"
-	singular_name = "NeoTheology burnpack"
-	desc = "An advanced treatment kit for severe burns. Created by will of God."
+	name = "liquid burnpack"
+	singular_name = "use"
+	desc = "An advanced treatment kit for severe burns."
 	icon_state = "nt_burnkit"
 	heal_brute = 10
 	automatic_charge_overlays = FALSE
@@ -660,6 +665,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 					)
 						//H.add_side_effect("Itch")
 					if ((W.damage_type == BRUISE) && (W.current_stage <= W.max_bleeding_stage))
+						W.current_stage--
 						heal_brute = 1
 						user.visible_message(
 							SPAN_NOTICE("\The [user] covers \a [W.desc] on [M]'s [affecting.name] and wraps the wound with a [singular_name]"),
@@ -703,11 +709,13 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 						singular_name = "strip"
 						desc = "An empty wrapper from medical supplies."
 						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+						dropped_sound = 'sound/items/drop_sounds/wrapper.ogg'
 					if(affecting.is_bandaged())
 						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
 					else
 						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up, but there are more wounds to treat on \the [affecting.name]."))
 				use(used)
+				heal_brute = initial(heal_brute)
 		else
 			if (can_operate(H, user) == CAN_OPERATE_ALL)        //Checks if mob is lying down on table for surgery
 				if (do_surgery(H,user,src, TRUE))
@@ -830,6 +838,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 						singular_name = "treatment"
 						desc = "An empty wrapper from medical supplies."
 						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+						dropped_sound = 'sound/items/drop_sounds/wrapper.ogg'
 					if(affecting.is_bandaged())
 						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
 					else
@@ -964,14 +973,274 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 						singular_name = "treatment"
 						desc = "An empty wrapper from medical supplies."
 						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+						dropped_sound = 'sound/items/drop_sounds/wrapper.ogg'
 					if(affecting.is_bandaged())
 						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
 					else
 						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up, but there are more wounds to treat on \the [affecting.name]."))
 				use(used)
+				heal_burn = initial(heal_burn)
 		else
 			if (can_operate(H, user) == CAN_OPERATE_ALL)        //Checks if mob is lying down on table for surgery
 				if (do_surgery(H,user,src, TRUE))
 					return
 			else
 				to_chat(user, SPAN_NOTICE("The [affecting.name] is cut open, you'll need more than a bandage!"))
+
+
+/obj/item/stack/medical/suture
+	bad_type = /obj/item/stack/medical/suture
+	spawn_tags = SPAWN_TAG_MEDICINE_ADVANCED
+	tool_qualities = list(QUALITY_CAUTERIZING = 10)
+/obj/item/stack/medical/suture/standard
+	name = "suture kit"
+	singular_name = "suture"
+	desc = "Sterile, biocompatible thread and a needle. The old fashion way. It will hurt."
+	description_info = "Works best on intents other then HELP."
+	icon_state = "suture"
+	origin_tech = list(TECH_BIO = 1)
+	heal_brute = 4
+	preloaded_reagents = list("tramadol" = 1, "ethanol" = 1)
+	rarity_value = 5
+	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
+	bad_type = /obj/item/stack/medical/bruise_pack
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	consumable = TRUE
+	amount = 8
+	max_amount = 8
+/obj/item/stack/medical/suture/update_icon()
+	icon_state = "[initial(icon_state)][amount]"
+	..()
+
+/obj/item/stack/medical/suture/standard/attack(mob/living/carbon/M, mob/living/user)
+	if(..())
+		return 1
+
+	if (ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/obj/item/organ/external/affecting = H.get_organ(user.targeted_organ)
+
+		if(!affecting)
+			to_chat(user, SPAN_WARNING("What [user.targeted_organ]?"))
+			return TRUE
+
+		if(affecting.open == 0)
+			if(affecting.is_bandaged())
+				to_chat(user, SPAN_WARNING("The wounds on [M]'s [affecting.name] have already been treated."))
+				return 1
+			else
+				user.visible_message(
+					SPAN_NOTICE("\The [user] starts stitching [M]'s [affecting.name]."),
+					SPAN_NOTICE("You start stitching [M]'s [affecting.name].")
+				)
+				var/used = 0
+				for (var/datum/wound/W in affecting.wounds)
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if(!do_mob(user, M, W.damage/5))
+						to_chat(user, SPAN_NOTICE("You must stand still to stitch wounds."))
+						break
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if (W.current_stage <= W.max_bleeding_stage)
+						user.visible_message(
+							SPAN_NOTICE("\The [user] stitches \a [W.desc] on [M]'s [affecting.name] with a [singular_name]"),
+							SPAN_NOTICE("You stitch \a [W.desc] on [M]'s [affecting.name].")
+					)
+						//H.add_side_effect("Itch")
+					if ((W.damage_type == BRUISE) && (W.current_stage <= W.max_bleeding_stage))
+						heal_brute = 1
+						W.current_stage--
+						user.visible_message(
+							SPAN_NOTICE("\The [user] stitches \a [W.desc] on [M]'s [affecting.name] with a [singular_name]"),
+							SPAN_NOTICE("You stitch \a [W.desc] on [M]'s [affecting.name], but stitches do little to help with trauma.")
+					)
+					if ((W.damage_type == BRUISE) && (W.current_stage >= W.max_bleeding_stage))
+						user.visible_message(
+							SPAN_NOTICE("Stitches will not help bruises!")
+						)
+						break
+					else
+						user.visible_message(
+							SPAN_NOTICE("\The [user] stitches a [singular_name] into \a [W.desc] on [M]'s [affecting.name]."),
+							SPAN_NOTICE("You stitch a [singular_name] into \a [W.desc] on [M]'s [affecting.name].")
+						)
+					W.bandage()
+					// user's stat check that causing pain if they are amateurs
+					if(user && user.stats.getStat(STAT_BIO) < STAT_LEVEL_BASIC)
+						if(prob(affecting.get_damage() - user.stats.getStat(STAT_BIO)))
+							var/pain = rand(min(40,affecting.get_damage()), max(affecting.get_damage() + 60,80) - user.stats.getStat(STAT_BIO))
+							H.pain(affecting, pain)
+							if(user != H)
+								to_chat(H, "<span class='[pain > 50 ? "danger" : "warning"]'>\The [user]'s amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+								to_chat(user, SPAN_WARNING("Your amateur actions caused [H] [pain > 50 ? "a lot of " : ""]pain."))
+							else
+								to_chat(user, "<span class='[pain > 50 ? "danger" : "warning"]'>Your amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+					if(prob(10 + user.stats.getStat(STAT_BIO)))
+						to_chat(user, SPAN_NOTICE("You have managed to waste less [name]."))
+						playsound(src.loc, 'sound/effects/sewflesh.ogg', rand(10, 50))
+					else
+						used++
+						playsound(src.loc, 'sound/effects/sewflesh.ogg', rand(10, 50))
+						heal_brute = initial(heal_brute)
+						reagents.trans_to_mob(M, reagents.total_volume, CHEM_BLOOD) //CHEM_TOUCH
+						H.emote("pain")
+						if(prob(affecting.get_damage() - user.stats.getStat(STAT_BIO)))
+							var/pain = rand(min(10,affecting.get_damage()), max(affecting.get_damage() + 15,30) - user.stats.getStat(STAT_BIO))
+							H.pain(affecting, pain)
+							if(user != H)
+								to_chat(H, "<span class='[pain > 50 ? "danger" : "warning"]'>\The [user] stitches your wounds causing you pain!</span>")
+							else
+								to_chat(user, "<span class='[pain > 50 ? "danger" : "warning"]'>Stitching your wounds causes you pain!</span>")
+
+				affecting.update_damages()
+				if(used == amount)
+					if (consumable == FALSE)
+						max_amount = 0
+						matter = list(MATERIAL_PLASTIC = 0.1)
+						name = "medical trash"
+						singular_name = "strip"
+						desc = "An empty wrapper from medical supplies."
+						playsound(src.loc, 'sound/effects/paper_crumpling.ogg', rand(10, 50))
+						dropped_sound = 'sound/items/drop_sounds/wrapper.ogg'
+					if(affecting.is_bandaged())
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
+					else
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up, but there are more wounds to treat on \the [affecting.name]."))
+				use(used)
+				heal_brute = initial(heal_brute)
+		else
+			if (can_operate(H, user) == CAN_OPERATE_ALL)        //Checks if mob is lying down on table for surgery
+				if (do_surgery(H,user,src, TRUE))
+					return
+
+/obj/item/stack/medical/stapler
+	name = "advanced suture kit"
+	singular_name = "suture"
+	desc = "Sterile, biocompatible thread delivered by a quick and easy deployment system. It still hurts."
+	description_info = "Works best on intents other then HELP."
+	icon_state = "stapler"
+	origin_tech = list(TECH_BIO = 1)
+	heal_brute = 8
+	preloaded_reagents = list("tramadol" = 1, "ethanol" = 1)
+	rarity_value = 5
+	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
+	bad_type = /obj/item/stack/medical/bruise_pack
+	dropped_sound = 'sound/items/drop_sounds/gun.ogg'
+	pickup_sound = 'sound/weapons/guns/interact/rev_cock.ogg'
+	consumable = FALSE
+	tool_qualities = list(QUALITY_CAUTERIZING = 10)
+	amount = 12
+	max_amount = 12
+
+/obj/item/stack/medical/stapler/update_icon()
+	icon_state = "[initial(icon_state)][amount]"
+	..()
+
+/obj/item/stack/medical/stapler/attack(mob/living/carbon/M, mob/living/user)
+	if(..())
+		return 1
+
+	if (ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/obj/item/organ/external/affecting = H.get_organ(user.targeted_organ)
+
+		if(!affecting)
+			to_chat(user, SPAN_WARNING("What [user.targeted_organ]?"))
+			return TRUE
+
+		if(affecting.open == 0)
+			if(affecting.is_bandaged())
+				to_chat(user, SPAN_WARNING("The wounds on [M]'s [affecting.name] have already been treated."))
+				return 1
+			else
+				user.visible_message(
+					SPAN_NOTICE("\The [user] starts stapling [M]'s [affecting.name]."),
+					SPAN_NOTICE("You start stapling [M]'s [affecting.name].")
+				)
+				var/used = 0
+				for (var/datum/wound/W in affecting.wounds)
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if(!do_mob(user, M, W.damage/5))
+						to_chat(user, SPAN_NOTICE("You must stand still to staple wounds."))
+						break
+					if(W.internal)
+						continue
+					if(W.bandaged)
+						continue
+					if(used == amount)
+						break
+					if (W.current_stage <= W.max_bleeding_stage)
+						user.visible_message(
+							SPAN_NOTICE("\The [user] staples \a [W.desc] on [M]'s [affecting.name] with a [singular_name]"),
+							SPAN_NOTICE("You staple \a [W.desc] on [M]'s [affecting.name].")
+					)
+						//H.add_side_effect("Itch")
+					if ((W.damage_type == BRUISE) && (W.current_stage <= W.max_bleeding_stage))
+						heal_brute = 1
+						W.current_stage--
+						user.visible_message(
+							SPAN_NOTICE("\The [user] staples \a [W.desc] on [M]'s [affecting.name] with a [singular_name]"),
+							SPAN_NOTICE("You staple \a [W.desc] on [M]'s [affecting.name], but stitches do little to help with trauma.")
+					)
+					if ((W.damage_type == BRUISE) && (W.current_stage >= W.max_bleeding_stage))
+						user.visible_message(
+							SPAN_NOTICE("Sutures will not help bruises!")
+						)
+						break
+					else
+						user.visible_message(
+							SPAN_NOTICE("\The [user] staples a [singular_name] into \a [W.desc] on [M]'s [affecting.name]."),
+							SPAN_NOTICE("You staple a [singular_name] into \a [W.desc] on [M]'s [affecting.name].")
+						)
+					W.bandage()
+					// user's stat check that causing pain if they are amateurs
+					if(user && user.stats.getStat(STAT_BIO) < STAT_LEVEL_BASIC)
+						if(prob(affecting.get_damage() - user.stats.getStat(STAT_BIO)))
+							var/pain = rand(min(30,affecting.get_damage()), max(affecting.get_damage() + 30,60) - user.stats.getStat(STAT_BIO))
+							H.pain(affecting, pain)
+							if(user != H)
+								to_chat(H, "<span class='[pain > 50 ? "danger" : "warning"]'>\The [user]'s amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+								to_chat(user, SPAN_WARNING("Your amateur actions caused [H] [pain > 50 ? "a lot of " : ""]pain."))
+							else
+								to_chat(user, "<span class='[pain > 50 ? "danger" : "warning"]'>Your amateur actions caused you [pain > 50 ? "a lot of " : ""]pain.</span>")
+					if(prob(10 + user.stats.getStat(STAT_BIO)))
+						to_chat(user, SPAN_NOTICE("You have managed to waste less [name]."))
+						playsound(src.loc, 'sound/effects/staple.ogg', rand(10, 50))
+					else
+						used++
+						playsound(src.loc, 'sound/effects/staple.ogg', rand(10, 50))
+						heal_brute = initial(heal_brute)
+						reagents.trans_to_mob(M, reagents.total_volume, CHEM_BLOOD) //CHEM_TOUCH
+				affecting.update_damages()
+				if(used == amount)
+					if (consumable == FALSE)
+						max_amount = 0
+						matter = list(MATERIAL_PLASTIC = 0.1)
+						name = "medical trash"
+						singular_name = "suture"
+						desc = "An empty suture system."
+						playsound(src.loc, 'sound/weapons/guns/interact/batrifle_cock.ogg', rand(10, 50))
+					if(affecting.is_bandaged())
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up."))
+					else
+						to_chat(user, SPAN_WARNING("\The [initial(singular_name)] is used up, but there are more wounds to treat on \the [affecting.name]."))
+				use(used)
+				heal_brute = initial(heal_brute)
+		else
+			if (can_operate(H, user) == CAN_OPERATE_ALL)        //Checks if mob is lying down on table for surgery
+				if (do_surgery(H,user,src, TRUE))
+					return

@@ -15,6 +15,8 @@
 	flags = NOBLUDGEON //Its not a weapon
 	max_upgrades = 0 //These are consumable, so no wasting upgrades on them
 	rarity_value = 4
+	dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 
 /obj/item/tool/tape_roll/web
 	name = "web tape"

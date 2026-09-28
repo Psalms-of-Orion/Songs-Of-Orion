@@ -13,6 +13,8 @@
 	var/atom/target
 	var/open_panel = 0
 	var/image_overlay
+	dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/plastique/New()
 	wires = new(src)

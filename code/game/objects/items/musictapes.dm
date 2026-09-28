@@ -5,6 +5,8 @@
 	icon_state = "1"
 	item_state = "card-id"
 	w_class = ITEM_SIZE_TINY
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 	var/songlist //string reference to the name of a songlist attached to this song
 	var/list/datum/track/tracklist = list() //Actual list of media tracks

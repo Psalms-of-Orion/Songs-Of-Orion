@@ -27,6 +27,7 @@
 	var/image/filling //holds a reference to the current filling overlay
 	var/visible_name = "a syringe"
 	var/time = 30
+	dropped_sound = 'sound/items/drop_sounds/glass.ogg'
 
 /obj/item/reagent_containers/syringe/on_reagent_change()
 	if(mode == SYRINGE_INJECT && !reagents.total_volume)

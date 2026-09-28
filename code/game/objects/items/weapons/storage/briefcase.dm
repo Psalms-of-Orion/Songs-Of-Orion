@@ -13,3 +13,5 @@
 	max_storage_space = 16
 	matter = list(MATERIAL_BIOMATTER = 8, MATERIAL_PLASTIC = 4)
 	price_tag = 90
+	dropped_sound = 'sound/items/drop_sounds/backpack.ogg'
+	pickup_sound = 'sound/items/drop_sounds/scrap_drop.ogg'

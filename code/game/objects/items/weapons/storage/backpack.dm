@@ -17,7 +17,8 @@
 	matter = list(MATERIAL_BIOMATTER = 10, MATERIAL_PLASTIC = 2)
 	var/worn_access = FALSE // If the object may be accessed while equipped in a storage slot.
 	var/equip_access = TRUE // If the object may be accessed while equipped anywhere on a charcter, including hands.
-
+	dropped_sound = 'sound/items/drop_sounds/backpack.ogg'
+	pickup_sound = 'sound/items/drop_sounds/cloak (1).ogg'
 /obj/item/storage/backpack/Initialize()
 	. = ..()
 	if (!item_state)

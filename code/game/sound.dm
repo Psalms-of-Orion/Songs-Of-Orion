@@ -75,7 +75,7 @@ var/list/rustle_sound = list(
 	'sound/effects/rustle4.ogg','sound/effects/rustle5.ogg'
 )
 var/list/punch_sound = list(
-	'sound/weapons/punch1.ogg','sound/weapons/punch2.ogg','sound/weapons/punch3.ogg','sound/weapons/punch4.ogg'
+	'sound/weapons/melee/punch/p1 (1).ogg','sound/weapons/melee/punch/p1 (2).ogg','sound/weapons/melee/punch/p1 (3).ogg','sound/weapons/punch4.ogg', 'sound/weapons/melee/punch/punch_hard (3).ogg'
 )
 
 var/list/bullet_hit_wall = list(
@@ -408,7 +408,7 @@ var/const/FALLOFF_SOUNDS = 0.5
 
 	//sound volume falloff with pressure
 	var/pressure_factor = 1
-	
+
 	var/turf/T = get_turf(src)
 	// 3D sounds, the technology is here!
 	if(T && isturf(turf_source))
@@ -433,7 +433,7 @@ var/const/FALLOFF_SOUNDS = 0.5
 				pressure_factor = max(pressure_factor, 0.15)	//hearing through contact
 
 			S.volume *= pressure_factor
-		
+
 		if (S.volume <= 0)
 			return //no volume means no sound
 

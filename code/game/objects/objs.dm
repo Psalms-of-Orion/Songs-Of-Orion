@@ -260,3 +260,7 @@
 /obj/proc/multiply_projectile_step_delay(newmult)
 
 /obj/proc/multiply_projectile_halloss(newmult)
+
+//Proj for thrown items
+/obj/proc/post_thrown_hit(mob)
+	return

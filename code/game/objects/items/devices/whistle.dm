@@ -6,6 +6,8 @@
 	w_class = ITEM_SIZE_TINY
 	matter = list(MATERIAL_PLASTIC = 2, MATERIAL_GLASS = 1, MATERIAL_STEEL = 2)
 	flags = CONDUCT
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 	var/use_message = "Halt! Security!"
 	var/spamcheck = 0

@@ -20,6 +20,9 @@
 	slot_flags = SLOT_BELT
 	force = WEAPON_FORCE_PAINFUL
 	structure_damage_factor = STRUCTURE_DAMAGE_BLUNT
+	hitsound = 'sound/weapons/melee/blunthit.ogg'
+	dropped_sound = 'sound/items/drop_sounds/wooden.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/melee/classic_baton/attack(mob/M, mob/living/user)
 /*	if ((CLUMSY in user.mutations) && prob(50))
@@ -46,7 +49,9 @@
 	force = 3
 	structure_damage_factor = STRUCTURE_DAMAGE_BLUNT
 	var/on = FALSE
-
+	dropped_sound = 'sound/items/drop_sounds/gun.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
+	hitsound = 'sound/weapons/melee/blunthit.ogg'
 
 /obj/item/melee/telebaton/attack_self(mob/user)
 	on = !on

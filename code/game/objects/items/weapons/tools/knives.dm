@@ -21,10 +21,16 @@
 	hitsound = 'sound/weapons/melee/lightstab.ogg'
 	slot_flags = SLOT_BELT
 	structure_damage_factor = STRUCTURE_DAMAGE_BLADE
+	dropped_sound = 'sound/items/drop_sounds/knife.ogg'
+	pickup_sound = 'sound/items/drop_sounds/swordsmall1.ogg'
 
 	//spawn values
 	rarity_value = 10
 	spawn_tags = SPAWN_TAG_KNIFE
+
+/obj/item/tool/knife/attack(mob/target, mob/living/user)
+	..()
+	hitsound = pick('sound/weapons/melee/sharp/genstab (1).ogg', 'sound/weapons/melee/sharp/genstab (2).ogg', 'sound/weapons/melee/sharp/genstab (3).ogg', 'sound/weapons/melee/sharp/genslash (1).ogg', 'sound/weapons/melee/sharp/genslash (2).ogg', 'sound/weapons/melee/sharp/genslash (3).ogg')
 
 /obj/item/tool/knife/New()
 	..()

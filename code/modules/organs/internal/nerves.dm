@@ -19,7 +19,8 @@
 	desc = "Used to carry the sensation of touch of robotic limbs."
 	nature = MODIFICATION_SILICON
 	matter = list(MATERIAL_STEEL = 1, MATERIAL_PLASTIC = 1)
-
+	dropped_sound = 'sound/items/drop_sounds/chain_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/organ/internal/nerve/sensitive_nerve
 	name = "sensitive nerves"
 	icon_state = "nerve_sensitive"

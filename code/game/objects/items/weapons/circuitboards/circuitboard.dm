@@ -29,6 +29,8 @@
 	bad_type = /obj/item/electronics/circuitboard
 
 	price_tag = 50		// Inepxensive to produce
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 
 	var/build_path
 	var/frame_type = FRAME_DEFAULT

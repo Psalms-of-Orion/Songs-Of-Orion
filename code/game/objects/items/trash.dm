@@ -9,7 +9,8 @@
 	rarity_value = 20
 	spawn_tags = SPAWN_TAG_JUNK
 	matter = list(MATERIAL_PLASTIC = 1)
-
+	dropped_sound = 'sound/items/drop_sounds/wrapper.ogg'
+	pickup_sound = 'sound/items/drop_sounds/herb.ogg'
 /obj/item/trash/attack(mob/M, mob/living/user)
 	return
 
@@ -41,6 +42,8 @@
 /obj/item/trash/wok
 	name = "Wok"
 	icon_state = "wok"
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/herb.ogg'
 
 /obj/item/trash/waffles
 	name = "waffles"
@@ -50,22 +53,27 @@
 	name = "plate"
 	icon_state = "plate"
 	matter = list(MATERIAL_GLASS = 1)
+	dropped_sound = 'sound/items/drop_sounds/glass_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/trash/snack_bowl
 	name = "snack bowl"
 	icon_state	= "snack_bowl"
 	matter = list(MATERIAL_GLASS = 1)
-
+	dropped_sound = 'sound/items/drop_sounds/glass_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/trash/tray
 	name = "tray"
 	icon_state = "tray"
 	matter = list(MATERIAL_STEEL = 1)
-
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/trash/candle
 	name = "candle"
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "candle4"
-
+	dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/trash/liquidfood
 	name = "\improper \"LiquidFood\" ration"
 	icon_state = "liquidfood"
@@ -93,3 +101,5 @@
 /obj/item/trash/gym_ticket
 	name = "expired electronic ticket"
 	icon_state = "gym_ticket_trash"
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'

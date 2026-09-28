@@ -9,7 +9,8 @@
 	spawn_tags = SPAWN_TAG_STOCK_PARTS
 	price_tag = 100
 	var/rating = 1
-
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/stock_parts/New()
 	src.pixel_x = rand(-5, 5)
 	src.pixel_y = rand(-5, 5)

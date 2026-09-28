@@ -232,7 +232,8 @@
 	bad_type = /obj/item/storage/pill_bottle
 	spawn_tags = SPAWN_TAG_MEDICINE
 	prespawned_content_amount = 7
-
+	dropped_sound = 'sound/items/drop_sounds/pillbottle.ogg'
+	pickup_sound = 'sound/items/drop_sounds/pillbottle.ogg'
 /obj/item/storage/pill_bottle/antitox
 	name = "bottle of Dylovene pills"
 	desc = "Contains pills used to counter toxins."
@@ -309,7 +310,7 @@
 	rarity_value = 20
 
 /obj/item/storage/pill_bottle/njoy
-	name = "bottle of Njoy pills"
+	name = "bottle of Soma pills"
 	desc = "Contains pills used to stop all breakdowns."
 	icon_state = "bottle_njoy_red"
 	prespawned_content_type = /obj/item/reagent_containers/pill/suppressital/red

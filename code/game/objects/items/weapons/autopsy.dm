@@ -15,6 +15,8 @@
 	var/list/datum/autopsy_data_scanner/chemtraces = list()
 	var/target_name
 	var/timeofdeath
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/paper/autopsy_report
 	var/list/autopsy_data

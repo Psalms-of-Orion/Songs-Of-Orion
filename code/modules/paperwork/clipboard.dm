@@ -12,7 +12,8 @@
 	var/obj/item/pen/haspen		//The stored pen.
 	var/obj/item/toppaper	//The topmost piece of paper.
 	slot_flags = SLOT_BELT
-
+	dropped_sound = 'sound/items/drop_sounds/helm.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/clipboard/Initialize(mapload)
 	. = ..()
 	update_icon()

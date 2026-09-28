@@ -13,6 +13,7 @@
 	style_coverage = COVERS_MOUTH
 	style = STYLE_NEG_LOW
 	matter = list(MATERIAL_PLASTIC = 1)
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
 
 /obj/item/clothing/mask/breath/proc/adjust_mask(mob/user)
 	if(!usr.incapacitated())

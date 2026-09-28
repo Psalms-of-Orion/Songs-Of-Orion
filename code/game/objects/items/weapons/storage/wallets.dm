@@ -34,6 +34,8 @@
 
 	matter = list(MATERIAL_BIOMATTER = 4)
 	var/obj/item/card/id/front_id
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	pickup_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
 
 
 /obj/item/storage/wallet/remove_from_storage(obj/item/W, atom/new_location)

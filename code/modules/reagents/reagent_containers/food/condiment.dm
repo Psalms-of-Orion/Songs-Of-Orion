@@ -14,6 +14,7 @@
 	possible_transfer_amounts = list(1,5,10)
 	center_of_mass = list("x"=16, "y"=6)
 	volume = 50
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
 
 	attackby(var/obj/item/W as obj, var/mob/user as mob)
 		return

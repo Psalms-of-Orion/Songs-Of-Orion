@@ -227,4 +227,4 @@
 		return
 
 	to_chat(user, SPAN_NOTICE("You push the wall, but nothing happens."))
-	playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)
+	playsound(src, 'sound/effects/metalhit.ogg', 50, 1)

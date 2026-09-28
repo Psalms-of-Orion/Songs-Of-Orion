@@ -10,7 +10,8 @@
 	throw_range = 15
 	matter = list(MATERIAL_PLASTIC = 1)
 	attack_verb = list("stamped")
-
+	dropped_sound = 'sound/items/drop_sounds/helm.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/stamp/captain
 	name = "captain's rubber stamp"
 	icon_state = "stamp-cap"

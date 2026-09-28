@@ -206,7 +206,7 @@
 		if(prob(2))
 			spawn emote("me", 1, "coughs up blood!")
 			drip_blood(10)
-
+			emote("choke")
 		if(prob(4))
 			spawn emote("me", 1, "gasps for air!")
 			losebreath += 15

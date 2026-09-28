@@ -17,6 +17,8 @@
 	can_hold = list(
 		/obj/item/reagent_containers/food
 		)
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
 
 /obj/item/storage/lunchbox/rainbow
 	name = "rainbow lunchbox"

@@ -8,6 +8,8 @@
 //This includes most mechanical ones
 /obj/item/tool_upgrade/reinforcement
 	bad_type = /obj/item/tool_upgrade/reinforcement
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/tool_upgrade/reinforcement/stick
 	name = "brace bar"

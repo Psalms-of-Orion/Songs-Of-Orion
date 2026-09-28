@@ -9,3 +9,5 @@
 	hitsound = 'sound/weapons/melee/lightstab.ogg'
 	tool_qualities = list(QUALITY_CLAMPING = 30)
 	spawn_tags = SPAWN_TAG_SURGERY_TOOL
+	dropped_sound = 'sound/items/drop_sounds/scrap.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'

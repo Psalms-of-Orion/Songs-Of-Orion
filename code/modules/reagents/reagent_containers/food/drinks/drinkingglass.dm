@@ -10,6 +10,7 @@
 	spawn_tags = SPAWN_TAG_JUNK
 	rarity_value = 20
 	var/morf_glass = TRUE
+	dropped_sound = 'sound/items/drop_sounds/glass.ogg'
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/shot
 	name = "shot"

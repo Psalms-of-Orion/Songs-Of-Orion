@@ -14,6 +14,8 @@
 		var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
 		R.add_fingerprint(user)
 		qdel(src)
+	dropped_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 
 
 /obj/structure/closet/body_bag

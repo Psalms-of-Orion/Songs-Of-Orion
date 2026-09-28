@@ -127,6 +127,8 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	var/obj/effect/effect/melee/swing/S = new(get_turf(user))
 	S.dir = _dir
 	user.visible_message(SPAN_DANGER("[user] swings \his [src]"))
+	if(prob(50))
+		user.emote("attack")
 	playsound(loc, 'sound/effects/swoosh.ogg', 50, 1, -1)
 	switch(holdinghand)
 		if(slot_l_hand)

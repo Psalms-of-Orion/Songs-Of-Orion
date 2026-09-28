@@ -12,6 +12,7 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/rawcutlet
 	slices_num = 3
 	price_tag = 100
+	dropped_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/reagent_containers/food/snacks/meat/syntiflesh
 	name = "synthetic meat"
