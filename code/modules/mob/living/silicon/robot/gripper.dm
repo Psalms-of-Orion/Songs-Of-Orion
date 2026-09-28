@@ -13,8 +13,8 @@
 
 	//Has a list of items that it can hold.
 	var/list/can_hold = list(
-		/obj/item/cell,
-		/obj/item/electronics/firealarm,
+		/obj/item
+/*		/obj/item/electronics/firealarm,
 		/obj/item/electronics/airalarm,
 		/obj/item/electronics/airlock,
 		/obj/item/electronics/tracker,
@@ -26,6 +26,7 @@
 		/obj/item/device/assembly,//Primarily for making improved cameras, but opens many possibilities
 		/obj/item/computer_hardware,
 		/obj/item/stack/tile //Repair floors yay
+*/
 		)
 
 	var/obj/item/wrapped // Item currently being held.

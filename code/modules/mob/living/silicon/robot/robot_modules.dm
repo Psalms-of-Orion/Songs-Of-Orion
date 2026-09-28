@@ -135,7 +135,7 @@ var/global/list/robot_modules = list(
 
 	if(R.radio)
 		R.radio.recalculateChannels()
-	R.set_module_sprites(list("Default" = "robot"))
+	R.set_module_sprites(list("Default" = "type01"))
 	R.icon_selected = 0
 	R.choose_icon()
 
@@ -235,12 +235,10 @@ var/global/list/robot_modules = list(
 //The generic robot, a good choice for any situation. Moderately good at everything
 /obj/item/robot_module/standard
 	name = "standard robot module"
-	sprites = list(	"Basic" = "robot",
-					"Android" = "droid",
-					"Default" = "robot_old",
-					"Sleek" = "sleekstandard",
-					"Drone" = "drone-standard",
-					"Spider" = "spider"
+	sprites = list(	"Type-01" = "type01",
+					"Gordon" = "gordon",
+					"RUBY" = "ruby",
+					"Type-05(civil)" = "type04"
 				  )
 
 	desc = "The baseline, jack of all trades. Can do a little of everything. Some DIY, some healing, some combat."
@@ -254,14 +252,14 @@ var/global/list/robot_modules = list(
 
 
 /obj/item/robot_module/standard/New(var/mob/living/silicon/robot/R)
-
+	src.modules += new /obj/item/gripper(src)
+	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/device/flash(src)
 	src.modules += new /obj/item/melee/baton(src)
 	src.modules += new /obj/item/extinguisher(src)
 	src.modules += new /obj/item/tool/wrench/robotic(src)
 	src.modules += new /obj/item/tool/crowbar/robotic(src)
 	src.modules += new /obj/item/device/scanner/health(src)
-	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/device/t_scanner(src)
 	src.emag = new /obj/item/melee/energy/sword(src)
 
@@ -283,22 +281,15 @@ var/global/list/robot_modules = list(
 
 /obj/item/robot_module/medical
 	name = "medical robot module"
-	channels = list("Medical" = 1)
+	channels = list("Medical" = 1, "Medical(P)" = 1)
 	networks = list(NETWORK_MEDICAL)
 
 	can_be_pushed = 0
 	sprites = list(
-				"Basic" = "robotmedi",
-				"Classic" = "medbot",
-				"Heavy" = "heavymed",
-				"Needles" = "medicalrobot",
-				"Standard" = "surgeon",
-				"Advanced Droid - Medical" = "droid-medical",
-				"Advanced Droid - Chemistry" = "droid-chemistry",
-				"Drone - Medical" = "drone-surgery",
-				"Drone - Chemistry" = "drone-chemistry",
-				"Sleek - Medical" = "sleekmedic",
-				"Sleek - Chemistry" = "sleekchemistry"
+				"Type-02 Heavy Medical Complex" = "med02",
+				"Dr. Gordon" = "gordon_med",
+				"Needles" = "medicalrobot"
+
 				)
 
 	desc = "A versatile medical droid, equipped with all the tools necessary for surgery, chemistry, and \
@@ -318,6 +309,8 @@ var/global/list/robot_modules = list(
 	)
 
 /obj/item/robot_module/medical/general/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/gripper(src)
+	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/tool/wrench/robotic(src)
 	src.modules += new /obj/item/tool/crowbar/robotic(src)
 	src.modules += new /obj/item/tool/screwdriver/robotic(src)
@@ -380,14 +373,8 @@ var/global/list/robot_modules = list(
 /obj/item/robot_module/medical/rescue
 	name = "rescue robot module"
 	sprites = list(
-			"Basic" = "robotmedi",
-			"Classic" = "medbot",
-			"Standard" = "surgeon",
-			"Advanced Droid" = "droid-rescue",
-			"Sleek" = "sleekrescue",
-			"Needles" = "medicalrobot",
-			"Drone" = "drone-medical",
-			"Heavy" = "heavymed"
+			"Rescue RUBY" = "ruby_med",
+			"STOP RESISTING" = "med05"
 			)
 
 	//Rescue module has built in crew monitor
@@ -405,7 +392,7 @@ var/global/list/robot_modules = list(
 		STAT_TGH = 10
 	)
 
-	desc = "The rescue borg fills the role of paramedic. \
+	desc = "The Rescue Ruby and Type-05 Combat Extrication Device models fill the role of paramedics. \
 	Fearlessly venturing out into danger in order to pick up the wounded, stabilise them and bring \
 	them home. It has a relatively small toolset, mostly gear for getting where it needs to go and \
 	finding its way around. This streamlined design allows it to be the fastest of all droid modules."
@@ -415,6 +402,8 @@ var/global/list/robot_modules = list(
 //TODO: Give the rescue module some kind of powerful melee weapon to use as a breaching tool.
 //Possibly a robot equivilant of the fire axe
 /obj/item/robot_module/medical/rescue/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/gripper(src)
+	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/device/flash(src)
 	src.modules += new /obj/item/borg/sight/hud/med(src)
 	src.modules += new /obj/item/device/scanner/health(src)
@@ -433,8 +422,8 @@ var/global/list/robot_modules = list(
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)
 	synths += medicine
 
-	var/obj/item/stack/medical/advanced/bruise_pack/B = new /obj/item/stack/medical/advanced/bruise_pack(src)
-	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
+	var/obj/item/stack/medical/advanced/bruise_pack/nt/B = new /obj/item/stack/medical/advanced/bruise_pack/nt(src)
+	var/obj/item/stack/medical/advanced/ointment/nt/O = new /obj/item/stack/medical/advanced/ointment/nt(src)
 	B.uses_charge = 1
 	B.charge_costs = list(1000)
 	B.synths = list(medicine)
@@ -473,8 +462,9 @@ var/global/list/robot_modules = list(
 	networks = list(NETWORK_ENGINEERING)
 	subsystems = list(/datum/nano_module/power_monitor)
 	sprites = list(
-					"Basic" = "robotengi",
-					"Antique" = "engineerrobot",
+					"Repair RUBY" = "ruby_eng",
+					"Gearhead Gordon" = "gordon_eng",
+					"Type-02 Heavy Construction Interface" = "type02",
 					"Landmate" = "landmate",
 					"Landmate - Treaded" = "engiborg+tread",
 					"Drone" = "drone-engineer",
@@ -511,6 +501,8 @@ var/global/list/robot_modules = list(
 	toll in speed though."
 
 /obj/item/robot_module/engineering/construction/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/gripper(src)
+	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/device/flash(src)
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/extinguisher(src)
@@ -570,6 +562,8 @@ var/global/list/robot_modules = list(
 	..(R)
 
 /obj/item/robot_module/engineering/general/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/gripper(src)
+	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/device/flash(src)
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/extinguisher(src)
@@ -577,7 +571,6 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/device/t_scanner(src)
 	src.modules += new /obj/item/device/scanner/gas(src)
 	src.modules += new /obj/item/taperoll/engineering(src)
-	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/gripper/no_use/loader(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
 	src.modules += new /obj/item/device/pipe_painter(src)
@@ -683,10 +676,10 @@ var/global/list/robot_modules = list(
 
 /obj/item/robot_module/security/general
 	sprites = list(
-					"Basic" = "robotsecy",
-					"Sleek" = "sleeksecurity",
-					"Black Knight" = "securityrobot",
-					"Bloodhound" = "bloodhound",
+					"Gumshoe Gordon" = "gordon_sec",
+					"Rundown RUBY" = "ruby_sec",
+					"Type-5 - STOP RESISTING" = "type05",
+					"Type-02 Super-Heavy Door-Stopper" = "sec02",
 					"Bloodhound - Treaded" = "treadhound",
 					"Drone" = "drone-sec",
 					"Classic" = "secborg",
@@ -695,16 +688,19 @@ var/global/list/robot_modules = list(
 				)
 
 /obj/item/robot_module/security/general/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/gripper(src)
+	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/tool/crowbar/robotic(src)
 	src.modules += new /obj/item/device/flash(src)
 	src.modules += new /obj/item/borg/sight/hud/sec(src)
 	src.modules += new /obj/item/handcuffs/cyborg(src)
 	src.modules += new /obj/item/melee/baton/robot(src)
 	src.modules += new /obj/item/gun/energy/taser/mounted/cyborg(src)
-	src.modules += new /obj/item/taperoll/police(src)
+	src.modules += new /obj/item/gun/energy/robo_smg/advanced(src)
 	//src.modules += new /obj/item/device/holowarrant(src)
 	src.modules += new /obj/item/book/manual/wiki/security_ironparagraphs(src) // book of ironhammer paragraphs
-	src.emag = new /obj/item/gun/energy/laser/mounted(src)
+//	src.emag = new /obj/item/gun/energy/laser/mounted(src)
+	src.emag = new /obj/item/gun/energy/shrapnel/mounted(src)
 	..(R)
 
 
@@ -791,7 +787,10 @@ var/global/list/robot_modules = list(
 					LANGUAGE_MONKEY = 1
 					)
 
-	sprites = list(	"Waitress" = "service",
+	sprites = list(	"Gordon Ramsey" = "gordon_field",
+					"Restaurant RUBY" = "ruby_field",
+					"Type-02 Refrigerator" = "field02",
+					"Waitress" = "service",
 					"Kent" = "toiletbot",
 					"Bro" = "brobot",
 					"Rich" = "maximillion",
@@ -815,6 +814,8 @@ var/global/list/robot_modules = list(
 
 
 /obj/item/robot_module/service/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/gripper(src)
+	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/tool/crowbar/robotic(src)
 	src.modules += new /obj/item/device/flash(src)
 	src.modules += new /obj/item/gripper/service(src)
@@ -831,7 +832,6 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/reagent_containers/glass/rag(src) // a rag for.. yeah.. the primary tool of bartender
 	src.modules += new /obj/item/pen/robopen(src)
 	src.modules += new /obj/item/form_printer(src)
-	src.modules += new /obj/item/gripper/paperwork(src)
 	src.modules += new /obj/item/hand_labeler(src)
 	src.modules += new /obj/item/tool/tape_roll(src) //allows it to place flyers
 	src.modules += new /obj/item/stamp/denied(src) //why was this even a emagged item before smh // a good cyborg folows crew orders of accepting everything
@@ -873,7 +873,9 @@ var/global/list/robot_modules = list(
 	channels = list("Supply" = 1)
 	networks = list(NETWORK_MINE)
 	sprites = list(
-					"Basic" = "robotmine",
+					"Goldrush Gordon" = "gordon_eng",
+					"Reclaimer RUBY" = "ruby_eng",
+					"Type-02 Light Excavator" = "type02",
 					"Advanced Droid" = "droid-miner",
 					"Sleek" = "sleekminer",
 					"Treadhead" = "miner",

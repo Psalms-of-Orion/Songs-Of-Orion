@@ -1,6 +1,6 @@
 /obj/item/organ/external/robotic
-	name = "robotic"
-	force_icon = 'icons/mob/human_races/cyberlimbs/generic.dmi'
+	name = "prosthetic"
+	force_icon = 'modular/icons/astra_limbs/astra.dmi'
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	nerve_struck = -1 // no nerves here
 	nature = MODIFICATION_SILICON
@@ -38,7 +38,7 @@
 /obj/item/organ/external/robotic/removed()
 	deactivate(emergency=TRUE)
 	..()
-	
+
 /obj/item/organ/external/robotic/dropped()
 	removed()
 	..()
