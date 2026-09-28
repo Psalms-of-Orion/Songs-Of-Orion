@@ -476,7 +476,7 @@ var/list/flooring_types
 	if(!ishuman(M)|| M.incorporeal_move || !has_gravity(get_turf(M)))
 		return
 	if(MOVING_QUICKLY(M))
-		if(prob(5) && M.slip(null, 6))
+		if(prob(2) && M.slip(null, 6))
 			M.adjustBruteLoss(5)
 			playsound(M, 'sound/effects/bang.ogg', 50, 1)
 			to_chat(M, SPAN_WARNING("You tripped over!"))
@@ -643,7 +643,7 @@ var/list/flooring_types
 	build_type = /obj/item/stack/tile/floor/techmaint/cargo
 	footstep_sound = "floor"
 
-//==========MISC==============\\
+//==========MISC==============
 
 /decl/flooring/wood
 	name = "wooden floor"
