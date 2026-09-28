@@ -385,3 +385,12 @@
 /obj/effect/floor_decal/semiotic/large/space/old
 	icon_state = "space_old"
 
+
+/obj/effect/floor_decal/conduit
+	name = "conduit"
+	icon = 'modular/turfs/floors/icons/decals.dmi'
+	icon_state = "conduit"
+	desc = "Leads somewhere."
+
+/obj/effect/floor_decal/conduit/junction
+	icon_state = "conduit_t"
