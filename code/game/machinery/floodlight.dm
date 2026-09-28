@@ -15,7 +15,7 @@
 
 /obj/machinery/floodlight/Initialize()
 	. = ..()
-	cell = new /obj/item/cell/large(src)
+	cell = new /obj/item/cell/large/astra/disposable(src)
 
 /obj/machinery/floodlight/get_cell()
 	return cell

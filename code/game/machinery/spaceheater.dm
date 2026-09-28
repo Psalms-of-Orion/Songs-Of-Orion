@@ -14,7 +14,7 @@
 
 /obj/machinery/space_heater/Initialize()
 	. = ..()
-	cell = new /obj/item/cell/large/high(src)
+	cell = new /obj/item/cell/large/astra/disposable(src)
 	update_icon()
 
 /obj/machinery/space_heater/get_cell()

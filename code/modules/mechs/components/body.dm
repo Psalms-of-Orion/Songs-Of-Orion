@@ -150,7 +150,7 @@
 
 /obj/item/mech_component/chassis/prebuild()
 	computer = new /obj/item/robot_parts/robot_component/exosuit_control(src)
-	cell = new /obj/item/cell/large/high(src)
+	cell = new /obj/item/cell/large/astra/disposable(src)
 	diagnostics = new /obj/item/robot_parts/robot_component/diagnosis_unit(src)
 
 /obj/item/mech_component/chassis/attackby(obj/item/I, mob/living/user)
