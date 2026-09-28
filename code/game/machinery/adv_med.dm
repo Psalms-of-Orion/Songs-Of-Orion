@@ -6,7 +6,7 @@
 	var/obj/machinery/body_scanconsole/connected
 	var/locked
 	name = "Body Scanner"
-	icon = 'icons/obj/Cryogenic2.dmi'
+	icon = 'modular/icons/full_body_scanner.dmi'
 	icon_state = "scanner_off"
 	density = TRUE
 	anchored = TRUE
@@ -14,6 +14,14 @@
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 60
 	active_power_usage = 10000	//10 kW. It's a big all-body scanner.
+
+/obj/machinery/bodyscanner/New()
+	..()
+	spawn(5)
+		for(var/dir in cardinal)
+			connected = locate(/obj/machinery/body_scanconsole) in get_step(src, dir)
+			if(connected)
+				return
 
 /obj/machinery/bodyscanner/relaymove(mob/user as mob)
 	if (user.stat)
@@ -131,7 +139,7 @@
 	var/delete
 	var/temphtml
 	name = "Body Scanner Console"
-	icon = 'icons/obj/Cryogenic2.dmi'
+	icon = 'modular/icons/full_body_scanner.dmi'
 	icon_state = "scanner_terminal_off"
 	density = TRUE
 	anchored = TRUE
@@ -383,16 +391,16 @@
 			var/occupant_condition = round((occupant.health / occupant.maxHealth) * 100)
 			if(occupant_condition>=100 && !occupant.getBruteLoss() && !occupant.getFireLoss())
 				icon_state = "scanner_green"
-				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIME)
+				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
 			else if(occupant_condition>=0)
 				icon_state = "scanner_yellow"
-				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_YELLOW)
+				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
 			else if(occupant_condition>=-90)
 				icon_state = "scanner_red"
-				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_RED)
+				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
 			else
 				icon_state = "scanner_death"
-				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_RED)
+				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
 		else
 			icon_state = "scanner_open"
 			set_light(0)
@@ -406,16 +414,19 @@
 			if(connected.occupant)
 				if(connected.occupant.health>=100)
 					icon_state = "scanner_terminal_green"
-					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIME)
+					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
+				else if(connected.occupant.health>=0)
+					icon_state = "scanner_terminal_yellow"
+					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
 				else if(connected.occupant.health>=-90)
 					icon_state = "scanner_terminal_red"
-					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_RED)
+					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
 				else
 					icon_state = "scanner_terminal_dead"
-					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_RED)
+					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
 			else
 				icon_state = "scanner_terminal_blue"
-				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_BLUE)
+				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_PURPLE_MACHINERY)
 		else
 			icon_state = "scanner_terminal_off"
 			set_light(0)
