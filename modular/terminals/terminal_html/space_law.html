@@ -1,0 +1,456 @@
+<!-- AMBER TERMINAL TEMPLATE -->
+<!-- CSS doesn't work for these things, so the CRT effect has to be in the header. -->
+<head>
+<main class="crt">
+<style>
+:root {
+  --crt-red: rgb(218, 49, 49);
+  --crt-green: rgb(112, 159, 115);
+  --crt-blue: rgb(40, 129, 206);
+}
+/* Global */
+html {
+  font-size: 14px;
+
+  min-height: 100%;
+  h1 {font-size: 21px; margin: 15px 0px 5px;}
+  h2 {font-size: 15px; margin: 15px 0px 5px;}
+  li {margin: 2px 0px 2px 15px;}
+  ul {margin: 5px; padding: 0px;}
+  ol {margin: 5px; padding: 0px 15px;}
+body {font-size: 15px; font-family: "Courier", Courier, monospace; bgcolor:'#0d0405';}
+}
+main {
+  height: 100vh;
+  height: 100dvh;
+  color: #6ba5e0;
+}
+
+.pink {
+  color: pink;
+}
+.yellow {
+  color: yellow;
+}
+.lightblue {
+  color: lightblue;
+}
+.code {
+  color: attr(data-color);
+}
+.wrapper {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+.code {
+  animation: typewriter 1s steps(14) 1s 1 normal both;
+  line-height: 1;
+  margin: 0;
+
+
+}
+.cursor {
+  display: inline-block;
+  animation: blinkTextCursor 500ms infinite normal;
+}
+
+/* Animation */
+.anim-typewriter {
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.crt {
+  background-color: #272635;
+  text-shadow: 0 0 0.2em currentColor, 1px 1px rgba(255, 0, 255, 0.5),
+    -1px -1px rgba(0, 255, 255, 0.4);
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    transform: translateZ(0);
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: ;
+  }
+
+  &:before {
+    background: repeating-linear-gradient(
+      var(--crt-red) 0px,
+      var(--crt-green) 2px,
+      var(--crt-blue) 4px
+    );
+  }
+  &:after {
+    background: repeating-linear-gradient(
+      90deg,
+      var(--crt-red) 1px,
+      var(--crt-green) 2px,
+      var(--crt-blue) 3px
+    );
+  }
+}
+</style>
+	<TITLE>SPACE LAW AND YOU</TITLE>
+</head>
+<main bgcolor='#272635'; class="crt";>
+<body bgcolor="#272635";>
+<!-- ACTUAL WORK-SPACE -->
+	<center><div style="background-color: #294071; color: #6ba5e0;"><FONT face = "Consolas">|  HOME   |  SETTINGS  |  FILES > DOC > <u>SEC.HTML</u>  |</div></center>
+		<BODY bgcolor='#272635'> <FONT COLOR="#6ba5e0"><FONT face = "Consolas">
+		<hr>
+		<h1>WELCOME</h1>
+		To the Nanotrassen Internal Security Department. Please select a topic.
+		<hr>
+		<ul>
+		<a href="#overview"><li>Overview</li></a>
+		<a href="#sop"><li>Proceedure</li></a>
+		<a href="#time"><li>Trial and Sentencing</li></a>
+		<a href="#shooting"><li>Lethal Force</li></a>
+		<a href="#crime3"><li>Criminal Code Level-3: Criminal Mischief</li></a>
+		<a href="#crime2"><li>Criminal Code Level-2: Misdemeanors</li></a>
+		<a href="#crime1"><li>Criminal Code:Level-1: Felonies</li></a>
+		<a href="#crime0"><li>Criminal Code:Level-0: Capital Offenses</li></a>
+		</ul>
+		<hr>
+		<h1 id="overview">Overview</h1>
+		As with all secure facilities, our ISD ensures the safety of the facility and crew. Wearing sharp red uniforms* and professional smiles,
+		security maintains order and decency aboard the station. Granted authority to maintain Space Law, they are bastions of order and professionalism.
+		<br>
+		<br>
+		*REV:
+		You may have noticed some new friendly faces around the halls by now! Our Business Partners in the Transitionary Period have joined our efforts for the peaceful transition of ownership.
+		Risk Controllers from the Proxima Centauri Risk Control Group may be seen aboard the station, and are fully vested with the same authority and respect as our Internal Security.
+		They can be recognized by their badges and blue uniforms.
+		<br>
+		<br>
+		In addition to our Business Partners, there may be times where Deputies of the United Solar Conglomerate Federal Marshal Service visit the facility.
+		While their authority is more limited aboard our facilities, deference should be given to their investigations as their prosecution of offenses may be judged outside of Internal Affairs.
+		<br>
+		<br>SOLCOM COMPLIANCE NOTICE:
+		As required by the Solar Combined Operations Mandate Section 102, in events of Declared Emergencies (SOS, or declared by regional authorities), command and control of the facility are ceded to SOLCOM authorities until otherwise stated.
+		All crewmembers are REQUIRED to comply with lawful orders issued by SOLCOM Military and Law Enforcement. Failure to comply may result in charges outside of NanoTrassen jurisdiction.
+		Immediate compliance may be forced by: Physical Compulsion, Indefinite Detainment, Summary Execution.
+		<br>
+		<hr><main class="crt";>
+		<h1 id="sop">Procedure</h1>
+		In day to day operations, security personnel may encounter incidents which require detainment or citation of crewmembers.
+		Crew are expected to comply with officers and follow lawful orders to the best of their ability.
+		In event of arrest, the standard operating procedure is:
+		<span style="background-color: #294071; color: #6ba5e0;"><FONT face = "Consolas">
+		 	<li>Inform subject of their Wanted status, and the reason for it. This is not required in event of visibly armed or actively ongoing criminal acts.</li>
+			<li>Compliant subjects are to be handcuffed and transported to the Brig without additional motivation.</li>
+		 	<li>Non-Compliant subjects are to be physically restrained and motivated into compliance.</li>
+		 	<li>Subjects are to be searched and detained for the duration applicable to their charges.</li>
+		 	<li>Subjects may be held for additional questioning related to serious offenses or incidents.</li>
+		</span><br>
+		In the event of Brigging, crewmembers are expected to remain compliant and docile for the duration.
+		Security personnel are responsible for the wellbeing of those arrested, and must ensure subjects' basic needs are met and no harm comes to those in captivity.
+		Standard Brigging Procedure is:
+		<span style="background-color: #294071; color: #6ba5e0;"><FONT face = "Consolas">
+		 	<li>Subjects are to be stripped of personal effects if to be held for significant duration.</li>
+			<li>Injured subjects are to be stabilized.</li>
+		 	<li>Subjects' criminal records are to be updated to reflect their infractions.</li>
+		 	<li>Subjects' criminal status are to be updated to reflect current captivity status.</li>
+		 	<li>Items removed during search or in redressing subjects into prisoner garb are to be held in evidence in the event of a criminal trial.</li>
+		</span><br>
+		<hr><main class="crt";>
+		<h1 id="time">Trial and Sentencing</h1>
+		Time spent in the brig is rarely desired by the average crewmember.
+		Determining the time spent in the Brig should be based on the highest offense convicted, rather than stacking all crimes unless separated in distinct nature and time.
+		For sentences exceeding 10 minutes or fines exceeding 1,000c, subjects may request legal representation.
+		<br>
+		Trials should not be pursued for captivity lasting less than 30 minutes, for the sake of everyone's time as trials often take as long to arrange and undergo.
+		Trials are encouraged in event of indefinite detention or capital proceedings, however they are NOT required.
+		<br>
+		The Captain and Head of Security (in that order) may forgo a trial based on testimony and evidence, or confession and issue sentencing without holding a formal court trial.
+		<br>
+		<hr><main class="crt";>
+		<h1 id="shooting">Use of Lethal Force</h1>
+		At all times, security forces are expected and equipped to use every means possible to capture subjects alive and with as little force as possible.
+		<br>
+		<br>
+		However, there are limits.
+		For the safety of crewmembers and officers, it may pose an unreasonable risk to use less-lethal methods.
+		<br>
+		<br>
+		Several major, uncommon situations may require the use of deadly force:
+		<span style="background-color: #294071; color: #6ba5e0;"><FONT face = "Consolas">
+		 	<li>Significant personal risk to self or crew.</li>
+			<li>Heavily or exotically armed individuals may be too dangerous for less-lethal weapons, such as those in possession of explosives.</li>
+		 	<li>Non-human entities, such as drones, mutants, cyborgs, or other exotic entities may not be able to be captured by traditional means.</li>
+		 	<li>Complete collapse of order, such as large scale mutinies, boarding parties, total loss of the chain of command, or other extreme emergencies automatically authorize lethal force until order is re-established.</li>
+		</span>
+		<br>
+		<br>
+		Anyone involved in a lethal force incident should be debriefed to ensure the reasonability and responsibility of their actions.
+		Improper use of force may constitute a number of crimes if found to be drastic, unnecessary, or unreasonable in the moment.
+		<br>
+		<br><main class="crt";>
+		<h2>Civilian Use of Force</h2>
+		While the application of force is the domain of the ISD, there may be times where crewmembers may be forced to defend themselves until rescue.
+		However, this does not mean they may take the law and lives in their hands.
+		The use of lethal force in self defense is highly discouraged and only authorized in extreme peril.
+		Examples of mitigating factors include:
+		<p style="background-color: #294071; color: #6ba5e0;"><FONT face = "Consolas">
+		 	<li>Immediate, demonstrable threat to life.</li>
+		 	<li>Non-human entities, such as drones, mutants, cyborgs, or other exotic entities which less-lethal methods are ineffective against.</li>
+		 	<li>Fatalities resulting from self defense in extreme peril, with reasonable intervention to prevent loss of life.</li>
+		</p><br>
+		Anyone involved in a lethal force incident should be debriefed to ensure the reasonability and responsibility of their actions.
+		Improper use of force may constitute a number of crimes if found to be drastic, unnecessary, or unreasonable in the moment.
+		<br>
+		<hr><main class="crt";>
+		<h1 id="crime3">Criminal Code Level-3: Criminal Mischief</h1>
+		A number of non-violent activities may constitute minor crimes. All may be rounded to 3 minutes or 300c fines.
+		May be rounded up to Level-2 crimes if an excess of offenses accumulate.
+		<br>
+		<table style="background-color: #6ba5e0;" cellpadding="5">
+		<tbody class="crt"; style="background-color: #294071; color: #6ba5e0;">
+		<tr>
+		<td>CODE</td>
+		<td>CHARGE</td>
+		<td>DESCRIPTION</td>
+		<td>NOTES</td>
+		<td>SENTENCE</td>
+		</tr>
+		<tr>
+		<td>301</td>
+		<td>DISTURBING THE PEACE</td>
+		<td>Disorderly conduct, excessive noise, general misconduct and offense.</td>
+		<td>Clowns are meant to be funny.</td>
+		<td>3 minutes or 100c per offense.</td>
+		</tr>
+		<tr>
+		<td>302</td>
+		<td>INDECENT EXPOSURE</td>
+		<td>Intentional public nudity.</td>
+		<td>See Pride Event schedule for acceptable allowances.</td>
+		<td>500c fine, forcible re-clothing.</td>
+		</tr>
+		<tr>
+		<td>303</td>
+		<td>TRESPASSING</td>
+		<td>Intentional entry or lingering in unauthorized areas.</td>
+		<td>Authorization may be revoked by department staff.</td>
+		<td>Physical removal, OR 300c fine, OR 3 minutes.</td>
+		</tr>
+		<tr>
+		<td>304</td>
+		<td>INSUBORDINATION</td>
+		<td>Intentionally disobeying direct orders from superiors</td>
+		<td>Given by heads of staff to their own staff.</td>
+		<td>Demotion or termination of employment.</td>
+		</tr>
+		<tr>
+		<td>305</td>
+		<td>LITTERING/<br />VANDALISM</td>
+		<td>Intentional spread of trash, filth, graffiti or other intentional defacing of property.</td>
+		<td>Bleeding is not littering, but smearing blood all over is.</td>
+		<td>100c fine, OR, 3 minutes, OR returning property to original state.</td>
+		</tr>
+		</tbody>
+		</table>
+		<hr><main class="crt";>
+		<h1 id="crime2">Criminal Code Level-2: Misdemeanors</h1>
+		Crimes of notable severity, punishable by 5 minutes each or minimum 500c fines.
+		May be rounded up to Level-1 Felonies based on the nature, number, and severity of offenses.
+		Modifiers may apply a 2x multiplication of sentencing on that specific charge, making them Level-1 Felonies.
+		<table style="background-color: #6ba5e0;" cellpadding="5">
+		<tbody class="crt"; style="background-color: #294071; color: #6ba5e0;">
+		<tr>
+		<td>CODE</td>
+		<td>CHARGE</td>
+		<td>DESCRIPTION</td>
+		<td>MODIFIER</td>
+		<td>SENTENCE</td>
+		</tr>
+		<tr>
+		<td>201</td>
+		<td>ASSAULT/ BATTERY</td>
+		<td>Inflicting intentional harm resulting in injury or aggressive physical contact.</td>
+		<td>Aggravated Assault: If injuries require major intervention.</td>
+		<td>5 minutes, 500c fine.</td>
+		</tr>
+		<tr>
+		<td>202</td>
+		<td>CRIMINAL NEGLIGENCE</td>
+		<td>Creating unsafe conditions without intent to cause harm.</td>
+		<td>Gross Negligence: Resulting in bodily harm or death.</td>
+		<td>5 minutes, OR 500c fine, AND/OR demotion/termination.</td>
+		</tr>
+		<tr>
+		<td>203</td>
+		<td>THEFT</td>
+		<td>Taking of non-public property from persons or departments.</td>
+		<td>Grand Theft: High value, classified, dangerous, or mission-critical items.</td>
+		<td>Confiscation, 5 minutes, OR 500c fine, AND/OR demotion/termination.</td>
+		</tr>
+		<tr>
+		<td>204</td>
+		<td>BREAKING AND ENTERING</td>
+		<td>Forcible entry into unauthorized areas, by destructive or non-destructive means.</td>
+		<td>Restricted Access B&amp;E: Entry into a high security area.</td>
+		<td>Confiscation of tools, 5 minutes, OR 500c fine, AND/OR demotion/termination.</td>
+		</tr>
+		<tr>
+		<td>205</td>
+		<td>VANDALISM</td>
+		<td>Intentionally defacing, damaging, or rendering inoperable property or equipment.</td>
+		<td>Sabotage:<br />Malicious modification or damage to property to interfere with operations.</td>
+		<td>Confiscation of tools, 5 minutes, OR 500c fine, AND/OR demotion/termination.</td>
+		</tr>
+		<tr>
+		<td>206</td>
+		<td>CRIMINAL POSSESSION</td>
+		<td>Possession of a weapon, substance, or device intended to cause harm.</td>
+		<td>With Intent: Explosives or their components, contraband in quantity, poisons.</td>
+		<td>Confiscation of contraband, 5 minutes, OR 500c fine.</td>
+		</tr>
+		<tr>
+		<td>207</td>
+		<td>DERELICTION</td>
+		<td>Intentional abandonment or refusal of essential duties.</td>
+		<td>With Contempt: Refusal which intentionally harms individuals or operations.</td>
+		<td>5 minutes, OR 500c fine, AND/OR demotion/termination.</td>
+		</tr>
+		</tbody>
+		</table>
+		<hr><main class="crt";>
+		<h1 id="crime1">Criminal Code Level-1: Felonies</h1>
+		Crimes of notable severity, punishable by 10 minutes each or minimum 1000c fines. Modifiers may multiply sentencing by 2x.
+		Cannot be rounded up into Level-0 Capital offenses. May result in demotion or employment termination.
+		<br>
+		<table style="background-color: #6ba5e0;" cellpadding="5">
+		<tbody class="crt"; style="background-color: #294071; color: #6ba5e0;">
+		<tr>
+		<td>CODE</td>
+		<td>CHARGE</td>
+		<td>DESCRIPTION</td>
+		<td>MODIFIER</td>
+		<td>SENTENCE</td>
+		</tr>
+		<tr>
+		<td>101</td>
+		<td>MxNSLAUGHTER</td>
+		<td>To cause through accident or negligence, the death of a human.</td>
+		<td>Voluntary: Intentionally causing a situation which unintentionally resulted in death.</td>
+		<td>10 minutes, OR 1000c fine, AND/OR demotion/termination.</td>
+		</tr>
+		<tr>
+		<td>102</td>
+		<td>ASSAULT W/ DEADLY WEAPON</td>
+		<td>Assault resulting in bodily harm with a dangerous tool or weapon- OR - Assaulting an officer/Head of Staff.</td>
+		<td>Attempted Murder: Continued assault on a person unable to retreat or defend themselves, or incapacitated.</td>
+		<td>10 minutes, OR 1000c fine.</td>
+		</tr>
+		<tr>
+		<td>103</td>
+		<td>INCITING</td>
+		<td>Inciting rioting, unrest, or violence.</td>
+		<td>Inciting Mutiny: Calling for, encouraging, or supporting Mutiny.</td>
+		<td>10 minutes, OR 1000c fine, AND/OR demotion/termination.</td>
+		</tr>
+		<tr>
+		<td>104</td>
+		<td>KIDNAPPING</td>
+		<td>Taking and holding person(s) against their will.</td>
+		<td>Hostage-taking: Kidnapping with threat or to prevent capture.</td>
+		<td>10 minutes, OR 1000c fine.</td>
+		</tr>
+		</tbody>
+		</table>
+		<hr><main class="crt";>
+		<h1 id="crime0">Criminal Code Level-0: Capital Offenses</h1>
+		Crimes of extreme severity, punishable by indefinite detainment, re-education, or death.
+		Re-education may include removal of neurological implants or tissue, or placement into cyborg chassis.
+		Death may only be authorized by the Captain. Criminal trials are NOT required, but encouraged.
+		<br>
+		<table style="background-color: #6ba5e0;" cellpadding="5">
+		<tbody class="crt"; style="background-color: #294071; color: #6ba5e0;">
+		<tr>
+		<td>CODE</td>
+		<td>CHARGE</td>
+		<td>DESCRIPTION</td>
+		<td>NOTE</td>
+		<td>SENTENCE</td>
+		</tr>
+		<tr>
+		<td>001</td>
+		<td>MURDER</td>
+		<td>Intentional taking of human life without mitigating factors.</td>
+		<td>Not in self defense or in the course of duties.</td>
+		<td>Permanent captivity, re-education, or Death.</td>
+		</tr>
+		<tr>
+		<td>002</td>
+		<td>BRAINWASHING</td>
+		<td>Modification of human brain for malicious, unauthorized purposes.</td>
+		<td>Includes unwilling cyborg-ing.</td>
+		<td>Permanent captivity, re-education, or Death.</td>
+		</tr>
+		<tr>
+		<td>003</td>
+		<td>MUTINY</td>
+		<td>To willfully subvert or overthrow the Chain of Command without lawful cause.</td>
+		<td>If non-violent, death is not a legal penalty.</td>
+		<td>Permanent captivity, re-education, or Death.</td>
+		</tr>
+		<tr>
+		<td>004</td>
+		<td>REDACTED</td>
+		<td>SEE ISD-182.21</td>
+		<td>N/A</td>
+		<td>Death.</td>
+		</tr>
+		<tr>
+		<td>005</td>
+		<td>ENEMY OF THE CORPORATION</td>
+		<td>Employment by hostile external actors.</td>
+		<td>Hostile corporate espionage, mercenaries, etc.</td>
+		<td>Permanent captivity or re-education.</td>
+		</tr>
+		<tr>
+		<td>006</td>
+		<td>ENEMY OF THE STATE</td>
+		<td>Engaging in terroristic organizations or activities to overthrow the legitimate government.</td>
+		<td>May include historical revisionism, disinformation, or terrorism.</td>
+		<td>Permanent captivity or re-education.</td>
+		</tr>
+		<tr>
+		<td>007</td>
+		<td>ESPIONAGE</td>
+		<td>Hostile activities to steal, sabotage, or subvert company or State assets on behalf of outside actors.</td>
+		<td>Often includes Sabotage, Murder, or Conspiracy charges.</td>
+		<td>Death.</td>
+		</tr>
+		</tbody>
+		</table>
+		<hr>
+		<center><div style="background-color: #294071; color: #6ba5e0;"><FONT face = "Consolas">NTS-13 SECURITY ACCESS TERMINAL<102.21.528.144></div></center><br>
+		<hr>
+</body>
+
+</body>

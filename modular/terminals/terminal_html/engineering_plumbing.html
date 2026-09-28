@@ -1,0 +1,147 @@
+<!-- AMBER TERMINAL TEMPLATE -->
+<!-- CSS doesn't work for these things, so the CRT effect has to be in the header. -->
+<head>
+<main class="crt">
+<style>
+:root {
+  --crt-red: rgb(218, 49, 49);
+  --crt-green: rgb(112, 159, 115);
+  --crt-blue: rgb(40, 129, 206);
+}
+/* Global */
+html {
+  font-size: 14px;
+
+  min-height: 100%;
+  h1 {font-size: 21px; margin: 15px 0px 5px;}
+  h2 {font-size: 15px; margin: 15px 0px 5px;}
+  li {margin: 2px 0px 2px 15px;}
+  ul {margin: 5px; padding: 0px;}
+  ol {margin: 5px; padding: 0px 15px;}
+body {font-size: 14px; font-family: "Courier", Courier, monospace; bgcolor:'#0d0405';}
+}
+main {
+  height: 100vh;
+  height: 100dvh;
+  color: rgb(209, 158, 18);
+}
+
+.pink {
+  color: pink;
+}
+.yellow {
+  color: yellow;
+}
+.lightblue {
+  color: lightblue;
+}
+.code {
+  color: attr(data-color);
+}
+.wrapper {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+.code {
+  animation: typewriter 1s steps(14) 1s 1 normal both;
+  line-height: 1;
+  margin: 0;
+  display: inline-block;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.cursor {
+  display: inline-block;
+  animation: blinkTextCursor 500ms infinite normal;
+}
+
+/* Animation */
+.anim-typewriter {
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.crt {
+  background-color: rgb(30, 28, 25);
+  text-shadow: 0 0 0.2em currentColor, 1px 1px rgba(255, 0, 255, 0.5),
+    -1px -1px rgba(0, 255, 255, 0.4);
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    transform: translateZ(0);
+    pointer-events: none;
+    //opacity: 0.5;
+    mix-blend-mode: overlay;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &:before {
+    background: repeating-linear-gradient(
+      var(--crt-red) 1px,
+      var(--crt-green) 2px,
+      var(--crt-blue) 4x
+    );
+  }
+  &:after {
+    background: repeating-linear-gradient(
+      90deg,
+      var(--crt-red) 1px,
+      var(--crt-green) 2px,
+      var(--crt-blue) 3px
+    );
+  }
+}
+</style>
+	<TITLE>TITLE TEXT HERE</TITLE>
+</head>
+<body bgcolor='#1b1a16';>
+
+<!-- ACTUAL WORK-SPACE -->
+
+		<center><div style="background-color: #854912; color: #fed018;">|  HOME   |  SETTINGS  |  FILES > MOTD > <u>PLUMBING</u>  |</div></center>
+		<hr>
+		<p style="color:rgb(209, 158, 18)">
+		<h1>Good Morning, Team Mates!</h1>
+		As you may know, recent repairs have been made to the powerhouse by our dear friends at the StarWorks.<br>
+		However, the radiator array has several issues that were unresolved and we'll need some Team Mates to have a look.
+		<br>
+		<hr>
+		<br>
+		<span style="background-color: #5e1210; color: #fed018;"><FONT face = "Consolas">
+		 	<li>External radiator array inspection.</li>
+			<li>Replace and repair any missing or damaged sections.</li>
+		 	<li>Recharge coolant exchange system.</li>
+		 	<li>Inspect radiators for leaks or clogging.</li>
+		</span><br>
+		<hr>
+		Pre-refit pressure tests showed signs of icing in the internal passages of the radiator array, primarily around the bends.<br>
+		Please perform pressure tests on BOTH the input and output of the array and replace any clogged or iced-over sections.<br>
+		Thanks, team! -B.
+		<center><div style="background-color: #854912; color: #fed018;">NTSS-13 ENGINEERING ACCESS TERMINAL<102.21.521.128></div></center><br>
+
+
+    </div>
+
+</body>
