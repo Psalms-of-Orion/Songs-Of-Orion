@@ -12,8 +12,9 @@
 	bad_type = /obj/item/storage/belt
 	rarity_value = 10
 	spawn_tags = SPAWN_TAG_BELT
-
-	var/show_above_suit = 0
+	dropped_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
+	var/show_above_suit = 1
 
 /obj/item/storage/belt/Initialize()
 	. = ..()
@@ -66,7 +67,8 @@
 		/obj/item/grenade/chem_grenade/cleaner,
 		/obj/item/grenade/chem_grenade/antiweed,
 		/obj/item/grenade/chem_grenade/metalfoam,
-		/obj/item/gun/projectile/flare_gun
+		/obj/item/gun/projectile/flare_gun,
+		/obj/item/device/geiger
 	)
 	price_tag = 200
 /obj/item/storage/belt/utility/full
@@ -121,7 +123,7 @@
 /obj/item/storage/belt/medical
 	name = "medical belt"
 	desc = "Can hold various medical equipment."
-	icon_state = "medicalbelt"
+	icon_state = "medical"
 	item_state = "medical"
 	can_hold = list(
 		/obj/item/bodybag,
@@ -130,7 +132,7 @@
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/hud/health,
 		/obj/item/device/scanner/health,
-		/obj/item/device/radio/headset,
+		/obj/item/device/radio,
 		/obj/item/device/lighting/toggleable/flashlight,
 		/obj/item/reagent_containers/blood,
 		/obj/item/reagent_containers/dropper,
@@ -164,7 +166,7 @@
 	icon_state = "ems"
 	item_state = "ems"
 	can_hold_extra = list(
-		/obj/item/device/radio/off,
+		/obj/item/device/radio,
 		/obj/item/inflatable_dispenser,
 		/obj/item/tool/crowbar,
 		/obj/item/extinguisher/mini,
@@ -179,10 +181,10 @@
 	spawn_blacklisted = TRUE
 
 /obj/item/storage/belt/medical/emt/combat/populate_contents()
-	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/tool/crowbar/pneumatic(src)
+	new /obj/item/stack/medical/burn(src)
+	new /obj/item/stack/medical/bruise/advanced(src)
+	new /obj/item/stack/medical/gauze/hemo(src)
+	new /obj/item/stack/medical/gauze/hemo(src)
 	new /obj/item/storage/pill_bottle/meralyne(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/dermaline(src)
@@ -191,6 +193,7 @@
 	name = "tactical belt"
 	desc = "Can hold various military and security equipment."
 	icon_state = "tactical"
+	item_state = "tactical"
 	rarity_value = 20
 	can_hold = list(
 		/obj/item/grenade,
@@ -216,7 +219,8 @@
 		/obj/item/gun/projectile/flare_gun,
 		/obj/item/gun/projectile/giskard,
 		/obj/item/gun/energy/gun/martin,
-		/obj/item/taperoll
+		/obj/item/taperoll,
+		/obj/item/tool/knife/tacknife
 	)
 
 /obj/item/storage/belt/tactical/ironhammer
@@ -230,8 +234,7 @@
 	for(var/i in 1 to prespawned_content_amount)
 		new prespawned_content_type(src)
 	new /obj/item/tool/knife/tacknife(src)
-	new /obj/item/tool/crowbar/pneumatic(src)
-	new /obj/item/device/lighting/toggleable/flashlight/seclite(src)
+	new /obj/item/tool/crowbar(src)
 	new /obj/item/handcuffs(src)
 
 

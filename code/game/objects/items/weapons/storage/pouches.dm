@@ -4,7 +4,7 @@
 	icon = 'icons/inventory/pockets/icon.dmi'
 	//icon_state = "pouch" //TODO
 	//item_state = "pouch" //TODO
-
+	item_flags = DRAG_AND_DROP_UNEQUIP
 	w_class = ITEM_SIZE_SMALL
 	slot_flags = SLOT_BELT //Pouches can be worn on belt
 	storage_slots = 1
@@ -17,8 +17,10 @@
 	spawn_tags = SPAWN_TAG_POUCH
 	price_tag = 120
 	bad_type = /obj/item/storage/pouch
-
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 	var/sliding_behavior = FALSE
+	var/show_above_suit = 1
 
 /obj/item/storage/pouch/verb/toggle_slide()
 	set name = "Toggle Slide"
@@ -29,6 +31,8 @@
 	to_chat(usr, SPAN_NOTICE("Items will now [sliding_behavior ? "" : "not"] slide out of [src]"))
 
 /obj/item/storage/pouch/attack_hand(mob/living/carbon/human/user)
+	user.update_icon()
+	update_icon()
 	if(sliding_behavior && contents.len && (src in user))
 		var/obj/item/I = contents[contents.len]
 		if(istype(I))
@@ -39,6 +43,30 @@
 			add_fingerprint(user)
 	else
 		..()
+
+/obj/item/storage/pouch/MouseDrop(over_object)
+	if(!(item_flags & DRAG_AND_DROP_UNEQUIP))
+		update_icon()
+		return ..()
+	if(!pre_equip(usr, over_object))
+		update_icon()
+		..()
+
+/obj/item/storage/pouch/verb/toggle_layer()
+	set name = "Switch Belt Layer"
+	set category = "Object"
+
+	if(show_above_suit == -1)
+		to_chat(usr, SPAN_NOTICE("\The [src] cannot be worn above your suit!"))
+		return
+	show_above_suit = !show_above_suit
+	update_icon()
+
+/obj/item/storage/pouch/update_icon()
+	if (ismob(src.loc))
+		var/mob/M = src.loc
+		M.update_inv_belt()
+		M.update_icon()
 
 /obj/item/storage/pouch/small_generic
 	name = "small generic pouch"
@@ -138,7 +166,8 @@
 		/obj/item/cell/small,
 		/obj/item/cell/medium,
 		/obj/item/gun/projectile/flare_gun,
-		/obj/item/stack/nanopaste
+		/obj/item/stack/nanopaste,
+		/obj/item/device/geiger
 		)
 
 /obj/item/storage/pouch/engineering_supply
@@ -226,7 +255,7 @@
 	rarity_value = 14
 	price_tag = 140
 
-	storage_slots = 5
+	storage_slots = 3
 	w_class = ITEM_SIZE_NORMAL
 	max_w_class = ITEM_SIZE_NORMAL
 
@@ -306,26 +335,35 @@
 	spawn_blacklisted = TRUE
 	prespawned_content_amount = 6
 	prespawned_content_type = /obj/item/ammo_magazine/ihclrifle/hv
+	sliding_behavior = TRUE
 
 /obj/item/storage/firstaid/combat/populate_contents()
 	for(var/i in 1 to prespawned_content_amount)
 		new prespawned_content_type(src)
 
 /obj/item/storage/pouch/ammo/loaded/lrifle
-	desc = "Pre-loaded ammo pouch. This one has carbine magazines."
+	desc = "Pre-loaded ammo pouch. This one has rifle magazines."
 	prespawned_content_type = /obj/item/ammo_magazine/lrifle/highvelocity
 
 /obj/item/storage/pouch/ammo/loaded/srifle
-	desc = "Pre-loaded ammo pouch. This one has rifle magazines."
-	prespawned_content_type = /obj/item/ammo_magazine/srifle/long/hv
+	desc = "Pre-loaded ammo pouch. This one has carbine magazines."
+	prespawned_content_type = /obj/item/ammo_magazine/srifle/hv
 
 /obj/item/storage/pouch/ammo/loaded/smg
 	desc = "Pre-loaded ammo pouch. This one has smg magazines."
+	prespawned_content_type = /obj/item/ammo_magazine/smg
+
+/obj/item/storage/pouch/ammo/loaded/smg/hv
+	desc = "Pre-loaded ammo pouch. This one has smg magazines."
 	prespawned_content_type = /obj/item/ammo_magazine/smg/hv
 
-/obj/item/storage/pouch/ammo/loaded/srifle
-	desc = "Pre-loaded ammo pouch. This one has rifle magazines."
+/obj/item/storage/pouch/ammo/loaded/srifle/long
+	desc = "Pre-loaded ammo pouch. This one has carbine magazines."
 	prespawned_content_type = /obj/item/ammo_magazine/srifle/long/hv
+
+/obj/item/storage/pouch/ammo/loaded/clrifle
+	desc = "Pre-loaded ammo pouch. This one has caseless magazines."
+	prespawned_content_type = /obj/item/ammo_magazine/ihclrifle/hv
 
 
 /obj/item/storage/pouch/tubular/loaded
@@ -334,6 +372,7 @@
 	spawn_blacklisted = TRUE
 	prespawned_content_amount = 5
 	prespawned_content_type = /obj/item/ammo_casing/grenade
+	sliding_behavior = TRUE
 
 /obj/item/storage/pouch/tubular/loaded/blast
 	desc = "Pre-loaded packet of grenade launcher shells. This one has blast shells."
@@ -351,4 +390,148 @@
 	desc = "Pre-loaded packet of grenade launcher shells. This one has EMP shells."
 	prespawned_content_type = /obj/item/ammo_casing/grenade/emp/low_yield
 
+/obj/item/storage/pouch/medical_supply/ifak
+	name = "IFAK"
+	desc = "Individual First Aid Kit. REMEMBER: this is YOURS, for when YOU get hit."
+	prespawned_content_amount = 2
+	prespawned_content_type = /obj/item/stack/medical/gauze/hemo
 
+/obj/item/storage/pouch/medical_supply/ifak/populate_contents()
+	for(var/i in 1 to prespawned_content_amount)
+		new prespawned_content_type(src)
+	new /obj/item/stack/medical/burn(src)
+	new /obj/item/stack/medical/bruise/advanced(src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/quickhealbrute(src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/quickhealburn(src)
+
+//Bandoliers, make better pls
+
+/obj/item/storage/pouch/bandolier
+	name = "tubular pouch"
+	desc = "A bandolier for holding ammunition. User must pick which type."
+	icon_state = "shotgun"
+	item_state = "bandolier_empty"
+	matter = list(MATERIAL_BIOMATTER = 14, MATERIAL_STEEL = 1 )
+	rarity_value = 50
+	price_tag = 140
+	sliding_behavior = TRUE
+	storage_slots = 0
+	w_class = ITEM_SIZE_NORMAL
+	max_w_class = ITEM_SIZE_NORMAL
+	slot_flags = SLOT_BELT | SLOT_DENYPOCKET
+
+/obj/item/storage/pouch/bandolier/update_icon()
+	..()
+	cut_overlays()
+
+	if((contents.len) == 0)
+		icon_state = "bandolier_empty"
+		update_wear_icon()
+	if(contents.len)
+		overlays += image('icons/inventory/pockets/icon.dmi', "[icon_state]_[contents.len]")
+		icon_state = "[initial(icon_state)]"
+		update_wear_icon()
+
+/obj/item/storage/pouch/bandolier/attack_self(mob/living/user)
+	var/list/options = list()
+	options["Shotgun Shells"] = list(/obj/item/storage/pouch/bandolier/shotgun)
+	options["Grenades"] = list(/obj/item/storage/pouch/bandolier/grenade)
+	options["Launcher Shells"] = list(/obj/item/storage/pouch/bandolier/fourty)
+	var/choice = input(user,"What will this bandolier hold?") as null|anything in options
+	if(src && choice)
+		var/list/things_to_spawn = options[choice]
+		for(var/new_type in things_to_spawn)
+			var/atom/movable/AM = new new_type(get_turf(src))
+			if(istype(AM, /obj/item/storage/pouch/))
+				to_chat(user, SPAN_NOTICE("You have chosen \the [AM]. Say hello to your new friend."))
+		qdel(src)
+
+
+/obj/item/storage/pouch/bandolier/shotgun
+	name = "shotgun bandolier"
+	desc = "A bandolier configured to hold shotgun shells."
+	icon_state = "shotgun"
+	item_state = "shotgun"
+	storage_slots = 5
+	can_hold = list(
+		/obj/item/ammo_casing/shotgun
+		)
+
+/obj/item/storage/pouch/bandolier/fourty
+	name = "grenade launcher bandolier"
+	desc = "A bandolier configured to hold grenade launcher shells."
+	icon_state = "forty"
+	item_state = "forty"
+	storage_slots = 5
+	can_hold = list(
+		/obj/item/ammo_casing/grenade
+		)
+
+/obj/item/storage/pouch/bandolier/grenade
+	name = "grenade bandolier"
+	desc = "A bandolier configured to hold hand grenades."
+	icon_state = "hg"
+	item_state = "hg"
+	storage_slots = 5
+	can_hold = list(
+		/obj/item/grenade
+		)
+//Preloaded
+//For antag and ERT, etc
+/obj/item/storage/pouch/bandolier/shotgun/slug
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/ammo_casing/shotgun/prespawned
+
+/obj/item/storage/pouch/bandolier/shotgun/buckshot
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/ammo_casing/shotgun/pellet/prespawned
+
+/obj/item/storage/pouch/bandolier/shotgun/bean
+	name = "beanbag bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/ammo_casing/shotgun/beanbag/prespawned
+
+/obj/item/storage/pouch/bandolier/fourty/blast
+	name = "blast shell bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/ammo_casing/grenade/blast
+
+/obj/item/storage/pouch/bandolier/fourty/flash
+	name = "flash shell bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/ammo_casing/grenade/flash
+
+/obj/item/storage/pouch/bandolier/fourty/emp
+	name = "EMP shell bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/ammo_casing/grenade/emp/low_yield
+
+
+/obj/item/storage/pouch/bandolier/grenade/frag
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/grenade/frag
+
+/obj/item/storage/pouch/bandolier/grenade/blast
+	name = "grenade bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/grenade/explosive
+
+/obj/item/storage/pouch/bandolier/grenade/smoke
+	name = "smoke grenade bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/grenade/smokebomb
+
+/obj/item/storage/pouch/bandolier/grenade/flashbang
+	name = "flash grenade bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/grenade/flashbang
+
+/obj/item/storage/pouch/bandolier/grenade/emp
+	name = "EMP grenade bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/grenade/empgrenade
+
+/obj/item/storage/pouch/bandolier/grenade/teargas
+	name = "tear-gas grenade bandolier"
+	prespawned_content_amount = 5
+	prespawned_content_type = /obj/item/grenade/chem_grenade/teargas
