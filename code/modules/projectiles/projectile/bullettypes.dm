@@ -117,7 +117,7 @@ There are important things regarding this file:
 /obj/item/projectile/bullet/clrifle/rubber
 	icon_state = "rubber"
 	name = "rubber bullet"
-	damage_types = list(BRUTE = 11, HALLOSS = 10)
+	damage_types = list(BRUTE = 10, HALLOSS = 12)
 	embed = FALSE
 	sharp = FALSE
 	can_ricochet = TRUE
@@ -191,7 +191,7 @@ There are important things regarding this file:
 /obj/item/projectile/bullet/magnum/rubber
 	icon_state = "rubber"
 	name = "rubber bullet"
-	damage_types = list(BRUTE = 10, HALLOSS = 11)
+	damage_types = list(BRUTE = 10, HALLOSS = 16)
 	embed = FALSE
 	sharp = FALSE
 	wounding_mult = WOUNDING_NORMAL
