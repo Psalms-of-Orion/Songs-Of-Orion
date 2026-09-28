@@ -41,14 +41,6 @@
 		message_admins("Core Proc corepopped_nuke called.")
 		corepopped_nuke = TRUE
 		playsound(loc, 'sound/machines/reactor_alert.ogg', 100, 1, ignore_walls = TRUE)
-		for(var/mob/living/mob in GLOB.living_mob_list)
-			if(ishuman(mob))
-			//Hilariously enough, running into a closet should make you get hit the hardest.
-				var/mob/living/carbon/human/H = mob
-				var/power = min(600, DETONATION_HALLUCINATION * sqrt(1 / (get_dist(mob, src) + 1)) )
-				H.adjust_hallucination(power, power)
-				var/rads = 2000 * sqrt( 1 / (get_dist(mob, src) + 1) )
-				mob.apply_effect(rads, IRRADIATE)
 		explosion(get_turf(src), 800, 50)
 		empulse(src, 20, 30)
 		heatwave(src, 12, 24, 130, TRUE, 1)
@@ -58,5 +50,9 @@
 			fragment_explosion(src, spread_range, fragment_type, num_fragments, fragment_damage, damage_step)
 			fragment_explosion(src, 8, (/obj/item/projectile/bullet/grenade/smoke), 15, 1, 3)
 			AddRadSource(src, 1000, 24)
+			AddRadSource(src, 64, 36)
+			AddRadSource(src, 48, 48)
+			AddRadSource(src, 24, 64)
+			AddRadSource(src, 12, 72)
 	else
 		return

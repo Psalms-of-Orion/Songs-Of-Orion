@@ -8,7 +8,7 @@
 /obj/machinery/multistructure/nuclear_reactor_part/fuel_rod/Initialize(mapload, ...)
 	..()
 	if(mapload)
-		fuel = new /obj/item/fuel_rod/uranium()
+		fuel = new /obj/item/fuel_rod/uranium/spent()
 		current_step = STEP_INTACT
 	update_icon()
 

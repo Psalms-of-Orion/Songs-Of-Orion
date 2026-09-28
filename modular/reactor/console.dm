@@ -1,13 +1,13 @@
 /obj/machinery/multistructure/nuclear_reactor_part/console
 	name = "reactor control console"
 	icon_state = "console"
+	icon = 'modular/reactor/reactor_items.dmi'
 	density = TRUE
 	var/datum/multistructure/nuclear_reactor/Reactor
 
 /obj/machinery/multistructure/nuclear_reactor_part/console/New()
 	..()
 	update_icon()
-	set_light(l_range = 1.5, l_power = 0.2, l_color = COLOR_LIGHTING_GREEN_MACHINERY)
 
 /obj/machinery/multistructure/nuclear_reactor_part/console/update_icon()
 	add_overlay("power_key")

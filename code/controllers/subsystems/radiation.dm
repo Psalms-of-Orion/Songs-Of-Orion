@@ -12,6 +12,10 @@
 #define PulseRadiation(Source, Power, Range) \
 	produce_radiation((Source), (Power), (Range))
 
+#define GRAYS 0.01
+#define ROENTGEN 1
+#define MILLISEIVERTS 10
+
 // List of items that produce radiation.
 var/list/global/rad_producers = list()
 // List of all the geiger counters that exist in the world for easy referencing
