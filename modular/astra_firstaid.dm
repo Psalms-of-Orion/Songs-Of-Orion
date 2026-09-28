@@ -8,7 +8,7 @@
 	spawn_blacklisted = FALSE
 	rarity_value = 60
 	spawn_tags = SPAWN_TAG_FIRSTAID
-
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
 	max_w_class = ITEM_SIZE_NORMAL
 
 	can_hold = list(
@@ -88,7 +88,7 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/stack/medical/burn(src)
 	new /obj/item/stack/medical/bruise/advanced(src)
-	new /obj/item/stack/medical/gauze/hemo(src)
+	new /obj/item/stack/medical/stapler(src)
 
 /obj/item/storage/hcases/med/astra/rad
 	name = "radiation exposure kit"
@@ -153,7 +153,7 @@
 	new /obj/item/tool/scalpel(src)
 	new /obj/item/tool/surgicaldrill(src)
 	new /obj/item/tool/tape_roll/fiber/medical(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/suture/standard(src)
 	make_exact_fit()
 
 /obj/item/storage/hcases/med/astra/surgery/contractor
@@ -169,7 +169,7 @@
 	new /obj/item/tool/surgicaldrill(src)
 	new /obj/item/tool/tape_roll/fiber/medical(src)
 	new /obj/item/device/scanner/health(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/stapler(src)
 	new /obj/item/storage/pill_bottle/oxycodone(src)
 	new /obj/item/storage/pill_bottle/prosurgeon(src)
 	make_exact_fit()
@@ -240,7 +240,7 @@
 /obj/item/storage/box/firstaid/adv
 	illustration = "brute"
 	name = "shock trauma kit"
-	desc = "A box of medical supplies for toxin exposure treatment."
+	desc = "A box of medical supplies for trauma treatment."
 	rarity_value = 30
 	prespawned_content_amount = 3
 	prespawned_content_type = /obj/item/stack/medical/gauze/hemo
