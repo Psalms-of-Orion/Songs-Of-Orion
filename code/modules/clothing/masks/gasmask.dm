@@ -13,6 +13,7 @@
 	permeability_coefficient = 0.01
 	siemens_coefficient = 0.9
 	style_coverage = COVERS_WHOLE_FACE
+	equip_delay = 1.5
 	var/gas_filter_strength = 1			//For gas mask filters
 	var/list/filtered_gases = list("plasma", "sleeping_agent")
 	armor = list(
@@ -27,7 +28,8 @@
 	style = STYLE_NEG_LOW
 	matter = list(MATERIAL_PLASTIC = 2)
 	muffle_voice = TRUE
-
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 /obj/item/clothing/mask/gas/filter_air(datum/gas_mixture/air)
 	var/datum/gas_mixture/filtered = new
 
@@ -44,6 +46,29 @@
 /obj/item/clothing/mask/gas/New()
 	..()
 	AddComponent(/datum/component/clothing_sanity_protection, GAS_MASK_SANITY_COEFF_BUFF)
+
+/obj/item/clothing/mask/gas/pre_equip(mob/user, slot)
+	..(user, slot)
+	if (equip_delay > 0)
+		//If its currently worn, we must be taking it off
+		if (is_worn())
+			user.visible_message(
+				SPAN_NOTICE("[user] starts taking off \the [src]..."),
+				SPAN_NOTICE("You start taking off \the [src]...")
+			)
+			if(!do_after(user,equip_delay,src))
+				playsound(src, 'sound/items/gas_mask/confessormaskoff.ogg', 50, 1)
+				return TRUE //A nonzero return value will cause the equipping operation to fail
+
+		else if (is_held() && !(slot in unworn_slots))
+			user.visible_message(
+				SPAN_NOTICE("[user] starts putting on \the [src]..."),
+				SPAN_NOTICE("You start putting on \the [src]...")
+			)
+			if(!do_after(user,equip_delay,src))
+				playsound(src, 'sound/items/gas_mask/confessormaskon.ogg', 50, 1)
+				return TRUE //A nonzero return value will cause the equipping operation to fail
+
 
 //Plague Dr suit can be found in clothing/suits/bio.dm
 /obj/item/clothing/mask/gas/plaguedoctor
