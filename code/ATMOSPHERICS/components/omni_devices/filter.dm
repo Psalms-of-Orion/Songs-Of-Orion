@@ -23,6 +23,7 @@
 	rebuild_filtering_list()
 	for(var/datum/omni_port/P in ports)
 		P.air.volume = ATMOS_DEFAULT_VOLUME_FILTER
+	set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIGHTING_ORANGE_MACHINERY)
 
 /obj/machinery/atmospherics/omni/filter/Destroy()
 	input = null
