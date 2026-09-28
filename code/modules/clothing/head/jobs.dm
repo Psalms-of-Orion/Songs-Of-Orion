@@ -62,6 +62,7 @@
 	body_parts_covered = HEAD
 	spawn_blacklisted = TRUE
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/preacher
 	name = "preacher hat"
@@ -69,6 +70,7 @@
 	icon_state = "church_hat"
 	spawn_blacklisted = TRUE
 	style_coverage = COVERS_EYES|COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 //Ironhammer
 /obj/item/clothing/head/beret/sec/navy/officer
@@ -93,7 +95,7 @@
 	name = "purple beret"
 	desc = "A stylish, if purple, beret."
 	icon_state = "beret_purple"
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/head/beret/engineering
 	name = "Technomancer yellow beret"
 	desc = "A beret with the Technomancer League insignia emblazoned on it. For engineers that are more inclined towards style than safety."
@@ -112,6 +114,7 @@
 	icon_state = "beret_artist"
 	item_state = "beret_artist"
 	spawn_frequency = 0
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/beret/artist/lime
 	name = "lime feathered beret"

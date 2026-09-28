@@ -15,7 +15,7 @@
 
 /obj/item/clothing/gloves/stungloves/Initialize()
 	. = ..()
-	cell = new /obj/item/cell/medium/high(src)
+	cell = new /obj/item/cell/medium/astra/disposable(src)
 	update_icon()
 
 /obj/item/clothing/gloves/stungloves/get_cell()

@@ -66,7 +66,7 @@
 	var/helm_type =  /obj/item/clothing/head/space/rig
 	var/boot_type =  /obj/item/clothing/shoes/magboots/rig
 	var/glove_type = /obj/item/clothing/gloves/rig
-	var/cell_type =  /obj/item/cell/large/high
+	var/cell_type =  /obj/item/cell/large/astra/disposable
 	var/air_type =   /obj/item/tank/oxygen
 
 	//Component/device holders.

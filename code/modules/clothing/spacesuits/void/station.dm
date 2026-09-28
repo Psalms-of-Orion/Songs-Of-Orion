@@ -115,7 +115,7 @@
 		/obj/item/rcd
 	)
 	helmet = /obj/item/clothing/head/space/void/engineeringold
-	spawn_blacklisted = FALSE
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/space/void/engineeringold/equipped
 	boots = /obj/item/clothing/shoes/magboots

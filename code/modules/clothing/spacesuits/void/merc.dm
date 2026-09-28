@@ -62,6 +62,31 @@
 	accompanying_object = null
 	spawn_blacklisted = TRUE
 
+//SOLCOM Sky Marshal drip
+/obj/item/clothing/head/space/void/SCAF/sky_marshal
+	name = "Sky Marshal helmet"
+	desc = "The cyclops, the burning eye of judgement."
+	icon_state = "sky_marshal"
+	item_state = "sky_marshal"
+
+
+/obj/item/clothing/suit/space/void/SCAF/sky_marshal
+	name = "Sky Marshal suit"
+	desc = "Super-advanced exo-carapace combat armor used by the last person you want to see, or will ever see. A Sky Marshal."
+	icon_state = "sky_marshal"
+	item_state = "sky_marshal"
+	helmet = /obj/item/clothing/head/space/void/SCAF/sky_marshal
+	slowdown = 0
+
+/obj/item/clothing/suit/space/void/SCAF/sky_marshal/equipped
+	spawn_blacklisted = TRUE
+	boots = /obj/item/clothing/shoes/magboots
+	tank = /obj/item/tank/oxygen
+	accompanying_object = null
+	spawn_blacklisted = TRUE
+
+
+
 //Voidsuit for contractors
 /obj/item/clothing/head/space/void/merc
 	name = "blood-red voidsuit helmet"

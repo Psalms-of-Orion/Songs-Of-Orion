@@ -322,6 +322,8 @@ BLIND     // can't see anything
 	var/see_invisible = -1
 	var/have_lenses = 0
 	var/protection = 0
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 ///////////////////////////////////////////////////////////////////////
 //Gloves
@@ -340,6 +342,8 @@ BLIND     // can't see anything
 	style = STYLE_LOW
 	var/wired = 0
 	var/clipped = 0
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 // Called just before an attack_hand(), in mob/UnarmedAttack()
 /obj/item/clothing/gloves/proc/Touch(atom/A, proximity)
@@ -360,6 +364,14 @@ BLIND     // can't see anything
 		desc = "[desc]<br>They have had the fingertips cut off of them."
 		return
 
+/obj/item/clothing/gloves/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/tool/multitool))
+		user.visible_message("\red [user] tests the [src].","\red You test the [src].")
+		to_chat(user, SPAN_WARNING("The [src] has a siemens coefficient of [siemens_coefficient] and a permeability coefficient of [permeability_coefficient]."))
+		if(siemens_coefficient > 0.5)
+			do_sparks(6, (rand(1,8)), src)
+		if(siemens_coefficient == 0.0)
+			playsound(src.loc, 'sound/machines/triple_beep.ogg', 30, 1)
 ///////////////////////////////////////////////////////////////////////
 //Head
 /obj/item/clothing/head
@@ -375,6 +387,8 @@ BLIND     // can't see anything
 	bad_type = /obj/item/clothing/head
 	spawn_tags = SPAWN_TAG_CLOTHING_HEAD
 	style = STYLE_HIGH
+	dropped_sound = 'sound/items/drop_sounds/hat.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/clothing/head/attack_ai(mob/user)
 	if(!mob_wear_hat(user))
@@ -419,6 +433,8 @@ BLIND     // can't see anything
 	var/voicechange = FALSE
 	var/list/say_messages
 	var/list/say_verbs
+	dropped_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/clothing/mask/proc/filter_air(datum/gas_mixture/air)
 	return
@@ -441,6 +457,8 @@ BLIND     // can't see anything
 	slowdown = SHOES_SLOWDOWN
 	style = STYLE_LOW
 	force = 2
+	dropped_sound = 'sound/items/drop_sounds/shoes.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 	var/can_hold_knife = 0
 	var/obj/item/holding
@@ -587,6 +605,8 @@ BLIND     // can't see anything
 	restricted_accessory_slots = list("armor","armband")
 	maxHealth = 300
 	health = 300
+	dropped_sound = 'sound/items/drop_sounds/cloak (3).ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/clothing/suit/Initialize(mapload, ...)
 	.=..()
@@ -617,6 +637,8 @@ BLIND     // can't see anything
 		*/
 	var/displays_id = 1
 	equip_delay = 2 SECONDS
+	dropped_sound = 'sound/items/drop_sounds/clothing.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 	//convenience var for defining the icon state for the overlay used when the clothing is worn.
 

@@ -17,6 +17,8 @@
 	bad_type = /obj/item/clothing/head/armor
 	style = STYLE_NEG_HIGH
 	style_coverage = COVERS_HAIR
+	dropped_sound = 'sound/items/drop_sounds/helm.ogg'
+	pickup_sound = 'sound/items/drop_sounds/cloak (1).ogg'
 
 /*
  * Helmets
@@ -40,7 +42,7 @@
 
 /obj/item/clothing/head/armor/helmet/visor
 	desc = "Standard Security gear. Protects the head from impacts. Has a permanently affixed visor to protect the eyes."
-	icon_state = "helmet_visor"
+	icon_state = "ballistic_visor"
 	body_parts_covered = HEAD | EARS | EYES
 	matter = list(
 		MATERIAL_STEEL = 5,
@@ -64,6 +66,7 @@
 	flash_protection = FLASH_PROTECTION_MODERATE
 	price_tag = 500
 	style_coverage = COVERS_WHOLE_HEAD
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/armor/helmet/dermal
 	name = "Dermal Armour Patch"
@@ -99,6 +102,7 @@
 	price_tag = 500
 	style_coverage = COVERS_WHOLE_HEAD
 	style = STYLE_NONE
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/armor/helmet/technomancer/New()
 	. = ..()
@@ -123,11 +127,12 @@
 	)
 	flash_protection = FLASH_PROTECTION_MAJOR
 	price_tag = 500
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/armor/helmet/handmade
 	name = "handmade combat helmet"
 	desc = "It looks like it was made from a bucket and some steel. Uncomfortable and heavy but better than nothing."
-	icon_state = "helmet_handmade"
+	icon_state = "technohelmet_visor"
 	armor = list(
 		melee = 7,
 		bullet = 7,
@@ -137,6 +142,13 @@
 		rad = 0
 	)
 	price_tag = 75
+/obj/item/clothing/head/armor/helmet/handmade/New()
+	..()
+	if(prob(50))
+		icon_state = "technohelmet_visor"
+	else
+		icon_state = "technohelmet_googles"
+
 
 /obj/item/clothing/head/armor/helmet/scavengerhelmet
 	name = "scavenger helmet"
@@ -151,6 +163,7 @@
 		rad = 0
 	)
 	price_tag = 200
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/armor/helmet/thunderdome
 	name = "\improper Thunderdome helmet"
@@ -174,7 +187,7 @@
 		rad = 0
 	)
 	price_tag = 400
-	flags_inv = BLOCKHEADHAIR|HIDEEARS|HIDEEYES
+	flags_inv = BLOCKHEADHAIR|HIDEEARS
 	flash_protection = FLASH_PROTECTION_MAJOR
 	matter = list(
 		MATERIAL_STEEL = 8,
@@ -183,9 +196,18 @@
 	)
 	style_coverage = COVERS_WHOLE_HEAD
 
+/obj/item/clothing/head/armor/bulletproof/poverty
+	name = "combat helm"
+	desc = "You know the music, time to dance."
+	icon_state = "ballistic"
+	body_parts_covered = HEAD | EARS
+	matter = list(
+		MATERIAL_STEEL = 8,
+		MATERIAL_PLASTEEL = 2, //Higher plasteel cost since it's booletproofs
+	)
 /obj/item/clothing/head/armor/bulletproof/peace
 	name = "Peacekeeper helm"
-	desc = "For Democracy we will die, speading Freedom across the skies."
+	desc = "For Democracy we will die, spreading Freedom across the skies."
 	icon_state = "peace"
 
 /obj/item/clothing/head/armor/bulletproof/ironhammer_nvg //currently junk-only
@@ -200,7 +222,7 @@
 	var/last_toggle = 0
 	var/toggle_delay = 2 SECONDS
 	price_tag = 600
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/head/armor/bulletproof/ironhammer_nvg/New()
 	..()
 	hud = new(src)
@@ -273,7 +295,7 @@
 		MATERIAL_PLASTEEL = 2,
 		MATERIAL_GLASS = 2
 	)
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/head/armor/laserproof //TODO: Give it reflection capabilities after refactor
 	name = "ablative helmet"
 	desc = "A ablative security helmet that excels in protecting the wearer against energy and laser projectiles."
@@ -296,7 +318,7 @@
 		MATERIAL_GLASS = 10 // glass is reflective yo, make it cost a lot of it - also, visor
 	)
 	style_coverage = COVERS_WHOLE_HEAD
-
+	spawn_blacklisted = TRUE
 // toggleable face guard
 /obj/item/clothing/head/armor/faceshield
 	//We cant just use the armor var to store the original since initial(armor) will return a null pointer
@@ -476,7 +498,7 @@
 	flags_inv = BLOCKHEADHAIR
 	body_parts_covered = HEAD|EARS
 	siemens_coefficient = 1
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/head/armor/faceshield/altyn
 	name = "altyn helmet"
 	desc = "A titanium helmet of serbian origin. Still widely used despite being discontinued."
@@ -485,7 +507,7 @@
 	armor_down = list(melee = 10, bullet = 13, energy = 7, bomb = 50, bio = 0, rad = 0)
 	siemens_coefficient = 1
 	up = TRUE
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/head/armor/faceshield/altyn/brown
 	icon_state = "altyn_brown"
 
@@ -509,7 +531,7 @@
 	name = "striped maska helmet"
 	desc = "Someone has painted a Maska in the Gopnik style."
 	icon_state = "altyn_tripoloski"
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/head/armor/helmet/visor/cyberpunkgoggle
 	name = "\improper Type-34C Semi-Enclosed Headwear"
 	desc = "Civilian model of a popular helmet used by certain law enforcement agencies. It does not have any armor plating, but has a neo-laminated fabric lining."
@@ -525,7 +547,7 @@
 		rad = 0
 	)
 	style_coverage = COVERS_FACE|COVERS_HAIR
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/head/armor/helmet/visor/cyberpunkgoggle/armored
 	name = "\improper Type-34 Semi-Enclosed Headwear"
 	desc = "Armored helmet used by certain law enforcement agencies. It's hard to believe there's a human somewhere behind that."
@@ -557,7 +579,7 @@
 	unacidable = TRUE
 	spawn_blacklisted = TRUE
 	style_coverage = COVERS_WHOLE_HEAD
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/head/armor/helmet/tanker
 	name = "black tanker helmet"
 	desc = "Protects the head from damage while you are in the exoskeleton."

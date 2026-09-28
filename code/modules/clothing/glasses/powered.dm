@@ -14,7 +14,7 @@
 /obj/item/clothing/glasses/powered/Initialize()
 	. = ..()
 	if(!cell && suitable_cell)
-		cell = new /obj/item/cell/small(src)
+		cell = new /obj/item/cell/small/astra/disposable/high(src)
 
 /obj/item/clothing/glasses/powered/Process()
 	if(active)

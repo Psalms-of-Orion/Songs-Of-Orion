@@ -1,8 +1,8 @@
 //NASA Voidsuit
 /obj/item/clothing/head/space/void
 	name = "void helmet"
-	desc = "A high-tech dark red space suit helmet. Used for AI satellite maintenance."
-	icon_state = "void"
+	desc = "A basic space suit helmet."
+	icon_state = "emergency"
 
 	heat_protection = HEAD
 	armor = list(
@@ -22,7 +22,7 @@
 	name = "voidsuit"
 	icon_state = "void"
 	item_state = "void"
-	desc = "A high-tech dark red space suit. Used for AI satellite maintenance."
+	desc = "An armored space-suit for EVA work."
 	armor = list(
 		melee = 7,
 		bullet = 5,
