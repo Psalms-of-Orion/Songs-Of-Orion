@@ -145,8 +145,8 @@
 					/obj/spawner/tool/advanced = 5,\
 					/obj/spawner/gun/normal = 3,\
 					/obj/spawner/lathe_disk/advanced = 2,\
-					/obj/item/cell/small/moebius/nuclear = 1,\
-					/obj/item/cell/medium/moebius/hyper = 1,\
+					/obj/item/cell/small/astra/nuclear = 1,\
+					/obj/item/cell/medium/astra/super = 1,\
 					/obj/spawner/rig = 1.5,\
 					/obj/spawner/rig/damaged = 1.5,\
 					/obj/spawner/voidsuit = 4,\

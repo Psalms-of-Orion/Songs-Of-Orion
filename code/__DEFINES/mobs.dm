@@ -206,7 +206,7 @@
 
 #define HEAT_MOBIGNITE_THRESHOLD 530 //minimum amount of heat an object needs to ignite a mob when it hits the mob
 
-#define SPECIES_HUMAN			"Human"
+#define SPECIES_HUMAN			"Solar Human"
 #define SPECIES_HUMAN_SOLAR		"Solar Human"
 #define SPECIES_HUMAN_EXILE		"Exile Human"
 #define SPECIES_SLIME			"Slime"
