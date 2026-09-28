@@ -215,10 +215,10 @@
 	icon_state = "wall1"
 	base_state = "wall"
 	fitting = "large tube"
-	light_type = /obj/item/light/tube/large
-	brightness_range = 7
+	light_type = /obj/item/light/tube
+	brightness_range = 6
 	brightness_power = 2
-	//brightness_color = "d2cfb7"
+	brightness_color = COLOR_LIGHTING_NEOTHEOLOGY_DARK
 
 /obj/machinery/light/built/New()
 	status = LIGHT_EMPTY
