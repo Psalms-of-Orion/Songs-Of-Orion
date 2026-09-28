@@ -691,7 +691,7 @@ window "mainwindow"
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
-		title = "Breaking Point"
+		title = "Ad Astra"
 		icon = 'icons\\ss13_64.png'
 		macro = "default"
 		menu = "menu"
