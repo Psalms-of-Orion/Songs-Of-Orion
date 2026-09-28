@@ -392,4 +392,8 @@
 	\[field\] - Recharge Hot and Cold Loops
 	\[br\]
 	\[field\] - Reset Digital Switching Valves
+	\[br\]
+	\[field\] - Reload CRIA and FRCA
+	\[br\]
+	\[field\] - Restart Reactor
 	\[br\]"}
