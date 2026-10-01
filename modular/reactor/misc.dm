@@ -27,13 +27,23 @@
 	force = WEAPON_FORCE_PAINFUL
 	throwforce = WEAPON_FORCE_WEAK
 	hitsound = 'sound/weapons/melee/blunthit.ogg'
-	dropped_sound = 'sound/effects/metalpipe.ogg'
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
+	dropped_sound_volume = 20
 
 /obj/item/control_rod/update_icon()
 	if(durability <= 5)
 		icon_state = "[initial(icon_state)]_spent"
 	else
 		icon_state = initial(icon_state)
+
+/obj/item/control_rod/throw_impact(atom/hit_atom, speed)
+	..()
+	if(isfloor(hit_atom))
+		do_sparks(2, (rand(1,8)), src)
+		update_icon()
+		playsound(loc, 'sound/effects/metalpipe.ogg', 90, 1)
+
 
 /obj/item/control_rod/makeshift
 	name = "makeshift control rod"
@@ -89,7 +99,9 @@
 	throwforce = WEAPON_FORCE_PAINFUL //NUCLEAR JAVELIN
 	tool_qualities = list(QUALITY_CAUTERIZING = 10) //Unfortunately cannot be a variable of rod life
 	hitsound = 'sound/weapons/melee/blunthit.ogg'
-	dropped_sound = 'sound/effects/metalpipe.ogg'
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
+	dropped_sound_volume = 20
 
 /obj/item/fuel_rod/asterium
 	name = "asterium fuel rod"
@@ -333,3 +345,4 @@
 		do_sparks(6, (rand(1,8)), src)
 		PulseRadiation(src, (life * 0.55), (life * 0.3))
 		update_icon()
+		playsound(loc, 'sound/effects/metalpipe.ogg', 90, 1)
