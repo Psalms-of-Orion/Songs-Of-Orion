@@ -342,7 +342,7 @@
 	desc = "Authentic leather for an authentic punk."
 	icon_state = "punk_highlight"
 	spawn_blacklisted = TRUE
-/*
+
 /obj/item/clothing/suit/storage/leather_jacket/punk/New(loc, jacket_type = "punk_highlight", logo_type, is_natural_spawn = TRUE)
 	..()
 	if(is_natural_spawn) // From junk pile or some such
@@ -377,7 +377,7 @@
 
 	icon_state = jacket_type
 	update_icon()
-*/
+
 /obj/item/clothing/suit/storage/toggle/hoodie
 	name = "grey hoodie"
 	desc = "A warm, grey sweatshirt."

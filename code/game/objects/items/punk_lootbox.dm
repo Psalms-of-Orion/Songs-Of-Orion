@@ -4,6 +4,7 @@
 	icon_state = "jacket_box"
 	matter = list(MATERIAL_CARDBOARD = 2)
 	rarity_value = 65
+	spawn_blacklisted = TRUE
 
 /obj/item/punk_lootbox/attack_self(mob/user)
 	. = ..()
