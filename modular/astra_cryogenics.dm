@@ -1,5 +1,3 @@
-#define HEAT_CAPACITY_HUMAN 100 //249840 J/K, for a 72 kg person.
-
 /obj/machinery/atmospherics/unary/astra_cryo_cell
 	name = "cryo cell"
 	icon = 'modular/icons/cryotube.dmi'
