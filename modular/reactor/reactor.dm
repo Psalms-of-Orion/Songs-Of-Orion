@@ -88,10 +88,8 @@
 	rods = Get_Fuel_Rods(FALSE)
 
 	if(radiological == TRUE)
-		spawn(2 SECONDS)
-			message_admins("Nuclear Reactor: PROCESS_KILL fired. All reactor processes shutdown.")
-			radiological = FALSE
-			return PROCESS_KILL
+		message_admins("Nuclear Reactor: PROCESS_KILL fired. All reactor processes shutdown.")
+		return PROCESS_KILL
 	if(!Console)
 		Console = locate() in get_area(wall_input)
 		Console?.Reactor = src
