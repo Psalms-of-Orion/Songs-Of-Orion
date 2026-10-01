@@ -12,7 +12,7 @@
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked")
 	tool_qualities = list(QUALITY_PRYING = 25, QUALITY_DIGGING = 10, QUALITY_HAMMERING = 10)
 	rarity_value = 4
-	dropped_sound = 'sound/effects/metalpipe.ogg'
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 /obj/item/tool/crowbar/improvised
@@ -53,7 +53,6 @@
 	suitable_cell = /obj/item/cell/medium
 	rarity_value = 24
 	spawn_tags = SPAWN_TAG_TOOL_ADVANCED
-	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 
 /obj/item/tool/crowbar/pneumatic/hivemind
 	name = "modified pneumatic crowbar"
