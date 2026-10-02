@@ -27,7 +27,6 @@
 	structure_damage_factor = STRUCTURE_DAMAGE_BLUNT
 	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 	pickup_sound = 'sound/items/drop_sounds/food.ogg'
-	hitsound = 'sound/weapons/melee/blunt/metalblunt (1).ogg'
 
 /obj/item/melee/baton/Initialize()
 	. = ..()
@@ -119,7 +118,7 @@
 			return 0	// item/attack() will return 1 if they hit, 0 if they missed.
 
 		//whacking someone causes a much poorer electrical contact than deliberately prodding them.
-		hitsound = pick('sound/weapons/melee/blunt/metalblunt (1).ogg', 'sound/weapons/melee/blunt/metalblunt (2).ogg', 'sound/weapons/melee/blunt/metalblunt (3).ogg')
+		hitsound = "blunt_metal"
 		stun *= 0.5
 		if(status)		//Checks to see if the stunbaton is on.
 			agony *= 0.5	//whacking someone causes a much poorer contact than prodding them.

@@ -297,13 +297,9 @@
 	lip = "pan_lip"
 	item_state = "pan"
 	matter = list(MATERIAL_PLASTEEL = 5)
-	hitsound = 'sound/weapons/melee/blunt/frying_pan(1).ogg'
+	hitsound = "frying_pan"
 	appliancetype = PAN
 	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
-
-/obj/item/reagent_containers/cooking_with_jane/cooking_container/pan/attack(mob/target, mob/living/user)
-	..()
-	hitsound = pick('sound/weapons/melee/blunt/frying_pan(1).ogg','sound/weapons/melee/blunt/frying_pan(2).ogg','sound/weapons/melee/blunt/frying_pan(3).ogg','sound/weapons/melee/blunt/frying_pan(4).ogg',)
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/pot
 	name = "cooking pot"
@@ -315,16 +311,11 @@
 	item_state = "pot"
 	matter = list(MATERIAL_STEEL = 5)
 
-	hitsound = 'sound/weapons/melee/blunt/frying_pan(1).ogg'
+	hitsound = "frying_pan"
 	removal_penalty = 5
 	appliancetype = POT
 	w_class = ITEM_SIZE_BULKY
 	dropped_sound = 'sound/items/drop_sounds/gascan.ogg'
-
-/obj/item/reagent_containers/cooking_with_jane/cooking_container/pot/attack(mob/target, mob/living/user)
-	..()
-	hitsound = pick('sound/weapons/melee/blunt/frying_pan(1).ogg','sound/weapons/melee/blunt/frying_pan(2).ogg','sound/weapons/melee/blunt/frying_pan(3).ogg','sound/weapons/melee/blunt/frying_pan(4).ogg',)
-
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/deep_basket
 	name = "deep fryer basket"

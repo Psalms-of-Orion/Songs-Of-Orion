@@ -96,6 +96,55 @@
 				return
 			return custom_emote(m_type, message)
 
+		if("agony_level_1")
+			if(!message)
+				if(miming)
+					message = "appears to be in pain!"
+					m_type = 1 // Can't we get defines for these?
+				else
+					if(prob(10))
+						message = "flinches in pain."
+					m_type = 1
+					if(get_sex() == FEMALE)
+						playsound(src, pick('sound/vo/female/pain (1).ogg', 'sound/vo/female/pain (2).ogg', 'sound/vo/female/pain (3).ogg','sound/vo/female/groan (1).ogg', 'sound/vo/female/groan (2).ogg', 'sound/vo/female/groan (3).ogg', 'sound/vo/male/groan (4).ogg', 'sound/vo/male/groan (5).ogg'), 20, 0)
+					else
+						playsound(src, pick('sound/vo/male/pain (1).ogg', 'sound/vo/male/pain (2).ogg', 'sound/vo/male/pain (3).ogg', 'sound/vo/male/groan (1).ogg', 'sound/vo/male/groan (2).ogg', 'sound/vo/male/groan (3).ogg', 'sound/vo/male/groan (4).ogg', 'sound/vo/male/groan (5).ogg'), 30, 1)
+
+			cloud_emote = "cloud-pain"
+
+		if("agony_level_2")
+			if(!message)
+				if(miming)
+					message = "appears to be in pain!"
+					m_type = 1 // Can't we get defines for these?
+				else
+					if(prob(10))
+						message = "gasps in pain."
+					m_type = 1
+					if(get_sex() == FEMALE)
+						playsound(src, pick('sound/vo/female/pain (1).ogg', 'sound/vo/female/pain (2).ogg', 'sound/vo/female/pain (3).ogg','sound/vo/female/painmoan (1).ogg', 'sound/vo/female/painmoan (2).ogg', 'sound/vo/female/painmoan (3).ogg', 'sound/vo/female/painmoan (4).ogg', 'sound/vo/female/painmoan (5).ogg', 'sound/vo/female/painmoan (6).ogg', 'sound/vo/female/painmoan (7).ogg', 'sound/vo/female/painmoan (8).ogg'), 30)
+					else
+						playsound(src, pick('sound/vo/male/pain (1).ogg', 'sound/vo/male/pain (2).ogg', 'sound/vo/male/pain (3).ogg', 'sound/vo/male/painmoan (1).ogg', 'sound/vo/male/painmoan (2).ogg', 'sound/vo/male/painmoan (3).ogg', 'sound/vo/male/painmoan (4).ogg', 'sound/vo/male/painmoan (5).ogg'), 30)
+
+			cloud_emote = "cloud-pain"
+
+		if("agony_level_3")
+			if(!message)
+				if(miming)
+					message = "appears to be in pain!"
+					m_type = 1 // Can't we get defines for these?
+				else
+					if(prob(10))
+						message = "gasps in pain."
+					m_type = 1
+					if(get_sex() == FEMALE)
+						playsound(src, pick('sound/vo/female/fatigue (1).ogg', 'sound/vo/female/fatigue (2).ogg', 'sound/vo/female/fatigue (3).ogg', 'sound/vo/female/pain (1).ogg', 'sound/vo/female/pain (2).ogg', 'sound/vo/female/pain (3).ogg', 'sound/vo/female/painscream (1).ogg', 'sound/vo/female/painscream (2).ogg', 'sound/vo/female/painscream (3).ogg', 'sound/vo/female/painscream (4).ogg', 'sound/vo/female/painscream (5).ogg', 'sound/vo/female/painscream (6).ogg', 'sound/vo/female/painscream (7).ogg', 'sound/vo/female/painscream (8).ogg', 'sound/vo/female/painmoan (1).ogg', 'sound/vo/female/painmoan (2).ogg', 'sound/vo/female/painmoan (3).ogg', 'sound/vo/female/painmoan (4).ogg', 'sound/vo/female/painmoan (5).ogg', 'sound/vo/female/painmoan (6).ogg', 'sound/vo/female/painmoan (7).ogg', 'sound/vo/female/painmoan (8).ogg'), 30)
+					else
+						playsound(src, pick('sound/vo/male/fatigue (1).ogg', 'sound/vo/male/fatigue (2).ogg', 'sound/vo/male/pain (1).ogg', 'sound/vo/male/pain (2).ogg', 'sound/vo/male/pain (3).ogg', 'sound/vo/male/painscream (1).ogg', 'sound/vo/male/painscream (2).ogg', 'sound/vo/male/painscream (3).ogg', 'sound/vo/male/painmoan (1).ogg', 'sound/vo/male/painmoan (2).ogg', 'sound/vo/male/painmoan (3).ogg', 'sound/vo/male/painmoan (4).ogg', 'sound/vo/male/painmoan (5).ogg'), 30)
+
+			cloud_emote = "cloud-pain"
+
+
 		if("pain")
 			if(!message)
 				if(miming)

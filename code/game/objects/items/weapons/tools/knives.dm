@@ -18,7 +18,7 @@
 	tool_qualities = list(QUALITY_CUTTING = 20,  QUALITY_WIRE_CUTTING = 10, QUALITY_SCREW_DRIVING = 5)
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_PLASTIC = 1)
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	hitsound = 'sound/weapons/melee/lightstab.ogg'
+	hitsound = "slash"
 	slot_flags = SLOT_BELT
 	structure_damage_factor = STRUCTURE_DAMAGE_BLADE
 	dropped_sound = 'sound/items/drop_sounds/knife.ogg'
@@ -27,10 +27,6 @@
 	//spawn values
 	rarity_value = 10
 	spawn_tags = SPAWN_TAG_KNIFE
-
-/obj/item/tool/knife/attack(mob/target, mob/living/user)
-	..()
-	hitsound = pick('sound/weapons/melee/sharp/genstab (1).ogg', 'sound/weapons/melee/sharp/genstab (2).ogg', 'sound/weapons/melee/sharp/genstab (3).ogg', 'sound/weapons/melee/sharp/genslash (1).ogg', 'sound/weapons/melee/sharp/genslash (2).ogg', 'sound/weapons/melee/sharp/genslash (3).ogg')
 
 /obj/item/tool/knife/New()
 	..()

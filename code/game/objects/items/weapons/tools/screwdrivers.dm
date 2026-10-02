@@ -8,14 +8,10 @@
 	w_class = ITEM_SIZE_TINY
 	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 1)
 	attack_verb = list("stabbed")
-	hitsound = 'sound/weapons/melee/sharp/genstab (1).ogg'
 	tool_qualities = list(QUALITY_SCREW_DRIVING = 30, QUALITY_BONE_SETTING = 10)
 	rarity_value = 6
 	dropped_sound = 'sound/items/drop_sounds/scrap.ogg'
-
-/obj/item/tool/screwdriver/attack(mob/target, mob/living/user)
-	..()
-	hitsound = pick('sound/weapons/melee/sharp/genstab (1).ogg', 'sound/weapons/melee/sharp/genstab (2).ogg', 'sound/weapons/melee/sharp/genstab (3).ogg')
+	hitsound = "stab"
 
 /obj/item/tool/screwdriver/improvised
 	name = "screwpusher"
@@ -58,7 +54,7 @@
 	spawn_tags = SPAWN_TAG_TOOL_ADVANCED
 	dropped_sound = 'sound/items/drop_sounds/device.ogg'
 
-/obj/item/tool/screwdriver/attack(mob/target, mob/living/user)
+/obj/item/tool/screwdriver/combi_driver/attack(mob/target, mob/living/user)
 	..()
 	playsound(src, WORKSOUND_DRIVER_TOOL, 50, 0)
 
