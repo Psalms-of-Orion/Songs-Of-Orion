@@ -150,6 +150,9 @@
 	var/obj/item/store	//What's in the book?
 	var/window_size = null // Specific window size for the book, i.e: "1920x1080", Size x Width
 
+	dropped_sound = 'sound/items/drop_sounds/book_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
+
 /obj/item/book/attack_self(var/mob/user as mob)
 	playsound(src.loc, pick('sound/items/BOOK_Turn_Page_1.ogg',\
 		'sound/items/BOOK_Turn_Page_2.ogg',\

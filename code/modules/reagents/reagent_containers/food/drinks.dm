@@ -255,6 +255,7 @@
 	possible_transfer_amounts = list(5,10,20,30,60,120)
 	volume = 120
 	center_of_mass = list("x"=17, "y"=10)
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
 
 /obj/item/reagent_containers/food/drinks/teapot
 	name = "teapot"
@@ -277,6 +278,7 @@
 	center_of_mass = "x=16;y=9"
 	filling_states = "15;30;50;70;85;100"
 	base_icon = "pitcher"
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
 
 /obj/item/reagent_containers/food/drinks/carafe
 	name = "pitcher"
@@ -290,6 +292,7 @@
 	matter = list(MATERIAL_GLASS = 1)
 	possible_transfer_amounts = list(5,10,20,30,60,120)
 	center_of_mass = "x=16;y=7"
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
 
 /obj/item/reagent_containers/food/drinks/flask
 	name = "captain's flask"
@@ -298,6 +301,7 @@
 	icon_state = "flask"
 	volume = 60
 	center_of_mass = list("x"=17, "y"=7)
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
 
 /obj/item/reagent_containers/food/drinks/flask/shiny
 	name = "shiny flask"
@@ -343,6 +347,7 @@
 	filling_states = "100"
 	base_name = "mug"
 	base_icon = "mug"
+	dropped_sound = 'sound/items/drop_sounds/glass.ogg'
 
 /obj/item/reagent_containers/food/drinks/mug/gold
 	name = "gold mug"
@@ -420,13 +425,16 @@
 	matter = list(MATERIAL_PLASTIC = 1)
 	base_name = "tea"
 	base_icon = "tea"
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
 
 /obj/item/reagent_containers/food/drinks/tea/black
 	name = "cup of black tea"
 	desc = "A tall plastic cup of hot black tea."
 	preloaded_reagents = list("tea" = 30)
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
 
 /obj/item/reagent_containers/food/drinks/tea/green
 	name = "cup of green tea"
 	desc = "A tall plastic cup of hot green tea."
 	preloaded_reagents = list("greentea" = 30)
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'

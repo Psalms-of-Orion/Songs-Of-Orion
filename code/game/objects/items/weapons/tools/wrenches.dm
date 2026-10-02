@@ -12,6 +12,8 @@
 	hitsound = 'sound/weapons/melee/blunthit.ogg'
 	tool_qualities = list(QUALITY_BOLT_TURNING = 30, QUALITY_HAMMERING = 10)
 	rarity_value = 6
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/tool/wrench/improvised
 	name = "sheet spanner"

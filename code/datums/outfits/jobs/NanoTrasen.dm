@@ -47,37 +47,35 @@
 	pda_type = /obj/item/modular_computer/pda
 	l_pocket = /obj/item/device/radio
 
-/decl/hierarchy/outfit/job/nt/medical
-	hierarchy_type = /decl/hierarchy/outfit/job/nt/medical
+/decl/hierarchy/outfit/job/nt/doctor
+	name = OUTFIT_JOB_NAME("Doctor")
 	shoes = /obj/item/clothing/shoes/color/white
 	id_type = /obj/item/card/id/med
 	pda_type = /obj/item/modular_computer/pda/moebius/medical
 	pda_slot = slot_l_store
 	l_ear  = /obj/item/reagent_containers/syringe/large
+	uniform = /obj/item/clothing/under/legacy/medical
+	l_hand = /obj/item/clipboard
+	r_ear = /obj/item/device/lighting/toggleable/flashlight/pen
+	belt = /obj/item/storage/belt/medical
+	r_hand = /obj/item/device/radio
 
-/decl/hierarchy/outfit/job/nt/medical/New()
+/decl/hierarchy/outfit/job/nt/doctor/New()
 	..()
 	BACKPACK_OVERRIDE_MEDICAL
 
-/decl/hierarchy/outfit/job/nt/medical/doctor
-	name = OUTFIT_JOB_NAME("Medical Doctor")
-	uniform = /obj/item/clothing/under/legacy/medical
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/alt
-	l_hand = /obj/item/storage/firstaid
-	r_pocket = /obj/item/device/lighting/toggleable/flashlight/pen
-	belt = /obj/item/storage/belt/medical
-	r_pocket = /obj/item/device/radio
 
 /decl/hierarchy/outfit/job/nt/security
 	name = OUTFIT_JOB_NAME("Security")
 	uniform =/obj/item/clothing/under/rank/security/red
-	l_ear = /obj/item/device/radio/headset/headset_sec
+	l_ear = /obj/item/device/radio/headset/headset_sec/alt
 	shoes = /obj/item/clothing/shoes/jackboots
 	head = /obj/item/clothing/head/patrol/sec/red
 	glasses = /obj/item/clothing/glasses/sunglasses/sechud
 	id_type = /obj/item/card/id/sec
 	pda_type = /obj/item/modular_computer/pda/security
 	backpack_contents = list(/obj/item/handcuffs = 1)
+	r_hand = /obj/item/card/keycard/security
 
 /decl/hierarchy/outfit/job/nt/security/New()
 	..()
@@ -103,13 +101,13 @@
 	uniform = /obj/item/clothing/under/legacy/engineer
 	id_type = /obj/item/card/id/engie
 	pda_type = /obj/item/modular_computer/pda/engineering
-	belt = /obj/item/storage/belt/utility/technomancer
-	l_ear = /obj/item/device/radio/headset/headset_eng
 	shoes = /obj/item/clothing/shoes/workboots
 	gloves = /obj/item/clothing/gloves/thick
 	pda_slot = slot_l_store
-	r_pocket = /obj/item/device/t_scanner
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	r_pocket = /obj/item/device/geiger/dosimeter
+	belt = /obj/item/device/radio/eng
+
 
 /decl/hierarchy/outfit/job/nt/engineering/New()
 	..()
@@ -151,7 +149,7 @@
 	shoes = /obj/item/clothing/shoes/leather
 	id_type = /obj/item/card/id/gold
 	pda_type = /obj/item/modular_computer/pda/captain
-	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/tool/knife/dagger/ceremonial = 1, /obj/item/clothing/accessory/cross = 1, /obj/item/gun/projectile/avasarala = 1, /obj/item/ammo_magazine/magnum/rubber = 1)
+	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/tool/knife/dagger/ceremonial = 1, /obj/item/clothing/accessory/cross = 1, /obj/item/gun/projectile/revolver = 1, /obj/item/ammo_magazine/slmagnum/rubber = 2)
 
 /decl/hierarchy/outfit/job/captain/New()
 	..()
@@ -182,4 +180,4 @@
 	head = /obj/item/clothing/head/patrol/black
 	id_type = /obj/item/card/id/hop
 	pda_type = /obj/item/modular_computer/pda/heads/hop
-	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/tool/knife/dagger/ceremonial = 1, /obj/item/clothing/accessory/cross = 1, /obj/item/gun/projectile/avasarala, /obj/item/ammo_magazine/magnum/rubber = 1)
+	backpack_contents = list(/obj/item/storage/box/ids = 1, /obj/item/tool/knife/dagger/ceremonial = 1, /obj/item/clothing/accessory/cross = 1, /obj/item/gun/projectile/revolver = 1, /obj/item/ammo_magazine/slmagnum/rubber = 2)

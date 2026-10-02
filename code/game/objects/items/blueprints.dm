@@ -19,6 +19,8 @@
 	var/const/ROOM_ERR_LOLWAT = 0
 	var/const/ROOM_ERR_SPACE = -1
 	var/const/ROOM_ERR_TOOLARGE = -2
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 /obj/item/blueprints/attack_self(mob/M as mob)
 	if (!ishuman(M))

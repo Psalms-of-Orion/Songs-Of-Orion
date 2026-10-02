@@ -4646,7 +4646,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/glass_security{
-	id_tag = null;
 	layer = 2.8;
 	name = "Prison Hospital";
 	req_access = list(63)
@@ -6977,7 +6976,6 @@
 "aqH" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/freezer{
-	fluorescent = null;
 	frequency = 1380;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_1_berth_hatch";
@@ -8593,7 +8591,6 @@
 /area/eris/quartermaster/disposaldrop)
 "aus" = (
 /obj/machinery/door/airlock/freezer{
-	fluorescent = null;
 	frequency = 1380;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_1_hatch";
@@ -12481,7 +12478,6 @@
 /area/eris/maintenance/section2deck4central)
 "aER" = (
 /obj/machinery/door/airlock/freezer{
-	fluorescent = null;
 	frequency = 1380;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_2_hatch";
@@ -14683,8 +14679,6 @@
 /obj/machinery/atmospherics/omni/mixer{
 	active_power_usage = 7500;
 	tag_east = 2;
-	tag_east_con = null;
-	tag_north_con = null;
 	tag_south = 1;
 	tag_south_con = 0.79;
 	tag_west = 1;
@@ -16906,7 +16900,6 @@
 "aRJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/freezer{
-	fluorescent = null;
 	frequency = 1380;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_2_berth_hatch";
@@ -22857,7 +22850,6 @@
 /obj/machinery/button/remote/blast_door{
 	id = "maint_hatch_medbay_rec";
 	name = "Maintenance Hatch Control";
-	pixel_x = 0;
 	pixel_y = 24;
 	req_access = null
 	},
@@ -28754,7 +28746,6 @@
 "bsw" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Isolation B";
 	req_access = list(5)
 	},
@@ -28770,7 +28761,6 @@
 "bsy" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Isolation C";
 	req_access = list(5)
 	},
@@ -28872,7 +28862,6 @@
 "bsM" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Isolation A";
 	req_access = list(5)
 	},
@@ -28929,9 +28918,7 @@
 	dir = 10
 	},
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /turf/floor/plating/under,
@@ -29186,7 +29173,6 @@
 "btH" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Monkey Pen";
 	req_access = list(5)
 	},
@@ -30095,7 +30081,6 @@
 "bvZ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Medbay Operating Room";
 	req_access = list(5)
 	},
@@ -40723,9 +40708,7 @@
 	pixel_y = -32
 	},
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /turf/floor/plating/under,
@@ -41598,7 +41581,6 @@
 "bXe" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_security{
-	id_tag = null;
 	layer = 2.8;
 	name = "Secuity Access";
 	req_access = list(1)
@@ -42382,11 +42364,6 @@
 	},
 /turf/floor/tiled/steel/gray_platform,
 /area/eris/hallway/main/section2)
-"bZl" = (
-/obj/machinery/trade_beacon/receiving,
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/floor/tiled/dark/techfloor,
-/area/eris/quartermaster/hangarsupply)
 "bZm" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -42573,7 +42550,6 @@
 /turf/open,
 /area/eris/maintenance/section2deck3port)
 "bZD" = (
-/obj/machinery/trade_beacon/sending,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/floor/tiled/dark/techfloor,
 /area/eris/quartermaster/hangarsupply)
@@ -44011,7 +43987,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/railing{
 	dir = 1;
-	icon_state = "railing0";
 	tag = "icon-railing0 (NORTH)"
 	},
 /obj/structure/railing{
@@ -44975,7 +44950,6 @@
 "cfu" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Medbay Therapy";
 	req_access = list(5)
 	},
@@ -48010,9 +47984,7 @@
 	},
 /obj/machinery/camera/network/second_section,
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /obj/structure/disposalpipe/segment{
@@ -49769,7 +49741,6 @@
 "cry" = (
 /obj/machinery/atmospherics/pipe/zpipe/up{
 	dir = 4;
-	icon_state = "up";
 	tag = "icon-up (EAST)"
 	},
 /turf/floor/plating/under,
@@ -63360,7 +63331,6 @@
 	opacity = 0
 	},
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Medical Bay";
 	req_access = list(5)
 	},
@@ -68785,7 +68755,6 @@
 "dns" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Medical Isolator";
 	req_access = list(5)
 	},
@@ -68931,7 +68900,6 @@
 "dnF" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Medical Isolator";
 	req_access = list(5)
 	},
@@ -70412,7 +70380,6 @@
 "drr" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Chemistry Lab";
 	req_access = list(33)
 	},
@@ -70518,7 +70485,6 @@
 "drC" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Chemistry Lab";
 	req_access = list(33)
 	},
@@ -71596,7 +71562,6 @@
 "duq" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Medical Bay";
 	req_access = list(5)
 	},
@@ -71727,15 +71692,12 @@
 "duE" = (
 /obj/structure/table/standard,
 /obj/item/storage/belt/medical{
-	pixel_x = 0;
 	pixel_y = 2
 	},
 /obj/item/storage/belt/medical{
-	pixel_x = 0;
 	pixel_y = 2
 	},
 /obj/item/storage/belt/medical{
-	pixel_x = 0;
 	pixel_y = 2
 	},
 /obj/item/clothing/accessory/stethoscope,
@@ -74032,7 +73994,6 @@
 "dAm" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 1;
-	icon_state = "comfychair_preview";
 	tag = "icon-comfychair (NORTH)"
 	},
 /obj/landmark/join/start/doctor,
@@ -74057,7 +74018,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	icon_state = "railing0";
 	tag = "icon-railing0 (NORTH)"
 	},
 /turf/floor/plating/under,
@@ -74094,9 +74054,7 @@
 	dir = 4
 	},
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /obj/spawner/traps/wire_splicing/low_chance,
@@ -74110,9 +74068,7 @@
 	dir = 4
 	},
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /obj/spawner/junk/low_chance,
@@ -75134,8 +75090,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/floor/tiled/white,
 /area/eris/medical/medbreak)
@@ -79236,9 +79191,7 @@
 "dOc" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /obj/structure/railing{
@@ -94698,14 +94651,11 @@
 /area/eris/medical/paramedic)
 "eBq" = (
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /obj/structure/railing{
 	dir = 1;
-	icon_state = "railing0";
 	tag = "icon-railing0 (NORTH)"
 	},
 /turf/floor/plating/under,
@@ -97138,7 +97088,6 @@
 	},
 /obj/item/contraband/poster/placed{
 	icon_state = "poster6";
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/floor/tiled/steel/techfloor_grid,
@@ -97217,8 +97166,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	dir = 8;
 	name = "Thruster Fuel Tank";
-	id_tag = "propulsion_out";
-	frequency = 1441
+	id_tag = "propulsion_out"
 	},
 /turf/floor/reinforced/engine,
 /area/eris/engineering/wastingroom)
@@ -97766,7 +97714,6 @@
 /area/eris/engineering/propulsion/left)
 "gsO" = (
 /obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
 	name = "Monkey Isolator";
 	req_access = list(5)
 	},
@@ -98412,13 +98359,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /obj/structure/railing{
 	dir = 1;
-	icon_state = "railing0";
 	tag = "icon-railing0 (NORTH)"
 	},
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /obj/structure/cable/green{
@@ -98667,9 +98611,7 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /obj/structure/cable/green{
@@ -99045,9 +98987,7 @@
 /area/eris/medical/medbay/organs)
 "iMb" = (
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /turf/floor/plating/under,
@@ -101157,8 +101097,7 @@
 "mNj" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	id_tag = "left_propulsion_out";
-	name = "Left Emergency Tank";
-	frequency = 1441
+	name = "Left Emergency Tank"
 	},
 /turf/floor/reinforced/almost_airless,
 /area/eris/engineering/propulsion/left)
@@ -101459,7 +101398,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	icon_state = "railing0";
 	tag = "icon-railing0 (NORTH)"
 	},
 /obj/structure/disposalpipe/segment,
@@ -101973,7 +101911,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	icon_state = "railing0";
 	tag = "icon-railing0 (NORTH)"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
@@ -104250,7 +104187,6 @@
 "sOb" = (
 /obj/machinery/atmospherics/pipe/zpipe/up{
 	dir = 4;
-	icon_state = "up";
 	tag = "icon-up (EAST)"
 	},
 /obj/structure/disposalpipe/up{
@@ -104556,10 +104492,7 @@
 "toJ" = (
 /obj/structure/table/woodentable,
 /obj/item/gun/projectile/shotgun/doublebarrel,
-/obj/item/reagent_containers/bonsai{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/item/reagent_containers/bonsai,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -104820,8 +104753,7 @@
 "tKX" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	name = "Right Emergency Tank";
-	id_tag = "right_propulsion_out";
-	frequency = 1441
+	id_tag = "right_propulsion_out"
 	},
 /turf/floor/reinforced/almost_airless,
 /area/eris/engineering/propulsion/right)
@@ -105207,9 +105139,7 @@
 /area/eris/maintenance/section4deck3port)
 "urv" = (
 /obj/structure/railing{
-	anchored = 1;
 	dir = 4;
-	icon_state = "railing0";
 	tag = "icon-railing0 (EAST)"
 	},
 /obj/spawner/medical/low_chance,
@@ -131310,7 +131240,7 @@ ato
 nqt
 kGH
 kGH
-bZl
+tcP
 kGH
 kGH
 oZm

@@ -27,6 +27,8 @@
 	var/l_hacking = 0
 	var/emagged = 0
 	var/open = 0
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
 
 /obj/item/storage/secure/examine(mob/user, extra_description = "")
 	if(get_dist(user, src) < 2)

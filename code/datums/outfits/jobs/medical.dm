@@ -21,7 +21,7 @@
 	pda_type = /obj/item/modular_computer/pda/heads/cmo
 	belt = /obj/item/storage/belt/medical
 	backpack_contents = list(/obj/item/gun/projectile/selfload/moebius = 1, /obj/item/ammo_magazine/pistol/rubber = 2, /obj/item/spacecash/bundle/vagabond =1)
-	l_pocket = /obj/item/card/keycard/med/level_2
+	l_pocket = /obj/item/card/keycard/level_2/med
 
 /decl/hierarchy/outfit/job/medical/doctor
 	name = OUTFIT_JOB_NAME("Brotherhood Doctor")

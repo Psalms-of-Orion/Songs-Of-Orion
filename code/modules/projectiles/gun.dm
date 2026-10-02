@@ -28,7 +28,8 @@
 	spawn_tags = SPAWN_TAG_GUN
 	rarity_value = 5
 	spawn_frequency = 10
-
+//	dropped_sound = 'sound/items/drop_sounds/gun.ogg'
+	pickup_sound = 'sound/weapons/guns/interact/smg_cock.ogg'
 	health = 600
 	maxHealth = 600
 
@@ -1081,7 +1082,7 @@
 			toggle_scope(H)
 	if(flashlight_attachment)
 		flashlight_attachment.dropped(user)
-
+	playsound(src, 'sound/items/drop_sounds/gun.ogg', 20, 1)
 /obj/item/gun/equipped(mob/living/H)
 	. = ..()
 	update_light()

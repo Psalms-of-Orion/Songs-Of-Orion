@@ -2,8 +2,8 @@
 // Wall mounted holomap of the station
 //
 /obj/machinery/holomap
-	name = "holomap"
-	desc = "A virtual map of the CEV \"Eris\"."
+	name = "map terminal"
+	desc = "A virtual map of the station."
 	icon = 'icons/obj/machines/stationmap.dmi'
 	icon_state = "station_map"
 	anchored = TRUE
@@ -15,7 +15,7 @@
 	var/use_auto_lights = 1
 	var/light_power_on = 1
 	var/light_range_on = 2
-	light_color = "#64C864"
+	light_color = COLOR_LIGHTING_ORANGE_MACHINERY
 
 	var/mob/watching_mob
 	var/image/small_station_map

@@ -12,6 +12,8 @@
 	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 1)
 	attack_verb = list("hit", "pierced", "sliced", "attacked")
 	hitsound = 'sound/weapons/melee/heavystab.ogg'
+	dropped_sound = 'sound/items/drop_sounds/gun.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 	// Damage related
 	force = WEAPON_FORCE_DANGEROUS

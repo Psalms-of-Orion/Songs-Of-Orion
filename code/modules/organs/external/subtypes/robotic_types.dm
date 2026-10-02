@@ -1,10 +1,10 @@
 //Charachter setup prostheses
 
 /obj/item/organ/external/robotic/asters
-	name = "Asters \"Movement Lock\""
+	name = "Standard"
 	desc = "Generic gray prosthesis for everyday use."
 	armor = list(melee = 2, bullet = 2, energy = 2, bomb = 10, bio = 100, rad = 100)
-	force_icon = 'icons/mob/human_races/cyberlimbs/asters.dmi'
+	force_icon = 'modular/icons/astra_limbs/astra.dmi'
 	model = "asters"
 	price_tag = 300
 	bad_type = /obj/item/organ/external/robotic/asters
@@ -102,7 +102,7 @@
 
 /obj/item/organ/external/robotic/moebius/reinforced
 	name = "\"Moebius\" R++"
-	desc = "Reinforced purple and white prosthesis designed for space exploration and light combat."
+	desc = "Redmond purple and white prosthesis designed for space exploration and light combat."
 	armor = list(melee = 3, bullet = 3, energy = 3, bomb = 20, bio = 100, rad = 100)
 	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 2, MATERIAL_PLASTEEL = 1)
 	max_damage = 60
@@ -220,3 +220,207 @@
 
 /obj/item/organ/external/robotic/makeshift/chest
 	default_description = /datum/organ_description/chest
+
+/obj/item/organ/external/robotic/sara
+	name = "SARA"
+	desc = "Spatial Augmented Reality Assembly, once used by Trans-humans to replace reality with interactive cyberspace. Now the servers are gone and only the shells remain."
+	armor = list(melee = 2, bullet = 2, energy = 0, bomb = 1, bio = 100, rad = 100)
+	force_icon = 'modular/icons/astra_limbs/sara.dmi'
+	price_tag = 300
+	bad_type = /obj/item/organ/external/robotic/sara
+
+/obj/item/organ/external/robotic/sara/l_arm
+	default_description = /datum/organ_description/arm/left
+
+/obj/item/organ/external/robotic/sara/r_arm
+	default_description = /datum/organ_description/arm/right
+
+/obj/item/organ/external/robotic/sara/l_leg
+	default_description = /datum/organ_description/leg/left
+
+/obj/item/organ/external/robotic/sara/r_leg
+	default_description = /datum/organ_description/leg/right
+
+/obj/item/organ/external/robotic/sara/groin
+	default_description = /datum/organ_description/groin
+
+/obj/item/organ/external/robotic/sara/torso
+	default_description = /datum/organ_description/chest
+
+/obj/item/organ/external/robotic/sara/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/reinforced
+	name = "RUBY"
+	force_icon = 'modular/icons/astra_limbs/industrial.dmi'
+	desc = "Redmond Utility Bionic Yeoman, a lighter version of the RUBY robotics chassis, for less intimate activities."
+	armor = list(melee = 3, bullet = 3, energy = 3, bomb = 20, bio = 100, rad = 100)
+	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 2, MATERIAL_PLASTEEL = 1)
+	max_damage = 60
+	min_broken_damage = 40
+	price_tag = 300
+	bad_type = /obj/item/organ/external/robotic/reinforced
+
+/obj/item/organ/external/robotic/reinforced/l_arm
+	default_description = /datum/organ_description/arm/left
+
+/obj/item/organ/external/robotic/reinforced/r_arm
+	default_description = /datum/organ_description/arm/right
+
+/obj/item/organ/external/robotic/reinforced/l_leg
+	default_description = /datum/organ_description/leg/left
+
+/obj/item/organ/external/robotic/reinforced/r_leg
+	default_description = /datum/organ_description/leg/right
+
+/obj/item/organ/external/robotic/reinforced/groin
+	default_description = /datum/organ_description/groin
+
+/obj/item/organ/external/robotic/reinforced/torso
+	default_description = /datum/organ_description/chest
+
+/obj/item/organ/external/robotic/reinforced/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/reinforced/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/civil
+	name = "RUBY Civil"
+	force_icon = 'modular/icons/astra_limbs/industrial_bl.dmi'
+	desc = "Redmond Utility Bionic Yeoman, a lighter civil-use version of the RUBY robotics chassis."
+	armor = list(melee = 3, bullet = 3, energy = 3, bomb = 20, bio = 100, rad = 100)
+	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 2, MATERIAL_PLASTEEL = 1)
+	max_damage = 60
+	min_broken_damage = 40
+	price_tag = 300
+	bad_type = /obj/item/organ/external/robotic/civil
+
+/obj/item/organ/external/robotic/civil/l_arm
+	default_description = /datum/organ_description/arm/left
+
+/obj/item/organ/external/robotic/civil/r_arm
+	default_description = /datum/organ_description/arm/right
+
+/obj/item/organ/external/robotic/civil/l_leg
+	default_description = /datum/organ_description/leg/left
+
+/obj/item/organ/external/robotic/civil/r_leg
+	default_description = /datum/organ_description/leg/right
+
+/obj/item/organ/external/robotic/civil/groin
+	default_description = /datum/organ_description/groin
+
+/obj/item/organ/external/robotic/civil/torso
+	default_description = /datum/organ_description/chest
+
+/obj/item/organ/external/robotic/civil/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/civil/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/engineer
+	name = "RUBY Engineer"
+	force_icon = 'modular/icons/astra_limbs/industrial_or.dmi'
+	desc = "Redmond Utility Bionic Yeoman, a lighter construction-use version of the RUBY robotics chassis."
+	armor = list(melee = 4, bullet = 1, energy = 3, bomb = 20, bio = 100, rad = 100)
+	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 2, MATERIAL_PLASTEEL = 1)
+	max_damage = 60
+	min_broken_damage = 40
+	price_tag = 300
+	bad_type = /obj/item/organ/external/robotic/engineer
+
+/obj/item/organ/external/robotic/engineer/l_arm
+	default_description = /datum/organ_description/arm/left
+
+/obj/item/organ/external/robotic/engineer/r_arm
+	default_description = /datum/organ_description/arm/right
+
+/obj/item/organ/external/robotic/engineer/l_leg
+	default_description = /datum/organ_description/leg/left
+
+/obj/item/organ/external/robotic/engineer/r_leg
+	default_description = /datum/organ_description/leg/right
+
+/obj/item/organ/external/robotic/engineer/groin
+	default_description = /datum/organ_description/groin
+
+/obj/item/organ/external/robotic/engineer/torso
+	default_description = /datum/organ_description/chest
+
+/obj/item/organ/external/robotic/engineer/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/engineer/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/field
+	name = "RUBY Field"
+	force_icon = 'modular/icons/astra_limbs/industrial_gr.dmi'
+	desc = "Redmond Utility Bionic Yeoman, a lighter field-use version of the RUBY robotics chassis."
+	armor = list(melee = 3, bullet = 3, energy = 3, bomb = 20, bio = 100, rad = 100)
+	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 2, MATERIAL_PLASTEEL = 1)
+	max_damage = 60
+	min_broken_damage = 40
+	price_tag = 300
+	bad_type = /obj/item/organ/external/robotic/field
+
+/obj/item/organ/external/robotic/field/l_arm
+	default_description = /datum/organ_description/arm/left
+
+/obj/item/organ/external/robotic/field/r_arm
+	default_description = /datum/organ_description/arm/right
+
+/obj/item/organ/external/robotic/field/l_leg
+	default_description = /datum/organ_description/leg/left
+
+/obj/item/organ/external/robotic/field/r_leg
+	default_description = /datum/organ_description/leg/right
+
+/obj/item/organ/external/robotic/field/groin
+	default_description = /datum/organ_description/groin
+
+/obj/item/organ/external/robotic/field/torso
+	default_description = /datum/organ_description/chest
+
+/obj/item/organ/external/robotic/field/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/field/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/duty
+	name = "RUBY Duty"
+	force_icon = 'modular/icons/astra_limbs/industrial_rd.dmi'
+	desc = "Redmond Utility Bionic Yeoman, a lighter duty-use version of the RUBY robotics chassis."
+	armor = list(melee = 4, bullet = 4, energy = 1, bomb = 20, bio = 100, rad = 100)
+	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 2, MATERIAL_PLASTEEL = 1)
+	max_damage = 60
+	min_broken_damage = 40
+	price_tag = 300
+	bad_type = /obj/item/organ/external/robotic/duty
+
+/obj/item/organ/external/robotic/duty/l_arm
+	default_description = /datum/organ_description/arm/left
+
+/obj/item/organ/external/robotic/duty/r_arm
+	default_description = /datum/organ_description/arm/right
+
+/obj/item/organ/external/robotic/duty/l_leg
+	default_description = /datum/organ_description/leg/left
+
+/obj/item/organ/external/robotic/duty/r_leg
+	default_description = /datum/organ_description/leg/right
+
+/obj/item/organ/external/robotic/duty/groin
+	default_description = /datum/organ_description/groin
+
+/obj/item/organ/external/robotic/duty/torso
+	default_description = /datum/organ_description/chest
+
+/obj/item/organ/external/robotic/duty/head
+	default_description = /datum/organ_description/head
+
+/obj/item/organ/external/robotic/duty/head
+	default_description = /datum/organ_description/head

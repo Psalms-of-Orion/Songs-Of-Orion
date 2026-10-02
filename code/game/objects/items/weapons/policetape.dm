@@ -22,7 +22,8 @@ var/list/tape_roll_applications = list()
 	var/crumpled = 0
 	var/tape_dir = 0
 	var/icon_base = "tape"
-
+	dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/tape/update_icon()
 	//Possible directional bitflags: 0 (AIRLOCK), 1 (NORTH), 2 (SOUTH), 4 (EAST), 8 (WEST), 3 (VERTICAL), 12 (HORIZONTAL)
 	switch (tape_dir)

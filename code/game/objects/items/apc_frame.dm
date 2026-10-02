@@ -6,6 +6,8 @@
 	icon = 'icons/obj/apc_repair.dmi'
 	icon_state = "frame"
 	flags = CONDUCT
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/frame/apc/attackby(obj/item/tool/tool, mob/user)
 	..()

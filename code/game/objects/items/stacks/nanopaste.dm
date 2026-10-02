@@ -11,7 +11,8 @@
 	price_tag = 80
 	spawn_tags = SPAWN_TAG_MEDICINE
 	rarity_value = 40
-
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/stack/nanopaste/attack(mob/living/M, mob/user)
 	if(..())

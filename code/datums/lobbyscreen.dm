@@ -21,6 +21,17 @@
 	musicTrack = pick(possibleMusic)
 	return ..()
 
+/datum/lobbyscreen/astra
+	image_file = 'icons/title_screens/splashart_test.png'
+	possibleMusic = list(
+		'sound/music/lobby/Duke_Gneiss-Bluespace.ogg',
+		'sound/music/lobby/Duke_Gneiss-Exploring.ogg'
+		)
+
+/*	possibleMusic = list(
+		'sound/music/lobby/Prologue.ogg',
+		'sound/music/lobby/To_the_Moon.ogg'
+		)
 /datum/lobbyscreen/ship
 	image_file = 'icons/title_screens/ship.png'
 	possibleMusic = list(
@@ -45,7 +56,7 @@
 	image_file = 'icons/title_screens/neotheology.png'
 	possibleMusic = list(
 		'sound/music/lobby/Duke_Gneiss-Neotheology.ogg')
-
+*/
 /datum/lobbyscreen/proc/play_music(client/C)
 	if(!musicTrack)
 		return

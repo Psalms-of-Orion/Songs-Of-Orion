@@ -239,3 +239,9 @@
 		return
 
 	go_out()
+
+/obj/machinery/sleeper/astra
+	name = "chrysalis"
+	desc = "Health at any cost."
+	icon = 'modular/icons/chrysalis.dmi'
+	icon_state = "sleeper_0"

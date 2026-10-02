@@ -27,6 +27,7 @@ var/bomb_set
 
 /obj/machinery/nuclearbomb/New()
 	..()
+	AddRadSource(src, 1.5, 3.5)
 	if(eris_ship_bomb)
 		r_code = "[rand(100000, 999999)]" // each time new Head spawns, s/he gets 2 numbers of code.
 	else                                  // i decided not to touch normal bombs code length.

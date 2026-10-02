@@ -13,7 +13,8 @@
 	var/magpulse = FALSE
 	var/mag_slow = 3
 	var/icon_base = "magboots"
-
+	dropped_sound = 'sound/items/drop_sounds/metalboots.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 /obj/item/clothing/shoes/magboots/proc/set_slowdown()
 	var/obj/item/clothing/shoes/shoes = overslot_contents
 	slowdown = shoes? max(SHOES_SLOWDOWN, shoes.slowdown): SHOES_SLOWDOWN	//So you can't put on magboots to make you walk faster.

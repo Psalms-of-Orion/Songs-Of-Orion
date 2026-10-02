@@ -15,6 +15,7 @@
 	reagent_flags = TRANSPARENT
 	spawn_tags = SPAWN_TAG_JUNK
 	rarity_value = 10
+	dropped_sound = 'sound/items/drop_sounds/glass.ogg'
 
 /obj/item/reagent_containers/dropper/afterattack(atom/target, mob/user, proximity)
 	if(!target.reagents || !proximity)

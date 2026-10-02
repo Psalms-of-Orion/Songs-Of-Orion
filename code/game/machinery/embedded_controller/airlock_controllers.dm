@@ -154,5 +154,22 @@
 
 	if(clean)
 		program.receive_user_command(href_list["command"])
-	playsound(loc, 'sound/machines/machine_switch.ogg', 100, 1)
+	playsound(loc, 'sound/items/glitch.ogg', 100, 1)
 	return 1
+
+/obj/machinery/embedded_controller/radio/airlock/access_controller/console
+	icon = 'icons/obj/airlock_machines.dmi'
+	icon_state = "console_control_standby"
+
+	name = "Access Controller"
+	tag_secure = 1
+
+
+/obj/machinery/embedded_controller/radio/airlock/access_controller/console/update_icon()
+	if(on && program)
+		if(program.memory["processing"])
+			icon_state = "console_control_process"
+		else
+			icon_state = "console_control_standby"
+	else
+		icon_state = "console_control_off"

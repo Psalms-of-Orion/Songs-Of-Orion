@@ -12,7 +12,8 @@
 	var/active_force
 	var/active_throwforce
 	var/active_w_class
-
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/melee/energy/is_hot()
 	if (active)
 		return heat

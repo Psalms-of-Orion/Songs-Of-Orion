@@ -8,6 +8,10 @@
 	display_name = "clipboard"
 	path = /obj/item/clipboard
 
+/datum/gear/utility/pencil
+	display_name = "pencil"
+	path = /obj/item/pen/pencil
+
 /datum/gear/utility/folder_colorable
 	display_name = "folder, colorable"
 	flags = GEAR_HAS_COLOR_SELECTION
@@ -28,6 +32,10 @@
 	)
 	gear_tweaks += new /datum/gear_tweak/path(folder)
 
+/datum/gear/utility/dosimeter
+	display_name = "radiation dosimeter"
+	path = /obj/item/device/geiger/dosimeter
+
 /datum/gear/utility/paicard
 	display_name = "personal AI device"
 	path = /obj/item/device/paicard
@@ -36,10 +44,6 @@
 	display_name = "cheap tablet computer"
 	path = /obj/item/modular_computer/tablet/preset/custom_loadout/cheap
 	cost = 2
-/datum/gear/utility/wheelchair
-	display_name = "wheelchair"
-	path = /obj/item/wheelchair
-	cost = 3
 
 /datum/gear/utility/normaltablet
 	display_name = "advanced tablet computer"
@@ -64,4 +68,9 @@
 /datum/gear/utility/ducttape
 	display_name = "duct tape"
 	path = /obj/item/tool/tape_roll
+	cost = 3
+
+/datum/gear/utility/wheelchair
+	display_name = "wheelchair"
+	path = /obj/item/wheelchair
 	cost = 3

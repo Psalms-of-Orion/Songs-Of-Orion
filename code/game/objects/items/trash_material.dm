@@ -31,7 +31,8 @@
 		list(MATERIAL_PLASTEEL, 5, 10),
 		list(MATERIAL_PLATINUM, 4, 2),
 	)
-
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/trash/material/metal/Initialize()
 	. = ..()
 	icon_state = "metal[rand(4)]"
@@ -55,7 +56,8 @@
 /obj/item/trash/material/circuit/Initialize()
 	. = ..()
 	icon_state = "circuit[rand(3)]"
-
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/trash/material/device
 	name = "broken device"
@@ -71,6 +73,8 @@
 		list(MATERIAL_GOLD, 15, 5),
 		list(MATERIAL_DIAMOND, 5, 2),
 	)
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/trash/material/device/Initialize()
 	. = ..()

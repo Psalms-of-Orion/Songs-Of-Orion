@@ -14,6 +14,8 @@
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked","flattened","pulped")
 	hitsound = 'sound/weapons/melee/blunthit.ogg'
 	rarity_value = 5
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 /obj/item/tool/hammer/wield(mob/living/user)
 	screen_shake = TRUE

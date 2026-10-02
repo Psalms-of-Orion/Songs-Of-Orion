@@ -6,6 +6,7 @@
 //	description_antag = "A NovoRossian anti-material boarding shotgun, either a new copy or a relic from the Euruskan exodus.
 	//	Made from anti-drone point defense cannon barrels, supposedly."
 	icon = 'modular/guns/icons/shotgun.dmi'
+	bulletinsert_sound = 'sound/weapons/guns/interact/shotgun_insert.ogg'
 	icon_state = "shotgun"
 	caliber = CAL_SHOTGUN
 	init_recoil = RIFLE_RECOIL(3)
@@ -19,6 +20,9 @@
 	penetration_multiplier = 1
 	matter = list(MATERIAL_STEEL = 20, MATERIAL_PLASTEEL = 8, MATERIAL_WOOD = 5)
 	saw_off = FALSE
+	attack_verb = list("attacked", "bashed", "slammed", "beat", "cracked")
+	sharp = FALSE
+
 
 /obj/item/part/gun/frame/pumpgun
 	name = "shotgun frame"

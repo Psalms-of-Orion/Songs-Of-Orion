@@ -9,9 +9,11 @@
 	throw_range = 10
 	slot_flags = SLOT_BELT
 	req_access = list(list(access_heads, access_security))
-	var/boss_name = "Ironhammer Security"
-	var/station_name = "CEV Eris"
+	var/boss_name = "Internal Security"
+	var/station_name = "Breaker's Point"
 	var/datum/computer_file/data/warrant/active
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 //look at it
 /obj/item/device/holowarrant/examine(mob/user, extra_description = "")

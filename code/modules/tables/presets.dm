@@ -111,7 +111,7 @@
 		name = "one star table"
 		..()
 
-/obj/structure/table/orion/
+/obj/structure/table/orion
 	icon_state = "orion_preview"
 	New()
 		material = get_material_by_name(MATERIAL_PLASTIC)
@@ -119,10 +119,10 @@
 		name = "table"
 		..()
 
-/obj/structure/table/orion/reinforced
+/obj/structure/table/orion_reinforced
 	icon_state = "orion_reinf_preview"
 	New()
 		material = get_material_by_name(MATERIAL_PLASTIC)
 		reinforced = get_material_by_name(MATERIAL_STEEL)
-		custom_appearance = custom_table_appearance["Orion - rein"] //bar table
+		custom_appearance = custom_table_appearance["Orion - reinf"] //bar table
 		..()

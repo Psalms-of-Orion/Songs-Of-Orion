@@ -13,7 +13,7 @@
 	volume = 60
 	matter = list(MATERIAL_BIOMATTER = 1)
 	bad_type = /obj/item/reagent_containers/pill
-
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
 /obj/item/reagent_containers/pill/Initialize()
 	. = ..()
 	if(!icon_state)

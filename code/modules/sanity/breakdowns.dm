@@ -234,7 +234,7 @@
 		holder.owner.Weaken(3)
 		holder.owner.Stun(3)
 		if(prob(50))
-			holder.owner.emote("scream")
+			holder.owner.emote("whimper")
 		else
 			holder.owner.emote("cry")
 

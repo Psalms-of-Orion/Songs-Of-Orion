@@ -276,6 +276,7 @@
 	item_state = "cutting_board"
 	matter = list(MATERIAL_WOOD = 5)
 	appliancetype = CUTTING_BOARD
+	dropped_sound = 'sound/items/drop_sounds/wooden.ogg'
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/oven
 	name = "oven dish"
@@ -286,32 +287,35 @@
 	item_state = "oven_dish"
 	matter = list(MATERIAL_STEEL = 10)
 	appliancetype = OVEN
+	dropped_sound = 'sound/items/drop_sounds/shovel.ogg'
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/pan
 	name = "pan"
 	desc = "An normal pan."
-
+	force = WEAPON_FORCE_DANGEROUS//The cook lacks grab-fu, and this is funnier.
 	icon_state = "pan" //Default state is the base icon so it looks nice in the map builder
 	lip = "pan_lip"
 	item_state = "pan"
 	matter = list(MATERIAL_PLASTEEL = 5)
-	hitsound = 'sound/weapons/smash.ogg'
+	hitsound = "frying_pan"
 	appliancetype = PAN
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/pot
 	name = "cooking pot"
 	shortname = "pot"
 	desc = "Boil things with this. Maybe even stick 'em in a stew."
-
+	force = WEAPON_FORCE_DANGEROUS
 	icon_state = "pot"
 	lip = "pot_lip"
 	item_state = "pot"
 	matter = list(MATERIAL_STEEL = 5)
 
-	hitsound = 'sound/weapons/smash.ogg'
+	hitsound = "frying_pan"
 	removal_penalty = 5
 	appliancetype = POT
 	w_class = ITEM_SIZE_BULKY
+	dropped_sound = 'sound/items/drop_sounds/gascan.ogg'
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/deep_basket
 	name = "deep fryer basket"
@@ -323,6 +327,7 @@
 	item_state = "deepfryer_basket"
 	removal_penalty = 5
 	appliancetype = DF_BASKET
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/air_basket
 	name = "air fryer basket"
@@ -334,6 +339,7 @@
 	item_state = "airfryer_basket"
 	removal_penalty = 5
 	appliancetype = AF_BASKET
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/grill_grate
 	name = "grill grate"
@@ -345,6 +351,7 @@
 	matter = list(MATERIAL_STEEL = 5)
 
 	appliancetype = GRILL
+	dropped_sound = 'sound/items/drop_sounds/sword.ogg'
 
 /obj/item/reagent_containers/cooking_with_jane/cooking_container/bowl
 	name = "prep bowl"
@@ -358,3 +365,4 @@
 
 	removal_penalty = 2
 	appliancetype = BOWL
+	dropped_sound = 'sound/items/drop_sounds/helm.ogg'

@@ -1,5 +1,7 @@
 /obj/item/stack/material/animalhide
 	bad_type = /obj/item/stack/material/animalhide
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 
 /obj/item/stack/material/animalhide/human
 	name = "human skin"

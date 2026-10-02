@@ -205,6 +205,11 @@
 	icon_state = "techfloor_grid"
 	initial_flooring = /decl/flooring/tiling/white/techfloor_grid
 
+//Can trip players if running.
+/turf/floor/tiled/white/techfloor_grid/doorway
+	icon_state = "techfloor_grid"
+	initial_flooring = /decl/flooring/tiling/white/techfloor_grid/doorway
+
 /turf/floor/tiled/white/brown_perforated
 	icon_state = "brown_perforated"
 	initial_flooring = /decl/flooring/tiling/white/brown_perforated

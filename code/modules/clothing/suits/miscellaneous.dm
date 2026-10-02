@@ -17,6 +17,7 @@
 	body_parts_covered = UPPER_TORSO
 	allowed = list (/obj/item/gun/energy/lasertag/blue)
 	siemens_coefficient = 3
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/redtag
 	name = "red laser tag armour"
@@ -27,6 +28,7 @@
 	body_parts_covered = UPPER_TORSO
 	allowed = list (/obj/item/gun/energy/lasertag/red)
 	siemens_coefficient = 3
+	spawn_blacklisted = TRUE
 
 /*
  * Costume
@@ -37,6 +39,7 @@
 	icon_state = "pirate"
 	item_state = "pirate"
 	body_parts_covered = UPPER_TORSO|ARMS
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/suit/judgerobe
@@ -47,6 +50,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	allowed = list(/obj/item/storage/fancy/cigarettes,/obj/item/spacecash)
 	flags_inv = HIDEJUMPSUIT
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/suit/wcoat
@@ -57,6 +61,7 @@
 	blood_overlay_type = "armor"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/syndicatefake
 	name = "red space suit replica"
@@ -69,6 +74,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 	item_flags = COVER_PREVENT_MANIPULATION
 
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/chickensuit
 	name = "chicken suit"
@@ -78,6 +84,7 @@
 	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
 	siemens_coefficient = 2
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/suit/monkeysuit
@@ -89,6 +96,7 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	siemens_coefficient = 2
 
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/cardborg
 	name = "cardborg suit"
@@ -97,6 +105,7 @@
 	item_state = "cardborg"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	flags_inv = HIDEJUMPSUIT
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/marisa
 	name = "witch robe"
@@ -127,6 +136,7 @@
 	icon_state = "blue_pyjamas"
 	item_state = "blue_pyjamas"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/redpyjamas
 	name = "red pyjamas"
@@ -134,6 +144,7 @@
 	icon_state = "red_pyjamas"
 	item_state = "red_pyjamas"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/suit/xenos
@@ -144,17 +155,20 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	siemens_coefficient = 2
+	spawn_blacklisted = TRUE
 
 //swimsuit
 /obj/item/clothing/under/swimsuit
 	siemens_coefficient = 1
 	body_parts_covered = 0
 	bad_type = /obj/item/clothing/under/swimsuit
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/swimsuit/black
 	name = "black swimsuit"
 	desc = "An oldfashioned black swimsuit."
 	icon_state = "swim_black"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/swimsuit/blue
 	name = "blue swimsuit"
@@ -201,7 +215,8 @@
 	cold_protection = UPPER_TORSO|ARMS
 	min_cold_protection_temperature = T0C - 20
 	siemens_coefficient = 0.7
-
+	dropped_sound = 'sound/items/drop_sounds/leather.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 /obj/item/clothing/suit/storage/toggle/leather
 	name = "leather jacket"
 	desc = "A thick leather jacket. A tough individual, you are."
@@ -221,6 +236,8 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 	min_cold_protection_temperature = T0C - 20
 	siemens_coefficient = 0.7
+	dropped_sound = 'sound/items/drop_sounds/leather.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 
 /obj/item/clothing/suit/storage/toggle/leather/red
 	name = "red bomber jacket"
@@ -246,6 +263,7 @@
 	icon_open = "service_open"
 	icon_closed = "service"
 	style = STYLE_LOW
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/jamrock
 	name = "disco blazer"
@@ -295,29 +313,35 @@
 	min_cold_protection_temperature = T0C - 20
 	siemens_coefficient = 0.7
 	spawn_blacklisted = TRUE
+	dropped_sound = 'sound/items/drop_sounds/leather.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 
 /obj/item/clothing/suit/storage/leather_jacket/tunnelsnake
 	name = "sleek leather jacket"
 	desc = "A sturdy, synthetic leather jacket with a high collar. It is able to protect you from a knife slice or a bite, but don't expect too much. More importantly, it makes you look like a really bad boy or girl."
 	icon_state = "tunnelsnake_blank"
 	item_state = "tunnelsnake_blank"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/leather_jacket/tunnelsnake_jager
 	name = "Jaeger leather jacket"
 	desc = "A sturdy, synthetic leather jacket with a high collar. It is able to protect you from a knife slice or a bite, but don't expect too much. More importantly, it makes you look like a really bad boy or girl. This jacket has a Jaeger roach pictured on the back. Jaeger Roach rules!"
 	icon_state = "tunnelsnake_jager"
 	item_state = "tunnelsnake_jager"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/leather_jacket/tunnelsnake_snake
 	name = "Tunnelsnake jacket"
 	desc = "Tunnelsnakes Rule! That's us! And we Rule!"
 	icon_state = "tunnelsnake"
 	item_state = "tunnelsnake"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/leather_jacket/punk
 	name = "punk jacket"
 	desc = "Authentic leather for an authentic punk."
 	icon_state = "punk_highlight"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/leather_jacket/punk/New(loc, jacket_type = "punk_highlight", logo_type, is_natural_spawn = TRUE)
 	..()
@@ -372,6 +396,7 @@
 	item_state = "black_hoodie"
 	icon_open = "black_hoodie_open"
 	icon_closed = "black_hoodie"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/cyberpunksleek
 	name = "\improper Enforcer's Overcoat"
@@ -496,6 +521,7 @@
 	item_state = "violet_jacket"
 	style = STYLE_LOW
 	body_parts_covered = UPPER_TORSO|ARMS
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/bomj
 	name = "bomj coat"
@@ -514,6 +540,7 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	min_cold_protection_temperature = T0C - 20
 	siemens_coefficient = 0.7
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/punkvest
 	name = "punk vest"
@@ -529,6 +556,7 @@
 		rad = 0
 	)
 	body_parts_covered = UPPER_TORSO
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/toggle/windbreaker
 	name = "windbreaker"
@@ -546,6 +574,7 @@
 		rad = 0
 	)
 	body_parts_covered = UPPER_TORSO|ARMS
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/punkvest/cyber
 	name = "cyberpunk vest"
@@ -560,6 +589,7 @@
 		bio = 0,
 		rad = 0
 	)
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/scavengerarmor
 	name = "scavenger armor"
@@ -603,6 +633,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	price_tag = 1000
 	style = STYLE_HIGH
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/triad/New()
 	..()
@@ -627,6 +658,7 @@
 	body_parts_covered = UPPER_TORSO|ARMS
 	style = STYLE_HIGH
 	price_tag = 400
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/boxer_jacket
 	name = "boxer jacket"//Mother Russia Bleeds reference
@@ -636,6 +668,7 @@
 	siemens_coefficient = 0.7
 	style = STYLE_LOW
 	body_parts_covered = UPPER_TORSO|ARMS
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/puffyblue
 	name = "blue puffy coat"
@@ -644,6 +677,7 @@
 	item_state = "puffycoatblue"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	siemens_coefficient = 0.7
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/puffypurple
 	name = "purple puffy coat"
@@ -652,6 +686,7 @@
 	item_state = "puffycoatpurple"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	siemens_coefficient = 0.7
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/puffyred
 	name = "crimson puffy coat"
@@ -660,6 +695,7 @@
 	item_state = "puffycoatred"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	siemens_coefficient = 0.7
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/winter
 	name = "grey parka"
@@ -741,6 +777,47 @@
 		rad = 0
 	)
 
+/obj/item/clothing/suit/storage/winter/sar/yuuri
+	name = "surplus parka"
+	desc = "An ancient military surplus parka with an oversized zipper pull and odd markings in an unknown language, good for at least one last tour. Issued to full members of the Brotherhood. How can you live if you're afraid of dying?"
+	description_antag = "Ancient, it appears to have markings once used by the medical staff attached to Euruskan motor-rifle scouts before the Flight of the Fireflies."
+	icon_state = "yuuri"
+	item_state = "yuuri"
+
+/obj/item/clothing/suit/storage/chito
+	name = "surplus jacket"
+	desc = "An ancient military field jacket with odd markings in an unknown language, good for at least one last tour. Issued to full members of the Brotherhood."
+	description_antag = "Ancient, it appears to have markings once used by the medical staff attached to Euruskan motor-rifle scouts before the Flight of the Fireflies."
+	icon_state = "chito"
+	item_state = "chito"
+	min_cold_protection_temperature = T0C - 20
+	price_tag = 300
+	armor = list(
+		melee = 8,
+		bullet = 5,
+		energy = 10,
+		bomb = 0,
+		bio = 20,
+		rad = 0
+	)
+
+/obj/item/clothing/suit/storage/gorka
+	name = "gorka jacket"
+	desc = "An ancient military field jacket commonly associated with NovoRos, but found anywhere a sturdy jacket is needed."
+	description_antag = "Ancient, or at least a copy of the unofficial uniforms used by Euruskan Gornostrelki scouts before the Flight of the Fireflies."
+	icon_state = "gorka"
+	item_state = "gorka"
+	min_cold_protection_temperature = T0C - 20
+	price_tag = 300
+	armor = list(
+		melee = 8,
+		bullet = 5,
+		energy = 10,
+		bomb = 0,
+		bio = 20,
+		rad = 0
+	)
+
 /obj/item/clothing/suit/storage/winter/hivis
 	name = "high visibility jacket"
 	desc = "A warm jacket with high visibility tape for construction and utility work."
@@ -770,7 +847,8 @@
 		bio = 20,
 		rad = 0
 	)
-
+	dropped_sound = 'sound/items/drop_sounds/leather.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 //N6MAA10816
 /obj/item/clothing/suit/storage/toggle/batty
 	name = "leather trenchcoat"
@@ -794,7 +872,8 @@
 		bio = 8,
 		rad = 8
 	)
-
+	dropped_sound = 'sound/items/drop_sounds/leather.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 /obj/item/clothing/suit/storage/toggle/batty/antag
 	name = "leather trenchcoat"
 	desc = "A thick, well-worn leather coat with a generational history. No Voight-Kampff test for you."
@@ -835,7 +914,8 @@
 	/obj/item/material,
 	/obj/item/roller,
 	/obj/item/device)
-
+	dropped_sound = 'sound/items/drop_sounds/equip_armor_chain.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 /obj/item/clothing/suit/storage/harness/brown
 	name = "web harness"
 	desc = "A simple belt and suspender system designed to carry anything you need."
@@ -858,7 +938,7 @@
 	)
 
 /obj/item/clothing/suit/storage/toggle/hos
-	name = "Head of Security jacket"
+	name = "PCRC jacket"
 	desc = "A thick, well-worn leather jacket with the badges PCRC Security."
 	icon_state = "hos"
 	item_state = "hos"
@@ -880,6 +960,8 @@
 		rad = 0
 	)
 	price_tag = 800
+	dropped_sound = 'sound/items/drop_sounds/leather.ogg'
+	pickup_sound = 'sound/items/drop_sounds/gloves.ogg'
 
 /obj/item/clothing/suit/patient
 	name = "patient robe"

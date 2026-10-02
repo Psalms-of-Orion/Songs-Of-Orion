@@ -6,7 +6,8 @@
 	icon_state = "welderpack"
 	w_class = ITEM_SIZE_BULKY
 	var/max_fuel = 350
-
+	dropped_sound = 'sound/items/drop_sounds/gascan.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/weldpack/canister
 	name = "canister"

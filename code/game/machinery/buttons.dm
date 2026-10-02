@@ -191,6 +191,17 @@
 			wifi_sender.activate("lock")
 	operating = 0
 
+
+
+/obj/machinery/button/toggle/door/console
+	icon_state = "console0"
+
+/obj/machinery/button/toggle/door/console/update_icon()
+	if(active)
+		icon_state = "console0"
+	else
+		icon_state = "console2"
+
 #undef OPEN
 #undef IDSCAN
 #undef BOLTS

@@ -4,6 +4,7 @@
 	reagent_flags = NONE //starts closed
 	spawn_tags = SPAWN_TAG_DRINK_SODA
 	bad_type = /obj/item/reagent_containers/food/drinks/cans
+	dropped_sound = 'sound/items/drop_sounds/soda.ogg'
 
 //DRINKS
 
@@ -20,6 +21,7 @@
 	icon_state = "waterbottle"
 	center_of_mass = list("x"=15, "y"=8)
 	preloaded_reagents = list("water" = 30)
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
 
 /obj/item/reagent_containers/food/drinks/cans/space_mountain_wind
 	name = "\improper Space Mountain Wind"

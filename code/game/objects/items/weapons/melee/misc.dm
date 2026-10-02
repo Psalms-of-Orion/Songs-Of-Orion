@@ -22,7 +22,8 @@
 			force = WEAPON_FORCE_WEAK
 			throwforce = WEAPON_FORCE_WEAK
 			origin_tech = list(TECH_COMBAT = 1)
-
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/melee/toolbox_maul/update_icon()
 	..()

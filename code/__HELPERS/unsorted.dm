@@ -1063,6 +1063,8 @@ GLOBAL_LIST_INIT(duplicate_forbidden_vars,list(
 				return 0
 		if(/obj/item/melee/energy)
 			return 3500
+		if(/obj/item/fuel_rod)
+			return 1200
 		else
 			return 0
 
@@ -1094,6 +1096,7 @@ GLOBAL_LIST_INIT(duplicate_forbidden_vars,list(
 		istype(W, /obj/item/pen)								|| \
 		istype(W, /obj/item/flame/lighter/zippo)				|| \
 		istype(W, /obj/item/flame/match)						|| \
+		istype(W, /obj/item/fuel_rod)						|| \
 		istype(W, /obj/item/clothing/mask/smokable/cigarette)		\
 	)
 

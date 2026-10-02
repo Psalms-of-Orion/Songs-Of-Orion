@@ -8,6 +8,7 @@
 	price_tag = 1000
 	use_fuel_cost = 0.1
 	max_fuel = 50
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
 
 	toggleable = TRUE
 	create_hot_spot = TRUE
@@ -24,6 +25,7 @@
 	flags = CONDUCT
 	origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
 	tool_qualities = list(QUALITY_CLAMPING = 30, QUALITY_RETRACTING = 30, QUALITY_BONE_SETTING = 30, QUALITY_CAUTERIZING = 30, QUALITY_SAWING = 15, QUALITY_CUTTING = 30, QUALITY_WIRE_CUTTING = 25)
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
 
 	max_upgrades = 2
 	workspeed = 1.2
@@ -80,6 +82,7 @@
 	bad_type = /obj/item/tool/multitool_improvised
 	degradation = 1.5
 	workspeed = 0.8
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
 
 	max_upgrades = 3
 

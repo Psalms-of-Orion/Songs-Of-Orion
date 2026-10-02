@@ -21,10 +21,12 @@
 	var/status = FALSE		//whether the thing is on or not
 	var/hitcost = 100
 	var/obj/item/cell/cell
-	var/obj/item/cell/starting_cell = /obj/item/cell/medium/high
+	var/obj/item/cell/starting_cell = /obj/item/cell/medium/astra/disposable
 	var/suitable_cell = /obj/item/cell/medium
 	light_color = COLOR_LIGHTING_ORANGE_BRIGHT
 	structure_damage_factor = STRUCTURE_DAMAGE_BLUNT
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/melee/baton/Initialize()
 	. = ..()
@@ -116,6 +118,7 @@
 			return 0	// item/attack() will return 1 if they hit, 0 if they missed.
 
 		//whacking someone causes a much poorer electrical contact than deliberately prodding them.
+		hitsound = "blunt_metal"
 		stun *= 0.5
 		if(status)		//Checks to see if the stunbaton is on.
 			agony *= 0.5	//whacking someone causes a much poorer contact than prodding them.

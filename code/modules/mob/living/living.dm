@@ -676,6 +676,7 @@ default behaviour is:
 
 		// Diving
 		to_chat(src, SPAN_NOTICE("You dive onwards!"))
+		emote("jump")
 		allow_spin = FALSE
 		if(istype(get_step(src, _dir), /turf/open))
 			range++

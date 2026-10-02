@@ -176,7 +176,7 @@
 	item_state = "ba_suit"
 
 /obj/item/clothing/under/rank/security/red/skirt
-	name = "Ironhammer Operative's jumpskirt"
+	name = "old security skirt"
 	desc = "An old NanoTrassen Internal Security Division skirt."
 	icon_state = "sec_red_skirt"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS

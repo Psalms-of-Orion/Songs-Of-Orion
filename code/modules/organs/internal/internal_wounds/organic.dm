@@ -5,7 +5,7 @@
 
 // Blunt
 /datum/component/internal_wound/organic/blunt	// Abstract
-	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 2)
+	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 2, /obj/item/stack/medical/bruise/advanced = 1, /obj/item/stack/medical/bruise = 4, /obj/item/stack/medical/suture = 4, /obj/item/stack/medical/stapler = 2,)
 	treatments_tool = list(QUALITY_CAUTERIZING = FAILCHANCE_NORMAL)
 	treatments_chem = list(CE_BLOODCLOT = 0.55)	// Tricordrazine/polystem + bicaridine + meralyne OR quickclot OD + any brute heal
 	severity = 0
@@ -31,7 +31,7 @@
 
 // Sharp
 /datum/component/internal_wound/organic/sharp
-	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 2)
+	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 2, /obj/item/stack/medical/bruise/advanced = 1, /obj/item/stack/medical/gauze = 3, /obj/item/stack/medical/gauze/hemo = 3, /obj/item/stack/medical/suture = 2, /obj/item/stack/medical/stapler = 1, /obj/item/stack/medical/bruise = 4)
 	treatments_tool = list(QUALITY_CAUTERIZING = FAILCHANCE_NORMAL)
 	treatments_chem = list(CE_BLOODCLOT = 0.85)	// Brute heal chem mix + quickclot OD
 	severity = 0
@@ -58,7 +58,7 @@
 
 // Edge
 /datum/component/internal_wound/organic/edge
-	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 2)
+	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 2, /obj/item/stack/medical/bruise/advanced = 1, /obj/item/stack/medical/gauze/hemo = 3, /obj/item/stack/medical/suture = 2, /obj/item/stack/medical/stapler = 1, /obj/item/stack/medical/bruise = 5, /obj/item/stack/medical/gauze = 3)
 	treatments_tool = list(QUALITY_CAUTERIZING = FAILCHANCE_NORMAL)
 	treatments_chem = list(CE_BLOODCLOT = 0.85)	// Brute heal chem mix + quickclot OD
 	severity = 0
@@ -85,7 +85,7 @@
 
 // Burn
 /datum/component/internal_wound/organic/burn
-	treatments_item = list(/obj/item/stack/medical/advanced/ointment = 2)
+	treatments_item = list(/obj/item/stack/medical/advanced/ointment = 2, /obj/item/stack/medical/burn = 1, /obj/item/stack/medical/ointment = 3)
 	treatments_tool = list(QUALITY_CUTTING = FAILCHANCE_NORMAL)
 	treatments_chem = list(CE_STABLE = 1)	// Inaprov will only keep it from killing you
 	scar = /datum/component/internal_wound/organic/necrosis_start
@@ -112,6 +112,7 @@
 */
 
 /datum/component/internal_wound/organic/necrosis_start
+	treatments_item = list(/obj/item/stack/medical/ointment = 5)
 	treatments_tool = list(QUALITY_CUTTING = FAILCHANCE_NORMAL)
 	severity = 0
 	severity_max = 1
@@ -134,7 +135,7 @@
 
 // Tox (toxins)
 /datum/component/internal_wound/organic/poisoning
-	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 1)
+	treatments_item = list(/obj/item/stack/medical/ointment = 2)
 	treatments_tool = list(QUALITY_CUTTING = FAILCHANCE_NORMAL)
 	treatments_chem = list(CE_ANTITOX = 2)
 	severity = 0
@@ -185,6 +186,7 @@
 // Clone/radiation
 // There are a lot of dummy wounds that exist for cosmetic purposes
 /datum/component/internal_wound/organic/radiation
+	treatments_item = list(/obj/item/stack/medical/burn = 1, /obj/item/stack/medical/ointment = 2)
 	treatments_tool = list(QUALITY_CUTTING = FAILCHANCE_NORMAL)
 	treatments_chem = list(CE_ONCOCIDAL = 1)
 	characteristic_flag = IWOUND_PROGRESS	// Does not apply any damage to the parent organ
@@ -286,10 +288,10 @@
 /datum/component/internal_wound/organic/parenchyma/UnregisterFromParent()
 	. = ..()
 	var/obj/item/organ/O = parent
-	
+
 	if(O.owner)
 		O.owner.mutation_index--
-	
+
 /datum/component/internal_wound/organic/parenchyma/heart
 	name = "heart parenchyma"
 	organ_efficiency_mod = list(OP_HEART = 10)
@@ -342,6 +344,10 @@
 	spread_threshold = IORGAN_SMALL_HEALTH
 	status_flag = ORGAN_WOUNDED|ORGAN_INFECTED
 
+/datum/component/internal_wound/organic/infection/New()
+	..()
+	if(prob(50))
+		treatments_item = list(/obj/item/stack/medical/ointment = 5)
 /datum/component/internal_wound/organic/infection/standard
 	name = "infection"
 

@@ -25,6 +25,8 @@
 	rarity_value = 6
 	var/colour = "black"	//what colour the ink is!
 
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/pen/blue
 	desc = "A normal blue ink pen."
@@ -61,6 +63,7 @@
 	colour = "white"
 
 /obj/item/pen/pencil
+	name = "pencil"
 	desc = "A pencil, though the eraser has dried out."
 	icon_state = "pencil"
 	colour = "grey"

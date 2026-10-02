@@ -31,3 +31,36 @@
 	explosion_power = 500
 	explosion_falloff = 80
 	matter = list(MATERIAL_BIOMATTER = 100)
+
+
+/obj/item/grenade/explosive/vest
+	icon = 'icons/inventory/suit/icon.dmi'
+	name = "suicide vest"
+	desc = "Grant us the life of true peace and usher us into the abode of peace."
+	icon_state = "explosive"
+	item_state = "explosive"
+	explosion_power = 1200
+	explosion_falloff = 75
+	w_class = ITEM_SIZE_HUGE
+	matter = list(MATERIAL_BIOMATTER = 120)
+	throw_range = 1
+	slot_flags = SLOT_OCLOTHING
+	slowdown_hold = 1.5
+	action_button_name = "Arm Payload"
+	action_button_proc = "martyr"
+
+/obj/item/grenade/proc/martyr(mob/user as mob)
+	if(active)
+		return
+	if (equip_slot == 13)
+		activate(user)
+	else
+		to_chat(user, SPAN_WARNING("The device must be worn by a martyr to be armed."))
+		return
+
+/obj/item/grenade/explosive/vest/attack_self(mob/user as mob)
+	if(!active)
+		add_fingerprint(user)
+		to_chat(user, SPAN_WARNING("This should be worn by the destined."))
+	return
+

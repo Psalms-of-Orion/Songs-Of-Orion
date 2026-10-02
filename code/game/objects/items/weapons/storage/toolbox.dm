@@ -16,7 +16,7 @@
 	max_storage_space = 14 //enough to hold all starting contents
 	origin_tech = list(TECH_COMBAT = 1)
 	attack_verb = list("robusted")
-	spawn_blacklisted = FALSE
+	spawn_blacklisted = TRUE
 	rarity_value = 10
 	spawn_frequency = 10
 	spawn_tags = SPAWN_TAG_TOOLBOX
@@ -27,6 +27,7 @@
 	icon_state = "red"
 	item_state = "toolbox_red"
 	rarity_value = 30
+	bad_type = /obj/item/storage/toolbox/emergency
 
 /obj/item/storage/toolbox/emergency/populate_contents()
 	new /obj/item/tool/crowbar(src)
@@ -46,6 +47,7 @@
 	name = "mechanical toolbox"
 	icon_state = "blue"
 	item_state = "toolbox_blue"
+	bad_type = /obj/item/storage/toolbox/mechanical
 
 /obj/item/storage/toolbox/mechanical/populate_contents()
 	new /obj/item/tool/screwdriver(src)
@@ -63,6 +65,7 @@
 	icon_state = "yellow"
 	item_state = "toolbox_yellow"
 	rarity_value = 20
+	bad_type = /obj/item/storage/toolbox/electrical
 
 /obj/item/storage/toolbox/electrical/populate_contents()
 	var/color = pick("red","yellow","green","blue","pink","orange","cyan","white")
@@ -94,6 +97,7 @@
 	origin_tech = list(TECH_COMBAT = 1, TECH_COVERT = 1)
 	force = WEAPON_FORCE_DANGEROUS
 	spawn_blacklisted = TRUE
+	bad_type = /obj/item/storage/toolbox/syndicate
 
 /obj/item/storage/toolbox/syndicate/populate_contents()
 	var/obj/item/tool/cell_tool
@@ -102,15 +106,15 @@
 
 	cell_tool = new /obj/item/tool/screwdriver/combi_driver(src)
 	qdel(cell_tool.cell)
-	cell_tool.cell = new /obj/item/cell/small/super(cell_tool)
+	cell_tool.cell = new /obj/item/cell/medium/astra/disposable(cell_tool)
 
 	cell_tool = new /obj/item/tool/crowbar/pneumatic(src)
 	qdel(cell_tool.cell)
-	cell_tool.cell = new /obj/item/cell/medium/super(cell_tool)
+	cell_tool.cell = new /obj/item/cell/medium/astra/disposable(cell_tool)
 
 	new /obj/item/tool/weldingtool/advanced(src)
 	new /obj/item/tool/wirecutters/armature(src)
 	new /obj/item/tool/multitool(src)
 	new /obj/item/cell/medium/super(src)
-	new /obj/item/cell/small/super(src)
+	new /obj/item/cell/small/astra/disposable/high(src)
 

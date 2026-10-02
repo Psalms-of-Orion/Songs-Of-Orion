@@ -25,6 +25,8 @@
 	var/sprite_name = "fire_extinguisher"
 	var/list/overlaylist = list("fire_extinguisherO1","fire_extinguisherO2","fire_extinguisherO3","fire_extinguisherO4","fire_extinguisherO5","fire_extinguisherO6")
 
+	dropped_sound = 'sound/items/drop_sounds/gascan.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 /obj/item/extinguisher/mini
 	name = "fire extinguisher"
@@ -39,6 +41,8 @@
 	spray_particles = 3
 	sprite_name = "miniFE"
 	overlaylist = list()
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/extinguisher/Initialize()
 	. = ..()

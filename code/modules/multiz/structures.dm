@@ -14,7 +14,6 @@
 	var/istop = TRUE
 	var/obj/structure/multiz/target
 	var/obj/structure/multiz/targeted_by
-
 /obj/structure/multiz/New()
 	. = ..()
 	for(var/obj/structure/multiz/M in loc)
@@ -63,58 +62,144 @@
 		else if (Adjacent(user))
 			attack_hand(user)
 
-
-
-
-
 ////LADDER////
 
 /obj/structure/multiz/ladder
+	icon = 'modular/icons/ladder.dmi'
 	name = "ladder"
-	desc = "A ladder.  You can climb it up and down."
-	description_info = "You can look what is on the other side with Alt-Click. You can also fire guns at anyone near the other side when peeking. You can also throw grenades."
+	desc = "A ladderway with a hatch that can be closed, locked, or sealed. Various tools could break through, but not easily."
+	description_info = "You can look what is on the other side with Alt-Click. It can be opened or closed with Ctrl+Shift-Click.\
+	If locked, it could be pried, drilled, or sawn open. It can also be welded shut."
 	description_antag = "Don't try to place traps or slippery liquids onto the ladder's exit/entry directly, they won't work."
-	icon_state = "ladderdown"
+	icon_state = "top"
 	var/climb_delay = 30
+	var/ladder_closed = FALSE
+	var/ladder_locked = FALSE
+	var/ladder_forced = FALSE
+	var/ladder_welded = FALSE
+	var/id = null		//Source ladder
+	var/id_target = null//Targeted ladder
+	req_access = list()
+var/list/obj/structure/multiz/ladder/LADDERS = list()
+
+
+
+/obj/structure/multiz/ladder/Initialize()
+	. = ..()
+	synch_ladders()
+	update_icon()
 
 /obj/structure/multiz/ladder/find_target()
 	var/turf/targetTurf = istop ? SSmapping.GetBelow(src) : SSmapping.GetAbove(src)
 	target = locate(/obj/structure/multiz/ladder) in targetTurf
+	LADDERS += src
 	..()
-
-/obj/structure/multiz/ladder/up
-	//Ladders which go up use a tall 32x64 sprite, in a seperate dmi
-	icon = 'icons/obj/structures/ladder_tall.dmi'
-	pixel_y = 16
-	icon_state = "ladderup"
-	istop = FALSE
-
-/obj/structure/multiz/ladder/up/Initialize()
-	..()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/structure/multiz/ladder/up/LateInitialize()
-	..()
-	//Special initialize behaviour for upward ladders to stop artefacts from mobs going behind them but drawing infront of them)
-
-	//Normally a ladder will hug the back wall of a tile and mobs will go over it
-
-	//If the tile to the north is acessible, change our behaviour to hug the south of a tile and draw over all mobs
-	var/turf/T = get_step(src, NORTH)
-	if (turf_clear(T))
-		pixel_y = -4
-		layer = ABOVE_MOB_LAYER
 
 /obj/structure/multiz/ladder/Destroy()
 	if(target && istop)
 		qdel(target)
+		LADDERS -= src
 	return ..()
+
+/obj/structure/multiz/ladder/proc/synch_ladders()
+	for(var/obj/structure/multiz/ladder/L in LADDERS)
+		if(L.id == src.id_target)
+			L.ladder_closed = ladder_closed
+			L.ladder_locked = ladder_locked
+			L.ladder_forced = ladder_forced
+			L.ladder_welded = ladder_welded
+			L.update_icon()
+			return
+
+/obj/structure/multiz/ladder/proc/pry_ladders()
+	if(ladder_locked == TRUE)
+		visible_message(SPAN_WARNING("The lock mechanism has been broken!"))
+		ladder_forced = TRUE
+		ladder_closed = FALSE
+		ladder_locked = FALSE
+		playsound(loc, 'sound/effects/metalpipe.ogg', 50, 1)
+		do_sparks(6, (rand(1,8)), src)
+		synch_ladders()
+		update_icon()
+	else
+		playsound(loc, 'sound/effects/bang.ogg', 50, 1)
+		ladder_closed = FALSE
+		synch_ladders()
+		update_icon()
+
+/obj/structure/multiz/ladder/proc/weld_ladders()
+	ladder_welded = !ladder_welded
+	playsound(loc, pick('sound/effects/sparks1.ogg', 'sound/effects/sparks2.ogg', 'sound/effects/sparks3.ogg'), 50, 1)
+	synch_ladders()
+	update_icon()
+	cut_overlays()
+	if(!ladder_welded || !istop)
+		cut_overlays()
+	else
+		overlays += image('modular/icons/ladder.dmi', "_welded")
+
+
+/obj/structure/multiz/ladder/examine(mob/user)
+	..()
+	if(ladder_welded == TRUE)
+		to_chat(user, SPAN_NOTICE("The hatch is welded shut."))
+	if(ladder_forced == TRUE)
+		to_chat(user, SPAN_NOTICE("The locking mechanism has been broken by force."))
+	if(ladder_closed == TRUE && !ladder_locked && !ladder_welded)
+		to_chat(user, SPAN_NOTICE("The hatch is closed."))
+	if(ladder_locked == TRUE)
+		to_chat(user, SPAN_NOTICE("The hatch is locked."))
+
 
 /obj/structure/multiz/ladder/attack_generic(var/mob/M)
 	attack_hand(M)
 
+/obj/structure/multiz/ladder/CtrlShiftClick(var/mob/living/carbon/human/user)
+	if(ladder_locked == TRUE && !ladder_welded)
+		to_chat(user, SPAN_NOTICE("The [src] hatch is locked and cannot be opened."))
+		return
+	if(ladder_welded == TRUE)
+		to_chat(user, SPAN_NOTICE("The [src] hatch is welded shut and cannot be opened."))
+		return
+	if(!user.is_physically_disabled() && !ladder_locked)
+		to_chat(user, SPAN_NOTICE("You flip the hatch on the [src]."))
+		ladder_closed = !ladder_closed
+		update_icon()
+		synch_ladders()
+	else
+		to_chat(user, SPAN_NOTICE("You can't do it right now."))
+		return
+
+
+/obj/structure/multiz/ladder/attackby(obj/item/W, mob/user as mob)
+	if(istype(W, /obj/item/card))
+		var/obj/item/card/id/id_card = W
+		if(has_access(req_access, list(), id_card.access))
+			ladder_locked = !ladder_locked
+			ladder_closed = TRUE
+			update_icon()
+			synch_ladders()
+			return
+		else
+			to_chat(user, SPAN_WARNING("Access Denied"))
+			return
+	if(istype(W, /obj/item/card) && ladder_forced == TRUE)
+		to_chat(user, SPAN_WARNING("The lock mechanism has been broken."))
+
+/obj/structure/multiz/ladder/update_icon()
+	if(ladder_locked == TRUE)
+		icon_state = initial(icon_state) + "_locked"
+		playsound(loc, 'sound/machines/Custom_bolts.ogg', 50, 1)
+	if(ladder_closed == TRUE && ladder_locked == FALSE)
+		icon_state = initial(icon_state) + "_closed"
+		playsound(loc, 'sound/machines/airlock_close_force.ogg', 50, 1)
+	if(!ladder_locked && !ladder_closed)
+		icon_state = initial(icon_state)
+		playsound(loc, 'sound/machines/airlock_open_force.ogg', 50, 1)
+
+
 /obj/structure/multiz/ladder/proc/throw_through(var/obj/item/C, var/mob/throw_man)
-	if(istype(throw_man,/mob/living/carbon/human) && throw_man.canUnEquip(C))
+	if(istype(throw_man,/mob/living/carbon/human) && throw_man.canUnEquip(C) && !ladder_closed)
 		var/mob/living/carbon/human/user = throw_man
 		var/through =  istop ? "down" : "up"
 		user.visible_message(SPAN_WARNING("[user] takes position to throw [C] [through] \the [src]."),
@@ -136,6 +221,73 @@
 
 /obj/structure/multiz/ladder/attackby(obj/item/I, mob/user)
 	. = ..()
+	if(ladder_closed == TRUE)
+		if(I.get_tool_type(user, list(QUALITY_PRYING), src) == QUALITY_PRYING)
+			if(ladder_welded == TRUE)
+				visible_message(SPAN_WARNING("The welds prevent the hatch from being pried open."))
+				return
+			playsound(loc, 'sound/machines/airlock_creaking.ogg', 50, 1)
+			if(I.use_tool(user, src, WORKTIME_SLOW, QUALITY_PRYING, FAILCHANCE_CHALLENGING, required_stat = STAT_ROB) && !ladder_forced && !ladder_welded)
+				user.visible_message(SPAN_NOTICE("[user] pries the [src] hatch open"), SPAN_NOTICE("You pry the hatch open."))
+				pry_ladders()
+				return
+			if(ladder_welded == TRUE)
+				visible_message(user, SPAN_WARNING("The welds prevent the hatch from being pried open."))
+				return
+			else
+				visible_message(user, SPAN_WARNING("The lock mechanism has already been broken."))
+				return
+		if(I.get_tool_type(user, list(QUALITY_WELDING), src) == QUALITY_WELDING)
+			do_sparks(6, (rand(1,8)), src)
+			if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_WELDING, FAILCHANCE_NORMAL, required_stat = STAT_MEC))
+				if(!ladder_welded)
+					user.visible_message(SPAN_NOTICE("[user] welds the [src] shut."), SPAN_NOTICE("You weld the [src] shut."))
+					weld_ladders()
+				else
+					user.visible_message(SPAN_NOTICE("[user] burns off the welds holding the [src] shut."), SPAN_NOTICE("You melt the welds off the [src]."))
+					weld_ladders()
+		if(I.get_tool_type(user, list(QUALITY_SAWING), src) == QUALITY_SAWING && (ladder_welded == TRUE || ladder_locked == TRUE))
+			do_sparks(6, (rand(1,8)), src)
+			if(I.use_tool(user, src, WORKTIME_EXTREMELY_LONG, QUALITY_SAWING, FAILCHANCE_NORMAL, required_stat = STAT_MEC))
+				ladder_welded = FALSE
+				ladder_locked = FALSE
+				ladder_forced = TRUE
+				visible_message(SPAN_WARNING("Everything that holds the [src] shut has been cut away!"))
+				playsound(loc, 'sound/effects/metalpipe.ogg', 50, 1)
+				synch_ladders()
+				update_icon()
+		if(I.get_tool_type(user, list(QUALITY_DRILLING), src) == QUALITY_DRILLING && !ladder_forced)
+			if(I.use_tool(user, src, WORKTIME_EXTREMELY_LONG, QUALITY_DRILLING, FAILCHANCE_HARD, required_stat = STAT_MEC))
+				ladder_locked = FALSE
+				ladder_forced = TRUE
+				visible_message(SPAN_WARNING("The lock mechanism has been drilled out!"))
+				playsound(loc, 'sound/effects/metalpipe.ogg', 50, 1)
+				synch_ladders()
+				update_icon()
+		if(I.get_tool_type(user, list(QUALITY_BOLT_TURNING), src) == QUALITY_BOLT_TURNING && ladder_forced == TRUE)
+			to_chat(user, SPAN_WARNING("You begin repairing the locking mechanism."))
+			if(I.use_tool(user, src, WORKTIME_EXTREMELY_LONG, QUALITY_BOLT_TURNING, FAILCHANCE_CHALLENGING, required_stat = STAT_MEC))
+				ladder_forced = FALSE
+				to_chat(user, SPAN_WARNING("The locking bolts have been reset and re-enabled."))
+				playsound(loc, 'sound/machines/Custom_bolts.ogg', 50, 1)
+				synch_ladders()
+				update_icon()
+		if(I.get_tool_type(user, list(QUALITY_PULSING), src) == QUALITY_PULSING && !ladder_forced)
+			to_chat(user, SPAN_WARNING("You begin hacking the locking mechanism."))
+			if(I.use_tool(user, src, WORKTIME_EXTREMELY_LONG, QUALITY_PULSING, FAILCHANCE_CHALLENGING, required_stat = STAT_COG))
+				ladder_locked = !ladder_locked
+				playsound(loc, pick('sound/effects/compbeep4.ogg', 'sound/effects/compbeep5.ogg'), 80, 1)
+				synch_ladders()
+				update_icon()
+				if(!ladder_locked)
+					to_chat(user, SPAN_WARNING("You successfully unlocked the hatch."))
+					playsound(loc, 'sound/machines/Custom_boltsup.ogg', 50, 1)
+				else
+					to_chat(user, SPAN_WARNING("You successfully locked the hatch."))
+					playsound(loc, 'sound/machines/Custom_bolts.ogg', 50, 1)
+		else
+			to_chat(user, SPAN_WARNING("There is nothing useful that can do right now."))
+			return
 	if(throw_through(I,user))
 		return
 	else if(istype(I, /obj/item/mech_equipment) || istype(I, /obj/item/mech_component) || istype(I, /obj/item/tool/mech_kit))
@@ -156,10 +308,15 @@
 
 
 /obj/structure/multiz/ladder/proc/climb(mob/M, delay)
+	if(ladder_locked == TRUE || ladder_closed == TRUE)
+		to_chat(M, SPAN_NOTICE("\The [src] hatch is closed and must be opened to climb it."))
+		return
+	if(ladder_welded == TRUE)
+		to_chat(M, SPAN_NOTICE("The hatch is welded shut, the [src] cannot be used."))
 	if(!target || !istype(target.loc, /turf))
 		to_chat(M, SPAN_NOTICE("\The [src] is incomplete and can't be climbed."))
 		return
-	if(isliving(M))
+	if(isliving(M) && (ladder_locked == FALSE) && (ladder_closed == FALSE))
 		var/mob/living/L = M
 		delay *= (L.stats.getPerk(PERK_PARKOUR) ? 0.5 : 1)
 	var/turf/T = target.loc
@@ -211,7 +368,7 @@
 
 /obj/structure/multiz/ladder/AltClick(var/mob/living/carbon/human/user)
 	if(get_dist(src, user) <= 3)
-		if(!user.is_physically_disabled())
+		if(!user.is_physically_disabled() && !ladder_closed)
 			if(target)
 				if(user.client)
 					if(user.is_watching == TRUE)
@@ -238,6 +395,69 @@
 		user.hud_used.updatePlaneMasters(user)
 		user.is_watching = FALSE
 		return
+
+/obj/structure/multiz/ladder/up
+	icon_state = "bottom"
+	istop = FALSE
+	name = "ladder base"
+
+/obj/structure/multiz/ladder/up/Initialize()
+	..()
+	LADDERS += src
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/multiz/ladder/up/LateInitialize()
+	..()
+	//Special initialize behaviour for upward ladders to stop artefacts from mobs going behind them but drawing infront of them)
+
+	//Normally a ladder will hug the back wall of a tile and mobs will go over it
+
+	//If the tile to the north is acessible, change our behaviour to hug the south of a tile and draw over all mobs
+	var/turf/T = get_step(src, NORTH)
+	if (turf_clear(T))
+		layer = ABOVE_MOB_LAYER
+
+////PRE-MADE////
+//CLOSED
+/obj/structure/multiz/ladder/closed
+	ladder_closed = TRUE
+
+/obj/structure/multiz/ladder/closed/Initialize()
+	..()
+	synch_ladders()
+	update_icon()
+
+
+/obj/structure/multiz/ladder/up/closed
+	ladder_closed = TRUE
+
+/obj/structure/multiz/ladder/up/closed/Initialize()
+	..()
+	synch_ladders()
+	update_icon()
+
+//LOCKED
+
+/obj/structure/multiz/ladder/locked
+	ladder_closed = TRUE
+	ladder_locked = TRUE
+
+/obj/structure/multiz/ladder/locked/Initialize()
+	..()
+	update_icon()
+
+/obj/structure/multiz/ladder/up/locked
+	ladder_closed = TRUE
+	ladder_locked = TRUE
+
+/obj/structure/multiz/ladder/up/locked/Initialize()
+	..()
+	synch_ladders()
+	update_icon()
+
+
+
+
 ////STAIRS////
 
 /obj/structure/multiz/stairs

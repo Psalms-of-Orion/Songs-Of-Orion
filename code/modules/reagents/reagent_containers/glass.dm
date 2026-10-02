@@ -22,6 +22,7 @@
 	var/lid_icon_state
 
 	var/label_text = ""
+	dropped_sound = 'sound/items/drop_sounds/glass_drop.ogg'
 
 	var/list/can_be_placed_into = list(
 		/obj/machinery/chem_master/,

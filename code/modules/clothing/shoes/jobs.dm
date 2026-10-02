@@ -8,6 +8,12 @@
 	slowdown = SHOES_SLOWDOWN + 1
 	species_restricted = null
 	style = STYLE_NEG_HIGH
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
+/obj/item/clothing/shoes/galoshes/black
+	desc = "Rubber boots with high traction. Prevents the wearer from slipping."
+	name = "galoshes"
+	icon_state = "galoshes_bk"
 
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
@@ -25,7 +31,8 @@
 	)
 	siemens_coefficient = 0.6
 	can_hold_knife = TRUE
-
+	dropped_sound = 'sound/items/drop_sounds/boots.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 /obj/item/clothing/shoes/jackboots/ironhammer
 	icon_state = "jackboots_ironhammer"
 	desc = "Standard-issue Ironhammer combat boots for combat scenarios or combat situations. All combat, all the time."
@@ -87,6 +94,7 @@
 	)
 	can_hold_knife = TRUE
 	style = STYLE_NEG_HIGH
+	dropped_sound = 'sound/items/drop_sounds/boots.ogg'
 
 /obj/item/clothing/shoes/workboots/proletariat
 	name = "Excelsior boots"
@@ -122,7 +130,7 @@
 	can_hold_knife = TRUE
 	style = STYLE_NEG_HIGH
 	spawn_blacklisted = TRUE
-
+	dropped_sound = 'sound/items/drop_sounds/boots.ogg'
 /obj/item/clothing/shoes/artist_shoes
 	name = "Pointy Shoes"
 	desc = "They're actually quite comfortable."

@@ -19,6 +19,8 @@
 	bad_type = /obj/item/card
 	spawn_blacklisted = TRUE
 	var/list/files = list()
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/card/data
 	name = "data disk"
@@ -453,6 +455,13 @@ var/const/NO_EMAG_ACT = -50
 	access_construction, access_robotics
 	)
 
+/obj/item/card/keycard/level_2
+	name = "level-2 keycard"
+	icon_state = "key_com"
+	assignment = "General Staff"
+	access = list(access_maint_tunnels, access_construction, access_moebius, access_external_airlocks, access_eva, access_sec_doors, access_heads, access_mining_station, access_security)
+
+
 /obj/item/card/keycard/hr
 	name = "level-4 keycard"
 	desc = "A card used to provide access to systems and doors across the station. Stamped with the Human Resources logo."
@@ -466,11 +475,9 @@ var/const/NO_EMAG_ACT = -50
 	assignment = "Human Resources"
 	access = list(access_maint_tunnels, access_moebius, access_tox, access_research_equipment)
 
-/obj/item/card/keycard/hr/level_2
-	name = "level-2 keycard"
-	icon_state = "key_com"
+/obj/item/card/keycard/level_2/hr
 	assignment = "Human Resources"
-	access = list(access_maint_tunnels, access_moebius, access_tox, access_research_equipment, access_sec_doors, access_heads)
+	access = list(access_moebius, access_tox, access_research_equipment)
 
 /obj/item/card/keycard/engineering
 	name = "level-4 keycard"
@@ -486,11 +493,9 @@ var/const/NO_EMAG_ACT = -50
 	assignment = "Astra Starworks"
 	access = list(access_maint_tunnels, access_engine, access_atmospherics, access_engine_equip, access_construction, access_external_airlocks, access_eva, access_mining_station, access_mining, access_mining_office)
 
-/obj/item/card/keycard/engineering/level_2
-	name = "level-2 keycard"
-	icon_state = "key_com"
+/obj/item/card/keycard/level_2/engineering
 	assignment = "Astra Starworks"
-	access = list(access_maint_tunnels, access_engine, access_engine_equip, access_atmospherics, access_construction, access_external_airlocks, access_eva, access_sec_doors, access_heads, access_mining_station)
+	access = list(access_engine, access_engine_equip, access_atmospherics, access_mining, access_mining_office)
 
 /obj/item/card/keycard/med
 	name = "level-4 keycard"
@@ -499,11 +504,10 @@ var/const/NO_EMAG_ACT = -50
 	assignment = "Working Brotherhood"
 	access = list(access_maint_tunnels, access_medical_equip)
 
-/obj/item/card/keycard/med/level_2
-	name = "level-2 keycard"
+/obj/item/card/keycard/level_2/med
 	icon_state = "key_cmo"
 	assignment = "Working Brotherhood"
-	access = list(access_maint_tunnels, access_medical_equip, access_external_airlocks, access_eva, access_sec_doors, access_heads, access_mining_station)
+	access = list(access_medical_equip)
 
 /obj/item/card/keycard/syndicate
 	name = "level-4 keycard"
@@ -518,25 +522,23 @@ var/const/NO_EMAG_ACT = -50
 	assignment = "Freight Syndicate"
 	access = list(access_maint_tunnels, access_cargo, access_eva, access_mining_station, access_robotics)
 
-/obj/item/card/keycard/syndicate/level_2
-	name = "level-2 keycard"
+/obj/item/card/keycard/level_2/syndicate
 	icon_state = "key_synd"
 	assignment = "Freight Syndicate"
-	access = list(access_maint_tunnels, access_cargo, access_eva, access_mining_station, access_robotics, access_sec_doors, access_heads)
+	access = list(access_cargo, access_robotics)
 
 /obj/item/card/keycard/security
 	name = "level-3 keycard"
 	desc = "A card used to provide access to systems and doors across the station. This one is a special security-access type, with all Level-4 acess on the Station."
 	icon_state = "key_sec"
 	assignment = "PCRC"
-	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_engine, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_cargo)
+	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_engine, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_cargo, access_security)
 
-/obj/item/card/keycard/security/level_2
-	name = "level-2 keycard"
+/obj/item/card/keycard/level_2/security
 	desc = "A card used to provide access to systems and doors across the station. This one is a special security-access type, with all Level-3 acess on the Station."
 	icon_state = "key_hos"
 	assignment = "PCRC"
-	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_atmospherics, access_construction, access_engine, access_tox, access_engine_equip, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_heads, access_cargo, access_armory)
+	access = list( access_moebius, access_medical_equip, access_atmospherics, access_construction, access_engine, access_tox, access_engine_equip, access_brig, access_forensics_lockers, access_cargo, access_armory, access_security)
 
 
 /obj/item/card/keycard/military
@@ -544,14 +546,14 @@ var/const/NO_EMAG_ACT = -50
 	desc = "A card used to provide access to systems and doors across the station. This one is a special security-access type, with all Level-4 acess on the Station."
 	icon_state = "key_hop"
 	assignment = "SOLCOM"
-	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_engine, access_atmospherics, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_cargo)
+	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_engine, access_atmospherics, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_cargo, access_security)
 
 /obj/item/card/keycard/military/level_0
 	name = "level-0 keycard"
 	desc = "A card used to provide access to systems and doors across the station. This one is a special security-access type, with all Level-3 acess on the Station."
 	icon_state = "key_hop"
 	assignment = "SOLCOM"
-	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_construction, access_atmospherics, access_engine, access_tox, access_engine_equip, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_heads, access_cargo, access_armory)
+	access = list(access_maint_tunnels, access_moebius, access_medical_equip, access_construction, access_atmospherics, access_engine, access_tox, access_engine_equip, access_external_airlocks, access_eva, access_sec_doors, access_brig, access_forensics_lockers, access_mining_station, access_heads, access_cargo, access_armory, access_security)
 
 
 

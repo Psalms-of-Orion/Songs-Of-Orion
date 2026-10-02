@@ -18,19 +18,44 @@
 	restricted_accessory_slots = list("armband")
 	maxHealth = 500
 	health = 500
+	equip_delay = 3
+	dropped_sound = 'sound/items/drop_sounds/hat.ogg'
+	pickup_sound = 'sound/items/drop_sounds/cloak (1).ogg'
+/obj/item/clothing/suit/armor/pre_equip(mob/user, slot)
+	..(user, slot)
+	if (equip_delay > 0)
+		//If its currently worn, we must be taking it off
+		if (is_worn())
+			user.visible_message(
+				SPAN_NOTICE("[user] starts taking off \the [src]..."),
+				SPAN_NOTICE("You start taking off \the [src]...")
+			)
+			if(!do_after(user,equip_delay,src))
+				playsound(src, 'sound/items/drop_sounds/equip_armor.ogg', 50, 1)
+				return TRUE //A nonzero return value will cause the equipping operation to fail
+
+		else if (is_held() && !(slot in unworn_slots))
+			user.visible_message(
+				SPAN_NOTICE("[user] starts putting on \the [src]..."),
+				SPAN_NOTICE("You start putting on \the [src]...")
+			)
+			if(!do_after(user,equip_delay,src))
+				playsound(src, 'sound/items/drop_sounds/equip_armor.ogg', 50, 1)
+				return TRUE //A nonzero return value will cause the equipping operation to fail
+
 
 /*
  * Vests
  */
 /obj/item/clothing/suit/armor/vest
 	name = "armor vest"
-	desc = "A basic vest that provides the minimum amount of protection to count as armor."
-	icon_state = "stab"
-	item_state = "stab"
+	desc = "A basic vest that provides the minimum amount of ballistic protection to count as armor."
+	icon_state = "armor"
+	item_state = "armor"
 	blood_overlay_type = "armor"
 	armor = list(
 		melee = 6,
-		bullet = 10,
+		bullet = 13,//upgraded to lightly bulletproof
 		energy = 10,
 		bomb = 25,
 		bio = 0,
@@ -40,6 +65,26 @@
 		MATERIAL_PLASTIC = 4,
 		MATERIAL_STEEL = 4,
 		MATERIAL_PLASTEEL = 1, //Small plasteel cost since it's better than a handmade vest, which only costs steel
+	)
+
+
+/obj/item/clothing/suit/armor/vest/stab
+	name = "stab vest"
+	desc = "A basic vest that provides the minimum amount of stab protection to count as armor."
+	icon_state = "stab"
+	item_state = "stab"
+	armor = list(
+		melee = 13,//upgraded to mildly melee resistant
+		bullet = 6,
+		energy = 10,
+		bomb = 25,
+		bio = 0,
+		rad = 0
+	)
+	matter = list(
+		MATERIAL_PLASTIC = 4,
+		MATERIAL_STEEL = 4,
+		MATERIAL_PLASTEEL = 1,
 	)
 
 /obj/item/clothing/suit/armor/vest/full
@@ -73,7 +118,7 @@
 	)
 	slowdown = LIGHT_SLOWDOWN
 	style_coverage = COVERS_TORSO|COVERS_UPPER_ARMS|COVERS_UPPER_LEGS
-
+	spawn_blacklisted = TRUE
 /obj/item/clothing/suit/armor/vest/toggle
 	name = "stab vest"
 	desc = "A basic vest with just enough protection to be called armor."
@@ -121,6 +166,7 @@
 	name = "Warden's overcoat"
 	desc = "An IH warden's overcoat with a vest over it, most often used in Hansa prisons."
 	icon_state = "warden_jacket_IH"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/vest/ironhammer
 	name = "operator armor"
@@ -131,6 +177,7 @@
 	name = "full operator armor"
 	desc = "An armored vest painted in Ironhammer Security colors. This one has shoulderpads and knee pads included to protect all parts of the body."
 	icon_state = "armor_ironhammer_fullbody"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/vest/handmade
 	name = "handmade armor vest"
@@ -153,6 +200,7 @@
 	slowdown = LIGHT_SLOWDOWN
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS // kneepads and shoulderpads mean more covering
 	style_coverage = COVERS_TORSO|COVERS_UPPER_ARMS|COVERS_UPPER_LEGS
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/greatcoat
 	item_flags = THICKMATERIAL|DRAG_AND_DROP_UNEQUIP
@@ -162,6 +210,7 @@
 	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.6
 	spawn_tags = SPAWN_TAG_CLOTHING_ARMOR
+	spawn_blacklisted = TRUE
 
 	name = "armored coat"
 	desc = "A greatcoat enhanced with a special alloy for some protection and style."
@@ -212,6 +261,7 @@
 		bio = 0,
 		rad = 0
 	)
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/flak/green
 	name = "green flakvest vest"
@@ -258,8 +308,8 @@
 	slowdown = 0.15
 	armor = list(
 		melee = 6,
-		bullet = 15,
-		energy = 7,
+		bullet = 20,
+		energy = 10,
 		bomb = 20,
 		bio = 0,
 		rad = 0
@@ -269,7 +319,11 @@
 		MATERIAL_STEEL = 10, // costs a bit more steel than standard vest
 		MATERIAL_PLASTEEL = 3, // costs lots more plasteel than standard vest
 	)
-	slowdown = LIGHT_SLOWDOWN
+
+/obj/item/clothing/suit/armor/bulletproof/marine
+	name = "Marine carapace"
+	icon_state = "marine_vest"
+	item_state = "marine_vest"
 
 /obj/item/clothing/suit/armor/korund
 	name = "Excelsior korund-sh-p carapace"
@@ -308,6 +362,7 @@
 		MATERIAL_PLASTEEL = 3,
 	)
 	style_coverage = COVERS_TORSO|COVERS_UPPER_ARMS|COVERS_UPPER_LEGS
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/bulletproof/ironhammer
 	name = "full bulletproof suit"
@@ -319,6 +374,7 @@
 		MATERIAL_STEEL = 15, // fullbody suit, so it costs a lot of steel compared to the non-ih one
 		MATERIAL_PLASTEEL = 3,
 	)
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/platecarrier
 	name = "black platecarrier vest"
@@ -340,6 +396,7 @@
 		MATERIAL_PLASTEEL = 3 // costs lots more plasteel than standard vest
 	)
 	slowdown = LIGHT_SLOWDOWN
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/platecarrier/green
 	name = "green platecarrier vest"
@@ -392,6 +449,7 @@
 	)
 	slowdown = LIGHT_SLOWDOWN
 	//spawn_blacklisted = TRUE//antag_item_targets-crafteable?
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/laserproof/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack") //TODO: Refactor this all into humandefense
 	if(istype(damage_source, /obj/item/projectile/energy) || istype(damage_source, /obj/item/projectile/beam))
@@ -479,6 +537,7 @@
 	price_tag = 500
 	style = STYLE_NEG_HIGH
 	slowdown = MEDIUM_SLOWDOWN
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/heavy/red
 	name = "Thunderdome suit (red)"
@@ -550,6 +609,7 @@
 		bio = 10,
 		rad = 10
 	)
+	spawn_blacklisted = TRUE
 
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	style_coverage = COVERS_TORSO
@@ -592,6 +652,7 @@
 		bio = 10,
 		rad = 10
 	)
+	spawn_blacklisted = FALSE
 
 /obj/item/clothing/suit/storage/vest/merc/green
 	name = "Defender vest"
@@ -607,6 +668,7 @@
 		bio = 10,
 		rad = 10
 	)
+	spawn_blacklisted = FALSE
 
 /obj/item/clothing/suit/storage/vest/merc/black
 	name = "flak vest"
@@ -622,6 +684,7 @@
 		bio = 10,
 		rad = 10
 	)
+	spawn_blacklisted = FALSE
 
 /obj/item/clothing/suit/storage/vest/merc/ultra
 	name = "Offender vest"
@@ -637,6 +700,7 @@
 		bio = 10,
 		rad = 10
 	)
+	spawn_blacklisted = FALSE
 
 /obj/item/clothing/suit/storage/vest/merc/full
 	name = "full mercenary armor vest"
@@ -644,6 +708,7 @@
 	icon_state = "mercwebvest_fullbody"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	slowdown = LIGHT_SLOWDOWN
+	spawn_blacklisted = TRUE
 
 //Technomancer armor
 /obj/item/clothing/suit/storage/vest/insulated
@@ -669,6 +734,7 @@
 	//Used ablative gear armor values and technomancer helmet/voidsuit values.
 	slowdown = LIGHT_SLOWDOWN
 	style = STYLE_NONE
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/storage/vest/technomancer_old
 	name = "reinforced Technomancer armor"
@@ -690,6 +756,7 @@
 	price_tag = 600
 	slowdown = LIGHT_SLOWDOWN
 	style = STYLE_NONE
+	spawn_blacklisted = TRUE
 
 /*
  * Reactive Armor
@@ -711,6 +778,7 @@
 	)
 	var/active = FALSE
 	var/entropy_value = 2
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/suit/armor/reactive/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(50))

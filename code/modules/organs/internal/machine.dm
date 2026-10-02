@@ -10,7 +10,8 @@
 	var/obj/item/cell/medium/cell = /obj/item/cell/medium
 	//at 0.8 completely depleted after 60ish minutes of constant walking or 130 minutes of standing still
 	var/servo_cost = 0.8 // this will probably require tweaking
-
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/organ/internal/cell/Initialize(mapload, ...)
 	. = ..()
 	if(ispath(cell))
@@ -102,7 +103,8 @@
 	icon = 'icons/obj/robot_component.dmi'
 	icon_state = "camera"
 	dead_icon = "camera_broken"
-
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 // Used for an MMI or posibrain being installed into a human.
 /obj/item/organ/internal/mmi_holder
 	name = "brain"
@@ -110,7 +112,8 @@
 	parent_organ_base = BP_CHEST
 	vital = 1
 	var/obj/item/device/mmi/stored_mmi
-
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/organ/internal/mmi_holder/proc/update_from_mmi()
 	if(!stored_mmi)
 		return

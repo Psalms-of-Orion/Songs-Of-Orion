@@ -75,7 +75,7 @@ var/list/rustle_sound = list(
 	'sound/effects/rustle4.ogg','sound/effects/rustle5.ogg'
 )
 var/list/punch_sound = list(
-	'sound/weapons/punch1.ogg','sound/weapons/punch2.ogg','sound/weapons/punch3.ogg','sound/weapons/punch4.ogg'
+	'sound/weapons/melee/punch/p1 (1).ogg','sound/weapons/melee/punch/p1 (2).ogg','sound/weapons/melee/punch/p1 (3).ogg','sound/weapons/punch4.ogg', 'sound/weapons/melee/punch/punch_hard (3).ogg'
 )
 
 var/list/bullet_hit_wall = list(
@@ -186,11 +186,59 @@ var/list/gun_interact_sound = list(
 	'sound/weapons/guns/interact/smg_magout.ogg'
 )
 
+
+var/list/blade_sound = list(
+	'sound/weapons/melee/sharp/genstab (1).ogg',
+	'sound/weapons/melee/sharp/genstab (2).ogg',
+	'sound/weapons/melee/sharp/genstab (3).ogg',
+	'sound/weapons/melee/sharp/genslash (1).ogg',
+	'sound/weapons/melee/sharp/genslash (2).ogg',
+	'sound/weapons/melee/sharp/genslash (3).ogg'
+)
+
+var/list/stab_sound = list(
+	'sound/weapons/melee/sharp/genstab (1).ogg',
+	'sound/weapons/melee/sharp/genstab (2).ogg',
+	'sound/weapons/melee/sharp/genstab (3).ogg'
+)
+
+var/list/chopping_sound = list(
+	'sound/weapons/melee/sharp/genchop (1).ogg',
+	'sound/weapons/melee/sharp/genchop (2).ogg',
+	'sound/weapons/melee/sharp/genchop (3).ogg'
+)
+
+var/list/frying_pan = list(
+	'sound/weapons/melee/blunt/frying_pan(1).ogg',
+	'sound/weapons/melee/blunt/frying_pan(2).ogg',
+	'sound/weapons/melee/blunt/frying_pan(3).ogg',
+	'sound/weapons/melee/blunt/frying_pan(4).ogg'
+)
+
+var/list/blunt_hit = list(
+	'sound/weapons/melee/blunt/genblunt (1).ogg',
+	'sound/weapons/melee/blunt/genblunt (2).ogg',
+	'sound/weapons/melee/blunt/genblunt (3).ogg'
+)
+
+var/list/blunt_metal = list(
+	'sound/weapons/melee/blunt/metalblunt (1).ogg',
+	'sound/weapons/melee/blunt/metalblunt (2).ogg',
+	'sound/weapons/melee/blunt/metalblunt (3).ogg'
+)
+
+var/list/shovel_hit = list(
+	'sound/weapons/melee/blunt/shovel_hit.ogg',
+	'sound/weapons/melee/blunt/shovel_hit2.ogg',
+	'sound/weapons/melee/blunt/shovel_hit3.ogg'
+)
+
 var/list/short_equipement_sound = list(
 	'sound/misc/inventory/short_1.ogg',
 	'sound/misc/inventory/short_2.ogg',
 	'sound/misc/inventory/short_3.ogg'
 )
+
 
 var/list/long_equipement_sound = list(
 	'sound/misc/inventory/long_1.ogg',
@@ -408,7 +456,7 @@ var/const/FALLOFF_SOUNDS = 0.5
 
 	//sound volume falloff with pressure
 	var/pressure_factor = 1
-	
+
 	var/turf/T = get_turf(src)
 	// 3D sounds, the technology is here!
 	if(T && isturf(turf_source))
@@ -433,7 +481,7 @@ var/const/FALLOFF_SOUNDS = 0.5
 				pressure_factor = max(pressure_factor, 0.15)	//hearing through contact
 
 			S.volume *= pressure_factor
-		
+
 		if (S.volume <= 0)
 			return //no volume means no sound
 
@@ -514,6 +562,13 @@ var/const/FALLOFF_SOUNDS = 0.5
 			if ("weld") soundin = pick(weld_sound)
 			if ("rummage") soundin = pick(rummage_sound)
 			if ("ricochet") soundin = pick(bullet_hit_wall)
+			if ("stab") soundin = pick(stab_sound)
+			if ("slash") soundin = pick(blade_sound)
+			if ("chop") soundin = pick(chopping_sound)
+			if ("frying_pan") soundin = pick(frying_pan)
+			if ("shovel") soundin = pick(shovel_hit)
+			if ("blunt") soundin = pick(blunt_hit)
+			if ("blunt_metal") soundin = pick(blunt_metal)
 			//if ("gunshot") soundin = pick(gun_sound)
 	return soundin
 

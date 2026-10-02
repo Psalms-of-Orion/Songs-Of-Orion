@@ -68,7 +68,7 @@
 
 	if(hack_result && in_hack_mode)
 		to_chat(user, SPAN_NOTICE("Your hacking attempt was succesful!"))
-		playsound(src.loc, 'sound/piano/A#6.ogg', 75)
+		playsound(src.loc, 'sound/machines/hack_success.ogg', 50, 1)
 	else
 		to_chat(user, SPAN_WARNING("Your hacking attempt failed!"))
 		return 0

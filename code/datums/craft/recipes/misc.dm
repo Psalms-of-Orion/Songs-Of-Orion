@@ -382,3 +382,32 @@
 		list(CRAFT_MATERIAL, 3, MATERIAL_PLASTIC)
 	)
 	related_stats = list(STAT_MEC)
+
+/datum/craft_recipe/fuel_rod
+	name = "nuclear hotdog"
+	result = /obj/item/fuel_rod/hotdog
+	time = WORKTIME_NORMAL
+	steps = list(
+		list(/obj/item/stack/rods, 3),
+		list(QUALITY_WELDING, 20, 50),
+		list(/obj/item/stack/material/uranium, 3),
+		list(QUALITY_WELDING, 20, 50)
+	)
+	flags = CRAFT_ON_FLOOR|CRAFT_ONE_PER_TURF
+	related_stats = list(STAT_MEC)
+
+/datum/craft_recipe/control_rod
+	name = "control rod"
+	result = /obj/item/control_rod/makeshift
+	time = WORKTIME_NORMAL
+	steps = list(
+		list(/obj/item/stack/rods, 4),
+		list(QUALITY_WELDING, 20, 50),
+		list(/obj/item/ore/coal, 1),
+		list(QUALITY_HAMMERING, 10, 10),
+		list(/obj/item/ore/coal, 1),
+		list(QUALITY_HAMMERING, 10, 10),
+		list(QUALITY_WELDING, 20, 50)
+	)
+	flags = CRAFT_ON_FLOOR|CRAFT_ONE_PER_TURF
+	related_stats = list(STAT_MEC)

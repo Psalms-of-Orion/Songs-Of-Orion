@@ -30,7 +30,7 @@
 #define LANGUAGE_GERMAN "German"
 #define LANGUAGE_NEOHONGO "Neohongo"
 #define LANGUAGE_LATIN "Latin"
-
+#define LANGUAGE_GAELTALK	"Gaeltalk"
 
 #define LANGUAGE_ROBOT "Robot Talk"
 #define LANGUAGE_DRONE "Drone Talk"

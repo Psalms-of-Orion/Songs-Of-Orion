@@ -193,6 +193,7 @@
 /obj/machinery/door/proc/hit_by_living(mob/living/M)
 	var/body_part = pick(BP_HEAD, BP_CHEST, BP_GROIN)
 	visible_message(SPAN_DANGER("[M] slams against \the [src]!"))
+	playsound(loc, 'sound/effects/bang.ogg', 50, 1)
 	if(prob(30))
 		M.Weaken(1)
 	M.damage_through_armor(rand(5,8), BRUTE, body_part, ARMOR_MELEE)
@@ -232,7 +233,7 @@
 		hit(user, I)
 		return
 
-	if(density && I.GetIdCard())
+	if(density && I.GetAccess())
 		if(allowed(user))	open()
 		else				do_animate("deny")
 		return

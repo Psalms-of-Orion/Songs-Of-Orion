@@ -13,6 +13,8 @@
 	spawn_tags = SPAWN_TAG_JUNK
 	price_tag = 10
 	matter = list(MATERIAL_PLASTIC = 4)
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/caution/cone
 	desc = "This cone is trying to warn you of something!"

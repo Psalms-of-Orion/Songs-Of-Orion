@@ -37,6 +37,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return (F.lit)
 	if(istype(A, /obj/item/device/assembly/igniter))
 		return TRUE
+	if(istype(A, /obj/item/fuel_rod))
+		return TRUE
 	return FALSE
 
 ///////////
@@ -114,6 +116,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/zippomes = "USER lights NAME with FLAME"
 	var/weldermes = "USER lights NAME with FLAME"
 	var/ignitermes = "USER lights NAME with FLAME"
+	var/fuelrodmes = "USER lights NAME with FLAME"
 //	preloaded_reagents = list("nicotine" = 5)
 
 /obj/item/clothing/mask/smokable/Initialize()
@@ -221,6 +224,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		else if(istype(W, /obj/item/device/assembly/igniter))
 			playsound(src, 'sound/items/smoking.ogg', 20, 1, 1)
 			text = ignitermes
+		else if(istype(W, /obj/item/fuel_rod))
+			playsound(src, 'sound/items/smoking.ogg', 20, 1, 1)
+			playsound(src, 'sound/machines/geiger/geiger_mid1.ogg', 30, 1, 1)
+			text = fuelrodmes
 		text = replacetext(text, "USER", "[user]")
 		text = replacetext(text, "NAME", "[name]")
 		text = replacetext(text, "FLAME", "[W.name]")
@@ -257,6 +264,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	zippomes = "<span class='rose'>With a flick of their wrist, USER lights their NAME with their FLAME.</span>"
 	weldermes = "<span class='notice'>USER casually lights the NAME with FLAME.</span>"
 	ignitermes = "<span class='notice'>USER fiddles with FLAME, and manages to light their NAME.</span>"
+	fuelrodmes = "<span class='notice'>USER uses the FLAME to light their NAME with the power of nuclear fission.</span>"
 
 /obj/item/clothing/mask/smokable/cigarette/light(flavor_text)
 	. = ..()
@@ -387,6 +395,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	zippomes = "<span class='rose'>With a flick of their wrist, USER lights their NAME with their FLAME.</span>"
 	weldermes = "<span class='notice'>USER insults NAME by lighting it with FLAME.</span>"
 	ignitermes = "<span class='notice'>USER fiddles with FLAME, and manages to light their NAME with the power of science.</span>"
+	fuelrodmes = "<span class='notice'>USER uses the FLAME to light their NAME with the power of nuclear fission.</span>"
 
 /obj/item/clothing/mask/smokable/cigarette/cigar/cohiba
 	name = "\improper Cohiba Robusto cigar"
@@ -467,6 +476,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	zippomes = "<span class='rose'>With much care, USER lights their NAME with their FLAME.</span>"
 	weldermes = "<span class='notice'>USER recklessly lights NAME with FLAME.</span>"
 	ignitermes = "<span class='notice'>USER fiddles with FLAME, and manages to light their NAME with the power of science.</span>"
+	fuelrodmes = "<span class='notice'>USER uses the FLAME to light their NAME with the power of nuclear fission.</span>"
+
 	quality_multiplier = 2 // Fancy!
 
 /obj/item/clothing/mask/smokable/pipe/New()
@@ -532,6 +543,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	else if(istype(W, /obj/item/device/assembly/igniter))
 		light(SPAN_NOTICE("[user] fiddles with [W], and manages to light their [name] with the power of science."))
 
+
 /obj/item/clothing/mask/smokable/pipe/cobpipe
 	name = "corn cob pipe"
 	desc = "A nicotine delivery system popularized by folksy backwoodsmen, kept popular in the modern age and beyond by space hipsters."
@@ -558,6 +570,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	attack_verb = list("burnt", "singed")
 	price_tag = 20
 	var/base_state
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
 
 /obj/item/flame/lighter/zippo
 	name = "\improper Zippo lighter"

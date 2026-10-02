@@ -20,7 +20,8 @@
 	var/external = FALSE
 	var/cruciform_resist = FALSE
 	var/scanner_hidden = FALSE	//Does this implant show up on the body scanner
-
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/implant/attackby(obj/item/I, mob/user)
 	..()
 	if(istype(I, /obj/item/implanter/installer))

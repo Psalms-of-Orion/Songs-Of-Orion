@@ -118,7 +118,7 @@
 	icon_state = "cap_sar"
 
 /obj/item/clothing/head/soft/synd
-	name = "Syndicate cap"
+	name = "Syndicate SLOCOM cap"
 	initial name = "ancient syndicate cap"
 	desc = "A branded ballcap of the Starboard Freight Syndicate."
 	icon_state = "cap_syndicate"

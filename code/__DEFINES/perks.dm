@@ -35,6 +35,7 @@
 #define PERK_ABSOLUTE_GRAB /datum/perk/oddity/absolute_grab
 #define PERK_SURE_STEP /datum/perk/oddity/sure_step
 #define PERK_MARKET_PROF /datum/perk/oddity/market_prof
+#define PERK_HIVEBORN /datum/perk/hive_oddity/hive_born
 
 // NT perks
 #define PERK_HOLY_LIGHT /datum/perk/nt_oddity/holy_light
@@ -51,6 +52,9 @@
 #define PERK_TECHNOMANCER /datum/perk/inspiration
 #define PERK_CLUB /datum/perk/job/club
 #define PERK_CHANNELING /datum/perk/channeling
+#define PERK_GREENTHUMB /datum/perk/greenthumb
+#define PERK_SOMMELIER /datum/perk/sommelier
+#define PERK_MERCHANT /datum/perk/merchant
 
 //cooldown perks
 #define PERK_COOLDOWN_REASON /datum/perk/cooldown/reason

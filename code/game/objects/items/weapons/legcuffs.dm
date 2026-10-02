@@ -11,3 +11,5 @@
 	matter = list(MATERIAL_STEEL = 2)
 	var/breakouttime = 300	//Deciseconds = 30s = 0.5 minute
 
+	dropped_sound = 'sound/items/drop_sounds/gun.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'

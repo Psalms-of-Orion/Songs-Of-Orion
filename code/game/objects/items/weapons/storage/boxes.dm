@@ -6,7 +6,7 @@
 /obj/item/storage/box
 	name = "box"
 	desc = "It's just an ordinary box."
-	icon = 'icons/obj/storage/boxes.dmi'
+	icon = 'modular/icons/boxes.dmi'
 	icon_state = "box"
 	item_state = "box"
 	max_w_class = ITEM_SIZE_SMALL
@@ -20,6 +20,7 @@
 	rarity_value = 20
 	spawn_frequency = 10
 	var/illustration = "writing"
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
 
 /obj/item/storage/box/Initialize(mapload)
 	if(illustration)
@@ -605,6 +606,7 @@
 	And you almost feel smell of delicious food from it.\
 	Wait! It must have toy inside! Unpack it now!"
 	icon_state = "happy_meal"
+	illustration = "writing_of_doom"
 
 /obj/item/storage/box/happy_meal/populate_contents()
 	var/list/things2spawn = list(

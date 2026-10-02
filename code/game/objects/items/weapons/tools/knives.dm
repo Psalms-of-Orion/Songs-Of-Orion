@@ -18,9 +18,11 @@
 	tool_qualities = list(QUALITY_CUTTING = 20,  QUALITY_WIRE_CUTTING = 10, QUALITY_SCREW_DRIVING = 5)
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_PLASTIC = 1)
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	hitsound = 'sound/weapons/melee/lightstab.ogg'
+	hitsound = "slash"
 	slot_flags = SLOT_BELT
 	structure_damage_factor = STRUCTURE_DAMAGE_BLADE
+	dropped_sound = 'sound/items/drop_sounds/knife.ogg'
+	pickup_sound = 'sound/items/drop_sounds/swordsmall1.ogg'
 
 	//spawn values
 	rarity_value = 10

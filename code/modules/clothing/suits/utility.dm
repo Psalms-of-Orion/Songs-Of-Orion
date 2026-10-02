@@ -35,7 +35,8 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	price_tag = 50
 	style = STYLE_NEG_LOW
-
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 
 /*
  * Radiation protection
@@ -58,7 +59,8 @@
 	price_tag = 50
 	style = STYLE_NEG_LOW
 
-
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 /obj/item/clothing/suit/radiation
 	name = "radiation suit"
 	desc = "A suit that protects against radiation."
@@ -70,7 +72,11 @@
 	permeability_coefficient = 0.5
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	style_coverage = COVERS_WHOLE_TORSO_AND_LIMBS
-	extra_allowed = list(/obj/item/clothing/head/radiation)
+	extra_allowed = list(
+	/obj/item/clothing/head/radiation,
+	/obj/item/device,
+	/obj/item/tool,
+	/obj/item/storage/hcases/med/astra)
 	slowdown = 0.2
 	armor = list(
 		melee = 0,
@@ -83,3 +89,5 @@
 	flags_inv = HIDEJUMPSUIT|HIDETAIL
 	price_tag = 500
 	style = STYLE_NEG_LOW
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'

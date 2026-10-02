@@ -16,14 +16,15 @@
 	toggleable = TRUE
 	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 1)
 	attack_verb = list("hit", "pierced", "sliced", "attacked")
-	hitsound = 'sound/weapons/melee/heavystab.ogg'
+	hitsound = 'sound/weapons/melee/sharp/genpick (1).ogg'
 	sharp = TRUE
 	structure_damage_factor = STRUCTURE_DAMAGE_DESTRUCTIVE //Drills and picks are made for getting through hard materials
 	//They are the best anti-structure melee weapons
 	embed_mult = 1.2 //Digs deep
 	mode = EXCAVATE //Mode should be whatever is the starting tool and off quality.
 	rarity_value = 24
-
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/tool/pickaxe/equipped(mob/user)
 	..()
 	update_icon()

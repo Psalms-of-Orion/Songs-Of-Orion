@@ -6,6 +6,8 @@
 	matter = list(MATERIAL_PLASTIC = 10, MATERIAL_STEEL = 5) //Needs to be a bit expensive so people cant spam messages
 	var/active = FALSE
 	var/last_talk_time = 0
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/device/propaganda_chip/verb/activate()
 	set name = "Activate"
@@ -13,7 +15,7 @@
 	set src in oview(1)
 	if(usr.incapacitated() || !Adjacent(usr) || !isturf(loc))
 		return
-	
+
 	for(var/obj/item/device/propaganda_chip/C in get_area(src))
 		if (C.active)
 			to_chat(usr, SPAN_WARNING("Another chip in the area prevents activation."))
@@ -29,7 +31,7 @@
 obj/item/device/propaganda_chip/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
-	
+
 /obj/item/device/propaganda_chip/attack_hand(mob/user)
 	if (active)
 		switch(alert("Do I want to disturb the chip, it looks delicate","You think...","Yes","No"))
@@ -65,7 +67,7 @@ obj/item/device/propaganda_chip/Destroy()
 		if(candidate_mind.assigned_role in list(JOBS_SECURITY))
 			continue
 
-		else 
+		else
 			crew_target_mind = candidate_mind
 
 		if (crew_target_mind)
@@ -94,4 +96,4 @@ obj/item/device/propaganda_chip/Destroy()
 	for (var/mob/living/M in viewers(src))
 		to_chat(M, "[message]")
 	last_talk_time = world.time
-		
+

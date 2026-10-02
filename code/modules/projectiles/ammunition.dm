@@ -181,7 +181,8 @@
 	rarity_value = 10
 	bad_type = /obj/item/ammo_magazine
 	price_tag = 60
-
+	dropped_sound = 'sound/items/drop_sounds/magmove.ogg'
+	pickup_sound = 'sound/weapons/guns/interact/pistol_magout.ogg'
 	var/modular_sprites = TRUE // If icons with colored stripes is present. False for some legacy sprites
 	var/ammo_label // Label on the magazine. Must be a key from ammo_names or null. Received on item spawn and could be changed via hand labeler
 	var/ammo_label_string // "_[ammo_label]". Must be a string or null.
@@ -388,7 +389,7 @@
 	if(ammo_label)
 		var/magazine_name = replacetext(initial(name), ")", " ")
 		var/ammo_name = ammo_names[ammo_label]
-		name = "[magazine_name][ammo_name])"
+		name = "[magazine_name] ([ammo_name])"
 		ammo_label_string = "_[ammo_label]"
 	else
 		name = initial(name)

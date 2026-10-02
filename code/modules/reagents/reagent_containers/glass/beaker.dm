@@ -201,6 +201,7 @@
 	unacidable = 0
 	spawn_tags = SPAWN_TAG_JUNK
 	rarity_value = 20
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
 
 /obj/item/reagent_containers/glass/bucket/attackby(obj/D, mob/user)
 
@@ -220,6 +221,9 @@
 	cut_overlays()
 	if(reagents.total_volume >= 1)
 		overlays += "water_bucket"
+		dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
 	if(has_lid())
 		var/image/lid = image(icon, src, "lid_[initial(icon_state)]")
 		overlays += lid
+	else
+		dropped_sound = initial(dropped_sound)

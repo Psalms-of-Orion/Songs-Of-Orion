@@ -21,6 +21,8 @@ var/list/global/tank_gauge_cache = list()
 	throwforce = WEAPON_FORCE_NORMAL
 	throw_speed = 1
 	throw_range = 4
+	dropped_sound = 'sound/items/drop_sounds/gascan.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 	//spawn_values
 	rarity_value = 10

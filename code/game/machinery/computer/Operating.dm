@@ -5,7 +5,7 @@
 	density = TRUE
 	anchored = TRUE
 	icon_keyboard = "med_key"
-	icon_screen = "crew"
+	icon_screen = "operating"
 	circuit = /obj/item/electronics/circuitboard/operating
 	var/mob/living/carbon/human/victim
 	var/obj/machinery/optable/table

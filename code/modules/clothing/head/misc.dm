@@ -9,6 +9,7 @@
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/hairflower
 	name = "hair flower pin"
@@ -31,6 +32,7 @@
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/mailman
 	name = "station cap"
@@ -38,6 +40,7 @@
 	desc = "<i>Choo-choo</i>!"
 	body_parts_covered = 0
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/plaguedoctorhat
 	name = "plague doctor's hat"
@@ -47,6 +50,7 @@
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
 	style_coverage = COVERS_WHOLE_HEAD
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/hasturhood
 	name = "hastur's hood"
@@ -55,6 +59,7 @@
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	style_coverage = COVERS_WHOLE_FACE
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/nursehat
 	name = "nurse's hat"
@@ -62,6 +67,7 @@
 	icon_state = "nursehat"
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/syndicatefake
 	name = "red space-helmet replica"
@@ -76,6 +82,7 @@
 	body_parts_covered = HEAD|FACE|EYES
 	item_flags = COVER_PREVENT_MANIPULATION
 	style_coverage = COVERS_WHOLE_HEAD
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/bandana/green
 	name = "green bandana"
@@ -85,6 +92,7 @@
 	flags_inv = 0
 	body_parts_covered = 0
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/cardborg
 	name = "cardborg helmet"
@@ -94,6 +102,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	body_parts_covered = HEAD|FACE|EYES
 	style_coverage = COVERS_WHOLE_HEAD
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/justice
 	name = "justice hat"
@@ -102,6 +111,7 @@
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|EYES
 	style_coverage = COVERS_WHOLE_FACE
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/justice/blue
 	icon_state = "justiceblue"
@@ -125,6 +135,7 @@
 		slot_r_hand_str = "det_hat",
 		)
 	siemens_coefficient = 0.9
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/pirate
 	name = "pirate hat"
@@ -132,6 +143,7 @@
 	icon_state = "pirate"
 	body_parts_covered = 0
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/hgpiratecap
 	name = "pirate hat"
@@ -139,6 +151,7 @@
 	icon_state = "hgpiratecap"
 	body_parts_covered = 0
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/bandana
 	name = "pirate bandana"
@@ -146,12 +159,14 @@
 	icon_state = "bandana"
 	flags_inv = BLOCKHEADHAIR
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/bowler
 	name = "bowler-hat"
 	desc = "Gentleman, elite aboard!"
 	icon_state = "bowler"
 	body_parts_covered = 0
+	spawn_blacklisted = TRUE
 
 //stylish bs12 hats
 
@@ -160,31 +175,37 @@
 	icon_state = "bowler_hat"
 	desc = "For the gentleman of distinction."
 	body_parts_covered = 0
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/beaverhat
 	name = "beaver hat"
 	icon_state = "beaver_hat"
 	desc = "Soft felt makes this hat both comfortable and elegant."
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/boaterhat
 	name = "boater hat"
 	icon_state = "boater_hat"
 	desc = "The ultimate in summer fashion."
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/fedora
 	name = "fedora"
 	icon_state = "fedora"
 	desc = "A sharp, stylish hat."
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/feathertrilby
 	name = "feather trilby"
 	icon_state = "feather_trilby"
 	desc = "A sharp, stylish hat with a feather."
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/fez
 	name = "fez"
 	icon_state = "fez"
 	desc = "You should wear a fez. Fezzes are cool."
+	spawn_blacklisted = TRUE
 
 //end bs12 hats
 
@@ -195,13 +216,13 @@
 	flags_inv = BLOCKHEADHAIR
 	siemens_coefficient = 2
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/marisa
 	name = "witch hat"
 	desc = "Strange-looking hat-wear, makes you want to cast fireballs."
 	icon_state = "marisa"
 	style_coverage = COVERS_HAIR
-	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/chicken
 	name = "chicken suit head"
@@ -236,6 +257,7 @@
 	siemens_coefficient = 2
 	body_parts_covered = HEAD|FACE|EYES
 	style_coverage = COVERS_WHOLE_HEAD
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/philosopher_wig
 	name = "natural philosopher's wig"
@@ -249,6 +271,7 @@
 	siemens_coefficient = 2 //why is it so conductive?!
 	body_parts_covered = 0
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/bandana/orange //themij: Taryn Kifer
 	name = "orange bandana"
@@ -256,6 +279,7 @@
 	icon_state = "orange_bandana"
 	body_parts_covered = 0
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/gladiator
 	name = "gladiator helmet"
@@ -266,6 +290,7 @@
 	body_parts_covered = HEAD|FACE|EARS
 	siemens_coefficient = 1
 	style_coverage = COVERS_WHOLE_HEAD
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/beret/german
 	name = "Oberth Republic beret"
@@ -279,6 +304,7 @@
 		bio = 0,
 		rad = 0
 	)
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/beret/merc
 	name = "Serbian Commander beret"
@@ -290,6 +316,7 @@
 	name = "ancient Syndicate beret"
 	desc = "An old beret, styled after one used by the Syndicate. Veterans and patriots love these."
 	icon_state = "syndberet"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/beret/syndicate/brown
 	icon_state = "syndberet2"
@@ -298,6 +325,7 @@
 	name = "old security beret"
 	desc = "A washed out and dusty corporate security beret from the long defunct \"Securitech\" company."
 	icon_state = "nanoberet"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/onestar
 	name = "One Star officer cap"
@@ -316,6 +344,7 @@
 		bio = 5,
 		rad = 5
 	)
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/ranger
 	name = "ranger hat"
@@ -323,6 +352,7 @@
 	icon_state = "ranger"
 	item_state = "ranger"
 	price_tag = 200
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/inhaler
 	name = "odd looking helmet"
@@ -361,6 +391,7 @@
 		rad = 0
 	)
 	style_coverage = COVERS_WHOLE_FACE
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/skull/black
 	name = "black skull"
@@ -394,6 +425,7 @@
 	icon_state = "cowboy"
 	item_state = "cowboy"
 	style_coverage = COVERS_HAIR
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/head/cowboy/white
 	name = "white cowboy hat"
@@ -471,3 +503,43 @@
 /obj/item/clothing/head/beret/aqua
 	name = "teal beret"
 	icon_state = "beret_aq"
+
+/obj/item/clothing/head/beret/red/sec
+	name = "old security beret"
+	desc = "An old beret for station security forces. Popular fashion statement recently."
+	icon_state = "beret_rd"
+
+/obj/item/clothing/head/beret/red/solcom
+	name = "SOLCOM Command beret"
+	desc = "A sharp beret with the insignia of the United Solar Conglomerate Combined Operations Mandate."
+	icon_state = "beret_rd"
+
+/obj/item/clothing/head/beret/black/solcom
+	name = "SOLCOM beret"
+	desc = "A sharp beret with the insignia of the United Solar Conglomerate Combined Operations Mandate."
+	icon_state = "beret_bk"
+
+/obj/item/clothing/head/beret/sec
+	name = "PCRC beret"
+	desc = "An stylish beret for station security forces."
+	icon_state = "beret_bl"
+
+/obj/item/clothing/head/beret/white/medic
+	name = "medic beret"
+	desc = "A worn white beret with a first responder patch."
+	icon_state = "beret_wh"
+
+/obj/item/clothing/head/beret/nt
+	name = "NanoTrasen beret"
+	desc = "An stylish beret for happy employees."
+	icon_state = "beret_bl"
+
+/obj/item/clothing/head/beret/red/syndicate
+	name = "Syndicate  beret"
+	desc = "A sharp beret with the insignia of the Freight Syndicate."
+	icon_state = "beret_rd"
+
+/obj/item/clothing/head/beret/black/syndicate
+	name = "Syndicate Command beret"
+	desc = "A sharp beret with the insignia of the Freight Syndicate Logistics Operations Command, SLOCOM."
+	icon_state = "beret_bk"

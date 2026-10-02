@@ -238,14 +238,14 @@ Actual weapons below
 	slot_flags = SLOT_BACK
 	caliber = CAL_SHOTGUN
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
-	load_method = SINGLE_CASING
+	load_method = SINGLE_CASING|SPEEDLOADER
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
 	fire_sound = 'sound/weapons/guns/fire/shotgunp_fire.ogg'
 	bulletinsert_sound = 'sound/weapons/guns/interact/shotgun_insert.ogg'
 	matter = list(MATERIAL_PLASTEEL = 20, MATERIAL_PLASTIC = 5)
 	price_tag = 8000
-	damage_multiplier = 0.9
-	penetration_multiplier = 0.5
+	damage_multiplier = 1
+	penetration_multiplier = 0.8
 	init_recoil = RIFLE_RECOIL(2.8)
 	bolt_open_sound = 'sound/weapons/guns/interact/rifle_boltback.ogg'
 	gun_parts = list(/obj/item/part/gun = 4, /obj/item/part/gun/modular/grip/black = 1, /obj/item/part/gun/modular/mechanism/shotgun = 1, /obj/item/part/gun/modular/barrel/shotgun = 1)

@@ -75,7 +75,7 @@
 
 /datum/perk/vagabond
 	name = "Lowly"
-	desc = "You're used to see the worst sight the world has to offer. Your mind feels more resistant. \
+	desc = "You're used to seeing the worst sight the world has to offer. Your mind feels more resistant. \
 			This perk reduces the total sanity damage you can take from what is happening around you."
 	icon_state = "vagabond" // https://game-icons.net/1x1/lorc/eye-shield.html
 
@@ -127,7 +127,7 @@
 		if(stash.stash_location)
 			choices += CHOICE_STASHPAPER
 	// Let's see if an additional language is feasible. If the user has them all already somehow, we aren't gonna choose this.
-	var/list/valid_languages = list(LANGUAGE_CYRILLIC, LANGUAGE_SERBIAN, LANGUAGE_GERMAN, LANGUAGE_NEOHONGO, LANGUAGE_LATIN) // Not static, because we're gonna remove languages already known by the user
+	var/list/valid_languages = list(LANGUAGE_CYRILLIC, LANGUAGE_SERBIAN, LANGUAGE_GERMAN, LANGUAGE_NEOHONGO, LANGUAGE_LATIN, LANGUAGE_GAELTALK) // Not static, because we're gonna remove languages already known by the user
 	for(var/l in valid_languages)
 		var/datum/language/L = all_languages[l]
 		if(L in holder.languages)

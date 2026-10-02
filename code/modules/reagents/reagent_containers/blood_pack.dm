@@ -17,6 +17,7 @@
 	filling_states = "25;50;75;100"
 	bad_type = /obj/item/reagent_containers/blood
 	var/blood_type
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
 
 /obj/item/reagent_containers/blood/Initialize()
 	. = ..()

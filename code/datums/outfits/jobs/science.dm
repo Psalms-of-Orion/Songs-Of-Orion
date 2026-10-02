@@ -19,7 +19,7 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/hro
 	pda_type = /obj/item/modular_computer/pda/heads/rd
 	backpack_contents = list(/obj/item/oddity/secdocs = 1, /obj/item/gun/projectile/selfload/moebius = 1, /obj/item/ammo_magazine/pistol/rubber = 2)
-	l_pocket = /obj/item/card/keycard/hr/level_2
+	l_pocket = /obj/item/card/keycard/level_2/hr
 
 /decl/hierarchy/outfit/job/science/scientist
 	name = OUTFIT_JOB_NAME("HR Biotechnician")

@@ -5,6 +5,13 @@
 	slot = slot_glasses
 	sort_category = "Glasses and Eyewear"
 
+/datum/gear/eyes/thin
+	display_name = "Glasses, thin prescription"
+	path = /obj/item/clothing/glasses/regular/thin
+	slot = slot_glasses
+	sort_category = "Glasses and Eyewear"
+	cost = 2
+
 /datum/gear/eyes/eyepatch
 	display_name = "eyepatch"
 	path = /obj/item/clothing/glasses/eyepatch
