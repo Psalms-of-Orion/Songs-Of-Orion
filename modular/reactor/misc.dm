@@ -26,7 +26,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	force = WEAPON_FORCE_PAINFUL
 	throwforce = WEAPON_FORCE_WEAK
-	hitsound = 'sound/weapons/melee/blunthit.ogg'
+	hitsound = "blunt_metal"
 	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 	dropped_sound_volume = 20
@@ -98,7 +98,7 @@
 	force = WEAPON_FORCE_PAINFUL //heavy metal rod
 	throwforce = WEAPON_FORCE_PAINFUL //NUCLEAR JAVELIN
 	tool_qualities = list(QUALITY_CAUTERIZING = 10) //Unfortunately cannot be a variable of rod life
-	hitsound = 'sound/weapons/melee/blunthit.ogg'
+	hitsound = "blunt_metal"
 	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 	dropped_sound_volume = 20
