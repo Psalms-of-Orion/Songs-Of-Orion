@@ -1,6 +1,6 @@
 // Blunt
 /datum/component/internal_wound/organic/eyes_blunt
-	treatments_item = list(/obj/item/stack/medical/bruise/advanced = 1)
+	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 1, /obj/item/stack/medical/bruise/advanced = 1)
 	treatments_tool = list(QUALITY_CLAMPING = FAILCHANCE_HARD)
 	treatments_chem = list(CE_EYEHEAL = 1)
 	severity = 0
@@ -21,7 +21,7 @@
 // Sharp
 
 /datum/component/internal_wound/organic/eyes_sharp
-	treatments_item = list(/obj/item/stack/medical/bruise/advanced = 1)
+	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 1, /obj/item/stack/medical/bruise/advanced = 1)
 	treatments_tool = list(QUALITY_LASER_CUTTING = FAILCHANCE_HARD)
 	treatments_chem = list(CE_EYEHEAL = 1)
 	severity = 0
@@ -41,7 +41,7 @@
 
 // Edge
 /datum/component/internal_wound/organic/eyes_edge
-	treatments_item = list(/obj/item/stack/medical/bruise/advanced = 1)
+	treatments_item = list(/obj/item/stack/medical/advanced/bruise_pack = 1, /obj/item/stack/medical/bruise/advanced = 1)
 	treatments_tool = list(QUALITY_CAUTERIZING = FAILCHANCE_HARD)
 	treatments_chem = list(CE_EYEHEAL = 1)
 	severity = 0
@@ -61,7 +61,7 @@
 // Burn
 
 /datum/component/internal_wound/organic/eyes_burn
-	treatments_item = list(/obj/item/stack/medical/burn = 1, /obj/item/stack/medical/ointment = 3)
+	treatments_item = list(/obj/item/stack/medical/advanced/ointment = 1, /obj/item/stack/medical/burn = 1, /obj/item/stack/medical/ointment = 3)
 	treatments_tool = list(QUALITY_LASER_CUTTING = FAILCHANCE_HARD)
 	treatments_chem = list(CE_EYEHEAL = 1)
 	scar = /datum/component/internal_wound/organic/necrosis_start
@@ -93,7 +93,7 @@
 
 // Tox (toxins)
 /datum/component/internal_wound/organic/eyes_poisoning
-	treatments_item = list(/obj/item/stack/medical/burn = 1, /obj/item/stack/medical/ointment = 3)
+	treatments_item = list(/obj/item/stack/medical/advanced/ointment = 1, /obj/item/stack/medical/burn = 1, /obj/item/stack/medical/ointment = 3)
 	treatments_tool = list(QUALITY_CUTTING = FAILCHANCE_HARD)
 	treatments_chem = list(CE_ANTITOX = 2)
 	severity = 0

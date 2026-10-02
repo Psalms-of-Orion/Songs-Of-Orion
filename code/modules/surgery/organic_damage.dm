@@ -189,6 +189,8 @@
 
 /datum/surgery_step/fix_brute/proc/get_tool_name(obj/item/stack/tool)
 	var/tool_name = "\the [tool]"
+	if (istype(tool, /obj/item/stack/medical/advanced/bruise_pack))
+		tool_name = "regenerative membrane"
 	if (istype(tool, /obj/item/stack/medical/bruise/advanced))
 		tool_name = "regenerative membrane"
 	if (istype(tool, /obj/item/stack/medical/bruise))
