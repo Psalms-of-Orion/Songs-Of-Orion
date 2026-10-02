@@ -328,13 +328,13 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 /obj/item/stack/medical/advanced
 	bad_type = /obj/item/stack/medical/advanced
 	spawn_tags = SPAWN_TAG_MEDICINE_ADVANCED
-
+	w_class = ITEM_SIZE_NORMAL
 /obj/item/stack/medical/advanced/bruise_pack
-	name = "advanced trauma kit"
+	name = "trauma kit"
 	singular_name = "advanced trauma kit"
-	desc = "An advanced trauma kit for severe injuries."
+	desc = "An advanced self-contained trauma kit for severe injuries."
 	icon_state = "traumakit"
-	heal_brute = 8
+	heal_brute = 10
 	origin_tech = list(TECH_BIO = 2)
 	automatic_charge_overlays = TRUE
 	consumable = FALSE	// Will the stack disappear entirely once the amount is used up?
@@ -342,6 +342,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	preloaded_reagents = list("tricordrazine" = 1, "paracetamol" = 1)
 	rarity_value = 10
 	bad_type = /obj/item/stack/medical/advanced/bruise_pack
+
 /obj/item/stack/medical/advanced/bruise_pack/attack(mob/living/carbon/M, mob/living/user)
 	if(..())
 		return 1
@@ -432,11 +433,11 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 			to_chat(user, SPAN_NOTICE("The [affecting.name] is cut open, you'll need more than a bandage!"))
 
 /obj/item/stack/medical/advanced/ointment
-	name = "advanced burn kit"
-	singular_name = "advanced burn kit"
-	desc = "An advanced treatment kit for severe burns."
+	name = "burn kit"
+	singular_name = "burn kit"
+	desc = "An advanced self-contained treatment kit for severe burns."
 	icon_state = "burnkit"
-	heal_burn = 8
+	heal_burn = 10
 	origin_tech = list(TECH_BIO = 2)
 	automatic_charge_overlays = TRUE
 	consumable = FALSE	// Will the stack disappear entirely once the amount is used up?
