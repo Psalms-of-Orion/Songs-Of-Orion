@@ -1,4 +1,4 @@
-/* ==================
+ /* ==================
 For simplicity sake, the filepaths are up here as these are really commonly needed to fill out boxes etc.
 
 /obj/item/stack/medical/bruise - Basic bandaids for bruises
@@ -254,6 +254,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	singular_name = "treatment"
 	icon_state = "ointment"
 	heal_burn = 4
+	heal_brute = 2
 	origin_tech = list(TECH_BIO = 1)
 	preloaded_reagents = list("silicon" = 1, "carbon" = 1, "angelsbalm" = 2)
 	rarity_value = 5
@@ -1008,6 +1009,8 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	consumable = TRUE
 	amount = 8
 	max_amount = 8
+	splittable = FALSE
+
 /obj/item/stack/medical/suture/update_icon()
 	icon_state = "[initial(icon_state)][amount]"
 	..()
@@ -1140,6 +1143,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	tool_qualities = list(QUALITY_CAUTERIZING = 10)
 	amount = 12
 	max_amount = 12
+	splittable = FALSE
 
 /obj/item/stack/medical/stapler/update_icon()
 	icon_state = "[initial(icon_state)][amount]"
