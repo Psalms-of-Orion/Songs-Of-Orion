@@ -3,6 +3,7 @@
 /datum/surgery_step/fix_organ
 	target_organ_type = /obj/item/organ/internal
 	allowed_tools = list(
+		/obj/item/stack/medical/advanced/bruise_pack = 100,
 		/obj/item/stack/medical/bruise/advanced = 90,
 		/obj/item/stack/medical/suture/standard = 75,
 		/obj/item/stack/medical/stapler = 90,
@@ -18,6 +19,8 @@
 
 /datum/surgery_step/fix_organ/proc/get_tool_name(obj/item/stack/tool)
 	var/tool_name = "\the [tool]"
+	if (istype(tool, /obj/item/stack/medical/advanced/bruise_pack))
+		tool_name = "regenerative membrane"
 	if (istype(tool, /obj/item/stack/medical/bruise/advanced))
 		tool_name = "regenerative membrane"
 	if (istype(tool, /obj/item/stack/medical/bruise))
@@ -170,6 +173,7 @@
 
 /datum/surgery_step/fix_brute
 	allowed_tools = list(
+		/obj/item/stack/medical/advanced/bruise_pack = 100,
 		/obj/item/stack/medical/bruise/advanced = 100,
 		/obj/item/stack/medical/suture/standard = 75,
 		/obj/item/stack/medical/stapler = 100,
@@ -255,6 +259,7 @@
 
 /datum/surgery_step/fix_burn
 		allowed_tools = list(
+			/obj/item/stack/medical/advanced/ointment = 100,
 			/obj/item/stack/medical/burn = 100,
 			/obj/item/stack/medical/ointment = 20,
 			/obj/item/stack/medical/advanced/ointment/nt = 100,
@@ -272,6 +277,8 @@
 	if (istype(tool, /obj/item/stack/medical/ointment))
 		tool_name = "medicated cream"
 	if (istype(tool, /obj/item/stack/medical/advanced/ointment/nt))
+		tool_name = "regenerative membrane"
+	if (istype(tool, /obj/item/stack/medical/advanced/ointment))
 		tool_name = "regenerative membrane"
 	return tool_name
 
