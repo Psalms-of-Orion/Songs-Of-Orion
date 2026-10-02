@@ -46,7 +46,7 @@
 	name = "decking"
 	icon_base = "tile"
 	icon = 'modular/turfs/floors/icons/tiles.dmi'
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion
 	footstep_sound = "floor"
 
 /turf/floor/tiled/orion
@@ -59,7 +59,7 @@
 /decl/flooring/tiling/orion/tile2
 	name = "decking"
 	icon_base = "tile2"
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion/tile2
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST
@@ -74,7 +74,7 @@
 /decl/flooring/tiling/orion/ribbed
 	name = "decking"
 	icon_base = "ribbed"
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion/ribbed
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST
@@ -89,7 +89,7 @@
 /decl/flooring/tiling/orion/panel
 	name = "decking"
 	icon_base = "panel"
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion/panel
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST
@@ -104,7 +104,7 @@
 /decl/flooring/tiling/orion/fan
 	name = "decking"
 	icon_base = "tech"
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion/tech
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST
@@ -119,7 +119,7 @@
 /decl/flooring/tiling/orion/hazard
 	name = "decking"
 	icon_base = "hazard"
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion/hazard
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST
@@ -134,7 +134,7 @@
 /decl/flooring/tiling/orion/hazard/ribbed
 	name = "decking"
 	icon_base = "h_ribbed"
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion/h_ribbed
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST
@@ -148,7 +148,7 @@
 /decl/flooring/tiling/orion/hazard/panel
 	name = "decking"
 	icon_base = "h_panel"
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion/h_panel
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST
@@ -162,7 +162,7 @@
 /decl/flooring/tiling/orion/hazard/fan
 	name = "decking"
 	icon_base = "h_tech"
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/floor/orion/h_tech
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST
@@ -196,7 +196,7 @@
 	name = "decking"
 	icon_base = "techfloor"
 	icon = 'modular/turfs/floors/icons/tech.dmi'
-	build_type = /obj/item/stack/tile/floor/steel
+	build_type = /obj/item/stack/tile/orion/wood
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST

@@ -642,7 +642,7 @@ var/global/list/robot_modules = list(
 	PS.synths = list(plastic)
 	src.modules += PS
 
-	var/obj/item/stack/tile/wood/cyborg/FWT = new (src)
+	var/obj/item/stack/tile/orion/wood/cyborg/FWT = new (src)
 	FWT.synths = list(wood)
 	src.modules += FWT
 

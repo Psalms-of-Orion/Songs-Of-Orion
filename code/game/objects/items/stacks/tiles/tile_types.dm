@@ -155,6 +155,15 @@
 	spawn_frequency = 0
 
 	var/list/cyborg_floor = list(
+
+		"Astra decking" = /obj/item/stack/tile/floor/orion,
+		"Astra alt decking" = /obj/item/stack/tile/floor/orion/tile2,
+		"Astra ribbed decking" = /obj/item/stack/tile/floor/orion/ribbed,
+		"Astra panel decking" = /obj/item/stack/tile/floor/orion/panel,
+		"Astra tech decking" = /obj/item/stack/tile/floor/orion/tech,
+		"Astra hazard decking" = /obj/item/stack/tile/floor/orion/hazard,
+		"Astra hazard panel decking" = /obj/item/stack/tile/floor/orion/h_panel,
+		"Astra hazard ribbed decking" = /obj/item/stack/tile/floor/orion/h_ribbed,
 		"steel techfloor" = /obj/item/stack/tile/floor/steel/techfloor,
 		"gray platform" =  /obj/item/stack/tile/floor/steel/gray_platform,
 		"cafe floor tile" = /obj/item/stack/tile/floor/cafe,
@@ -524,3 +533,69 @@
 	name = "one star floor tile"
 	singular_name = "one star floor tile"
 	icon_state = "tile_derelict4"
+
+////ORION/ASTRA
+/obj/item/stack/tile/orion/wood
+	name = "wood floor tile"
+	singular_name = "wood floor tile"
+	desc = "An easy to fit wooden floor tile."
+	icon_state = "tile_wood"
+	force = WEAPON_FORCE_NORMAL
+	throwforce = WEAPON_FORCE_NORMAL
+	flags = 0
+
+/obj/item/stack/tile/orion/wood/full
+	amount = 60
+	dropped_sound = 'sound/items/drop_sounds/woodweapon.ogg'
+
+/obj/item/stack/tile/orion/wood/cyborg
+	name = "wood floor tile synthesizer"
+	desc = "A device that makes wood floor tiles."
+	uses_charge = 1
+	charge_costs = list(250)
+	stacktype = /obj/item/stack/tile/orion/wood
+	build_type = /obj/item/stack/tile/orion/wood
+	spawn_frequency = 0
+
+/obj/item/stack/tile/floor/orion
+	name = "decking"
+	singular_name = "floor tile"
+	desc = "Could work as a pretty decent throwing weapon."
+	icon_state = "tile"
+	force = WEAPON_FORCE_NORMAL
+	throwforce = WEAPON_FORCE_PAINFUL
+	matter = list(MATERIAL_STEEL = 1)
+	flags = CONDUCT
+
+/obj/item/stack/tile/floor/orion/tile2
+	name = "decking"
+	singular_name = "floor tile"
+	icon_state = "tile2"
+
+/obj/item/stack/tile/floor/orion/hazard
+	name = "hazard decking"
+	icon_state = "hazard"
+
+/obj/item/stack/tile/floor/orion/ribbed
+	name = "ribbed decking"
+	icon_state = "ribbed"
+
+/obj/item/stack/tile/floor/orion/h_ribbed
+	name = "ribbed hazard decking"
+	icon_state = "h_ribbed"
+
+/obj/item/stack/tile/floor/orion/tech
+	name = "technical decking"
+	icon_state = "tech"
+
+/obj/item/stack/tile/floor/orion/h_tech
+	name = "technical hazard decking"
+	icon_state = "h_tech"
+
+/obj/item/stack/tile/floor/orion/panel
+	name = "panel decking"
+	icon_state = "panel"
+
+/obj/item/stack/tile/floor/orion/h_panel
+	name = "hazard panel decking"
+	icon_state = "h_panel"
