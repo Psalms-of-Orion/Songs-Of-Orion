@@ -278,6 +278,7 @@
 /turf/floor/tiled/steel/danger,
 /area/eris/engineering/atmoscontrol)
 "alb" = (
+/obj/structure/scrap_spawner/cloth/large,
 /turf/floor/tiled/steel/brown_platform,
 /area/eris/crew_quarters/sleep/cryo)
 "alf" = (
@@ -3245,9 +3246,6 @@
 /turf/floor/reinforced,
 /area/eris/engineering/workshop)
 "cJL" = (
-/obj/structure/table/rack/shelf{
-	pixel_y = 12
-	},
 /obj/spawner/material/resources/low_chance,
 /obj/spawner/material/resources/low_chance,
 /obj/spawner/material/resources/low_chance,
@@ -3256,6 +3254,9 @@
 	default_files = list(/datum/computer_file/program/trade);
 	icon_state = "guild";
 	name = "Asters Trade Program"
+	},
+/obj/structure/closet/secure_closet/reinforced/astra/locker/cargo{
+	pixel_y = 12
 	},
 /turf/floor/tiled/techmaint_cargo,
 /area/eris/quartermaster/hangarsupply)
@@ -4646,7 +4647,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
-/obj/item/storage/case/fuelrod,
+/obj/item/storage/case/fuelrod/uranium,
 /turf/floor/reinforced/orion/reactor,
 /area/eris/engineering/engine_room)
 "dRb" = (
@@ -4938,6 +4939,7 @@
 	name = "North APC";
 	pixel_y = 28
 	},
+/obj/structure/scrap_spawner/cloth/large,
 /turf/floor/tiled/steel/brown_platform,
 /area/eris/crew_quarters/sleep/cryo)
 "ebV" = (
@@ -5932,7 +5934,9 @@
 /turf/floor/reinforced,
 /area/eris/engineering/storage)
 "eMe" = (
-/obj/structure/closet/astra/emcloset,
+/obj/structure/closet/astra/emcloset{
+	pixel_y = 12
+	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
@@ -7885,7 +7889,8 @@
 /obj/structure/multiz/ladder/locked{
 	pixel_y = 3;
 	id = "hall1_top";
-	id_target = "maint2_bottom"
+	id_target = "maint2_bottom";
+	req_access = list(10)
 	},
 /turf/floor/reinforced,
 /area/eris/hallway/main)
@@ -10930,7 +10935,6 @@
 /turf/floor/reinforced,
 /area/eris/engineering/storage)
 "jqo" = (
-/obj/structure/scrap_spawner/cloth/large,
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/steel/brown_perforated,
 /area/eris/crew_quarters/sleep/cryo)
@@ -12784,7 +12788,8 @@
 "kYQ" = (
 /obj/structure/multiz/ladder/up/locked{
 	id = "maint3_bottom";
-	id_target = "dorm_top"
+	id_target = "dorm_top";
+	req_access = list(10)
 	},
 /turf/floor/plating/under,
 /area/eris/maintenance)
@@ -12900,7 +12905,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/spawner/mob/roaches/cluster/low_chance,
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/techmaint,
 /area/eris/engineering/foyer)
@@ -13996,7 +14000,8 @@
 "mfo" = (
 /obj/structure/multiz/ladder/up/locked{
 	id = "maint2_bottom";
-	id_target = "hall1_top"
+	id_target = "hall1_top";
+	req_access = list(10)
 	},
 /turf/floor/reinforced,
 /area/eris/maintenance)
@@ -14719,7 +14724,6 @@
 /turf/floor/tiled/white/techfloor_grid/doorway,
 /area/eris/hallway/main)
 "mON" = (
-/obj/spawner/mob/roaches/cluster/low_chance,
 /obj/effect/floor_decal/semiotic/large/vac/old,
 /obj/structure/cable/green{
 	d1 = 1;
@@ -17900,7 +17904,8 @@
 /area/eris/command/courtroom)
 "pCd" = (
 /obj/machinery/door/morgue{
-	dir = 2
+	dir = 2;
+	req_access = list(66)
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -18447,6 +18452,10 @@
 	pixel_y = 17
 	},
 /obj/item/trash/cigbutt/cigarbutt,
+/obj/item/reagent_containers/food/drinks/mug/white{
+	pixel_x = 4;
+	pixel_y = 12
+	},
 /turf/floor/tiled/white/brown_perforated,
 /area/eris/hallway/main{
 	name = "skybridge"
@@ -19654,7 +19663,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/spawner/mob/roaches/cluster/low_chance,
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/techmaint_perforated,
 /area/eris/engineering/foyer)
@@ -20550,37 +20558,6 @@
 /turf/floor/plating/under,
 /area/eris/engineering/engine_monitoring)
 "rGJ" = (
-/obj/item/reagent_containers/blood/AMinus{
-	pixel_x = -7;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/blood/APlus{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/blood/empty{
-	pixel_x = 1;
-	pixel_y = -4
-	},
-/obj/item/reagent_containers/blood/empty{
-	pixel_x = 1;
-	pixel_y = -4
-	},
-/obj/item/reagent_containers/blood/BMinus{
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/blood/BPlus{
-	pixel_x = 5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/blood/OMinus{
-	pixel_x = -5;
-	pixel_y = -1
-	},
-/obj/item/reagent_containers/blood/OPlus{
-	pixel_x = 4;
-	pixel_y = 2
-	},
 /obj/structure/table/rack/shelf,
 /turf/floor/tiled/white,
 /area/eris/medical/surgery)
@@ -23437,7 +23414,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/multiz/ladder/locked{
 	id = "dorm_top";
-	id_target = "maint3_bottom"
+	id_target = "maint3_bottom";
+	req_access = list(10)
 	},
 /turf/floor/tiled/steel/brown_perforated,
 /area/eris/crew_quarters/sleep/cryo)
@@ -26249,16 +26227,12 @@
 /turf/floor/tiled/techmaint_cargo,
 /area/eris/maintenance)
 "wtA" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/catwalk,
-/obj/spawner/mob/roaches/cluster/low_chance,
-/turf/floor/plating/under,
-/area/eris/engineering/foyer)
+/obj/item/storage/case/fuelrod,
+/turf/floor/tiled/steel/danger,
+/area/eris/engineering/atmoscontrol)
 "wtR" = (
 /obj/machinery/door/airlock/orion{
 	dir = 2
@@ -34508,7 +34482,7 @@ arg
 bwk
 lHF
 mzi
-edI
+wtA
 iev
 iGd
 clN
@@ -61256,7 +61230,7 @@ kQu
 mBX
 tiP
 lgX
-wtA
+lgX
 mgn
 nbg
 rrN
