@@ -256,7 +256,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	heal_burn = 4
 	heal_brute = 2
 	origin_tech = list(TECH_BIO = 1)
-	preloaded_reagents = list("silicon" = 1, "carbon" = 1, "angelsbalm" = 2)
+	preloaded_reagents = list("silicon" = 1, "carbon" = 1, "angelsbalm" = 3, "tricordrazine" = 2)
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
 	consumable = FALSE
@@ -441,7 +441,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	automatic_charge_overlays = TRUE
 	consumable = FALSE	// Will the stack disappear entirely once the amount is used up?
 	splittable = FALSE	// Is the stack capable of being splitted?
-	preloaded_reagents = list("dermaline" = 2)
+	preloaded_reagents = list("dermaline" = 2, "angelsbalm" = 3)
 	rarity_value = 10
 	bad_type = /obj/item/stack/medical/advanced/ointment
 
@@ -746,7 +746,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	origin_tech = list(TECH_BIO = 1)
 	heal_brute = 3
 	heal_burn = 1
-	preloaded_reagents = list("angelsbalm" = 2, "tricordrazine" = 1)
+	preloaded_reagents = list("angelsbalm" = 2, "tricordrazine" = 2)
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
 	consumable = FALSE
@@ -1001,7 +1001,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	icon_state = "suture"
 	origin_tech = list(TECH_BIO = 1)
 	heal_brute = 4
-	preloaded_reagents = list("tramadol" = 1, "ethanol" = 1)
+	preloaded_reagents = list("tricordrazine" = 1)
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
 	bad_type = /obj/item/stack/medical/bruise_pack
@@ -1133,7 +1133,7 @@ For simplicity sake, the filepaths are up here as these are really commonly need
 	icon_state = "stapler"
 	origin_tech = list(TECH_BIO = 1)
 	heal_brute = 8
-	preloaded_reagents = list("tramadol" = 1, "ethanol" = 1)
+	preloaded_reagents = list("tricordrazine" = 2)
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_MEDICINE_COMMON
 	bad_type = /obj/item/stack/medical/bruise_pack
