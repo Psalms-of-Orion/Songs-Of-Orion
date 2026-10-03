@@ -111,6 +111,22 @@
 	)
 	gear_tweaks += new /datum/gear_tweak/path(flannel)
 
+//CAMO
+
+/datum/gear/uniform/camo/color_presets
+	display_name = "Camo selection"
+	path = /obj/item/clothing/under/rank/security/camo
+	cost = 1
+
+/datum/gear/uniform/flannel/color_presets/New()
+	..()
+	var/camo = list(
+		"Urban"			=	/obj/item/clothing/under/rank/security/camo,
+		"Woodland, Dark"		=	/obj/item/clothing/under/rank/security/camo/woodland,
+		"Woodland, Faded"		=	/obj/item/clothing/under/rank/security/camo/woodland2,
+		"Arid"			=	/obj/item/clothing/under/rank/security/camo/arid
+	)
+	gear_tweaks += new /datum/gear_tweak/path(camo)
 
 //SILK BUTTON-UPS
 

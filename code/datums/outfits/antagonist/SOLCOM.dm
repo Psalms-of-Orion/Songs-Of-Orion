@@ -117,6 +117,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security/tac
 	id_slot = slot_wear_id
 	id_type = /obj/item/card/id/solcom/marine
+	uniform = /obj/item/clothing/under/rank/security/camo/mout
 
 /decl/hierarchy/outfit/antagonist/solcom/hecu/trooper
 	name = "HECU Trooper"
@@ -172,6 +173,7 @@
 
 /decl/hierarchy/outfit/antagonist/solcom/marine
 	name = "Solar Marine"
+	uniform = /obj/item/clothing/under/rank/security/camo/woodland
 	id_slot = slot_wear_id
 	id_type = /obj/item/card/id/solcom/marine
 	suit_store = /obj/item/storage/pouch/ammo/loaded/srifle/long
@@ -193,6 +195,7 @@
 	l_hand = /obj/item/ammo_magazine/srifle/hv
 	head = /obj/item/clothing/head/armor/bulletproof
 	backpack_contents = list(/obj/item/handcuffs = 1, /obj/item/tool/knife/tacknife = 1, /obj/item/storage/box/blast_rounds = 1, /obj/item/storage/box/teargas_rounds = 1, /obj/item/ammo_casing/grenade/emp = 2)
+	uniform = /obj/item/clothing/under/rank/security/camo/woodland2
 
 /decl/hierarchy/outfit/antagonist/solcom/marine/sarge
 	name = "Solar Marine Sergeant"
@@ -207,6 +210,7 @@
 	suit_store = /obj/item/storage/pouch/bandolier/grenade/frag
 	backpack_contents = list(/obj/item/tool/knife/tacknife = 1, /obj/item/grenade/smokebomb = 2, /obj/item/bodybag/cryobag/sealed = 1, /obj/item/ammo_magazine/ammobox/shotgun_small/beanbag = 1, /obj/item/ammo_magazine/ammobox/shotgun_small/buckshot = 1, /obj/item/clothing/accessory/armband = 1, /obj/item/plastique = 2, /obj/item/clothing/head/armor/bulletproof = 1)
 	l_ear = /obj/item/device/radio/headset/military/commander
+	uniform = /obj/item/clothing/under/rank/security/camo/woodland2
 
 /decl/hierarchy/outfit/antagonist/solcom/marine/medic
 	name = "Solar Corpsman"
@@ -218,6 +222,7 @@
 	belt = /obj/item/storage/pouch/ammo/loaded/smg
 	id_slot = slot_wear_id
 	id_type = /obj/item/card/id/solcom/marine_corpsman
+	uniform = /obj/item/clothing/under/rank/security/camo/woodland
 
 //Solar Marine VBSS/ODST team
 
