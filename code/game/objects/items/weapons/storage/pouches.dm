@@ -22,6 +22,10 @@
 	var/sliding_behavior = FALSE
 	var/show_above_suit = 1
 
+/obj/item/storage/pouch/Initialize()
+	..()
+	update_icon()
+
 /obj/item/storage/pouch/verb/toggle_slide()
 	set name = "Toggle Slide"
 	set desc = "Toggle the behavior of last item in [src] \"sliding\" into your hand."
@@ -430,7 +434,7 @@
 	if(contents.len)
 		overlays += image('icons/inventory/pockets/icon.dmi', "[icon_state]_[contents.len]")
 		icon_state = "[initial(icon_state)]"
-		update_wear_icon()
+		src.update_wear_icon()
 
 /obj/item/storage/pouch/bandolier/attack_self(mob/living/user)
 	var/list/options = list()
