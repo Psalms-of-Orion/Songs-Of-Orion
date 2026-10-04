@@ -68,25 +68,6 @@
 	)
 
 
-/obj/item/clothing/suit/armor/vest/stab
-	name = "stab vest"
-	desc = "A basic vest that provides the minimum amount of stab protection to count as armor."
-	icon_state = "stab"
-	item_state = "stab"
-	armor = list(
-		melee = 13,//upgraded to mildly melee resistant
-		bullet = 6,
-		energy = 10,
-		bomb = 25,
-		bio = 0,
-		rad = 0
-	)
-	matter = list(
-		MATERIAL_PLASTIC = 4,
-		MATERIAL_STEEL = 4,
-		MATERIAL_PLASTEEL = 1,
-	)
-
 /obj/item/clothing/suit/armor/vest/full
 	name = "full armor"
 	desc = "A generic armor vest, but with shoulderpads and knee pads included to cover all parts of the body. Not designed for serious operations."
@@ -125,6 +106,14 @@
 	icon_state = "stab"
 	var/icon_open = "stab_open"
 	var/icon_closed = "stab"
+	armor = list(
+		melee = 13,//upgraded to mildly melee resistant
+		bullet = 6,
+		energy = 10,
+		bomb = 25,
+		bio = 0,
+		rad = 0
+	)
 
 /obj/item/clothing/suit/armor/vest/toggle/verb/toggle()
 	set name = "Toggle Vest Buttons"
