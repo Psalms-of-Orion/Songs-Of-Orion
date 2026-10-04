@@ -13,6 +13,7 @@
 	style_coverage = COVERS_MOUTH
 	style = STYLE_NEG_LOW
 	matter = list(MATERIAL_PLASTIC = 1)
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
 
 /obj/item/clothing/mask/breath/proc/adjust_mask(mob/user)
 	if(!usr.incapacitated())
@@ -21,7 +22,7 @@
 			gas_transfer_coefficient = 1
 			body_parts_covered = body_parts_covered & ~FACE
 			item_flags = item_flags & ~AIRTIGHT
-			icon_state = "pilotdowm"
+			icon_state = "pilotdown"
 			to_chat(user, "Your mask is now hanging on your neck.")
 		else
 			gas_transfer_coefficient = initial(gas_transfer_coefficient)

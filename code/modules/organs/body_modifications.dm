@@ -111,7 +111,7 @@ var/global/list/modifications_types = list(
 	desc = "Simple, brutal and reliable prosthesis"
 	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_CHEST, BP_HEAD)
 	replace_limb = /obj/item/organ/external/robotic
-	icon = 'icons/mob/human_races/cyberlimbs/generic.dmi'
+	icon = 'modular/icons/astra_limbs/astra.dmi'
 	nature = MODIFICATION_SILICON
 	allow_nt = FALSE
 
@@ -126,7 +126,7 @@ var/global/list/modifications_types = list(
 /datum/body_modification/limb/prosthesis/get_mob_icon(organ, color, gender, species)
 	return new/icon(icon, "[organ][gender == FEMALE ? "_f" : "_m"]")
 
-/datum/body_modification/limb/prosthesis/asters
+/*datum/body_modification/limb/prosthesis/asters
 	id = "prosthesis_asters"
 	replace_limb = /obj/item/organ/external/robotic/asters
 	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_CHEST, BP_GROIN, BP_HEAD)
@@ -160,6 +160,44 @@ var/global/list/modifications_types = list(
 	replace_limb = /obj/item/organ/external/robotic/makeshift
 	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_CHEST, BP_GROIN)
 	icon = 'icons/mob/human_races/cyberlimbs/ghetto.dmi'
+*/
+
+/datum/body_modification/limb/prosthesis/sara
+	id = "SARA system"
+	replace_limb = /obj/item/organ/external/robotic/sara
+	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_CHEST, BP_GROIN, BP_HEAD)
+	icon = 'modular/icons/astra_limbs/sara.dmi'
+
+/datum/body_modification/limb/prosthesis/ruby
+	id = "Reinforced"
+	replace_limb = /obj/item/organ/external/robotic/reinforced
+	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_CHEST, BP_GROIN, BP_HEAD)
+	icon = 'modular/icons/astra_limbs/industrial.dmi'
+
+/datum/body_modification/limb/prosthesis/civil
+	id = "Reinforced Civil"
+	replace_limb = /obj/item/organ/external/robotic/civil
+	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_CHEST, BP_GROIN, BP_HEAD)
+	icon = 'modular/icons/astra_limbs/industrial_bl.dmi'
+
+/datum/body_modification/limb/prosthesis/engineer
+	id = "Reinforced Engineer"
+	replace_limb = /obj/item/organ/external/robotic/engineer
+	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_CHEST, BP_GROIN, BP_HEAD)
+	icon = 'modular/icons/astra_limbs/industrial_or.dmi'
+
+/datum/body_modification/limb/prosthesis/field
+	id = "Reinforced Field"
+	replace_limb = /obj/item/organ/external/robotic/field
+	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_CHEST, BP_GROIN, BP_HEAD)
+	icon = 'modular/icons/astra_limbs/industrial_gr.dmi'
+
+/datum/body_modification/limb/prosthesis/duty
+	id = "Reinforced Duty"
+	replace_limb = /obj/item/organ/external/robotic/duty
+	body_parts = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_CHEST, BP_GROIN, BP_HEAD)
+	icon = 'modular/icons/astra_limbs/industrial_rd.dmi'
+
 
 /datum/body_modification/limb/mutation/New()
 	short_name = "M: [name]"

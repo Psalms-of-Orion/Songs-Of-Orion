@@ -25,7 +25,7 @@
 /turf/wall/untinted/test
 	name = "test article wall"
 	desc = "Back stage walls, not for sore eyes."
-	icon_state = "reinforced_wall"
+	icon_state = "test_wall"
 	icon = 'modular/turfs/walls/icons/walls.dmi'
 	health = 600
 	max_health = 600
@@ -34,17 +34,6 @@
 	wall_style = "minimalistic"
 	wall_type = "test_wall"
 	simulated = FALSE
-
-
-
-/*
-//Maybe later?
-/turf/wall/untinted/orion_reinforced/padded
-	icon_state = "padded_wall"
-	name = "padded wall"
-	desc = "Lightly padded in case of unintented contact."
-	wall_type = "padded_wall"
-*/
 
 /turf/wall/untinted/orion_reinforced/psych
 	name = "padded reinforced wall"
@@ -64,7 +53,6 @@
 	max_health = 800
 	hardness = 100
 
-
 //Flimsy walls. Like space drywall.
 /turf/wall/untinted/orion/panel
 	icon_state = "panel_wall"
@@ -76,6 +64,13 @@
 	wall_type = "panel_wall"
 /turf/wall/untinted/orion/panel/get_matter()
 	return list(MATERIAL_PLASTIC = 5)
+
+/turf/wall/untinted/orion/panel/padded
+	icon_state = "padded_wall"
+	name = "padded wall"
+	desc = "Lightly padded in case of unintented contact."
+	wall_type = "padded_wall"
+
 
 //Decorated types
 
@@ -125,8 +120,6 @@
 /turf/wall/low/orion/padded/with_glass
 	icon_state = "padded_low_glass"
 	wall_type = "padded_low"
-
-/turf/wall/low/orion/with_glass
-	icon_state = "padded_low_glass"
-	wall_type = "padded_low"
 	window_prespawned_material = MATERIAL_GLASS
+
+

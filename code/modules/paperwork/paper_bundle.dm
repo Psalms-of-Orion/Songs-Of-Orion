@@ -12,6 +12,8 @@
 	attack_verb = list("bapped")
 	var/page = 1    // current page
 	var/list/pages = list()  // Ordered list of pages as they are to be displayed. Can be different order than src.contents.
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 
 /obj/item/paper_bundle/attackby(obj/item/W as obj, mob/user as mob)

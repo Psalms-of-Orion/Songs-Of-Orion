@@ -9,3 +9,5 @@
 	attack_verb = list("burnt")
 	tool_qualities = list(QUALITY_CAUTERIZING = 30)
 	spawn_tags = SPAWN_TAG_SURGERY_TOOL
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'

@@ -76,7 +76,7 @@
 	var/obj/item/cell/large/cell
 	var/chargelevel = 0.0005  // Cap for how fast APC cells charge, as a percentage-per-tick (0.01 means cellcharge is capped to 1% per second)
 	var/start_charge = 90				// initial cell charge %
-	var/cell_type = /obj/item/cell/large/high
+	var/cell_type = /obj/item/cell/large/astra/high
 	var/opened = 0 //0=closed, 1=opened, 2=cover removed
 	var/shorted = 0
 	var/lighting = 3

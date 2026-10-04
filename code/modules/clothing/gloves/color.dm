@@ -6,16 +6,18 @@
 	icon_state = "latex"
 	item_state = "lgloves"
 	bad_type = /obj/item/clothing/gloves/color
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/gloves/color/white
 	name = "white gloves"
 	desc = "These look pretty fancy."
 	icon_state = "latex"
 	item_state = "lgloves"
-
+	spawn_blacklisted = FALSE
 /obj/item/clothing/gloves/color/white/insulated // Stealthy insulated gloves for uplink
 	desc = "A pair of thick fancy gloves."
 	siemens_coefficient = 0
+	spawn_blacklisted = FALSE
 
 /obj/item/clothing/gloves/color/yellow
 	name = "yellow gloves"
@@ -23,6 +25,7 @@
 	desc = "A pair of gloves, they don't look special in any way, but seems familiar."
 	icon_state = "yellow"
 	item_state = "ygloves"
+	spawn_blacklisted = FALSE
 
 /obj/item/clothing/gloves/color/orange
 	name = "orange gloves"
@@ -35,6 +38,7 @@
 	initial_name = "red gloves"
 	icon_state = "red"
 	item_state = "redgloves"
+	spawn_blacklisted = FALSE
 
 /obj/item/clothing/gloves/color/rainbow
 	name = "rainbow gloves"
@@ -45,8 +49,9 @@
 /obj/item/clothing/gloves/color/blue
 	name = "blue gloves"
 	initial_name = "blue gloves"
-	icon_state = "blue"
+	icon_state = "nitrile"
 	item_state = "bluegloves"
+	spawn_blacklisted = FALSE
 
 /obj/item/clothing/gloves/color/purple
 	name = "purple gloves"
@@ -77,3 +82,4 @@
 	initial_name = "brown gloves"
 	icon_state = "brown"
 	item_state = "browngloves"
+	spawn_blacklisted = FALSE

@@ -11,7 +11,7 @@
 	var/obj/item/implant/implant
 	spawn_tags = SPAWN_TAG_JUNK
 	rarity_value = 6
-
+	dropped_sound = 'sound/items/drop_sounds/gun.ogg'
 /obj/item/implanter/New()
 	..()
 	if(ispath(implant))
@@ -112,7 +112,7 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		affected = H.get_organ(user.targeted_organ)
-	
+
 		if(!affected)
 			to_chat(user, SPAN_WARNING("[M] is missing that body part."))
 			return
@@ -120,7 +120,7 @@
 		if(!(affected.organ_tag in mod.allowed_organs))
 			to_chat(user, SPAN_NOTICE("You cannot install the [mod] into the [affected]."))
 			return
-	
+
 		if(affected.module != null) //Probably not the most effective way to do this, but it works.
 			to_chat(user, SPAN_WARNING("[mod] cannot be installed into this [affected], as it's already occupied."))
 			return

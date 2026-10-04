@@ -7,7 +7,8 @@
 	matter = list(MATERIAL_BIOMATTER = 2)
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_JUNK
-
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 /obj/item/folder/blue
 	desc = "A blue folder."
 	icon_state = "folder_blue"

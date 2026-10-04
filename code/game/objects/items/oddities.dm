@@ -70,6 +70,8 @@
 	oddity_stats = list(
 		STAT_TGH = 10,
 	)
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/common/photo_eyes
 	name = "observer photo"
@@ -78,6 +80,8 @@
 	oddity_stats = list(
 		STAT_VIG = 10,
 	)
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 //Single stat, work stat (BIO, COG, and MEC)
 /obj/item/oddity/common/disk
@@ -87,6 +91,8 @@
 	oddity_stats = list(
 		STAT_MEC = 10,
 	)
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/common/book_unholy
 	name = "unholy book"
@@ -95,6 +101,8 @@
 	oddity_stats = list(
 		STAT_COG = 10,
 	)
+	dropped_sound = 'sound/items/drop_sounds/book_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/common/healthscanner
 	name = "odd health scanner"
@@ -104,6 +112,8 @@
 	oddity_stats = list(
 		STAT_BIO = 10,
 	)
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 //Double stat oddities, combat.
 /obj/item/oddity/common/coin
@@ -114,6 +124,8 @@
 		STAT_ROB = 6,
 		STAT_TGH = 6,
 	)
+	dropped_sound = 'sound/items/drop_sounds/ring.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 
 /obj/item/oddity/common/towel
@@ -125,6 +137,8 @@
 		STAT_TGH = 6,
 	)
 	rarity_value = 15
+	dropped_sound = 'sound/items/drop_sounds/clothing.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/common/book_bible
 	name = "old bible"
@@ -134,6 +148,8 @@
 		STAT_ROB = 6,
 		STAT_VIG = 6,
 	)
+	dropped_sound = 'sound/items/drop_sounds/book_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/common/old_money
 	name = "old money"
@@ -143,6 +159,8 @@
 		STAT_TGH = 6,
 		STAT_VIG = 6,
 	)
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 //Go to hell, Jimmy. But then, you're already there, aren't you?
 /obj/item/oddity/common/mouthwash
@@ -154,6 +172,8 @@
 		STAT_TGH = 4,
 		STAT_VIG = 4
 	)
+	dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 
 //Double stat, mixed
@@ -166,6 +186,8 @@
 		STAT_VIG = 7,
 	)
 	rarity_value = 17
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 /obj/item/oddity/common/photo_coridor
 	name = "surreal maint photo"
@@ -176,6 +198,8 @@
 		STAT_VIG = 7,
 	)
 	rarity_value = 17
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 /obj/item/oddity/common/photo_landscape
 	name = "alien landscape photo"
@@ -186,6 +210,8 @@
 		STAT_VIG = 7,
 	)
 	rarity_value = 17
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 /obj/item/oddity/common/old_radio
 	name = "old radio"
@@ -196,6 +222,8 @@
 		STAT_VIG = 9,
 	)
 	rarity_value = 23
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/effects/walkietalkie.ogg'
 
 /obj/item/oddity/common/mirror
 	name = "cracked mirror"
@@ -206,6 +234,8 @@
 		STAT_TGH = 5,
 	)
 	rarity_value = 9
+	dropped_sound = 'sound/items/drop_sounds/glass.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 //Double stat, work
 /obj/item/oddity/common/old_pda
@@ -218,6 +248,8 @@
 		STAT_BIO = 6,
 	)
 	rarity_value = 15
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/effects/walkietalkie.ogg'
 
 /obj/item/oddity/common/blueprint
 	name = "strange blueprint"
@@ -228,6 +260,8 @@
 		STAT_MEC = 7,
 	)
 	rarity_value = 15
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 /obj/item/oddity/common/device
 	name = "odd device"
@@ -238,6 +272,8 @@
 		STAT_MEC = 8,
 	)
 	rarity_value = 19
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 //Triple stat, combat
 /obj/item/oddity/common/old_knife
@@ -259,6 +295,8 @@
 		STAT_VIG = 6,
 	)
 	rarity_value = 22
+	dropped_sound = 'sound/items/drop_sounds/knife.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/common/teddy
 	name = "teddy bear"
@@ -270,6 +308,8 @@
 		STAT_VIG = 7,
 	)
 	rarity_value = 20
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	pickup_sound = 'sound/items/drop_sounds/plushie.ogg'
 
 /obj/item/oddity/common/book_eyes
 	name = "observer book"
@@ -304,6 +344,8 @@
 		STAT_TGH = 6,
 	)
 	rarity_value = 16
+	dropped_sound = 'sound/items/drop_sounds/book_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/common/paper_crumpled
 	name = "torn-out page"
@@ -315,6 +357,8 @@
 		STAT_TGH = 6,
 	)
 	rarity_value = 16
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 //Triple stat, work
 /obj/item/oddity/common/old_newspaper
@@ -327,6 +371,8 @@
 		STAT_BIO = 6,
 	)
 	rarity_value = 18
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 /obj/item/oddity/common/old_newspaper/attack_self(mob/user)
 	zoom(user,8, 8)
@@ -342,13 +388,16 @@
 		STAT_BIO = 8,
 	)
 	rarity_value = 27
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 //Oddity generated from Technomancer's Techno-Tribalism Enforcer
 /obj/item/oddity/techno
 	name = "Unknown technological part"
 	desc = "Technological part created by Techno-Tribalism Enforcer."
 	icon_state = "techno_part1"
-
+	dropped_sound = 'sound/items/drop_sounds/scrap.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/oddity/techno/Initialize()
 	icon_state = "techno_part[rand(1,7)]"
 	.=..()
@@ -371,6 +420,8 @@
 	var/cooldown
 	var/entropy_value = 5
 	var/blink_range = 8
+	dropped_sound = 'sound/items/drop_sounds/ring.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/broken_necklace/New()
 	..()
@@ -476,7 +527,8 @@
 	desc = "You shouldn't be seeing this. Report to your nearest reeducation camp comrade (report it on discord)."
 	spawn_blacklisted = TRUE
 	bad_type = /obj/item/oddity/hivemind
-
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/machines/robots/robot_talk_heavy3.ogg'
 /obj/item/oddity/hivemind/old_radio
 	name = "warped radio"
 	desc = "An old radio covered in growths. You can hear nothing from it, nothing but the sound of machinery and souls begging for release."
@@ -541,6 +593,8 @@
 	)
 	var/produce_ready = TRUE
 	var/produce_next
+	dropped_sound = 'sound/items/drop_sounds/ring.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/oddity/pendant/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -581,6 +635,8 @@
 	spawn_frequency = 0
 	spawn_blacklisted = TRUE
 	w_class = ITEM_SIZE_TINY
+	dropped_sound = 'sound/items/drop_sounds/ring.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/golden_leaf/afterattack(obj/target, mob/user, proximity)
 	if(!proximity)
@@ -601,6 +657,8 @@
 	desc = "A cheerful mask of a cartoonish salesman."
 	icon_state = "big_shot"
 	item_state = "big_shot"
+	dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/rubber.ogg'
 
 
 	armor = list(
@@ -634,7 +692,8 @@
 		STAT_TGH = 4,
 		STAT_COG = 7
 	)
-
+	dropped_sound = 'sound/items/drop_sounds/paper_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 
 /obj/item/oddity/common/bearmath/attack_self(mob/living/carbon/human/user)
 	if(istype(user))
@@ -679,7 +738,8 @@
 		STAT_BIO = 3,
 		STAT_MEC = 3
 	)
-
+	dropped_sound = 'sound/items/drop_sounds/ring.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 	var/heads_stats = list(
 
 		STAT_VIG = 5,
@@ -749,7 +809,8 @@
 		STAT_TGH = 7,
 		STAT_VIG = 7
 	)
-
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 	rarity_value = 50
 
 /obj/item/oddity/common/anomazon_card/attack_self(mob/living/carbon/human/user)

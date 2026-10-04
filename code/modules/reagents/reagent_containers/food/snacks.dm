@@ -33,7 +33,8 @@
 	var/junk_food = FALSE //if TRUE, sanity gain per nutriment will be zero
 	var/cooked = FALSE // if TRUE, this food item will provide sanity_gain_per_bite and fulfill desire requirements
 	var/list/taste_tag = list(BLAND_FOOD)
-
+	dropped_sound = 'sound/items/drop_sounds/herb.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 	price_tag = 25
 
 /obj/item/reagent_containers/food/snacks/Initialize()

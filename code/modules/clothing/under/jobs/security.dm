@@ -176,7 +176,7 @@
 	item_state = "ba_suit"
 
 /obj/item/clothing/under/rank/security/red/skirt
-	name = "Ironhammer Operative's jumpskirt"
+	name = "old security skirt"
 	desc = "An old NanoTrassen Internal Security Division skirt."
 	icon_state = "sec_red_skirt"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
@@ -233,3 +233,74 @@
 	description_info = "SOLCOM Peacekeeper standard uniform. Recognized by everyone, everywhere."
 	icon_state = "bdu"
 	item_state = "bdu"
+
+/obj/item/clothing/under/rank/security/camo
+	name = "urban battle dress"
+	desc = "A T-pattern combat uniform."
+	description_info = "SOLCOM combat uniform, can be toggled to wear with just a tee-shirt."
+	icon_state = "mout"
+	item_state = "mout"
+	var/camo_type
+	var/camo_tee
+	bad_type = /obj/item/clothing/under/rank/security/camo
+
+/obj/item/clothing/under/rank/security/camo/attack_self(mob/living/user)
+	var/list/options = list()
+	options["With Blouse"] = list(camo_type)
+	options["With Tee-Shirt"] = list(camo_tee)
+
+	var/choice = input(user,"How do you want to wear this?") as null|anything in options
+	if(src && choice)
+		var/list/things_to_spawn = options[choice]
+		for(var/new_type in things_to_spawn)
+			var/atom/movable/AM = new new_type(get_turf(src))
+			if(istype(AM, /obj/item/clothing/under/rank/security/camo/))
+				to_chat(user, SPAN_NOTICE("You have chosen \the [AM]. Say hello to your new friend."))
+		qdel(src)
+
+/obj/item/clothing/under/rank/security/camo/tee
+	icon_state = "mout_open"
+
+/obj/item/clothing/under/rank/security/camo/mout
+	name = "urban battle dress"
+	desc = "A rare T-pattern urban combat uniform. MOUT, Military Operations in Urban Terrain."
+	icon_state = "mout"
+	item_state = "mout"
+	camo_type = /obj/item/clothing/under/rank/security/camo/mout
+	camo_tee = /obj/item/clothing/under/rank/security/camo/mout/tee
+
+/obj/item/clothing/under/rank/security/camo/mout/tee
+	icon_state = "mout_open"
+
+/obj/item/clothing/under/rank/security/camo/woodland
+	name = "battle dress"
+	desc = "A T-pattern combat uniform, the most common surplus in the galaxy."
+	icon_state = "woodland"
+	item_state = "woodland"
+	camo_type = /obj/item/clothing/under/rank/security/camo/woodland
+	camo_tee = /obj/item/clothing/under/rank/security/camo/woodland/tee
+
+/obj/item/clothing/under/rank/security/camo/woodland/tee
+	icon_state = "woodland_open"
+
+/obj/item/clothing/under/rank/security/camo/woodland2
+	name = "battle dress"
+	desc = "A T-pattern combat uniform, the most common surplus in the galaxy. This one is a little more faded."
+	icon_state = "woodland2"
+	camo_type = /obj/item/clothing/under/rank/security/camo/woodland
+	camo_tee = /obj/item/clothing/under/rank/security/camo/woodland/tee
+
+/obj/item/clothing/under/rank/security/camo/woodland2/tee
+	icon_state = "woodland2_open"
+
+
+/obj/item/clothing/under/rank/security/camo/arid
+	name = "battle dress"
+	desc = "A T-pattern hot climate combat uniform, popular on New Rome."
+	icon_state = "arid"
+	item_state = "arid"
+	camo_type = /obj/item/clothing/under/rank/security/camo/arid
+	camo_tee = /obj/item/clothing/under/rank/security/camo/arid/tee
+
+/obj/item/clothing/under/rank/security/camo/arid/tee
+	icon_state = "arid_open"

@@ -1,16 +1,30 @@
 /obj/machinery/nuclear_centrifuge
 	name = "nuclear centrifuge"
 	desc = "A device designed to refill spent nuclear fuel rods."
-	icon = './astra_centrifuge.dmi'
+	icon = 'modular/reactor/astra_centrifuge.dmi'
 	icon_state = "off"
 	anchored = TRUE
 	density = TRUE
-	bound_width = 64
-	bound_height = 64
+	power_channel = STATIC_EQUIP
+	use_power = IDLE_POWER_USE
+	idle_power_usage = 10
+	active_power_usage = 10000
+
 	var/obj/item/fuel_rod/fuel
 	var/obj/item/reagent_containers/container
 	var/active = FALSE
 	var/refill_rate = 10 // Amount of reagent used to refill every Process()
+	dir = SOUTH
+	var/width = 2
+
+/obj/machinery/nuclear_centrifuge/LateInitialize()
+	if(width > 1)
+		if(dir in list(SOUTH, WEST))
+			bound_width = width * world.icon_size
+			bound_height = world.icon_size
+		else
+			bound_width = world.icon_size
+			bound_height = width * world.icon_size
 
 /obj/machinery/nuclear_centrifuge/examine(mob/user)
 	. = ..()
@@ -59,12 +73,6 @@
 	..()
 	return
 
-/obj/machinery/nuclear_centrifuge/update_icon()
-	..()
-	if(active)
-		icon_state = "on"
-	else
-		icon_state = "off"
 
 /obj/machinery/nuclear_centrifuge/Destroy()
 	STOP_PROCESSING(SSmachines, src)
@@ -76,12 +84,12 @@
 		visible_message("[src] stops due to missing a fuel rod or reagent container.")
 		return
 
-	/*if(fuel.life >= initial(fuel.life))
+	if(fuel.life >= initial(fuel.life))
 		STOP_PROCESSING(SSmachines, src)
 		active = FALSE
 		update_icon()
 		visible_message("[src] stops as the fuel rod is fully refilled.")
-		return*/
+		return
 
 	// Determine the amount of reagent to use this tick with either the refill rate, the amount left to fill on the fuel rod, or the amount of reagent available, depending on which is smallest.
 	var/refill_amount = min(refill_rate, initial(fuel.life) - fuel.life, container.reagents.get_reagent_amount(fuel.refill_reagent))
@@ -94,16 +102,22 @@
 	if(container.reagents.remove_reagent(fuel.refill_reagent, refill_amount))
 		fuel.life = clamp(fuel.life + refill_amount, 0, initial(fuel.life))
 		fuel.name = initial(fuel.name)
+		playsound(src, 'sound/effects/beam.ogg', 60, 1)
+		PulseRadiation(src, rand(1,5), rand(1,8))
 
 /obj/machinery/nuclear_centrifuge/proc/start_working()
 	START_PROCESSING(SSmachines, src)
 	active = TRUE
 	update_icon()
+	playsound(src, 'sound/effects/lift_heavy_start.ogg', 60, 1)
+	set_power_use(ACTIVE_POWER_USE)
 
 /obj/machinery/nuclear_centrifuge/proc/stop_working()
 	STOP_PROCESSING(SSmachines, src)
 	active = FALSE
 	update_icon()
+	playsound(src, 'sound/effects/lift_heavy_stop.ogg', 60, 1)
+	set_power_use(IDLE_POWER_USE)
 
 /obj/machinery/nuclear_centrifuge/verb/eject_fuel()
 	set name = "Eject Fuel Rod"
@@ -115,9 +129,19 @@
 	to_chat(usr, SPAN_NOTICE("You remove [fuel] from [src]."))
 	fuel.loc = loc
 	fuel = null
+	playsound(loc, 'sound/machines/Custom_extout.ogg', 50, 1)
 
 	if(active)
 		stop_working()
+
+/obj/machinery/nuclear_centrifuge/AltClick(mob/user)
+	var/turf/T = get_turf(src)
+	if(T && user.TurfAdjacent(T))
+		if(user.incapacitated())
+			to_chat(user, SPAN_WARNING("You can't do that right now!"))
+			return
+		else
+			eject_fuel()
 
 /obj/machinery/nuclear_centrifuge/verb/eject_container()
 	set name = "Eject Reagent Container"
@@ -129,6 +153,17 @@
 	to_chat(usr, SPAN_NOTICE("You remove [container] from [src]."))
 	container.loc = loc
 	container = null
+	playsound(loc, 'sound/machines/Custom_extout.ogg', 50, 1)
 
 	if(active)
 		stop_working()
+
+/obj/machinery/nuclear_centrifuge/update_icon()
+	..()
+	if(active)
+		icon_state = "on"
+		set_light(l_range = 2, l_power = 2, l_color = COLOR_LIGHTING_GREEN_MACHINERY)
+	else
+		icon_state = "off"
+		set_light(l_range = 0, l_power = 0, l_color = COLOR_LIGHTING_GREEN_MACHINERY)
+

@@ -36,6 +36,8 @@
 	var/shield_integrity = 100
 	var/shield_difficulty = 60
 	style = STYLE_NEG_HIGH
+	dropped_sound = 'sound/items/drop_sounds/metalshield.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 /obj/item/shield/examine(mob/user, extra_description = "")
 	switch(get_block_chance(user))
@@ -154,7 +156,7 @@
 
 /obj/item/shield/buckler/handle_shield(mob/user)
 	. = ..()
-	if(.) playsound(user.loc, 'sound/weapons/Genhit.ogg', 50, 1)
+	if(.) playsound(src, pick('sound/weapons/shield/towershield (1).ogg', 'sound/weapons/shield/towershield (2).ogg', 'sound/weapons/shield/towershield (3).ogg',), 60, 0)
 
 /obj/item/shield/buckler/get_protected_area(mob/user)
 	var/list/p_area = list(BP_CHEST)
@@ -212,7 +214,7 @@
 
 /obj/item/shield/riot/handle_shield(mob/user)
 	. = ..()
-	if(.) playsound(user.loc, 'sound/weapons/shield/shieldmelee.ogg', 50, 1)
+	if(.) playsound(src, pick('sound/weapons/shield/metalshield (1).ogg', 'sound/weapons/shield/metalshield (2).ogg', 'sound/weapons/shield/metalshield (3).ogg',), 60, 0)
 
 /obj/item/shield/riot/get_block_chance(mob/user)
 	if(MOVING_QUICKLY(user))

@@ -87,7 +87,7 @@
 	species_restricted = null
 	w_class = ITEM_SIZE_SMALL
 	spawn_blacklisted = TRUE
-
+	pickup_sound = 'sound/items/drop_sounds/plushie.ogg'
 /obj/item/clothing/shoes/slippers_worn
 	name = "worn bunny slippers"
 	desc = "Fluffy..."

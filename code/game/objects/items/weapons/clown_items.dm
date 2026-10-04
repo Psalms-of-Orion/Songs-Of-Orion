@@ -33,6 +33,8 @@
 	matter = list(MATERIAL_BIOMATTER = 12)
 	spawn_tags = SPAWN_TAG_ITEM_CLOWN
 	price_tag = 120
+	dropped_sound = 'sound/misc/slip.ogg'
+	pickup_sound = 'sound/items/drop_sounds/rubber.ogg'
 
 /obj/item/soap/New()
 	..()
@@ -135,6 +137,8 @@
 	attack_verb = list("HONKED")
 	spawn_tags = SPAWN_TAG_ITEM_CLOWN
 	var/spam_flag = 0
+	dropped_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/bikehorn/New()
 	..()

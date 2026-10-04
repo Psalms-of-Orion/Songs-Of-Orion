@@ -94,25 +94,34 @@
 
 /datum/surgery_step/cauterize/begin_step(mob/living/user, obj/item/organ/external/organ, obj/item/tool)
 	user.visible_message(
-		SPAN_NOTICE("[user] begins to cauterize the incision on [organ.get_surgery_name()] with \the [tool]."),
-		SPAN_NOTICE("You begin to cauterize the incision on [organ.get_surgery_name()] with \the [tool].")
+		SPAN_NOTICE("[user] begins to close the incision on [organ.get_surgery_name()] with \the [tool]."),
+		SPAN_NOTICE("You begin to close the incision on [organ.get_surgery_name()] with \the [tool].")
 	)
-	organ.owner_custom_pain("Your [organ.name] is being burned!", 1)
+	organ.owner_custom_pain("Your [organ.name] is being torn!", 1)
+
+
+	if(istype(tool, /obj/item/stack/medical/suture/standard))
+		playsound(user.loc, 'sound/effects/sewflesh.ogg', rand(10, 50))
+	if(istype(tool, /obj/item/stack/medical/stapler))
+		playsound(user.loc, 'sound/effects/staple.ogg', rand(10, 50))
+	else
+		playsound(user.loc, 'sound/items/Welder.ogg', rand(10, 50))
+
 
 /datum/surgery_step/cauterize/end_step(mob/living/user, obj/item/organ/external/organ, obj/item/tool)
 	user.visible_message(
-		SPAN_NOTICE("[user] cauterizes the incision on [organ.get_surgery_name()] with \the [tool]."),
-		SPAN_NOTICE("You cauterize the incision on [organ.get_surgery_name()] with \the [tool].")
+		SPAN_NOTICE("[user] closes the incision on [organ.get_surgery_name()] with \the [tool]."),
+		SPAN_NOTICE("You close the incision on [organ.get_surgery_name()] with \the [tool].")
 	)
 	organ.open = 0
 	organ.diagnosed = FALSE
 
 /datum/surgery_step/cauterize/fail_step(mob/living/user, obj/item/organ/external/organ, obj/item/tool)
 	user.visible_message(
-		SPAN_WARNING("[user]'s hand slips, leaving a small burn on [organ.get_surgery_name()] with \the [tool]!"),
-		SPAN_WARNING("Your hand slips, leaving a small burn on [organ.get_surgery_name()] with \the [tool]!")
+		SPAN_WARNING("[user]'s hand slips, mangling the surgical site on [organ.get_surgery_name()] with \the [tool]!"),
+		SPAN_WARNING("Your hand slips, tearing the surgical site on [organ.get_surgery_name()] with \the [tool]!")
 	)
-	organ.take_damage(5, BURN)
+	organ.take_damage(10, BRUTE)
 
 
 

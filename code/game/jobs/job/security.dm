@@ -169,7 +169,7 @@
 	join_tag = /datum/job/inspector
 
 /datum/job/ihoper
-	title = "Security Officer"
+	title = "Risk Controller"
 	flag = IHOPER
 	department = DEPARTMENT_SECURITY
 	department_flag = IRONHAMMER
@@ -220,7 +220,7 @@
 		Your third loyalty is to humanity. You are still human under all that armour. If you're being ordered to slaughter civilians en masse, it may be time to start thinking for yourself."
 
 /obj/landmark/join/start/ihoper
-	name = "Security Officer"
+	name = "Risk Controller"
 	icon_state = "player-blue"
 	join_tag = /datum/job/ihoper
 

@@ -124,11 +124,16 @@ var/const/MED_FREQ = 1355
 var/const/SCI_FREQ = 1351
 var/const/SRV_FREQ = 1349
 var/const/SUP_FREQ = 1347
-
+var/const/MINE_FREQ = 1348
 
 // internal department channels
+var/const/SUP_I_FREQ = 1495
 var/const/MED_I_FREQ = 1485
 var/const/SEC_I_FREQ = 1475
+var/const/ENG_I_FREQ = 1465
+var/const/COMM_I_FREQ = 1490
+var/const/AI_I_FREQ = 1477
+var/const/SCI_I_FREQ = 1463
 
 var/list/radiochannels = list(
 	"Common"		= PUB_FREQ,
@@ -136,6 +141,7 @@ var/list/radiochannels = list(
 	"Command"		= COMM_FREQ,
 	"Medical"		= MED_FREQ,
 	"Engineering"	= ENG_FREQ,
+	"Mining"		= MINE_FREQ,
 	"Security" 		= SEC_FREQ,
 	"Special Ops" 	= DTH_FREQ,
 	"Mercenary" 	= SYND_FREQ,
@@ -144,8 +150,14 @@ var/list/radiochannels = list(
 	"NT Voice"		= NT_FREQ,
 	"Service" 		= SRV_FREQ,
 	"AI Private"	= AI_FREQ,
-	"Medical(I)"	= MED_I_FREQ,
-	"Security(I)"	= SEC_I_FREQ
+	"Medical(Public)"	= MED_I_FREQ,
+	"Security(Public)"	= SEC_I_FREQ,
+	"Engineering(Public)"= ENG_I_FREQ,
+	"Supply(Public)" 	= SUP_I_FREQ,
+	"Command(Public)" 	= COMM_I_FREQ,
+	"Science(Public)" 	= SCI_I_FREQ,
+	"AI(Public)" 		= AI_I_FREQ,
+	"AI"				= AI_FREQ
 )
 
 // central command channels, i.e deathsquid

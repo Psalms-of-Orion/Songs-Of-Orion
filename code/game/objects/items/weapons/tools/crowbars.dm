@@ -12,6 +12,8 @@
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked")
 	tool_qualities = list(QUALITY_PRYING = 25, QUALITY_DIGGING = 10, QUALITY_HAMMERING = 10)
 	rarity_value = 4
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 /obj/item/tool/crowbar/improvised
 	name = "rebar"

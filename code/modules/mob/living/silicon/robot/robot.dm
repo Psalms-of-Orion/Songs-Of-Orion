@@ -175,7 +175,7 @@
 			C.wrapped = new C.external_type
 
 	if(!cell)
-		cell = new /obj/item/cell/large/moebius/high(src)
+		cell = new /obj/item/cell/large/astra/high(src)
 
 	..()
 

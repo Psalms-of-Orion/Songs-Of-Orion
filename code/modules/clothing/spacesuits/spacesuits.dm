@@ -38,6 +38,8 @@
 
 	var/obj/machinery/camera/camera
 	var/list/camera_networks
+	dropped_sound = 'sound/items/drop_sounds/helm.ogg'
+	pickup_sound = 'sound/items/drop_sounds/equip_armor.ogg'
 
 	action_button_name = "Toggle Helmet Light"
 	light_overlay = "orion_light"
@@ -102,7 +104,8 @@
 	style_coverage = COVERS_WHOLE_TORSO_AND_LIMBS
 	var/list/supporting_limbs //If not-null, automatically splints breaks. Checked when removing the suit
 	slowdown = HEAVY_SLOWDOWN * 0.5
-
+	dropped_sound = 'sound/items/drop_sounds/equip_armor_plate.ogg'
+	pickup_sound = 'sound/items/drop_sounds/equip_armor.ogg'
 /obj/item/clothing/suit/space/equipped(mob/M)
 	check_limb_support()
 	..()

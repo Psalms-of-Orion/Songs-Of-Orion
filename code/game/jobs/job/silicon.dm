@@ -46,5 +46,9 @@
 /datum/job/cyborg/equip(var/mob/living/carbon/human/H, var/alt_title)
 	return FALSE
 
+
 /obj/landmark/join/start/cyborg
+	icon_state = "player-grey"
+	name = "Robot"
 	join_tag = /datum/job/cyborg
+	delete_me = FALSE//do we really need this huh??

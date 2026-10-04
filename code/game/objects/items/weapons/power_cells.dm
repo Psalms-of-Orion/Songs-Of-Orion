@@ -1,19 +1,22 @@
 //BIG CELLS - for APC, borgs and machinery.
 /obj/item/cell/large
-	name = "Asters \"Robustcell 1000L\""
-	desc = "Asters Guild branded rechargeable L-standardized power cell. This one is the cheapest you can find."
-	icon_state = "b_st"
+	name = "large reusable battery"
+	desc = "A rechargeable battery that fits in L-Class power systems. Very slow to charge."
+	icon_state = "l_s"
 	maxcharge = CELL_LARGE_BASE_CHARGE//1000
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_PLASTIC = 3, MATERIAL_SILVER = 3)
 	price_tag = 200
 	spawn_tags = SPAWN_TAG_POWERCELL_LARGE
-
+	max_chargerate = 0.04
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/cell/large/high
 	name = "Asters \"Robustcell 5000L\""
 	desc = "Asters Guild branded rechargeable L-standardized power cell. Popular and reliable version."
 	icon_state = "b_hi"
 	origin_tech = list(TECH_POWER = 2)
 	maxcharge = 5000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/super
 	name = "Asters \"Robustcell 15000L\""
@@ -21,6 +24,7 @@
 	icon_state = "b_sup"
 	origin_tech = list(TECH_POWER = 5)
 	maxcharge = 15000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/hyper
 	name = "Asters \"Robustcell-X 20000L\""
@@ -28,6 +32,7 @@
 	icon_state = "b_hy"
 	origin_tech = list(TECH_POWER = 6)
 	maxcharge = 20000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/moebius
 	name = "Moebius \"Power-Geyser 2000L\""
@@ -35,6 +40,7 @@
 	icon_state = "meb_b_st"
 	maxcharge = 2000
 	spawn_tags = SPAWN_TAG_POWERCELL_MOEBIUS_LARGE
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/moebius/high
 	name = "Moebius \"Power-Geyser 7000L\""
@@ -42,6 +48,7 @@
 	icon_state = "meb_b_hi"
 	origin_tech = list(TECH_POWER = 2)
 	maxcharge = 7000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/moebius/super
 	name = "Moebius \"Power-Geyser 13000L\""
@@ -49,6 +56,7 @@
 	icon_state = "meb_b_sup"
 	origin_tech = list(TECH_POWER = 5)
 	maxcharge = 13000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/moebius/hyper
 	name = "Moebius \"Power-Geyser 18000L\""
@@ -56,6 +64,7 @@
 	icon_state = "meb_b_hy"
 	origin_tech = list(TECH_POWER = 6)
 	maxcharge = 18000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/moebius/nuclear
 	name = "Moebius \"Atomcell 13000L\""
@@ -65,6 +74,7 @@
 	origin_tech = list(TECH_POWER = 6)
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_PLASTIC = 3, MATERIAL_SILVER = 3, MATERIAL_URANIUM = 6)
 	maxcharge = 13000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/excelsior
 	name = "Excelsior \"Zarya 15000L\""
@@ -74,6 +84,7 @@
 	matter = list(MATERIAL_STEEL = 6, MATERIAL_PLASTIC = 3)
 	maxcharge = 15000
 	rarity_value = 32
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/neotheology
 	name = "NeoTheology \"Spark 13000L\""
@@ -84,6 +95,7 @@
 	max_chargerate = 0
 	spawn_charged = 1
 	spawn_tags = SPAWN_TAG_POWERCELL_NEOTHEOLOGY_LARGE
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/large/neotheology/plasma
 	name = "NeoTheology \"Radiance 20000L\""
@@ -91,6 +103,7 @@
 	icon_state = "b_nt_pl"
 	matter = list(MATERIAL_STEEL = 3, MATERIAL_BIOMATTER = 15)
 	maxcharge = 20000
+	spawn_blacklisted = TRUE
 
 //Meme cells - for fun and cancer
 
@@ -118,9 +131,9 @@
 //MEDIUM CELLS - for energy weapons and large devices
 
 /obj/item/cell/medium
-	name = "Asters \"Robustcell 600M\""
-	desc = "Asters Guild branded rechargeable M-standardized power cell. This one is the cheapest you can find."
-	icon_state = "m_st"
+	name = "medium reusable battery"
+	desc = "A rechargeable battery that fits in M-Class power systems. Very slow to charge."
+	icon_state = "m_s"
 	w_class = ITEM_SIZE_SMALL
 	force = WEAPON_FORCE_HARMLESS
 	throw_speed = 5
@@ -129,7 +142,9 @@
 	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 2, MATERIAL_SILVER = 2)
 	price_tag = 100
 	spawn_tags = SPAWN_TAG_POWERCELL_MEDIUM
-
+	max_chargerate = 0.04
+	dropped_sound = 'sound/items/drop_sounds/book_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/cell/medium/high
 	name = "Asters \"Robustcell 800M\""
 	desc = "Asters Guild branded rechargeable M-standardized power cell. Popular and reliable version."
@@ -137,6 +152,7 @@
 	origin_tech = list(TECH_POWER = 2)
 	maxcharge = 800
 	spawn_tags = SPAWN_TAG_POWERCELL_MEDIUM_IH_AMMO
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/super
 	name = "Asters \"Robustcell 1000M\""
@@ -144,6 +160,7 @@
 	icon_state = "m_sup"
 	origin_tech = list(TECH_POWER = 5)
 	maxcharge = 1000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/hyper
 	name = "Asters \"Robustcell-X 1500M\""
@@ -151,13 +168,14 @@
 	icon_state = "m_hy"
 	origin_tech = list(TECH_POWER = 6)
 	maxcharge = 1500
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/moebius
 	name = "Moebius \"Power-Geyser 700M\""
 	desc = "Moebius Laboratories branded rechargeable M-standardized power cell. This one is cheap, yet better than Aster model for same price."
 	icon_state = "meb_m_st"
 	maxcharge = 700
-	spawn_tags = SPAWN_TAG_POWERCELL_MOEBIUS_MEDIUM
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/moebius/high
 	name = "Moebius \"Power-Geyser 900M\""
@@ -165,6 +183,7 @@
 	icon_state = "meb_m_hi"
 	origin_tech = list(TECH_POWER = 2)
 	maxcharge = 900
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/moebius/super
 	name = "Moebius \"Power-Geyser 1000M\""
@@ -172,6 +191,7 @@
 	icon_state = "meb_m_sup"
 	origin_tech = list(TECH_POWER = 5)
 	maxcharge = 1000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/moebius/hyper
 	name = "Moebius \"Power-Geyser 1300M\""
@@ -179,6 +199,7 @@
 	icon_state = "meb_m_hy"
 	origin_tech = list(TECH_POWER = 6)
 	maxcharge = 1300
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/moebius/nuclear
 	name = "Moebius \"Atomcell 1000M\""
@@ -188,6 +209,7 @@
 	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 2, MATERIAL_SILVER = 2, MATERIAL_URANIUM = 4)
 	origin_tech = list(TECH_POWER = 6)
 	maxcharge = 1000
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/excelsior
 	name = "Excelsior \"Zarya 1000M\""
@@ -197,6 +219,7 @@
 	matter = list(MATERIAL_STEEL = 4, MATERIAL_PLASTIC = 2)
 	maxcharge = 1000
 	rarity_value = 27
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/neotheology
 	name = "NeoTheology \"Spark 1000M\""
@@ -206,7 +229,7 @@
 	maxcharge = 1000
 	max_chargerate = 0
 	spawn_charged = 1
-	spawn_tags = SPAWN_TAG_POWERCELL_NEOTHEOLOGY_MEDIUM
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/medium/neotheology/plasma
 	name = "NeoTheology \"Radiance 1500M\""
@@ -214,12 +237,13 @@
 	icon_state = "m_nt_pl"
 	matter = list(MATERIAL_STEEL = 2, MATERIAL_BIOMATTER = 10)
 	maxcharge = 1500
+	spawn_blacklisted = TRUE
 
 //SMALL CELLS - for small devices, such as flashlights, analyzers and HUDs.
 /obj/item/cell/small
-	name = "Asters \"Robustcell 100S\""
-	desc = "Asters Guild branded rechargeable S-standardized power cell. This one is the cheapest you can find."
-	icon_state = "s_st"
+	name = "small reusable battery"
+	desc = "A rechargeable battery that fits in S-Class power systems. Very slow to charge."
+	icon_state = "s_s"
 	w_class = ITEM_SIZE_TINY
 	force = WEAPON_FORCE_HARMLESS
 	throw_speed = 5
@@ -228,13 +252,16 @@
 	matter = list(MATERIAL_STEEL = 1, MATERIAL_PLASTIC = 1, MATERIAL_SILVER = 1)
 	price_tag = 50
 	spawn_tags = SPAWN_TAG_POWERCELL_SMALL
-
+	max_chargerate = 0.04
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/cell/small/high
 	name = "Asters \"Robustcell 200S\""
 	desc = "Asters Guild branded rechargeable S-standardized power cell. Popular and reliable version."
 	icon_state = "s_hi"
 	origin_tech = list(TECH_POWER = 2)
 	maxcharge = 200
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/super
 	name = "Asters \"Robustcell 300S\""
@@ -242,6 +269,7 @@
 	icon_state = "s_sup"
 	origin_tech = list(TECH_POWER = 5)
 	maxcharge = 300
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/hyper
 	name = "Asters \"Robustcell-X 500S\""
@@ -249,13 +277,14 @@
 	icon_state = "s_hy"
 	origin_tech = list(TECH_POWER = 6)
 	maxcharge = 500
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/moebius
 	name = "Moebius \"Power-Geyser 120S\""
 	desc = "Moebius Laboratories branded rechargeable S-standardized power cell. This one is cheap, yet better than Aster model for same price."
 	icon_state = "meb_s_st"
 	maxcharge = 120
-	spawn_tags = SPAWN_TAG_POWERCELL_MOEBIUS_SMALL
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/moebius/high
 	name = "Moebius \"Power-Geyser 250S\""
@@ -263,6 +292,7 @@
 	icon_state = "meb_s_hi"
 	origin_tech = list(TECH_POWER = 2)
 	maxcharge = 250
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/moebius/super
 	name = "Moebius \"Power-Geyser 300S\""
@@ -270,6 +300,7 @@
 	icon_state = "meb_s_sup"
 	origin_tech = list(TECH_POWER = 5)
 	maxcharge = 300
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/moebius/hyper
 	name = "Moebius \"Power-Geyser 400S\""
@@ -277,6 +308,7 @@
 	icon_state = "meb_s_hy"
 	origin_tech = list(TECH_POWER = 6)
 	maxcharge = 400
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/moebius/nuclear
 	name = "Moebius \"Atomcell 300S\""
@@ -286,6 +318,7 @@
 	origin_tech = list(TECH_POWER = 6)
 	matter = list(MATERIAL_STEEL = 1, MATERIAL_PLASTIC = 1, MATERIAL_SILVER = 1, MATERIAL_URANIUM = 2)
 	maxcharge = 300
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/moebius/pda
 	name = "Moebius \"Atomcell 50S\""
@@ -309,6 +342,7 @@
 	matter = list(MATERIAL_STEEL = 2, MATERIAL_PLASTIC = 1)
 	maxcharge = 300
 	rarity_value = 32
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/neotheology
 	name = "NeoTheology \"Spark 300S\""
@@ -318,7 +352,7 @@
 	maxcharge = 300
 	max_chargerate = 0
 	spawn_charged = 1
-	spawn_tags = SPAWN_TAG_POWERCELL_NEOTHEOLOGY_SMALL
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/small/neotheology/plasma
 	name = "NeoTheology \"Radiance 500S\""
@@ -326,6 +360,7 @@
 	icon_state = "s_nt_pl"
 	matter = list(MATERIAL_STEEL = 1, MATERIAL_BIOMATTER = 5)
 	maxcharge = 500
+	spawn_blacklisted = TRUE
 
 /obj/item/cell/disposable
 	name = "a disposable cell"

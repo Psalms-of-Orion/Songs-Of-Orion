@@ -1,7 +1,8 @@
 /obj/item/gun/projectile/revolver
-	name = "FS REV .40 Magnum \"Miller\""
-	desc = "The \"Frozen Star\" \"Miller\" is a revolver of choice when you absolutely, positively need to make a hole in someone. Uses .40 Magnum ammo."
-	icon = 'icons/obj/guns/projectile/revolver.dmi'
+	name = "revolver"
+	desc = "A common magnum revolver with a low-axis barrel."
+	description_antag = "A dark and moonless night has never felt so right."
+	icon = 'modular/guns/icons/revolver.dmi'
 	icon_state = "revolver"
 	item_state = "revolver"
 	caliber = CAL_MAGNUM
@@ -9,7 +10,7 @@
 	can_dual = TRUE
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	handle_casings = CYCLE_CASINGS
-	max_shells = 7
+	max_shells = 6
 	ammo_type = /obj/item/ammo_casing/magnum
 	magazine_type = /obj/item/ammo_magazine/slmagnum
 	unload_sound = 'sound/weapons/guns/interact/rev_magout.ogg'
@@ -68,10 +69,20 @@
 	gun_tags |= GUN_REVOLVER
 
 /obj/item/part/gun/frame/miller
-	name = "Miller frame"
-	desc = "A Miller revolver frame. I hope you're feeling lucky, punk."
+	name = "revolver frame"
+	desc = "A revolver frame. I hope you're feeling lucky, punk."
 	icon_state = "frame_revolver"
 	resultvars = list(/obj/item/gun/projectile/revolver)
 	gripvars = list(/obj/item/part/gun/modular/grip/rubber)
 	mechanismvar = /obj/item/part/gun/modular/mechanism/revolver
 	barrelvars = list(/obj/item/part/gun/modular/barrel/magnum)
+
+/obj/item/gun/projectile/revolver/holy
+	name = "Cold Iron"
+	desc = "For iron, cold iron, isn't master of men all. Iron wrought by men has no power in this hall, only iron out of Calvary is master of you all."
+	handle_casings = EJECT_CASINGS
+	init_firemodes = list(
+		SEMI_AUTO_300,
+		list(mode_name="fan the hammer", mode_desc = "2-round burst", burst=2,    burst_delay=1, move_delay=0.5,  icon="burst"),
+		list(mode_name="drop the hammer", mode_desc = "5-round burst", burst=5,    burst_delay=1.1, move_delay=0.5,  icon="auto"),
+		)

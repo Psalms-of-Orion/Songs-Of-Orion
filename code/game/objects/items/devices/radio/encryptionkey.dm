@@ -16,6 +16,8 @@
 	var/merc = FALSE
 	var/pirate = FALSE
 	var/list/channels = list()
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/device/encryptionkey/attackby(obj/item/W, mob/user)
 
@@ -43,12 +45,18 @@
 /obj/item/device/encryptionkey/headset_sec
 	name = "security radio encryption key"
 	icon_state = "sec_cypherkey"
-	channels = list("Security" = 1)
+	channels = list("Security" = 1, "Medical(Public)" = 1, "Security(Public)" = 1, "Engineering(Public)" = 1, "Supply(Public)" = 1)
 
 /obj/item/device/encryptionkey/headset_eng
 	name = "engineering radio encryption key"
 	icon_state = "eng_cypherkey"
-	channels = list("Engineering" = 1)
+	channels = list("Engineering" = 1, "Mining" = 1, "Medical(Public)" = 1, "Security(Public)" = 1, "Engineering(Public)" = 1, "Supply(Public)" = 1)
+
+/obj/item/device/encryptionkey/headset_erp
+	name = "ERP radio encryption key"
+	icon_state = "eng_cypherkey"
+	channels = list("Engineering" = 1, "Mining" = 1, "Medical(Public)" = 1, "Security(Public)" = 1, "Engineering(Public)" = 1, "Supply(Public)" = 1)
+
 
 /obj/item/device/encryptionkey/headset_rob
 	name = "moebius robotics radio encryption key"
@@ -58,12 +66,12 @@
 /obj/item/device/encryptionkey/headset_med
 	name = "Brotherhood radio encryption key"
 	icon_state = "med_cypherkey"
-	channels = list("Medical" = 1)
+	channels = list("Medical" = 1, "Medical(Public)" = 1, "Security(Public)" = 1, "Engineering(Public)" = 1, "Supply(Public)" = 1)
 
 /obj/item/device/encryptionkey/headset_sar
 	name = "SAR radio encryption key"
 	icon_state = "sec_cypherkey"
-	channels = list("Security" = 1, "Medical" = 1)
+	channels = list("Security" = 1, "Mining" = 1, "Medical" = 1, "Medical(Public)" = 1, "Security(Public)" = 1, "Engineering(Public)" = 1, "Supply(Public)" = 1)
 
 /obj/item/device/encryptionkey/headset_church
 	name = "neotheology radio encryption key"
@@ -88,13 +96,13 @@
 /obj/item/device/encryptionkey/heads/captain
 	name = "Eris captain's encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1)
+	channels = list("Command" = 1, "Mining" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1)
 
 /obj/item/device/encryptionkey/heads/ai_integrated
 	name = "ai integrated encryption key"
 	desc = "Integrated encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "AI Private" = 1)
+	channels = list("Command" = 1, "Mining" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "AI Private" = 1)
 
 /obj/item/device/encryptionkey/heads/rd
 	name = "expedition overseer's encryption key"
@@ -114,7 +122,7 @@
 /obj/item/device/encryptionkey/heads/ce
 	name = "exultant's encryption key"
 	icon_state = "ce_cypherkey"
-	channels = list("Engineering" = 1, "Command" = 1)
+	channels = list("Engineering" = 1, "Mining" = 1, "Command" = 1)
 
 /obj/item/device/encryptionkey/heads/cmo
 	name = "Biolab officer's encryption key"

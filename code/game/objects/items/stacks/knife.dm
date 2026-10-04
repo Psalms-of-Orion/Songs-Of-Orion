@@ -28,6 +28,8 @@
 	rarity_value = 8
 	spawn_tags = SPAWN_TAG_KNIFE
 	bad_type = /obj/item/stack/thrown
+	dropped_sound = 'sound/items/drop_sounds/scrap.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/stack/thrown/update_icon()
 	icon_state = "[initial(icon_state)][amount]"

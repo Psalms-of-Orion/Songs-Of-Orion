@@ -11,6 +11,8 @@
 	w_class = ITEM_SIZE_NORMAL
 	max_w_class = ITEM_SIZE_NORMAL
 	spawn_tags = SPAWN_TAG_HOLSTER
+	dropped_sound = 'sound/items/drop_sounds/gloves.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 
 	var/sound_in = 'sound/effects/holsterin.ogg'
 	var/sound_out = 'sound/effects/holsterout.ogg'
@@ -380,13 +382,36 @@
 	..()
 	cut_overlays()
 	if(contents.len)
-		overlays += image('icons/inventory/pockets/icon.dmi', "pistol_layer")
+		for(var/obj/item/gun/projectile/D in contents)
+			cut_overlays()
+			overlays += image('icons/inventory/pockets/icon.dmi', "pistol_layer")
+
+		for(var/obj/item/gun/projectile/revolver/D in contents)
+			cut_overlays()
+			overlays += image('icons/inventory/pockets/icon.dmi', "revolver")
+
+		for(var/obj/item/gun/projectile/selfload/basic/D in contents)
+			cut_overlays()
+			overlays += image('icons/inventory/pockets/icon.dmi', "pistol")
+
 
 /obj/item/storage/pouch/holster/baton/update_icon()
 	..()
 	cut_overlays()
 	if(contents.len)
-		overlays += image('icons/inventory/pockets/icon.dmi', "baton_layer")
+		for(var/obj/item/melee/D in contents)
+			cut_overlays()
+			overlays += image('icons/inventory/pockets/icon.dmi', "baton_layer")
+
+		for(var/obj/item/melee/telebaton/D in contents)
+			cut_overlays()
+			overlays += image('icons/inventory/pockets/icon.dmi', "tele")
+
+		for(var/obj/item/tool/D in contents)
+			cut_overlays()
+			overlays += image('icons/inventory/pockets/icon.dmi', "longdong")
+
+
 
 /obj/item/storage/pouch/holster/belt/update_icon()
 	..()

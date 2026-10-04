@@ -374,9 +374,13 @@ meteor_act
 						visible_message(SPAN_WARNING("[src] gasps in pain!"), SPAN_DANGER("Pain jolts through your nerves!"))
 						adjustOxyLoss(10)
 						adjustHalLoss(5)
+						if(prob(20))
+							emote("pant")
 
 				if("winded")
 					visible_message(SPAN_WARNING("[src] is winded!"), SPAN_DANGER("You feel disoriented!"))
+					if(prob(20))
+						emote("pant")
 					confused = max(confused, 2)
 					external_recoil(40)
 					var/obj/item/item_in_active_hand = get_active_hand()
@@ -438,6 +442,7 @@ meteor_act
 
 
 		O.throwing = 0		//it hit, so stop moving
+		O.post_thrown_hit(src)
 		/// Get hit with glass shards , your fibers are on them now, or with a rod idk.
 		O.add_fibers(src)
 

@@ -9,7 +9,8 @@
 	matter = list(MATERIAL_CARDBOARD = 1)
 	bad_type = /obj/item/ammo_magazine/ammobox
 	price_tag = 100
-
+	dropped_sound = 'sound/items/drop_sounds/ammomove.ogg'
+	pickup_sound = 'sound/items/drop_sounds/magmove.ogg'
 /obj/item/ammo_magazine/ammobox/resolve_attackby(atom/A, mob/user)
 	if(isturf(A) && locate(/obj/item/ammo_casing) in A || istype(A, /obj/item/ammo_casing))
 		if(!do_after(user, src.reload_delay, src))
@@ -48,7 +49,8 @@
 	rarity_value = 10
 	spawn_tags = SPAWN_TAG_AMMO_COMMON
 	ammo_states = list(70)
-
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/magmove.ogg'
 /obj/item/ammo_magazine/ammobox/pistol/practice
 	ammo_type = /obj/item/ammo_casing/pistol/practice
 
@@ -74,7 +76,8 @@
 	ammo_type = /obj/item/ammo_casing/magnum
 	max_ammo = 50
 	ammo_states = list(50)
-
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/magmove.ogg'
 /obj/item/ammo_magazine/ammobox/magnum/practice
 	ammo_type = /obj/item/ammo_casing/magnum/practice
 
@@ -113,7 +116,8 @@
 	ammo_type = /obj/item/ammo_casing/srifle
 	max_ammo = 50
 	ammo_states = list(60)
-
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/magmove.ogg'
 /obj/item/ammo_magazine/ammobox/srifle_small/practice
 	ammo_type = /obj/item/ammo_casing/srifle/practice
 
@@ -154,7 +158,8 @@
 	ammo_type = /obj/item/ammo_casing/clrifle
 	max_ammo = 60
 	ammo_states = list(60)
-
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/magmove.ogg'
 /obj/item/ammo_magazine/ammobox/clrifle_small/practice
 	ammo_type = /obj/item/ammo_casing/clrifle/practice
 
@@ -192,7 +197,8 @@
 	ammo_type = /obj/item/ammo_casing/lrifle
 	max_ammo = 60
 	ammo_states = list(60)
-
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/magmove.ogg'
 /obj/item/ammo_magazine/ammobox/lrifle_small/practice
 	ammo_type = /obj/item/ammo_casing/lrifle/practice
 
@@ -310,7 +316,8 @@
 		"scrap" = "scrap slug",
 		"scrap_r" = "scrap beanbag",
 		"scrap_s" = "scrap pellet")
-
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/magmove.ogg'
 /obj/item/ammo_magazine/ammobox/shotgun_small/scrap
 	ammo_type = /obj/item/ammo_casing/shotgun/scrap
 	rarity_value = 10

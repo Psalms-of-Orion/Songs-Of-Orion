@@ -7,7 +7,8 @@
 	matter = list(MATERIAL_PLASTIC = 1, MATERIAL_STEEL = 1)
 	var/armed = FALSE
 	var/prob_catch = 100
-
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 	examine(mob/user)
 		..(user)

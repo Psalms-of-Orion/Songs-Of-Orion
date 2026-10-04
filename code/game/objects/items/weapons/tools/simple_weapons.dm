@@ -17,6 +17,10 @@
 	tool_qualities = list(QUALITY_CUTTING = 10)
 	var/icon/broken_outline = icon('icons/obj/drinks.dmi', "broken")
 	spawn_tags = SPAWN_TAG_JUNKTOOL
+	dropped_sound = 'sound/items/drop_sounds/glass_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/glass.ogg'
+	hitsound = "stab"
+
 
 /obj/item/tool/nailstick
 	name = "nailed stick"
@@ -30,7 +34,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("beaten", "slammed", "smacked", "struck", "battered")
-	hitsound = 'sound/weapons/melee/blunthit.ogg'
+	hitsound = "blunt_hit"
 	structure_damage_factor = STRUCTURE_DAMAGE_HEAVY
 	max_upgrades = 5
 	tool_qualities = list(QUALITY_HAMMERING = 10)
@@ -51,8 +55,9 @@
 	armor_divisor = ARMOR_PEN_SHALLOW
 	origin_tech = list(TECH_MATERIAL = 2, TECH_COMBAT = 1)
 	attack_verb = list("chopped", "torn", "cut")
-	hitsound = 'sound/weapons/bladeslice.ogg'
+	hitsound = "chop"
 	tool_qualities = list(QUALITY_CUTTING = 20)
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 
 /obj/item/tool/makeshiftaxe
 	name = "makeshift axe"
@@ -71,7 +76,7 @@
 	sharp = TRUE
 	edge = TRUE
 	attack_verb = list("chopped", "torn", "cut", "cleaved", "slashed")
-	hitsound = 'sound/weapons/melee/heavystab.ogg'
+	hitsound = "chop"
 	tool_qualities = list(QUALITY_CUTTING = 10)
 	structure_damage_factor = STRUCTURE_DAMAGE_BREACHING
 	embed_mult = 1.1
@@ -79,6 +84,7 @@
 	max_upgrades = 5 //all makeshift tools get more mods to make them actually viable for mid-late game
 	rarity_value = 60
 	spawn_tags = SPAWN_TAG_JUNKTOOL
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 
 /obj/item/tool/fireaxe
 	name = "fire axe"
@@ -95,10 +101,11 @@
 	force = WEAPON_FORCE_NORMAL
 	force_wielded_multiplier = 3.4
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
-	hitsound = 'sound/weapons/bladeslice.ogg'
+	hitsound = "chop"
 	structure_damage_factor = STRUCTURE_DAMAGE_BREACHING
 	embed_mult = 1.2 //Axes cut deep, and their hooked shape catches on things
 	rarity_value = 48
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 
 /obj/item/tool/fireaxe/afterattack(atom/A as mob|obj|turf|area, mob/user, proximity)
 	if(!proximity) return
@@ -121,6 +128,8 @@
 	tool_qualities = list(QUALITY_SHOVELING = 10)
 	w_class = ITEM_SIZE_SMALL
 	attack_verb = list("slashed", "sliced", "cut", "clawed")
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	hitsound = "stab"
 
 /obj/item/tool/scythe
 	name = "scythe"
@@ -136,10 +145,12 @@
 	w_class = ITEM_SIZE_BULKY
 	slot_flags = SLOT_BACK
 	attack_verb = list("chopped", "sliced", "cut", "reaped")
-	hitsound = 'sound/weapons/bladeslice.ogg'
+	hitsound = "slash"
 	tool_qualities = list(QUALITY_CUTTING = 15)
 	spawn_tags = SPAWN_TAG_KNIFE
 	rarity_value = 30
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/swordsmall1.ogg'
 
 //Swords
 /obj/item/tool/sword
@@ -159,12 +170,15 @@
 
 	throwforce = WEAPON_FORCE_NORMAL
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	hitsound = 'sound/weapons/melee/sharphit.ogg'
+	hitsound = "slash"
 	tool_qualities = list(QUALITY_CUTTING = 10)
 	structure_damage_factor = STRUCTURE_DAMAGE_BLADE
 	spawn_frequency = 8
 	spawn_tags = SPAWN_TAG_SWORD
 	rarity_value = 25
+
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/swordsmall2.ogg'
 
 /obj/item/tool/sword/saber
 	name = "officer's saber"
@@ -256,3 +270,5 @@
 	max_upgrades = 2
 	tool_qualities = list(QUALITY_HAMMERING = 5)
 	spawn_blacklisted = TRUE
+	dropped_sound = 'sound/items/drop_sounds/chain_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/chain_equip.ogg'

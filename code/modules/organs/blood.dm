@@ -99,6 +99,7 @@
 
 	vessel.remove_reagent("blood",amt)
 	blood_splatter(src,src)
+	playsound(src, pick('sound/effects/bleed (1).ogg', 'sound/effects/bleed (2).ogg','sound/effects/bleed (3).ogg'), 50, 0)
 
 /****************************************************
 				BLOOD TRANSFERS

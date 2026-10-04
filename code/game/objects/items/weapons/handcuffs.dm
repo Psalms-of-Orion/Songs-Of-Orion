@@ -20,6 +20,8 @@
 	var/breakouttime = 1200 //Deciseconds = 120s = 2 minutes
 	var/cuff_sound = 'sound/weapons/handcuffs.ogg'
 	var/cuff_type = "handcuffs"
+	dropped_sound = 'sound/items/drop_sounds/gun.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 
 /obj/item/handcuffs/attack(var/mob/living/carbon/C, var/mob/living/user)
 
@@ -134,6 +136,8 @@ var/last_chew = 0
 	cuff_sound = 'sound/weapons/cablecuff.ogg'
 	cuff_type = "zip ties"
 	elastic = 1
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/handcuffs/cable
 	name = "cable restraints"
@@ -143,6 +147,8 @@ var/last_chew = 0
 	cuff_sound = 'sound/weapons/cablecuff.ogg'
 	cuff_type = "cable restraints"
 	elastic = 1
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/handcuffs/cable/red
 	color = "#DD0000"
@@ -195,6 +201,8 @@ var/last_chew = 0
 	icon = 'icons/obj/bureaucracy.dmi'
 	breakouttime = 200
 	cuff_type = "duct tape"
+	dropped_sound = 'sound/items/drop_sounds/herb.ogg'
+	pickup_sound = 'sound/items/drop_sounds/herb.ogg'
 
 /obj/item/handcuffs/fake
 	name = "handcuffs"

@@ -13,7 +13,7 @@
 	return check_access_list(M.GetAccess())
 
 /atom/movable/proc/GetAccess()
-	var/obj/item/card/id/id = GetIdCard()
+	var/obj/item/card/id = GetIdCard()
 	return id ? id.GetAccess() : list()
 
 /proc/get_access_by_id(id)

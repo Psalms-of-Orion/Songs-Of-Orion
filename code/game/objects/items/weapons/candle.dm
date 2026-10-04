@@ -8,6 +8,8 @@
 	light_color = COLOR_LIGHTING_ORANGE_DARK
 	var/wax = 2000
 	var/lit_sanity_damage = -0.5
+	dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/flame/candle/New()
 	wax = rand(800, 1000) // Enough for 27-33 minutes. 30 minutes on average.

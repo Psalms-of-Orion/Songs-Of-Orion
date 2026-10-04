@@ -19,6 +19,7 @@
 	var/icon_state_full
 	var/icon_state_empty
 	var/bottle_thrower_intent
+	pickup_sound = 'sound/items/drop_sounds/glass.ogg'
 
 /obj/item/reagent_containers/food/drinks/bottle/on_reagent_change()
 	update_icon()

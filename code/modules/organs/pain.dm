@@ -30,22 +30,35 @@ mob/living/carbon/proc/pain(var/partname, var/amount, var/force, var/burning = 0
 		switch(amount)
 			if(1 to 10)
 				msg = "\red <b>Your [partname] burns.</b>"
+				if(prob(30))
+					emote("agony_level_1")
 			if(11 to 90)
 				flash_weak_pain()
 				msg = "\red <b><font size=2>Your [partname] burns badly!</font></b>"
+				if(prob(40))
+					emote("agony_level_2")
 			if(91 to 10000)
 				flash_pain()
 				msg = "\red <b><font size=3>OH GOD! Your [partname] is on fire!</font></b>"
+				if(prob(45))
+					emote("agony_level_3")
 	else
 		switch(amount)
 			if(1 to 10)
 				msg = "<b>Your [partname] hurts.</b>"
+				if(prob(30))
+					emote("agony_level_1")
 			if(11 to 90)
 				flash_weak_pain()
 				msg = "<b><font size=2>Your [partname] hurts badly.</font></b>"
+				if(prob(40))
+					emote("agony_level_2")
 			if(91 to 10000)
 				flash_pain()
 				msg = "<b><font size=3>OH GOD! Your [partname] is hurting terribly!</font></b>"
+				if(prob(45))
+					emote("agony_level_3")
+
 	if(msg && (msg != last_pain_message || prob(10)))
 		last_pain_message = msg
 		to_chat(src, msg)
@@ -108,25 +121,51 @@ mob/living/carbon/human/proc/handle_pain()
 		if(I.damage > 2) if(prob(2))
 			var/obj/item/organ/external/parent = I.parent
 			src.custom_pain("You feel a sharp pain in your [parent.name]", 1)
+			if(prob(20))
+				emote("groan")
+			if(prob(10))
+				emote("pant")
 
 	var/toxDamageMessage = null
 	var/toxMessageProb = 1
 	switch(getToxLoss())
 		if(1 to 5)
 			toxMessageProb = 1
-			toxDamageMessage = "Your body stings slightly."
+			toxDamageMessage = "You feel a little bit off."
 		if(6 to 10)
 			toxMessageProb = 2
-			toxDamageMessage = "Your whole body hurts a little."
+			if(prob(50))
+				toxDamageMessage = "You don't feel right."
+			else
+				toxDamageMessage = "You feel sluggish."
 		if(11 to 15)
 			toxMessageProb = 2
-			toxDamageMessage = "Your whole body hurts."
+			if(prob(50))
+				toxDamageMessage = "You feel sick."
+			else
+				toxDamageMessage = "You feel a bit ill."
+			if(prob(20))
+				emote("groan")
 		if(15 to 25)
 			toxMessageProb = 3
-			toxDamageMessage = "Your whole body hurts badly."
+			if(prob(50))
+				toxDamageMessage = "Your whole body feels weak."
+			else
+				toxDamageMessage = "You don't feel so good."
+			if(prob(20))
+				emote("gag")
+			if(prob(10))
+				emote("groan")
 		if(26 to INFINITY)
 			toxMessageProb = 5
-			toxDamageMessage = "Your body aches all over, it's driving you mad."
+			if(prob(50))
+				toxDamageMessage = "You can't keep going anymore."
+			else
+				toxDamageMessage = "You can feel your body failing."
+			if(prob(30))
+				emote("gag")
+			if(prob(10))
+				emote("pant")
 
 	if(toxDamageMessage && prob(toxMessageProb))
 		src.custom_pain(toxDamageMessage, getToxLoss() >= 15)

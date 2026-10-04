@@ -20,7 +20,8 @@
 	var/nutriment_req = 0	//Controls passive nutriment loss
 	var/oxygen_req = 0	//If oxygen reqs are not satisfied, get debuff and brain starts taking damage
 	var/list/prefixes = list()
-
+	dropped_sound = 'sound/items/drop_sounds/flesh.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 /obj/item/organ/internal/Initialize()
 	. = ..()
 	initialize_organ_efficiencies()
@@ -292,7 +293,7 @@
 			)
 
 			if(owner.species && !(owner.species.flags & NO_PAIN))
-				owner.emote("scream")
+				owner.emote("painscream")
 
 			// Fractures have a chance of getting you out of restraints
 			if(prob(25))

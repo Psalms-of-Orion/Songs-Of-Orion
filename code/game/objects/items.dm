@@ -102,6 +102,19 @@
 	var/chameleon_type
 
 
+	//sound based vars //Ported from Sojourn
+	var/pickup_sound
+	var/pickup_volume = 40
+	var/pickup_volume_extra_range = 1 //Picking something up is quite silent
+	var/pickup_volume_dropoff = -1 //so that we dont let everyone 4 tiles away from us know
+
+	var/dropped_sound
+	var/dropped_sound_volume = 40
+	var/dropped_sound_volume_extra_range = 1
+	var/dropped_sound_volume_dropoff = -1
+
+	var/thrown_sound
+
 /obj/item/Initialize()
 	if(islist(armor))
 		armor = getArmor(arglist(armor))
@@ -239,6 +252,8 @@
 			do_pickup_animation(target,old_loc)
 		SEND_SIGNAL_OLD(src, COMSIG_ITEM_PICKED, src, target)
 	add_hud_actions(target)
+	if(pickup_sound)
+		playsound(src, pickup_sound, pickup_volume, pickup_volume_extra_range, pickup_volume_dropoff)
 
 /obj/item/attack_ai(mob/user as mob)
 	if(istype(loc, /obj/item/robot_module))
@@ -676,3 +691,14 @@ mech zooming.
 
 /obj/item/proc/get_style()
 	return style
+
+/obj/item/post_thrown_hit()
+	if(thrown_sound)
+		//Same volume as if you missed
+		playsound(src, thrown_sound, 50, 1, -6)
+
+/obj/item/dropped()
+	..()
+
+	if(dropped_sound)
+		playsound(src, dropped_sound, dropped_sound_volume, dropped_sound_volume_extra_range, dropped_sound_volume_dropoff)

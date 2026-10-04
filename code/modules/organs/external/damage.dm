@@ -51,7 +51,7 @@
 		if(BRUTE)
 			if(status & ORGAN_BROKEN && prob(40))
 				if(owner && !(owner.species && (owner.species.flags & NO_PAIN)))
-					owner.emote("scream")	//getting hit on broken hand hurts
+					owner.emote("painscream")	//getting hit on broken hand hurts
 
 			if(sharp && !BP_IS_ROBOTIC(src))
 				if(!edge)

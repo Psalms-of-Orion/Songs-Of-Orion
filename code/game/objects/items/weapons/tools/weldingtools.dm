@@ -12,6 +12,7 @@
 	origin_tech = list(TECH_ENGINEERING = 1)
 	switched_on_qualities = list(QUALITY_WELDING = 30, QUALITY_CAUTERIZING = 10, QUALITY_WIRE_CUTTING = 10)
 	switched_on_hitsound = 'sound/items/Welder.ogg'
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 
 	sparks_on_use = TRUE
 	eye_hazard = TRUE

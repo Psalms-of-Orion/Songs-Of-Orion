@@ -9,7 +9,8 @@
 	spawn_tags = SPAWN_TAG_DESIGN
 	rarity_value = 25
 	var/list/designs = list()
-
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/computer_hardware/hard_drive/portable/design/install_default_files()
 	..()

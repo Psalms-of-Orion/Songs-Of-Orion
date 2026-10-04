@@ -20,6 +20,7 @@
 	item_state = "bl_suit"
 	has_sensor = 0
 	price_tag = 200
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/serbiansuit/brown
 	name = "brown Battle Dress Uniform"

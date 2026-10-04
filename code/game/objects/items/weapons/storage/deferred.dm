@@ -25,6 +25,8 @@
 	icon_state = "box"
 	item_state = "box"
 	contained_sprite = TRUE
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
 
 /obj/item/storage/deferred/populate_contents()
 	// Do not create contents if they are already spawned

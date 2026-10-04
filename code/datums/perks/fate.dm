@@ -150,8 +150,8 @@
 				/obj/item/tool/sword = 0.2,
 				/obj/item/tool/sword/katana = 0.2,
 				/obj/item/tool/knife/dagger = 0.5,
-				/obj/item/gun/projectile/colt = 0.2,
-				/obj/item/gun/projectile/revolver/havelock = 0.1,
+//				/obj/item/gun/projectile/colt = 0.2,
+//				/obj/item/gun/projectile/revolver/havelock = 0.1,
 				/obj/item/tool/knife/dagger/ceremonial = 0.4,
 				/obj/item/gun/projectile/revolver = 0.4))
 	holder.sanity.valid_inspirations += W
@@ -195,23 +195,41 @@
 	..()
 
 /datum/perk/fate/rejected_genius
-	name = "Rejected Genius"
-	desc = "You see the world in different shapes and colors. \
-			Your sanity loss cap is removed, so stay clear of corpses or filth. You have less maximum sanity and no chance to have positive breakdowns. \
-			As tradeoff, you have 50% faster insight gain."
-	icon_state = "knowledge" //https://game-icons.net/
+	name = "Targeted Individual"
+	desc = "It's not paranoia if they're really out to get you.\
+	The voices get louder, they become a little bit more clear. They know that you know!\
+	You have no sanity cap, gaining insight and losing sanity far faster. The only thing that can keep you stable is drugs, natural or perscribed."
+	icon_state = "third_eye" //https://game-icons.net/
 
 /datum/perk/fate/rejected_genius/assign(mob/living/carbon/human/H)
 	if(..())
 		holder.sanity.environment_cap_coeff -= 1
-		holder.sanity.positive_prob_multiplier -= 1
+		holder.sanity.positive_prob_multiplier += 1
 		holder.sanity.insight_passive_gain_multiplier *= 1.5
 		holder.sanity.max_level -= 20
+
+	var/turf/T = get_turf(holder)
+	var/obj/item/W
+	W = pickweight(list(
+		/obj/item/storage/pill_bottle/citalopram = 0.3,
+		/obj/item/tool/hammer/mace/makeshift/baseballbat = 0.1,
+		/obj/item/tool/knife/ritual = 0.1,
+		/obj/item/storage/pill_bottle/njoy/blue = 0.8,
+		/obj/item/gun/projectile/revolver = 0.1))
+	W = new W(T)
+
+	spawn(2 SECONDS)
+		holder.equip_to_storage_or_drop(W)
+		if(W.name == "revolver")
+			to_chat(holder, SPAN_WARNING("Someone replaced my pills with a gun!"))
+		if(W.name == "bottle of Soma pills")
+			to_chat(holder, SPAN_NOTICE("The blue pills keep you calm."))
+
 
 /datum/perk/fate/rejected_genius/remove()
 	if(holder)
 		holder.sanity.environment_cap_coeff += 1
-		holder.sanity.positive_prob_multiplier += 1
+		holder.sanity.positive_prob_multiplier -= 1
 		holder.sanity.insight_passive_gain_multiplier /= 1.5
 		holder.sanity.max_level += 20
 	..()

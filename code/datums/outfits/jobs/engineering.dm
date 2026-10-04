@@ -22,7 +22,7 @@
 	suit = /obj/item/clothing/suit/storage/winter/hivis
 	pda_type = /obj/item/modular_computer/pda/heads/ce
 	backpack_contents = list(/obj/item/gun/projectile/selfload/makarov = 1, /obj/item/ammo_magazine/pistol/rubber = 2) //TE got the excel gun as a war trophy same as the hatton
-	r_pocket = /obj/item/card/keycard/engineering/level_2
+	r_pocket = /obj/item/card/keycard/level_2/engineering
 
 /decl/hierarchy/outfit/job/engineering/engineer
 	name = OUTFIT_JOB_NAME("Space Engineer")
@@ -73,4 +73,4 @@
 	head = /obj/item/clothing/head/patrol
 	backpack_contents = list(/obj/item/tool/crowbar = 1)
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
-	r_pocket = /obj/item/card/keycard/engineering/level_2
+	r_pocket = /obj/item/card/keycard/level_2/engineering

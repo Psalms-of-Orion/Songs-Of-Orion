@@ -40,7 +40,8 @@
 /obj/item/toy/balloon/New()
 	create_reagents(10)
 	..()
-
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 /obj/item/toy/balloon/attack(mob/living/carbon/human/M, mob/user)
 	return
 
@@ -99,7 +100,8 @@
 	icon = 'icons/obj/radio.dmi'
 	icon_state = "beacon"
 	item_state = "signaler"
-
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/paper.ogg'
 /*
  * Fake singularity
  */
@@ -108,7 +110,8 @@
 	desc = "\"Singulo\" brand spinning toy."
 	icon = 'icons/obj/singularity.dmi'
 	icon_state = "singularity_s1"
-
+	dropped_sound = 'sound/items/drop_sounds/wrapper.ogg'
+	pickup_sound = 'sound/items/drop_sounds/herb.ogg'
 /*
  * Toy crossbow
  */
@@ -127,6 +130,8 @@
 	attack_verb = list("attacked", "struck", "hit")
 	spawn_tags = SPAWN_TAG_TOY_WEAPON
 	var/bullets = 5
+	dropped_sound = 'sound/items/drop_sounds/gun.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 	examine(mob/user)
 		if(..(user, 2) && bullets)
@@ -245,6 +250,8 @@
 	attack_verb = list("attacked", "struck", "hit")
 	spawn_tags = SPAWN_TAG_TOY_WEAPON
 	var/active = 0
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 	attack_self(mob/user)
 		src.active = !( src.active )
@@ -279,6 +286,8 @@
 	w_class = ITEM_SIZE_NORMAL
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
 	spawn_tags = SPAWN_TAG_TOY_WEAPON
+	dropped_sound = 'sound/items/drop_sounds/knife.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /*
  * Snap pops
@@ -326,6 +335,8 @@
 	flags // TODO??
 	preloaded_reagents = list("water" = 10)
 	var/empty = 0
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/toy/waterflower/attack(mob/living/carbon/human/M, mob/user )
 	return
@@ -390,6 +401,8 @@
 	var/cooldown = 0
 	w_class = ITEM_SIZE_TINY
 	slot_flags = SLOT_EARS
+	dropped_sound = 'sound/items/drop_sounds/card.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/toy/bosunwhistle/attack_self(mob/user)
 	if(cooldown < world.time - 35)
@@ -405,6 +418,8 @@
 	icon_state = "ripleytoy"
 	bad_type = /obj/item/toy/prize
 	var/cooldown = 0
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 //all credit to skasi for toy mech fun ideas
 /obj/item/toy/prize/attack_self(mob/user)
@@ -487,6 +502,8 @@
 	icon = 'icons/obj/toy.dmi'
 	spawn_tags = SPAWN_TAG_FIGURE
 	bad_type = /obj/item/toy/figure
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/toy/figure/excelsior
 	name = "\"Excelsior\" figurine"
@@ -615,6 +632,8 @@
 	icon_state = "nymphplushie"
 	bad_type = /obj/item/toy/plushie
 	spawn_tags = SPAWN_TAG_PLUSHIE
+	dropped_sound = 'sound/items/drop_sounds/clothing.ogg'
+	pickup_sound = 'sound/items/drop_sounds/plushie.ogg'
 
 /obj/item/toy/plushie/attack_self(mob/user)
 	if(user.a_intent == I_HELP)
@@ -671,6 +690,8 @@
 	w_class = ITEM_SIZE_BULKY
 	attack_verb = list("attacked", "slashed", "stabbed", "poked")
 	spawn_tags = SPAWN_TAG_TOY_WEAPON
+	dropped_sound = 'sound/items/drop_sounds/knife.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/inflatable_duck
 	name = "inflatable duck"
@@ -679,7 +700,8 @@
 	item_state = "inflatable"
 	icon = 'icons/inventory/belt/icon.dmi'
 	slot_flags = SLOT_BELT
-
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 // That one funny oinking pig.
 /obj/item/toy/rubber_pig
 	name = "rubber pig"
@@ -687,7 +709,8 @@
 	icon = 'icons/obj/rubber_pig.dmi'
 	icon_state = "icon"
 	item_state = "rubber_pig"
-
+	dropped_sound = 'sound/items/drop_sounds/rubber.ogg'
+	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
 	var/cooldown = 0.5 SECONDS
 	var/last_used = 0
 	// Oinking pig sounds

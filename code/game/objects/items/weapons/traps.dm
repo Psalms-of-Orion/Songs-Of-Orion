@@ -23,7 +23,8 @@
 	var/struggle_prob = 2
 	var/list/aware_mobs = list() //List of refs of mobs that examined this trap. Won't trigger it when walking.
 	var/prob_catch = 100 //prob catch to mob
-
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/beartrap/Initialize()
 	.=..()

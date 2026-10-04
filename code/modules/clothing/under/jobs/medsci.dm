@@ -48,6 +48,9 @@
 		rad = 10
 	)
 
+/obj/item/clothing/under/rank/wagie/alt
+	icon_state = "wagie2"
+
 
 /obj/item/clothing/under/rank/chemist
 	desc = "It's made of a special fiber that gives special protection against biohazards. It has a chemist rank stripe on it."
@@ -163,7 +166,6 @@
 	desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in baby blue."
 	icon_state = "scrubsblue"
 	item_state = "b_suit"
-	spawn_blacklisted = TRUE //no sprite
 
 /obj/item/clothing/under/rank/medical/green
 	name = "medical scrubs"
@@ -174,10 +176,9 @@
 
 /obj/item/clothing/under/rank/medical/purple
 	name = "medical scrubs"
-	desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in deep purple."
+	desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in deep maroon."
 	icon_state = "scrubspurple"
 	item_state = "p_suit"
-	spawn_blacklisted = TRUE //no sprite
 
 /obj/item/clothing/under/rank/psych
 	desc = "A turqouise turtleneck and a pair of dark blue slacks, belonging to a psychologist."

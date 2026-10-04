@@ -22,6 +22,8 @@
 	bad_type = /obj/item/storage/fancy
 	var/icon_type = "donut"
 	var/item_obj				// It can take a path or a list, the populate_contents() must be added when using item_obj in order to work.
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
 
 /obj/item/storage/fancy/update_icon(itemremoved = 0)
 	var/total_contents = LAZYLEN(contents) - itemremoved
@@ -460,3 +462,35 @@ obj/item/storage/fancy/cigar/attackby(obj/item/W, mob/user)
 /obj/item/storage/lockbox/vials/attackby(obj/item/W, mob/user)
 	..()
 	update_icon()
+
+
+/obj/item/storage/fancy/battery
+	name = "battery pack"
+	desc = "A pack of disposable batteries."
+	icon = 'icons/obj/power_cells.dmi'
+	icon_state = "batterybox3"
+	item_state = "batterybox3"
+	icon_type = "battery"
+	throwforce = WEAPON_FORCE_HARMLESS
+	slot_flags = SLOT_BELT
+	storage_slots = 3
+	item_obj = /obj/item/cell/small/astra/disposable
+	can_hold = list(/obj/item/cell/small/astra/disposable)
+	w_class = ITEM_SIZE_SMALL
+
+
+/obj/item/storage/fancy/battery/populate_contents()
+	for(var/i in 1 to storage_slots)
+		new item_obj(src)
+
+
+/obj/item/storage/fancy/battery/premium
+	name = "premium battery pack"
+	desc = "A pack of high capacity disposable batteries."
+	icon = 'icons/obj/power_cells.dmi'
+	icon_state = "batterybox3"
+	item_state = "batterybox3"
+	throwforce = WEAPON_FORCE_HARMLESS
+	slot_flags = SLOT_BELT
+	storage_slots = 3
+	item_obj = /obj/item/cell/small/astra/disposable/high

@@ -19,7 +19,8 @@
 	desc = "Expand and contract"
 	nature = MODIFICATION_SILICON
 	matter = list(MATERIAL_STEEL = 1)
-
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/organ/internal/muscle/super_muscle
 	name = "super-strength muscle"
 	icon_state = "human_muscle_super"

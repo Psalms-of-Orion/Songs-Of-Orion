@@ -39,7 +39,8 @@
 
 //			if(HULK in H.mutations)
 //				damage += 5
-
+			if(prob(25))
+				H.emote("attack")
 			playsound(loc, "punch", 25, 1, -1)
 
 			visible_message("\red <B>[H] has punched [src]!</B>")
@@ -121,6 +122,8 @@
 						break_all_grabs(H)
 
 						H.do_attack_animation(src)
+						if(prob(25))
+							H.emote("attack")
 						playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 						visible_message(SPAN_DANGER("With a quick grapple, [M] reversed [src]'s grab!"))
 						src.attack_log += "\[[time_stamp()]\] <font color='orange'>Counter-grabbed by [M.name] ([M.ckey])</font>"
@@ -169,6 +172,8 @@
 
 			if(!istype(H))
 				attack_generic(H,rand(1,3),"punched")
+				if(prob(25))
+					H.emote("attack")
 				return
 
 			var/stat_damage = max(0, min(15, (H.stats.getStat(STAT_ROB) / 4)))
@@ -203,6 +208,8 @@
 			//The stronger you are, the louder you strike!
 			var/attack_volume = 25 + H.stats.getStat(STAT_ROB)
 			playsound(loc, attack.attack_sound, attack_volume, 1, -1)
+			if(prob(25))
+				H.emote("attack")
 			H.attack_log += text("\[[time_stamp()]\] <font color='red'>[pick(attack.attack_verb)] [src.name] ([src.ckey])</font>")
 			src.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been [pick(attack.attack_verb)] by [H.name] ([H.ckey])</font>")
 			msg_admin_attack("[key_name(H)] has [pick(attack.attack_verb)] [key_name(src)]")
@@ -226,6 +233,8 @@
 					src.attack_log += text("\[[time_stamp()]\] <font color='orange'>Blocked attack of [H.name] ([H.ckey])</font>")
 					H.attack_log += text("\[[time_stamp()]\] <font color='orange'>Attack has been blocked by [src.name] ([src.ckey])</font>")
 					visible_message(SPAN_WARNING("[src] blocks the blow!"), SPAN_DANGER("You block the blow!"))
+					if(prob(25))
+						H.emote("attack")
 					//They farked up
 					if(real_damage == 0)
 						visible_message(SPAN_DANGER("The attack has been completely negated!"))
@@ -379,5 +388,7 @@
 			success = 1
 		spawn(1)
 			qdel(rgrab)
+	if(prob(25))
+		user.emote("attack")
 	return success
 

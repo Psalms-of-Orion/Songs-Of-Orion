@@ -22,7 +22,7 @@
 	head = /obj/item/clothing/head/patrol/sec/hos
 	pda_type = /obj/item/modular_computer/pda/heads/hos
 	backpack_contents = list(/obj/item/handcuffs = 1,/obj/item/ammo_magazine/magnum/rubber = 1,/obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/cell/small/high = 2, /obj/item/gun/energy/gun/martin = 1, /obj/item/flame/lighter/zippo/syndicate = 1, /obj/item/storage/fancy/cigarettes/lucky = 1, /obj/item/clothing/accessory/cross = 1)
-	l_pocket = /obj/item/card/keycard/security/level_2
+	l_pocket = /obj/item/card/keycard/level_2/security
 
 
 /*decl/hierarchy/outfit/job/security/gunserg

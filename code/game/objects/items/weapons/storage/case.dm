@@ -3,7 +3,8 @@
 	max_w_class = ITEM_SIZE_BULKY
 	w_class = ITEM_SIZE_HUGE
 	var/opened = FALSE //Checking opened case or not
-
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
 /obj/item/storage/case/attack_hand(mob/user as mob)
 
 	if ((loc != user) && opened)

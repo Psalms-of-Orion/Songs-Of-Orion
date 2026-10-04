@@ -7,6 +7,8 @@
 	icon = 'icons/obj/boombox.dmi'
 	icon_state = "boombox"
 	item_state = "boombox"
+	dropped_sound = 'sound/items/drop_sounds/device.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 	var/loop_mode = JUKEMODE_PLAY_ONCE			// Behavior when finished playing a song
 	var/max_queue_len = 3						// How many songs are we allowed to queue up?

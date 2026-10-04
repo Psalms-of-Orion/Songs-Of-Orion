@@ -111,6 +111,22 @@
 	)
 	gear_tweaks += new /datum/gear_tweak/path(flannel)
 
+//CAMO
+
+/datum/gear/uniform/camo/color_presets
+	display_name = "Camo selection"
+	path = /obj/item/clothing/under/rank/security/camo
+	cost = 1
+
+/datum/gear/uniform/flannel/color_presets/New()
+	..()
+	var/camo = list(
+		"Urban"			=	/obj/item/clothing/under/rank/security/camo,
+		"Woodland, Dark"		=	/obj/item/clothing/under/rank/security/camo/woodland,
+		"Woodland, Faded"		=	/obj/item/clothing/under/rank/security/camo/woodland2,
+		"Arid"			=	/obj/item/clothing/under/rank/security/camo/arid
+	)
+	gear_tweaks += new /datum/gear_tweak/path(camo)
 
 //SILK BUTTON-UPS
 
@@ -273,6 +289,34 @@
 	)
 	gear_tweaks += new /datum/gear_tweak/path(leisure)
 
+/datum/gear/uniform/scrubs/color_presets
+	display_name = "scrub selection"
+	path = /obj/item/clothing/under/rank/medical/blue
+	cost = 1
+
+/datum/gear/uniform/scrubs/color_presets/New()
+	..()
+	var/scrubs = list(
+		"Blue"		=	/obj/item/clothing/under/rank/medical/blue,
+		"Maroon"	=	/obj/item/clothing/under/rank/medical/purple
+	)
+	gear_tweaks += new /datum/gear_tweak/path(scrubs)
+
+/datum/gear/uniform/jorts/color_presets
+	display_name = "jort selection"
+	path = /obj/item/clothing/under/jorts
+	cost = 1
+
+/datum/gear/uniform/jorts/color_presets/New()
+	..()
+	var/jorts = list(
+		"White"		=	/obj/item/clothing/under/jorts,
+		"Green"		=	/obj/item/clothing/under/jorts/green,
+		"Red"		=	/obj/item/clothing/under/jorts/red,
+		"Black"		=	/obj/item/clothing/under/jorts/black
+	)
+	gear_tweaks += new /datum/gear_tweak/path(jorts)
+
 //TODO: Corpo PCRC uniform
 /datum/gear/uniform/sec/color_presets
 	display_name = "Security alt selection"
@@ -343,3 +387,8 @@
 /datum/gear/uniform/undersuit
 	display_name = "undersuit"
 	path = /obj/item/clothing/under/undersuit
+
+/datum/gear/uniform/fbp
+	display_name = "FBP nudity pouch"
+	path = /obj/item/clothing/under/nude
+

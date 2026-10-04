@@ -87,7 +87,7 @@
 						edge = FALSE
 						armor_message(SPAN_NOTICE("[src] armor deflected the strike!"), // No cut (strike), only bash
 										SPAN_NOTICE("Your armor deflects the strike!"))
-
+						playsound(src, pick('sound/weapons/shield/plate_blunt (1).ogg', 'sound/weapons/shield/plate_blunt (2).ogg','sound/weapons/shield/plate_blunt (3).ogg'), 50, 0)
 					if(ishuman(src) && isitem(used_weapon))
 						var/mob/living/carbon/human/H = src
 						var/obj/item/I = used_weapon
@@ -112,16 +112,19 @@
 		if(24 to 49)
 			armor_message(SPAN_NOTICE("[src] armor reduces the impact by a little."),
 							SPAN_NOTICE("Your armor reduced the impact a little."))
+			playsound(src, pick('sound/weapons/shield/light_blunt (1).ogg', 'sound/weapons/shield/light_blunt (2).ogg','sound/weapons/shield/light_blunt (3).ogg'), 50, 0)
 		if(50 to 74)
 			armor_message(SPAN_NOTICE("[src] armor absorbs most of the damage!"),
 							SPAN_NOTICE("Your armor protects you from the impact!"))
+			playsound(src, pick('sound/weapons/shield/chain_blunt (1).ogg', 'sound/weapons/shield/chain_blunt (2).ogg','sound/weapons/shield/chain_blunt (3).ogg'), 50, 0)
 		if(75 to 89)
 			armor_message(SPAN_NOTICE("[src] armor easily absorbs the blow!"),
 							SPAN_NOTICE("Your armor reduced the impact greatly!"))
+			playsound(src, pick('sound/weapons/shield/light_blunt (1).ogg', 'sound/weapons/shield/light_blunt (2).ogg','sound/weapons/shield/light_blunt (3).ogg'), 50, 0)
 		if(90 to INFINITY)
 			armor_message(SPAN_NOTICE("[src] armor absorbs the blow!"),
 							SPAN_NOTICE("Your armor absorbed the impact!"))
-
+			playsound(src, pick('sound/weapons/shield/unarmparry (1).ogg', 'sound/weapons/shield/unarmparry (2).ogg','sound/weapons/shield/unarmparry (3).ogg'), 50, 0)
 
 	// Deal damage to ablative armour based on how much was used, we multiply armour divisor back so high AP doesn't decrease damage dealt to ADR
 	if(ablative_armor)
@@ -289,6 +292,7 @@
 		damage_through_armor(throw_damage, dtype, null, ARMOR_MELEE, O.armor_divisor, used_weapon = O, sharp = is_sharp(O), edge = has_edge(O))
 
 		O.throwing = 0		//it hit, so stop moving
+		O.post_thrown_hit(src)
 
 		if(ismob(O.thrower))
 			var/mob/M = O.thrower

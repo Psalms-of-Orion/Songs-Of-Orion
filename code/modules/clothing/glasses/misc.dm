@@ -16,9 +16,17 @@
 
 /obj/item/clothing/glasses/regular
 	name = "Prescription Glasses"
-	desc = "Made by Nerd. Co."
+	desc = "Made by NerdCo."
 	icon_state = "glasses"
 	item_state = "glasses"
+	body_parts_covered = 0
+	prescription = TRUE
+
+/obj/item/clothing/glasses/regular/thin
+	name = "thin perscription glasses"
+	desc = "Made by NerdCo Premium."
+	icon_state = "glasses_thin"
+	item_state = "glasses_thin"
 	body_parts_covered = 0
 	prescription = TRUE
 

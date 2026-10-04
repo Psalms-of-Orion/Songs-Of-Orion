@@ -15,7 +15,8 @@
 	forced_broad_strike = TRUE
 	tool_qualities = list(QUALITY_SAWING = 30, QUALITY_CUTTING = 20, QUALITY_WIRE_CUTTING = 20)
 	embed_mult = 1.3 //Serrated blades catch on bone more easily
-
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
+	pickup_sound = 'sound/items/drop_sounds/accessory.ogg'
 /obj/item/tool/saw/improvised //tier 1
 	name = "choppa"
 	desc = "A wicked serrated blade made of whatever nasty sharp things you could find. It would make a pretty decent weapon, given there are more space for some tool mods too."

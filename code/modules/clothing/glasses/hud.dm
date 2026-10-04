@@ -73,7 +73,7 @@
 	icon_state = "jensenshades"
 	item_state = "jensenshades"
 	vision_flags = SEE_MOBS
-	see_invisible = SEE_INVISIBLE_NOLIGHTING
+//	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	spawn_blacklisted = TRUE
 
 /obj/item/clothing/glasses/hud/security/process_hud(mob/M)
@@ -125,8 +125,8 @@
 	if(!istype(H) || H.glasses != src)
 		return
 
-	if(!is_excelsior(H))
-		to_chat(H, SPAN_WARNING("The hud fails to activate, a built-in speaker says, \"Failed to locate implant, please contact your nearest Excelsior representative immediately for assistance\"."))
+//	if(!is_excelsior(H))
+//		to_chat(H, SPAN_WARNING("The hud fails to activate, a built-in speaker says, \"Failed to locate implant, please contact your nearest Excelsior representative immediately for assistance\"."))
 
 /obj/item/clothing/glasses/hud/excelsior/stealth
 	name = "Prescription Glasses"
@@ -227,4 +227,3 @@
 	desc = "A heads-up display that scans the humans in view and provides accurate data about their opinion on communism."
 	icon_state = "tachud_red"
 	item_state = "tachud_red"
-

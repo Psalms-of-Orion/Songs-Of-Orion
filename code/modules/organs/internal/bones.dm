@@ -8,7 +8,8 @@
 	max_damage = IORGAN_SKELETAL_HEALTH
 	min_bruised_damage = IORGAN_SKELETAL_BRUISE
 	min_broken_damage = IORGAN_SKELETAL_BREAK
-
+	dropped_sound = 'sound/items/drop_sounds/gen_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/organ/internal/bone/Initialize()
     . = ..()
     src.transform *= 0.5 // this little trick makes bone size small while keeping detail level of 32x32 bones.

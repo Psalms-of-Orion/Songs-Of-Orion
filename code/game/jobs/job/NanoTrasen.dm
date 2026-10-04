@@ -45,7 +45,7 @@
 	faction = "CEV Eris"
 	total_positions = 4
 	supervisors = "the chain of command"
-	selection_color = "#c3b9a6"
+	selection_color = "#bb9042"
 	also_known_languages = list(LANGUAGE_JIVE = 100)
 	wage = WAGE_LABOUR_DUMB
 	department_account_access = TRUE
@@ -74,7 +74,7 @@
 	description = "You are the lowest level of NT logistics. A mover of goods and cargo. Welcome to retail."
 
 /obj/landmark/join/start/cargo_tech_nt
-	name = "Cargo Tech"
+	name = "Cargo Technician"
 	icon_state = "player-beige"
 	join_tag = /datum/job/cargo_tech_nt
 
@@ -86,7 +86,7 @@
 	faction = "CEV Eris"
 	total_positions = 2
 	supervisors = "the chain of command"
-	selection_color = "#dddddd"
+	selection_color = "#814fb3"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10, LANGUAGE_JIVE = 60)
 	access = list(access_bar, access_kitchen, access_maint_tunnels)
 	initial_balance = 750
@@ -142,7 +142,7 @@
 	faction = "CEV Eris"
 	total_positions = 1
 	supervisors = "the chain of command, and the Cook"
-	selection_color = "#dddddd"
+	selection_color = "#579342"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 15, LANGUAGE_JIVE = 80)
 	access = list(access_bar, access_kitchen, access_maint_tunnels, access_hydroponics)
 	perks = list(PERK_CLUB)
@@ -161,7 +161,6 @@
 	join_tag = /datum/job/botanist_nt
 
 
-
 /datum/job/doctor_nt
 	title = "Doctor"
 	flag = DOCTOR
@@ -170,7 +169,7 @@
 	faction = "CEV Eris"
 	total_positions = 3
 	supervisors = "the chain of command"
-	selection_color = "#dddddd"
+	selection_color = "#5875a1"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 15, LANGUAGE_JIVE = 80)
 	access = list(
@@ -188,7 +187,7 @@
 							/datum/computer_file/program/chem_catalog,
 							/datum/computer_file/program/camera_monitor)
 
-	outfit_type = /decl/hierarchy/outfit/job/nt/medical/doctor
+	outfit_type = /decl/hierarchy/outfit/job/nt/doctor
 	description = "Keep the crew alive. We're almost done here, they can make it another day."
 
 /obj/landmark/join/start/doctor_nt
@@ -199,15 +198,15 @@
 
 
 /datum/job/security_nt
-	title = "Security"
+	title = "Security Officer"
 	flag = IHOPER
 	department = DEPARTMENT_SECURITY
 	department_flag = IRONHAMMER
 	faction = "CEV Eris"
-	total_positions = 2
+	total_positions = 4
 	supervisors = "the chain of command"
 	//alt_titles = list("Ironhammer Junior Operative")
-	selection_color = "#a7bbc6"
+	selection_color = "#812a3d"
 	wage = WAGE_LABOUR_HAZARD
 
 	outfit_type = /decl/hierarchy/outfit/job/nt/security
@@ -244,7 +243,7 @@
 	faction = "CEV Eris"
 	total_positions = 1
 	supervisors = "the chain of command"
-	selection_color = "#a7bbc6"
+	selection_color = "#49393e"
 	wage = WAGE_PROFESSIONAL
 
 	outfit_type = /decl/hierarchy/outfit/job/nt/detective
@@ -286,7 +285,7 @@
 	faction = "CEV Eris"
 	total_positions = 3
 	supervisors = "the chain of command"
-	selection_color = "#d5c88f"
+	selection_color = "#b18643"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 50)
 	wage = WAGE_PROFESSIONAL
 
@@ -329,7 +328,7 @@
 	faction = "CEV Eris"
 	total_positions = 3
 	supervisors = "the chain of command"
-	selection_color = "#bdb1bb"
+	selection_color = "#814fb3"
 	wage = WAGE_PROFESSIONAL
 
 	//alt_titles = list("Moebius Xenobiologist")
@@ -364,7 +363,7 @@
 	faction = "CEV Eris"
 	total_positions = 1
 	supervisors = "the funny ones"
-	selection_color = "#dddddd"
+	selection_color = "#b075d6"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10, LANGUAGE_JIVE = 40, LANGUAGE_MONKEY = 20)
 	access = list(access_bar, access_kitchen, access_maint_tunnels, access_artist, access_theatre)
 	initial_balance = 600

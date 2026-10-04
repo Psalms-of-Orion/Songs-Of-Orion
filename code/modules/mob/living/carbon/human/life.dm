@@ -92,7 +92,7 @@
 				total_oxygen_req += I.oxygen_req
 				total_nutriment_req += (I.nutriment_req / 1000)
 			total_oxygen_req = min(total_oxygen_req, 100)
-
+			handle_gas_mask_sound()
 		if(!client)
 			species.handle_npc(src)
 
@@ -1131,7 +1131,7 @@
 
 		for(var/tag in tags_to_grow)
 			// FBP limbs get replaced with makeshift if not defined by user or clientless
-			var/datum/body_modification/BM = user_pref ? user_pref.get_modification(tag) : (upper_body_nature == MODIFICATION_ORGANIC) ? new /datum/body_modification/none : new /datum/body_modification/limb/prosthesis/makeshift
+			var/datum/body_modification/BM = user_pref ? user_pref.get_modification(tag) : (upper_body_nature == MODIFICATION_ORGANIC) ? new /datum/body_modification/none : new /datum/body_modification/limb/prosthesis
 			var/datum/organ_description/OD = species.has_limbs[tag]
 			if(BM.is_allowed(tag, user_pref, src))
 				BM.create_organ(src, OD, user_pref.modifications_colors[tag])
@@ -1190,3 +1190,23 @@
 /mob/living/carbon/human/proc/ExitStasis()
 	in_stasis = FALSE
 	stasis_timeofdeath = 0
+
+//Straight up ripped from Rogue code
+/mob/living/carbon/human/proc/handle_gas_mask_sound()
+	if(!istype(wear_mask, (/obj/item/clothing/mask/gas || /obj/item/clothing/mask/breath)))
+		if(breathe_tick)
+			breathe_tick = 0
+		return
+	if(stat == DEAD)
+		return
+	breathe_tick++
+	var/mask_sound
+	if(istype(wear_mask, (/obj/item/clothing/mask/gas || /obj/item/clothing/mask/breath)))
+		if(breathe_tick>=rand(1,3))
+			breathe_tick = 0
+			mask_sound = pick('sound/items/gas_mask/confessormask1.ogg', 'sound/items/gas_mask/confessormask2.ogg', 'sound/items/gas_mask/confessormask3.ogg',
+							'sound/items/gas_mask/confessormask4.ogg', 'sound/items/gas_mask/confessormask5.ogg', 'sound/items/gas_mask/confessormask6.ogg',
+							'sound/items/gas_mask/confessormask7.ogg', 'sound/items/gas_mask/confessormask8.ogg', 'sound/items/gas_mask/confessormask9.ogg',
+					 		'sound/items/gas_mask/confessormask10.ogg')
+			playsound(src, mask_sound, 70, 1)
+			return

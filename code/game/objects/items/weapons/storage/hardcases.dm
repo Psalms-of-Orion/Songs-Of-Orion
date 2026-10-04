@@ -15,6 +15,8 @@
 	bad_type = /obj/item/storage
 	var/sticker = null
 	var/closed = TRUE
+	dropped_sound = 'sound/items/drop_sounds/box.ogg'
+	pickup_sound = 'sound/items/drop_sounds/scrap_drop.ogg'
 
 /obj/item/storage/hcases/can_interact(mob/user)
 	if((!ishuman(user) && (loc != user)) || user.stat || user.restrained())
@@ -103,7 +105,7 @@
 		w_class = ITEM_SIZE_NORMAL
 		closed = TRUE
 
-	playsound(loc, 'sound/weapons/guns/interact/selector.ogg', 100, 1)
+	playsound(loc, 'sound/effects/storage/toolbox.ogg', 100, 1)
 	update_icon()
 
 obj/item/storage/hcases/attackby(obj/item/W, mob/user)

@@ -448,6 +448,7 @@
 	. = handle_item_insertion(W)
 
 /obj/item/storage/dropped(mob/user)
+	playsound(src, dropped_sound,dropped_sound_volume,1)
 	return
 
 /obj/item/storage/attack_hand(mob/user)
@@ -456,7 +457,6 @@
 	else
 		close_all()
 		..()
-
 	add_fingerprint(user)
 
 /obj/item/storage/verb/toggle_gathering_mode()

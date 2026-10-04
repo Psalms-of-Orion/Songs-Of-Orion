@@ -13,6 +13,7 @@
 	attack_verb = list("drilled")
 	tool_qualities = list(QUALITY_DRILLING = 30)
 	spawn_tags = SPAWN_TAG_SURGERY_TOOL
+	dropped_sound = 'sound/items/drop_sounds/metalweapon.ogg'
 
 	use_power_cost = 0.24
 	suitable_cell = /obj/item/cell/small

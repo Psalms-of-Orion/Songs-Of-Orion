@@ -245,7 +245,7 @@
 /var/const/access_cmo = 40
 /datum/access/cmo
 	id = access_cmo
-	desc = "Moebius Biolab Officer"
+	desc = "Brotherhood Coordinator"
 	region = ACCESS_REGION_MEDBAY
 
 // /var/const/free_access_id = 39
@@ -255,7 +255,7 @@
 /var/const/access_merchant = 41
 /datum/access/merchant
 	id = access_merchant
-	desc = "Guild Merchant"
+	desc = "Syndicate Officer"
 	region = ACCESS_REGION_SUPPLY
 
 /var/const/access_network = 42

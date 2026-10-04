@@ -3,12 +3,14 @@
 	desc = "Sleepwear."
 	icon_state = "red_pyjamas"
 	item_state = "w_suit"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/pj/blue
 	name = "blue pj's"
 	desc = "Sleepwear."
 	icon_state = "blue_pyjamas"
 	item_state = "w_suit"
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/under/waiter
@@ -29,6 +31,7 @@
 	icon_state = "sexyclown"
 	item_state = "clown"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/owl
 	name = "owl uniform"
@@ -36,12 +39,14 @@
 	icon_state = "owl"
 	item_state = "owl"
 
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/rainbow
 	name = "rainbow"
 	desc = "rainbow"
 	icon_state = "rainbow"
 	item_state = "rainbow"
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/under/rank/fo_suit
@@ -49,6 +54,7 @@
 	desc = "A teal suit and yellow necktie. An authoritative yet tacky ensemble."
 	icon_state = "teal_suit"
 	item_state = "g_suit"
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/under/suit_jacket
@@ -56,6 +62,7 @@
 	desc = "A black suit and red tie. Very formal."
 	icon_state = "black_suit"
 	item_state = "bl_suit"
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/under/suit_jacket/red
@@ -70,6 +77,7 @@
 	desc = "A black skirt, very fancy!"
 	icon_state = "blackskirt"
 	item_state = "bl_suit"
+	spawn_blacklisted = TRUE
 
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
@@ -79,12 +87,14 @@
 	icon_state = "schoolgirl"
 	item_state = "b_suit"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/overalls
 	name = "laborer's overalls"
 	desc = "A set of durable overalls for getting the job done."
 	icon_state = "overalls"
 	item_state = "lb_suit"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/pirate
 	name = "pirate outfit"
@@ -92,12 +102,14 @@
 	icon_state = "pirate"
 	//item_state = "sl_suit"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/soviet
 	name = "soviet uniform"
 	desc = "For the Motherland!"
 	icon_state = "soviet"
 	item_state = "gy_suit"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/kilt
 	name = "kilt"
@@ -130,12 +142,14 @@
 	desc = "Beige camo pants and a turtleneck."
 	icon_state = "camopants"
 	item_state = "camopants"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/gladiator
 	name = "gladiator uniform"
 	desc = "Are you not entertained? Is that not why you are here?"
 	icon_state = "gladiator"
 	item_state = "o_suit"
+	spawn_blacklisted = TRUE
 
 	body_parts_covered = LOWER_TORSO
 
@@ -145,6 +159,7 @@
 	icon_state = "bride_white"
 	item_state = "nursesuit"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/under/captainformal
@@ -152,6 +167,7 @@
 	desc = "A captain's formal-wear, for special occasions."
 	icon_state = "captain_formal"
 	item_state = "b_suit"
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/under/assistantformal
@@ -159,6 +175,7 @@
 	desc = "A spiffy tuxedo. Perfect for a ball, or just a fancy night out with the boys."
 	icon_state = "assistant_formal"
 	item_state = "gy_suit"
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/under/serviceoveralls
@@ -166,6 +183,7 @@
 	desc = "The very image of a working man. Not that you're probably doing work."
 	icon_state = "mechanic"
 	item_state = "lb_suit"
+	spawn_blacklisted = TRUE
 
 
 /obj/item/clothing/under/blazer
@@ -173,30 +191,35 @@
 	desc = "A bold, yet conservative outfit; red slacks and almost Victorian style tailcoat."
 	icon_state = "blue_blazer"
 	item_state = "blue_blazer"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/dress
 	name = "gray summerdress"
 	desc = "Gray summerdress only worn by the bravest individuals in the cold of space."
 	icon_state = "summerdress"
 	item_state = "summerdress"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/dress/gray
 	name = "gray summerdress"
 	desc = "Gray summerdress only worn by the bravest individuals in the cold of space."
 	icon_state = "summerdress"
 	item_state = "summerdress"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/dress/blue
 	name = "blue summerdress"
 	desc = "A blue dress worn by mostly those of east asian descendance"
 	icon_state = "summerdress2"
 	item_state = "summerdress2"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/dress/red
 	name = "red summerdress"
 	desc = "A red dress worn mostly by those of east asian descendance."
 	icon_state = "summerdress3"
 	item_state = "summerdress3"
+	spawn_blacklisted = TRUE
 
 obj/item/clothing/under/leisure
 	name = "leisure outfit"
@@ -209,6 +232,7 @@ obj/item/clothing/under/leisure/pullover
 	desc = "Brown pullover with indeterminable pattern."
 	icon_state = "pullover"
 	item_state = "pullover"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/leisure/joe
 	name = "red casual suit"
@@ -263,6 +287,7 @@ obj/item/clothing/under/neon
 	desc = "A tracksuit lined with green neon fibers. Slightly luminescent."
 	icon_state = "neon"
 	item_state = "bl_suit"
+	spawn_blacklisted = TRUE
 
 obj/item/clothing/under/neon/yellow
 	name = "yellow neon tracksuit"
@@ -287,6 +312,7 @@ obj/item/clothing/under/jersey
 	desc = "For showing your devotion to god, or the opposite for that matter"
 	icon_state = "jersey"
 	item_state = "jersey"
+	spawn_blacklisted = TRUE
 
 obj/item/clothing/under/cyber
 	name = "augmented jumpsuit"
@@ -299,35 +325,41 @@ obj/item/clothing/under/netrunner
 	desc = "Jumpsuit favored by surveillance officers and VR gamers alike."
 	icon_state = "jensen"
 	item_state = "jensen"
+	spawn_blacklisted = TRUE
 
 obj/item/clothing/under/genericb
 	name = "blue generic outfit"
 	desc = "A simple blue shirt with brown pants."
 	icon_state = "genericb"
 	item_state = "genericb"
+	spawn_blacklisted = TRUE
 
 obj/item/clothing/under/genericw
 	name = "white generic outfit"
 	desc = "A simple white shirt with grey pants."
 	icon_state = "genericw"
 	item_state = "genericw"
+	spawn_blacklisted = TRUE
 
 obj/item/clothing/under/genericr
 	name = "red generic outfit"
 	desc = "A simple red shirt with black pants."
 	icon_state = "genericr"
 	item_state = "genericr"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/gnome
 	name = "gnome outfit"
 	desc = "Against the gnome there is no reception, if there is no other gnomes."
 	icon_state = "gnome"
 	item_state = "gnome"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/tuxedo
 	name = "formal suit"
 	desc = "A very stylish black suit with a necktie. Must have for all crime-boys."
 	icon_state = "tuxedo"
+	spawn_blacklisted = TRUE
 
 //stylish vendor clothes (old)
 /obj/item/clothing/under/white
@@ -335,6 +367,7 @@ obj/item/clothing/under/genericr
 	desc = "White suit, white pants and a white tie."
 	icon_state = "suit_white"
 	item_state = "suit_white"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/red
 	name = "blood red outfit"
@@ -342,30 +375,35 @@ obj/item/clothing/under/genericr
 	icon_state = "suit_red"
 	item_state = "suit_red"
 
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/grey
 	name = "ash grey outfit"
 	desc = "Grey suit, grey pants and a grey tie."
 	icon_state = "suit_grey"
 	item_state = "suit_grey"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/black
 	name = "charcoal black outfit"
 	desc = "Black suit, black pants and a black tie."
 	icon_state = "suit_black"
 	item_state = "suit_black"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/dress/purple
 	name = "black and purple dress"
 	desc = "A black and purple dress, quite stylish"
 	icon_state = "black_purple"
 	item_state = "black_purple"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/dress/white
 	name = "white and yellow dress"
 	desc = "A white and yellow dress, quite stylish"
 	icon_state = "white_yellow"
 	item_state = "white_yellow"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/johnny
 	name = "rockerboy outfit"//Cyberpunk 2077, Johnny Silverhand's outfit
@@ -380,24 +418,28 @@ obj/item/clothing/under/genericr
 		bio = 0,
 		rad = 0
 	)
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/jamrock//Disco
 	name = "brown comfortable clothing"
 	desc = "A white satin shirt that can really catch the light and flare-cut trousers."
 	icon_state = "jamrock_suit"
 	item_state = "jamrock_suit"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/aerostatic//Elysium
 	name = "dark comfortable clothing"
 	desc = "A tan shirt and brown pants that are rather basic."
 	icon_state = "aerostatic_suit"
 	item_state = "aerostatic_suit"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/storage/tracksuit
 	name = "striped tracksuit"
 	desc = "A classic style for hoodlums and bandits."
 	icon_state = "tracksuit"
 	item_state = "tracksuit"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/raider
 	name = "leather outfit"
@@ -412,6 +454,7 @@ obj/item/clothing/under/genericr
 		bio = 0,
 		rad = 0
 	)
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/onestar
 	name = "One Star uniform"
@@ -434,12 +477,14 @@ obj/item/clothing/under/genericr
 	desc = "An Aster\'s Guild branded neosilk tropical shirt. This one makes you feel nostalgic."
 	icon_state = "3005vintage"
 	item_state = "3005vintage"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/tropicalblue
 	name = "blue tropical shirt"
 	desc = "An Aster\'s Guild branded neosilk tropical shirt. This one makes you feel out of touch."
 	icon_state = "miamivice"
 	item_state = "miamivice"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/tropicalblack
 	name = "black tropical shirt"
@@ -452,6 +497,7 @@ obj/item/clothing/under/genericr
 	desc = "An Aster\'s Guild branded neosilk tropical shirt. This one makes you look like puke."
 	icon_state = "tropicopuke"
 	item_state = "tropicopuke"
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/oldsec
 	name = "old security uniform"
@@ -459,6 +505,7 @@ obj/item/clothing/under/genericr
 	icon_state = "nanosec"
 	item_state = "nanosec"
 	siemens_coefficient = 0.8
+	spawn_blacklisted = TRUE
 
 /obj/item/clothing/under/joker
 	name = "red suit with yellow waistcoat"
@@ -704,3 +751,29 @@ obj/item/clothing/under/genericr
 		rad = 15
 	)
 
+/obj/item/clothing/under/nude
+	name = "FBP pouch"
+	desc = "A utility pouch with pockets and an ID holder issued to FBPs and other robotic units that do not need traditional clothing."
+	description_info = "Still counts as public nudity if the chest and groin are not robotic or covered by other clothing."
+	icon_state = "nudity"
+	item_state = "nudity"
+
+/obj/item/clothing/under/jorts
+	name = "jorts"
+	desc = "A pair of exceedingly short jean shorts and a cropped tank-top."
+	icon_state = "jorts"
+
+/obj/item/clothing/under/jorts/green
+	name = "jorts"
+	desc = "A pair of exceedingly short jean shorts and a cropped green tank-top."
+	icon_state = "jorts_green"
+
+/obj/item/clothing/under/jorts/red
+	name = "jorts"
+	desc = "A pair of exceedingly short jean shorts and a cropped red tank-top."
+	icon_state = "jorts_red"
+
+/obj/item/clothing/under/jorts/black
+	name = "jorts"
+	desc = "A pair of exceedingly short jean shorts and a cropped black tank-top."
+	icon_state = "jorts_black"

@@ -11,11 +11,13 @@
 	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 1)
 	matter = list(MATERIAL_STEEL = 5)
 	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
-	hitsound = 'sound/weapons/melee/blunthit.ogg'
+	hitsound = "shovel"
 	sharp = FALSE
 	edge = TRUE
 	tool_qualities = list(QUALITY_SHOVELING = 30, QUALITY_DIGGING = 30, QUALITY_EXCAVATION = 10, QUALITY_HAMMERING = 10)
 	rarity_value = 9.6
+	dropped_sound = 'sound/items/drop_sounds/shovel.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 
 /obj/item/tool/shovel/improvised
 	name = "junk shovel"

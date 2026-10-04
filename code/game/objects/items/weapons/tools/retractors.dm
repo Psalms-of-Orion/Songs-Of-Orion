@@ -7,3 +7,5 @@
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
 	tool_qualities = list(QUALITY_RETRACTING = 30)
 	spawn_tags = SPAWN_TAG_SURGERY_TOOL
+	dropped_sound = 'sound/items/drop_sounds/scrap.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'

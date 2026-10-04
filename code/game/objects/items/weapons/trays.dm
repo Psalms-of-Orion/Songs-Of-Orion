@@ -15,7 +15,8 @@
 	matter = list(MATERIAL_STEEL = 3)
 	var/list/carrying = list() // List of things on the tray. - Doohl
 	var/max_carry = 10
-
+	dropped_sound = 'sound/items/drop_sounds/shovel_drop.ogg'
+	pickup_sound = 'sound/items/drop_sounds/food.ogg'
 /obj/item/tray/attack(mob/living/carbon/M, mob/living/carbon/user)
 
 	// Drop all the things. All of them.
