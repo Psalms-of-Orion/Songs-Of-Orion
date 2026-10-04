@@ -1083,6 +1083,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/item/clothing/suit/armor/vest/toggle,
 /turf/floor/tiled/white/panels,
 /area/eris/security)
 "aYj" = (
@@ -1407,6 +1408,7 @@
 /obj/structure/closet/secure_closet/reinforced/astra/locker/armor{
 	pixel_y = 12
 	},
+/obj/item/clothing/suit/armor/vest/toggle,
 /turf/floor/tiled/white/danger,
 /area/eris/security)
 "bka" = (
@@ -1856,6 +1858,8 @@
 /obj/machinery/door/blast/shutters{
 	id = "weapon_rack"
 	},
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/suit/armor/vest,
 /turf/floor/tiled/dark/cargo,
 /area/eris/command/bridge)
 "bDY" = (
@@ -3012,6 +3016,15 @@
 	},
 /turf/floor/reinforced,
 /area/eris/rnd/mixing)
+"cAF" = (
+/obj/machinery/telecomms/processor/preset_four,
+/turf/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 180;
+	oxygen = 0;
+	temperature = 200
+	},
+/area/eris/command/tcommsat/chamber)
 "cAL" = (
 /obj/spawner/scrap/low_chance,
 /obj/spawner/scrap/low_chance,
@@ -12113,7 +12126,7 @@
 	frequency = 1380;
 	name = "Escape Pod Hatch"
 	},
-/turf/floor/tiled/white/techfloor_grid/doorway,
+/turf/floor/tiled/dark/gray_perforated,
 /area/eris/hallway/side/eschangara)
 "kpe" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12322,6 +12335,7 @@
 /obj/structure/closet/secure_closet/personal/astra{
 	pixel_y = 12
 	},
+/obj/item/clothing/suit/armor/vest/detective,
 /turf/floor/tiled/white/panels,
 /area/eris/security)
 "kAa" = (
@@ -15791,7 +15805,13 @@
 	dir = 1;
 	pixel_y = 32
 	},
-/turf/floor/tiled/dark/techfloor_grid,
+/obj/machinery/telecomms/bus/preset_three,
+/turf/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 180;
+	oxygen = 0;
+	temperature = 200
+	},
 /area/eris/command/tcommsat/chamber)
 "nGD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -16686,6 +16706,7 @@
 /obj/structure/closet/secure_closet/personal/astra/nt_sec{
 	dir = 4
 	},
+/obj/item/clothing/suit/armor/vest,
 /turf/floor/tiled/white/panels,
 /area/eris/security)
 "oBl" = (
@@ -19379,8 +19400,6 @@
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/device/lighting/toggleable/flashlight,
-/obj/item/clothing/suit/armor/vest,
-/obj/item/clothing/suit/armor/vest,
 /turf/floor/tiled/white/panels,
 /area/eris/security)
 "qKx" = (
@@ -23216,8 +23235,13 @@
 /turf/floor/tiled/white/techfloor_grid/doorway,
 /area/eris/security/checkpoint2)
 "tHk" = (
-/obj/landmark/storyevent/midgame_stash_spawn,
-/turf/floor/tiled/dark/techfloor_grid,
+/obj/machinery/telecomms/bus/preset_four,
+/turf/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 180;
+	oxygen = 0;
+	temperature = 200
+	},
 /area/eris/command/tcommsat/chamber)
 "tHo" = (
 /obj/structure/closet/wardrobe/color/mixed,
@@ -26075,6 +26099,7 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
+/obj/item/clothing/suit/armor/vest/detective,
 /turf/floor/tiled/white/panels,
 /area/eris/security)
 "wlo" = (
@@ -28267,6 +28292,13 @@
 	},
 /turf/floor/tiled/white/techfloor,
 /area/eris/medical/surgery)
+"ydW" = (
+/obj/structure/closet/secure_closet/personal/astra/nt_sec{
+	dir = 4
+	},
+/obj/item/clothing/suit/armor/vest/toggle,
+/turf/floor/tiled/white/panels,
+/area/eris/security)
 "yeL" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 0
@@ -34651,7 +34683,7 @@ brU
 tJd
 jDH
 fOA
-seP
+cAF
 seP
 seP
 seP
@@ -62786,8 +62818,8 @@ mGQ
 uHO
 uvM
 aXr
-oAS
-oAS
+ydW
+ydW
 oAS
 ccO
 qJT
