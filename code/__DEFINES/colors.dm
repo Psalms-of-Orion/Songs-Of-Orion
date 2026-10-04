@@ -118,7 +118,7 @@
 
 //Light color
 
-#define COLOR_LIGHTING_DEFAULT_BRIGHT					"#d0cec1"
+#define COLOR_LIGHTING_DEFAULT_BRIGHT					"#a3a08f"
 #define COLOR_LIGHTING_DEFAULT_DARK						"#444444"
 
 #define COLOR_LIGHTING_RED_MACHINERY					"#dd081b"
