@@ -57,7 +57,7 @@ jobs:
 
   compile_all_maps:
     name: Compile Maps
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     concurrency:
       group: compile_all_maps-${{ github.ref }}
       cancel-in-progress: true
@@ -76,7 +76,7 @@ jobs:
 
   run_all_tests:
     name: Integration Tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     services:
       mysql:
         image: mysql:latest
@@ -127,7 +127,7 @@ jobs:
   compare_screenshots:
     needs: [run_all_tests]
     name: Compare Screenshot Tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       # If we ever add more artifacts, this is going to break, but it'll be obvious.
