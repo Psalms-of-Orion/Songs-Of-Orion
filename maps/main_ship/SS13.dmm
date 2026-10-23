@@ -11708,8 +11708,8 @@
 /area/eris/engineering/engine_monitoring)
 "jUj" = (
 /obj/machinery/door/airlock/orion{
-	tag_door = "cargo_bay_door";
-	frequency = 1380
+	frequency = 1380;
+	id_tag = "cargo_bay_door"
 	},
 /turf/floor/tiled/white/techfloor_grid/doorway,
 /area/eris/quartermaster/hangarsupply)
