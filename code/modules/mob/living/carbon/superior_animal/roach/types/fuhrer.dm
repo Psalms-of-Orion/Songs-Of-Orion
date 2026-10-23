@@ -90,7 +90,7 @@ reinforcements left it will attempt to evacuate*/
 
 
 
-
+/* //NO RETREAT- only because burrows are broken somehow.
 		//If no distress calls available, sound a retreat instead
 		else if (retreat_calls)
 			retreat_calls --
@@ -102,7 +102,7 @@ reinforcements left it will attempt to evacuate*/
 			visible_message(SPAN_DANGER("[src] emits a haunting scream as it turns to flee, taking the nearby horde with it...."))
 			for (var/obj/structure/burrow/B in find_nearby_burrows())
 				B.evacuate()
-
+*/
 /mob/living/carbon/superior_animal/roach/fuhrer/leaveOvermind()
 	if(overseer?.leader == src && !QDELETED(overseer)) // this gets called once by dying and another time by the destruction of the overseer, and it doesn't need to delete the second time.
 		qdel(overseer) // disband
