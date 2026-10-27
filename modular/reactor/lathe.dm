@@ -61,18 +61,19 @@
 	dir = SOUTH
 	var/width = 2
 
-/obj/machinery/autolathe/nuclear/Initialize()
+/obj/machinery/autolathe/nuclear/LateInitialize()
 	. = ..()
-	if(!crafting_designs)
-		for(var/designpath in subtypesof(/datum/design/nuclear))
-			var/datum/computer_file/binary/design/D = new
-			D.set_design_type(designpath)
-			if(istype(D.design))
-				LAZYADD(crafting_designs, D)
-			else
-				log_debug("Nuclear design file \"[D]\" did not possess [designpath]")
-				D.qdel_self()
-	LAZYADD(designs, crafting_designs)
+	spawn(10 SECONDS)
+		if(!crafting_designs)
+			for(var/designpath in subtypesof(/datum/design/nuclear))
+				var/datum/computer_file/binary/design/D = new
+				D.set_design_type(designpath)
+				if(istype(D.design))
+					LAZYADD(crafting_designs, D)
+				else
+					log_debug("Nuclear design file \"[D]\" did not possess [designpath]")
+					D.qdel_self()
+		LAZYADD(designs, crafting_designs)
 
 	if(width > 1)
 		if(dir in list(SOUTH, WEST))

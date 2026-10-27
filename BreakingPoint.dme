@@ -2874,6 +2874,7 @@
 #include "modular\reactor\lathe.dm"
 #include "modular\reactor\misc.dm"
 #include "modular\reactor\reactor.dm"
+#include "modular\reactor\rods.dm"
 #include "modular\terminals\engineering.dm"
 #include "modular\terminals\public.dm"
 #include "modular\terminals\security.dm"
