@@ -8,12 +8,12 @@
 	power_channel = STATIC_EQUIP
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 10
-	active_power_usage = 10000
+	active_power_usage = 1500
 
 	var/obj/item/fuel_rod/fuel
 	var/obj/item/reagent_containers/container
 	var/active = FALSE
-	var/refill_rate = 10 // Amount of reagent used to refill every Process()
+	var/refill_rate = 1.3 // Amount of reagent used to refill every Process()
 	dir = SOUTH
 	var/width = 2
 
@@ -47,7 +47,7 @@
 	if(istype(W, /obj/item/reagent_containers)) // Is it something that hold chems ?
 		// Do we already have one inside?
 		if(container)
-			to_chat(user, "[src] already got a beaker.")
+			to_chat(user, "[src] already has a beaker.")
 			return
 		else
 			if(insert_item(W, user))
@@ -58,7 +58,7 @@
 
 	if(istype(W, /obj/item/fuel_rod))
 		if(fuel)
-			to_chat(user, "[src] already got a fuel rod.")
+			to_chat(user, "[src] already has a fuel rod.")
 			return
 
 		var/obj/item/fuel_rod/F = W
@@ -84,15 +84,13 @@
 		visible_message("[src] stops due to missing a fuel rod or reagent container.")
 		return
 
-	if(fuel.life >= initial(fuel.life))
-		STOP_PROCESSING(SSmachines, src)
-		active = FALSE
-		update_icon()
+	if(fuel.life >= 99)
+		stop_working()
 		visible_message("[src] stops as the fuel rod is fully refilled.")
 		return
 
 	// Determine the amount of reagent to use this tick with either the refill rate, the amount left to fill on the fuel rod, or the amount of reagent available, depending on which is smallest.
-	var/refill_amount = min(refill_rate, initial(fuel.life) - fuel.life, container.reagents.get_reagent_amount(fuel.refill_reagent))
+	var/refill_amount = min(refill_rate, 100 - fuel.life, container.reagents.get_reagent_amount(fuel.refill_reagent))
 
 	if(refill_amount == 0)
 		stop_working()
@@ -100,7 +98,7 @@
 		return
 
 	if(container.reagents.remove_reagent(fuel.refill_reagent, refill_amount))
-		fuel.life = clamp(fuel.life + refill_amount, 0, initial(fuel.life))
+		fuel.life = clamp(fuel.life + refill_amount, 0, 100)
 		fuel.name = initial(fuel.name)
 		playsound(src, 'sound/effects/beam.ogg', 60, 1)
 		PulseRadiation(src, rand(1,5), rand(1,8))
@@ -115,7 +113,8 @@
 /obj/machinery/nuclear_centrifuge/proc/stop_working()
 	STOP_PROCESSING(SSmachines, src)
 	active = FALSE
-	update_icon()
+	spawn(1 SECOND)
+		update_icon()
 	playsound(src, 'sound/effects/lift_heavy_stop.ogg', 60, 1)
 	set_power_use(IDLE_POWER_USE)
 
