@@ -486,12 +486,13 @@
 
 /obj/structure/closet/secure_closet/freezer/astra/blood/populate_contents()
 	new /obj/item/reagent_containers/blood/APlus(src)
-	new /obj/item/reagent_containers/blood/AMinus
-	new /obj/item/reagent_containers/blood/BPlus
-	new /obj/item/reagent_containers/blood/BMinus
-	new /obj/item/reagent_containers/blood/OPlus
-	new /obj/item/reagent_containers/blood/OMinus
-	new /obj/item/reagent_containers/blood/empty
+	new /obj/item/reagent_containers/blood/AMinus(src)
+	new /obj/item/reagent_containers/blood/BPlus(src)
+	new /obj/item/reagent_containers/blood/BMinus(src)
+	new /obj/item/reagent_containers/blood/OPlus(src)
+	new /obj/item/reagent_containers/blood/OMinus(src)
+	new /obj/item/reagent_containers/blood/OMinus(src)
+	new /obj/item/reagent_containers/blood/empty(src)
 
 /obj/structure/closet/secure_closet/astra/bar
 	name = "drink cabinet"
