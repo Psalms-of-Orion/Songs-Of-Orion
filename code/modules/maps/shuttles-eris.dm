@@ -402,6 +402,9 @@
 	shuttle_area = /area/centcom/suppy
 	location = 1
 	move_time = 60
+	warmup_time = 8
+	sound_takeoff = 'sound/effects/shuttle_takeoff.ogg'
+	sound_landing = 'sound/effects/shuttle_landing.ogg'
 
 /datum/shuttle/autodock/ferry/cargo/New()
 	SStrade.shuttle = src
@@ -443,3 +446,30 @@
 		for(var/mob/M in A)
 			if(isliving(M))
 				. += M
+
+/datum/shuttle/autodock/ferry/cargo/proc/noisy(var/obj/effect/shuttle_landmark/destination)
+
+	if(sound_takeoff)
+		playsound(/obj/effect/shuttle_landmark/supply/station, sound_takeoff, 100, 20, 0.2)
+
+
+/datum/shuttle/autodock/ferry/cargo/proc/noisy_land(var/obj/effect/shuttle_landmark/destination, var/obj/effect/shuttle_landmark/interim, var/travel_time)
+	if(moving_status != SHUTTLE_IDLE) return
+
+	moving_status = SHUTTLE_WARMUP
+	if(sound_takeoff)
+		playsound(src, sound_takeoff, 100, 20, 0.2)
+	spawn(warmup_time*10)
+		if(moving_status == SHUTTLE_IDLE)
+			return	//someone cancelled the launch
+
+		arrive_time = world.time + travel_time*10
+		moving_status = SHUTTLE_INTRANSIT
+		if(attempt_move(interim))
+			var/fwooshed = 0
+			while(world.time < arrive_time)
+				if(!fwooshed && (arrive_time - world.time) < 100)
+					fwooshed = 1
+					playsound(destination, sound_landing, 100, 20)
+				sleep(5)
+

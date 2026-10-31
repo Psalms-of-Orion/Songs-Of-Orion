@@ -96,15 +96,23 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
+"aC" = (
+/obj/structure/table/orion_reinforced,
+/obj/structure/decor/random_plant/desktop{
+	pixel_x = -5;
+	pixel_y = 17
+	},
+/turf/floor/tiled/orion,
+/area/centcom/evac)
 "aD" = (
 /turf/floor/tiled/dark/gray_perforated,
 /area/centcom/evac)
 "aE" = (
-/obj/machinery/cryopod,
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/light/wall{
+	dir = 1;
+	pixel_y = 32
 	},
-/turf/floor/tiled/dark/gray_platform,
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "aI" = (
 /turf/floor/holofloor/tiled/dark,
@@ -178,6 +186,10 @@
 	icon_state = "cargoshwall5"
 	},
 /area/centcom/suppy)
+"bE" = (
+/obj/machinery/vending/cola/astra,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "bI" = (
 /obj/structure/cryofeed,
 /turf/floor/tiled/dark/gray_platform,
@@ -206,11 +218,11 @@
 /turf/open/holonofloor,
 /area/space)
 "cK" = (
-/turf/floor/tiled/dark/techfloor_grid,
+/turf/floor/tiled/orion/ribbed,
 /area/centcom/evac)
 "cL" = (
-/obj/structure/table/woodentable,
-/turf/floor/tiled/dark/golden,
+/obj/structure/table/orion_reinforced,
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "cM" = (
 /obj/structure/bed/chair/custom/holochair{
@@ -229,10 +241,8 @@
 /turf/floor/tiled/dark/golden,
 /area/centcom/evac)
 "dj" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/floor/tiled/dark/golden,
+/obj/machinery/vending/snacks,
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "dk" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
@@ -242,20 +252,25 @@
 	tag_door = "escape_pod_1_recovery_hatch";
 	id_tag = "escape_pod_1_recovery"
 	},
-/turf/floor/tiled/dark/golden,
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "dl" = (
+/obj/structure/decor/random_plant,
+/turf/floor/tiled/orion,
+/area/centcom/evac)
+"dn" = (
 /obj/item/modular_computer/console{
 	dir = 4
 	},
-/turf/floor/tiled/dark/golden,
-/area/centcom/evac)
-"dn" = (
-/turf/floor/tiled/dark/gray_platform,
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "do" = (
-/obj/structure/bed/chair/wood,
-/turf/floor/tiled/dark/gray_platform,
+/turf/wall/untinted/orion/window,
+/area/centcom/evac)
+"dp" = (
+/obj/structure/medical_stand,
+/obj/item/reagent_containers/blood/OMinus,
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "du" = (
 /obj/structure/shuttle_part/cargo{
@@ -318,10 +333,7 @@
 /turf/floor/holofloor/reinforced,
 /area/space)
 "dT" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
-/turf/floor/tiled/dark/gray_platform,
+/turf/floor/tiled/orion/panel,
 /area/centcom/evac)
 "dU" = (
 /obj/machinery/door/airlock/external{
@@ -345,8 +357,9 @@
 /turf/open/holonofloor,
 /area/holodeck/source/industrial_arena)
 "dX" = (
-/obj/machinery/light,
-/turf/floor/tiled/dark/golden,
+/obj/structure/table/orion_reinforced,
+/obj/item/clothing/head/patrol/centcom,
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "dZ" = (
 /obj/structure/table/woodentable,
@@ -367,6 +380,12 @@
 /obj/machinery/cryopod,
 /obj/machinery/light,
 /turf/floor/tiled/dark/gray_platform,
+/area/centcom/evac)
+"ed" = (
+/obj/machinery/vending/cola/astra{
+	dir = 1
+	},
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "ee" = (
 /obj/structure/railing/holorailing/grey{
@@ -396,7 +415,7 @@
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
 "ek" = (
-/turf/wall/low/with_glass/smart,
+/turf/wall/untinted/orion_reinforced,
 /area/centcom/evac)
 "ep" = (
 /turf/space,
@@ -900,6 +919,10 @@
 	},
 /turf/space/transit/north/shuttlespace_ns15,
 /area/space)
+"gr" = (
+/obj/structure/table/orion_reinforced,
+/turf/floor/tiled/orion,
+/area/centcom/evac)
 "gu" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdown";
@@ -961,6 +984,10 @@
 	},
 /turf/space/transit/north/shuttlespace_ns12,
 /area/space)
+"gL" = (
+/obj/structure/table/orion_reinforced,
+/turf/floor/carpet/turcarpet,
+/area/centcom/evac)
 "gN" = (
 /obj/structure/table/glass,
 /turf/floor/dummy{
@@ -1000,6 +1027,12 @@
 	},
 /turf/space/transit/north/shuttlespace_ns8,
 /area/space)
+"gY" = (
+/obj/machinery/vending/coffee/astra{
+	dir = 1
+	},
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "gZ" = (
 /turf/wall/dummy,
 /area/centcom/merc_base)
@@ -1120,7 +1153,7 @@
 /turf/space,
 /area/space)
 "ho" = (
-/turf/wall/reinforced,
+/turf/wall/untinted/test,
 /area/centcom/evac)
 "hp" = (
 /obj/structure/bed/chair/comfy/black,
@@ -1240,11 +1273,12 @@
 	},
 /area/centcom/merc_base)
 "hM" = (
-/obj/structure/sign/faction/neotheology_cross,
-/turf/wall/reinforced,
+/turf/wall/untinted/orion/window/reinforced,
 /area/centcom/evac)
 "hR" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/orion/centcom{
+	dir = 1
+	},
 /turf/floor/tiled/dark,
 /area/centcom/evac)
 "hS" = (
@@ -1644,7 +1678,7 @@
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
 "jy" = (
-/turf/space,
+/turf/floor/carpet/turcarpet,
 /area/centcom/evac)
 "jA" = (
 /obj/machinery/light{
@@ -2212,6 +2246,12 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
+"kY" = (
+/obj/machinery/vending/snacks{
+	dir = 1
+	},
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "kZ" = (
 /obj/machinery/door/window{
 	name = "Brig";
@@ -2622,6 +2662,10 @@
 	dir = 8
 	},
 /area/wizard_station)
+"ms" = (
+/obj/machinery/light/wall,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "mt" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall20"
@@ -3040,6 +3084,13 @@
 /obj/structure/lattice,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
+"pv" = (
+/obj/structure/decor/random_plant,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
+"pw" = (
+/turf/floor/tiled/orion/hazard/panel,
+/area/centcom/evac)
 "pO" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_leftnostop";
@@ -3384,6 +3435,9 @@
 /obj/item/bedsheet/hos,
 /turf/floor/carpet,
 /area/centcom/pirate_base)
+"us" = (
+/turf/floor/tiled/orion,
+/area/centcom/evac)
 "uu" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/shoes/sandal,
@@ -3821,6 +3875,12 @@
 	},
 /turf/space,
 /area/centcom/suppy)
+"yO" = (
+/obj/machinery/vending/juice{
+	dir = 1
+	},
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "yQ" = (
 /obj/structure/railing/holorailing/grey,
 /obj/structure/lattice,
@@ -3993,6 +4053,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
+"AC" = (
+/obj/structure/table/orion_reinforced,
+/obj/item/storage/hcases/med/astra/combat,
+/turf/floor/tiled/orion/hazard/panel,
+/area/centcom/evac)
 "AD" = (
 /obj/structure/railing/holorailing{
 	dir = 1
@@ -4143,6 +4208,11 @@
 /obj/structure/railing/holorailing/grey,
 /turf/open/holonofloor,
 /area/space)
+"Cn" = (
+/obj/structure/table/orion_reinforced,
+/obj/item/storage/hcases/med/astra/surgery/contractor,
+/turf/floor/tiled/orion/hazard/panel,
+/area/centcom/evac)
 "Cq" = (
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
@@ -4548,6 +4618,13 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
+"Hc" = (
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 28
+	},
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Hh" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/box/cups,
@@ -4590,6 +4667,9 @@
 "Hu" = (
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
+"Hy" = (
+/turf/floor/tiled/orion/fan,
+/area/centcom/evac)
 "HB" = (
 /turf/floor/wood,
 /area/centcom/pirate_base)
@@ -4968,6 +5048,11 @@
 /obj/structure/bed/chair/custom/holochair,
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
+"Lz" = (
+/obj/structure/table/orion_reinforced,
+/obj/item/storage/hcases/med/astra/adv,
+/turf/floor/tiled/orion/hazard/panel,
+/area/centcom/evac)
 "LG" = (
 /obj/machinery/door/airlock/external{
 	name = "Ship External Access";
@@ -5109,6 +5194,10 @@
 	dir = 8
 	},
 /area/wizard_station)
+"NC" = (
+/obj/machinery/vending/juice,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "NE" = (
 /obj/structure/table/bar_special,
 /obj/item/flame/lighter{
@@ -5309,6 +5398,10 @@
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/industrial)
+"Pa" = (
+/obj/structure/bed/roller,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Pc" = (
 /obj/structure/catwalk,
 /turf/open/holonofloor,
@@ -5410,6 +5503,10 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
+"QC" = (
+/obj/structure/bed/chair,
+/turf/floor/carpet/turcarpet,
+/area/centcom/evac)
 "QG" = (
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 8
@@ -5487,6 +5584,9 @@
 /obj/structure/table/holo_woodentable,
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
+"Rj" = (
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Rn" = (
 /turf/wall/dummy,
 /area/centcom/pirate_base)
@@ -5609,6 +5709,10 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
+"SI" = (
+/obj/structure/bed/chair/office/dark,
+/turf/floor/carpet/turcarpet,
+/area/centcom/evac)
 "SR" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 8
@@ -6000,6 +6104,10 @@
 	dir = 8
 	},
 /area/wizard_station)
+"Xa" = (
+/obj/machinery/vending/coffee/astra,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Xl" = (
 /obj/structure/table/holo_woodentable,
 /obj/item/reagent_containers/food/drinks/shaker,
@@ -6045,7 +6153,7 @@
 	tag_door = "escape_pod_2_recovery_hatch";
 	id_tag = "escape_pod_2_recovery"
 	},
-/turf/floor/tiled/dark/golden,
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "XL" = (
 /obj/structure/table/standard,
@@ -6092,6 +6200,10 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial)
+"Ya" = (
+/obj/machinery/sleeper/astra,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Yd" = (
 /obj/structure/bed/chair/custom/holochair/bar{
 	dir = 1
@@ -6208,6 +6320,12 @@
 	},
 /turf/space/transit/north/shuttlespace_ns4,
 /area/space)
+"ZM" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/floor/carpet/turcarpet,
+/area/centcom/evac)
 "ZR" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 1
@@ -8489,7 +8607,7 @@ aa
 aa
 aa
 aa
-aa
+Ie
 aa
 aa
 aa
@@ -10105,7 +10223,7 @@ aa
 aa
 aa
 aa
-Ie
+aa
 aa
 aa
 aa
@@ -13421,17 +13539,17 @@ aa
 aa
 aa
 aa
-ho
-ho
-ek
-ek
-ek
-ek
-ek
-ek
-ek
-ho
-ho
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -13623,17 +13741,17 @@ aa
 aa
 aa
 aa
-ho
-cL
-dl
-dl
-dl
-dl
-dl
-dl
-dl
-cL
-ho
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -13825,17 +13943,17 @@ aa
 aa
 aa
 aa
-ho
-cN
-dn
-dn
-dn
-dn
-dn
-dn
-dn
-cN
-ho
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -14027,17 +14145,17 @@ aa
 aa
 aa
 aa
-ho
-cN
-dn
-dn
-hZ
-hZ
-hZ
-dn
-dn
-cN
-ho
+ek
+ek
+hM
+hM
+hM
+hM
+hM
+hM
+hM
+ek
+ek
 aa
 aa
 aa
@@ -14229,17 +14347,17 @@ ho
 ho
 ho
 ho
-ho
-dj
+ek
+cL
 dn
 dn
-hZ
-hZ
-hZ
+dn
+dn
+dn
 dn
 dn
 dX
-ho
+ek
 ho
 ho
 ho
@@ -14427,21 +14545,21 @@ aa
 aa
 aa
 ho
-at
-at
-at
-at
-hM
-cN
-dn
-dn
-hZ
-hZ
-hZ
-dn
-dn
-cN
-hM
+Ya
+Rj
+Pa
+dp
+ek
+Hc
+jy
+jy
+jy
+jy
+jy
+jy
+jy
+Rj
+ek
 at
 at
 at
@@ -14629,20 +14747,20 @@ aa
 aa
 aa
 ho
-au
-au
-au
-au
+aE
+Rj
+cL
+Rj
 ek
-cN
-dn
-dn
-hZ
-hZ
-hZ
-dn
-dn
-cN
+aE
+jy
+jy
+jy
+jy
+jy
+jy
+jy
+ms
 ek
 au
 au
@@ -14830,27 +14948,27 @@ aa
 aa
 aa
 aa
-ek
-aD
-aD
-aD
-aD
+hM
+AC
+pw
+pw
+pw
 cK
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
+cK
+dT
+cK
+cK
+cK
+cK
+cK
+dT
+cK
 cK
 aD
 aD
 aD
 aD
-ek
+do
 aa
 aa
 aa
@@ -15032,27 +15150,27 @@ aa
 aa
 aa
 aa
-ek
-aD
-aD
-aD
-aD
+hM
+Cn
+pw
+pw
+pw
 cK
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
+cK
+dT
+cK
+cK
+cK
+cK
+cK
+dT
+cK
 cK
 aD
 aD
 aD
 aD
-ek
+do
 aa
 aa
 aa
@@ -15234,27 +15352,27 @@ aa
 aa
 aa
 aa
-ek
-aD
-aD
-aD
-aD
+hM
+Lz
+pw
+pw
+pw
 cK
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
+cK
+dT
+cK
+cK
+cK
+cK
+cK
+dT
+cK
 cK
 aD
 aD
 aD
 aD
-ek
+do
 aa
 aa
 aa
@@ -15438,20 +15556,20 @@ aa
 aa
 ho
 aE
-cq
-cq
-cq
-ek
-cN
-dn
-dn
-hZ
-hZ
-hZ
-dn
-dn
-cN
-ek
+Rj
+cL
+Rj
+hM
+pv
+dT
+us
+us
+dl
+us
+us
+dT
+pv
+hM
 cq
 cq
 cq
@@ -15639,21 +15757,21 @@ aa
 aa
 aa
 ho
-bI
-bI
-bI
-bI
-hM
-cN
-do
-dL
-hZ
-hZ
-hZ
-dL
+Ya
+Rj
+Pa
+dp
+ek
+Xa
 dT
-cN
+jy
+ZM
 hM
+QC
+jy
+dT
+ed
+ek
 bI
 bI
 bI
@@ -15842,23 +15960,23 @@ aa
 aa
 ho
 ho
-ho
-ho
-ho
-ho
+ek
+ek
+ek
+ek
 dj
-do
-dL
-hZ
-hZ
-hZ
-dL
 dT
-dX
-ho
-ho
-ho
-ho
+jy
+ZM
+hM
+QC
+jy
+dT
+yO
+ek
+ek
+ek
+ek
 ho
 ho
 aa
@@ -16047,17 +16165,17 @@ ho
 zW
 jd
 jd
-ho
-cN
-do
-dL
-hZ
-hZ
-hZ
-dL
+ek
+NC
 dT
-cN
-ho
+jy
+ZM
+hM
+QC
+jy
+dT
+kY
+ek
 dZ
 hZ
 Ln
@@ -16249,17 +16367,17 @@ ho
 Uy
 ji
 jf
-ho
-cN
-do
-dL
-hZ
-hZ
-hZ
-dL
+ek
+bE
 dT
-cN
-ho
+jy
+ZM
+hM
+QC
+jy
+dT
+gY
+ek
 dL
 hZ
 Ln
@@ -16452,15 +16570,15 @@ hz
 ji
 ji
 hR
-cN
-do
-dL
-hZ
-hZ
-hZ
-dL
+cK
 dT
-cN
+us
+gr
+aC
+gr
+us
+dT
+cK
 hR
 cN
 hZ
@@ -16653,17 +16771,17 @@ ho
 hA
 ji
 ji
-ho
-cN
-do
-dL
-hZ
-hZ
-hZ
-dL
+ek
+Rj
 dT
-cN
-ho
+Hy
+us
+us
+us
+Hy
+dT
+Rj
+ek
 dL
 hZ
 Ln
@@ -16855,17 +16973,17 @@ ho
 jd
 jd
 jd
-ho
-cN
-dn
-dn
-hZ
-hZ
-hZ
-dn
-dn
-cN
-ho
+ek
+aE
+dT
+cK
+cK
+cK
+cK
+cK
+dT
+Rj
+ek
 dL
 hZ
 Ln
@@ -17057,17 +17175,17 @@ ho
 ho
 ho
 ho
-hM
-cN
-dn
-dn
-hZ
-hZ
-hZ
-dn
-dn
-cN
-hM
+ek
+Hc
+dT
+gL
+gL
+jy
+gL
+gL
+dT
+Rj
+ek
 ho
 ho
 ho
@@ -17259,18 +17377,18 @@ aa
 aa
 aa
 aa
-ho
+ek
 dk
-dn
-dn
-hZ
-hZ
-hZ
-dn
-dn
-XJ
-ho
+dT
+gL
+SI
 jy
+jy
+gL
+dT
+XJ
+ek
+aa
 aa
 aa
 aa
@@ -17461,17 +17579,17 @@ aa
 aa
 aa
 aa
-ho
-ho
-dK
-ho
-hM
 ek
-hM
-ho
+ek
+dK
+ek
+ek
+ek
+ek
+ek
 dU
-ho
-ho
+ek
+ek
 aa
 aa
 aa
