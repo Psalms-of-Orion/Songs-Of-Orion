@@ -62,17 +62,6 @@
 /obj/machinery/floor_light/prebuilt,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"ar" = (
-/turf/shuttle/floor/mining{
-	icon_state = "7,7"
-	},
-/area/shuttle/mining/station)
-"as" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/turf/floor/carpet/turcarpet,
-/area/centcom/evac)
 "at" = (
 /obj/structure/cryofeed{
 	dir = 4
@@ -107,17 +96,14 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"ay" = (
-/obj/machinery/light/small,
-/turf/shuttle/floor/science{
-	icon_state = "10,7"
+"aC" = (
+/obj/structure/table/orion_reinforced,
+/obj/structure/decor/random_plant/desktop{
+	pixel_x = -5;
+	pixel_y = 17
 	},
-/area/shuttle/research/station)
-"az" = (
-/turf/shuttle/floor/mining{
-	icon_state = "10,9"
-	},
-/area/shuttle/mining/station)
+/turf/floor/tiled/orion,
+/area/centcom/evac)
 "aD" = (
 /turf/floor/tiled/dark/gray_perforated,
 /area/centcom/evac)
@@ -136,17 +122,6 @@
 	icon_state = "cargoshwall17"
 	},
 /area/centcom/suppy)
-"aM" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,10"
-	},
-/area/shuttle/research/station)
-"aO" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,6"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "aR" = (
 /obj/structure/table/bar_special,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -186,11 +161,6 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/space)
-"aW" = (
-/turf/shuttle/floor/science{
-	icon_state = "12,2"
-	},
-/area/shuttle/research/station)
 "aX" = (
 /obj/structure/table/holobar_special,
 /obj/structure/catwalk,
@@ -207,230 +177,36 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/space)
-"bb" = (
-/turf/shuttle/wall/mining{
-	icon_state = "1,22"
-	},
-/area/shuttle/mining/station)
-"bc" = (
-/turf/shuttle/floor/mining{
-	icon_state = "12,17"
-	},
-/area/shuttle/mining/station)
-"be" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,15"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"bh" = (
-/turf/shuttle/wall/mining{
-	icon_state = "1,17"
-	},
-/area/shuttle/mining/station)
-"bl" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,10"
-	},
-/area/shuttle/mining/station)
-"bm" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "6,20"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"bn" = (
-/obj/item/tool/pickaxe/excavation,
-/obj/item/tool/pickaxe,
-/obj/item/tool/wrench,
-/obj/item/device/measuring_tape,
-/obj/item/stack/flag/green,
-/obj/structure/table/steel,
-/turf/shuttle/floor/science{
-	icon_state = "13,5"
-	},
-/area/shuttle/research/station)
-"bp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/turf/shuttle/floor/mining{
-	icon_state = "13,20"
-	},
-/area/shuttle/mining/station)
-"bs" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "0,17"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "bt" = (
 /obj/structure/railing/holorailing/grey,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
-"bw" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,11"
-	},
-/area/shuttle/research/station)
-"bx" = (
-/obj/machinery/telecomms/relay/preset/mining,
-/turf/floor/bluegrid{
-	name = "Mainframe Base"
-	},
-/area/shuttle/mining/station)
 "by" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall5"
 	},
 /area/centcom/suppy)
-"bB" = (
-/turf/shuttle/wall/mining{
-	icon_state = "14,18"
-	},
-/area/shuttle/mining/station)
-"bD" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,17"
-	},
-/area/shuttle/mining/station)
+"bE" = (
+/obj/machinery/vending/cola/astra,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "bI" = (
 /obj/structure/cryofeed,
 /turf/floor/tiled/dark/gray_platform,
 /area/centcom/evac)
-"bL" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,23"
-	},
-/area/shuttle/mining/station)
-"bN" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,4"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"bU" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,11"
-	},
-/area/shuttle/mining/station)
 "bV" = (
 /obj/machinery/conveyor/east{
 	id = "cargo_unload"
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
-"bW" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,3"
-	},
-/area/shuttle/mining/station)
-"bY" = (
-/obj/machinery/door/airlock/mining{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining,
-/area/shuttle/mining/station)
-"bZ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "13,8"
-	},
-/area/shuttle/mining/station)
-"cd" = (
-/turf/shuttle/wall/science{
-	icon_state = "11,13"
-	},
-/area/shuttle/research/station)
-"ce" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "2,12"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"cf" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/light/small,
-/turf/shuttle/floor/mining{
-	icon_state = "4,4"
-	},
-/area/shuttle/mining/station)
 "cg" = (
 /turf/floor/tiled/dark/gray_perforated,
 /area/holodeck/source/industrial_arena)
-"cl" = (
-/obj/structure/table/steel,
-/obj/item/reagent_containers/food/drinks/bottle/small/beer,
-/obj/item/reagent_containers/food/drinks/bottle/small/beer,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "7,3"
-	},
-/area/shuttle/mining/station)
-"co" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,12"
-	},
-/area/shuttle/mining/station)
 "cq" = (
 /obj/machinery/cryopod,
 /turf/floor/tiled/dark/gray_platform,
 /area/centcom/evac)
-"cr" = (
-/turf/shuttle/wall/science{
-	icon_state = "2,4"
-	},
-/area/shuttle/research/station)
-"ct" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,13"
-	},
-/area/shuttle/mining/station)
-"cz" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "West APC";
-	pixel_x = -28
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/table/steel,
-/obj/machinery/recharger,
-/turf/shuttle/floor/mining{
-	icon_state = "3,7"
-	},
-/area/shuttle/mining/station)
-"cA" = (
-/obj/machinery/camera/network/research_outpost,
-/turf/shuttle/floor/science{
-	icon_state = "10,9"
-	},
-/area/shuttle/research/station)
-"cB" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "5,6"
-	},
-/area/shuttle/mining/station)
-"cD" = (
-/turf/shuttle/wall/mining{
-	icon_state = "14,3"
-	},
-/area/shuttle/mining/station)
 "cE" = (
 /obj/structure/railing/holorailing,
 /turf/floor/holofloor/tiled/dark,
@@ -441,30 +217,13 @@
 	},
 /turf/open/holonofloor,
 /area/space)
-"cG" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,16"
-	},
-/area/shuttle/research/station)
-"cI" = (
-/turf/shuttle/floor/mining{
-	icon_state = "13,13"
-	},
-/area/shuttle/mining/station)
-"cJ" = (
-/turf/shuttle/wall/science{
-	icon_state = "6,2"
-	},
-/area/shuttle/research/station)
 "cK" = (
 /turf/floor/tiled/orion/ribbed,
 /area/centcom/evac)
 "cL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,7"
-	},
-/area/shuttle/research/station)
+/obj/structure/table/orion_reinforced,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "cM" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 8
@@ -481,70 +240,6 @@
 "cN" = (
 /turf/floor/tiled/dark/golden,
 /area/centcom/evac)
-"cO" = (
-/turf/shuttle/floor/science{
-	icon_state = "10,11"
-	},
-/area/shuttle/research/station)
-"cR" = (
-/turf/shuttle/wall/mining{
-	icon_state = "12,22"
-	},
-/area/shuttle/mining/station)
-"cS" = (
-/turf/shuttle/wall/science{
-	icon_state = "13,7"
-	},
-/area/shuttle/research/station)
-"cT" = (
-/obj/structure/closet/secure_closet/personal/miner,
-/turf/shuttle/floor/mining{
-	icon_state = "4,9"
-	},
-/area/shuttle/mining/station)
-"cU" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,8"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"cV" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,14"
-	},
-/area/shuttle/mining/station)
-"cW" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,1";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
-"da" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,3"
-	},
-/area/shuttle/research/station)
-"db" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,14"
-	},
-/area/shuttle/mining/station)
-"dd" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,7"
-	},
-/area/shuttle/mining/station)
-"dh" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "7,0"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"di" = (
-/turf/shuttle/wall/science{
-	icon_state = "8,0"
-	},
-/area/shuttle/research/station)
 "dj" = (
 /obj/machinery/vending/snacks,
 /turf/floor/tiled/orion/hazard,
@@ -560,58 +255,33 @@
 /turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "dl" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,3"
-	},
-/area/shuttle/mining/station)
+/obj/structure/decor/random_plant,
+/turf/floor/tiled/orion,
+/area/centcom/evac)
 "dn" = (
-/turf/floor/carpet/turcarpet,
+/obj/item/modular_computer/console{
+	dir = 4
+	},
+/turf/floor/tiled/orion/hazard,
 /area/centcom/evac)
 "do" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "16,6"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"dq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "8,11"
-	},
-/area/shuttle/mining/station)
-"dr" = (
-/obj/machinery/camera/network/research_outpost,
-/turf/shuttle/floor/science{
-	icon_state = "12,5"
-	},
-/area/shuttle/research/station)
-"ds" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,12"
-	},
-/area/shuttle/mining/station)
+/turf/wall/untinted/orion/window,
+/area/centcom/evac)
+"dp" = (
+/obj/structure/medical_stand,
+/obj/item/reagent_containers/blood/OMinus,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "du" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall9"
 	},
 /turf/space,
 /area/centcom/suppy)
-"dy" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,13"
-	},
-/area/shuttle/research/station)
 "dz" = (
 /obj/structure/lattice,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
-"dA" = (
-/obj/structure/table/standard,
-/obj/item/device/lighting/toggleable/lamp,
-/turf/shuttle/floor/mining{
-	icon_state = "5,16"
-	},
-/area/shuttle/mining/station)
 "dI" = (
 /obj/structure/mirror/antag{
 	pixel_x = 28
@@ -641,11 +311,6 @@
 	},
 /turf/floor/carpet/bcarpet,
 /area/centcom/evac)
-"dN" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,16"
-	},
-/area/shuttle/mining/station)
 "dO" = (
 /turf/shuttle/wall{
 	icon_state = "diagonalWall3";
@@ -667,12 +332,6 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/space)
-"dS" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "17,21"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "dT" = (
 /turf/floor/tiled/orion/panel,
 /area/centcom/evac)
@@ -722,6 +381,12 @@
 /obj/machinery/light,
 /turf/floor/tiled/dark/gray_platform,
 /area/centcom/evac)
+"ed" = (
+/obj/machinery/vending/cola/astra{
+	dir = 1
+	},
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "ee" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 8
@@ -750,24 +415,8 @@
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
 "ek" = (
-/turf/wall/untinted/orion/window,
+/turf/wall/untinted/orion_reinforced,
 /area/centcom/evac)
-"em" = (
-/turf/shuttle/floor/mining{
-	icon_state = "4,6"
-	},
-/area/shuttle/mining/station)
-"en" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,17"
-	},
-/area/shuttle/mining/station)
-"eo" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,3"
-	},
-/area/shuttle/research/station)
 "ep" = (
 /turf/space,
 /turf/shuttle/wall{
@@ -806,37 +455,11 @@
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/spacebar)
-"eA" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,9"
-	},
-/area/shuttle/mining/station)
-"eC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "8,17"
-	},
-/area/shuttle/mining/station)
-"eD" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet,
-/turf/shuttle/floor/mining{
-	icon_state = "5,11"
-	},
-/area/shuttle/mining/station)
 "eF" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall7"
 	},
 /area/centcom/suppy)
-"eG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/turf/shuttle/floor/science{
-	icon_state = "5,3"
-	},
-/area/shuttle/research/station)
 "eJ" = (
 /obj/effect/step_trigger/teleporter/random{
 	name = "escapeshuttle_leave";
@@ -1220,16 +843,6 @@
 	},
 /turf/space/transit/north/shuttlespace_ns5,
 /area/space)
-"fM" = (
-/obj/machinery/mineral/processing_unit_console{
-	pixel_x = -3;
-	pixel_y = 27
-	},
-/turf/shuttle/wall/mining{
-	icon_state = "13,7";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "fO" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdown";
@@ -1283,27 +896,12 @@
 	icon_state = "cargoshwall33"
 	},
 /area/centcom/suppy)
-"ge" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,8"
-	},
-/area/shuttle/research/station)
 "gi" = (
 /turf/shuttle/wall{
 	icon_state = "diagonalWall3";
 	dir = 8
 	},
 /area/space)
-"gj" = (
-/turf/wall/untinted/orion/window/reinforced,
-/area/centcom/evac)
-"gm" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "6,19"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "gn" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdown";
@@ -1312,11 +910,6 @@
 	},
 /turf/space/transit/north/shuttlespace_ns1,
 /area/space)
-"go" = (
-/turf/shuttle/floor/mining{
-	icon_state = "13,17"
-	},
-/area/shuttle/mining/station)
 "gp" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_escapeshuttletop(right)";
@@ -1327,30 +920,9 @@
 /turf/space/transit/north/shuttlespace_ns15,
 /area/space)
 "gr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/light,
-/turf/shuttle/floor/mining{
-	icon_state = "10,19"
-	},
-/area/shuttle/mining/station)
-"gs" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "9,20"
-	},
-/area/shuttle/mining/station)
-"gt" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/floor,
-/area/shuttle/research/station)
+/obj/structure/table/orion_reinforced,
+/turf/floor/tiled/orion,
+/area/centcom/evac)
 "gu" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdown";
@@ -1359,18 +931,6 @@
 	},
 /turf/space/transit/north/shuttlespace_ns14,
 /area/space)
-"gv" = (
-/obj/effect/shuttle_landmark/eris/dock/hulk,
-/turf/shuttle/floor/mining{
-	icon_state = "9,23"
-	},
-/area/shuttle/mining/station)
-"gw" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "14,2"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "gx" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_escapeshuttletop(right)";
@@ -1398,24 +958,6 @@
 	},
 /turf/space/transit/north/shuttlespace_ns13,
 /area/space)
-"gD" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,3"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"gE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "7,14"
-	},
-/area/shuttle/research/station)
 "gI" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdown";
@@ -1442,12 +984,10 @@
 	},
 /turf/space/transit/north/shuttlespace_ns12,
 /area/space)
-"gM" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,10"
-	},
-/turf/space,
-/area/shuttle/mining/station)
+"gL" = (
+/obj/structure/table/orion_reinforced,
+/turf/floor/carpet/turcarpet,
+/area/centcom/evac)
 "gN" = (
 /obj/structure/table/glass,
 /turf/floor/dummy{
@@ -1455,11 +995,6 @@
 	icon_state = "cult"
 	},
 /area/centcom/merc_base)
-"gR" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,3"
-	},
-/area/shuttle/mining/station)
 "gS" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdown";
@@ -1492,12 +1027,12 @@
 	},
 /turf/space/transit/north/shuttlespace_ns8,
 /area/space)
-"gX" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "11,0"
+"gY" = (
+/obj/machinery/vending/coffee/astra{
+	dir = 1
 	},
-/turf/space,
-/area/shuttle/research/station)
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "gZ" = (
 /turf/wall/dummy,
 /area/centcom/merc_base)
@@ -1660,12 +1195,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"hx" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "14,10"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "hz" = (
 /obj/structure/table/woodentable,
 /obj/machinery/chemical_dispenser/soda,
@@ -1709,15 +1238,6 @@
 	icon_state = "lino"
 	},
 /area/centcom/merc_base)
-"hG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "12,20"
-	},
-/area/shuttle/mining/station)
 "hH" = (
 /obj/item/storage/deferred/crate/tools,
 /obj/item/storage/deferred/crate/tools,
@@ -1753,32 +1273,8 @@
 	},
 /area/centcom/merc_base)
 "hM" = (
-/turf/wall/untinted/orion_reinforced,
+/turf/wall/untinted/orion/window/reinforced,
 /area/centcom/evac)
-"hN" = (
-/turf/shuttle/wall/mining{
-	icon_state = "16,22"
-	},
-/area/shuttle/mining/station)
-"hO" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/table/rack,
-/obj/item/stack/material/plasma{
-	amount = 25
-	},
-/turf/floor,
-/area/shuttle/mining/station)
-"hP" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,10"
-	},
-/area/shuttle/mining/station)
 "hR" = (
 /obj/machinery/door/airlock/orion/centcom{
 	dir = 1
@@ -1818,16 +1314,6 @@
 	icon_state = "white"
 	},
 /area/centcom/merc_base)
-"hV" = (
-/turf/shuttle/wall/mining{
-	icon_state = "5,3"
-	},
-/area/shuttle/mining/station)
-"hW" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,1"
-	},
-/area/shuttle/research/station)
 "hX" = (
 /obj/machinery/button/remote/blast_door{
 	name = "remote shutter control";
@@ -1869,21 +1355,10 @@
 	},
 /turf/space,
 /area/centcom/suppy)
-"ij" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,7"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "ik" = (
 /obj/effect/shuttle_landmark/escape_pod/out/pod1,
 /turf/space,
 /area/space)
-"il" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,22"
-	},
-/area/shuttle/mining/station)
 "io" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 4
@@ -1963,31 +1438,12 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"iw" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,6"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "ix" = (
 /obj/structure/computerframe,
 /turf/shuttle/floor{
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"iy" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "vasiliy_dokuchaev_shuttle";
-	name = "exterior access button";
-	pixel_y = 25;
-	req_one_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "4,12"
-	},
-/area/shuttle/research/station)
 "iz" = (
 /obj/item/reagent_containers/syringe/large,
 /obj/item/reagent_containers/syringe/large,
@@ -2029,30 +1485,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
-"iD" = (
-/turf/shuttle/wall/science{
-	icon_state = "14,5"
-	},
-/area/shuttle/research/station)
-"iE" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/floor/bluegrid{
-	name = "Mainframe Base"
-	},
-/area/shuttle/mining/station)
-"iF" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "3,16"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"iG" = (
-/turf/shuttle/wall/science{
-	icon_state = "10,6"
-	},
-/area/shuttle/research/station)
 "iH" = (
 /obj/machinery/button/remote/blast_door{
 	name = "remote shutter control";
@@ -2097,11 +1529,6 @@
 	icon_state = "cult"
 	},
 /area/centcom/merc_base)
-"iO" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,7"
-	},
-/area/shuttle/research/station)
 "iQ" = (
 /obj/item/storage/box/beakers,
 /obj/item/reagent_containers/glass/beaker/vial,
@@ -2197,23 +1624,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"jl" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,6"
-	},
-/area/shuttle/mining/station)
-"jm" = (
-/obj/machinery/suit_storage_unit/moebius,
-/turf/shuttle/floor/science{
-	icon_state = "11,7"
-	},
-/area/shuttle/research/station)
-"jo" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,8"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "jp" = (
 /obj/structure/railing/holorailing{
 	dir = 1
@@ -2268,10 +1678,8 @@
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
 "jy" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,15"
-	},
-/area/shuttle/mining/station)
+/turf/floor/carpet/turcarpet,
+/area/centcom/evac)
 "jA" = (
 /obj/machinery/light{
 	dir = 1
@@ -2294,11 +1702,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
-"jD" = (
-/turf/shuttle/wall/science{
-	icon_state = "14,3"
-	},
-/area/shuttle/research/station)
 "jG" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Bathroom"
@@ -2349,13 +1752,6 @@
 /obj/effect/shuttle_landmark/eris/transit/exploration_shuttle,
 /turf/space,
 /area/space)
-"jP" = (
-/obj/structure/table/rack,
-/obj/item/ammo_magazine/ammobox/shotgun,
-/turf/shuttle/floor/mining{
-	icon_state = "7,9"
-	},
-/area/shuttle/mining/station)
 "jQ" = (
 /obj/structure/table/steel_reinforced,
 /turf/floor/holofloor/reinforced,
@@ -2414,12 +1810,6 @@
 	},
 /turf/space,
 /area/space)
-"jX" = (
-/obj/structure/ore_box,
-/turf/shuttle/floor/mining{
-	icon_state = "11,14"
-	},
-/area/shuttle/mining/station)
 "jY" = (
 /obj/structure/toilet{
 	dir = 4
@@ -2489,12 +1879,6 @@
 /obj/structure/window/reinforced/crescent,
 /turf/space,
 /area/space)
-"ki" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "3,13"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "kj" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1331;
@@ -2808,11 +2192,6 @@
 	icon_state = "white"
 	},
 /area/centcom/merc_base)
-"kQ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "3,17"
-	},
-/area/shuttle/mining/station)
 "kR" = (
 /obj/machinery/suit_storage_unit/merc,
 /turf/shuttle/floor{
@@ -2868,12 +2247,11 @@
 	},
 /area/shuttle/mercenary)
 "kY" = (
-/obj/structure/table/steel,
-/obj/item/tool/crowbar,
-/turf/shuttle/floor/mining{
-	icon_state = "7,2"
+/obj/machinery/vending/snacks{
+	dir = 1
 	},
-/area/shuttle/mining/station)
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "kZ" = (
 /obj/machinery/door/window{
 	name = "Brig";
@@ -2985,11 +2363,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"lq" = (
-/turf/shuttle/floor/mining{
-	icon_state = "12,13"
-	},
-/area/shuttle/mining/station)
 "lr" = (
 /obj/machinery/bodyscanner,
 /turf/shuttle/floor{
@@ -3189,11 +2562,6 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/mercenary)
-"lY" = (
-/obj/structure/table/orion_reinforced,
-/obj/item/storage/hcases/med/astra/surgery/contractor,
-/turf/floor/tiled/orion/hazard/panel,
-/area/centcom/evac)
 "lZ" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -3232,16 +2600,6 @@
 	},
 /turf/floor/airless,
 /area/shuttle/mercenary)
-"mh" = (
-/obj/structure/table/rack,
-/obj/item/clothing/suit/space/void/mining,
-/obj/item/clothing/mask/breath,
-/obj/item/device/scanner/mining,
-/obj/item/tool/karl,
-/turf/shuttle/floor/mining{
-	icon_state = "2,21"
-	},
-/area/shuttle/mining/station)
 "mi" = (
 /obj/structure/shuttle_part/science{
 	icon_state = "16,3"
@@ -3304,6 +2662,10 @@
 	dir = 8
 	},
 /area/wizard_station)
+"ms" = (
+/obj/machinery/light/wall,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "mt" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall20"
@@ -3369,13 +2731,6 @@
 /obj/structure/window/reinforced/crescent,
 /turf/wall/dummy,
 /area/space)
-"mG" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/camera/network/research_outpost,
-/turf/shuttle/floor/science{
-	icon_state = "6,5"
-	},
-/area/shuttle/research/station)
 "mH" = (
 /obj/structure/bookcase{
 	name = "bookcase (Tactics)"
@@ -3396,16 +2751,6 @@
 	dir = 8
 	},
 /area/wizard_station)
-"mJ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,22"
-	},
-/area/shuttle/mining/station)
-"mK" = (
-/turf/shuttle/wall/mining{
-	icon_state = "1,18"
-	},
-/area/shuttle/mining/station)
 "mL" = (
 /obj/structure/bed/chair/custom/holochair/bar{
 	dir = 8
@@ -3429,12 +2774,6 @@
 	icon_state = "white"
 	},
 /area/centcom/merc_base)
-"mP" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,14"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "mR" = (
 /obj/structure/closet/cabinet,
 /turf/floor/dummy{
@@ -3499,12 +2838,6 @@
 	dir = 8
 	},
 /area/wizard_station)
-"nh" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "9,21"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "nj" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
@@ -3548,12 +2881,6 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"nt" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "8,6"
-	},
-/area/shuttle/mining/station)
 "nu" = (
 /turf/floor/dummy{
 	name = "plating";
@@ -3568,15 +2895,6 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"nx" = (
-/turf/shuttle/wall/science{
-	icon_state = "10,2"
-	},
-/area/shuttle/research/station)
-"ny" = (
-/obj/machinery/recharge_station,
-/turf/floor/tiled/steel,
-/area/shuttle/mining/station)
 "nz" = (
 /obj/structure/table/woodentable,
 /obj/item/device/megaphone,
@@ -3585,12 +2903,6 @@
 	dir = 8
 	},
 /area/wizard_station)
-"nA" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "0,21"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "nC" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall13"
@@ -3621,12 +2933,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"nO" = (
-/obj/structure/table/steel,
-/turf/shuttle/floor/mining{
-	icon_state = "7,4"
-	},
-/area/shuttle/mining/station)
 "nR" = (
 /turf/wall/dummy/fakeglass{
 	dir = 8
@@ -3648,30 +2954,6 @@
 	dir = 4
 	},
 /area/wizard_station)
-"nX" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "11,0"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"nZ" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "3,3"
-	},
-/area/shuttle/research/station)
 "oa" = (
 /obj/item/remains/human,
 /turf/floor/dummy{
@@ -3709,23 +2991,12 @@
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
-"oi" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "2,8"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "oj" = (
 /obj/effect/shuttle_landmark/supply/centcom,
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall18"
 	},
 /area/centcom/suppy)
-"ok" = (
-/turf/shuttle/wall/science{
-	icon_state = "5,6"
-	},
-/area/shuttle/research/station)
 "oo" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/floor/dummy{
@@ -3733,18 +3004,6 @@
 	icon_state = "grass0"
 	},
 /area/wizard_station)
-"op" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "17,20"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"or" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,1";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "ow" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdown";
@@ -3768,20 +3027,6 @@
 	},
 /turf/space,
 /area/space)
-"ox" = (
-/turf/shuttle/wall/science{
-	icon_state = "6,17";
-	opacity = 0
-	},
-/area/shuttle/research/station)
-"oy" = (
-/obj/machinery/camera/network/mining{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "4,19"
-	},
-/area/shuttle/mining/station)
 "oz" = (
 /obj/machinery/atmospherics/tank/air{
 	dir = 4;
@@ -3798,16 +3043,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"oB" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,10"
-	},
-/area/shuttle/research/station)
-"oC" = (
-/turf/shuttle/floor/science{
-	icon_state = "5,7"
-	},
-/area/shuttle/research/station)
 "oE" = (
 /obj/structure/table/reinforced,
 /obj/item/tray{
@@ -3821,24 +3056,10 @@
 /obj/machinery/cryopod,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"oG" = (
-/obj/machinery/computer/shuttle_control/explore/hulk{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,2"
-	},
-/area/shuttle/mining/station)
 "oH" = (
 /obj/effect/shuttle_landmark/eris/transit/hulk,
 /turf/space,
 /area/space)
-"oJ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,2";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "oP" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced/crescent{
@@ -3856,58 +3077,6 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/mercenary)
-"oQ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "12,19"
-	},
-/area/shuttle/mining/station)
-"oS" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "4,1"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"oY" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"oZ" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "13,11"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"pd" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,16"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"pf" = (
-/obj/structure/table/orion_reinforced,
-/turf/floor/carpet/turcarpet,
-/area/centcom/evac)
-"ph" = (
-/obj/machinery/camera/network/research_outpost,
-/turf/shuttle/floor/science{
-	icon_state = "6,9"
-	},
-/area/shuttle/research/station)
-"pi" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "14,9"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"pl" = (
-/obj/machinery/mineral/unloading_machine{
-	dir = 8
-	},
-/turf/floor,
-/area/shuttle/mining/station)
 "pm" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 1
@@ -3915,56 +3084,13 @@
 /obj/structure/lattice,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
-"pq" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "12,1"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"pr" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,18"
-	},
-/area/shuttle/mining/station)
-"pu" = (
-/obj/machinery/door/airlock/mining{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/turf/shuttle/floor{
-	icon_state = "cargofloor1"
-	},
-/area/shuttle/mining/station)
-"px" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "3,14"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"py" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "2,2"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"pA" = (
-/obj/structure/plasticflaps/mining,
-/obj/machinery/conveyor/south{
-	id = "mining_internal"
-	},
-/turf/floor,
-/area/shuttle/mining/station)
-"pJ" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "3,2"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"pK" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,8"
-	},
-/area/shuttle/mining/station)
+"pv" = (
+/obj/structure/decor/random_plant,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
+"pw" = (
+/turf/floor/tiled/orion/hazard/panel,
+/area/centcom/evac)
 "pO" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_leftnostop";
@@ -3972,89 +3098,10 @@
 	},
 /turf/space,
 /area/space)
-"pQ" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "10,20"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"pR" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "10,7"
-	},
-/area/shuttle/mining/station)
-"ql" = (
-/turf/shuttle/wall/science{
-	icon_state = "6,6"
-	},
-/area/shuttle/research/station)
-"qm" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "5,19"
-	},
-/area/shuttle/mining/station)
 "qn" = (
 /obj/effect/shuttle_landmark/escape_pod/transit/pod1,
 /turf/space,
 /area/space)
-"qs" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,12"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"qt" = (
-/obj/machinery/sleeper{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "11,11"
-	},
-/area/shuttle/research/station)
-"qu" = (
-/turf/shuttle/wall/science{
-	icon_state = "6,13"
-	},
-/area/shuttle/research/station)
-"qw" = (
-/obj/item/tool/pickaxe/excavation,
-/obj/item/tool/pickaxe,
-/obj/item/tool/wrench,
-/obj/item/device/measuring_tape,
-/obj/structure/table/steel,
-/obj/item/stack/flag/yellow,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/shuttle/floor/science{
-	icon_state = "13,3"
-	},
-/area/shuttle/research/station)
-"qx" = (
-/turf/shuttle/floor/science{
-	icon_state = "12,4"
-	},
-/area/shuttle/research/station)
-"qy" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "11,16"
-	},
-/area/shuttle/mining/station)
-"qC" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "0,6"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "qG" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 8
@@ -4074,99 +3121,9 @@
 /obj/effect/shuttle_landmark/escape_pod/transit/pod2,
 /turf/space,
 /area/space)
-"qJ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,21"
-	},
-/area/shuttle/mining/station)
-"qP" = (
-/turf/space,
-/area/shuttle/research/station)
-"qQ" = (
-/turf/shuttle/floor/mining{
-	icon_state = "11,7"
-	},
-/area/shuttle/mining/station)
-"qS" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Hulk Mining Barge";
-	charge = 1.5e+007;
-	cur_coils = 3;
-	input_attempt = 1;
-	input_level = 750000;
-	input_level_max = 750000;
-	output_attempt = 1;
-	output_level = 750000;
-	output_level_max = 750000
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/floor,
-/area/shuttle/research/station)
-"qZ" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "5,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"ra" = (
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "vasiliy_dokuchaev_shuttle";
-	pixel_y = 28;
-	req_one_access = list(5);
-	tag_airpump = "research_shuttle_pump";
-	tag_chamber_sensor = "research_shuttle_sensor";
-	tag_exterior_door = "research_shuttle_outer";
-	tag_interior_door = "research_shuttle_inner"
-	},
-/turf/shuttle/floor/science{
-	icon_state = "5,12"
-	},
-/area/shuttle/research/station)
-"rb" = (
-/obj/machinery/vending/cola/astra,
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
-"rc" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "mining_internal";
-	name = "mining conveyor"
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "11,6"
-	},
-/area/shuttle/mining/station)
-"rd" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "2,7"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"rg" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,10"
-	},
-/area/shuttle/mining/station)
 "rh" = (
 /turf/floor/holofloor/tiled/bar_dance,
 /area/space)
-"rj" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,13"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"rk" = (
-/obj/landmark/storyevent/midgame_stash_spawn{
-	navigation = "Mining Barge comunications room, on north-east of the barge itself."
-	},
-/turf/floor/bluegrid{
-	name = "Mainframe Base"
-	},
-/area/shuttle/mining/station)
 "rl" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
@@ -4178,18 +3135,6 @@
 	icon_state = "cult"
 	},
 /area/centcom/merc_base)
-"rq" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "8,0"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"rs" = (
-/obj/machinery/atmospherics/tank/air,
-/turf/shuttle/floor/mining{
-	icon_state = "12,21"
-	},
-/area/shuttle/mining/station)
 "rt" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -4202,21 +3147,12 @@
 "rv" = (
 /turf/floor/carpet,
 /area/centcom/pirate_base)
-"rx" = (
-/obj/item/modular_computer/console{
-	dir = 4
-	},
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
 "rz" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"rC" = (
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
 "rD" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall3"
@@ -4229,30 +3165,6 @@
 	icon_state = "lino"
 	},
 /area/centcom/merc_base)
-"rG" = (
-/turf/shuttle/floor/mining{
-	icon_state = "12,7"
-	},
-/area/shuttle/mining/station)
-"rH" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "mining_shuttle_inner";
-	locked = 1;
-	name = "Hulk External Access"
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "hulk_shuttle";
-	name = "interior access button";
-	pixel_x = -25
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,20"
-	},
-/area/shuttle/mining/station)
 "rJ" = (
 /obj/machinery/slotmachine,
 /obj/effect/floor_decal/industrial/danger{
@@ -4267,33 +3179,6 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"rK" = (
-/obj/structure/closet/crate,
-/turf/shuttle/floor/mining{
-	icon_state = "14,14"
-	},
-/area/shuttle/mining/station)
-"rM" = (
-/turf/shuttle/wall/mining{
-	icon_state = "5,18"
-	},
-/area/shuttle/mining/station)
-"rR" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/shuttle/floor/science{
-	icon_state = "8,1"
-	},
-/area/shuttle/research/station)
-"rV" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,15"
-	},
-/area/shuttle/mining/station)
 "rX" = (
 /obj/structure/table/bar_special,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4315,80 +3200,22 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"sa" = (
-/obj/machinery/light/small,
-/turf/shuttle/floor/mining{
-	icon_state = "11,13"
-	},
-/area/shuttle/mining/station)
 "sc" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_l"
 	},
 /turf/space,
 /area/shuttle/pirate)
-"sg" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/structure/fuel_port{
-	pixel_y = -32
-	},
-/turf/shuttle/floor/science{
-	icon_state = "6,3"
-	},
-/area/shuttle/research/station)
-"si" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,2"
-	},
-/area/shuttle/research/station)
-"sl" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "13,9"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"sp" = (
-/turf/floor/tiled/orion/hazard/panel,
-/area/centcom/evac)
-"sq" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,12"
-	},
-/area/shuttle/mining/station)
 "sr" = (
 /obj/structure/railing/holorailing,
 /turf/open/holonofloor,
 /area/holodeck/source/industrial)
-"ss" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "10,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "sx" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall26"
 	},
 /turf/space,
 /area/centcom/suppy)
-"sy" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,8"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"sz" = (
-/obj/machinery/light/small,
-/turf/shuttle/floor/science{
-	icon_state = "6,7"
-	},
-/area/shuttle/research/station)
 "sA" = (
 /obj/machinery/light{
 	dir = 4
@@ -4404,40 +3231,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"sC" = (
-/turf/shuttle/wall/science{
-	icon_state = "5,10"
-	},
-/area/shuttle/research/station)
-"sE" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "6,4"
-	},
-/area/shuttle/research/station)
-"sH" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "0,18"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"sK" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/shuttle/floor/science{
-	icon_state = "4,3"
-	},
-/area/shuttle/research/station)
-"sM" = (
-/turf/shuttle/wall/mining{
-	icon_state = "1,21"
-	},
-/area/shuttle/mining/station)
 "sN" = (
 /obj/item/caution,
 /turf/floor/dummy{
@@ -4449,22 +3242,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"sP" = (
-/turf/shuttle/wall/science{
-	icon_state = "11,2"
-	},
-/area/shuttle/research/station)
-"sQ" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "7,21"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"sR" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,14"
-	},
-/area/shuttle/mining/station)
 "sT" = (
 /obj/machinery/button/remote/blast_door{
 	name = "remote shutter control";
@@ -4478,18 +3255,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"sV" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,3"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"sX" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "4,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "ta" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall28"
@@ -4545,24 +3310,6 @@
 	icon_state = "10,19"
 	},
 /area/centcom/suppy)
-"tk" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "2,15"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"tl" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "13,10"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"tn" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "12,17"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "tp" = (
 /obj/structure/table/woodentable,
 /obj/item/paper_bin{
@@ -4574,11 +3321,6 @@
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
-"tr" = (
-/turf/shuttle/wall/science{
-	icon_state = "14,1"
-	},
-/area/shuttle/research/station)
 "ts" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall10"
@@ -4590,11 +3332,6 @@
 	},
 /turf/space,
 /area/shuttle/pirate)
-"tx" = (
-/turf/shuttle/wall/science{
-	icon_state = "2,6"
-	},
-/area/shuttle/research/station)
 "ty" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/meds,
@@ -4608,41 +3345,17 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"tA" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,18"
-	},
-/area/shuttle/mining/station)
-"tB" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "6,15"
-	},
-/area/shuttle/mining/station)
 "tD" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall41"
 	},
 /turf/space,
 /area/centcom/suppy)
-"tF" = (
-/turf/shuttle/wall/mining{
-	icon_state = "3,10"
-	},
-/area/shuttle/mining/station)
 "tG" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall32"
 	},
 /area/centcom/suppy)
-"tJ" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "13,1"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "tN" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -4655,30 +3368,6 @@
 /obj/structure/catwalk/holo,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"tP" = (
-/turf/shuttle/wall/mining{
-	icon_state = "13,10"
-	},
-/area/shuttle/mining/station)
-"tQ" = (
-/obj/item/tool/pickaxe/excavation,
-/obj/item/tool/pickaxe,
-/obj/item/tool/wrench,
-/obj/item/device/measuring_tape,
-/obj/item/stack/flag/green,
-/obj/structure/table/steel,
-/turf/shuttle/floor/science{
-	icon_state = "13,4"
-	},
-/area/shuttle/research/station)
-"tR" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "3,21"
-	},
-/area/shuttle/mining/station)
 "tS" = (
 /obj/item/stack/material/glass{
 	amount = 15
@@ -4703,40 +3392,11 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"tW" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,15"
-	},
-/area/shuttle/mining/station)
-"tX" = (
-/obj/machinery/door/airlock/mining{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "7,13"
-	},
-/area/shuttle/mining/station)
-"tZ" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "4,2"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "ub" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall25"
 	},
 /area/centcom/suppy)
-"uf" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "uh" = (
 /obj/item/storage/box/drinkingglasses{
 	pixel_x = 1;
@@ -4770,28 +3430,14 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"up" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380;
-	id_tag = "mining_shuttle_pump";
-	power_rating = 20000
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "7,22"
-	},
-/area/shuttle/mining/station)
 "uq" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hos,
 /turf/floor/carpet,
 /area/centcom/pirate_base)
-"ut" = (
-/turf/shuttle/wall/mining{
-	icon_state = "9,1";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
+"us" = (
+/turf/floor/tiled/orion,
+/area/centcom/evac)
 "uu" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/shoes/sandal,
@@ -4800,24 +3446,6 @@
 	icon_state = "lino"
 	},
 /area/wizard_station)
-"ux" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "17,17"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"uz" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "8,9"
-	},
-/area/shuttle/mining/station)
-"uA" = (
-/obj/machinery/vending/snacks{
-	dir = 1
-	},
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
 "uC" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/shoes/sandal/marisa{
@@ -4840,18 +3468,6 @@
 "uE" = (
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
-"uF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "7,4"
-	},
-/area/shuttle/research/station)
 "uG" = (
 /turf/shuttle/wall{
 	icon_state = "wall3"
@@ -4862,11 +3478,6 @@
 /obj/machinery/floor_light/prebuilt,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"uI" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,14"
-	},
-/area/shuttle/mining/station)
 "uM" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 8
@@ -4877,25 +3488,6 @@
 /obj/structure/lattice,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
-"uN" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/shuttle/floor/science{
-	icon_state = "5,14"
-	},
-/area/shuttle/research/station)
-"uP" = (
-/turf/shuttle/floor/science{
-	icon_state = "11,4"
-	},
-/area/shuttle/research/station)
-"uQ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "13,7";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "uS" = (
 /obj/structure/railing/holorailing/grey,
 /turf/open/holonofloor,
@@ -4915,24 +3507,12 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"vb" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,1"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "vd" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
-"ve" = (
-/obj/machinery/conveyor/southwest/ccw{
-	id = "mining_internal"
-	},
-/turf/floor,
-/area/shuttle/mining/station)
 "vf" = (
 /obj/structure/railing/holorailing{
 	dir = 8
@@ -4951,33 +3531,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"vl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "vasiliy_dokuchaev_shuttle";
-	name = "interior access button";
-	pixel_y = 25;
-	req_one_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "7,12"
-	},
-/area/shuttle/research/station)
-"vp" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,6"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"vr" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,5"
-	},
-/area/shuttle/mining/station)
 "vu" = (
 /obj/structure/mirror/antag{
 	pixel_y = 28
@@ -4986,17 +3539,6 @@
 	icon_state = "lino"
 	},
 /area/centcom/merc_base)
-"vv" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,8"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"vw" = (
-/turf/shuttle/wall/mining{
-	icon_state = "3,22"
-	},
-/area/shuttle/mining/station)
 "vx" = (
 /obj/structure/railing/holorailing{
 	dir = 8
@@ -5007,30 +3549,6 @@
 /obj/structure/table/bar_special,
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
-"vA" = (
-/obj/machinery/light,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380;
-	id_tag = "mining_shuttle_pump";
-	power_rating = 20000
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "7,21"
-	},
-/area/shuttle/mining/station)
-"vB" = (
-/obj/structure/dispenser,
-/turf/shuttle/floor/mining{
-	icon_state = "5,21"
-	},
-/area/shuttle/mining/station)
-"vD" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "17,18"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "vF" = (
 /obj/effect/shuttle_landmark/merc/start,
 /turf/wall/low/with_glass/reinforced,
@@ -5070,11 +3588,6 @@
 	},
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"wc" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,15"
-	},
-/area/shuttle/mining/station)
 "wf" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/surgery,
@@ -5096,18 +3609,6 @@
 	},
 /turf/floor/carpet,
 /area/wizard_station)
-"wi" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet,
-/turf/shuttle/floor/mining{
-	icon_state = "6,11"
-	},
-/area/shuttle/mining/station)
-"wl" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,1"
-	},
-/area/shuttle/research/station)
 "wn" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/tactical,
@@ -5148,13 +3649,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial)
-"wr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/shuttle/floor/science,
-/area/shuttle/research/station)
 "wu" = (
 /obj/structure/closet,
 /obj/machinery/light{
@@ -5172,17 +3666,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"wy" = (
-/obj/machinery/atmospherics/tank/air,
-/turf/shuttle/floor/science{
-	icon_state = "5,5"
-	},
-/area/shuttle/research/station)
-"wz" = (
-/turf/shuttle/wall/science{
-	icon_state = "14,4"
-	},
-/area/shuttle/research/station)
 "wO" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/effect/floor_decal/industrial/danger{
@@ -5193,32 +3676,6 @@
 	},
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"wP" = (
-/turf/shuttle/wall/science{
-	icon_state = "10,13"
-	},
-/area/shuttle/research/station)
-"wT" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,5"
-	},
-/area/shuttle/mining/station)
-"wU" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,20"
-	},
-/area/shuttle/mining/station)
-"wV" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,6"
-	},
-/area/shuttle/research/station)
-"xc" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "3,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "xd" = (
 /obj/machinery/slotmachine,
 /obj/effect/floor_decal/industrial/danger{
@@ -5232,18 +3689,6 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/space)
-"xe" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,4"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"xg" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "5,2"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "xh" = (
 /obj/structure/railing/holorailing/grey,
 /obj/structure/railing/holorailing/grey{
@@ -5260,17 +3705,6 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"xl" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "9,20"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"xm" = (
-/turf/shuttle/wall/science{
-	icon_state = "11,1"
-	},
-/area/shuttle/research/station)
 "xn" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -5283,16 +3717,6 @@
 /obj/structure/catwalk/holo,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"xo" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,17"
-	},
-/area/shuttle/mining/station)
-"xp" = (
-/turf/shuttle/wall/mining{
-	icon_state = "16,18"
-	},
-/area/shuttle/mining/station)
 "xq" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 8
@@ -5311,35 +3735,12 @@
 /obj/structure/table/rack,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"xv" = (
-/turf/floor/tiled/orion/fan,
-/area/centcom/evac)
-"xy" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,8"
-	},
-/area/shuttle/mining/station)
 "xB" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
-"xF" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,1"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"xG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,12"
-	},
-/area/shuttle/mining/station)
 "xM" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger,
@@ -5352,16 +3753,6 @@
 /obj/structure/catwalk/holo,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"xN" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,10"
-	},
-/area/shuttle/mining/station)
-"xO" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,10"
-	},
-/area/shuttle/mining/station)
 "xP" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -5373,12 +3764,6 @@
 /obj/structure/catwalk/holo,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"xW" = (
-/obj/machinery/mining/deep_drill,
-/turf/shuttle/floor/mining{
-	icon_state = "14,17"
-	},
-/area/shuttle/mining/station)
 "xZ" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 8
@@ -5386,22 +3771,6 @@
 /obj/structure/railing/holorailing/grey,
 /turf/open/holonofloor,
 /area/space)
-"ya" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "0,4"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"yb" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,15"
-	},
-/area/shuttle/mining/station)
-"ye" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,15"
-	},
-/area/shuttle/research/station)
 "yg" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 4
@@ -5417,21 +3786,6 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"yi" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,8"
-	},
-/area/shuttle/mining/station)
-"yk" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,7"
-	},
-/area/shuttle/research/station)
-"yl" = (
-/turf/shuttle/floor/science{
-	icon_state = "5,9"
-	},
-/area/shuttle/research/station)
 "yn" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
@@ -5444,11 +3798,6 @@
 	},
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"yp" = (
-/turf/shuttle/wall/mining{
-	icon_state = "13,18"
-	},
-/area/shuttle/mining/station)
 "yq" = (
 /obj/structure/railing/holorailing/grey,
 /obj/structure/railing/holorailing/grey{
@@ -5456,9 +3805,6 @@
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/texas)
-"ys" = (
-/turf/floor,
-/area/shuttle/mining/station)
 "yv" = (
 /obj/item/stool/holostool,
 /obj/effect/floor_decal/industrial/danger,
@@ -5470,11 +3816,6 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial)
-"yw" = (
-/obj/structure/medical_stand,
-/obj/item/reagent_containers/blood/OMinus,
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
 "yx" = (
 /obj/structure/grille,
 /turf/space,
@@ -5495,24 +3836,6 @@
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
-"yA" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,10"
-	},
-/area/shuttle/mining/station)
-"yB" = (
-/obj/structure/table/steel,
-/obj/item/storage/box/donkpockets,
-/obj/machinery/camera/network/mining,
-/turf/shuttle/floor/mining{
-	icon_state = "10,4"
-	},
-/area/shuttle/mining/station)
-"yC" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,9"
-	},
-/area/shuttle/research/station)
 "yD" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 4
@@ -5546,43 +3869,18 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
-"yG" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,5"
-	},
-/area/shuttle/mining/station)
 "yJ" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall34"
 	},
 /turf/space,
 /area/centcom/suppy)
-"yL" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
+"yO" = (
+/obj/machinery/vending/juice{
+	dir = 1
 	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,16"
-	},
-/area/shuttle/mining/station)
-"yM" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,7"
-	},
-/area/shuttle/research/station)
-"yP" = (
-/obj/structure/table/standard,
-/obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/o2,
-/obj/item/storage/firstaid/regular,
-/turf/shuttle/floor/science{
-	icon_state = "11,12"
-	},
-/area/shuttle/research/station)
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "yQ" = (
 /obj/structure/railing/holorailing/grey,
 /obj/structure/lattice,
@@ -5631,47 +3929,12 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial)
-"yY" = (
-/obj/machinery/door/airlock/mining{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "10,16"
-	},
-/area/shuttle/mining/station)
-"yZ" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,7"
-	},
-/area/shuttle/research/station)
 "za" = (
 /obj/machinery/conveyor/west{
 	id = "cargo_load"
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
-"zb" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,4"
-	},
-/area/shuttle/mining/station)
-"zi" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,5";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
-"zk" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet,
-/turf/shuttle/floor/mining{
-	icon_state = "6,17"
-	},
-/area/shuttle/mining/station)
 "zl" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
@@ -5680,11 +3943,6 @@
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
-"zo" = (
-/turf/shuttle/wall/science{
-	icon_state = "10,1"
-	},
-/area/shuttle/research/station)
 "zt" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -5696,31 +3954,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"zz" = (
-/obj/machinery/floodlight,
-/turf/shuttle/floor/science{
-	icon_state = "11,3"
-	},
-/area/shuttle/research/station)
-"zA" = (
-/turf/shuttle/floor/mining{
-	icon_state = "12,6"
-	},
-/area/shuttle/mining/station)
-"zD" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 2;
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "research_shuttle_outer";
-	locked = 1;
-	name = "Vasiliy Dokuchaev External Access";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "4,11"
-	},
-/area/shuttle/research/station)
 "zE" = (
 /obj/machinery/button/remote/blast_door{
 	name = "remote shutter control";
@@ -5733,40 +3966,12 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/mercenary)
-"zF" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/machinery/light/small,
-/turf/shuttle/floor/science{
-	icon_state = "6,14"
-	},
-/area/shuttle/research/station)
-"zH" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,4"
-	},
-/area/shuttle/mining/station)
-"zJ" = (
-/obj/structure/table/orion_reinforced,
-/obj/item/storage/hcases/med/astra/combat,
-/turf/floor/tiled/orion/hazard/panel,
-/area/centcom/evac)
 "zK" = (
 /turf/shuttle/wall{
 	icon_state = "diagonalWall3";
 	dir = 1
 	},
 /area/shuttle/pirate)
-"zL" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "0,16"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "zM" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 8
@@ -5804,20 +4009,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/space)
-"zQ" = (
-/obj/machinery/camera/network/research_outpost{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380;
-	id_tag = "research_shuttle_pump";
-	power_rating = 30000
-	},
-/turf/shuttle/floor/science{
-	icon_state = "6,11"
-	},
-/area/shuttle/research/station)
 "zT" = (
 /obj/structure/bed/chair/custom/holochair,
 /obj/effect/floor_decal/industrial/danger{
@@ -5829,11 +4020,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/space)
-"zV" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,2"
-	},
-/area/shuttle/research/station)
 "zW" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/box/drinkingglasses{
@@ -5850,127 +4036,40 @@
 	},
 /turf/floor/tiled/dark,
 /area/centcom/evac)
-"zX" = (
-/turf/shuttle/floor/science{
-	icon_state = "12,3"
-	},
-/area/shuttle/research/station)
 "Aa" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 1
 	},
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"Af" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,11"
-	},
-/area/shuttle/mining/station)
-"Am" = (
-/obj/machinery/door/airlock/multi_tile/metal/mait{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "8,10"
-	},
-/area/shuttle/mining/station)
-"An" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "5,0"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Ao" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,5"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"As" = (
-/obj/structure/table/standard,
-/obj/item/storage/toolbox/mechanical,
-/turf/shuttle/floor/science{
-	icon_state = "9,18"
-	},
-/area/shuttle/research/station)
-"At" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,3"
-	},
-/area/shuttle/mining/station)
-"Au" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "0,19"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "Av" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/deferred/rations,
 /turf/floor/wood,
 /area/centcom/pirate_base)
-"Ax" = (
-/obj/structure/reagent_dispensers/fueltank/huge,
-/turf/floor,
-/area/shuttle/mining/station)
 "Ay" = (
 /obj/structure/table/bar_special,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"Az" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/camera/network/research_outpost{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "8,6"
-	},
-/area/shuttle/research/station)
-"AA" = (
-/turf/shuttle/wall/science{
-	icon_state = "6,16"
-	},
-/area/shuttle/research/station)
+"AC" = (
+/obj/structure/table/orion_reinforced,
+/obj/item/storage/hcases/med/astra/combat,
+/turf/floor/tiled/orion/hazard/panel,
+/area/centcom/evac)
 "AD" = (
 /obj/structure/railing/holorailing{
 	dir = 1
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
-"AG" = (
-/turf/shuttle/wall/mining{
-	icon_state = "5,23"
-	},
-/area/shuttle/mining/station)
-"AJ" = (
-/turf/shuttle/wall/science{
-	icon_state = "11,6"
-	},
-/area/shuttle/research/station)
 "AN" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall12"
 	},
 /turf/space,
 /area/centcom/suppy)
-"AO" = (
-/obj/machinery/vending/cola/astra{
-	dir = 1
-	},
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
-"AP" = (
-/turf/shuttle/wall/mining{
-	icon_state = "13,3"
-	},
-/area/shuttle/mining/station)
 "AU" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 1
@@ -5987,11 +4086,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"AY" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,18"
-	},
-/area/shuttle/mining/station)
 "Bc" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdownside";
@@ -6019,12 +4113,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"Bi" = (
-/obj/structure/ore_box,
-/turf/shuttle/floor/mining{
-	icon_state = "12,14"
-	},
-/area/shuttle/mining/station)
 "Bk" = (
 /obj/structure/railing/holorailing{
 	dir = 8
@@ -6056,11 +4144,6 @@
 /obj/structure/grille,
 /turf/space,
 /area/space)
-"Bw" = (
-/turf/shuttle/floor/mining{
-	icon_state = "3,19"
-	},
-/area/shuttle/mining/station)
 "By" = (
 /obj/item/contraband/poster/placed{
 	icon_state = "bsposter50";
@@ -6070,21 +4153,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"BB" = (
-/turf/shuttle/wall/science{
-	icon_state = "14,6"
-	},
-/area/shuttle/research/station)
-"BC" = (
-/turf/shuttle/wall/mining{
-	icon_state = "16,20"
-	},
-/area/shuttle/mining/station)
-"BE" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,12"
-	},
-/area/shuttle/research/station)
 "BJ" = (
 /obj/machinery/slotmachine,
 /obj/effect/floor_decal/industrial/danger{
@@ -6096,14 +4164,6 @@
 /obj/effect/floor_decal/industrial/danger/corner,
 /turf/floor/holofloor/reinforced,
 /area/space)
-"BO" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "6,16"
-	},
-/area/shuttle/mining/station)
 "BP" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/crate/grenadier,
@@ -6126,12 +4186,6 @@
 	},
 /turf/wall/low/with_glass/reinforced,
 /area/shuttle/pirate)
-"BU" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "7,20"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "BX" = (
 /obj/structure/bed/chair/custom/holochair,
 /obj/effect/floor_decal/industrial/danger{
@@ -6143,13 +4197,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"BZ" = (
-/obj/structure/table/steel,
-/obj/item/device/radio/off,
-/turf/shuttle/floor/mining{
-	icon_state = "10,2"
-	},
-/area/shuttle/mining/station)
 "Cf" = (
 /obj/structure/table/rack,
 /obj/item/tool/knife/ritual,
@@ -6157,44 +4204,18 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"Cg" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "8,16"
-	},
-/area/shuttle/research/station)
-"Ch" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "16,5"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "Cl" = (
 /obj/structure/railing/holorailing/grey,
 /turf/open/holonofloor,
 /area/space)
-"Cp" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,17"
-	},
-/area/shuttle/mining/station)
+"Cn" = (
+/obj/structure/table/orion_reinforced,
+/obj/item/storage/hcases/med/astra/surgery/contractor,
+/turf/floor/tiled/orion/hazard/panel,
+/area/centcom/evac)
 "Cq" = (
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"Cu" = (
-/obj/structure/table/standard,
-/obj/machinery/camera/network/research_outpost{
-	dir = 1
-	},
-/obj/machinery/recharger,
-/turf/shuttle/floor/science{
-	icon_state = "7,17"
-	},
-/area/shuttle/research/station)
 "Cw" = (
 /obj/structure/railing/holorailing{
 	dir = 4
@@ -6207,28 +4228,6 @@
 	},
 /turf/open/holonofloor,
 /area/space)
-"Cy" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,3"
-	},
-/area/shuttle/research/station)
-"Cz" = (
-/turf/shuttle/wall/science{
-	icon_state = "5,2"
-	},
-/area/shuttle/research/station)
-"CA" = (
-/turf/shuttle/wall/mining{
-	icon_state = "12,8";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
-"CB" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "3,12"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "CD" = (
 /obj/structure/bed/chair/custom/holochair/bar,
 /turf/floor/holofloor/tiled/bar_light,
@@ -6252,26 +4251,6 @@
 	icon_state = "diagonalWall3"
 	},
 /area/shuttle/pirate)
-"CL" = (
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/floor,
-/area/shuttle/mining/station)
-"CN" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,18"
-	},
-/area/shuttle/mining/station)
-"Dd" = (
-/obj/structure/table/orion_reinforced,
-/obj/item/storage/hcases/med/astra/adv,
-/turf/floor/tiled/orion/hazard/panel,
-/area/centcom/evac)
 "Dg" = (
 /obj/structure/table/standard,
 /obj/item/storage/deferred/surgery,
@@ -6279,35 +4258,16 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/mercenary)
-"Dk" = (
-/obj/structure/table/standard,
-/obj/machinery/light/small,
-/turf/shuttle/floor/science{
-	icon_state = "9,17"
-	},
-/area/shuttle/research/station)
 "Dl" = (
 /obj/effect/floor_decal/industrial/danger/full,
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"Dn" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "8,20"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "Do" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall14"
 	},
 /turf/space,
 /area/centcom/suppy)
-"Ds" = (
-/obj/machinery/computer/shuttle_control/explore/exploration_shuttle,
-/turf/shuttle/floor/science{
-	icon_state = "8,18"
-	},
-/area/shuttle/research/station)
 "Du" = (
 /obj/structure/table/rack,
 /obj/item/tool/hammer/sledgehammer,
@@ -6315,11 +4275,6 @@
 /obj/item/tool/hammer/sledgehammer,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"Dv" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,18"
-	},
-/area/shuttle/mining/station)
 "Dy" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -6330,24 +4285,6 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
-"Dz" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "13,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"DA" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,1";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
-"DB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,5"
-	},
-/area/shuttle/research/station)
 "DD" = (
 /obj/structure/table/rack,
 /obj/item/storage/toolbox/electrical,
@@ -6372,15 +4309,6 @@
 	icon_state = "cargoshwall6"
 	},
 /area/centcom/suppy)
-"DI" = (
-/obj/structure/bed/chair,
-/obj/machinery/camera/network/mining{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "5,13"
-	},
-/area/shuttle/mining/station)
 "DJ" = (
 /obj/structure/table/steel,
 /obj/item/storage/deferred/comms,
@@ -6388,18 +4316,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"DK" = (
-/obj/machinery/suit_storage_unit/moebius,
-/turf/shuttle/floor/science{
-	icon_state = "11,8"
-	},
-/area/shuttle/research/station)
-"DN" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "DO" = (
 /obj/machinery/conveyor/west{
 	id = "cargo_load"
@@ -6411,17 +4327,6 @@
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
-"DP" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,6"
-	},
-/area/shuttle/research/station)
-"DQ" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,15"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "DS" = (
 /obj/machinery/light{
 	dir = 8
@@ -6430,16 +4335,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"DV" = (
-/turf/shuttle/wall/mining{
-	icon_state = "14,10"
-	},
-/area/shuttle/mining/station)
-"DW" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,15"
-	},
-/area/shuttle/research/station)
 "Ec" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 4
@@ -6456,24 +4351,6 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"Ee" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "6,13"
-	},
-/area/shuttle/mining/station)
-"Ef" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "4,7"
-	},
-/area/shuttle/mining/station)
 "Ej" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdownside";
@@ -6494,18 +4371,6 @@
 /obj/structure/table/rack,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"Eo" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "16,3"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Ep" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,2";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "Er" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 1
@@ -6515,35 +4380,6 @@
 	},
 /turf/wall/dummy,
 /area/space)
-"Et" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "10,19"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Eu" = (
-/turf/shuttle/wall/science{
-	icon_state = "10,16"
-	},
-/area/shuttle/research/station)
-"Ew" = (
-/obj/machinery/suit_storage_unit/mining,
-/turf/shuttle/floor/mining{
-	icon_state = "5,20"
-	},
-/area/shuttle/mining/station)
-"Ex" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "9,19"
-	},
-/area/shuttle/mining/station)
-"Ez" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "9,0"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "EA" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall39"
@@ -6562,17 +4398,6 @@
 	},
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"EF" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,14"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"EJ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,9"
-	},
-/area/shuttle/mining/station)
 "EK" = (
 /obj/structure/bed,
 /obj/item/bedsheet/rd,
@@ -6601,16 +4426,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"EO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "8,10"
-	},
-/area/shuttle/research/station)
 "EP" = (
 /obj/item/paper_bin{
 	pixel_x = -3;
@@ -6626,11 +4441,6 @@
 	icon_state = "cult"
 	},
 /area/centcom/merc_base)
-"EQ" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,12"
-	},
-/area/shuttle/mining/station)
 "ER" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 1
@@ -6644,40 +4454,11 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"ES" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 2;
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "research_shuttle_inner";
-	locked = 1;
-	name = "Vasiliy Dokuchaev Internal Access";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "7,11"
-	},
-/area/shuttle/research/station)
-"EU" = (
-/obj/structure/bed/chair,
-/turf/shuttle/floor/mining{
-	icon_state = "8,3"
-	},
-/area/shuttle/mining/station)
 "EV" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall11"
 	},
 /area/centcom/suppy)
-"EW" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/shuttle/floor/science{
-	icon_state = "10,12"
-	},
-/area/shuttle/research/station)
 "Fc" = (
 /turf/open/holonofloor,
 /area/holodeck/source/spacebar)
@@ -6686,24 +4467,6 @@
 /obj/structure/grille,
 /turf/space,
 /area/centcom/merc_base)
-"Fh" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,11"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Fi" = (
-/obj/machinery/vending/coffee/astra{
-	dir = 1
-	},
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
-"Fk" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,6"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "Fl" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/shoes/sandal/marisa,
@@ -6726,18 +4489,6 @@
 /obj/structure/table/bar_special,
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"Fz" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "15,2"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"FA" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,7"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "FE" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/backpack/satchel/leather/withwallet,
@@ -6748,26 +4499,6 @@
 	icon_state = "cargoshwall15"
 	},
 /area/centcom/suppy)
-"FH" = (
-/turf/shuttle/wall/science{
-	icon_state = "6,1"
-	},
-/area/shuttle/research/station)
-"FI" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,19";
-	opacity = 0
-	},
-/area/shuttle/research/station)
-"FP" = (
-/obj/structure/closet/secure_closet/personal/miner,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "4,9"
-	},
-/area/shuttle/mining/station)
 "FQ" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/o2{
@@ -6781,12 +4512,6 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/mercenary)
-"FR" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "13,12"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "FU" = (
 /obj/structure/table/steel,
 /obj/item/storage/deferred/toolmod,
@@ -6794,12 +4519,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"FW" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,6";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "Ga" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -6811,21 +4530,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/space)
-"Gd" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Hulk Mining Barge";
-	charge = 1.5e+007;
-	cur_coils = 3;
-	input_attempt = 1;
-	input_level = 750000;
-	input_level_max = 750000;
-	output_attempt = 1;
-	output_level = 750000;
-	output_level_max = 750000
-	},
-/obj/structure/cable,
-/turf/floor,
-/area/shuttle/mining/station)
 "Ge" = (
 /obj/item/stool/holostool,
 /turf/floor/holofloor/carpet,
@@ -6839,12 +4543,6 @@
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
-"Gj" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,5"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "Gl" = (
 /obj/machinery/light{
 	dir = 4
@@ -6853,11 +4551,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"Gn" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,2"
-	},
-/area/shuttle/research/station)
 "Go" = (
 /obj/structure/lattice,
 /obj/structure/lattice,
@@ -6871,14 +4564,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"Gr" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "10,4"
-	},
-/area/shuttle/research/station)
 "Gt" = (
 /obj/machinery/door/blast/regular{
 	name = "Outer Airlock";
@@ -6892,65 +4577,12 @@
 "Gw" = (
 /turf/floor/holofloor/tiled/bar_dance,
 /area/holodeck/source/spacebar)
-"Gx" = (
-/obj/structure/bed/chair,
-/turf/shuttle/floor/mining{
-	icon_state = "9,3"
-	},
-/area/shuttle/mining/station)
-"GA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "9,14"
-	},
-/area/shuttle/research/station)
-"GB" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,19"
-	},
-/area/shuttle/mining/station)
-"GC" = (
-/obj/machinery/sleeper/astra,
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
-"GD" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,9"
-	},
-/area/shuttle/research/station)
-"GF" = (
-/obj/structure/dispenser/oxygen,
-/turf/shuttle/floor/science{
-	icon_state = "10,5"
-	},
-/area/shuttle/research/station)
 "GG" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall16"
 	},
 /turf/space,
 /area/centcom/suppy)
-"GH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "9,4"
-	},
-/area/shuttle/research/station)
 "GL" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 4
@@ -6964,55 +4596,18 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/space)
-"GM" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,21"
-	},
-/area/shuttle/mining/station)
-"GN" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,23"
-	},
-/area/shuttle/mining/station)
-"GO" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,7"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "GP" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall23"
 	},
 /turf/space,
 /area/centcom/suppy)
-"GQ" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "12,0"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"GR" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,10"
-	},
-/area/shuttle/research/station)
 "GU" = (
 /obj/item/tool/knife/ritual,
 /turf/floor/dummy{
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
-"GX" = (
-/turf/shuttle/wall/science{
-	opacity = 0
-	},
-/area/shuttle/research/station)
-"GY" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,11"
-	},
-/area/shuttle/mining/station)
 "GZ" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
@@ -7023,17 +4618,13 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"He" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,4"
+"Hc" = (
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 28
 	},
-/area/shuttle/research/station)
-"Hg" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,20"
-	},
-/area/shuttle/mining/station)
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Hh" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/box/cups,
@@ -7051,17 +4642,6 @@
 	},
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
-"Hm" = (
-/turf/shuttle/wall/science{
-	icon_state = "10,18";
-	opacity = 0
-	},
-/area/shuttle/research/station)
-"Hn" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,1"
-	},
-/area/shuttle/research/station)
 "Ho" = (
 /obj/structure/sign/faction/serbian{
 	pixel_y = 32
@@ -7076,14 +4656,6 @@
 /obj/item/reagent_containers/food/snacks/kabob,
 /turf/floor/wood,
 /area/centcom/pirate_base)
-"Hr" = (
-/obj/machinery/conveyor_switch{
-	id = "mining_internal"
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "14,13"
-	},
-/area/shuttle/mining/station)
 "Hs" = (
 /obj/structure/table/woodentable,
 /obj/item/dice/d20,
@@ -7095,32 +4667,12 @@
 "Hu" = (
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"Hw" = (
-/obj/structure/table/steel,
-/obj/item/tool/pickaxe,
-/obj/item/storage/belt/utility,
-/obj/item/storage/toolbox/mechanical,
-/obj/item/tool/multitool,
-/turf/shuttle/floor/mining{
-	icon_state = "4,9"
-	},
-/area/shuttle/mining/station)
-"Hz" = (
-/turf/shuttle/wall/science{
-	icon_state = "11,16"
-	},
-/area/shuttle/research/station)
+"Hy" = (
+/turf/floor/tiled/orion/fan,
+/area/centcom/evac)
 "HB" = (
 /turf/floor/wood,
 /area/centcom/pirate_base)
-"HD" = (
-/obj/item/modular_computer/console/preset/civilian/professional{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "9,2"
-	},
-/area/shuttle/mining/station)
 "HF" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 8
@@ -7133,11 +4685,6 @@
 /obj/item/storage/deferred/surgery,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"HI" = (
-/turf/shuttle/wall/science{
-	icon_state = "2,1"
-	},
-/area/shuttle/research/station)
 "HJ" = (
 /obj/structure/table/rack,
 /obj/item/tank/jetpack/oxygen,
@@ -7160,11 +4707,6 @@
 /obj/structure/lattice,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
-"HP" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,14"
-	},
-/area/shuttle/research/station)
 "HQ" = (
 /obj/structure/table/rack,
 /obj/item/storage/box/handcuffs{
@@ -7189,24 +4731,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"HS" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,16"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"HU" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "12,2"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"HW" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "13,8"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "HY" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/crate/demolition,
@@ -7244,79 +4768,13 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"Im" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "mining_shuttle_outer";
-	locked = 1;
-	name = "Hulk External Access"
-	},
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "hulk_shuttle";
-	name = "exterior access button";
-	pixel_x = -25
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,23"
-	},
-/area/shuttle/mining/station)
-"In" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "9,22"
-	},
-/area/shuttle/mining/station)
 "Ir" = (
 /turf/open/holonofloor,
 /area/holodeck/source/texas)
-"Is" = (
-/obj/machinery/mineral/stacking_unit_console,
-/turf/shuttle/wall/mining{
-	icon_state = "13,5"
-	},
-/area/shuttle/mining/station)
-"Iu" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,1";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
-"Ix" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,7"
-	},
-/area/shuttle/mining/station)
-"Iy" = (
-/turf/shuttle/wall/mining{
-	icon_state = "8,1";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
-"IA" = (
-/turf/shuttle/floor/mining{
-	icon_state = "4,20"
-	},
-/area/shuttle/mining/station)
-"IH" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,10"
-	},
-/area/shuttle/mining/station)
 "II" = (
 /obj/structure/cryofeed,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"IJ" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "15,2"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "IK" = (
 /obj/structure/railing/holorailing{
 	dir = 4
@@ -7344,18 +4802,6 @@
 	},
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"IS" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "2,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"IT" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "3,11"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "IX" = (
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
@@ -7386,34 +4832,11 @@
 /obj/structure/catwalk/holo,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"Jl" = (
-/turf/shuttle/wall/science{
-	icon_state = "8,19";
-	opacity = 0
-	},
-/area/shuttle/research/station)
-"Jp" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,9"
-	},
-/area/shuttle/research/station)
 "Jr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/bar_special,
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
-"Jt" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "14,8"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Ju" = (
-/obj/machinery/mineral/unloading_machine{
-	dir = 4
-	},
-/turf/floor,
-/area/shuttle/mining/station)
 "Jw" = (
 /obj/item/stool/holostool,
 /obj/effect/floor_decal/industrial/danger{
@@ -7439,14 +4862,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/space)
-"Jz" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "9,14"
-	},
-/area/shuttle/mining/station)
 "JA" = (
 /obj/item/stool/holostool,
 /obj/effect/floor_decal/industrial/danger,
@@ -7458,23 +4873,12 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
-"JD" = (
-/obj/machinery/suit_storage_unit/moebius,
-/turf/shuttle/floor/science{
-	icon_state = "11,9"
-	},
-/area/shuttle/research/station)
 "JH" = (
 /obj/structure/table/rack,
 /obj/item/storage/box/smokes,
 /obj/item/storage/box/smokes,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"JI" = (
-/turf/shuttle/wall/science{
-	icon_state = "5,13"
-	},
-/area/shuttle/research/station)
 "JJ" = (
 /obj/item/tool/knife{
 	pixel_x = -6
@@ -7502,19 +4906,6 @@
 "JK" = (
 /turf/open/holonofloor,
 /area/holodeck/source/industrial_arena)
-"JL" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "17,19"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"JN" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet,
-/turf/shuttle/floor/mining{
-	icon_state = "5,17"
-	},
-/area/shuttle/mining/station)
 "JW" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/crate/demolition,
@@ -7522,23 +4913,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"JY" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "13,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"JZ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,12"
-	},
-/area/shuttle/mining/station)
-"Kc" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "2,11"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "Ke" = (
 /obj/machinery/button/remote/blast_door{
 	name = "remote shutter control";
@@ -7551,11 +4925,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"Kh" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,1"
-	},
-/area/shuttle/research/station)
 "Kn" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility/full,
@@ -7568,11 +4937,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"Ko" = (
-/turf/shuttle/wall/mining{
-	icon_state = "12,23"
-	},
-/area/shuttle/mining/station)
 "Kp" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -7607,48 +4971,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"Ku" = (
-/turf/shuttle/wall/mining{
-	icon_state = "12,18"
-	},
-/area/shuttle/mining/station)
-"Kw" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "3,8"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Ky" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,12"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"KC" = (
-/turf/shuttle/wall/mining{
-	icon_state = "5,10"
-	},
-/area/shuttle/mining/station)
-"KG" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/shuttle/floor/science{
-	icon_state = "8,17"
-	},
-/area/shuttle/research/station)
-"KH" = (
-/obj/item/tool/pickaxe/excavation,
-/obj/item/tool/pickaxe,
-/obj/item/tool/wrench,
-/obj/item/device/measuring_tape,
-/obj/structure/table/steel,
-/obj/item/stack/flag/yellow,
-/turf/shuttle/floor/science{
-	icon_state = "13,2"
-	},
-/area/shuttle/research/station)
 "KJ" = (
 /obj/structure/railing/holorailing{
 	dir = 4
@@ -7677,82 +4999,21 @@
 	},
 /turf/space/transit/north/shuttlespace_ns3,
 /area/space)
-"KO" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,0"
-	},
-/area/shuttle/research/station)
-"KS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "8,14"
-	},
-/area/shuttle/research/station)
-"KT" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "3,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"KW" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380;
-	id_tag = "research_shuttle_pump";
-	power_rating = 30000
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "research_shuttle_sensor";
-	pixel_y = 25
-	},
-/turf/shuttle/floor/science{
-	icon_state = "6,12"
-	},
-/area/shuttle/research/station)
 "KX" = (
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/off)
-"KY" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "10,13"
-	},
-/area/shuttle/mining/station)
 "KZ" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/floor/holofloor/tiled/bar_dance,
 /area/space)
-"La" = (
-/turf/shuttle/wall/science{
-	icon_state = "2,2"
-	},
-/area/shuttle/research/station)
 "Lb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/holo_woodentable,
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"Lg" = (
-/turf/shuttle/wall/mining{
-	icon_state = "3,18"
-	},
-/area/shuttle/mining/station)
-"Li" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "2,13"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "Lj" = (
 /obj/item/book/manual/wiki/science_robotics,
 /obj/structure/table/glass,
@@ -7768,37 +5029,11 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
-"Lm" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "8,21"
-	},
-/obj/effect/shuttle_landmark/eris/dock/exploration_shuttle,
-/turf/space,
-/area/shuttle/research/station)
 "Ln" = (
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
 /turf/floor/carpet/bcarpet,
 /area/centcom/evac)
-"Lq" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1380;
-	id_tag = "mining_shuttle_pump";
-	power_rating = 20000
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "10,21"
-	},
-/area/shuttle/mining/station)
-"Lu" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet,
-/obj/machinery/camera/network/research_outpost,
-/turf/shuttle/floor/science{
-	icon_state = "10,15"
-	},
-/area/shuttle/research/station)
 "Lx" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdownside";
@@ -7813,34 +5048,11 @@
 /obj/structure/bed/chair/custom/holochair,
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"LB" = (
-/obj/machinery/atmospherics/tank/air,
-/turf/shuttle/floor/mining{
-	icon_state = "13,21"
-	},
-/area/shuttle/mining/station)
-"LC" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,8"
-	},
-/area/shuttle/mining/station)
-"LE" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,17"
-	},
-/area/shuttle/mining/station)
-"LF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "7,8"
-	},
-/area/shuttle/research/station)
+"Lz" = (
+/obj/structure/table/orion_reinforced,
+/obj/item/storage/hcases/med/astra/adv,
+/turf/floor/tiled/orion/hazard/panel,
+/area/centcom/evac)
 "LG" = (
 /obj/machinery/door/airlock/external{
 	name = "Ship External Access";
@@ -7863,40 +5075,6 @@
 	},
 /turf/shuttle/plating,
 /area/shuttle/mercenary)
-"LH" = (
-/obj/structure/bed/chair,
-/turf/floor/carpet/turcarpet,
-/area/centcom/evac)
-"LK" = (
-/turf/shuttle/wall/mining{
-	icon_state = "1,19"
-	},
-/area/shuttle/mining/station)
-"LR" = (
-/obj/machinery/power/sensor{
-	long_range = 1;
-	name_tag = "Hulk Mining Barge Grid"
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "5,7"
-	},
-/area/shuttle/mining/station)
-"LS" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "6,12"
-	},
-/area/shuttle/mining/station)
 "LT" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/snacks/chawanmushi,
@@ -7905,16 +5083,6 @@
 	dir = 8
 	},
 /area/wizard_station)
-"LX" = (
-/turf/shuttle/wall/mining{
-	icon_state = "5,22"
-	},
-/area/shuttle/mining/station)
-"LY" = (
-/turf/shuttle/wall/science{
-	icon_state = "3,6"
-	},
-/area/shuttle/research/station)
 "LZ" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 1
@@ -7928,17 +5096,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"Mc" = (
-/turf/shuttle/wall/mining{
-	icon_state = "14,19"
-	},
-/area/shuttle/mining/station)
-"Mg" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,7"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "Mh" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall31"
@@ -7955,27 +5112,6 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/space)
-"Mq" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,22"
-	},
-/area/shuttle/mining/station)
-"Mr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,12"
-	},
-/area/shuttle/research/station)
-"Mx" = (
-/turf/shuttle/wall/science{
-	icon_state = "5,16"
-	},
-/area/shuttle/research/station)
-"My" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,8"
-	},
-/area/shuttle/research/station)
 "MA" = (
 /obj/structure/table/rack,
 /obj/item/storage/toolbox/electrical,
@@ -7984,16 +5120,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"ME" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,16"
-	},
-/area/shuttle/research/station)
-"MI" = (
-/turf/shuttle/floor/science{
-	icon_state = "11,5"
-	},
-/area/shuttle/research/station)
 "MJ" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility/full,
@@ -8022,12 +5148,6 @@
 /obj/structure/table/rack,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"MN" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/turf/shuttle/floor/science{
-	icon_state = "8,16"
-	},
-/area/shuttle/research/station)
 "MO" = (
 /obj/structure/table/woodentable,
 /obj/item/dice,
@@ -8036,16 +5156,6 @@
 	dir = 8
 	},
 /area/wizard_station)
-"MQ" = (
-/turf/shuttle/floor/mining{
-	icon_state = "6,7"
-	},
-/area/shuttle/mining/station)
-"MR" = (
-/turf/shuttle/wall/science{
-	icon_state = "2,3"
-	},
-/area/shuttle/research/station)
 "MV" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/crate/antiarmor,
@@ -8053,22 +5163,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"MY" = (
-/turf/shuttle/wall/mining{
-	icon_state = "5,14"
-	},
-/area/shuttle/mining/station)
-"MZ" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,19";
-	opacity = 0
-	},
-/area/shuttle/research/station)
-"Nb" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,20"
-	},
-/area/shuttle/mining/station)
 "Ng" = (
 /obj/structure/table/holo_woodentable,
 /obj/item/flame/lighter{
@@ -8086,70 +5180,12 @@
 	},
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"Nk" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "4,17"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Nl" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,9"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Nm" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,6"
-	},
-/area/shuttle/research/station)
-"No" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,5"
-	},
-/area/shuttle/research/station)
-"Ns" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,13"
-	},
-/area/shuttle/research/station)
-"Nv" = (
-/obj/item/device/radio/beacon,
-/turf/shuttle/floor/mining{
-	icon_state = "9,7"
-	},
-/area/shuttle/mining/station)
 "Nw" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 8
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/spacebar)
-"Nx" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "17,22"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Ny" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,21"
-	},
-/area/shuttle/mining/station)
-"Nz" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/camera/network/mining{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,14"
-	},
-/area/shuttle/mining/station)
 "NA" = (
 /obj/structure/table/woodentable,
 /obj/item/book/manual/wiki/security_ironparagraphs,
@@ -8159,10 +5195,9 @@
 	},
 /area/wizard_station)
 "NC" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,10"
-	},
-/area/shuttle/research/station)
+/obj/machinery/vending/juice,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "NE" = (
 /obj/structure/table/bar_special,
 /obj/item/flame/lighter{
@@ -8177,12 +5212,6 @@
 	},
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"NH" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "16,4"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "NK" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
@@ -8226,12 +5255,6 @@
 /obj/structure/table/holo_woodentable,
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"NS" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,12";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "NW" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdownside";
@@ -8249,11 +5272,6 @@
 	},
 /turf/space/transit/north/shuttlespace_ns8,
 /area/space)
-"NY" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,4"
-	},
-/area/shuttle/mining/station)
 "Od" = (
 /obj/structure/table/woodentable,
 /obj/item/spacecash/bundle/c1,
@@ -8262,17 +5280,6 @@
 	dir = 8
 	},
 /area/wizard_station)
-"Oe" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "12,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Of" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,11"
-	},
-/area/shuttle/research/station)
 "Og" = (
 /obj/machinery/vending/assist{
 	name = "AntagCorpVend";
@@ -8312,33 +5319,10 @@
 	},
 /turf/wall/low/with_glass/reinforced,
 /area/shuttle/pirate)
-"On" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,15"
-	},
-/area/shuttle/research/station)
-"Op" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "3,9"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "Or" = (
 /obj/machinery/light,
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
-"Ow" = (
-/obj/machinery/vending/juice{
-	dir = 1
-	},
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
-"Ox" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,3"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "Oz" = (
 /obj/machinery/vending/assist,
 /turf/floor/dummy{
@@ -8352,48 +5336,12 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"OB" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/shuttle/floor/science{
-	icon_state = "6,8"
-	},
-/area/shuttle/research/station)
-"OC" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,13"
-	},
-/area/shuttle/mining/station)
-"OF" = (
-/obj/structure/table/orion_reinforced,
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
-"OH" = (
-/obj/machinery/light/small,
-/turf/shuttle/floor/science{
-	icon_state = "5,11"
-	},
-/area/shuttle/research/station)
 "OI" = (
 /obj/structure/bed/chair/custom/holochair/bar{
 	dir = 1
 	},
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"OJ" = (
-/obj/structure/table/rack,
-/obj/item/clothing/suit/space/void/mining,
-/obj/item/clothing/mask/breath,
-/obj/item/device/scanner/mining,
-/obj/item/tool/karl,
-/turf/shuttle/floor/mining{
-	icon_state = "2,20"
-	},
-/area/shuttle/mining/station)
 "OM" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/effect/floor_decal/industrial/danger{
@@ -8404,11 +5352,6 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"OP" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,4"
-	},
-/area/shuttle/mining/station)
 "OQ" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/reagent_containers/food/drinks/shaker,
@@ -8424,10 +5367,6 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial_arena)
-"OR" = (
-/obj/structure/decor/random_plant,
-/turf/floor/tiled/orion,
-/area/centcom/evac)
 "OT" = (
 /obj/item/modular_computer/console/preset{
 	dir = 10
@@ -8459,20 +5398,14 @@
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/industrial)
+"Pa" = (
+/obj/structure/bed/roller,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Pc" = (
 /obj/structure/catwalk,
 /turf/open/holonofloor,
 /area/holodeck/source/industrial_arena)
-"Pd" = (
-/obj/machinery/door/airlock/multi_tile/metal/mait{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "8,5"
-	},
-/area/shuttle/mining/station)
 "Pg" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -8483,14 +5416,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
-"Ph" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "10,14"
-	},
-/area/shuttle/mining/station)
 "Pi" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Barracks";
@@ -8510,12 +5435,6 @@
 "Pl" = (
 /turf/floor/holofloor/wood,
 /area/holodeck/source/texas)
-"Pm" = (
-/turf/shuttle/wall/science{
-	icon_state = "10,17";
-	opacity = 0
-	},
-/area/shuttle/research/station)
 "Pn" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 1
@@ -8529,92 +5448,10 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/space)
-"Pq" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "0,20"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Pt" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,4"
-	},
-/area/shuttle/mining/station)
-"Pu" = (
-/turf/shuttle/wall/mining{
-	icon_state = "16,19"
-	},
-/area/shuttle/mining/station)
-"Pw" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,4"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Px" = (
-/turf/shuttle/floor/mining{
-	icon_state = "13,16"
-	},
-/area/shuttle/mining/station)
-"PJ" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "5,17"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"PL" = (
-/turf/shuttle/wall/science{
-	icon_state = "11,10"
-	},
-/area/shuttle/research/station)
-"PM" = (
-/turf/shuttle/wall/mining{
-	icon_state = "12,15"
-	},
-/area/shuttle/mining/station)
-"PT" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"PV" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,13"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "PY" = (
 /obj/machinery/slotmachine,
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"PZ" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "0,5"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Qa" = (
-/turf/shuttle/wall/science{
-	icon_state = "14,7"
-	},
-/area/shuttle/research/station)
-"Qe" = (
-/turf/shuttle/floor/mining{
-	icon_state = "4,5"
-	},
-/area/shuttle/mining/station)
-"Qi" = (
-/turf/shuttle/wall/science{
-	icon_state = "3,7"
-	},
-/area/shuttle/research/station)
-"Ql" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,5";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "Qn" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall19"
@@ -8646,11 +5483,6 @@
 	},
 /turf/space,
 /area/centcom/suppy)
-"Qt" = (
-/turf/shuttle/wall/science{
-	icon_state = "2,5"
-	},
-/area/shuttle/research/station)
 "Qw" = (
 /obj/machinery/light{
 	dir = 4
@@ -8664,14 +5496,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"Qy" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,8"
-	},
-/area/shuttle/mining/station)
 "Qz" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/cybernetics,
@@ -8679,15 +5503,10 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"QB" = (
-/obj/structure/bed/roller,
-/turf/floor/tiled/orion/hazard,
+"QC" = (
+/obj/structure/bed/chair,
+/turf/floor/carpet/turcarpet,
 /area/centcom/evac)
-"QD" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,0"
-	},
-/area/shuttle/research/station)
 "QG" = (
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 8
@@ -8701,20 +5520,6 @@
 	},
 /turf/wall/dummy,
 /area/space)
-"QI" = (
-/turf/shuttle/wall/mining{
-	icon_state = "14,15"
-	},
-/area/shuttle/mining/station)
-"QK" = (
-/turf/shuttle/wall/science{
-	icon_state = "3,1"
-	},
-/area/shuttle/research/station)
-"QM" = (
-/obj/machinery/vending/juice,
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
 "QN" = (
 /obj/structure/cyberplant,
 /turf/floor/wood,
@@ -8731,11 +5536,6 @@
 /obj/structure/table/rack,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"QP" = (
-/turf/shuttle/wall/science{
-	icon_state = "5,1"
-	},
-/area/shuttle/research/station)
 "QQ" = (
 /turf/open/holonofloor,
 /area/holodeck/source/industrial)
@@ -8747,14 +5547,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
-"QS" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "10,8"
-	},
-/area/shuttle/research/station)
 "QU" = (
 /obj/item/stool/holostool,
 /obj/effect/floor_decal/industrial/danger{
@@ -8768,29 +5560,6 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"QX" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,6";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
-"QY" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "4,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"QZ" = (
-/turf/shuttle/wall/science{
-	icon_state = "6,10"
-	},
-/area/shuttle/research/station)
-"Rb" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,16";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "Rc" = (
 /obj/structure/table/woodentable,
 /obj/structure/table/woodentable,
@@ -8810,43 +5579,17 @@
 	},
 /turf/space/transit/north/shuttlespace_ns2,
 /area/space)
-"Rf" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "14,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "Rh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/holo_woodentable,
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"Rl" = (
-/turf/shuttle/floor/science{
-	icon_state = "4,4"
-	},
-/area/shuttle/research/station)
+"Rj" = (
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Rn" = (
 /turf/wall/dummy,
 /area/centcom/pirate_base)
-"Rp" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,2"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"Rs" = (
-/obj/machinery/conveyor/southeast/ccw{
-	id = "mining_internal"
-	},
-/turf/floor,
-/area/shuttle/mining/station)
-"Rt" = (
-/obj/structure/ore_box,
-/turf/shuttle/floor/mining{
-	icon_state = "10,9"
-	},
-/area/shuttle/mining/station)
 "RA" = (
 /obj/structure/table/standard,
 /obj/item/storage/toolbox/syndicate{
@@ -8867,18 +5610,6 @@
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/industrial_arena)
-"RC" = (
-/obj/machinery/conveyor/west{
-	id = "mining_internal"
-	},
-/turf/floor,
-/area/shuttle/mining/station)
-"RJ" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "0,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "RO" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
@@ -8907,30 +5638,6 @@
 	icon_state = "plating"
 	},
 /area/centcom/pirate_base)
-"RW" = (
-/obj/structure/bed/chair/office/dark,
-/turf/floor/carpet/turcarpet,
-/area/centcom/evac)
-"RX" = (
-/obj/machinery/door/airlock/multi_tile/metal/mait{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "8,18"
-	},
-/area/shuttle/mining/station)
-"RY" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "17,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Sa" = (
-/obj/machinery/mech_recharger,
-/turf/floor/tiled/dark,
-/area/shuttle/mining/station)
 "Sc" = (
 /obj/structure/catwalk,
 /turf/open/holonofloor,
@@ -8943,16 +5650,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"Se" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,13"
-	},
-/area/shuttle/research/station)
-"Sf" = (
-/turf/shuttle/floor/mining{
-	icon_state = "3,20"
-	},
-/area/shuttle/mining/station)
 "Sh" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -9001,30 +5698,6 @@
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
-"St" = (
-/obj/machinery/conveyor/southwest{
-	id = "mining_internal"
-	},
-/turf/floor,
-/area/shuttle/mining/station)
-"Su" = (
-/turf/shuttle/wall/mining{
-	icon_state = "16,17"
-	},
-/area/shuttle/mining/station)
-"Sx" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "7,8"
-	},
-/area/shuttle/mining/station)
-"Sy" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,23"
-	},
-/area/shuttle/mining/station)
 "Sz" = (
 /obj/structure/bed/chair/custom/holochair,
 /obj/effect/floor_decal/industrial/danger{
@@ -9036,77 +5709,10 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"SB" = (
-/turf/shuttle/floor/mining{
-	icon_state = "11,17"
-	},
-/area/shuttle/mining/station)
-"SC" = (
-/obj/structure/table/reinforced,
-/obj/item/device/t_scanner,
-/obj/item/tank/emergency_oxygen{
-	pixel_x = -8
-	},
-/obj/item/tank/emergency_oxygen{
-	pixel_x = -8
-	},
-/obj/item/clothing/mask/breath{
-	pixel_x = 4
-	},
-/obj/item/clothing/mask/breath{
-	pixel_x = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "13,19"
-	},
-/area/shuttle/mining/station)
-"SE" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,9"
-	},
-/area/shuttle/mining/station)
-"SH" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "0,3"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"SK" = (
-/obj/structure/table/orion_reinforced,
-/turf/floor/tiled/orion,
+"SI" = (
+/obj/structure/bed/chair/office/dark,
+/turf/floor/carpet/turcarpet,
 /area/centcom/evac)
-"SL" = (
-/turf/shuttle/wall/mining{
-	icon_state = "1,20"
-	},
-/area/shuttle/mining/station)
-"SM" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "9,11"
-	},
-/area/shuttle/research/station)
-"SO" = (
-/turf/shuttle/floor/mining{
-	icon_state = "12,16"
-	},
-/area/shuttle/mining/station)
-"SP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/turf/shuttle/floor/science{
-	icon_state = "5,4"
-	},
-/area/shuttle/research/station)
-"SQ" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,13"
-	},
-/area/shuttle/research/station)
 "SR" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 8
@@ -9131,23 +5737,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
-"ST" = (
-/turf/shuttle/wall/mining{
-	icon_state = "14,22"
-	},
-/area/shuttle/mining/station)
-"SU" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "11,17"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"SV" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "9,21"
-	},
-/area/shuttle/mining/station)
 "SW" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/crate/kovacs,
@@ -9198,24 +5787,6 @@
 	icon_state = "lino"
 	},
 /area/wizard_station)
-"Tk" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,4"
-	},
-/area/shuttle/mining/station)
-"Tl" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "6,0"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Tm" = (
-/obj/item/device/radio/beacon,
-/obj/machinery/camera/network/research_outpost,
-/turf/shuttle/floor/science{
-	icon_state = "9,12"
-	},
-/area/shuttle/research/station)
 "To" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger,
@@ -9233,66 +5804,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
-"Tt" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,4"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Ty" = (
-/obj/structure/table/steel,
-/obj/item/cell/large/high,
-/obj/item/cell/large/high,
-/obj/item/cell/large/high,
-/turf/shuttle/floor/mining{
-	icon_state = "3,6"
-	},
-/area/shuttle/mining/station)
-"TA" = (
-/turf/floor/tiled/orion,
-/area/centcom/evac)
-"TD" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "6,0"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"TE" = (
-/obj/machinery/mineral/processing_unit,
-/turf/floor/tiled/dark,
-/area/shuttle/mining/station)
-"TF" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "1,3"
-	},
-/turf/space,
-/area/shuttle/research/station)
-"TG" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,5"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"TH" = (
-/obj/structure/table/standard,
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "North APC";
-	pixel_y = 28
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/item/stack/material/plasma{
-	amount = 25
-	},
-/obj/item/tank/plasma,
-/obj/item/tank/plasma,
-/turf/shuttle/floor/science{
-	icon_state = "4,5"
-	},
-/area/shuttle/research/station)
 "TK" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall30"
@@ -9309,25 +5820,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/space)
-"TM" = (
-/turf/shuttle/wall/science{
-	icon_state = "9,9"
-	},
-/area/shuttle/research/station)
-"TO" = (
-/turf/shuttle/wall/science{
-	icon_state = "14,2"
-	},
-/area/shuttle/research/station)
-"TQ" = (
-/turf/shuttle/wall/science{
-	icon_state = "13,6"
-	},
-/area/shuttle/research/station)
-"TR" = (
-/obj/machinery/vending/coffee/astra,
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
 "TT" = (
 /obj/structure/closet{
 	name = "custodial"
@@ -9339,15 +5831,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
-"TV" = (
-/obj/machinery/light/wall,
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
-"TW" = (
-/turf/shuttle/floor/mining{
-	icon_state = "3,8"
-	},
-/area/shuttle/mining/station)
 "TY" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -9371,30 +5854,6 @@
 	},
 /turf/space,
 /area/centcom/suppy)
-"Ub" = (
-/obj/structure/table/standard,
-/obj/item/device/lighting/toggleable/lamp,
-/turf/shuttle/floor/science{
-	icon_state = "5,15"
-	},
-/area/shuttle/research/station)
-"Uc" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "16,9"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Ud" = (
-/obj/structure/closet/secure_closet/personal/miner,
-/turf/shuttle/floor/mining{
-	icon_state = "3,9"
-	},
-/area/shuttle/mining/station)
-"Uf" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,16"
-	},
-/area/shuttle/mining/station)
 "Ug" = (
 /obj/machinery/light{
 	dir = 4
@@ -9417,62 +5876,6 @@
 /obj/item/reagent_containers/food/drinks/shaker,
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
-"Ul" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,11"
-	},
-/area/shuttle/mining/station)
-"Um" = (
-/obj/machinery/camera/network/research_outpost,
-/obj/machinery/doppler_array,
-/turf/shuttle/floor/science{
-	icon_state = "6,15"
-	},
-/area/shuttle/research/station)
-"Un" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "15,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Uq" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "2,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Us" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "11,14"
-	},
-/area/shuttle/research/station)
-"Ut" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "3,15"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Uu" = (
-/obj/machinery/floodlight,
-/turf/shuttle/floor/science{
-	icon_state = "10,3"
-	},
-/area/shuttle/research/station)
-"Uw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "9,16"
-	},
-/area/shuttle/mining/station)
-"Ux" = (
-/obj/structure/decor/random_plant,
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
 "Uy" = (
 /obj/structure/closet/secure_closet/freezer/kitchen{
 	req_access = list(150)
@@ -9482,11 +5885,6 @@
 /obj/item/storage/box/donkpockets,
 /turf/floor/tiled/dark,
 /area/centcom/evac)
-"Uz" = (
-/turf/shuttle/wall/mining{
-	icon_state = "14,12"
-	},
-/area/shuttle/mining/station)
 "UD" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/backpack,
@@ -9502,22 +5900,6 @@
 /obj/structure/catwalk/holo,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
-"UF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/camera/network/mining{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "7,19"
-	},
-/area/shuttle/mining/station)
-"UH" = (
-/turf/shuttle/wall/mining{
-	icon_state = "12,12"
-	},
-/area/shuttle/mining/station)
 "UL" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall29"
@@ -9544,40 +5926,12 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/mercenary)
-"UR" = (
-/obj/structure/table/standard,
-/obj/item/device/lighting/toggleable/lamp,
-/turf/shuttle/floor/mining{
-	icon_state = "5,12"
-	},
-/area/shuttle/mining/station)
-"US" = (
-/turf/shuttle/wall/science{
-	icon_state = "4,16"
-	},
-/area/shuttle/research/station)
-"UT" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "0,22"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"UU" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,8"
-	},
-/area/shuttle/research/station)
 "UV" = (
 /obj/structure/railing/holorailing{
 	dir = 8
 	},
 /turf/open/holonofloor,
 /area/space)
-"UW" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,14"
-	},
-/area/shuttle/research/station)
 "UZ" = (
 /obj/structure/railing/holorailing{
 	dir = 8
@@ -9592,12 +5946,6 @@
 	icon_state = "white"
 	},
 /area/centcom/merc_base)
-"Vb" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "14,23"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "Vd" = (
 /obj/structure/window/reinforced/crescent,
 /obj/structure/window/reinforced/crescent{
@@ -9605,16 +5953,6 @@
 	},
 /turf/wall/dummy,
 /area/space)
-"Ve" = (
-/turf/shuttle/wall/mining{
-	icon_state = "2,22"
-	},
-/area/shuttle/mining/station)
-"Vg" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,10"
-	},
-/area/shuttle/mining/station)
 "Vi" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -9632,11 +5970,6 @@
 /obj/structure/closet/secure_closet/pirate,
 /turf/floor/carpet,
 /area/centcom/pirate_base)
-"Vt" = (
-/turf/shuttle/wall/science{
-	icon_state = "13,1"
-	},
-/area/shuttle/research/station)
 "Vu" = (
 /obj/item/stool/padded,
 /obj/landmark/storyevent/pirate_spawn,
@@ -9648,25 +5981,6 @@
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/texas)
-"VB" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,18"
-	},
-/area/shuttle/mining/station)
-"VC" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "10,0"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"VG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "9,13"
-	},
-/area/shuttle/mining/station)
 "VH" = (
 /obj/structure/table/woodentable,
 /obj/item/book/manual/nuclear,
@@ -9675,14 +5989,6 @@
 	dir = 8
 	},
 /area/wizard_station)
-"VJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "8,22"
-	},
-/area/shuttle/mining/station)
 "VK" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 4
@@ -9704,44 +6010,6 @@
 	dir = 8
 	},
 /area/wizard_station)
-"VN" = (
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "mining_shuttle_sensor";
-	pixel_y = 25
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1380;
-	id_tag = "mining_shuttle_pump";
-	power_rating = 20000
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "hulk_shuttle";
-	pixel_x = 27;
-	req_one_access = list(13,48);
-	tag_airpump = "mining_shuttle_pump";
-	tag_chamber_sensor = "mining_shuttle_sensor";
-	tag_exterior_door = "mining_shuttle_outer";
-	tag_interior_door = "mining_shuttle_inner"
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "10,22"
-	},
-/area/shuttle/mining/station)
-"VO" = (
-/turf/shuttle/wall/mining{
-	icon_state = "16,21"
-	},
-/area/shuttle/mining/station)
-"VP" = (
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_y = 28
-	},
-/turf/floor/tiled/orion/hazard,
-/area/centcom/evac)
 "VR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/bar_special,
@@ -9753,36 +6021,12 @@
 	},
 /turf/space,
 /area/centcom/suppy)
-"VU" = (
-/obj/structure/table/orion_reinforced,
-/obj/structure/decor/random_plant/desktop{
-	pixel_x = -5;
-	pixel_y = 17
-	},
-/turf/floor/tiled/orion,
-/area/centcom/evac)
-"VY" = (
-/turf/shuttle/floor/mining{
-	icon_state = "9,11"
-	},
-/area/shuttle/mining/station)
-"Wb" = (
-/turf/shuttle/wall/mining{
-	icon_state = "13,22"
-	},
-/area/shuttle/mining/station)
 "Wd" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 8
 	},
 /turf/open/holonofloor,
 /area/space)
-"We" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "2,16"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "Wf" = (
 /turf/mineral,
 /area/centcom/merc_base)
@@ -9793,11 +6037,6 @@
 	},
 /turf/open/holonofloor,
 /area/space)
-"Wh" = (
-/turf/shuttle/wall/mining{
-	icon_state = "6,5"
-	},
-/area/shuttle/mining/station)
 "Wj" = (
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
@@ -9812,11 +6051,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial_arena)
-"Wm" = (
-/turf/shuttle/wall/mining{
-	icon_state = "10,5"
-	},
-/area/shuttle/mining/station)
 "Wq" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -9841,9 +6075,6 @@
 /obj/structure/table/rack,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
-"Wv" = (
-/turf/shuttle/wall/mining,
-/area/shuttle/mining/station)
 "Ww" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 4
@@ -9851,40 +6082,12 @@
 /obj/structure/railing/holorailing/grey,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
-"Wy" = (
-/obj/structure/table/rack,
-/obj/item/clothing/suit/space/void/mining,
-/obj/item/clothing/mask/breath,
-/obj/item/device/scanner/mining,
-/obj/item/tool/karl,
-/turf/shuttle/floor/mining{
-	icon_state = "2,19"
-	},
-/area/shuttle/mining/station)
 "Wz" = (
 /obj/structure/shuttle_part/cargo{
 	icon_state = "cargoshwall37"
 	},
 /turf/space,
 /area/centcom/suppy)
-"WB" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,8";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
-"WF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/door/airlock/freezer{
-	name = "Vasiliy Dokuchaev Internal Airlock";
-	req_access = list(5)
-	},
-/turf/shuttle/floor/science{
-	icon_state = "9,8"
-	},
-/area/shuttle/research/station)
 "WK" = (
 /obj/structure/table/woodentable,
 /obj/item/device/lighting/toggleable/lamp{
@@ -9893,23 +6096,6 @@
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
-"WN" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "1,5"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"WO" = (
-/turf/shuttle/floor/science{
-	icon_state = "5,8"
-	},
-/area/shuttle/research/station)
-"WR" = (
-/obj/machinery/conveyor/east{
-	id = "mining_internal"
-	},
-/turf/floor,
-/area/shuttle/mining/station)
 "WS" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/bag/money,
@@ -9919,41 +6105,9 @@
 	},
 /area/wizard_station)
 "Xa" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,16"
-	},
-/area/shuttle/research/station)
-"Xb" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "2,14"
-	},
-/turf/space,
-/area/shuttle/mining/station)
-"Xd" = (
-/obj/machinery/camera/network/mining{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "10,6"
-	},
-/area/shuttle/mining/station)
-"Xe" = (
-/obj/structure/table/steel,
-/obj/item/paper_bin,
-/obj/item/pen,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "10,3"
-	},
-/area/shuttle/mining/station)
-"Xh" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "5,1"
-	},
-/turf/space,
-/area/shuttle/mining/station)
+/obj/machinery/vending/coffee/astra,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Xl" = (
 /obj/structure/table/holo_woodentable,
 /obj/item/reagent_containers/food/drinks/shaker,
@@ -9964,11 +6118,6 @@
 /obj/item/stool/holostool/bar,
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"Xp" = (
-/turf/shuttle/floor/mining{
-	icon_state = "4,8"
-	},
-/area/shuttle/mining/station)
 "Xr" = (
 /obj/item/stool/holostool,
 /obj/effect/floor_decal/industrial/danger{
@@ -9977,12 +6126,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
-"Xs" = (
-/obj/structure/shuttle_part/science{
-	icon_state = "2,9"
-	},
-/turf/space,
-/area/shuttle/research/station)
 "Xu" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -9991,27 +6134,10 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"Xv" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,18"
-	},
-/area/shuttle/mining/station)
-"Xx" = (
-/obj/structure/table/standard,
-/obj/item/storage/box/donut,
-/turf/shuttle/floor/science{
-	icon_state = "7,18"
-	},
-/area/shuttle/research/station)
 "Xz" = (
 /obj/structure/bed/chair/custom/holochair/bar,
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
-"XA" = (
-/turf/shuttle/wall/mining{
-	icon_state = "14,21"
-	},
-/area/shuttle/mining/station)
 "XB" = (
 /obj/structure/railing/holorailing{
 	dir = 8
@@ -10019,16 +6145,6 @@
 /obj/structure/railing/holorailing,
 /turf/open/holonofloor,
 /area/holodeck/source/industrial)
-"XD" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,17"
-	},
-/area/shuttle/mining/station)
-"XH" = (
-/turf/shuttle/wall/mining{
-	icon_state = "13,15"
-	},
-/area/shuttle/mining/station)
 "XJ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	pixel_x = 25;
@@ -10051,27 +6167,6 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/mercenary)
-"XN" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/machinery/light/small,
-/turf/shuttle/floor/science{
-	icon_state = "10,14"
-	},
-/area/shuttle/research/station)
-"XO" = (
-/obj/machinery/door/airlock/mining{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "7,15"
-	},
-/area/shuttle/mining/station)
 "XP" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/crate/ak,
@@ -10084,18 +6179,6 @@
 	icon_state = "cargoshwall4"
 	},
 /area/centcom/suppy)
-"XS" = (
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
-/obj/structure/cable/yellow,
-/turf/floor,
-/area/shuttle/research/station)
-"XT" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,6"
-	},
-/area/shuttle/research/station)
 "XU" = (
 /obj/machinery/light{
 	dir = 4
@@ -10117,39 +6200,16 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial)
-"XW" = (
-/obj/structure/ore_box,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "13,14"
-	},
-/area/shuttle/mining/station)
-"Yb" = (
-/obj/structure/ore_box,
-/turf/floor,
-/area/shuttle/mining/station)
-"Yc" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/shuttle/floor/science{
-	icon_state = "8,9"
-	},
-/area/shuttle/research/station)
+"Ya" = (
+/obj/machinery/sleeper/astra,
+/turf/floor/tiled/orion/hazard,
+/area/centcom/evac)
 "Yd" = (
 /obj/structure/bed/chair/custom/holochair/bar{
 	dir = 1
 	},
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
-"Yh" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,18"
-	},
-/area/shuttle/mining/station)
 "Yj" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chemical_dispenser/beer,
@@ -10171,40 +6231,6 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/mercenary)
-"Yq" = (
-/turf/shuttle/wall/mining{
-	icon_state = "11,22"
-	},
-/area/shuttle/mining/station)
-"Yr" = (
-/obj/machinery/door/airlock/mining{
-	name = "Hulk Internal Airlock";
-	req_access = list(48)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "11,19"
-	},
-/area/shuttle/mining/station)
-"YC" = (
-/obj/machinery/porta_turret/mining,
-/turf/shuttle/floor/mining{
-	icon_state = "14,16"
-	},
-/area/shuttle/mining/station)
-"YF" = (
-/obj/machinery/conveyor/south{
-	id = "mining_internal"
-	},
-/turf/floor,
-/area/shuttle/mining/station)
-"YI" = (
-/turf/shuttle/wall/mining{
-	icon_state = "12,3"
-	},
-/area/shuttle/mining/station)
 "YJ" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdownside";
@@ -10230,36 +6256,12 @@
 /obj/machinery/slotmachine,
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
-"YP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/shuttle/floor/mining{
-	icon_state = "8,7"
-	},
-/area/shuttle/mining/station)
 "YV" = (
 /obj/structure/table/bar_special,
 /obj/item/reagent_containers/food/drinks/shaker,
 /obj/item/reagent_containers/food/drinks/shaker,
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
-"YW" = (
-/turf/shuttle/wall/mining{
-	icon_state = "15,13"
-	},
-/area/shuttle/mining/station)
-"YZ" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,15"
-	},
-/area/shuttle/mining/station)
-"Zc" = (
-/obj/structure/fuel_port{
-	pixel_y = 32
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "4,21"
-	},
-/area/shuttle/mining/station)
 "Ze" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdownside";
@@ -10270,22 +6272,6 @@
 	},
 /turf/space/transit/north/shuttlespace_ns5,
 /area/space)
-"Zg" = (
-/turf/shuttle/wall/science{
-	icon_state = "7,5"
-	},
-/area/shuttle/research/station)
-"Zh" = (
-/turf/shuttle/wall/mining{
-	icon_state = "7,20"
-	},
-/area/shuttle/mining/station)
-"Zi" = (
-/turf/shuttle/wall/mining{
-	icon_state = "13,12";
-	opacity = 0
-	},
-/area/shuttle/mining/station)
 "Zl" = (
 /obj/structure/table/rack,
 /obj/item/storage/deferred/crate/sidearm,
@@ -10296,24 +6282,12 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
-"Zn" = (
-/turf/shuttle/wall/science{
-	icon_state = "12,15"
-	},
-/area/shuttle/research/station)
 "Zo" = (
 /turf/shuttle/wall{
 	icon_state = "diagonalWall3";
 	dir = 8
 	},
 /area/shuttle/pirate)
-"Zq" = (
-/obj/structure/table/standard,
-/obj/item/device/lighting/toggleable/lamp,
-/turf/shuttle/floor/science{
-	icon_state = "11,15"
-	},
-/area/shuttle/research/station)
 "Zr" = (
 /obj/machinery/button/remote/blast_door{
 	name = "remote shutter control";
@@ -10336,10 +6310,6 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/space)
-"Zt" = (
-/obj/machinery/mineral/stacking_machine,
-/turf/floor/tiled/dark,
-/area/shuttle/mining/station)
 "Zv" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_throwdownside";
@@ -10350,38 +6320,12 @@
 	},
 /turf/space/transit/north/shuttlespace_ns4,
 /area/space)
-"ZC" = (
-/turf/shuttle/wall/mining{
-	icon_state = "4,3"
-	},
-/area/shuttle/mining/station)
-"ZJ" = (
-/turf/shuttle/wall/science{
-	icon_state = "10,10"
-	},
-/area/shuttle/research/station)
-"ZK" = (
-/turf/shuttle/wall/mining{
-	icon_state = "3,3"
-	},
-/area/shuttle/mining/station)
-"ZL" = (
-/obj/structure/shuttle_part/mining{
-	icon_state = "13,2"
-	},
-/turf/space,
-/area/shuttle/mining/station)
 "ZM" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/camera/network/mining{
-	dir = 4
-	},
-/turf/shuttle/floor/mining{
-	icon_state = "5,15"
-	},
-/area/shuttle/mining/station)
+/turf/floor/carpet/turcarpet,
+/area/centcom/evac)
 "ZR" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 1
@@ -18201,17 +14145,17 @@ aa
 aa
 aa
 aa
+ek
+ek
 hM
 hM
-gj
-gj
-gj
-gj
-gj
-gj
-gj
 hM
 hM
+hM
+hM
+hM
+ek
+ek
 aa
 aa
 aa
@@ -18403,17 +14347,17 @@ ho
 ho
 ho
 ho
-hM
-OF
-rx
-rx
-rx
-rx
-rx
-rx
-rx
+ek
+cL
+dn
+dn
+dn
+dn
+dn
+dn
+dn
 dX
-hM
+ek
 ho
 ho
 ho
@@ -18601,21 +14545,21 @@ aa
 aa
 aa
 ho
-GC
-rC
-QB
-yw
-hM
-VP
-dn
-dn
-dn
-dn
-dn
-dn
-dn
-rC
-hM
+Ya
+Rj
+Pa
+dp
+ek
+Hc
+jy
+jy
+jy
+jy
+jy
+jy
+jy
+Rj
+ek
 at
 at
 at
@@ -18804,20 +14748,20 @@ aa
 aa
 ho
 aE
-rC
-OF
-rC
-hM
+Rj
+cL
+Rj
+ek
 aE
-dn
-dn
-dn
-dn
-dn
-dn
-dn
-TV
-hM
+jy
+jy
+jy
+jy
+jy
+jy
+jy
+ms
+ek
 au
 au
 au
@@ -19004,11 +14948,11 @@ aa
 aa
 aa
 aa
-gj
-zJ
-sp
-sp
-sp
+hM
+AC
+pw
+pw
+pw
 cK
 cK
 dT
@@ -19024,7 +14968,7 @@ aD
 aD
 aD
 aD
-ek
+do
 aa
 aa
 aa
@@ -19206,11 +15150,11 @@ aa
 aa
 aa
 aa
-gj
-lY
-sp
-sp
-sp
+hM
+Cn
+pw
+pw
+pw
 cK
 cK
 dT
@@ -19226,7 +15170,7 @@ aD
 aD
 aD
 aD
-ek
+do
 aa
 aa
 aa
@@ -19408,11 +15352,11 @@ aa
 aa
 aa
 aa
-gj
-Dd
-sp
-sp
-sp
+hM
+Lz
+pw
+pw
+pw
 cK
 cK
 dT
@@ -19428,7 +15372,7 @@ aD
 aD
 aD
 aD
-ek
+do
 aa
 aa
 aa
@@ -19612,20 +15556,20 @@ aa
 aa
 ho
 aE
-rC
-OF
-rC
-gj
-Ux
+Rj
+cL
+Rj
+hM
+pv
 dT
-TA
-TA
-OR
-TA
-TA
+us
+us
+dl
+us
+us
 dT
-Ux
-gj
+pv
+hM
 cq
 cq
 cq
@@ -19813,21 +15757,21 @@ aa
 aa
 aa
 ho
-GC
-rC
-QB
-yw
-hM
-TR
+Ya
+Rj
+Pa
+dp
+ek
+Xa
 dT
-dn
-as
-gj
-LH
-dn
-dT
-AO
+jy
+ZM
 hM
+QC
+jy
+dT
+ed
+ek
 bI
 bI
 bI
@@ -20016,23 +15960,23 @@ aa
 aa
 ho
 ho
-hM
-hM
-hM
-hM
+ek
+ek
+ek
+ek
 dj
 dT
-dn
-as
-gj
-LH
-dn
+jy
+ZM
+hM
+QC
+jy
 dT
-Ow
-hM
-hM
-hM
-hM
+yO
+ek
+ek
+ek
+ek
 ho
 ho
 aa
@@ -20221,17 +16165,17 @@ ho
 zW
 jd
 jd
-hM
-QM
+ek
+NC
 dT
-dn
-as
-gj
-LH
-dn
-dT
-uA
+jy
+ZM
 hM
+QC
+jy
+dT
+kY
+ek
 dZ
 hZ
 Ln
@@ -20423,17 +16367,17 @@ ho
 Uy
 ji
 jf
-hM
-rb
+ek
+bE
 dT
-dn
-as
-gj
-LH
-dn
-dT
-Fi
+jy
+ZM
 hM
+QC
+jy
+dT
+gY
+ek
 dL
 hZ
 Ln
@@ -20628,11 +16572,11 @@ ji
 hR
 cK
 dT
-TA
-SK
-VU
-SK
-TA
+us
+gr
+aC
+gr
+us
 dT
 cK
 hR
@@ -20827,17 +16771,17 @@ ho
 hA
 ji
 ji
-hM
-rC
+ek
+Rj
 dT
-xv
-TA
-TA
-TA
-xv
+Hy
+us
+us
+us
+Hy
 dT
-rC
-hM
+Rj
+ek
 dL
 hZ
 Ln
@@ -21029,7 +16973,7 @@ ho
 jd
 jd
 jd
-hM
+ek
 aE
 dT
 cK
@@ -21038,8 +16982,8 @@ cK
 cK
 cK
 dT
-rC
-hM
+Rj
+ek
 dL
 hZ
 Ln
@@ -21231,17 +17175,17 @@ ho
 ho
 ho
 ho
-hM
-VP
+ek
+Hc
 dT
-pf
-pf
-dn
-pf
-pf
+gL
+gL
+jy
+gL
+gL
 dT
-rC
-hM
+Rj
+ek
 ho
 ho
 ho
@@ -21433,17 +17377,17 @@ aa
 aa
 aa
 aa
-hM
+ek
 dk
 dT
-pf
-RW
-dn
-dn
-pf
+gL
+SI
+jy
+jy
+gL
 dT
 XJ
-hM
+ek
 aa
 aa
 aa
@@ -21635,17 +17579,17 @@ aa
 aa
 aa
 aa
-hM
-hM
+ek
+ek
 dK
-hM
-hM
-hM
-hM
-hM
+ek
+ek
+ek
+ek
+ek
 dU
-hM
-hM
+ek
+ek
 aa
 aa
 aa
@@ -32615,10 +28559,10 @@ aa
 aa
 aa
 aa
-qC
-PZ
-ya
-SH
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -32814,16 +28758,16 @@ aa
 aa
 aa
 aa
-qP
-sy
-ij
-aO
-Gj
-Pw
-TF
-Rp
-xF
-oY
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -33016,16 +28960,16 @@ aa
 aa
 aa
 aa
-Xs
-oi
-rd
-tx
-Qt
-cr
-MR
-La
-HI
-IS
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -33218,16 +29162,16 @@ aa
 aa
 aa
 aa
-Op
-Kw
-Qi
-LY
-qS
-gt
-nZ
-XS
-QK
-xc
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -33412,24 +29356,24 @@ aa
 aa
 aa
 aa
-Nk
-US
-ye
-HP
-Se
-iy
-zD
-NC
-Jp
-My
-yM
-wV
-TH
-Rl
-sK
-XS
-hW
-QY
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -33614,24 +29558,24 @@ aa
 aa
 aa
 aa
-PJ
-Mx
-Ub
-uN
-JI
-ra
-OH
-sC
-yl
-WO
-oC
-ok
-wy
-SP
-eG
-Cz
-QP
-qZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -33813,27 +29757,27 @@ aa
 aa
 aa
 aa
-bm
-gm
-GX
-ox
-AA
-Um
-zF
-qu
-KW
-zQ
-QZ
-ph
-OB
-sz
-ql
-mG
-sE
-sg
-cJ
-FH
-TD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34014,28 +29958,28 @@ hk
 aa
 aa
 aa
-sQ
-BU
-MZ
-Xx
-Cu
-Xa
-On
-gE
-dy
-vl
-ES
-aM
-yC
-LF
-yZ
-XT
-Zg
-uF
-Cy
-zV
-wl
-QD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34216,28 +30160,28 @@ hk
 aa
 aa
 aa
-Lm
-Dn
-Jl
-Ds
-KG
-Cg
-wr
-MN
-KS
-Mr
-bw
-EO
-Yc
-ge
-cL
-Az
-DB
-He
-eo
-si
-rR
-di
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34418,28 +30362,28 @@ hk
 aa
 aa
 aa
-nh
-xl
-FI
-As
-Dk
-cG
-DW
-GA
-SQ
-Tm
-SM
-GR
-TM
-WF
-yk
-DP
-No
-GH
-da
-Gn
-Kh
-KO
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34621,27 +30565,27 @@ aa
 aa
 aa
 aa
-pQ
-Et
-Hm
-Pm
-Eu
-Lu
-XN
-wP
-EW
-cO
-ZJ
-cA
-QS
-ay
-iG
-GF
-Gr
-Uu
-nx
-zo
-ss
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34826,24 +30770,24 @@ aa
 aa
 aa
 aa
-SU
-Hz
-Zq
-Us
-cd
-yP
-qt
-PL
-JD
-DK
-jm
-AJ
-MI
-uP
-zz
-sP
-xm
-gX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35028,24 +30972,24 @@ aa
 aa
 aa
 aa
-tn
-ME
-Zn
-UW
-Ns
-BE
-Of
-oB
-GD
-UU
-iO
-Nm
-dr
-qx
-zX
-aW
-Hn
-Oe
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35235,19 +31179,19 @@ aa
 aa
 aa
 aa
-FR
-oZ
-tl
-sl
-HW
-cS
-TQ
-bn
-tQ
-qw
-KH
-Vt
-Dz
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35439,17 +31383,17 @@ aa
 aa
 aa
 aa
-hx
-pi
-Jt
-Qa
-BB
-iD
-wz
-jD
-TO
-tr
-Rf
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35642,16 +31586,16 @@ aa
 aa
 aa
 aa
-qP
-cU
-FA
-Fk
-Ao
-bN
-gD
-IJ
-vb
-DN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35847,10 +31791,10 @@ aa
 aa
 aa
 aa
-do
-Ch
-NH
-Eo
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -36438,14 +32382,14 @@ hk
 aa
 aa
 aa
-RJ
-UT
-nA
-Pq
-Au
-sH
-bs
-zL
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -36640,27 +32584,27 @@ hk
 aa
 aa
 aa
-uf
-bb
-sM
-SL
-LK
-mK
-bh
-HS
-be
-EF
-rj
-qs
-Fh
-gM
-Nl
-vv
-GO
-iw
-WN
-xe
-Ox
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -36842,28 +32786,28 @@ hk
 aa
 aa
 aa
-Uq
-Ve
-mh
-OJ
-Wy
-tA
-Cp
-We
-tk
-Xb
-Li
-ce
-Kc
-xO
-SE
-yi
-dd
-QX
-zi
-zb
-At
-py
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -37044,28 +32988,28 @@ hk
 aa
 aa
 aa
-KT
-vw
-tR
-Sf
-Bw
-Lg
-kQ
-iF
-Ut
-px
-ki
-CB
-IT
-tF
-Ud
-TW
-cz
-Ty
-Ax
-CL
-ZK
-pJ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -37246,29 +33190,29 @@ hk
 aa
 aa
 aa
-sX
-Mq
-Zc
-IA
-oy
-Xv
-xo
-Rb
-YZ
-cV
-ct
-NS
-bU
-rg
-cT
-Xp
-Ef
-em
-Qe
-cf
-ZC
-tZ
-oS
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -37448,30 +33392,30 @@ hk
 aa
 aa
 aa
-AG
-LX
-vB
-Ew
-qm
-rM
-JN
-dA
-ZM
-MY
-DI
-UR
-eD
-KC
-FP
-Xp
-LR
-cB
-Gd
-hO
-hV
-xg
-Xh
-An
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -37650,30 +33594,30 @@ hk
 aa
 aa
 aa
-Sy
-mJ
-GM
-Hg
-bY
-Dv
-zk
-BO
-tB
-sR
-Ee
-LS
-wi
-IH
-Hw
-Xp
-MQ
-ny
-Wh
-Tk
-bW
-oJ
-or
-Tl
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -37852,30 +33796,30 @@ hk
 aa
 aa
 aa
-bL
-up
-vA
-Zh
-UF
-Yh
-XD
-Uf
-XO
-db
-tX
-co
-GY
-bl
-jP
-Sx
-ar
-Sa
-yG
-nO
-cl
-kY
-cW
-dh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -38054,30 +33998,30 @@ hk
 aa
 aa
 aa
-Im
-VJ
-Ny
-rH
-GB
-RX
-eC
-yL
-rV
-Nz
-OC
-xG
-dq
-Am
-uz
-Qy
-YP
-nt
-Pd
-zH
-EU
-oG
-Iy
-rq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -38256,30 +34200,30 @@ hk
 aa
 aa
 aa
-gv
-In
-SV
-gs
-Ex
-VB
-en
-Uw
-tW
-Jz
-VG
-EQ
-VY
-Vg
-eA
-LC
-Nv
-jl
-wT
-OP
-Gx
-HD
-ut
-Ez
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -38458,30 +34402,30 @@ hk
 aa
 aa
 aa
-GN
-VN
-Lq
-wU
-gr
-AY
-bD
-yY
-wc
-Ph
-KY
-ds
-Ul
-hP
-Rt
-pK
-pR
-Xd
-Wm
-yB
-Xe
-BZ
-DA
-VC
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -38660,30 +34604,30 @@ hk
 aa
 aa
 aa
-Wv
-Yq
-qJ
-Nb
-Yr
-CN
-SB
-qy
-yb
-jX
-sa
-JZ
-Af
-xN
-Ju
-WB
-qQ
-rc
-vr
-Pt
-gR
-Ep
-Iu
-nX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -38862,30 +34806,30 @@ hk
 aa
 aa
 aa
-Ko
-cR
-rs
-hG
-oQ
-Ku
-bc
-SO
-PM
-Bi
-lq
-UH
-ve
-pA
-Rs
-CA
-rG
-zA
-az
-ys
-YI
-HU
-pq
-GQ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -39064,29 +35008,29 @@ hk
 aa
 aa
 aa
-JY
-Wb
-LB
-bp
-SC
-yp
-go
-Px
-XH
-XW
-cI
-Zi
-RC
-tP
-WR
-bZ
-fM
-uQ
-Is
-RC
-AP
-ZL
-tJ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -39266,28 +35210,28 @@ hk
 aa
 aa
 aa
-Vb
-ST
-XA
-pu
-Mc
-bB
-xW
-YC
-QI
-rK
-Hr
-Uz
-pl
-DV
-az
-TE
-YF
-az
-Zt
-St
-cD
-gw
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -39468,28 +35412,28 @@ hk
 aa
 aa
 aa
-Un
-il
-bx
-iE
-rk
-pr
-LE
-dN
-jy
-uI
-YW
-sq
-Yb
-yA
-EJ
-xy
-Ix
-FW
-Ql
-NY
-dl
-Fz
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -39670,27 +35614,27 @@ hk
 aa
 aa
 aa
-PT
-hN
-VO
-BC
-Pu
-xp
-Su
-pd
-DQ
-mP
-PV
-Ky
 aa
 aa
-Uc
-jo
-Mg
-vp
-TG
-Tt
-sV
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -39872,13 +35816,13 @@ hk
 aa
 aa
 aa
-RY
-Nx
-dS
-op
-JL
-vD
-ux
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
