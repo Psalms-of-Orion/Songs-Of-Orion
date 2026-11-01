@@ -227,7 +227,7 @@
 	dir = 8
 	},
 /turf/floor/tiled/white/panels,
-/area/eris/rnd/mixing)
+/area/eris/hallway/main)
 "aij" = (
 /obj/machinery/washing_machine{
 	pixel_y = 12
@@ -561,11 +561,13 @@
 /turf/wall/untinted/orion_reinforced/reactor,
 /area/eris/engineering/engine_monitoring)
 "avv" = (
-/obj/machinery/igniter{
-	id = "toxin_chamber1"
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/floor/reinforced,
-/area/eris/rnd/mixing)
+/turf/floor/tiled/orion,
+/area/eris/hallway/side/eschangarb)
 "awx" = (
 /turf/floor/tiled/white/techfloor,
 /area/eris/crew_quarters/fitness)
@@ -1083,7 +1085,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/orion,
-/area/eris/rnd/mixing)
+/area/eris/hallway/main)
 "aOc" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/catwalk,
@@ -1166,7 +1168,7 @@
 /obj/effect/floor_decal/semiotic/large/warning,
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/orion,
-/area/eris/rnd/mixing)
+/area/eris/hallway/main)
 "aSU" = (
 /obj/structure/table/orion,
 /obj/item/reagent_containers/spray/cleaner,
@@ -3322,6 +3324,26 @@
 	},
 /turf/floor/tiled/orion/wood,
 /area/eris/command/bridge)
+"ctQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/conduit{
+	dir = 4
+	},
+/turf/floor/tiled/orion/fan,
+/area/eris/hallway/side/bridgehallway)
 "cup" = (
 /obj/machinery/light{
 	dir = 4
@@ -7217,12 +7239,6 @@
 	},
 /turf/floor/tiled/dark/brown_perforated,
 /area/eris/command/bridge)
-"faw" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/floor/tiled/white/danger,
-/area/eris/rnd/mixing)
 "faC" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -8695,6 +8711,14 @@
 /obj/item/clothing/suit/storage/harness,
 /obj/item/storage/backpack/satchel/haversack/corpsman,
 /obj/item/clothing/head/patrol/pcrc,
+/obj/item/clothing/under/rank/volunteer/turtle,
+/obj/item/clothing/under/rank/volunteer,
+/obj/item/clothing/under/rank/medical,
+/obj/item/clothing/under/rank/medical,
+/obj/item/clothing/under/rank/medical/blue,
+/obj/item/clothing/under/rank/medical/purple,
+/obj/item/clothing/under/rank/coordinator,
+/obj/item/clothing/suit/storage/toggle/labcoat/old,
 /turf/floor/tiled/white/panels,
 /area/eris/medical/chemstor)
 "gls" = (
@@ -8990,10 +9014,6 @@
 	},
 /turf/floor/tiled/steel/brown_platform,
 /area/eris/crew_quarters/cafeteria)
-"gwk" = (
-/obj/machinery/portable_atmospherics/canister/empty,
-/turf/floor/tiled/techmaint,
-/area/eris/engineering/engine_waste)
 "gwz" = (
 /obj/spawner/scrap/low_chance,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9278,15 +9298,6 @@
 	},
 /turf/floor/reinforced,
 /area/eris/hallway/main)
-"gEO" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 4;
-	frequency = 1441;
-	id = "tox_in";
-	use_power = 1
-	},
-/turf/floor/reinforced,
-/area/eris/rnd/mixing)
 "gFg" = (
 /turf/shuttle/wall/science{
 	icon_state = "11,2"
@@ -10034,6 +10045,14 @@
 	},
 /turf/floor/hull,
 /area/space)
+"hhO" = (
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	name = "science lockdown";
+	id = "science1"
+	},
+/turf/wall/untinted/orion/window/reinforced,
+/area/eris/rnd/mixing)
 "hhX" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -10225,8 +10244,9 @@
 /turf/floor/tiled/orion/tile2,
 /area/eris/engineering/workshop)
 "hsL" = (
-/obj/machinery/light/small{
-	dir = 1
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 14
 	},
 /turf/shuttle/floor/science{
 	icon_state = "10,12"
@@ -11513,20 +11533,6 @@
 	},
 /turf/floor/tiled/techmaint_cargo,
 /area/eris/engineering/engine_smes)
-"inE" = (
-/obj/structure/bed/chair,
-/obj/structure/cable/green{
-	d1 = 32;
-	d2 = 2;
-	icon_state = "32-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "North APC";
-	pixel_y = 28
-	},
-/turf/floor/tiled/white/panels,
-/area/eris/hallway/side/eschangarb)
 "inO" = (
 /obj/structure/shuttle_part/science{
 	icon_state = "7,21"
@@ -12751,6 +12757,12 @@
 	temperature = 200
 	},
 /area/eris/command/tcommsat/chamber)
+"jfD" = (
+/obj/machinery/igniter{
+	id = "toxin_chamber1"
+	},
+/turf/floor/reinforced,
+/area/eris/rnd/mixing)
 "jfU" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4;
@@ -13437,14 +13449,6 @@
 	},
 /turf/floor/reinforced/orion/bioshield,
 /area/eris/engineering/engine_monitoring)
-"jHL" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/machinery/meter,
-/turf/open,
-/area/eris/engineering/engine_room)
 "jIc" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
@@ -13880,26 +13884,6 @@
 	},
 /turf/floor/tiled/techmaint,
 /area/eris/engineering/engine_smes)
-"jZU" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/conduit{
-	dir = 4
-	},
-/turf/floor/tiled/orion/fan,
-/area/eris/hallway/side/bridgehallway)
 "jZZ" = (
 /obj/spawner/closet,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -14342,8 +14326,13 @@
 	},
 /area/shuttle/mining/station)
 "kqe" = (
-/turf/wall/untinted/orion_reinforced,
-/area/eris/rnd/mixing)
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/floor/tiled/steel/techfloor_grid,
+/area/eris/hallway/side/docks)
 "kqw" = (
 /turf/shuttle/wall/mining{
 	icon_state = "6,23"
@@ -16639,14 +16628,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/techmaint,
 /area/turret_protected/ai_upload_foyer)
-"mkg" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/floor/tiled/orion,
-/area/eris/hallway/side/eschangarb)
 "mkr" = (
 /obj/machinery/door/airlock/orion/sec{
 	name = "Communications Airlock";
@@ -16655,14 +16636,11 @@
 /turf/floor/tiled/white/techfloor_grid/doorway,
 /area/eris/command/tcommsat/chamber)
 "mky" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/light{
+	dir = 8
 	},
-/obj/item/storage/backpack/satchel/haversack/corpsman,
-/turf/floor/tiled/white/brown_perforated,
-/area/eris/medical/chemstor)
+/turf/floor/tiled/white/danger,
+/area/eris/rnd/mixing)
 "mkS" = (
 /turf/floor/tiled/techmaint,
 /area/eris/maintenance)
@@ -17077,12 +17055,6 @@
 /obj/spawner/junk/nondense,
 /turf/floor/plating/airless,
 /area/eris/maintenance/disposal)
-"mCB" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/floor/tiled/white/violetcorener,
-/area/eris/rnd/mixing)
 "mCV" = (
 /turf/shuttle/wall/mining{
 	icon_state = "2,22"
@@ -17180,6 +17152,10 @@
 	},
 /turf/floor/tiled/white/techfloor_grid/doorway,
 /area/eris/engineering/engine_airlock)
+"mGM" = (
+/obj/machinery/portable_atmospherics/canister/empty,
+/turf/floor/tiled/techmaint,
+/area/eris/engineering/engine_waste)
 "mGQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17992,10 +17968,6 @@
 /turf/open,
 /area/eris/engineering/engine_room)
 "ngg" = (
-/obj/machinery/door/airlock/glass_research{
-	name = "Toxins Lab";
-	req_access = list(7)
-	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/orion/exp{
 	name = "Research Airlock";
@@ -18130,7 +18102,7 @@
 	dir = 8
 	},
 /turf/floor/tiled/white/panels,
-/area/eris/rnd/mixing)
+/area/eris/hallway/main)
 "nlY" = (
 /obj/landmark/join/start/security_nt,
 /obj/machinery/atm{
@@ -19436,6 +19408,10 @@
 	},
 /turf/floor/plating/under,
 /area/eris/engineering/engine_airlock)
+"orK" = (
+/obj/machinery/atmospherics/binary/pump,
+/turf/floor/tiled/techmaint,
+/area/eris/engineering/engine_smes)
 "otD" = (
 /obj/structure/closet/astra/wardrobe/blue{
 	dir = 4
@@ -21459,6 +21435,15 @@
 "pRQ" = (
 /turf/wall/untinted/orion/panel,
 /area/eris/hallway/main)
+"pRX" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 4;
+	frequency = 1441;
+	id = "tox_in";
+	use_power = 1
+	},
+/turf/floor/reinforced,
+/area/eris/rnd/mixing)
 "pSa" = (
 /obj/machinery/atmospherics/tvalve{
 	dir = 4;
@@ -23324,10 +23309,6 @@
 /obj/structure/catwalk,
 /turf/floor/plating/under,
 /area/eris/engineering/wastingroom)
-"rlY" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/turf/open,
-/area/eris/engineering/engine_room)
 "rmm" = (
 /turf/shuttle/wall/science{
 	icon_state = "14,4"
@@ -24474,6 +24455,14 @@
 	},
 /turf/floor/tiled/orion,
 /area/eris/hallway/main)
+"rYB" = (
+/obj/machinery/portable_atmospherics/canister/plasma,
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/floor/reinforced,
+/area/eris/rnd/storage)
 "rZi" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
@@ -25463,13 +25452,9 @@
 /turf/floor/tiled/steel/cargo,
 /area/eris/engineering/engine_room)
 "sJp" = (
-/obj/machinery/door/blast/regular/open{
-	dir = 2;
-	name = "science lockdown";
-	id = "science1"
-	},
-/turf/wall/untinted/orion/window/reinforced,
-/area/eris/rnd/mixing)
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/open,
+/area/eris/engineering/engine_room)
 "sJr" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -26896,13 +26881,6 @@
 	},
 /turf/space,
 /area/space)
-"tCE" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 9;
-	tag = "icon-intact (NORTHWEST)"
-	},
-/turf/open,
-/area/eris/engineering/engine_room)
 "tCU" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4;
@@ -27279,13 +27257,19 @@
 /turf/floor/plating/under,
 /area/eris/maintenance)
 "tNQ" = (
-/obj/machinery/portable_atmospherics/canister/plasma,
-/obj/machinery/light{
-	dir = 1;
-	pixel_y = 32
+/obj/structure/bed/chair,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
 	},
-/turf/floor/reinforced,
-/area/eris/rnd/storage)
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "North APC";
+	pixel_y = 28
+	},
+/turf/floor/tiled/white/panels,
+/area/eris/hallway/side/eschangarb)
 "tNU" = (
 /obj/spawner/scrap/low_chance,
 /turf/floor/tiled/steel/techfloor,
@@ -27533,10 +27517,6 @@
 /obj/machinery/vending/snacks,
 /turf/floor/tiled/white/panels,
 /area/eris/hallway/side/bridgehallway)
-"uaq" = (
-/obj/machinery/atmospherics/binary/pump,
-/turf/floor/tiled/techmaint,
-/area/eris/engineering/engine_smes)
 "uaY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/shuttle/floor/science{
@@ -28194,12 +28174,26 @@
 	},
 /turf/floor/plating/under,
 /area/eris/maintenance)
+"uzZ" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9;
+	tag = "icon-intact (NORTHWEST)"
+	},
+/turf/open,
+/area/eris/engineering/engine_room)
 "uAb" = (
 /turf/floor/tiled/orion,
 /area/eris/hallway/side/docks)
 "uAD" = (
 /turf/wall/untinted/orion,
 /area/eris/maintenance/substation/port)
+"uBq" = (
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/floor/tiled/orion/hazard/panel,
+/area/eris/hallway/side/docks)
 "uBw" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/office/light{
@@ -28380,6 +28374,14 @@
 	},
 /turf/space,
 /area/shuttle/mining/station)
+"uJt" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/floor/tiled/orion,
+/area/eris/hallway/side/eschangarb)
 "uJB" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/floor/tiled/techmaint_cargo,
@@ -28932,7 +28934,7 @@
 /area/eris/security/checkpoint/supply)
 "ved" = (
 /obj/machinery/door/blast/regular/open{
-	dir = 4;
+	dir = 2;
 	name = "science lockdown";
 	id = "science1"
 	},
@@ -29039,7 +29041,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/white/techfloor_grid/doorway,
-/area/eris/rnd/mixing)
+/area/eris/hallway/main)
 "vik" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
 /turf/floor/tiled/techmaint,
@@ -29156,14 +29158,8 @@
 /turf/floor/tiled/techmaint_cargo,
 /area/turret_protected/ai_upload_foyer)
 "voO" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/portable_atmospherics/canister/empty,
-/turf/floor/reinforced,
-/area/eris/rnd/storage)
+/turf/wall/untinted/orion_reinforced,
+/area/eris/rnd/mixing)
 "voT" = (
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/floor/bluegrid{
@@ -29291,6 +29287,15 @@
 	icon_state = "2,8"
 	},
 /area/shuttle/mining/station)
+"vuc" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/turf/floor/reinforced,
+/area/eris/rnd/storage)
 "vus" = (
 /obj/machinery/light/wall{
 	dir = 4
@@ -29873,6 +29878,12 @@
 /area/turret_protected/ai_upload_foyer{
 	name = "AI Upload Foyer"
 	})
+"vRD" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/floor/tiled/white/violetcorener,
+/area/eris/rnd/mixing)
 "vRF" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -31462,7 +31473,7 @@
 /turf/floor/tiled/orion/tile2,
 /area/eris/crew_quarters/sleep)
 "wXT" = (
-/obj/structure/medical_stand,
+/obj/structure/medical_stand/anesthetic,
 /obj/machinery/light{
 	dir = 1;
 	pixel_y = 32
@@ -32660,13 +32671,13 @@
 /turf/wall/untinted/orion_reinforced,
 /area/eris/engineering/storage)
 "xSX" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
 	},
-/turf/floor/tiled/orion,
-/area/eris/hallway/side/eschangarb)
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/meter,
+/turf/open,
+/area/eris/engineering/engine_room)
 "xTn" = (
 /obj/machinery/door/airlock/orion{
 	dir = 2
@@ -62045,9 +62056,9 @@ ccm
 uwR
 dsq
 pmt
-jHL
-rlY
-tCE
+xSX
+sJp
+uzZ
 cmF
 hfg
 lQq
@@ -64312,7 +64323,7 @@ ljf
 wuT
 mSH
 mYC
-uaq
+orK
 dIS
 pBT
 tMu
@@ -65716,13 +65727,13 @@ bTb
 upO
 upO
 upO
-kqe
-kqe
-kqe
-kqe
-kqe
-kqe
-kqe
+voO
+voO
+voO
+voO
+voO
+voO
+voO
 vQT
 vQT
 vQT
@@ -65868,18 +65879,18 @@ pfT
 vLG
 cQF
 krs
-kqe
+voO
 fWQ
 jeB
 qgk
 qgk
 hVq
-ved
+hhO
 xkx
 wAu
 lOo
 bUo
-faw
+mky
 bHM
 vQT
 bvE
@@ -66020,7 +66031,7 @@ qlP
 tsS
 aCZ
 aCZ
-kqe
+voO
 fWQ
 cAb
 fWQ
@@ -66172,9 +66183,9 @@ kKf
 ijL
 qsC
 qsC
-kqe
+voO
 fWQ
-avv
+jfD
 fWQ
 rWd
 kvw
@@ -66324,8 +66335,8 @@ qlP
 abz
 uix
 uix
-kqe
-gEO
+voO
+pRX
 fWQ
 fWQ
 rJg
@@ -66476,13 +66487,13 @@ aMw
 gIn
 uix
 uix
-kqe
+voO
 aIq
-sJp
-sJp
-kqe
-sJp
-kqe
+ved
+ved
+voO
+ved
+voO
 jFn
 oHP
 dvZ
@@ -66602,7 +66613,7 @@ aug
 gyb
 sin
 rAU
-gwk
+mGM
 sHy
 vIo
 vIo
@@ -66634,7 +66645,7 @@ dXn
 dXn
 bJL
 knm
-mCB
+vRD
 cph
 oHP
 oHP
@@ -67070,7 +67081,7 @@ cjX
 rty
 ibG
 gln
-mky
+bqi
 rbg
 sfM
 lyU
@@ -67236,9 +67247,9 @@ qmz
 roD
 ghw
 oHG
-vQT
+upO
 aie
-vQT
+upO
 nlV
 vQT
 vQT
@@ -68610,7 +68621,7 @@ tMc
 hMy
 hmg
 uvM
-tNQ
+rYB
 nsb
 wqs
 vhC
@@ -69067,7 +69078,7 @@ eTF
 gsx
 uvM
 pMP
-voO
+vuc
 bbi
 krW
 flF
@@ -70400,7 +70411,7 @@ pGx
 eIq
 gDf
 puz
-jZU
+ctQ
 eIq
 dFg
 oFN
@@ -71947,9 +71958,9 @@ ezg
 xhp
 qdL
 leT
-inE
-mkg
-xSX
+tNQ
+avv
+uJt
 fvU
 fhH
 gDA
@@ -72053,7 +72064,7 @@ onU
 onU
 jAL
 wyf
-ldE
+kqe
 ldE
 wyf
 jAL
@@ -72509,7 +72520,7 @@ sJN
 sJN
 sJN
 tlK
-uhq
+uBq
 uhq
 tlK
 gQc
