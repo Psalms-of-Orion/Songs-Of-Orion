@@ -1,6 +1,7 @@
 /obj/structure/dispenser
 	name = "tank storage unit"
 	desc = "A simple yet bulky storage device for gas tanks. Has room for up to ten oxygen tanks, and ten plasma tanks."
+	description_info = "Alt+click for Plasma tanks, Click for Oxygen."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "dispenser"
 	density = TRUE
@@ -42,7 +43,7 @@
 	if(user.Adjacent(src))
 		return attack_hand(user)
 	..()
-
+/*
 /obj/structure/dispenser/attack_hand(mob/user)
 	user.set_machine(src)
 	var/dat = "[src]<br><br>"
@@ -50,7 +51,7 @@
 	dat += "Plasma tanks: [plasmatanks] - [plasmatanks ? "<a href='byond://?src=\ref[src];plasma=1'>Dispense</A>" : "empty"]"
 	user << browse(dat, "window=dispenser")
 	onclose(user, "dispenser")
-
+*/
 
 /obj/structure/dispenser/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/tank/oxygen) || istype(I, /obj/item/tank/air) || istype(I, /obj/item/tank/anesthetic))
@@ -88,7 +89,7 @@
 				to_chat(user, SPAN_NOTICE("You wrench [src] into place."))
 				anchored = TRUE
 			return
-
+/*
 /obj/structure/dispenser/Topic(href, href_list)
 	if(..())
 		return 1
@@ -118,3 +119,41 @@
 
 	playsound(usr.loc, 'sound/machines/Custom_extout.ogg', 100, 1)
 	updateUsrDialog()
+*/
+
+/obj/structure/dispenser/attack_hand(mob/user)
+	var/obj/item/tank/tank
+	if(oxygentanks > 0)
+		if(oxytanks.len)
+			tank = oxytanks[oxytanks.len]	// Last stored tank is always the first one to be dispensed
+			oxytanks.Remove(tank)
+		else
+			tank = new /obj/item/tank/oxygen(loc)
+		oxygentanks--
+	if(tank)
+		tank.forceMove(drop_location())
+		to_chat(usr, SPAN_NOTICE("You take [tank] out of [src]."))
+		update_icon()
+		playsound(usr.loc, 'sound/machines/Custom_extout.ogg', 100, 1)
+
+
+/obj/structure/dispenser/AltClick(mob/user)
+	var/obj/item/tank/tank
+	var/turf/T = get_turf(src)
+	if(T && user.TurfAdjacent(T))
+		if(user.incapacitated())
+			to_chat(user, SPAN_WARNING("You can't do that right now!"))
+			return
+		else
+			if(plasmatanks > 0)
+				if(platanks.len)
+					tank = platanks[platanks.len]
+					platanks.Remove(tank)
+				else
+					tank = new /obj/item/tank/plasma(loc)
+				plasmatanks--
+	if(tank)
+		tank.forceMove(drop_location())
+		to_chat(usr, SPAN_NOTICE("You take [tank] out of [src]."))
+		update_icon()
+		playsound(usr.loc, 'sound/machines/Custom_extout.ogg', 100, 1)
