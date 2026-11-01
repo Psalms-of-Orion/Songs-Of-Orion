@@ -561,13 +561,9 @@
 /turf/wall/untinted/orion_reinforced/reactor,
 /area/eris/engineering/engine_monitoring)
 "avv" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/floor/tiled/orion,
-/area/eris/hallway/side/eschangarb)
+/obj/machinery/portable_atmospherics/canister/empty,
+/turf/floor/tiled/techmaint,
+/area/eris/engineering/engine_waste)
 "awx" = (
 /turf/floor/tiled/white/techfloor,
 /area/eris/crew_quarters/fitness)
@@ -1123,6 +1119,14 @@
 	pixel_y = 28
 	},
 /turf/floor/tiled/white/panels,
+/area/eris/hallway/side/docks)
+"aPD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/floor/tiled/steel/techfloor_grid,
 /area/eris/hallway/side/docks)
 "aPW" = (
 /turf/shuttle/wall/mining{
@@ -3324,26 +3328,6 @@
 	},
 /turf/floor/tiled/orion/wood,
 /area/eris/command/bridge)
-"ctQ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/conduit{
-	dir = 4
-	},
-/turf/floor/tiled/orion/fan,
-/area/eris/hallway/side/bridgehallway)
 "cup" = (
 /obj/machinery/light{
 	dir = 4
@@ -3564,6 +3548,12 @@
 	icon_state = "2,21"
 	},
 /area/shuttle/mining/station)
+"cBh" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/floor/tiled/white/danger,
+/area/eris/rnd/mixing)
 "cCq" = (
 /obj/structure/table/orion_reinforced,
 /obj/item/storage/hcases/med/astra/surgery,
@@ -5954,6 +5944,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/orion/tile2,
 /area/eris/hallway/side/bridgehallway)
+"ejG" = (
+/obj/structure/bed/chair,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "North APC";
+	pixel_y = 28
+	},
+/turf/floor/tiled/white/panels,
+/area/eris/hallway/side/eschangarb)
 "ejT" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -6738,6 +6742,14 @@
 	},
 /turf/floor,
 /area/shuttle/mining/station)
+"eIC" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/floor/tiled/orion,
+/area/eris/hallway/side/eschangarb)
 "eIQ" = (
 /obj/structure/table/orion_reinforced,
 /turf/floor/plating/under,
@@ -7076,8 +7088,9 @@
 /turf/floor/reinforced,
 /area/eris/engineering/engine_waste)
 "eTF" = (
-/turf/floor/tiled/orion/hazard/ribbed,
-/area/eris/security)
+/obj/machinery/atmospherics/binary/pump,
+/turf/floor/tiled/techmaint,
+/area/eris/engineering/engine_smes)
 "eTZ" = (
 /obj/structure/shuttle_part/science{
 	icon_state = "3,9"
@@ -8918,6 +8931,26 @@
 /obj/structure/catwalk,
 /turf/floor/plating/under,
 /area/eris/maintenance)
+"grS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/conduit{
+	dir = 4
+	},
+/turf/floor/tiled/orion/fan,
+/area/eris/hallway/side/bridgehallway)
 "grT" = (
 /obj/structure/toilet{
 	dir = 4
@@ -8947,7 +8980,7 @@
 /turf/wall/untinted/orion/window/reinforced,
 /area/eris/engineering/gravity_generator)
 "gsx" = (
-/turf/floor/tiled/orion/hazard/fan,
+/turf/floor/tiled/orion/hazard/ribbed,
 /area/eris/security)
 "gsR" = (
 /turf/floor/tiled/cafe,
@@ -10045,14 +10078,6 @@
 	},
 /turf/floor/hull,
 /area/space)
-"hhO" = (
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	name = "science lockdown";
-	id = "science1"
-	},
-/turf/wall/untinted/orion/window/reinforced,
-/area/eris/rnd/mixing)
 "hhX" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -11507,6 +11532,10 @@
 /obj/structure/reactor_core,
 /turf/floor/reinforced/orion/reactor,
 /area/eris/engineering/engine_monitoring)
+"imI" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/open,
+/area/eris/engineering/engine_room)
 "imU" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -11796,6 +11825,13 @@
 /obj/spawner/oddities,
 /turf/floor/plating/under,
 /area/eris/maintenance)
+"iuG" = (
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/floor/tiled/orion/hazard/panel,
+/area/eris/hallway/side/docks)
 "ivX" = (
 /obj/item/modular_computer/console/preset/security/camera,
 /obj/machinery/firealarm{
@@ -12757,12 +12793,6 @@
 	temperature = 200
 	},
 /area/eris/command/tcommsat/chamber)
-"jfD" = (
-/obj/machinery/igniter{
-	id = "toxin_chamber1"
-	},
-/turf/floor/reinforced,
-/area/eris/rnd/mixing)
 "jfU" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4;
@@ -14326,13 +14356,13 @@
 	},
 /area/shuttle/mining/station)
 "kqe" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light{
-	dir = 1;
-	pixel_y = 32
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/floor/tiled/steel/techfloor_grid,
-/area/eris/hallway/side/docks)
+/turf/floor/tiled/orion,
+/area/eris/hallway/side/eschangarb)
 "kqw" = (
 /turf/shuttle/wall/mining{
 	icon_state = "6,23"
@@ -16636,10 +16666,10 @@
 /turf/floor/tiled/white/techfloor_grid/doorway,
 /area/eris/command/tcommsat/chamber)
 "mky" = (
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/igniter{
+	id = "toxin_chamber1"
 	},
-/turf/floor/tiled/white/danger,
+/turf/floor/reinforced,
 /area/eris/rnd/mixing)
 "mkS" = (
 /turf/floor/tiled/techmaint,
@@ -17152,10 +17182,6 @@
 	},
 /turf/floor/tiled/white/techfloor_grid/doorway,
 /area/eris/engineering/engine_airlock)
-"mGM" = (
-/obj/machinery/portable_atmospherics/canister/empty,
-/turf/floor/tiled/techmaint,
-/area/eris/engineering/engine_waste)
 "mGQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17781,6 +17807,15 @@
 /obj/spawner/scrap/sparse/low_chance,
 /turf/floor/plating/under,
 /area/eris/maintenance)
+"nac" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 4;
+	frequency = 1441;
+	id = "tox_in";
+	use_power = 1
+	},
+/turf/floor/reinforced,
+/area/eris/rnd/mixing)
 "nag" = (
 /obj/machinery/atmospherics/trinary/mixer{
 	dir = 8
@@ -18648,6 +18683,12 @@
 	},
 /turf/floor/tiled/white/danger,
 /area/eris/hallway/side/eschangarb)
+"nHU" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/floor/tiled/white/violetcorener,
+/area/eris/rnd/mixing)
 "nHX" = (
 /obj/structure/ore_box,
 /turf/shuttle/floor/mining{
@@ -19408,10 +19449,6 @@
 	},
 /turf/floor/plating/under,
 /area/eris/engineering/engine_airlock)
-"orK" = (
-/obj/machinery/atmospherics/binary/pump,
-/turf/floor/tiled/techmaint,
-/area/eris/engineering/engine_smes)
 "otD" = (
 /obj/structure/closet/astra/wardrobe/blue{
 	dir = 4
@@ -21435,15 +21472,6 @@
 "pRQ" = (
 /turf/wall/untinted/orion/panel,
 /area/eris/hallway/main)
-"pRX" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 4;
-	frequency = 1441;
-	id = "tox_in";
-	use_power = 1
-	},
-/turf/floor/reinforced,
-/area/eris/rnd/mixing)
 "pSa" = (
 /obj/machinery/atmospherics/tvalve{
 	dir = 4;
@@ -23978,6 +24006,14 @@
 /obj/spawner/closet/maintloot,
 /turf/floor/plating/under,
 /area/eris/maintenance)
+"rGv" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/meter,
+/turf/open,
+/area/eris/engineering/engine_room)
 "rGw" = (
 /obj/machinery/igniter,
 /turf/floor/reinforced,
@@ -24455,14 +24491,6 @@
 	},
 /turf/floor/tiled/orion,
 /area/eris/hallway/main)
-"rYB" = (
-/obj/machinery/portable_atmospherics/canister/plasma,
-/obj/machinery/light{
-	dir = 1;
-	pixel_y = 32
-	},
-/turf/floor/reinforced,
-/area/eris/rnd/storage)
 "rZi" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
@@ -25452,9 +25480,8 @@
 /turf/floor/tiled/steel/cargo,
 /area/eris/engineering/engine_room)
 "sJp" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/turf/open,
-/area/eris/engineering/engine_room)
+/turf/wall/untinted/orion_reinforced,
+/area/eris/rnd/mixing)
 "sJr" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -26293,11 +26320,8 @@
 	},
 /area/shuttle/escape_pod1/station)
 "tiF" = (
-/obj/structure/morgue{
-	dir = 8
-	},
-/turf/floor/tiled/techmaint_cargo,
-/area/eris/medical/morgue)
+/turf/floor/tiled/orion/hazard/fan,
+/area/eris/security)
 "tiP" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -27257,19 +27281,14 @@
 /turf/floor/plating/under,
 /area/eris/maintenance)
 "tNQ" = (
-/obj/structure/bed/chair,
 /obj/structure/cable/green{
-	d1 = 32;
-	d2 = 2;
-	icon_state = "32-2"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "North APC";
-	pixel_y = 28
-	},
-/turf/floor/tiled/white/panels,
-/area/eris/hallway/side/eschangarb)
+/obj/machinery/portable_atmospherics/canister/empty,
+/turf/floor/reinforced,
+/area/eris/rnd/storage)
 "tNU" = (
 /obj/spawner/scrap/low_chance,
 /turf/floor/tiled/steel/techfloor,
@@ -28174,26 +28193,12 @@
 	},
 /turf/floor/plating/under,
 /area/eris/maintenance)
-"uzZ" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 9;
-	tag = "icon-intact (NORTHWEST)"
-	},
-/turf/open,
-/area/eris/engineering/engine_room)
 "uAb" = (
 /turf/floor/tiled/orion,
 /area/eris/hallway/side/docks)
 "uAD" = (
 /turf/wall/untinted/orion,
 /area/eris/maintenance/substation/port)
-"uBq" = (
-/obj/machinery/light{
-	dir = 1;
-	pixel_y = 32
-	},
-/turf/floor/tiled/orion/hazard/panel,
-/area/eris/hallway/side/docks)
 "uBw" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/office/light{
@@ -28374,14 +28379,6 @@
 	},
 /turf/space,
 /area/shuttle/mining/station)
-"uJt" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/floor/tiled/orion,
-/area/eris/hallway/side/eschangarb)
 "uJB" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/floor/tiled/techmaint_cargo,
@@ -29158,7 +29155,12 @@
 /turf/floor/tiled/techmaint_cargo,
 /area/turret_protected/ai_upload_foyer)
 "voO" = (
-/turf/wall/untinted/orion_reinforced,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	name = "science lockdown";
+	id = "science1"
+	},
+/turf/wall/untinted/orion/window/reinforced,
 /area/eris/rnd/mixing)
 "voT" = (
 /obj/machinery/telecomms/receiver/preset_right,
@@ -29287,15 +29289,6 @@
 	icon_state = "2,8"
 	},
 /area/shuttle/mining/station)
-"vuc" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/portable_atmospherics/canister/empty,
-/turf/floor/reinforced,
-/area/eris/rnd/storage)
 "vus" = (
 /obj/machinery/light/wall{
 	dir = 4
@@ -29878,12 +29871,6 @@
 /area/turret_protected/ai_upload_foyer{
 	name = "AI Upload Foyer"
 	})
-"vRD" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/floor/tiled/white/violetcorener,
-/area/eris/rnd/mixing)
 "vRF" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -32671,13 +32658,13 @@
 /turf/wall/untinted/orion_reinforced,
 /area/eris/engineering/storage)
 "xSX" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
+/obj/machinery/portable_atmospherics/canister/plasma,
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 32
 	},
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/machinery/meter,
-/turf/open,
-/area/eris/engineering/engine_room)
+/turf/floor/reinforced,
+/area/eris/rnd/storage)
 "xTn" = (
 /obj/machinery/door/airlock/orion{
 	dir = 2
@@ -32835,15 +32822,12 @@
 	},
 /area/shuttle/research/station)
 "xZY" = (
-/obj/structure/morgue{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9;
+	tag = "icon-intact (NORTHWEST)"
 	},
-/obj/machinery/light/wall{
-	dir = 1;
-	pixel_y = 32
-	},
-/turf/floor/tiled/techmaint_cargo,
-/area/eris/medical/morgue)
+/turf/open,
+/area/eris/engineering/engine_room)
 "yai" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -62056,9 +62040,9 @@ ccm
 uwR
 dsq
 pmt
-xSX
-sJp
-uzZ
+rGv
+imI
+xZY
 cmF
 hfg
 lQq
@@ -62824,12 +62808,12 @@ hfg
 lQq
 djj
 suB
-xZY
-tiF
-tiF
-tiF
-tiF
-tiF
+pHW
+pdY
+pdY
+pdY
+pdY
+pdY
 suB
 mgq
 uhV
@@ -64323,7 +64307,7 @@ ljf
 wuT
 mSH
 mYC
-orK
+eTF
 dIS
 pBT
 tMu
@@ -65727,13 +65711,13 @@ bTb
 upO
 upO
 upO
-voO
-voO
-voO
-voO
-voO
-voO
-voO
+sJp
+sJp
+sJp
+sJp
+sJp
+sJp
+sJp
 vQT
 vQT
 vQT
@@ -65879,18 +65863,18 @@ pfT
 vLG
 cQF
 krs
-voO
+sJp
 fWQ
 jeB
 qgk
 qgk
 hVq
-hhO
+voO
 xkx
 wAu
 lOo
 bUo
-mky
+cBh
 bHM
 vQT
 bvE
@@ -66031,7 +66015,7 @@ qlP
 tsS
 aCZ
 aCZ
-voO
+sJp
 fWQ
 cAb
 fWQ
@@ -66183,9 +66167,9 @@ kKf
 ijL
 qsC
 qsC
-voO
+sJp
 fWQ
-jfD
+mky
 fWQ
 rWd
 kvw
@@ -66335,8 +66319,8 @@ qlP
 abz
 uix
 uix
-voO
-pRX
+sJp
+nac
 fWQ
 fWQ
 rJg
@@ -66487,13 +66471,13 @@ aMw
 gIn
 uix
 uix
-voO
+sJp
 aIq
 ved
 ved
-voO
+sJp
 ved
-voO
+sJp
 jFn
 oHP
 dvZ
@@ -66613,7 +66597,7 @@ aug
 gyb
 sin
 rAU
-mGM
+avv
 sHy
 vIo
 vIo
@@ -66645,7 +66629,7 @@ dXn
 dXn
 bJL
 knm
-vRD
+nHU
 cph
 oHP
 oHP
@@ -68464,7 +68448,7 @@ bwd
 uvM
 bjK
 cij
-eTF
+gsx
 uEB
 hMy
 qen
@@ -68621,7 +68605,7 @@ tMc
 hMy
 hmg
 uvM
-rYB
+xSX
 nsb
 wqs
 vhC
@@ -69072,13 +69056,13 @@ erA
 siD
 hGE
 uSW
-eTF
-eTF
-eTF
 gsx
+gsx
+gsx
+tiF
 uvM
 pMP
-vuc
+tNQ
 bbi
 krW
 flF
@@ -70411,7 +70395,7 @@ pGx
 eIq
 gDf
 puz
-ctQ
+grS
 eIq
 dFg
 oFN
@@ -71958,9 +71942,9 @@ ezg
 xhp
 qdL
 leT
-tNQ
-avv
-uJt
+ejG
+kqe
+eIC
 fvU
 fhH
 gDA
@@ -72064,7 +72048,7 @@ onU
 onU
 jAL
 wyf
-kqe
+aPD
 ldE
 wyf
 jAL
@@ -72520,7 +72504,7 @@ sJN
 sJN
 sJN
 tlK
-uBq
+iuG
 uhq
 tlK
 gQc
