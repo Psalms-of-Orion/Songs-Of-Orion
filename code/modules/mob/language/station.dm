@@ -100,7 +100,7 @@
 					 "dinamica", "statica", "organizacuya", "yeyenet", "radio", "peredacha", "priem", "slushno", "chastota", "gerts", "stantiya", \
 					 "suda", "huyar", "odin", "dva", "tri", "holod", "granata", "ne", "re", "ru", "korabl")
 	shorthand = "RU"
-
+/*
 /datum/language/gaeltalk
 	name = LANGUAGE_GAELTALK
 	desc = "The horrific blend of dead Celtic languages revived and mis-read a hundred times."
@@ -122,3 +122,4 @@
 					 "dinamica", "statica", "organizacuya", "yeyenet", "radio", "peredacha", "priem", "slushno", "chastota", "gerts", "stantiya", \
 					 "suda", "huyar", "odin", "dva", "tri", "holod", "granata", "ne", "re", "ru", "korabl")
 	shorthand = ""
+*/
